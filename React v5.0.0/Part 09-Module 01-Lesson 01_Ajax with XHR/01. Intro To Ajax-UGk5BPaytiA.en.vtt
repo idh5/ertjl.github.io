@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.265
+Welcome to this course on Ajax.
+
+00:00:02.265 --> 00:00:05.062
+The main concept of Ajax is simple.
+
+00:00:05.062 --> 00:00:06.450
+You make a request for some data,
+
+00:00:06.450 --> 00:00:09.949
+and then without pausing for everything to wait for the request of return,
+
+00:00:09.949 --> 00:00:12.160
+You just move on and do something else.
+
+00:00:12.160 --> 00:00:15.310
+Then once the requests finally does get returned you deal with it.
+
+00:00:15.310 --> 00:00:17.910
+Really, that's Ajax in a nutshell.
+
+00:00:17.910 --> 00:00:22.588
+Now Ajax used to be an acronym for Asynchronous JavaScript And XML,
+
+00:00:22.588 --> 00:00:24.439
+and you'll still kind of see it that way,
+
+00:00:24.440 --> 00:00:26.375
+but it's a bit of a misnomer now.
+
+00:00:26.375 --> 00:00:30.890
+Instead Ajax is the concept of asynchronously requesting data,
+
+00:00:30.890 --> 00:00:32.399
+whether that's an XML file,
+
+00:00:32.399 --> 00:00:35.649
+a JavaScript file, or Json from a REST API.
+
+00:00:35.649 --> 00:00:37.744
+It really doesn't matter what the data is.
+
+00:00:37.744 --> 00:00:41.390
+You just request the data asynchronously and then deal with it when it comes back.
+
+00:00:41.390 --> 00:00:45.929
+In this course, you'll learn to make Ajax requests using JavaScript.
+
+00:00:45.929 --> 00:00:49.695
+First, we'll look at doing this with the tried-and-true XHR object.
+
+00:00:49.695 --> 00:00:53.920
+Then we'll look at how jQuery makes Ajax requests in lesson two.
+
+00:00:53.920 --> 00:00:55.560
+And finally, in lesson three,
+
+00:00:55.560 --> 00:00:58.350
+we'll check out the new and massively improved way of making
+
+00:00:58.350 --> 00:01:02.149
+async requests using the fetch API. You're gonna love it.
+
+00:01:02.149 --> 00:01:06.239
+So my mom's birthday is coming up soon and I need to make a cake for her.
+
+00:01:06.239 --> 00:01:08.459
+So while I go to the store to get the ingredients,
+
+00:01:08.459 --> 00:01:10.409
+some of my friends are going to help demo how
+
+00:01:10.409 --> 00:01:13.019
+Ajax communication works when interacting with a server.
+

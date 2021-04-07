@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.068
+We just saw that running this code doesn't do anything.
+
+00:00:03.068 --> 00:00:06.549
+Well that's not actually true because something does happen.
+
+00:00:06.549 --> 00:00:08.820
+A request is actually sent.
+
+00:00:08.820 --> 00:00:11.185
+We can see this if we check out the network pane.
+
+00:00:11.185 --> 00:00:14.700
+We want to record network traffic so make sure dev tools is recording.
+
+00:00:14.699 --> 00:00:16.800
+This is red so I know it's recording.
+
+00:00:16.800 --> 00:00:20.190
+If it's not red, then just click on it to turn the recording feature on.
+
+00:00:20.190 --> 00:00:23.609
+Now, if I come down here and run the request, it actually sends.
+
+00:00:23.609 --> 00:00:25.859
+See, here's the request.
+
+00:00:25.859 --> 00:00:27.375
+Let's stop recording for now.
+
+00:00:27.375 --> 00:00:30.655
+If I select the request we can see it's headers.
+
+00:00:30.655 --> 00:00:34.380
+Here's the URL that we requested and the request method.
+
+00:00:34.380 --> 00:00:37.080
+We can also see a preview of the request and then
+
+00:00:37.079 --> 00:00:40.829
+the response paying contains the actual html of the response.
+
+00:00:40.829 --> 00:00:43.934
+So even though nothing happens to the page or in the code,
+
+00:00:43.935 --> 00:00:45.539
+the request is actually sent.
+

@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:03.534
+As requisições AJAX permitem
+a recuperação e exibição
+
+00:00:03.567 --> 00:00:05.334
+sem recarregar a página da web.
+
+00:00:05.367 --> 00:00:08.200
+A assincronia em AJAX
+se refere ao fato
+
+00:00:08.234 --> 00:00:11.267
+de que a requisição não impede
+que outros eventos ocorram.
+
+00:00:11.300 --> 00:00:15.267
+A página segue normalmente
+e só acessa os dados
+
+00:00:15.300 --> 00:00:17.334
+quando o servidor o devolve.
+
+00:00:17.367 --> 00:00:19.701
+As requisições AJAX ocorrem
+de inúmeras maneiras
+
+00:00:19.734 --> 00:00:22.033
+e com vários níveis
+de dificuldade.
+
+00:00:22.367 --> 00:00:24.133
+Algumas pedem uma chave de API,
+
+00:00:24.167 --> 00:00:25.534
+outras usam OAuth,
+
+00:00:25.567 --> 00:00:28.100
+e algumas não usam
+nenhuma autenticação,
+
+00:00:28.400 --> 00:00:31.634
+e os dados são devolvidos
+por requisições AJAX diferentes.
+
+00:00:31.667 --> 00:00:34.667
+"X" em AJAX representa XML,
+
+00:00:34.701 --> 00:00:37.801
+que era o formato dominante
+dos dados hierárquicos,
+
+00:00:37.834 --> 00:00:40.267
+mas hoje JSON é bem mais usado.
+
+00:00:40.300 --> 00:00:42.000
+A maioria
+das requisições AJAX hoje
+
+00:00:42.033 --> 00:00:44.434
+são requisições AJAJ,
+
+00:00:44.467 --> 00:00:48.234
+ou seja,
+JavaScript Assíncrono e JSON.
+
+00:00:48.267 --> 00:00:51.834
+Mas não soa legal,
+então chamamos de AJAX.
+
+00:00:51.868 --> 00:00:56.033
+Inserido nas respostas AJAX,
+é muito comum ver HTML,
+
+00:00:56.067 --> 00:00:58.667
+que os sites usam
+para preencher parte da página.
+

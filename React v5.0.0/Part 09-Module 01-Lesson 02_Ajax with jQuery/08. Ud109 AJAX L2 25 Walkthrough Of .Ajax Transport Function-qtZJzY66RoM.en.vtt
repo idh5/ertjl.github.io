@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.995
+Here's the send function which is the third item in the call stack.
+
+00:00:03.995 --> 00:00:09.759
+This call creates a new xhr object and stores it in an appropriately named xhr variable.
+
+00:00:09.759 --> 00:00:12.869
+It then immediately calls the xhr.open method,
+
+00:00:12.869 --> 00:00:16.105
+passes in the data that we've provided in the configuration object.
+
+00:00:16.105 --> 00:00:18.839
+It then makes its way down to the headers and then loops over
+
+00:00:18.839 --> 00:00:22.440
+each one calling the setRequestHeader method.
+
+00:00:22.440 --> 00:00:24.975
+This code here sets up the callback function.
+
+00:00:24.975 --> 00:00:28.020
+If there's an error in the request then this code will run.
+
+00:00:28.019 --> 00:00:30.172
+If the request completes successfully,
+
+00:00:30.172 --> 00:00:31.539
+then this code will run.
+
+00:00:31.539 --> 00:00:34.269
+Down here is where the request is actually sent.
+

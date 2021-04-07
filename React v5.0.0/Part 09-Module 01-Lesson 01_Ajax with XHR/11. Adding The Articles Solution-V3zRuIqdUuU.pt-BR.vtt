@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.067
+Adicionei o depurador
+e busquei uma linha.
+
+00:00:03.133 --> 00:00:06.667
+A resposta tem um objeto
+de resposta aninhada.
+
+00:00:06.733 --> 00:00:10.400
+As propriedades dos documentos
+do objeto contêm os artigos.
+
+00:00:10.467 --> 00:00:13.800
+É preciso converter a resposta
+de Json para objeto JavaScript.
+
+00:00:13.867 --> 00:00:16.067
+Se alguns artigos
+forem retornados,
+
+00:00:16.133 --> 00:00:19.600
+a seção mapeará cada artigo
+e retornará uma lista de itens
+
+00:00:19.667 --> 00:00:23.600
+com o cabeçalho do artigo
+e um trecho do artigo.
+
+00:00:23.667 --> 00:00:26.533
+Finalmente, combinamos
+as listas de itens de artigos
+
+00:00:26.600 --> 00:00:28.800
+a uma lista de tags
+fora de ordem.
+
+00:00:28.867 --> 00:00:32.267
+Isso será adicionado no final,
+dentro do container da resposta.
+
+00:00:32.333 --> 00:00:36.000
+Se não houver artigos, aparecerá:
+"Nenhum artigo disponível."
+

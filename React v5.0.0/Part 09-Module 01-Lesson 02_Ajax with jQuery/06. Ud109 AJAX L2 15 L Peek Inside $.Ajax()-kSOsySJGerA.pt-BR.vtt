@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:02.467
+Este é o bolo da aula anterior.
+
+00:00:02.501 --> 00:00:05.634
+E este é o que acabei
+de buscar na loja.
+
+00:00:05.667 --> 00:00:08.334
+Com este,
+eu fiz todo o trabalho.
+
+00:00:08.367 --> 00:00:10.567
+Editei os dados,
+configurei as propriedades
+
+00:00:10.601 --> 00:00:12.501
+e conectei tudo.
+
+00:00:12.534 --> 00:00:15.601
+Com o bolo da loja,
+eu não fiz nada disso,
+
+00:00:15.634 --> 00:00:17.734
+mas alguém fez.
+
+00:00:17.767 --> 00:00:20.467
+Tiveram que fazer
+os mesmos passos.
+
+00:00:20.501 --> 00:00:23.734
+Mesmo chamando-o
+de método "jQuery's.ajax",
+
+00:00:23.767 --> 00:00:27.200
+nesse código, o jQuery
+está criando um objeto XHR,
+
+00:00:27.234 --> 00:00:30.901
+configurando os props e métodos
+e enviando as requisições.
+
+00:00:30.934 --> 00:00:32.033
+Vamos dar uma olhada.
+

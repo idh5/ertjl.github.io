@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.867
+Esta é a função "send", o 3° item
+na pilha de chamadas.
+
+00:00:03.933 --> 00:00:06.200
+Esta chamada
+cria um objeto XHR novo
+
+00:00:06.267 --> 00:00:09.400
+e o armazena numa variável XHR
+nomeada apropriadamente.
+
+00:00:09.467 --> 00:00:12.667
+Ela imediatamente chama
+o método "xhr.open"
+
+00:00:12.733 --> 00:00:16.000
+e passa os dados que fornecemos
+no objeto de configuração.
+
+00:00:16.067 --> 00:00:19.533
+Depois vai para os cabeçalhos
+e itera cada um,
+
+00:00:19.600 --> 00:00:22.267
+chamando
+o método "setRequestHeader".
+
+00:00:22.333 --> 00:00:24.933
+Este código configura
+a função de callback.
+
+00:00:25.000 --> 00:00:28.067
+Se houver um erro na requisição,
+será rodado este código.
+
+00:00:28.133 --> 00:00:31.400
+Se a requisição não tiver problemas,
+será rodado este código.
+
+00:00:31.467 --> 00:00:34.267
+A requisição é enviada
+aqui para baixo.
+

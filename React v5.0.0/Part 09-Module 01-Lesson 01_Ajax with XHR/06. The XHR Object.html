@@ -1,0 +1,222 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The XHR Object</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Ajax with XHR</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Intro.html">01. Course Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Client Server Demonstration.html">02. Client Server Demonstration</a>
+    </li>
+    <li class="">
+      <a href="03. Ajax Definition &amp; Examples.html">03. Ajax Definition &amp; Examples</a>
+    </li>
+    <li class="">
+      <a href="04. APIs.html">04. APIs</a>
+    </li>
+    <li class="">
+      <a href="05. Create An Async Request with XHR.html">05. Create An Async Request with XHR</a>
+    </li>
+    <li class="">
+      <a href="06. The XHR Object.html">06. The XHR Object</a>
+    </li>
+    <li class="">
+      <a href="07. XHR&#x27;s .open() method.html">07. XHR&#x27;s .open() method</a>
+    </li>
+    <li class="">
+      <a href="08. XHR&#x27;s .send() method.html">08. XHR&#x27;s .send() method</a>
+    </li>
+    <li class="">
+      <a href="09. A Full Request.html">09. A Full Request</a>
+    </li>
+    <li class="">
+      <a href="10. Project Initial Walkthrough.html">10. Project Initial Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="11. Setting a Request Header.html">11. Setting a Request Header</a>
+    </li>
+    <li class="">
+      <a href="12. Project Final Walkthrough.html">12. Project Final Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="13. XHR Recap.html">13. XHR Recap</a>
+    </li>
+    <li class="">
+      <a href="14. XHR Outro.html">14. XHR Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. The XHR Object</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Just like how the <code>document</code> is provided by the JavaScript engine, the JavaScript engine also provides a way for us to make asynchronous HTTP requests. We do that with an <code>XMLHttpRequest</code> object. We can create these objects with the provided <code>XMLHttpRequest</code> constructor function. </p>
+<p>One of the best ways to learn is to get your hands dirty and try things out! So go to <a href="https://unsplash.com/" rel="noopener noreferrer" target="_blank">Unsplash</a>, open up the developer tools, and run the following on the console:</p>
+<pre><code class="js language-js">const asyncRequestObject = new XMLHttpRequest();</code></pre>
+<p>Confusingly, the constructor function has "XML" in it, but it's not limited to only XML documents. Remember that the "AJAX" acronym used to stand for "Asynchronous JavaScript and XML". Since the main file format that was originally used for asynchronous data exchange were XML files, it's easy to see why the function is called <code>XMLHttpRequest</code>!</p>
+<p>XMLHttpRequests (commonly abbreviated as XHR or xhr) can be used to request any file type (e.g. plain text files, HTML files, JSON files, image files, etc.) or data from an API. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p><strong>Note:</strong> We'll be digging into the <code>XMLHttpRequest</code> object. We'll look at how to create it, what methods and properties need to be used, and how to actually send asynchronous requests. For even more info on using the XHR object to make async requests, check out these links:</p>
+  <ul>
+  <li>MDN's docs - <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest</a></li>
+  <li>WHATWG Spec - <a href="https://xhr.spec.whatwg.org/" rel="noopener noreferrer" target="_blank">https://xhr.spec.whatwg.org/</a></li>
+  <li>W3C Spec - <a href="https://www.w3.org/TR/XMLHttpRequest/" rel="noopener noreferrer" target="_blank">https://www.w3.org/TR/XMLHttpRequest/</a></li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. XHR&#x27;s .open() method.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. The XHR Object')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

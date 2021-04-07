@@ -1,0 +1,51 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.067 --> 00:00:02.133
+Este é o projeto
+que vamos construir.
+
+00:00:02.167 --> 00:00:05.133
+Há um formulário que nos permite
+buscar por algo que nos interesse,
+
+00:00:05.167 --> 00:00:07.400
+e que exibe imagens
+e artigos sobre o assunto.
+
+00:00:07.434 --> 00:00:10.033
+É assim que ele vai funcionar
+depois de pronto.
+
+00:00:10.067 --> 00:00:12.167
+Agora, vamos voltar
+ao início do projeto.
+
+00:00:12.200 --> 00:00:15.334
+Esta é a aparência dele agora.
+Apenas o formulário.
+
+00:00:15.367 --> 00:00:17.267
+Este é o código
+para o formulário HTML.
+
+00:00:17.300 --> 00:00:19.334
+E esta é a parte da página
+que será preenchida
+
+00:00:19.367 --> 00:00:21.300
+com dados da resposta.
+
+00:00:21.334 --> 00:00:25.133
+Aqui no arquivo JavaScript,
+armazenamos todos os elementos DOM
+
+00:00:25.167 --> 00:00:27.367
+e temos um observador de eventos
+para o formulário.
+
+00:00:27.400 --> 00:00:31.267
+Aqui, vamos iniciar as requisições
+assíncronas. Vamos começar!
+

@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.367
+Vamos ver uma
+requisição assíncrona em ação.
+
+00:00:03.400 --> 00:00:05.000
+Estou na página inicial
+do Google
+
+00:00:05.033 --> 00:00:07.167
+e abri as ferramentas
+do desenvolvedor aqui.
+
+00:00:07.200 --> 00:00:09.400
+Para ver as requisições
+sendo feitas,
+
+00:00:09.434 --> 00:00:11.133
+vou trocar
+para o painel "Network"
+
+00:00:11.167 --> 00:00:13.167
+e conferir se está gravando.
+
+00:00:13.200 --> 00:00:16.701
+Agora vou buscar "Udacity",
+
+00:00:16.734 --> 00:00:19.000
+mas você verá
+que, logo após eu digitar "U",
+
+00:00:19.033 --> 00:00:20.934
+muitas coisas acontecerão.
+
+00:00:21.667 --> 00:00:23.334
+A página inicial
+foi substituída,
+
+00:00:23.367 --> 00:00:25.901
+algo que você deve ter visto
+um zilhão de vezes.
+
+00:00:25.934 --> 00:00:28.367
+O mais importante
+é que se olharmos aqui,
+
+00:00:28.400 --> 00:00:30.334
+veremos esta requisição.
+
+00:00:30.367 --> 00:00:33.434
+Está vendo este XHR
+na coluna "type"?
+
+00:00:33.467 --> 00:00:36.234
+Já veremos isso melhor,
+mas, por ora,
+
+00:00:36.267 --> 00:00:40.234
+saiba que esse XHR significa
+que é uma requisição assíncrona.
+

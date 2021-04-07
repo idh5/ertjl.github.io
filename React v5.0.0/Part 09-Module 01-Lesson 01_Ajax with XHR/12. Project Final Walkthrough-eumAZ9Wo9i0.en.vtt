@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.665
+Let's hear our app in action.
+
+00:00:01.665 --> 00:00:04.480
+I'm interested in learning more about cake.
+
+00:00:04.480 --> 00:00:06.745
+Oh yeah, that looks amazing.
+
+00:00:06.745 --> 00:00:08.714
+Looking at the code one last time,
+
+00:00:08.714 --> 00:00:11.634
+we set up a listener for when the form is submitted.
+
+00:00:11.634 --> 00:00:13.968
+This kicks off our async requests,
+
+00:00:13.968 --> 00:00:16.905
+one to Unsplash and one to the New York Times.
+
+00:00:16.905 --> 00:00:18.929
+When the Unsplash request returns,
+
+00:00:18.928 --> 00:00:21.149
+it calls the add image function.
+
+00:00:21.149 --> 00:00:22.875
+When the New York Times requests returns,
+
+00:00:22.875 --> 00:00:25.079
+it calls the add articles function.
+
+00:00:25.079 --> 00:00:27.883
+Both of these functions convert the response from json,
+
+00:00:27.884 --> 00:00:31.795
+extract the data, and then add it to the page, and that's it.
+
+00:00:31.795 --> 00:00:34.545
+A number of moving parts to handle asynchronous requests,
+
+00:00:34.545 --> 00:00:37.230
+but by now all of this makes sense because you're a pro.
+

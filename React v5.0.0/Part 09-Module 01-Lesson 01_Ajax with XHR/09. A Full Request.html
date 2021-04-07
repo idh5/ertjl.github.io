@@ -1,0 +1,233 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A Full Request</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Ajax with XHR</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Intro.html">01. Course Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Client Server Demonstration.html">02. Client Server Demonstration</a>
+    </li>
+    <li class="">
+      <a href="03. Ajax Definition &amp; Examples.html">03. Ajax Definition &amp; Examples</a>
+    </li>
+    <li class="">
+      <a href="04. APIs.html">04. APIs</a>
+    </li>
+    <li class="">
+      <a href="05. Create An Async Request with XHR.html">05. Create An Async Request with XHR</a>
+    </li>
+    <li class="">
+      <a href="06. The XHR Object.html">06. The XHR Object</a>
+    </li>
+    <li class="">
+      <a href="07. XHR&#x27;s .open() method.html">07. XHR&#x27;s .open() method</a>
+    </li>
+    <li class="">
+      <a href="08. XHR&#x27;s .send() method.html">08. XHR&#x27;s .send() method</a>
+    </li>
+    <li class="">
+      <a href="09. A Full Request.html">09. A Full Request</a>
+    </li>
+    <li class="">
+      <a href="10. Project Initial Walkthrough.html">10. Project Initial Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="11. Setting a Request Header.html">11. Setting a Request Header</a>
+    </li>
+    <li class="">
+      <a href="12. Project Final Walkthrough.html">12. Project Final Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="13. XHR Recap.html">13. XHR Recap</a>
+    </li>
+    <li class="">
+      <a href="14. XHR Outro.html">14. XHR Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. A Full Request</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Here's the full code that we've built up that creates the XHR object, tells it what info to request, sets up handlers for a success or error, and then actually sends the request:</p>
+<p>```js<br />
+function handleSuccess () { <br />
+  console.log( this.responseText ); <br />
+// the HTML of <a href="https://unsplash.com/" rel="noopener noreferrer" target="_blank">https://unsplash.com/</a><br />
+}</p>
+<p>function handleError () { <br />
+  console.log( 'An error occurred \uD83D\uDE1E' );<br />
+}</p>
+<p>const asyncRequestObject = new XMLHttpRequest();<br />
+asyncRequestObject.open('GET', 'https://unsplash.com');<br />
+asyncRequestObject.onload = handleSuccess;<br />
+asyncRequestObject.onerror = handleError;<br />
+asyncRequestObject.send();```</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="apis-and-json">APIs and JSON</h2>
+<p>Getting the HTML of a website is ok, but it's probably not very useful. The data it returns is in a format that is extremely difficult to parse and consume. It would be a lot easier if we could get just the data we want in an easily formatted data structure. If you're thinking that JSON would be a good idea, then you're right and I'll give you a piece of my cake!</p>
+<p>Instead of requesting the base URL for Unsplash, let's create an app that pulls an image from Unsplash's API and relevant articles from the New York Times.</p>
+<p>When making a request from an API that returns JSON, all we need to do is convert that JSON response into a JavaScript object. We can do that with <code>JSON.parse();</code>. Let's tweak the onload function to handle a JSON response:</p>
+<pre><code class="js language-js">function handleSuccess () {
+const data = JSON.parse( this.responseText ); // convert data from JSON to a JavaScript object
+console.log( data );
+}
+
+asyncRequestObject.onload = handleSuccess;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Project Initial Walkthrough.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. A Full Request')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

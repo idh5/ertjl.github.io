@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.667
+Há inúmeros APIs na web
+
+00:00:02.701 --> 00:00:05.470
+que fornecem prontamente
+informações interessantes
+
+00:00:05.503 --> 00:00:07.267
+e, geralmente, são gratuitos.
+
+00:00:07.300 --> 00:00:09.968
+É só não fazer
+milhares de requisições por hora.
+
+00:00:10.200 --> 00:00:12.968
+Por exemplo,
+o Google oferece vários APIs,
+
+00:00:13.000 --> 00:00:16.868
+inclusive o Google Analytics,
+Google Maps, Google Fonts.
+
+00:00:17.400 --> 00:00:20.167
+Se procurar na web,
+não é difícil achar sites
+
+00:00:20.200 --> 00:00:22.400
+que usam API externos
+para criar
+
+00:00:22.434 --> 00:00:24.467
+interações cativantes
+para os usuários.
+
+00:00:25.133 --> 00:00:28.167
+O Reddit e o plugin do Chrome
+Reddit Enhancement Suite
+
+00:00:28.200 --> 00:00:31.801
+interagem com APIs diferentes
+para deixar o Reddit mais dinâmico.
+
+00:00:32.302 --> 00:00:35.300
+Quando o usuário clica
+no link de um vídeo do YouTube,
+
+00:00:36.567 --> 00:00:38.968
+o Reddit abre um player
+embutido do YouTube
+
+00:00:39.000 --> 00:00:41.100
+que interage
+com o API do YouTube,
+
+00:00:41.767 --> 00:00:44.267
+ou quando o usuário
+abre um link do Twitter,
+
+00:00:44.934 --> 00:00:47.234
+o plugin do Chrome
+Reddit Enhancement Suite
+
+00:00:47.267 --> 00:00:49.901
+faz uma requisição AJAX
+de dados do Twitter
+
+00:00:49.934 --> 00:00:54.300
+e usa o API do Twitter
+para abrir o tweet na página.
+
+00:00:54.334 --> 00:00:56.234
+Veja o link
+nas notas do instrutor
+
+00:00:56.267 --> 00:00:58.501
+para encontrar
+mais APIs disponíveis.
+

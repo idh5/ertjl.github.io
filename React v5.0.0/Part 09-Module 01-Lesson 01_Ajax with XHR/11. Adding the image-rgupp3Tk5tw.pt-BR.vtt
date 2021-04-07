@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.067 --> 00:00:02.067
+Quando a requisição
+retornar com sucesso,
+
+00:00:02.133 --> 00:00:05.600
+vamos pausar dentro da função
+para ver o que retornou.
+
+00:00:05.667 --> 00:00:08.067
+Para isso, vamos adicionar
+um depurador aqui.
+
+00:00:08.133 --> 00:00:11.733
+Ao atualizar a página
+e buscar flamingos, vai pausar.
+
+00:00:11.800 --> 00:00:14.600
+O valor é o objeto XHR
+
+00:00:14.667 --> 00:00:18.000
+e a resposta é armazenada
+no texto de resposta.
+
+00:00:18.067 --> 00:00:20.933
+A resposta Json
+exibe todos os textos.
+
+00:00:21.000 --> 00:00:24.000
+A informação fica mais clara
+no painel de rede.
+
+00:00:24.067 --> 00:00:26.400
+Esta requisição
+retornou 13 respostas.
+
+00:00:26.467 --> 00:00:28.667
+Devemos convertê-las
+
+00:00:28.733 --> 00:00:32.400
+de Json para um objeto
+JavaScript e formatar os dados.
+
+00:00:32.467 --> 00:00:34.933
+Vamos pegar
+a primeira imagem.
+
+00:00:35.000 --> 00:00:38.533
+Tendo a primeira imagem,
+basta adicioná-la à página.
+
+00:00:38.600 --> 00:00:40.800
+O código adicionará
+um elemento de imagem
+
+00:00:40.867 --> 00:00:43.200
+com um ponto de imagem
+do Unsplash
+
+00:00:43.400 --> 00:00:46.000
+e uma legenda
+da pessoa que tirou a foto.
+
+00:00:46.067 --> 00:00:49.800
+Ela será adicionada na resposta
+como o primeiro elemento.
+
+00:00:50.133 --> 00:00:54.400
+E queremos resolver o problema
+de não haver retorno de imagens.
+
+00:00:54.733 --> 00:00:58.067
+Isso vai verificar se resultados
+de imagens serão retornados.
+
+00:00:58.133 --> 00:01:02.333
+Mesmo que não sejam, exibiremos
+a mensagem de falta de imagens.
+

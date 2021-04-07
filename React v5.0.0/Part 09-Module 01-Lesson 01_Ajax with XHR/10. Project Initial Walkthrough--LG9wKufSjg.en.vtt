@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.480
+This is the project that we'll be building.
+
+00:00:02.480 --> 00:00:05.009
+There's a form that let's you search for something you're interested
+
+00:00:05.009 --> 00:00:07.984
+in and displays an image and some articles about it.
+
+00:00:07.985 --> 00:00:10.199
+This is how it will work when it's finished.
+
+00:00:10.199 --> 00:00:12.479
+Now let me revert to the start of the project.
+
+00:00:12.480 --> 00:00:15.780
+This is what the project looks like right now, just the form.
+
+00:00:15.779 --> 00:00:17.609
+Here's the code for the HTML form,
+
+00:00:17.609 --> 00:00:21.629
+and this is the part of the page that will get populated with the data from the response.
+
+00:00:21.629 --> 00:00:25.269
+Here in the JavaScript file we're storing all of the necessary DOM elements,
+
+00:00:25.269 --> 00:00:27.539
+and we have an event listener for the form.
+
+00:00:27.539 --> 00:00:31.579
+And here's where we'll kick off the async requests. So let's get going.
+

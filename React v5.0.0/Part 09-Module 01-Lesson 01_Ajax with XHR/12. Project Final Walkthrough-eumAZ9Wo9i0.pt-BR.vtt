@@ -1,0 +1,51 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.400
+Vamos rodar nosso aplicativo.
+Quero saber mais sobre o bolo.
+
+00:00:04.467 --> 00:00:06.667
+Está com a cara ótima!
+
+00:00:06.733 --> 00:00:08.732
+Verificando o código
+uma última vez,
+
+00:00:08.799 --> 00:00:11.600
+configuramos um observador
+quando o formulário é enviado.
+
+00:00:11.667 --> 00:00:13.933
+Isso envia
+as requisições assíncronas,
+
+00:00:14.000 --> 00:00:16.867
+uma para o Unsplash e outra
+para o "New York Times".
+
+00:00:16.933 --> 00:00:21.067
+A requisição do Unsplash retorna
+e chama a função "adicionar imagem".
+
+00:00:21.133 --> 00:00:25.000
+Com a requisição do "Times",
+chama a função "adicionar artigo".
+
+00:00:25.067 --> 00:00:27.800
+As duas funções convertem
+a resposta de JSON,
+
+00:00:27.867 --> 00:00:31.733
+extraem os dados, adicionam
+à página e pronto.
+
+00:00:31.800 --> 00:00:34.467
+Diversas partes lidam
+com requisições assíncronas,
+
+00:00:34.533 --> 00:00:37.267
+mas agora tudo faz sentido
+porque você é especialista.
+

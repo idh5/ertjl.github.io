@@ -1,0 +1,59 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.467
+Executar este código
+não fez nada.
+
+00:00:03.000 --> 00:00:05.933
+Não é verdade,
+porque algo acontece.
+
+00:00:06.000 --> 00:00:10.467
+A requisição é enviada. Podemos
+ver através do painel de rede.
+
+00:00:11.000 --> 00:00:14.200
+Para gravar tráfego de rede,
+o DevTools precisa gravar.
+
+00:00:14.267 --> 00:00:16.467
+Está vermelho,
+então está gravando.
+
+00:00:16.533 --> 00:00:19.467
+Se não estiver vermelho,
+clique para gravar.
+
+00:00:19.533 --> 00:00:23.400
+Descendo aqui e executando
+a requisição, ela é enviada.
+
+00:00:23.467 --> 00:00:27.200
+Viu? Aqui está a requisição.
+Vamos parar a gravação.
+
+00:00:27.267 --> 00:00:30.200
+Ao selecionar uma requisição
+o cabeçalho aparece.
+
+00:00:30.267 --> 00:00:34.000
+Aqui está a URL requisitada
+e o método da requisição.
+
+00:00:34.067 --> 00:00:36.267
+Há também uma visualização
+da requisição
+
+00:00:36.333 --> 00:00:40.200
+e o pagamento da resposta
+contém o HTML da resposta.
+
+00:00:40.267 --> 00:00:43.200
+Apesar de nada acontecer
+na página ou no código,
+
+00:00:43.267 --> 00:00:45.467
+a requisição foi enviada.
+

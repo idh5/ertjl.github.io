@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.759
+After the request returned successfully let's
+
+00:00:02.759 --> 00:00:05.969
+pause inside the function to check out what's been returned.
+
+00:00:05.969 --> 00:00:08.625
+To do that let's add a debugger right here.
+
+00:00:08.625 --> 00:00:11.160
+Now if I refresh the page and search for flamingos,
+
+00:00:11.160 --> 00:00:14.519
+it'll pause that this value is the XHR object
+
+00:00:14.519 --> 00:00:18.410
+itself and the response is stored in response text.
+
+00:00:18.410 --> 00:00:21.375
+This is a Json response and shows all of the text.
+
+00:00:21.375 --> 00:00:24.644
+We can see this information a lot more easily in the network pane.
+
+00:00:24.644 --> 00:00:26.945
+This request returned 13 responses.
+
+00:00:26.945 --> 00:00:30.600
+So we need to convert the response from Json into a JavaScript object,
+
+00:00:30.600 --> 00:00:33.000
+then format the data.
+
+00:00:33.000 --> 00:00:35.064
+Now, to get the first image.
+
+00:00:35.064 --> 00:00:36.734
+Now that we have the first image,
+
+00:00:36.734 --> 00:00:39.420
+we just need to add it to the page.
+
+00:00:39.420 --> 00:00:42.570
+This code will add a figure element with an image point to the image
+
+00:00:42.570 --> 00:00:46.164
+from unsplash and a caption of the person that took the photo.
+
+00:00:46.164 --> 00:00:50.670
+It will add this inside the response container as the first element.
+
+00:00:50.670 --> 00:00:55.245
+Now we also want to make sure that we handle the case if no images are returned.
+
+00:00:55.244 --> 00:00:58.408
+This will check to make sure there's some image results returned.
+
+00:00:58.408 --> 00:00:59.774
+If there aren't any,
+
+00:00:59.774 --> 00:01:02.329
+then we'll just display a message that there are no images.
+

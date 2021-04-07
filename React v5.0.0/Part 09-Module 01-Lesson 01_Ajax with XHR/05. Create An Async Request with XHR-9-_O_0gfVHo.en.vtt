@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.710
+It's cake baking time.
+
+00:00:02.710 --> 00:00:04.290
+Now, before you can make a cake,
+
+00:00:04.290 --> 00:00:06.714
+you need all of the ingredients to build it.
+
+00:00:06.714 --> 00:00:08.429
+So, we have the cake mix.
+
+00:00:08.429 --> 00:00:10.804
+We have eggs, milk, and butter.
+
+00:00:10.804 --> 00:00:12.199
+So, we have everything we need,
+
+00:00:12.199 --> 00:00:29.739
+so I'll turn on the oven and then we can start making it.
+
+00:00:29.739 --> 00:00:32.519
+And done. OK. So, work with me here a bit.
+
+00:00:32.520 --> 00:00:35.920
+I need the cake to be baked before I can have frosting.
+
+00:00:35.920 --> 00:00:39.750
+And I've requested the oven to take the cake batter and turn it into a cake.
+
+00:00:39.750 --> 00:00:42.215
+And when it's done, this timer here will beep,
+
+00:00:42.215 --> 00:00:44.360
+letting me know that I can get the cake back.
+
+00:00:44.359 --> 00:00:48.070
+But I don't need to sit here and wait around for the cake to bake.
+
+00:00:48.070 --> 00:00:49.585
+I could go do something else.
+
+00:00:49.585 --> 00:00:51.628
+I could even make the frosting right now.
+
+00:00:51.628 --> 00:00:53.869
+An XHR object is provided by
+
+00:00:53.869 --> 00:00:57.155
+the javascript environment and is used to make AJAX requests.
+
+00:00:57.155 --> 00:01:00.154
+And it's like this initial prep stage of making the cake batter.
+
+00:01:00.154 --> 00:01:02.210
+You have to manually do a lot of the steps to
+
+00:01:02.210 --> 00:01:04.320
+get the request set up and finally, send off.
+
+00:01:04.319 --> 00:01:07.024
+But then, your code can continue on and do other things.
+
+00:01:07.025 --> 00:01:08.877
+When the response does come back.
+
+00:01:08.876 --> 00:01:11.060
+it's been prepped to handle the return data.
+
+00:01:11.060 --> 00:01:12.629
+With this analogy in mind,
+
+00:01:12.629 --> 00:01:15.090
+let's look at the XHR object in detail.
+

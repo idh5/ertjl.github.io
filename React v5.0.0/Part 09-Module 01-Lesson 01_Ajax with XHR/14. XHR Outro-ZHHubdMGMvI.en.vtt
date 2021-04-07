@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.519
+We just looked at using the XHR object to create and send asynchronous requests.
+
+00:00:05.519 --> 00:00:09.029
+As you saw, there are a number of steps to create an XHR object,
+
+00:00:09.029 --> 00:00:10.559
+handle a successful request,
+
+00:00:10.560 --> 00:00:12.380
+and deal with errors.
+
+00:00:12.380 --> 00:00:13.770
+It was a lot of code.
+
+00:00:13.769 --> 00:00:15.945
+Do we really need to write all of that code
+
+00:00:15.945 --> 00:00:19.079
+every single time we want to send an asynchronous request?
+
+00:00:19.079 --> 00:00:20.987
+When using the XHR object,
+
+00:00:20.987 --> 00:00:23.125
+the answer is yes.
+
+00:00:23.125 --> 00:00:27.765
+But you don't always have to use the XHR object to make async requests.
+
+00:00:27.765 --> 00:00:31.960
+You could use some third party library like jQuery to make the request for you.
+
+00:00:31.960 --> 00:00:35.399
+Check out the next lesson to see how jQuery makes async requests.
+

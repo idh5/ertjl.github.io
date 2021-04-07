@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.534 --> 00:00:06.273
+Vimos como um objeto HXR cria
+e envia requisições assíncronas.
+
+00:00:06.306 --> 00:00:09.142
+São vários os passos
+para se criar um objeto XHR
+
+00:00:09.176 --> 00:00:12.479
+e lidar com uma requisição
+bem-sucedida e erros.
+
+00:00:12.513 --> 00:00:13.859
+Foram muitos códigos.
+
+00:00:13.892 --> 00:00:15.794
+Será que temos
+que escrever o código
+
+00:00:15.827 --> 00:00:18.589
+em todas
+as requisições assíncronas?
+
+00:00:19.218 --> 00:00:23.190
+Ao usar objetos XHR,
+a resposta é "sim".
+
+00:00:23.657 --> 00:00:28.395
+Mas nem sempre é o objeto XHR
+que faz requisições assíncronas.
+
+00:00:28.428 --> 00:00:32.866
+É possível usar uma biblioteca
+como jQuery para a requisição.
+
+00:00:32.900 --> 00:00:36.470
+Veja a próxima aula sobre jQuery
+fazendo requisições assíncronas.
+

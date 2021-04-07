@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:03.067
+Nesta aula,
+usamos a biblioteca jQuery
+
+00:00:03.100 --> 00:00:05.033
+para fazer
+requisições assíncronas
+
+00:00:05.067 --> 00:00:07.801
+e usamos o método "jQuery's.ajax"
+para isso.
+
+00:00:08.200 --> 00:00:10.501
+Também entramos
+no método ".ajax"
+
+00:00:10.534 --> 00:00:13.100
+e vimos que,
+na parte inferior do código,
+
+00:00:13.133 --> 00:00:15.267
+ele criou um objeto XHR,
+
+00:00:15.300 --> 00:00:19.033
+definiu as propriedades e callbacks
+e enviou as requisições para nós.
+
+00:00:19.067 --> 00:00:22.300
+Então vimos como fazer
+requisições assíncronas com XHR.
+
+00:00:22.334 --> 00:00:24.501
+Agora vimos como usar
+um intermediário
+
+00:00:24.534 --> 00:00:26.434
+para fazer a base para nós.
+
+00:00:26.467 --> 00:00:27.567
+Na próxima aula,
+
+00:00:27.601 --> 00:00:30.501
+veremos a nova maneira de fazer
+requisições assíncronas.
+
+00:00:30.534 --> 00:00:33.234
+Não terá glúten, carboidrato
+nem açúcar.
+
+00:00:33.267 --> 00:00:35.701
+Será que ainda vai ser bolo?
+Vai saber?
+
+00:00:35.734 --> 00:00:38.634
+Uma coisa eu garanto:
+será bom como chocolate.
+

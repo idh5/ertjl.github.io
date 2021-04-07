@@ -1,0 +1,275 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling The Returned Data</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Ajax with jQuery</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. The jQuery Library &amp; Ajax.html">01. The jQuery Library &amp; Ajax</a>
+    </li>
+    <li class="">
+      <a href="02. jQuery&#x27;s &#x60;ajax()&#x60; Method.html">02. jQuery&#x27;s &#x60;ajax()&#x60; Method</a>
+    </li>
+    <li class="">
+      <a href="03. Handling The Returned Data.html">03. Handling The Returned Data</a>
+    </li>
+    <li class="">
+      <a href="04. Cleaning up the Success Callback.html">04. Cleaning up the Success Callback</a>
+    </li>
+    <li class="">
+      <a href="05. Code Walkthrough.html">05. Code Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="06. Peek inside $.ajax().html">06. Peek inside $.ajax()</a>
+    </li>
+    <li class="">
+      <a href="07. Review the Call Stack.html">07. Review the Call Stack</a>
+    </li>
+    <li class="">
+      <a href="08. Walkthrough of .ajaxTransport.html">08. Walkthrough of .ajaxTransport</a>
+    </li>
+    <li class="">
+      <a href="09. jQuery&#x27;s Other Async Methods.html">09. jQuery&#x27;s Other Async Methods</a>
+    </li>
+    <li class="">
+      <a href="10. Async with jQuery Outro.html">10. Async with jQuery Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Handling The Returned Data</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If you recall from setting up an XHR object, the response was handled by a function. It's the same thing with the <code>.ajax()</code> method. We can <em>chain</em> on to <code>.ajax()</code> with a <code>.done()</code> method. We pass the <code>.done()</code> method a function that will run with the Ajax call is done!</p>
+<pre><code class="js language-js">function handleResponse(data) {
+    console.log('the ajax request has finished!');
+    console.log(data);
+}
+
+$.ajax({
+    url: 'https://swapi.co/api/people/1/'
+}).done(handleResponse);</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud109-l2-swapi-request-with-done.gif" alt="_Asynchronous call set up with a &#x60;done&#x60; method to handle the response. The request is made, and then the response is logged to the console._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Asynchronous call set up with a <code>done</code> method to handle the response. The request is made, and then the response is logged to the console.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's convert the existing, plain XHR call with jQuery's <code>.ajax()</code>. This is what the app currently has:</p>
+<pre><code class="js language-js">const imgRequest = new XMLHttpRequest();
+imgRequest.onload = addImage;
+imgRequest.open('GET', `https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}`);
+imgRequest.setRequestHeader('Authorization', 'Client-ID &lt;your-client-id-here&gt;');
+imgRequest.send();</code></pre>
+<p>A lot of this information is handled behind the scene by jQuery, so here's the first step in the conversion:</p>
+<pre><code class="js language-js">$.ajax({
+    url: `https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}`
+}).done(addImage);</code></pre>
+<p>With the jQuery code:</p>
+<ul>
+<li>we do not need to create an XHR object</li>
+<li>instead of specifying that the request is a <code>GET</code> request, it defaults to that and we just provide the URL of the resource we're requesting</li>
+<li>instead of setting <code>onload</code>, we use the <code>.done()</code> method</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Adding Headers To A <code>.Ajax()</code> Call</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>The only change that needs to be made is including the Client ID header along with the request so that Unsplash will verify the request. Why don't you check out <a href="http://api.jquery.com/jQuery.ajax/" rel="noopener noreferrer" target="_blank">the API for the .ajax() method</a> and select the code below that correctly adds an "Authorization" header to the request.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1485302601990" name="261296" id="a1485302601990">
+        <label for="a1485302601990"><p>$.ajax({<br>&nbsp;&nbsp;&nbsp;&nbsp;url: <code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code><br>}).addHeader('Authorization', 'Client-ID 123abc456def')<br>.done(addImage);</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485302665712" name="261296" id="a1485302665712">
+        <label for="a1485302665712"><p>$.ajax({<br>&nbsp;&nbsp;&nbsp;&nbsp;url: <code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>     <br>&nbsp;&nbsp;&nbsp;&nbsp;setHeader: [['Authorization', 'Client-ID 123abc456def']] <br>}).done(addImage);</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485302700121" name="261296" id="a1485302700121">
+        <label for="a1485302700121"><p>$.ajax({     <br>&nbsp;&nbsp;&nbsp;&nbsp;url: <code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>     <br>&nbsp;&nbsp;&nbsp;&nbsp;authorization: 'Client-ID 123abc456def' <br>}).done(addImage);</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485302706701" name="261296" id="a1485302706701">
+        <label for="a1485302706701"><p>$.ajax({     <br>&nbsp;&nbsp;&nbsp;&nbsp;url: <code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>     <br>&nbsp;&nbsp;&nbsp;&nbsp;headers: {         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authorization: 'Client-ID 123abc456def'     <br>&nbsp;&nbsp;&nbsp;&nbsp;} <br>}).done(addImage);</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    $.ajax({     <br>&nbsp;&nbsp;&nbsp;&nbsp;url: `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`     <br>&nbsp;&nbsp;&nbsp;&nbsp;headers: {         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authorization: 'Client-ID 123abc456def'     <br>&nbsp;&nbsp;&nbsp;&nbsp;} <br>}).done(addImage);
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The request should send perfectly now. Fantastic work! But there seem to be issues with the response and how it's handled.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Cleaning up the Success Callback.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Handling The Returned Data')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

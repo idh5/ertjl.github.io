@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.370
+Welcome back. So it turns out that
+
+00:00:02.370 --> 00:00:04.919
+the cake I made wasn't the prettiest thing in the world.
+
+00:00:04.919 --> 00:00:06.415
+It should taste great,
+
+00:00:06.415 --> 00:00:08.195
+but it looks kind of awful.
+
+00:00:08.195 --> 00:00:12.265
+Totally not something I can show up with and be proud of having at a birthday party.
+
+00:00:12.265 --> 00:00:14.625
+So instead of me baking the cake and frosting it,
+
+00:00:14.625 --> 00:00:16.469
+let's just have a professional do it.
+
+00:00:16.469 --> 00:00:25.769
+With this cake, I had to get all the ingredients,
+
+00:00:25.769 --> 00:00:28.454
+combine them myself, watch it while it's in the oven,
+
+00:00:28.454 --> 00:00:30.594
+make the frosting, and then actually frost it.
+
+00:00:30.594 --> 00:00:32.424
+I had to do everything myself.
+
+00:00:32.424 --> 00:00:33.884
+It was just too much.
+
+00:00:33.884 --> 00:00:37.259
+Now, I just requested the bakery to make it for me.
+
+00:00:37.259 --> 00:00:38.789
+They're working on it now and will let me know
+
+00:00:38.789 --> 00:00:41.079
+when it's ready to come back and pick it up.
+
+00:00:41.079 --> 00:00:43.034
+So, I'm not doing all the work this time,
+
+00:00:43.034 --> 00:00:45.919
+but that doesn't mean it's not being done.
+
+00:00:45.920 --> 00:00:50.289
+Someone there is doing all of the same steps that I did in the previous lesson.
+
+00:00:50.289 --> 00:00:54.615
+So when you use a JavaScript library like jQuery to make async requests,
+
+00:00:54.615 --> 00:00:57.615
+you just request the data and then jQuery does
+
+00:00:57.615 --> 00:01:01.280
+all of the hands-on work under the hood. Let's check it out.
+

@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.479
+Let's see an asynchronous request in action.
+
+00:00:03.479 --> 00:00:07.080
+I'm on Google's home page and have dev tools open over here.
+
+00:00:07.080 --> 00:00:09.400
+To see the requests being made,
+
+00:00:09.400 --> 00:00:13.550
+I'll switch to the network pane and then make sure it's actually recording.
+
+00:00:13.550 --> 00:00:16.589
+Now I'm going to do a search for Udacity,
+
+00:00:16.589 --> 00:00:19.079
+but you'll see that right after I type the U,
+
+00:00:19.079 --> 00:00:21.551
+a bunch of things will happen,
+
+00:00:21.551 --> 00:00:25.823
+the homepage has been replaced which I'm sure you're used to seeing a zillion times.
+
+00:00:25.824 --> 00:00:28.340
+But more importantly if we check over here,
+
+00:00:28.339 --> 00:00:30.625
+we can see this request.
+
+00:00:30.625 --> 00:00:33.950
+See this XHR in the type column?
+
+00:00:33.950 --> 00:00:35.565
+We'll be digging into this shortly.
+
+00:00:35.564 --> 00:00:40.259
+But for now, just know that the XHR means it's an asynchronous request.
+

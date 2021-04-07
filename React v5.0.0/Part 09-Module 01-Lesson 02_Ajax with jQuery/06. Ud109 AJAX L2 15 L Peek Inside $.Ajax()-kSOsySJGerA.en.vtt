@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.470
+This is the cake from the previous lesson.
+
+00:00:02.470 --> 00:00:05.355
+And this is the one that I just got back from the store.
+
+00:00:05.355 --> 00:00:08.290
+With this one, I did all of the work myself.
+
+00:00:08.289 --> 00:00:10.379
+I added all the data, I set all the properties,
+
+00:00:10.380 --> 00:00:12.145
+and I hooked everything together.
+
+00:00:12.144 --> 00:00:13.884
+With the store bought cake,
+
+00:00:13.884 --> 00:00:15.580
+I didn't do any of that work,
+
+00:00:15.580 --> 00:00:17.800
+but someone else did.
+
+00:00:17.800 --> 00:00:20.519
+They had to go through all of the same steps that I did.
+
+00:00:20.519 --> 00:00:23.669
+So even though I'm calling it jQuery's.ajax method,
+
+00:00:23.670 --> 00:00:27.105
+somewhere in that code jQuery is creating an XHR object,
+
+00:00:27.105 --> 00:00:28.695
+setting the right properties and methods,
+
+00:00:28.695 --> 00:00:32.000
+and then sending off the request. Let's check it out.
+

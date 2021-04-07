@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.370
+Ajax requests allow for content retrieval and display without reloading the web page.
+
+00:00:05.370 --> 00:00:08.039
+Asynchronous in Ajax refers to
+
+00:00:08.039 --> 00:00:11.285
+the fact that the request doesn't block other events from happening.
+
+00:00:11.285 --> 00:00:14.220
+Instead, the page keeps on doing its thing and then only
+
+00:00:14.220 --> 00:00:17.280
+acts on the data when it gets returned by the server.
+
+00:00:17.280 --> 00:00:22.530
+Ajax requests occur in a number of different ways and with varying levels of difficulty.
+
+00:00:22.530 --> 00:00:25.554
+Some require an API key, others use Oauth,
+
+00:00:25.553 --> 00:00:28.239
+and some don't use any authentication at all,
+
+00:00:28.239 --> 00:00:31.769
+and the data returned by different Ajax request differs too.
+
+00:00:31.769 --> 00:00:34.679
+X in Ajax stands for XML,
+
+00:00:34.679 --> 00:00:37.829
+which used to be the dominant hierarchical data format.
+
+00:00:37.829 --> 00:00:40.289
+But today Json is much more popular.
+
+00:00:40.289 --> 00:00:42.780
+In fac, t most Ajax request nowadays are actually
+
+00:00:42.780 --> 00:00:48.135
+AJAJ request standing for Asynchronous JavaScript And Json requests,
+
+00:00:48.134 --> 00:00:51.960
+but it doesn't sound as nice so still just call them Ajax.
+
+00:00:51.960 --> 00:00:53.875
+Embedded within Ajax responses,
+
+00:00:53.875 --> 00:00:56.039
+it's pretty common to see html,
+
+00:00:56.039 --> 00:00:59.000
+which websites can use to fill in part of the page.
+

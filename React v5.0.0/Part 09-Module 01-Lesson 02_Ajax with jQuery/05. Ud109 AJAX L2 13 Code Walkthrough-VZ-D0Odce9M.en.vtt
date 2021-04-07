@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.919
+Here's the completed project that uses
+
+00:00:01.919 --> 00:00:05.549
+jQuery's Ajax method to asynchronously fetch the data,
+
+00:00:05.549 --> 00:00:10.358
+setting up the XHR object has been replaced with calls to dollar.ajax,
+
+00:00:10.358 --> 00:00:13.365
+and the data is passed in directly as an object.
+
+00:00:13.365 --> 00:00:17.460
+When the response is returned it's handled by the done method.
+
+00:00:17.460 --> 00:00:18.765
+If there are any errors,
+
+00:00:18.765 --> 00:00:21.449
+then the fail method will display an error message
+
+00:00:21.449 --> 00:00:24.269
+letting the user know that content couldn't be loaded.
+
+00:00:24.269 --> 00:00:26.739
+Since unsplash returns a Json object,
+
+00:00:26.739 --> 00:00:30.650
+the response will automatically get converted to Json by jQuery.
+
+00:00:30.649 --> 00:00:33.149
+Similarly, the New York Times request returns
+
+00:00:33.149 --> 00:00:36.659
+Json data that will get converted to a regular JavaScript object.
+
+00:00:36.659 --> 00:00:39.278
+Pretty cool how jQuery handles most of the set up for us, isn't it?
+

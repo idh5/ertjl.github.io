@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.149
+I have added the debugger and searched for line.
+
+00:00:03.149 --> 00:00:06.740
+We can see that the response has a nested response object.
+
+00:00:06.740 --> 00:00:10.449
+And inside that the docs property holds all of the articles.
+
+00:00:10.449 --> 00:00:13.843
+So we need to convert the response from JSON into a Javascript object.
+
+00:00:13.843 --> 00:00:15.959
+If some articles have been returned,
+
+00:00:15.960 --> 00:00:19.200
+then this section maps over each article and then returns
+
+00:00:19.199 --> 00:00:23.699
+a list item that contains the article's headline and a snippet of the article.
+
+00:00:23.699 --> 00:00:28.530
+Finally, we combine all article list items together inside in unordered list tag.
+
+00:00:28.530 --> 00:00:32.329
+This gets added to the bottom of the page inside the response container.
+
+00:00:32.329 --> 00:00:36.000
+If there are no articles then it just displays the text "no articles available."
+

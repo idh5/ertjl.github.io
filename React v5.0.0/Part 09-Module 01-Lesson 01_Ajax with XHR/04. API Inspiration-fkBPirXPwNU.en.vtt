@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.745
+There are tons of APIs available on the web
+
+00:00:02.745 --> 00:00:05.621
+that readily serve up interesting information.
+
+00:00:05.621 --> 00:00:07.474
+And they're usually free to use,
+
+00:00:07.474 --> 00:00:10.184
+so long as you aren't making thousands of requests per hour.
+
+00:00:10.185 --> 00:00:12.665
+For instance, Google offers a ton of APIs,
+
+00:00:12.664 --> 00:00:16.980
+including Google Analytics, Google Maps, Google Fonts.
+
+00:00:16.980 --> 00:00:18.403
+Looking around the Web,
+
+00:00:18.403 --> 00:00:20.670
+it isn't hard to find examples of websites that use
+
+00:00:20.670 --> 00:00:24.770
+external API to create interesting interactions for users.
+
+00:00:24.769 --> 00:00:28.269
+Reddit and the Reddit Enhancement Suite Chrome plugin
+
+00:00:28.269 --> 00:00:32.019
+interact with a few different APIs to make Reddit feel more dynamic.
+
+00:00:32.020 --> 00:00:36.005
+When a user clicks on a link that resolves to a YouTube video,
+
+00:00:36.005 --> 00:00:41.810
+Reddit opens up an embedded YouTube player which interacts with the YouTube API.
+
+00:00:41.810 --> 00:00:44.919
+Or when a user opens up a link to a Twitter feed,
+
+00:00:44.918 --> 00:00:49.119
+the Reddit Enhancement Suite Chrome plugin fires off an Ajax request for
+
+00:00:49.119 --> 00:00:54.820
+Twitter data and uses the Twitter API to open up the tweet right here inside the page.
+
+00:00:54.820 --> 00:00:56.590
+Check out the link in the instructor notes if
+
+00:00:56.590 --> 00:00:58.620
+you want to find some more APIs that are available.
+

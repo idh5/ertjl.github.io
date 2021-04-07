@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.705
+In this lesson, we used the jQuery library to make
+
+00:00:03.705 --> 00:00:08.160
+asynchronous requests and we use jQuery's.ajax method to do it.
+
+00:00:08.160 --> 00:00:13.065
+We also dove into the.ajax method and saw that deep in the underbelly of the code,
+
+00:00:13.064 --> 00:00:15.089
+it just created an XHR object,
+
+00:00:15.089 --> 00:00:17.079
+set all the properties and callbacks,
+
+00:00:17.079 --> 00:00:19.269
+and then sent off the request for us.
+
+00:00:19.269 --> 00:00:22.285
+So we've seen how to make async requests with XHR,
+
+00:00:22.285 --> 00:00:26.189
+and now we just looked at using a middleman to handle the groundwork for us.
+
+00:00:26.189 --> 00:00:27.420
+In the next lesson,
+
+00:00:27.420 --> 00:00:30.493
+we'll look at the shiny new way to make async requests.
+
+00:00:30.493 --> 00:00:33.240
+It'll be gluten-free, carb-free and even sugar-free,
+
+00:00:33.240 --> 00:00:34.834
+will it even be a cake at this point?
+
+00:00:34.834 --> 00:00:37.275
+Who even knows? I can guarantee you this though,
+
+00:00:37.274 --> 00:00:39.000
+it will be chocolate.
+

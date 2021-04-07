@@ -1,0 +1,104 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:02.167
+Bem-vindo
+ao curso sobre AJAX.
+
+00:00:02.200 --> 00:00:04.901
+O conceito principal do AJAX
+é simples.
+
+00:00:04.934 --> 00:00:06.434
+Você requisita alguns dados
+
+00:00:06.467 --> 00:00:09.934
+e, sem ficar esperando
+a requisição do retorno,
+
+00:00:09.968 --> 00:00:11.534
+você faz outra coisa.
+
+00:00:12.033 --> 00:00:15.267
+Quando a requisição retorna,
+você cuida dela.
+
+00:00:15.300 --> 00:00:17.300
+Esse é um resumo do AJAX.
+
+00:00:17.801 --> 00:00:22.334
+AJAX era uma sigla
+para JavaScript Assíncrono e XML,
+
+00:00:22.367 --> 00:00:26.200
+e você ainda verá assim,
+mas é um termo errôneo agora.
+
+00:00:26.234 --> 00:00:30.868
+AJAX é o conceito de requisitar
+dados de forma assíncrona,
+
+00:00:30.901 --> 00:00:33.534
+seja num arquivo XML,
+num arquivo JavaScript
+
+00:00:33.567 --> 00:00:35.334
+ou num JSON de um API REST.
+
+00:00:35.367 --> 00:00:37.567
+Não importa
+quais sejam os dados.
+
+00:00:37.601 --> 00:00:39.734
+Você requisita os dados
+de forma assíncrona
+
+00:00:39.767 --> 00:00:41.334
+e lida com eles quando voltam.
+
+00:00:41.367 --> 00:00:44.167
+Neste curso, você aprenderá
+a fazer requisições AJAX
+
+00:00:44.200 --> 00:00:45.367
+usando JavaScript.
+
+00:00:45.734 --> 00:00:49.534
+Primeiro, vamos ver como fazer
+com o consagrado objeto XHR.
+
+00:00:49.567 --> 00:00:53.834
+Depois veremos como o jQuery faz
+requisições AJAX na segunda lição.
+
+00:00:53.868 --> 00:00:55.534
+Na terceira lição,
+
+00:00:55.567 --> 00:00:59.267
+veremos a maneira nova e aprimorada
+de fazer requisições assíncronas
+
+00:00:59.300 --> 00:01:01.801
+usando o Fetch API,
+e você vai adorar.
+
+00:01:01.834 --> 00:01:04.033
+O aniversário da minha mãe
+está chegando
+
+00:01:04.067 --> 00:01:06.234
+e preciso fazer
+um bolo para ela.
+
+00:01:06.267 --> 00:01:08.467
+Enquanto pego
+os ingredientes na loja,
+
+00:01:08.501 --> 00:01:09.801
+meus amigos vão demonstrar
+
+00:01:09.834 --> 00:01:13.100
+como a comunicação AJAX funciona
+ao interagir com um servidor.
+

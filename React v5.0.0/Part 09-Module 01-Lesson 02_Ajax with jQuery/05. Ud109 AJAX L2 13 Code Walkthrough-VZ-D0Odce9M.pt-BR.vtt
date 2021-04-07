@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.067 --> 00:00:03.533
+Aqui está o projeto finalizado
+que usa o método AJAX do jQuery
+
+00:00:03.600 --> 00:00:05.733
+para buscar os dados
+de modo assíncrono.
+
+00:00:05.800 --> 00:00:10.400
+Configurar o XHR foi substituído
+por chamadas "dollar.ajax",
+
+00:00:10.467 --> 00:00:13.200
+e os dados foram inseridos
+como um objeto.
+
+00:00:13.267 --> 00:00:17.267
+Quando a resposta é devolvida,
+é gerenciada pelo método Done.
+
+00:00:17.333 --> 00:00:21.267
+Se houver erros, o método de falha
+exibirá uma mensagem
+
+00:00:21.333 --> 00:00:24.400
+avisando ao usuário que o conteúdo
+não foi carregado.
+
+00:00:24.467 --> 00:00:26.733
+Como o Unsplash
+devolve um objeto JSON,
+
+00:00:26.800 --> 00:00:29.267
+a resposta é convertida
+automaticamente para JSON
+
+00:00:29.333 --> 00:00:31.533
+pelo jQuery.
+De forma similar,
+
+00:00:31.600 --> 00:00:33.800
+a requisição do "New York Times"
+devolve dados JSON
+
+00:00:33.867 --> 00:00:36.533
+que serão convertidos
+para um objeto JavaScript.
+
+00:00:36.600 --> 00:00:39.200
+Não é legal como o jQuery
+cuida da maior parte?
+

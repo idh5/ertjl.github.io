@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.569
+É hora de fazer um bolo!
+
+00:00:02.603 --> 00:00:06.773
+Antes de fazer um bolo,
+é preciso ter os ingredientes.
+
+00:00:06.807 --> 00:00:10.844
+Temos mistura para bolo,
+ovos, leite e manteiga.
+
+00:00:10.878 --> 00:00:14.615
+Temos tudo. Vou acender o forno
+para começar.
+
+00:00:27.728 --> 00:00:29.696
+Pronto.
+
+00:00:29.730 --> 00:00:32.432
+Certo, colabore comigo.
+
+00:00:32.466 --> 00:00:36.003
+É preciso assar o bolo
+antes de colocar o glacê.
+
+00:00:36.036 --> 00:00:39.973
+Requisitei que o forno transforme
+a massa de bolo em bolo.
+
+00:00:40.007 --> 00:00:44.545
+Ao terminar, o timer vai apitar,
+avisando que posso pegar o bolo.
+
+00:00:44.578 --> 00:00:47.881
+Mas não preciso ficar parado
+esperando que fique pronto.
+
+00:00:47.915 --> 00:00:51.685
+Posso fazer outra coisa.
+Posso fazer o glacê agora.
+
+00:00:51.718 --> 00:00:55.155
+Um objeto XHR é fornecido
+pelo ambiente JavaScript
+
+00:00:55.189 --> 00:00:57.191
+e é usado
+para requisições AJAX.
+
+00:00:57.224 --> 00:01:00.260
+É igual à preparação
+da massa de um bolo.
+
+00:01:00.294 --> 00:01:02.162
+É preciso fazer
+os passos manualmente
+
+00:01:02.196 --> 00:01:04.464
+para configurar a requisição
+e enviar.
+
+00:01:04.498 --> 00:01:07.000
+Mas o código pode
+fazer outras coisas.
+
+00:01:07.034 --> 00:01:11.205
+Quando a resposta voltar,
+estará tudo pronto para os dados.
+
+00:01:11.238 --> 00:01:15.309
+Pensando nessa analogia,
+vamos analisar o objeto XHR.
+
