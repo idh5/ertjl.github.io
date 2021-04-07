@@ -1,0 +1,237 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Development Guidelines</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Readable</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Project Development Guidelines.html">02. Project Development Guidelines</a>
+    </li>
+    <li class="">
+      <a href="03. Project Workspace Info.html">03. Project Workspace Info</a>
+    </li>
+    <li class="">
+      <a href="04. Readable Project Workspace.html">04. Readable Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Readable.html">Project Description - Readable</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Readable.html">Project Rubric - Readable</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Project Development Guidelines</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="getting-started">Getting Started</h1>
+<p>We have built a <a href="https://github.com/udacity/reactnd-project-readable-starter" rel="noopener noreferrer" target="_blank">local backend development server</a> that your frontend will communicate with. The server is built in Node, but it is very simple. <em>You will not need to edit the server code</em>; instead, your frontend code will talk to the server using documented API endpoints. You can use the server's endpoints to manage storing, reading, updating, and deleting data for your application. We're providing you the backend server, but the frontend portion of the project you'll be developing from scratch, yourself!</p>
+<p>You have a few options to start developing this project:</p>
+<ul>
+<li>using your preconfigured Workspace</li>
+<li>working locally on your own computer</li>
+</ul>
+<p>Your Workspace is a development environment integrated into the Udacity Classroom and comes preconfigured with the Readable project's backend server and a pre-scaffolded frontend using Create React App. You can both develop your entire in your Workspace as well as submit your project to be reviewed. For more information about your Workspace, check out the Project Workspace Info page.</p>
+<p>If you'd like to work locally on your own computer:</p>
+<ol>
+<li>Download or fork and clone the <a href="https://github.com/udacity/reactnd-project-readable-starter" rel="noopener noreferrer" target="_blank">starter server repository</a></li>
+</ol>
+<ul>
+<li>Install the requirements from the included <code>package.json</code> file: <code>npm install</code></li>
+<li>Start the server with <code>node server</code></li>
+<li>You can find the API documentation for the server in the <a href="https://github.com/udacity/reactnd-project-readable-starter/blob/master/README.md" rel="noopener noreferrer" target="_blank">README</a>, or by sending a <code>GET</code> request to the server root while it's running.</li>
+<li>In a separate folder, develop your Readable app. You can use <a href="https://github.com/facebookincubator/create-react-app" rel="noopener noreferrer" target="_blank">Create React App</a> to bootstrap your application, or you can install and configure React, Webpack and Babel on your own. Remember to install <code>redux</code> and <code>react-redux</code> as well.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="specific-requirements">Specific Requirements</h1>
+<p><strong>Use React to build your application UI.</strong> Remember that composition is key. It’s rarely a mistake to break a component into smaller pieces. Look for opportunities to reuse your components. We recommend using <code>create-react-app</code> to bootstrap your project, but it is not required for this project. </p>
+<p>While the focus (and specification) of this project is based on functionality, rather than styling, please ensure that your app is presentable and easy to navigate.</p>
+<p><strong>Use Redux to manage your application state.</strong> This includes all user actions and responses from the API server. You may use component state to handle form input fields and controlled components. Otherwise, the rest of the state for your application should be controlled by your reducers.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="how-will-this-project-be-evaluated">How will this project be evaluated?</h1>
+<p>Your project will be evaluated by a Udacity Code Reviewer according to the <a href="https://review.udacity.com/#!/rubrics/1017/view" rel="noopener noreferrer" target="_blank">rubric</a>. Please be sure to review it thoroughly before you submit your project. </p>
+<p>The project rubric is your source of truth while building this project. Save it to your browser bookmarks so you can access it easily!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="submission-instructions">Submission Instructions</h1>
+<p>Before submitting, please verify that your project:</p>
+<ul>
+<li>meets specification according to the project <a href="https://review.udacity.com/#!/rubrics/1017/view" rel="noopener noreferrer" target="_blank">rubric</a>.</li>
+<li>adheres to our <a href="http://udacity.github.io/frontend-nanodegree-styleguide/index.html" rel="noopener noreferrer" target="_blank">HTML</a>, <a href="http://udacity.github.io/frontend-nanodegree-styleguide/css.html" rel="noopener noreferrer" target="_blank">CSS</a>, <a href="http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html" rel="noopener noreferrer" target="_blank">JavaScript</a>, and <a href="https://udacity.github.io/git-styleguide/" rel="noopener noreferrer" target="_blank">Git</a> style guidelines.</li>
+</ul>
+<p>If you choose to develop your project in your Workspace, you can submit directly from your Workspace. When you're ready to submit, just click the "Submit Project" button.</p>
+<p>If you choose to develop on your local machine, you will need to:</p>
+<ol>
+<li>Push your project to GitHub, making sure to push the master branch.</li>
+</ol>
+<ul>
+<li>On the project submission page choose the option "Submit with GitHub"</li>
+<li>Select the repository for this project (you may need to connect your GitHub account first).</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Project Workspace Info.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Project Development Guidelines')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

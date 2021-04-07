@@ -1,0 +1,358 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Readable</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Readable</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Project Development Guidelines.html">02. Project Development Guidelines</a>
+    </li>
+    <li class="">
+      <a href="03. Project Workspace Info.html">03. Project Workspace Info</a>
+    </li>
+    <li class="">
+      <a href="04. Readable Project Workspace.html">04. Readable Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Readable.html">Project Description - Readable</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Readable.html">Project Rubric - Readable</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Readable</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Application Setup</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Is the application easy to install and start?</p>
+        </td>
+        <td>
+          <p>The application requires only <code>npm install</code> and <code>npm start</code> to install and launch. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does the application include README with clear installation and launch instructions?</p>
+        </td>
+        <td>
+          <p>A README is included with the project. The README includes clear instructions for installing and launching the project.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>State Management</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Is application state managed by Redux?</p>
+        </td>
+        <td>
+          <p>Most application state is managed by the Redux store. State-based props are mapped from the store rather than stored as component state.</p>
+<p>Form inputs and controlled components may have some state handled by the component.  </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does application state update correctly?</p>
+        </td>
+        <td>
+          <p>Updates are triggered by dispatching action creators to reducers.</p>
+<p>Reducers and actions are written properly and correctly return updated state to the store.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Application Functionality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Are posts listed correctly and have the desired functionality in a list view?</p>
+        </td>
+        <td>
+          <p>Listed posts are displayed with the following:<br />
+  1) Title<br />
+  2) Author<br />
+  3) Number of comments<br />
+  4) Current score<br />
+  5) Voting mechanism to upvote or downvote the post<br />
+  6) Buttons or links for editing or deleting that post</p>
+<p>The comment count, edit/delete buttons or links, and upvote/downvote features are required on this page in order to enable the user to manage the posts without navigating away. </p>
+<p>The voting mechanism works and correctly displays the new vote score after clicking.</p>
+<p>List posts link to the detail page for that post.</p>
+<p>All posts are listed at the root.</p>
+<p>All posts for a category are listed at <code>/:category</code></p>
+<p>List pages (root or category) include a mechanism for sorting by date or by score (at a minimum), and the sort works properly.</p>
+<p>List pages include a button to add a new post. </p>
+<p>All available categories are visible in any list view.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does the post detail page have desired functionality?</p>
+        </td>
+        <td>
+          <p>Post detail is available at <code>/:category/:post_id</code></p>
+<p>Post is displayed with the following:<br />
+  1) Title<br />
+  2) Body<br />
+  3) Author<br />
+  4) Number of comments<br />
+  5) Current score<br />
+  6) Voting mechanism to upvote or downvote the post<br />
+  7) Buttons or links for editing or deleting that post</p>
+<p>Listed comments are displayed with the following:<br />
+  1) Author<br />
+  2) Current score<br />
+  3) Voting mechanism to upvote or downvote the comment<br />
+  4) Buttons or links for editing or deleting that comment</p>
+<p>The voting mechanism works and correctly displays the new vote score after clicking for both the post and comments.</p>
+<p>All comments for a post are displayed below the post body.</p>
+<p>A mechanism for adding a new comment is visible on the detail page and functional.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Can users add new posts?</p>
+        </td>
+        <td>
+          <p>Application has a form for creating a new post. Submitting the form properly adds the post to the correct category.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Can users add comments?</p>
+        </td>
+        <td>
+          <p>Application has a form for adding comments to a post. Submitting the form properly adds the comment to the correct post.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Can users edit posts/comments?</p>
+        </td>
+        <td>
+          <p>Edit buttons for posts/comments open a form with existing data pre-populated. Submitting the form correctly updates the data for the comment/post.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Can users delete posts/comments?</p>
+        </td>
+        <td>
+          <p>A mechanism for deleting posts and comments exists. Clicking the button/link correctly removes the post/comment from list view and makes post inaccessible at its URL. When a user goes to a deleted post’s URL, a 404 page is displayed.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Is the application navigable?</p>
+<p>After you receive your project feedback, please complete this survey: <a href="https://forms.udacity.com/forms/job-confidence" rel="noopener noreferrer" target="_blank">https://forms.udacity.com/forms/job-confidence</a>.</p>
+        </td>
+        <td>
+          <p>User is able to navigate between categories, main page and post detail pages without typing address in the address bar.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Readable')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

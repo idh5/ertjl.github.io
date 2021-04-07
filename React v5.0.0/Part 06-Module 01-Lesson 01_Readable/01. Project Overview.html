@@ -1,0 +1,344 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Overview</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Readable</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Project Development Guidelines.html">02. Project Development Guidelines</a>
+    </li>
+    <li class="">
+      <a href="03. Project Workspace Info.html">03. Project Workspace Info</a>
+    </li>
+    <li class="">
+      <a href="04. Readable Project Workspace.html">04. Readable Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Readable.html">Project Description - Readable</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Readable.html">Project Rubric - Readable</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Project Overview</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-overview">Project Overview</h1>
+<p>This optional project is not required for graduation, but it will help you practice and further solidify your React &amp; Redux skills. It's a challenging project, but we know you're up for the challenge! </p>
+<p>For this project, you will build a content and comment web app. Users will be able to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments. Users will also be able to edit and delete posts and comments.</p>
+<h2 id="why-this-project">Why this project?</h2>
+<p>This content and comment structure is common across a large number of websites and applications, from news sites to blogs to aggregators like Hacker News and Reddit. By building this project, you will gain an understanding of how Redux can function in a standard type of application.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="specification">Specification</h1>
+<p>You will start with a <a href="https://github.com/udacity/reactnd-project-readable-starter" rel="noopener noreferrer" target="_blank">local backend development server</a>. The server is built in Node, but it is very simple. You won't need to edit the server code; instead, your code will talk to the server using documented API endpoints. You can use the server's endpoints to manage storing, reading, updating, and deleting data for your application. </p>
+<p>Using this server, you will build a React/Redux front end for the application. The specification provided below is the minimum required for this project. You may extend your project however you like, however, as long as the minimum specification is met.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="data">Data</h2>
+<p>There are three types of objects stored on the server:</p>
+<ul>
+<li>Categories</li>
+<li>Posts</li>
+<li>Comments</li>
+</ul>
+<h3 id="categories">Categories</h3>
+<p>The server supports a small, fixed number of categories that users can put posts into. Categories are simple objects containing a name and a URL path (usually the same string). The server does not have methods for creating/modifying/deleting these categories. If you wish to add to the categories for your app, simply add your desired object to the Array in <code>categories.js</code> in the provided server.</p>
+<h3 id="posts">Posts</h3>
+<p>Posts are the building blocks of your application. Posts include:</p>
+<table>
+<thead>
+<tr>
+<th id="attribute">Attribute</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>Integer</td>
+<td>Time created - default data tracks this in <a href="https://en.wikipedia.org/wiki/Unix_time" rel="noopener noreferrer" target="_blank">Unix time</a>. You can use <code>Date.now()</code> to get this number</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>Post title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>String</td>
+<td>Post body</td>
+</tr>
+<tr>
+<td>author</td>
+<td>String</td>
+<td>Post author</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>Should be one of the categories provided by the server</td>
+</tr>
+<tr>
+<td>voteScore</td>
+<td>Integer</td>
+<td>Net votes the post has received (default: 1)</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>Boolean</td>
+<td>Flag if post has been 'deleted' (inaccessible by the front end), (default: false)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comments">Comments</h3>
+<p>Comments are attached to parent posts. They include: </p>
+<table>
+<thead>
+<tr>
+<th id="attribute">Attribute</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td>parentId</td>
+<td>String</td>
+<td>id of the parent post</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>Integer</td>
+<td>Time created - default data tracks this in <a href="https://en.wikipedia.org/wiki/Unix_time" rel="noopener noreferrer" target="_blank">Unix time</a>. You can use <code>Date.now()</code> to get this number</td>
+</tr>
+<tr>
+<td>body</td>
+<td>String</td>
+<td>Comment body</td>
+</tr>
+<tr>
+<td>author</td>
+<td>String</td>
+<td>Comment author</td>
+</tr>
+<tr>
+<td>voteScore</td>
+<td>Integer</td>
+<td>Net votes the comment has received (default: 1)</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>Boolean</td>
+<td>Flag if comment has been 'deleted' (inaccessible by the front end), (default: false)</td>
+</tr>
+<tr>
+<td>parentDeleted</td>
+<td>Boolean</td>
+<td>Flag for when the the parent post was deleted, but the comment itself was not.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+  <p>This application is anonymous, with <em>no</em> authentication or authorization. There are no user objects, and comments and posts accept any username/name for creation and editing.</p>
+  <p>The server is <em>very</em> light weight. It performs <em>zero</em> data validation to enforce the above data types. Make sure you are using the correct types when sending requests to the server.</p>
+</blockquote>
+<h2 id="views">Views</h2>
+<p>Your application should have, at a minimum, four views:</p>
+<ul>
+<li>Default (Root)<ul>
+<li>should list all available categories, which should link to a category view for that category</li>
+<li>should list all of the posts</li>
+<li>should have a control for changing the sort method for the list, including at minimum, order by voteScore and order by timestamp </li>
+<li>should have a control for adding a new post</li></ul></li>
+<li>Category View<ul>
+<li>identical to the default view, but filtered to only include posts with the selected category</li></ul></li>
+<li>Post Detail View<ul>
+<li>should show the details of a post, including: Title, Body, Author, timestamp (in user readable format), and vote score</li>
+<li>should list all of the comments for that post</li>
+<li>should have controls to edit or delete the post</li>
+<li>should have a control to add a new comment. </li>
+<li>implement comment form however you want (inline, modal, etc.)</li>
+<li>comments should also have controls for editing or deleting</li></ul></li>
+<li>Create/Edit View<ul>
+<li>should have a form to create new post or edit existing posts</li>
+<li>when editing, existing data should be populated in the form</li></ul></li>
+</ul>
+<blockquote>
+  <p><strong>Post/Comment UI</strong> </p>
+  <p>Posts and comments, in all views where they are displayed, should display their current score and should have controls to increment or decrement the <code>voteScore</code> for the object. <br />
+  Posts should display the number of comments associated with the post.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Project Development Guidelines.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Project Overview')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
