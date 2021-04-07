@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.609
+A nice addition to the app we've been building would be a way for
+
+00:00:03.609 --> 00:00:07.925
+the user to track their current speed, elevation and direction.
+
+00:00:07.924 --> 00:00:13.474
+To do this, we'll need to subscribe to the devices geolocation information.
+
+00:00:13.474 --> 00:00:18.309
+Luckily for us, Expo provides us with a location API which has a
+
+00:00:18.309 --> 00:00:20.664
+get current position async method
+
+00:00:20.664 --> 00:00:24.000
+which we'll use to get exactly the information we'll need.
+

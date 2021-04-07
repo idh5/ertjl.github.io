@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.089
+Even though we're not going to use anything to
+
+00:00:03.089 --> 00:00:06.029
+do with the camera or the images on our phone,
+
+00:00:06.030 --> 00:00:10.324
+I think it would be fun to play around with using the images,
+
+00:00:10.324 --> 00:00:13.889
+specifically with Riak Native and with Expo we can see how easy it is.
+
+00:00:13.890 --> 00:00:16.230
+So what we're going to do in this video is we will pick
+
+00:00:16.230 --> 00:00:19.155
+an image from our camera roll on the phone,
+
+00:00:19.155 --> 00:00:22.175
+and then we will edit that image and then we will just show it to the view.
+
+00:00:22.175 --> 00:00:25.469
+So we are going to need to import a few different things.
+
+00:00:25.469 --> 00:00:29.849
+One of those is image editor from Riak native,
+
+00:00:29.850 --> 00:00:33.495
+let's also get touchable opacity in here as well.
+
+00:00:33.494 --> 00:00:36.015
+And then obviously image.
+
+00:00:36.015 --> 00:00:37.494
+So, that looks good,
+
+00:00:37.494 --> 00:00:39.945
+and then what we need to do is let's
+
+00:00:39.945 --> 00:00:44.929
+import image picker which is going to be coming from Expo.
+
+00:00:44.929 --> 00:00:51.015
+So the first thing I'm going to do is add a state property of the image to our component,
+
+00:00:51.015 --> 00:00:56.579
+and then let's add a pick image method.
+
+00:00:56.579 --> 00:01:01.799
+And what we are going to say here is we are going to say when ever this function runs,
+
+00:01:01.799 --> 00:01:06.859
+go ahead and call image picker dot launch image library async,
+
+00:01:06.859 --> 00:01:09.329
+and then we are going to pass in a few different
+
+00:01:09.329 --> 00:01:13.120
+settings.We will say allow editing to be true,
+
+00:01:13.120 --> 00:01:16.160
+so I'll be able to edit it, and then we want the aspect ratio to be 2:1,
+
+00:01:16.159 --> 00:01:18.899
+and then when this resolves,
+
+00:01:18.900 --> 00:01:21.725
+we will have a result here,
+
+00:01:21.724 --> 00:01:26.814
+and now we can say if result dot canceled is a thing,
+
+00:01:26.814 --> 00:01:28.789
+just go ahead and return,
+
+00:01:28.790 --> 00:01:32.370
+and if not then what we want to do is we want to
+
+00:01:32.370 --> 00:01:37.380
+call our image editor component dot crop image.
+
+00:01:37.379 --> 00:01:40.229
+We will pass in the URI property on
+
+00:01:40.230 --> 00:01:45.305
+the result object that we got back when we called launch image library async.
+
+00:01:45.305 --> 00:01:50.945
+And then the second argument we're going to pass to crop image is just some settings.
+
+00:01:50.944 --> 00:01:54.699
+We will say offset X zero Y zero.
+
+00:01:54.700 --> 00:01:57.609
+Let's go ahead and add some size to it.
+
+00:01:57.609 --> 00:02:01.000
+Say width is going to be the result dot width.
+
+00:02:01.000 --> 00:02:03.549
+And then the height is going to be result dot height.
+
+00:02:03.549 --> 00:02:10.525
+Next, display size, let's give it a width of 200 and a height of 100.
+
+00:02:10.525 --> 00:02:15.254
+And then last we want the resize mode to be contained, all right.
+
+00:02:15.254 --> 00:02:20.109
+So, this is the second argument we're passing to crop image.
+
+00:02:20.110 --> 00:02:27.340
+The third argument is going to be a function that's going to receive the modified URI.
+
+00:02:27.340 --> 00:02:30.664
+So when we get that, we will just call set state.
+
+00:02:30.664 --> 00:02:36.234
+And what we're going to pass it is we're going to say we want image to be this new URI.
+
+00:02:36.235 --> 00:02:42.915
+And then finally as the last argument to this invocation right here,
+
+00:02:42.914 --> 00:02:45.289
+we will pass another function,
+
+00:02:45.289 --> 00:02:50.039
+and if there is an error we'll just log error for now, that looks good.
+
+00:02:50.039 --> 00:02:54.525
+All right, so pick image looks pretty good right now I don't see any errors,
+
+00:02:54.525 --> 00:02:57.689
+doesn't seem like we're getting any errors in our application yet either.
+
+00:02:57.689 --> 00:03:00.030
+All right let's go ahead and head down to render.
+
+00:03:00.030 --> 00:03:03.960
+In render what we want to do is let's say we
+
+00:03:03.960 --> 00:03:07.647
+have this touchable component and when it's pressed,
+
+00:03:07.647 --> 00:03:12.194
+what we are going to do is we will run the stop pick image,
+
+00:03:12.194 --> 00:03:17.659
+the text inside of here let's just say open camera roll,
+
+00:03:17.659 --> 00:03:23.258
+and now the last thing we want to do is we will come down here and we will say if,
+
+00:03:23.258 --> 00:03:27.375
+let's go ahead and grab image first which is coming from the states,
+
+00:03:27.375 --> 00:03:31.080
+and we will say if image is a thing then what we
+
+00:03:31.080 --> 00:03:35.215
+want to do is let's go ahead and render the image.
+
+00:03:35.215 --> 00:03:41.235
+It will give it a style of styles dot image which I created down here,
+
+00:03:41.235 --> 00:03:49.220
+and then we are going to give it a source and the URI is going to be image.
+
+00:03:49.219 --> 00:03:51.689
+All right so now what we expect to have happen is
+
+00:03:51.689 --> 00:03:54.599
+we open the camera roll when we press on this button,
+
+00:03:54.599 --> 00:03:59.025
+that goes and runs pick image so we do open the camera roll, we pick our image,
+
+00:03:59.025 --> 00:04:02.580
+and then once we have that we go ahead and crop it with
+
+00:04:02.580 --> 00:04:06.735
+these settings so the width will be 200, the height will be 100,
+
+00:04:06.735 --> 00:04:09.855
+and then if that cropping is successful,
+
+00:04:09.854 --> 00:04:11.549
+we will add the image to
+
+00:04:11.550 --> 00:04:16.280
+our local state and then we will then show that image to the view.
+
+00:04:16.279 --> 00:04:18.659
+So let's go and see if this works.
+
+00:04:18.660 --> 00:04:23.075
+So first we open the camera roll and select an image,
+
+00:04:23.074 --> 00:04:26.000
+then we crop it and show it to the view. So there we go.
+

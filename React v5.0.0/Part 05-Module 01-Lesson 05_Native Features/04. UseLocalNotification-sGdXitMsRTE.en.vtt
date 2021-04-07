@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.500
+So now that we actually have
+
+00:00:02.500 --> 00:00:05.455
+our function that's going to set the local notification for us,
+
+00:00:05.455 --> 00:00:09.384
+what we want to do is we want to be able to invoke it so we can set it.
+
+00:00:09.384 --> 00:00:15.580
+So inside of app.JS what we can do is let's import that function,
+
+00:00:15.580 --> 00:00:21.339
+set local notification, which is coming from utils/helpers.
+
+00:00:21.339 --> 00:00:25.030
+And then when our main component mounts,
+
+00:00:25.030 --> 00:00:28.539
+what we want to do is we don't really need to return
+
+00:00:28.539 --> 00:00:32.714
+anything we can just call set local notification.
+
+00:00:32.715 --> 00:00:35.453
+So you'll notice when the app first loads it says, hey,
+
+00:00:35.453 --> 00:00:37.189
+Expo wants to send you notifications.
+
+00:00:37.189 --> 00:00:38.590
+We'll say okay.
+
+00:00:38.590 --> 00:00:44.290
+And now every day at 8 o'clock we are going to get a local notification,
+
+00:00:44.289 --> 00:00:46.629
+a notification that pops up right here saying hey,
+
+00:00:46.630 --> 00:00:47.740
+make sure you log your stats,
+
+00:00:47.740 --> 00:00:50.890
+and again that's only going to happen if the user hasn't already
+
+00:00:50.890 --> 00:00:54.189
+logged their stats which we need to do right now,
+
+00:00:54.189 --> 00:00:56.390
+because we haven't set up that functionality yet.
+
+00:00:56.390 --> 00:01:01.870
+So we can do that by going to our add entry component,
+
+00:01:01.869 --> 00:01:04.355
+which is the very first component we worked on.
+
+00:01:04.355 --> 00:01:09.590
+We can import a few different things here.
+
+00:01:09.590 --> 00:01:11.865
+Let's see, this is coming from helpers.
+
+00:01:11.864 --> 00:01:15.884
+Right here, notice we're already grabbing three things from helpers,
+
+00:01:15.885 --> 00:01:18.100
+we're just going to go ahead and grab two more.
+
+00:01:18.099 --> 00:01:24.009
+The first one is going to be clear local notifications,
+
+00:01:24.010 --> 00:01:28.685
+and the second one is going to be set local notification.
+
+00:01:28.685 --> 00:01:32.125
+So now what we want to do whenever the user
+
+00:01:32.125 --> 00:01:36.364
+inputs their information or their stats for the current day,
+
+00:01:36.364 --> 00:01:42.164
+we want to go ahead and clear the local notification and set up a new one for tomorrow.
+
+00:01:42.165 --> 00:01:48.430
+So the way we can do that is inside of this submit function and if you remember,
+
+00:01:48.430 --> 00:01:51.430
+we have this note to ourself.
+
+00:01:51.430 --> 00:01:56.005
+And then we can call clear local notification.
+
+00:01:56.004 --> 00:01:57.729
+And when that's finished,
+
+00:01:57.730 --> 00:02:00.415
+we can go ahead and just set up another one which will set up
+
+00:02:00.415 --> 00:02:04.000
+a notification for tomorrow at 8 o'clock.
+

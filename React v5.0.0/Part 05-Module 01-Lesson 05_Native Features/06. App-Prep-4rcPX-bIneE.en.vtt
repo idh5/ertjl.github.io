@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.020
+As far as features go,
+
+00:00:02.020 --> 00:00:03.730
+the app is pretty much all done.
+
+00:00:03.730 --> 00:00:07.054
+There is, however, one small change I want to make.
+
+00:00:07.054 --> 00:00:09.099
+If you push your app to the App Store,
+
+00:00:09.099 --> 00:00:12.669
+there are some settings that you'll want to configure specifically for the
+
+00:00:12.669 --> 00:00:16.894
+App Store,and that's what we can do inside of our app.json file.
+
+00:00:16.894 --> 00:00:21.539
+So what we can do is things like set the orientation.
+
+00:00:21.539 --> 00:00:24.805
+Say, we wanted only portrait mode to be active,
+
+00:00:24.806 --> 00:00:26.095
+meaning if you flip your phone,
+
+00:00:26.094 --> 00:00:29.294
+nothing's really going to change. We can do that here.
+
+00:00:29.295 --> 00:00:36.130
+We can also set the name of our application which we will call UdaciFitness.
+
+00:00:36.130 --> 00:00:39.150
+We can also put in a description here,
+
+00:00:39.149 --> 00:00:42.820
+the best triathlon tracker ever.
+
+00:00:42.820 --> 00:00:46.480
+Slug, which is something for Expo,
+
+00:00:46.479 --> 00:00:50.019
+which basically is like your own custom URL.
+
+00:00:50.020 --> 00:00:52.222
+We'll say, udacifitness.
+
+00:00:52.222 --> 00:00:56.314
+Version, let's go ahead and give it a version 1.0.
+
+00:00:56.314 --> 00:00:58.059
+So I think it's pretty good.
+
+00:00:58.060 --> 00:00:59.650
+We can give it an icon,
+
+00:00:59.649 --> 00:01:04.329
+which I'm just going to use as a local icon that's hosted on my site.
+
+00:01:04.329 --> 00:01:06.265
+You can do the same.
+
+00:01:06.265 --> 00:01:08.560
+So this way, when the user downloads the app,
+
+00:01:08.560 --> 00:01:12.290
+the icon they're going to see is this guy right here.
+
+00:01:12.290 --> 00:01:19.000
+And then what we can do is we can also set up or edit our notification icon,
+
+00:01:19.000 --> 00:01:21.069
+which I'm just going to have
+
+00:01:21.069 --> 00:01:24.784
+the same image except it's going to be just a little bit smaller.
+
+00:01:24.784 --> 00:01:26.049
+And when you do this,
+
+00:01:26.049 --> 00:01:28.599
+you're not going to see a change on your emulators.
+
+00:01:28.599 --> 00:01:32.054
+You need to actually build the app in order to see this notification change.
+
+00:01:32.055 --> 00:01:35.157
+So if it doesn't work because you're not actually building the app.
+
+00:01:35.156 --> 00:01:38.375
+don't worry. Once you push it to the App Store, it should work.
+
+00:01:38.375 --> 00:01:42.489
+And then the only other things we need in order to prep for
+
+00:01:42.489 --> 00:01:47.655
+the App Store are these things right here, bundleIdentifier.
+
+00:01:47.655 --> 00:01:52.635
+What this is going to be is just an identifier for the App Store for your app.
+
+00:01:52.635 --> 00:01:55.915
+So we'll just say udacifitness.exp,
+
+00:01:55.915 --> 00:02:00.925
+and then Android also needs one as well.
+
+00:02:00.924 --> 00:02:06.685
+But in Android, it's called package and it's going to be the exact same name.
+
+00:02:06.685 --> 00:02:10.620
+So that, after many videos, is basically it.
+
+00:02:10.620 --> 00:02:14.150
+We learned how to build a React Native app. We learned about routing.
+
+00:02:14.150 --> 00:02:18.305
+We learned about native e-stuff like notifications,
+
+00:02:18.305 --> 00:02:23.340
+and we even learned about preparing our app for the App Store. Hope you enjoyed it.
+

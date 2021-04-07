@@ -1,0 +1,205 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Step by Step Guide - React Apps</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Mobile Flashcards</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Details.html">01. Project Details</a>
+    </li>
+    <li class="">
+      <a href="02. Project Instructions &amp; Rubric.html">02. Project Instructions &amp; Rubric</a>
+    </li>
+    <li class="">
+      <a href="03. Step by Step Guide - Mobile Flashcards Project.html">03. Step by Step Guide - Mobile Flashcards Project</a>
+    </li>
+    <li class="">
+      <a href="04. Step by Step Guide - ReactRedux Apps.html">04. Step by Step Guide - React/Redux Apps</a>
+    </li>
+    <li class="">
+      <a href="05. Step by Step Guide - React Apps.html">05. Step by Step Guide - React Apps</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Mobile Flashcards.html">Project Description - Mobile Flashcards</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Mobile Flashcards.html">Project Rubric - Mobile Flashcards</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Step by Step Guide - React Apps</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-by-step-guide-for-building-react-apps"><em>Step by Step Guide for Building React Apps</em></h1>
+<h2 id="planning-stage--📐">Planning Stage  📐</h2>
+<h3 id="step-1---draw-all-of-the-views-of-the-app">Step 1 - Draw All of the Views of the App</h3>
+<p>We need to determine the look and functionality of each view in your app. One of the best approaches is to draw each view of the app on paper so that you'll have a good idea of what information and data you're planning to have on each page.</p>
+<p>Instead of paper and pencil, you can be a bit more digital and use <a href="https://codingsans.com/blog/mockup-tools" rel="noopener noreferrer" target="_blank">software for creating mockups</a>. If you were given project specifications, check your mock against them to make sure that you have all of the required features. </p>
+<h3 id="step-2---break-each-view-into-a-hierarchy-of-components">Step 2 - Break Each View Into a Hierarchy of Components</h3>
+<p>For this step,</p>
+<ul>
+<li>draw boxes around every component; and</li>
+<li>arrange our components into a hierarchy</li>
+</ul>
+<h3 id="step-3---determine-the-data-each-component-needs">Step 3 - Determine the Data Each Component Needs</h3>
+<p>For each component, determine which data is the component accessing, getting, modifying, or showing.</p>
+<h3 id="step-4----determine-which-component-each-piece-of-data-should-live-in">Step 4  - Determine Which Component Each Piece of Data Should Live in</h3>
+<p>If multiple components need the same data, store the data in the components' closest common ancestor. Take a look at these example to see how that's done: <a href="https://reactjs.org/docs/lifting-state-up.html" rel="noopener noreferrer" target="_blank">Lifting State Up</a> and <a href="https://reactjs.org/docs/thinking-in-react.html" rel="noopener noreferrer" target="_blank">Thinking in React</a>.</p>
+<h3 id="coding-stage🔨">Coding Stage🔨</h3>
+<p><strong>Step 1</strong>- Create components that hold data.</p>
+<p><strong>Step 2</strong> - Create components that need data.</p>
+<p><strong>Step 3</strong> - Pass data from components that have it to components that need it.</p>
+<p><strong>Step 4</strong> - Debug and make sure that everything works as expected.</p>
+<p><strong>Step 5</strong> - Add inverse data flow (if you're confused about what that means, take a look at <a href="https://reactjs.org/docs/thinking-in-react.html" rel="noopener noreferrer" target="_blank">this</a>.</p>
+<p><strong>Step 6</strong> - Add navigation (We'll cover this topic next week - don't worry about it for now).</p>
+<p><strong>Step 7</strong> - Add finishing touches and make sure the project meets the <a href="https://review.udacity.com/#!/rubrics/918/view" rel="noopener noreferrer" target="_blank">rubric</a>.</p>
+<p>Remember, this is just a template. As you build more projects, you'll modify this template to suit your needs. You may also find it more intuitive to use a different approach. Regardless of the approach you take, however, <strong>planning out your app is imperative to success</strong>. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Step by Step Guide - React Apps')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

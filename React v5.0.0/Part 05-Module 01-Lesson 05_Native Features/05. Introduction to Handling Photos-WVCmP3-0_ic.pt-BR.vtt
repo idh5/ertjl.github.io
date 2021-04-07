@@ -1,0 +1,24 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:02.167
+O que seria
+um curso de Native
+
+00:00:02.234 --> 00:00:05.334
+que não mencionasse a câmera
+e o rolo da câmera?
+
+00:00:05.400 --> 00:00:09.234
+Por mais que não usemos
+essa API no projeto UdaciFitness,
+
+00:00:09.267 --> 00:00:11.001
+ainda é importante
+aprendê-la.
+
+00:00:11.033 --> 00:00:14.834
+Para isso, usaremos o método
+ImagePicker do Expo.
+

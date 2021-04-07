@@ -1,0 +1,376 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.633 --> 00:00:04.300
+A última coisa que adicionaremos
+ao nosso aplicativo
+
+00:00:04.367 --> 00:00:06.300
+são notificações locais.
+
+00:00:06.367 --> 00:00:11.033
+Assim, caso o usuário deixe
+de informar seus dados algum dia,
+
+00:00:11.067 --> 00:00:14.233
+às 20h,
+ou na hora que você especificar,
+
+00:00:14.300 --> 00:00:17.700
+ele receberá
+uma notificação local no telefone
+
+00:00:17.733 --> 00:00:21.233
+para não esquecer
+de informar os dados.
+
+00:00:21.267 --> 00:00:24.433
+O que faremos, primeiro,
+
+00:00:24.500 --> 00:00:27.233
+é importar "AsyncStorage".
+
+00:00:27.267 --> 00:00:31.500
+Depois, temos de importar
+algumas propriedades do Expo.
+
+00:00:31.567 --> 00:00:36.067
+"Notifications" é a primeira,
+e "Permissions", a segunda.
+
+00:00:36.133 --> 00:00:40.233
+Depois, vamos criar
+um "NOTIFICATION_KEY",
+
+00:00:40.267 --> 00:00:42.600
+como fizemos antes,
+
+00:00:42.667 --> 00:00:48.767
+e vamos chamá-lo
+de "UdaciFitness:notifications".
+
+00:00:49.400 --> 00:00:53.233
+Agora vamos descer
+lá para o final
+
+00:00:53.300 --> 00:00:55.933
+e criar três métodos
+diferentes.
+
+00:00:55.967 --> 00:01:00.967
+O primeiro será chamado
+"clearLocalNotifications",
+
+00:01:01.033 --> 00:01:05.400
+O segundo será chamado
+"createNotification".
+
+00:01:05.467 --> 00:01:08.600
+E o terceiro será chamado
+
+00:01:08.633 --> 00:01:12.367
+e exportado
+como "setLocalNotification".
+
+00:01:12.400 --> 00:01:14.967
+Vamos lidar primeiro
+com o "createNotification".
+
+00:01:15.000 --> 00:01:17.800
+Ele, basicamente,
+retornará um objeto
+
+00:01:17.867 --> 00:01:20.200
+que representa a notificação.
+
+00:01:20.267 --> 00:01:24.467
+O "title" será
+o emoji de aceno,
+
+00:01:24.500 --> 00:01:26.400
+que adoro,
+como já deve ter percebido,
+
+00:01:26.467 --> 00:01:27.800
+e "informe seus dados".
+
+00:01:27.867 --> 00:01:32.467
+Pensando bem,
+vamos usar a mãozinha em "body".
+
+00:01:32.533 --> 00:01:36.033
+O "body" será a mãozinha
+
+00:01:36.100 --> 00:01:40.433
+e "não esqueça de informar
+seus dados de hoje!"
+
+00:01:40.467 --> 00:01:45.733
+Em "ios", "sound: true".
+Claro que queremos som.
+
+00:01:45.767 --> 00:01:49.700
+Em "android",
+temos algumas opções.
+
+00:01:49.733 --> 00:01:52.933
+Vamos pôr "sound", é claro,
+
+00:01:53.000 --> 00:01:56.867
+a prioridade será "high",
+
+00:01:56.900 --> 00:01:59.700
+"sticky" será falso,
+pois não queremos afixar,
+
+00:01:59.767 --> 00:02:02.067
+e "vibrate: true",
+sem dúvidas.
+
+00:02:02.100 --> 00:02:05.633
+Isto representa
+a nossa notificação.
+
+00:02:05.700 --> 00:02:08.867
+Agora,
+em "setLocalNotification",
+
+00:02:08.933 --> 00:02:12.100
+se já tivermos programado
+uma notificação local,
+
+00:02:12.167 --> 00:02:13.533
+não programaremos outra,
+
+00:02:13.600 --> 00:02:17.600
+senão o usuário
+será notificado múltiplas vezes.
+
+00:02:17.667 --> 00:02:21.667
+Nós usaremos "AsyncStorage"
+
+00:02:21.733 --> 00:02:24.000
+para verificar,
+usando "getItem()",
+
+00:02:24.033 --> 00:02:28.267
+se "NOTIFICATION_KEY"
+já foi definido.
+
+00:02:28.333 --> 00:02:30.500
+Então, importaremos "data",
+
+00:02:30.567 --> 00:02:35.233
+ou melhor, chamaremos
+"JSON.parse".
+
+00:02:35.300 --> 00:02:41.133
+E depois,
+a depender de "data",
+
+00:02:41.167 --> 00:02:44.900
+diremos "if (data === null)",
+
+00:02:44.933 --> 00:02:48.033
+ou seja, se nenhuma notificação
+tiver sido programada,
+
+00:02:48.067 --> 00:02:52.033
+como vimos
+em um vídeo anterior,
+
+00:02:52.100 --> 00:02:56.133
+usaremos "Permissions",
+com "S" no fim,
+
+00:02:56.200 --> 00:02:59.367
+e diremos "askAsync()".
+
+00:02:59.400 --> 00:03:04.067
+A permissão que pediremos
+é "Permissions.NOTIFICATIONS".
+
+00:03:04.100 --> 00:03:07.867
+Seja lá o que for retornado
+
+00:03:07.933 --> 00:03:11.533
+será importado
+como "status".
+
+00:03:11.600 --> 00:03:14.467
+E agora o que faremos
+é dizer:
+
+00:03:14.500 --> 00:03:19.833
+"if (status === 'granted')",
+ou seja, se tivermos permissão,
+
+00:03:19.867 --> 00:03:22.567
+se "status" for "granted",
+diremos:
+
+00:03:22.633 --> 00:03:25.633
+"Notifications.cancel
+
+00:03:25.667 --> 00:03:30.567
+AllScheduled
+NotificationsAsync()".
+
+00:03:30.633 --> 00:03:33.500
+Se já houver
+uma notificação estabelecida,
+
+00:03:33.567 --> 00:03:35.400
+pode cancelar.
+
+00:03:35.467 --> 00:03:40.633
+Agora o que faremos
+é definir a data.
+
+00:03:40.667 --> 00:03:44.633
+Então "tomorrow"...
+Chamaremos "setDate()".
+
+00:03:44.700 --> 00:03:47.967
+Isso é porque queremos
+definir um horário,
+
+00:03:48.033 --> 00:03:51.267
+amanhã às 20h.
+
+00:03:51.333 --> 00:03:56.367
+Diremos "tomorrow.setHours()"
+e "tomorrow.setMinutes()".
+
+00:03:56.400 --> 00:04:01.667
+Às 20h, em ponto.
+É o que esse objeto representa.
+
+00:04:01.733 --> 00:04:05.500
+E, depois, diremos:
+"Notifications.schedule
+
+00:04:05.533 --> 00:04:09.833
+LocalNotificationsAsync".
+
+00:04:09.867 --> 00:04:14.133
+A primeira coisa que passaremos
+é "createNotification()",
+
+00:04:14.167 --> 00:04:16.900
+a invocação disto,
+que retorna este objeto,
+
+00:04:16.967 --> 00:04:21.367
+e depois passaremos
+algumas opções.
+
+00:04:21.433 --> 00:04:25.333
+Hora de execução: amanhã.
+
+00:04:25.367 --> 00:04:29.467
+Repetir: diariamente.
+
+00:04:29.500 --> 00:04:34.967
+Depois disso,
+aqui embaixo...
+
+00:04:35.033 --> 00:04:39.300
+precisamos ter certeza de que,
+dentro de AsyncStorage,
+
+00:04:39.333 --> 00:04:41.833
+estabelecemos
+a notificação local.
+
+00:04:41.900 --> 00:04:43.667
+Diremos "setItem",
+
+00:04:43.700 --> 00:04:47.733
+"NOTIFICATION_KEY"...
+
+00:04:47.800 --> 00:04:51.600
+e "JSON.stringify(true)".
+
+00:04:51.667 --> 00:04:57.067
+Parece tudo certo, presumindo
+que não haja erros de digitação.
+
+00:04:57.133 --> 00:04:58.600
+Vejamos.
+
+00:05:00.033 --> 00:05:02.267
+Tudo certo.
+O que está acontecendo aqui...
+
+00:05:02.300 --> 00:05:06.233
+é que, no próximo vídeo,
+ao chamarmos "setLocalNotification",
+
+00:05:06.267 --> 00:05:09.833
+primeiro o código verificará
+se já não há uma notificação local.
+
+00:05:09.900 --> 00:05:13.400
+Se não houver
+e a permissão for concedida,
+
+00:05:13.467 --> 00:05:17.167
+limparemos as notificações locais
+só para evitar criar duas.
+
+00:05:17.233 --> 00:05:19.833
+Criaremos um objeto "date",
+
+00:05:19.900 --> 00:05:22.400
+que representará
+amanha às 20h,
+
+00:05:22.467 --> 00:05:25.900
+e depois chamaremos
+"ScheduleLocalNotificationsAsync".
+
+00:05:25.967 --> 00:05:28.767
+Passamos "createNotification"
+no horário escolhido
+
+00:05:28.833 --> 00:05:31.367
+e estabelecemos o mesmo
+localmente.
+
+00:05:31.433 --> 00:05:32.900
+A última coisa a fazer
+
+00:05:32.933 --> 00:05:36.667
+é programar nossa função
+de "clearLocalNotification()".
+
+00:05:36.733 --> 00:05:38.767
+Esta não tem segredo.
+
+00:05:38.800 --> 00:05:40.033
+O que faremos...
+
+00:05:40.100 --> 00:05:44.867
+é chamar
+"AsyncStorage.removeItem".
+
+00:05:44.900 --> 00:05:48.700
+O que removeremos é
+"NOTIFICATION_KEY".
+
+00:05:48.767 --> 00:05:50.667
+Quando terminar,
+
+00:05:50.700 --> 00:05:53.133
+o que queremos é chamar
+
+00:05:53.200 --> 00:05:58.100
+"Notifications.cancelAllSchedule
+NotificationsAsync",
+
+00:05:58.167 --> 00:06:01.800
+para cancelar
+as notificações.
+

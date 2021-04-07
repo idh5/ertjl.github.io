@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.390
+All right, this is the video we have been waiting for.
+
+00:00:03.390 --> 00:00:07.290
+We are going to learn how to ask the user for permission
+
+00:00:07.290 --> 00:00:11.675
+to view their location and to track their location.
+
+00:00:11.675 --> 00:00:14.655
+What we'll do is inside of askPermission down here,
+
+00:00:14.654 --> 00:00:16.109
+let's go ahead and fill this out.
+
+00:00:16.109 --> 00:00:21.804
+What we want to do is we will say permissions.askAsync.
+
+00:00:21.804 --> 00:00:24.660
+So instead of get async, it's askAsync.
+
+00:00:24.660 --> 00:00:26.460
+What we are asking for,
+
+00:00:26.460 --> 00:00:31.765
+just as we are on line 15, is saying permissions.location.
+
+00:00:31.765 --> 00:00:34.980
+Then, what's going to happen is we are going to get
+
+00:00:34.979 --> 00:00:38.909
+a status back just like we did and component did mount.
+
+00:00:38.909 --> 00:00:44.774
+And then now what we can say is if the status is granted,
+
+00:00:44.774 --> 00:00:50.954
+then what we want to do is let's go ahead and say return it's called setlocation.
+
+00:00:50.954 --> 00:00:53.064
+If it's not granted,
+
+00:00:53.064 --> 00:00:55.829
+then just as we did before,
+
+00:00:55.829 --> 00:01:01.414
+we'll just set the status so that our state is aware of what's happening.
+
+00:01:01.414 --> 00:01:03.299
+And then any error we get,
+
+00:01:03.299 --> 00:01:07.750
+let's just go ahead and make sure that we log that so we are aware of it.
+
+00:01:07.750 --> 00:01:15.030
+Say console.warn, let's just say error asking location permission,
+
+00:01:15.030 --> 00:01:18.775
+and then we will log the error.
+
+00:01:18.775 --> 00:01:20.850
+All right. That looks good. I did notice one typo here.
+
+00:01:20.849 --> 00:01:23.184
+This should be askAsync.
+
+00:01:23.185 --> 00:01:26.185
+You probably saw that but I obviously did not.
+
+00:01:26.185 --> 00:01:28.320
+So now what's going to happen,
+
+00:01:28.319 --> 00:01:29.789
+let's see this in action.
+
+00:01:29.790 --> 00:01:30.890
+We go to live.
+
+00:01:30.890 --> 00:01:34.420
+You notice, hey you need to enable location services for this app.
+
+00:01:34.420 --> 00:01:36.375
+When we click on enable,
+
+00:01:36.375 --> 00:01:40.000
+notice we get this sweet little pop up here saying,
+
+00:01:40.000 --> 00:01:43.935
+expo would like to have access to your location.
+
+00:01:43.935 --> 00:01:46.695
+Do you want to allow it or deny it?
+
+00:01:46.694 --> 00:01:49.559
+I'm going to go ahead and click allow,
+
+00:01:49.560 --> 00:01:52.780
+and then you'll notice we have some information here,
+
+00:01:52.780 --> 00:01:54.659
+but this is the information from
+
+00:01:54.659 --> 00:01:57.394
+the static data not the data we're getting from the phone.
+
+00:01:57.394 --> 00:02:02.039
+So what I want to do real quick is update our render methods.
+
+00:02:02.040 --> 00:02:05.070
+You'll notice that we still have direction and coordinates down here.
+
+00:02:05.069 --> 00:02:09.719
+So here instead of saying North,
+
+00:02:09.719 --> 00:02:13.080
+what we want to stay is direction.
+
+00:02:13.080 --> 00:02:16.890
+And here instead of just logging or showing 200,
+
+00:02:16.889 --> 00:02:24.524
+what we want to say is let's say math.round(coords.altitude),
+
+00:02:24.525 --> 00:02:29.385
+and then what we're going to do is we are going to times that by
+
+00:02:29.384 --> 00:02:35.759
+3.2808 in order to convert that in to feet.
+
+00:02:35.759 --> 00:02:39.024
+And then same thing with miles per hour,
+
+00:02:39.025 --> 00:02:46.920
+what we will do is coords.speed times 2.2369,
+
+00:02:46.919 --> 00:02:49.709
+I believe if I remember my physics classes.
+
+00:02:49.710 --> 00:02:53.875
+And then what we're going to say is.tofixed(1),
+
+00:02:53.875 --> 00:02:57.115
+and that's going to convert it into miles per hour.
+
+00:02:57.115 --> 00:02:59.335
+So let's go ahead and see if this works.
+
+00:02:59.335 --> 00:03:01.349
+All right there we go. You'll notice here that
+
+00:03:01.349 --> 00:03:04.835
+my simulator is changing the miles per hour.
+
+00:03:04.835 --> 00:03:10.230
+The way you can do that is if you go to hardware and then you go over to debug,
+
+00:03:10.229 --> 00:03:13.965
+head down to location and notice you can select your location here.
+
+00:03:13.965 --> 00:03:18.710
+So I'm doing a city bicycle ride because I'm going roughly at 60 miles an hour.
+
+00:03:18.710 --> 00:03:21.165
+Notice if I went on a freeway drive,
+
+00:03:21.164 --> 00:03:26.500
+what's going to happen is my speed should eventually increase.
+
+00:03:26.500 --> 00:03:28.780
+What's also cool about this too is,
+
+00:03:28.780 --> 00:03:31.090
+there it goes and it changes directions as well.
+

@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:02.667
+Agora que temos a função
+
+00:00:02.733 --> 00:00:05.500
+que estabelece
+notificações locais para nós,
+
+00:00:05.567 --> 00:00:09.333
+queremos poder invocá-la
+para ativar as notificações.
+
+00:00:09.367 --> 00:00:12.433
+Dentro de "App.js",
+
+00:00:12.467 --> 00:00:17.467
+podemos importar a função
+"setLocalNotification",
+
+00:00:17.533 --> 00:00:21.233
+que provém
+de "./utils/helpers".
+
+00:00:21.300 --> 00:00:24.933
+E, quando nosso componente
+principal for montado,
+
+00:00:24.967 --> 00:00:28.767
+não precisamos
+retornar nada,
+
+00:00:28.833 --> 00:00:32.567
+podemos apenas chamar
+"setLocalNotification()".
+
+00:00:32.600 --> 00:00:34.567
+Na primeira abertura
+do aplicativo,
+
+00:00:34.600 --> 00:00:37.100
+ele dirá:
+"'Expo' deseja enviar notificações".
+
+00:00:37.133 --> 00:00:38.533
+Nós respondemos:
+"Tudo bem."
+
+00:00:38.600 --> 00:00:44.233
+Então, todo dia às 20h,
+receberemos uma notificação local.
+
+00:00:44.300 --> 00:00:47.500
+Ela aparecerá aqui e dirá:
+"Informe seus dados!"
+
+00:00:47.533 --> 00:00:52.133
+Isso só vai acontecer
+se o usuário não os tiver informado.
+
+00:00:52.200 --> 00:00:56.367
+É o que vamos fazer agora.
+Ainda não programamos isso.
+
+00:00:56.400 --> 00:01:01.667
+Podemos fazê-lo indo
+até o componente "AddEntry.js",
+
+00:01:01.733 --> 00:01:04.300
+o primeiro
+em que trabalhamos.
+
+00:01:04.367 --> 00:01:09.367
+Podemos importar
+algumas coisinhas aqui.
+
+00:01:09.433 --> 00:01:11.700
+Isto está vindo
+de "helpers".
+
+00:01:11.767 --> 00:01:15.733
+Aqui já estamos acessando
+três coisas de "helpers",
+
+00:01:15.800 --> 00:01:17.833
+só vamos pegar mais duas.
+
+00:01:17.900 --> 00:01:23.400
+A primeira será
+"clearLocalNotification",
+
+00:01:24.033 --> 00:01:28.433
+a segunda será
+"setLocalNotification".
+
+00:01:28.467 --> 00:01:30.633
+Agora, o que queremos...
+
+00:01:30.667 --> 00:01:36.267
+é que, cada vez que o usuário
+informar seus dados diários,
+
+00:01:36.300 --> 00:01:39.633
+queremos limpar
+a notificação local
+
+00:01:39.667 --> 00:01:42.100
+e programar outra
+para o dia seguinte.
+
+00:01:42.167 --> 00:01:45.333
+Para tanto...
+
+00:01:45.400 --> 00:01:48.133
+Dentro desta função "submit",
+caso não se lembre,
+
+00:01:48.167 --> 00:01:51.233
+deixamos este recado
+para nós mesmos.
+
+00:01:51.300 --> 00:01:55.867
+Agora podemos chamar
+"clearLocalNotification".
+
+00:01:55.900 --> 00:01:59.567
+Quando isso terminar,
+podemos escrever outra função
+
+00:01:59.600 --> 00:02:03.833
+que programe outra notificação
+para amanhã às 20h.
+

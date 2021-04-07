@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.500
+In this lesson, we learn how animations work in React Native,
+
+00:00:04.500 --> 00:00:08.265
+how to track a user's location with Expo's location module,
+
+00:00:08.265 --> 00:00:10.765
+how to set up daily local notifications,
+
+00:00:10.765 --> 00:00:12.990
+how to have some fun with the phone's camera,
+
+00:00:12.990 --> 00:00:18.000
+and finally, how to prepare your app for the iOS and Android app stores.
+

@@ -1,0 +1,274 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.533 --> 00:00:05.100
+Aqui as coisas ficam divertidas,
+se já não estiverem.
+
+00:00:05.133 --> 00:00:07.667
+O que faremos agora
+é criar esta visualização.
+
+00:00:07.700 --> 00:00:09.600
+Veja que estamos criando
+
+00:00:09.633 --> 00:00:11.700
+uma visualização detalhada
+em tempo real.
+
+00:00:11.733 --> 00:00:15.200
+Extraímos informações do telefone
+para gerar esta visualização.
+
+00:00:15.233 --> 00:00:18.867
+Ela mostra a nossa direção,
+a altitude, a velocidade atual.
+
+00:00:18.900 --> 00:00:21.933
+Tudo isto sairá do seu telefone
+e, para fazer isso,
+
+00:00:21.967 --> 00:00:26.233
+precisamos usar a API do telefone
+para conseguir essa informação.
+
+00:00:26.267 --> 00:00:29.533
+Se tentar fazer isto
+no simulador do Android,
+
+00:00:29.567 --> 00:00:31.000
+talvez não funcione.
+
+00:00:31.033 --> 00:00:34.433
+Por alguma razão, ele não funciona
+com o que estamos fazendo,
+
+00:00:34.467 --> 00:00:36.767
+mas se você o tiver
+em um dispositivo de verdade
+
+00:00:36.800 --> 00:00:38.933
+usando o aplicativo Expo,
+tudo bem.
+
+00:00:38.967 --> 00:00:42.000
+Então esqueça o emulador de Android
+e use o Expo
+
+00:00:42.033 --> 00:00:44.433
+ou o simulador de iOS.
+
+00:00:44.467 --> 00:00:47.633
+Bom, vamos começar.
+O que faremos é...
+
+00:00:47.667 --> 00:00:51.767
+Esta nova View será
+chamada de "Live.js".
+
+00:00:51.800 --> 00:00:54.500
+O que teremos por enquanto
+
+00:00:54.533 --> 00:00:56.967
+será apenas um react
+em um componente,
+
+00:00:57.000 --> 00:01:04.767
+e importaremos View, Text
+e um ActivityIndicator,
+
+00:01:04.800 --> 00:01:07.467
+todos vindos do react-native.
+
+00:01:07.500 --> 00:01:12.967
+Exportaremos esta classe
+que aumenta o componente.
+
+00:01:13.000 --> 00:01:16.500
+Que estado este componente terá?
+
+00:01:16.533 --> 00:01:20.433
+Terá algumas coordenadas
+que começarão nulas,
+
+00:01:20.467 --> 00:01:23.800
+um status que também será nulo
+
+00:01:23.933 --> 00:01:27.000
+e uma direção
+com uma string vazia.
+
+00:01:27.100 --> 00:01:34.433
+Podemos pegar
+a informação do estado...
+
+00:01:34.467 --> 00:01:37.233
+Conseguiremos
+algumas visualizações diferentes,
+
+00:01:37.267 --> 00:01:41.233
+dependendo das permissões
+específicas que forem dadas.
+
+00:01:41.267 --> 00:01:45.500
+Podemos então dizer que,
+se "status === null",
+
+00:01:45.533 --> 00:01:48.467
+ou seja, o usuário ainda não deu
+nenhuma permissão,
+
+00:01:48.500 --> 00:01:50.967
+nada mudou
+em relação ao estado padrão.
+
+00:01:51.000 --> 00:01:56.100
+Então renderizamos
+um ActivityIndicator
+
+00:01:56.133 --> 00:01:59.633
+e damos a ele um marginTop de 30.
+
+00:01:59.667 --> 00:02:02.800
+Tudo no ActivityIndicator são
+basicamente loading spinners.
+
+00:02:02.833 --> 00:02:05.567
+Você já viu isso,
+ele vai renderizar um spinner
+
+00:02:05.600 --> 00:02:07.433
+para mostrar que está carregando.
+
+00:02:07.467 --> 00:02:10.900
+Se o status for igual a denied,
+
+00:02:10.933 --> 00:02:15.333
+ou seja, você pediu permissão,
+e ela foi negada,
+
+00:02:15.367 --> 00:02:19.533
+por enquanto,
+renderizamos uma View
+
+00:02:19.733 --> 00:02:22.433
+com um texto
+que diz "denied".
+
+00:02:22.633 --> 00:02:26.533
+E fazemos
+exatamente a mesma coisa,
+
+00:02:26.733 --> 00:02:30.100
+só que, em vez de "denied"...
+
+00:02:31.333 --> 00:02:32.533
+Ah, é por isso.
+
+00:02:33.467 --> 00:02:35.633
+Faremos exatamente a mesma coisa,
+
+00:02:35.667 --> 00:02:38.267
+mas, em vez de "denied",
+
+00:02:38.600 --> 00:02:41.933
+será "undetermined".
+
+00:02:42.133 --> 00:02:45.100
+E, quando você mexer
+no simulador novamente,
+
+00:02:45.133 --> 00:02:47.733
+algumas destas permissões ficarão
+um pouco estranhas,
+
+00:02:47.767 --> 00:02:50.433
+porque não estamos usando
+um dispositivo de verdade,
+
+00:02:50.467 --> 00:02:53.267
+mas uma coisa de cada vez.
+
+00:02:53.300 --> 00:02:55.000
+E, por último,
+
+00:02:55.033 --> 00:03:00.033
+se não for negada ou indeterminada,
+é porque a permissão foi dada.
+
+00:03:00.067 --> 00:03:03.600
+Ou seja, renderizaremos
+uma View
+
+00:03:03.633 --> 00:03:08.900
+e, por enquanto, renderizaremos
+alguns componentes de texto.
+
+00:03:08.933 --> 00:03:11.533
+Vamos mostrar o estado
+por enquanto,
+
+00:03:11.567 --> 00:03:13.900
+e parece bem legal.
+
+00:03:13.933 --> 00:03:17.867
+Vamos adicionar isto
+como uma nova aba.
+
+00:03:17.900 --> 00:03:19.933
+Então dentro de App.js...
+
+00:03:19.967 --> 00:03:22.333
+Primeiro, precisamos importá-la.
+
+00:03:22.667 --> 00:03:25.967
+Em seguida, dentro das abas,
+
+00:03:26.000 --> 00:03:29.433
+vamos adicionar
+as propriedades.
+
+00:03:29.467 --> 00:03:32.700
+Chamaremos de "Live"
+e, assim como antes,
+
+00:03:32.733 --> 00:03:36.133
+a tela será o componente Live.
+
+00:03:36.167 --> 00:03:38.333
+Temos algumas opções aqui...
+
+00:03:38.433 --> 00:03:43.300
+A tabBarLabel terá apenas Live.
+
+00:03:43.333 --> 00:03:48.867
+Copiarei este código
+porque usaremos a fonte Ionicon,
+
+00:03:48.900 --> 00:03:56.267
+mas o nome será ios-speedometer.
+
+00:03:56.367 --> 00:03:58.533
+Certo, vamos ver
+se funciona.
+
+00:03:59.367 --> 00:04:01.233
+Temos o botão Live.
+
+00:04:01.333 --> 00:04:08.267
+Veja que temos um indicador,
+isto é porque o status atual é nulo,
+
+00:04:08.700 --> 00:04:11.833
+então podemos considerar
+que está funcionando mesmo.
+
+00:04:11.867 --> 00:04:15.833
+Podemos configurar como negado
+e teremos um "denied" aqui.
+
+00:04:15.867 --> 00:04:20.333
+Colocamos nulo de novo
+e continuaremos nos próximos vídeos.
+

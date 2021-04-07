@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.189
+Now, what if instead of being undetermined,
+
+00:00:03.189 --> 00:00:05.529
+the status is denied.
+
+00:00:05.530 --> 00:00:10.109
+So, the user straight up denied the notification to get,
+
+00:00:10.109 --> 00:00:12.594
+or to give access to their location.
+
+00:00:12.595 --> 00:00:17.670
+So, what we'll do in this case is we also want to center this.
+
+00:00:17.670 --> 00:00:21.750
+We're going to use this exact same icon which I like.
+
+00:00:21.750 --> 00:00:25.000
+And then, below what we will do is
+
+00:00:25.000 --> 00:00:28.949
+instead of saying you need to enable location services for this app,
+
+00:00:28.949 --> 00:00:34.189
+we will say you denied your location.
+
+00:00:34.189 --> 00:00:43.754
+You can fix this by visiting your settings and enabling location services for this app.
+
+00:00:43.755 --> 00:00:45.390
+So this one's pretty straightforward.
+
+00:00:45.390 --> 00:00:50.605
+Now, what we will see when we go to our live view is this text right here.
+
+00:00:50.604 --> 00:00:54.459
+Again, this is just the UIS. So, if the user denies us we say,
+
+00:00:54.460 --> 00:00:58.320
+"Hey, there's nothing we can really do for you because you denied us."
+

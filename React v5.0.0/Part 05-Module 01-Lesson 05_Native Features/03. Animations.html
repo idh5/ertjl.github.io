@@ -1,0 +1,315 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animations</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Native Features</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Geolocation.html">02. Geolocation</a>
+    </li>
+    <li class="">
+      <a href="03. Animations.html">03. Animations</a>
+    </li>
+    <li class="">
+      <a href="04. Local Notifications.html">04. Local Notifications</a>
+    </li>
+    <li class="">
+      <a href="05. Handling Photos.html">05. Handling Photos</a>
+    </li>
+    <li class="">
+      <a href="06. App Store Preparation.html">06. App Store Preparation</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Animations</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="animations">Animations</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introduction to Animated</p></h3>
+  <video controls>
+  <source src="03. Introduction to Animated-lyM8LcmrdS8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Introduction to Animated-lyM8LcmrdS8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Introduction to Animated-lyM8LcmrdS8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Introduction to Animated-lyM8LcmrdS8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Animations are a fundamental aspect of any native application. Because of this, React Native comes built in with an animations library called <code>Animated</code>. The whole idea of Animated is that it "focuses on declarative relationships between inputs and outputs, with configurable transforms in between, and simple start/stop methods to control time-based animation execution." In other words, Animated allows you to establish different types of transformations on specific values. For example, you could easily animate an image's <code>opacity</code> property from 0 to 1, giving the effect that the image is slowly appearing. </p>
+<p>There are three types of animation configurations that you have access to out of the box with Animated. They are <code>decay</code>, <code>spring</code>, and <code>timing</code>. Again, all three of these allow you to transform a specific value, but each differ in how that value is transformed: "decay" will start with an initial velocity and gradually slow to a stop, "spring" provides a normal spring type of animation, and "timing" animates a value of a specified time. </p>
+<p>Let's take a look at some of these in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Animated</p></h3>
+  <video controls>
+  <source src="03. Animated-H1LJ3C8yzuc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Animated-H1LJ3C8yzuc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Animated-H1LJ3C8yzuc.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Animated-H1LJ3C8yzuc.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/7a701a6fbe7d0331e3ae8cce7899d55ce9653bd3" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-cautions-animations-⚠️">⚠️ Cautions: Animations ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>Once you fully grasp the Animated API, a whole new world will open up to you. It sounds great, but this can be a double-edged sword. It's a great thing because you now have the ability to enhance the feel of your application with animations. However, with great power comes great responsibility. </p>
+</blockquote>
+<blockquote>
+  <p>The goal of having animations is to add to the user's experience, not distract from it. By keeping this in mind whenever you're adding animations to your app, not only will your app perform better -- you'll also minimize the risk of ruining your user's experience with unnecessary animations.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Animated comes with three built in animation configurations. Please select all that apply: </p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505170031854" name="394655" id="a1505170031854">
+      <label for="a1505170031854"><p><code>Animated.timing</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505170035351" name="394655" id="a1505170035351">
+      <label for="a1505170035351"><p><code>Animated.ease</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505170035880" name="394655" id="a1505170035880">
+      <label for="a1505170035880"><p><code>Animated.spring</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505170036463" name="394655" id="a1505170036463">
+      <label for="a1505170036463"><p><code>Animated.decay</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`Animated.timing`</li>
+      <li>`Animated.spring`</li>
+      <li>`Animated.decay`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Time for a <em>quick</em> check-in!</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="1df3577e-e209-4c1a-8107-4647013da86a--0">
+        <label for="1df3577e-e209-4c1a-8107-4647013da86a--0"><p>I have added animations to directional changes in <code>Live</code> (e.g., from <code>North West</code> to <code>West</code>)</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>In this section we learned how to improve your application's UX by using React Native's <code>Animated</code> library to add thoughtful animations. For more reading on Animated, you can view the <a href="https://facebook.github.io/react-native/docs/animated.html" rel="noopener noreferrer" target="_blank">official documentation</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Local Notifications.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Animations')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

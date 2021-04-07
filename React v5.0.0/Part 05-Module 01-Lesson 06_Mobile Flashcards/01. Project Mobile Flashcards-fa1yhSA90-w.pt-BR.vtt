@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.103
+Quando eu era mais jovem,
+e as provas estavam chegando,
+
+00:00:03.136 --> 00:00:05.337
+eu fazia flashcards
+para memorizar
+
+00:00:05.370 --> 00:00:07.207
+informações importantes
+para as provas.
+
+00:00:07.240 --> 00:00:08.875
+O projeto que você
+vai construir é
+
+00:00:08.908 --> 00:00:10.577
+um aplicativo
+com múltiplos flashcards.
+
+00:00:10.610 --> 00:00:13.913
+No aplicativo, o usuário vai poder
+construir um flashcard.
+
+00:00:13.947 --> 00:00:16.716
+A parte da frente do flashcard
+mostra a pergunta,
+
+00:00:16.750 --> 00:00:18.985
+e a parte de trás mostra
+a resposta.
+
+00:00:19.019 --> 00:00:22.522
+O usuário vai poder agrupar
+flashcards em decks.
+
+00:00:22.555 --> 00:00:25.558
+Ele também poderá fazer
+um quiz em um deck
+
+00:00:25.592 --> 00:00:27.527
+e receber um placar
+quando terminar.
+
+00:00:27.560 --> 00:00:30.163
+Cheque as seções seguintes
+para os detalhes específicos
+
+00:00:30.196 --> 00:00:31.931
+de como o aplicativo
+precisa funcionar.
+

@@ -1,0 +1,404 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Geolocation</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Native Features</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Geolocation.html">02. Geolocation</a>
+    </li>
+    <li class="">
+      <a href="03. Animations.html">03. Animations</a>
+    </li>
+    <li class="">
+      <a href="04. Local Notifications.html">04. Local Notifications</a>
+    </li>
+    <li class="">
+      <a href="05. Handling Photos.html">05. Handling Photos</a>
+    </li>
+    <li class="">
+      <a href="06. App Store Preparation.html">06. App Store Preparation</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Geolocation</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="geolocation">Geolocation</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Introduction to Geolocation</p></h3>
+  <video controls>
+  <source src="02. Introduction to Geolocation-ynXUEGUVGA8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Introduction to Geolocation-ynXUEGUVGA8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Introduction to Geolocation-ynXUEGUVGA8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Introduction to Geolocation-ynXUEGUVGA8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>A common feature of native applications is the ability to access and receive updates about the user's current location. Like most things, Expo makes this rather straightforward by giving us a JavaScript API that will work on both iOS and Android. </p>
+<pre><code class="js language-js">import { Location } from 'expo';</code></pre>
+<p>Typically when dealing with location services, there are one of two features you'll need: getting the user's current location, or getting and <em>watching</em> the user's current location for updates. Expo's <code>Location</code> property gives us both of these options with <code>getCurrentPositionAsync</code> and <code>watchPositionAsync</code>. </p>
+<p><code>getCurrentPositionAsync</code> gets the current location of the device, without watching for future updates. <code>watchPositionAsync</code> will also get the current location of the device, but it will also subscribe to location updates. This way, you'll be notified if that device moves location.</p>
+<p>For the full documentation on how to use Expo's <code>Location</code> property, visit <a href="https://docs.expo.io/versions/latest/sdk/location.html" rel="noopener noreferrer" target="_blank">Location</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-geolocation-tips-💡">💡 Geolocation Tips 💡</h2>
+  <p>Whenever you're dealing with a feature that requires the user's permission to work properly, it's important that you account for all the different UI options that could be shown. For example, when dealing with a user's location, there are three scenarios to manage:</p>
+  <ol>
+  <li>The user gives you permission to view their location (best-case scenario). </li>
+  <li>The user decides to neither deny nor grant you permission to their location. </li>
+  <li>The user denies giving you access to their location. </li>
+  </ol>
+  <p>In an ideal world, the user would always grant you permission to whatever you'd like, but, this isn't always the case and as a UI developer, you need to plan accordingly for those moments.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Live-Undetermined</p></h3>
+  <video controls>
+  <source src="02. Live-Undetermined-nIQMG9N33IE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Live-Undetermined-nIQMG9N33IE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Live-Undetermined-nIQMG9N33IE.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Live-Undetermined-nIQMG9N33IE.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/62780584135dbfcee999b10ec3f01ec646aeb27b" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Live-Denied</p></h3>
+  <video controls>
+  <source src="02. Live-Denied-B56Uz-NKKhs.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Live-Denied-B56Uz-NKKhs.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Live-Denied-B56Uz-NKKhs.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Live-Denied-B56Uz-NKKhs.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/70aa708e381b86471da886e01efc6568df076c54" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Live-Granted</p></h3>
+  <video controls>
+  <source src="02. Live-Granted-oiz4Fn1Iqqk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Live-Granted-oiz4Fn1Iqqk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Live-Granted-oiz4Fn1Iqqk.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Live-Granted-oiz4Fn1Iqqk.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/5a834dc7790f3612a9bebdf4b25ded34e9bfe580" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Live-SetLocation</p></h3>
+  <video controls>
+  <source src="02. Live-SetLocation-BNYvgnCvPFc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Live-SetLocation-BNYvgnCvPFc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Live-SetLocation-BNYvgnCvPFc.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Live-SetLocation-BNYvgnCvPFc.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/654fab8ad1502c104a0501adea1819a4f9ab54c1" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+<p>Be sure that you have included the following imports: in <code>Live.js</code>:</p>
+<pre><code class="js language-js">import { Location, Permissions } from 'expo';</code></pre>
+<pre><code class="js language-js">import { calculateDirection } from '../utils/helpers';</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Live-AskPermission</p></h3>
+  <video controls>
+  <source src="02. Live-AskPermission-tl8blRR_nc0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Live-AskPermission-tl8blRR_nc0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Live-AskPermission-tl8blRR_nc0.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Live-AskPermission-tl8blRR_nc0.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/0b092b57b530fd6b2d9e9577dd299351e74df75f" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+<p><strong>Note</strong>: If you are running into errors with the code in this commit, update the initial value of the <code>Live</code>'s state's <code>coords</code> property to a non-<code>null</code> value.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following methods would you use to subscribe to the user's location using Expo? Select all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505169600587" name="394649" id="a1505169600587">
+      <label for="a1505169600587"><p><code>watchPositionAsync</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169607042" name="394649" id="a1505169607042">
+      <label for="a1505169607042"><p><code>subscribePositionAsync</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169642626" name="394649" id="a1505169642626">
+      <label for="a1505169642626"><p><code>watchPosition</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169643224" name="394649" id="a1505169643224">
+      <label for="a1505169643224"><p><code>listenForPositionChangeAsync</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`watchPositionAsync`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>As we wrap up adding geolocation to the application, how are things looking on your end?</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="ed763c61-dc7e-4f1c-a986-14b3a2623195--0">
+        <label for="ed763c61-dc7e-4f1c-a986-14b3a2623195--0"><p>I have styled <code>Live</code>, including the <strong>undetermined</strong>, <strong>denied</strong>, and <strong>granted</strong> conditions</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="ed763c61-dc7e-4f1c-a986-14b3a2623195--1">
+        <label for="ed763c61-dc7e-4f1c-a986-14b3a2623195--1"><p>I have created the <code>setLocation()</code>, <code>componentDidMount</code>, and ‘askPermission<code>methods in</code>Live`</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="ed763c61-dc7e-4f1c-a986-14b3a2623195--2">
+        <label for="ed763c61-dc7e-4f1c-a986-14b3a2623195--2"><p>I have updated the <code>render()</code> method in <code>Live</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>In this concept, we saw how to use Expo's <code>Location</code> property to watch the user's current location using <code>watchPositionAsync</code>. For further reading, feel free to check out the <a href="https://docs.expo.io/versions/latest/sdk/location.html" rel="noopener noreferrer" target="_blank">official documentation</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Animations.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Geolocation')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

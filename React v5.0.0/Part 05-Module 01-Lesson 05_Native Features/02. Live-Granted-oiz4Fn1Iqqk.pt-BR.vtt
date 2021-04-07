@@ -1,0 +1,182 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:03.967
+Na última situação,
+que é a melhor possível,
+
+00:00:04.000 --> 00:00:08.600
+se o usuário nos der permissão,
+o status será "granted".
+
+00:00:08.633 --> 00:00:10.133
+Neste caso,
+
+00:00:10.167 --> 00:00:14.233
+apenas copiarei novamente
+alguns estilos aqui,
+
+00:00:14.267 --> 00:00:16.267
+para você não ver isso de novo.
+
+00:00:16.300 --> 00:00:20.967
+Basicamente,
+temos um container, fontes,
+
+00:00:21.000 --> 00:00:22.733
+direção, que será roxa,
+
+00:00:22.767 --> 00:00:26.133
+mais containers etc.
+Pode dar uma olhada, se quiser.
+
+00:00:26.167 --> 00:00:30.900
+Dentro desta seção aqui,
+
+00:00:30.933 --> 00:00:37.100
+o container será styles.container,
+a visualização principal.
+
+00:00:37.133 --> 00:00:41.867
+E agora o que faremos...
+Vamos criar uma View aqui.
+
+00:00:41.900 --> 00:00:47.200
+O que estamos criando
+nesta seção é esta IU aqui.
+
+00:00:47.233 --> 00:00:49.167
+Nesta seção,
+
+00:00:49.200 --> 00:00:55.633
+que será a nossa seção
+styles.directioncontainer,
+
+00:00:55.667 --> 00:01:02.433
+teremos um texto que diz:
+"Você está indo para".
+
+00:01:02.467 --> 00:01:06.633
+Daremos a ele
+um estilo styles.header.
+
+00:01:06.667 --> 00:01:08.233
+E então, logo abaixo,
+
+00:01:08.267 --> 00:01:12.867
+mais um texto que diz a direção
+para a qual estamos apontando.
+
+00:01:12.867 --> 00:01:16.200
+Neste caso,
+vamos colocar "Norte".
+
+00:01:16.233 --> 00:01:18.167
+Será styles.direction.
+
+00:01:18.200 --> 00:01:20.200
+Está seção já está ótima.
+
+00:01:20.233 --> 00:01:22.267
+Embaixo disso,
+
+00:01:22.300 --> 00:01:26.600
+teremos
+esta seção métrica aqui.
+
+00:01:26.633 --> 00:01:30.767
+Então podemos criar
+uma nova View,
+
+00:01:30.800 --> 00:01:35.767
+que terá um estilo
+styles.metriccontainer.
+
+00:01:35.800 --> 00:01:40.267
+E aqui dentro teremos
+algumas coisas diferentes:
+
+00:01:40.300 --> 00:01:45.767
+uma View
+com um estilo styles.metric
+
+00:01:45.800 --> 00:01:47.500
+e um texto.
+
+00:01:47.533 --> 00:01:49.600
+Novamente,
+este vídeo será um pouco chato,
+
+00:01:49.633 --> 00:01:51.633
+porque só estamos criando
+esta IU,
+
+00:01:51.667 --> 00:01:55.367
+então, se quiser fazer isto sozinho,
+fique totalmente à vontade.
+
+00:01:55.400 --> 00:02:00.067
+Mas este texto terá um estilo...
+Terá dois estilos:
+
+00:02:00.100 --> 00:02:06.067
+styles.header,
+ao qual daremos a cor branca,
+
+00:02:06.100 --> 00:02:10.367
+e ele dirá "Altitude".
+
+00:02:10.400 --> 00:02:13.533
+Aqui embaixo será
+bem parecido,
+
+00:02:13.567 --> 00:02:15.467
+podemos apenas
+copiar e colar isto.
+
+00:02:15.500 --> 00:02:18.300
+Em vez de header,
+será subHeader,
+
+00:02:18.333 --> 00:02:24.700
+e teremos, digamos, "200 pés",
+e vamos fixar este valor.
+
+00:02:24.733 --> 00:02:28.900
+Agora vamos
+copiar e colar isto
+
+00:02:28.933 --> 00:02:31.700
+porque o próximo
+será bem parecido.
+
+00:02:31.733 --> 00:02:35.333
+Temos uma métrica
+e o estilo na cor branca.
+
+00:02:35.367 --> 00:02:38.667
+Em vez de dizer "Altitude",
+ele vai dizer "Speed".
+
+00:02:38.700 --> 00:02:43.200
+E em vez de dizer "200 pés",
+ele vai dizer, digamos,
+
+00:02:43.233 --> 00:02:47.300
+"300 mph".
+
+00:02:47.333 --> 00:02:51.467
+Isto já está bom.
+Vamos ver se funciona.
+
+00:02:51.700 --> 00:02:52.767
+Pronto!
+
+00:02:52.800 --> 00:02:55.633
+Mesmo que o estado tenha
+um valor fixo no código,
+
+00:02:55.667 --> 00:02:57.367
+a IU está ótima.
+

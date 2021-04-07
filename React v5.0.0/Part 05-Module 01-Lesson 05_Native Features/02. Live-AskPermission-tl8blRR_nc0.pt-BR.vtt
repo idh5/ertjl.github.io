@@ -1,0 +1,224 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:03.267
+Este é o vídeo
+pelo qual estávamos esperando.
+
+00:00:03.300 --> 00:00:07.167
+Vamos aprender
+a pedir permissão ao usuário
+
+00:00:07.200 --> 00:00:11.733
+para acessar e usar
+a localização dele.
+
+00:00:11.767 --> 00:00:16.600
+Dentro de askPermission,
+vamos preencher isto aqui.
+
+00:00:16.633 --> 00:00:21.733
+Escrevemos
+"Permissions.askAsync".
+
+00:00:21.767 --> 00:00:24.867
+Em vez de async,
+será askAsync.
+
+00:00:24.900 --> 00:00:29.367
+O que pedimos aqui,
+assim como na linha 15,
+
+00:00:29.400 --> 00:00:31.567
+é Permissions.LOCATION.
+
+00:00:31.600 --> 00:00:36.233
+E então receberemos
+o status de volta,
+
+00:00:36.267 --> 00:00:39.100
+assim como fizemos antes,
+em componentDidMount.
+
+00:00:39.133 --> 00:00:44.967
+Agora podemos dizer que,
+se o status for "granted",
+
+00:00:45.000 --> 00:00:51.233
+poderemos retornar
+para set.Location.
+
+00:00:51.267 --> 00:00:55.967
+Se não for,
+assim como fizemos antes,
+
+00:00:56.000 --> 00:00:58.500
+configuramos o status
+
+00:00:58.533 --> 00:01:01.667
+para que nosso estado saiba
+o que está acontecendo.
+
+00:01:01.700 --> 00:01:03.467
+Então qualquer erro
+que aparecer...
+
+00:01:03.500 --> 00:01:07.900
+Precisamos registrá-lo
+para sabermos disso.
+
+00:01:07.933 --> 00:01:10.367
+Será console.warn...
+
+00:01:10.400 --> 00:01:15.267
+Vamos dizer
+"Error asking location permission".
+
+00:01:15.300 --> 00:01:19.700
+E registramos o erro.
+Já está bom.
+
+00:01:19.733 --> 00:01:23.400
+Cometi um erro de digitação aqui.
+Isto deve ser askAsync.
+
+00:01:23.433 --> 00:01:26.267
+Você já deve ter visto,
+mas eu obviamente não vi.
+
+00:01:26.300 --> 00:01:29.867
+Agora o que vai acontecer...
+Vamos ver isso na prática.
+
+00:01:29.900 --> 00:01:31.100
+Clicamos em Live.
+
+00:01:31.133 --> 00:01:34.467
+Você precisa ativar os serviços
+de localização deste app.
+
+00:01:34.500 --> 00:01:36.500
+Ao clicar em "Enable",
+
+00:01:36.533 --> 00:01:40.000
+veja que recebemos
+esta mensagem dizendo
+
+00:01:40.033 --> 00:01:44.100
+que "Expo" gostaria
+de ter acesso à sua localização.
+
+00:01:44.133 --> 00:01:46.733
+Você quer permitir ou não?
+
+00:01:46.767 --> 00:01:49.600
+Clico em "Permitir".
+
+00:01:49.633 --> 00:01:52.933
+Veja que temos
+algumas informações aqui,
+
+00:01:52.967 --> 00:01:55.633
+mas esta é a informação
+dos dados estáticos,
+
+00:01:55.667 --> 00:01:57.400
+não dos dados do telefone.
+
+00:01:57.433 --> 00:02:02.133
+Então vamos atualizar rapidamente
+nossos métodos de renderização.
+
+00:02:02.167 --> 00:02:05.033
+Veja que ainda temos a direção
+e as coordenadas aqui.
+
+00:02:05.067 --> 00:02:09.667
+Aqui, em vez de "Norte",
+
+00:02:09.700 --> 00:02:13.100
+usaremos "direction".
+
+00:02:13.133 --> 00:02:16.967
+E aqui, em vez de 200,
+
+00:02:17.000 --> 00:02:24.700
+colocamos
+Math.round(coords.altitude).
+
+00:02:24.733 --> 00:02:26.433
+E o que fazemos em seguida é
+
+00:02:26.467 --> 00:02:33.100
+multiplicar por 3,2808,
+
+00:02:33.133 --> 00:02:35.633
+se quisermos converter
+para pés.
+
+00:02:35.667 --> 00:02:39.233
+A mesma coisa
+se quisermos milhas por hora,
+
+00:02:39.267 --> 00:02:46.867
+usamos coords.speed
+vezes 2,2369.
+
+00:02:46.867 --> 00:02:49.933
+Acho que me lembro
+das aulas de Física...
+
+00:02:49.967 --> 00:02:54.167
+Então escrevemos .tofixed(1),
+
+00:02:54.200 --> 00:02:57.200
+se quisermos converter
+para milhas por hora.
+
+00:02:57.233 --> 00:02:59.033
+Vamos ver se funciona.
+
+00:02:59.300 --> 00:03:00.300
+Pronto.
+
+00:03:00.333 --> 00:03:04.933
+Veja que o simulador está mudando
+as milhas por hora.
+
+00:03:04.967 --> 00:03:08.233
+Para resolver isso,
+entre em Hardware,
+
+00:03:08.267 --> 00:03:11.633
+e então entre em Debug,
+depois em Location,
+
+00:03:11.667 --> 00:03:14.033
+e selecione
+a sua localização aqui.
+
+00:03:14.067 --> 00:03:16.167
+Escolhi passeio de bicicleta
+pela cidade
+
+00:03:16.200 --> 00:03:18.733
+porque estou a mais ou menos
+60 milhas por hora.
+
+00:03:18.767 --> 00:03:21.233
+Se eu escolher
+viagem de carro,
+
+00:03:21.267 --> 00:03:26.533
+minha velocidade aumentará
+em algum momento.
+
+00:03:26.567 --> 00:03:29.167
+Outra coisa legal é que...
+Agora foi.
+
+00:03:29.200 --> 00:03:30.967
+É que ele também
+muda a direção.
+

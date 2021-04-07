@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.944
+Now, the last scenario which is the best scenario,
+
+00:00:03.944 --> 00:00:08.589
+if the user grants us permission and status, will become granted.
+
+00:00:08.589 --> 00:00:10.320
+So what we want to do in this case,
+
+00:00:10.320 --> 00:00:14.025
+I'm just going to go and paste some styles down here again,
+
+00:00:14.025 --> 00:00:15.804
+so you don't have to see that.
+
+00:00:15.804 --> 00:00:18.535
+Basically, what we have is a container,
+
+00:00:18.535 --> 00:00:22.579
+some font stuff, direction which is going to be purple,
+
+00:00:22.579 --> 00:00:26.309
+some more containers. You can check that out if you want to.
+
+00:00:26.309 --> 00:00:30.779
+So now, inside of this section down here what we're going to do
+
+00:00:30.780 --> 00:00:36.734
+is the container is going to be styles.container, the main view.
+
+00:00:36.734 --> 00:00:39.549
+And then, now what we want to do,
+
+00:00:39.549 --> 00:00:41.625
+let's have a view here.
+
+00:00:41.625 --> 00:00:44.085
+And again what we're building in this section,
+
+00:00:44.085 --> 00:00:47.429
+is this UI right here.
+
+00:00:47.429 --> 00:00:55.435
+So in this section which is going to be our styles.directioncontainer section,
+
+00:00:55.435 --> 00:01:02.295
+what we want to show is some text that says, you're heading.
+
+00:01:02.295 --> 00:01:06.765
+And then, we want to give this a style of styles.header.
+
+00:01:06.765 --> 00:01:08.144
+And then, below that,
+
+00:01:08.144 --> 00:01:12.824
+some more text which is the actual direction that we are heading.
+
+00:01:12.825 --> 00:01:16.165
+In this case, we'll just hard code north.
+
+00:01:16.165 --> 00:01:18.405
+It's going to be styles.direction.
+
+00:01:18.405 --> 00:01:20.129
+So this section looks great.
+
+00:01:20.129 --> 00:01:22.155
+Below that what we want to do,
+
+00:01:22.155 --> 00:01:26.625
+is now we want to have this metric section down here.
+
+00:01:26.625 --> 00:01:30.989
+So what we can do is have another view which
+
+00:01:30.989 --> 00:01:35.685
+is going to have a style of styles.metriccontainer.
+
+00:01:35.685 --> 00:01:36.960
+And then inside of here,
+
+00:01:36.959 --> 00:01:40.079
+we are going to have a few different things,
+
+00:01:40.079 --> 00:01:47.519
+a view with a style of styles.metric and then a text.
+
+00:01:47.519 --> 00:01:48.539
+Again, this is going to be
+
+00:01:48.540 --> 00:01:51.375
+kind of a boring video because we are just building out this UI,
+
+00:01:51.375 --> 00:01:52.859
+so if you want to do this on your own,
+
+00:01:52.859 --> 00:01:55.304
+by all means feel free to.
+
+00:01:55.305 --> 00:01:58.420
+But this text is going to have a style of,
+
+00:01:58.420 --> 00:01:59.739
+is going to have two styles.
+
+00:01:59.739 --> 00:02:05.954
+Styles.header and then we will give it a color of whites.
+
+00:02:05.954 --> 00:02:10.329
+And then what it's going to say is altitude.
+
+00:02:10.330 --> 00:02:12.195
+And then below this,
+
+00:02:12.194 --> 00:02:13.530
+it's going to be very similar,
+
+00:02:13.530 --> 00:02:15.419
+so we can just copy and paste this.
+
+00:02:15.419 --> 00:02:20.629
+Instead of header, it's going to be sub header and we will just have,
+
+00:02:20.629 --> 00:02:24.634
+let's say, 200 feet will also hard code that.
+
+00:02:24.634 --> 00:02:27.435
+And then now, let's go ahead and copy and paste
+
+00:02:27.435 --> 00:02:31.585
+this because this next one is going to be similar.
+
+00:02:31.585 --> 00:02:35.295
+We have metric and then we have styles white.
+
+00:02:35.294 --> 00:02:36.579
+Instead of saying altitude,
+
+00:02:36.580 --> 00:02:38.640
+this is going to say speed.
+
+00:02:38.639 --> 00:02:41.234
+And then instead of saying 200 feet,
+
+00:02:41.235 --> 00:02:42.960
+this can say, let's say,
+
+00:02:42.960 --> 00:02:47.545
+300 miles per hour. All right.
+
+00:02:47.544 --> 00:02:52.184
+This looks pretty good. Let's go ahead and look to see if this is working.
+
+00:02:52.185 --> 00:02:55.490
+There we go. So even though the state is hard coded now,
+
+00:02:55.490 --> 00:02:57.460
+the UI looks pretty good.
+

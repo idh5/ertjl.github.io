@@ -1,0 +1,387 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.434 --> 00:00:05.133
+Animações fluidas são parte crucial
+na criação de aplicativos Native.
+
+00:00:05.167 --> 00:00:06.300
+Por conta disso,
+
+00:00:06.334 --> 00:00:10.067
+o React Native já vem equipado
+com uma biblioteca de animações
+
+00:00:10.133 --> 00:00:13.234
+que, por incrível que pareça,
+chama-se "Animated".
+
+00:00:13.300 --> 00:00:14.834
+O objetivo da Animated
+
+00:00:14.901 --> 00:00:19.300
+é apresentar animações realistas
+na sua interface de usuário.
+
+00:00:19.334 --> 00:00:22.200
+A Animated faz uso
+de relações declarativas
+
+00:00:22.234 --> 00:00:24.001
+entre entradas e saídas
+
+00:00:24.033 --> 00:00:27.167
+permeadas
+de transformações configuráveis.
+
+00:00:27.200 --> 00:00:29.367
+Vejamos um exemplo.
+
+00:00:29.400 --> 00:00:33.467
+Este vídeo será divertido
+porque vamos brincar
+
+00:00:33.501 --> 00:00:35.868
+com a biblioteca Animated,
+do React Native.
+
+00:00:35.901 --> 00:00:37.834
+A Animated,
+como você pode imaginar,
+
+00:00:37.868 --> 00:00:41.234
+serve para fazer animações
+dentro de um app React Native.
+
+00:00:41.267 --> 00:00:44.801
+Este aqui é
+o nosso "Component".
+
+00:00:44.868 --> 00:00:48.801
+Aqui temos um container
+e renderizamos uma imagem.
+
+00:00:48.834 --> 00:00:52.467
+É assim que fica
+no iOS e no Android.
+
+00:00:52.534 --> 00:00:58.567
+Há três tipos principais de animação
+que podemos fazer com a Animated.
+
+00:00:58.634 --> 00:01:03.501
+O Decay tem uma velocidade inicial
+e desacelera até parar,
+
+00:01:03.534 --> 00:01:07.868
+o Spring comporta-se
+como uma mola na física
+
+00:01:07.901 --> 00:01:12.067
+e o Timing anima um valor
+com o passar do tempo.
+
+00:01:12.133 --> 00:01:15.000
+Agora, o que quero é que,
+
+00:01:15.067 --> 00:01:16.801
+ao montar o "Component",
+
+00:01:16.868 --> 00:01:20.601
+a imagem nele contida
+seja animada.
+
+00:01:20.667 --> 00:01:23.667
+A primeira coisa
+a se notar sobre animações
+
+00:01:23.734 --> 00:01:25.567
+é que, basicamente,
+
+00:01:25.634 --> 00:01:28.434
+você procede
+como com qualquer propriedade.
+
+00:01:28.467 --> 00:01:31.901
+Nós definiremos uma propriedade
+em "state",
+
+00:01:31.968 --> 00:01:36.234
+e, depois, a Animated mudará
+a propriedade de "state",
+
+00:01:36.300 --> 00:01:40.000
+o que animará o "Component".
+É meio complicado,
+
+00:01:40.067 --> 00:01:42.267
+então vamos dar uma olhada
+em como funciona.
+
+00:01:42.334 --> 00:01:45.133
+Vamos definir uma propriedade
+de opacidade em "state".
+
+00:01:45.167 --> 00:01:46.934
+O que pretendo é que,
+
+00:01:47.001 --> 00:01:50.968
+ao montar o "Component",
+a imagem apareça gradualmente,
+
+00:01:51.000 --> 00:01:54.834
+que a opacidade varie
+de 0 até 1.
+
+00:01:54.901 --> 00:01:56.567
+Aqui definiremos...
+
+00:01:56.634 --> 00:02:00.901
+"opacity:
+new Animated.Value()",
+
+00:02:00.968 --> 00:02:04.167
+e o valor padrão será 0,
+
+00:02:04.200 --> 00:02:06.968
+ou seja,
+a opacidade começará de 0.
+
+00:02:07.033 --> 00:02:10.968
+Depois, não podemos esquecer
+de adicionar essa opacidade
+
+00:02:11.033 --> 00:02:12.868
+como estilo da nossa imagem.
+
+00:02:12.901 --> 00:02:15.567
+Mas não podemos usar
+uma imagem qualquer.
+
+00:02:15.601 --> 00:02:19.100
+É preciso definir
+"Animated.Image".
+
+00:02:19.167 --> 00:02:23.534
+Agora, em vez de termos
+apenas largura e altura,
+
+00:02:23.567 --> 00:02:28.300
+também viremos aqui
+e adicionaremos "opacity",
+
+00:02:28.334 --> 00:02:32.400
+que pegaremos daqui
+do "state".
+
+00:02:32.434 --> 00:02:36.968
+Mas, como você pode imaginar,
+ao executarmos isto agora...
+
+00:02:37.000 --> 00:02:39.734
+perceba que não temos
+mais imagem.
+
+00:02:39.801 --> 00:02:45.567
+Isso é porque definimos como 0
+o valor da imagem aqui
+
+00:02:45.601 --> 00:02:49.267
+e, depois, adicionamos
+o valor da opacidade à imagem,
+
+00:02:49.334 --> 00:02:53.367
+de modo que a atual opacidade
+da imagem é 0.
+
+00:02:53.434 --> 00:02:55.367
+Mas nós queremos
+animar a imagem
+
+00:02:55.400 --> 00:02:57.901
+quando o componente for montado,
+como falei.
+
+00:02:57.934 --> 00:03:00.968
+Para tanto, podemos criar
+um "componentDidMount".
+
+00:03:01.033 --> 00:03:03.601
+Ao montar este componente...
+
+00:03:03.667 --> 00:03:07.534
+Primeiro, vamos importar
+a opacidade de "state".
+
+00:03:07.601 --> 00:03:10.801
+Agora, usando o método Timing,
+
+00:03:10.868 --> 00:03:16.567
+quero animar a opacidade de 0 até 1
+ao longo de um segundo.
+
+00:03:16.634 --> 00:03:22.200
+Para fazermos isso,
+invocaremos "Animated.timing".
+
+00:03:22.267 --> 00:03:26.000
+E o primeiro valor passado
+é o que queremos modificar,
+
+00:03:26.067 --> 00:03:28.300
+ou seja, a opacidade.
+
+00:03:28.367 --> 00:03:32.534
+Depois, passamos um objeto
+com algumas opções.
+
+00:03:32.601 --> 00:03:37.968
+Diremos que queremos modificar
+a opacidade para o valor de 1,
+
+00:03:38.033 --> 00:03:40.400
+ou seja, iremos de 0 a 1,
+
+00:03:40.434 --> 00:03:44.234
+e isso levará
+mil milissegundos.
+
+00:03:44.267 --> 00:03:47.567
+Depois, não se esqueça
+de executar ".start()"
+
+00:03:47.601 --> 00:03:49.434
+para iniciar a animação.
+
+00:03:49.501 --> 00:03:51.801
+Agora, se tudo
+estiver funcionando...
+
+00:03:51.834 --> 00:03:54.968
+você vai notar,
+quando o aplicativo for executado,
+
+00:03:55.033 --> 00:03:59.300
+este efeito bacana
+de aparição gradativa.
+
+00:03:59.334 --> 00:04:02.767
+Agora, em vez deste fade in,
+
+00:04:02.834 --> 00:04:05.400
+quero que a imagem parta
+do ponto 0...
+
+00:04:05.467 --> 00:04:08.100
+e acabe na posição
+em que se encontra agora.
+
+00:04:08.133 --> 00:04:12.801
+Para tanto,
+usaremos a propriedade Spring.
+
+00:04:12.834 --> 00:04:16.834
+Vamos adicionar
+algumas propriedades ao "state".
+
+00:04:16.901 --> 00:04:21.567
+Diremos que "width"
+começará de 0...
+
+00:04:21.634 --> 00:04:27.434
+e que "height" também será
+um valor animado que começa de 0.
+
+00:04:27.467 --> 00:04:31.033
+Depois, como com a opacidade,
+
+00:04:31.100 --> 00:04:33.934
+diremos "width", "height"
+
+00:04:33.968 --> 00:04:36.701
+e adicionaremos ambos
+como propriedades aqui.
+
+00:04:36.734 --> 00:04:39.834
+Agora, se eu salvar
+e der uma olhada,
+
+00:04:39.868 --> 00:04:41.467
+não encontrarei nada,
+
+00:04:41.534 --> 00:04:45.267
+porque as imagens
+estão no ponto 0.
+
+00:04:45.300 --> 00:04:46.934
+Então, como fiz
+aqui em cima,
+
+00:04:46.968 --> 00:04:49.367
+quero animar este método
+a partir do 0
+
+00:04:49.434 --> 00:04:52.734
+até, especificamente, 300.
+
+00:04:52.767 --> 00:04:55.934
+Diremos "Animated.spring"...
+
+00:04:55.968 --> 00:05:00.067
+Primeiro o "width".
+Queremos modificar a largura.
+
+00:05:00.133 --> 00:05:03.300
+Agora, quero transicionar
+de 0 até 300,
+
+00:05:03.334 --> 00:05:04.968
+e, em vez de duração -
+
+00:05:05.000 --> 00:05:08.100
+já que não estamos usando Timing,
+e sim Spring -,
+
+00:05:08.133 --> 00:05:10.901
+definiremos o parâmetro "speed"
+como 5.
+
+00:05:10.934 --> 00:05:14.701
+O padrão de "speed" é 12,
+então será um pouco mais lento.
+
+00:05:14.767 --> 00:05:17.300
+Depois chamaremos
+".start()".
+
+00:05:17.334 --> 00:05:21.868
+E agora faremos a mesmíssima coisa
+com a altura.
+
+00:05:21.901 --> 00:05:26.167
+Se tudo estiver funcionando...
+Não está funcionando.
+
+00:05:26.200 --> 00:05:29.400
+Faltou mencionar "width"
+e "height" aqui em cima.
+
+00:05:29.467 --> 00:05:31.334
+Agora, se tudo
+estiver funcionando,
+
+00:05:31.400 --> 00:05:34.234
+você verá que...
+
+00:05:34.267 --> 00:05:39.133
+além de a opacidade da imagem
+ir de 0 a 1,
+
+00:05:39.200 --> 00:05:42.901
+a imagem vai de uma largura
+e de uma altura 0
+
+00:05:42.968 --> 00:05:45.000
+até 300.
+

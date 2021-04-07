@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.700
+If you've ever uploaded an app to either the Google Play Store or the iOS App Store,
+
+00:00:05.700 --> 00:00:10.134
+you know that what you need to do is build your app and basically bundle it to,
+
+00:00:10.134 --> 00:00:12.144
+if you're on Android a.apk file,
+
+00:00:12.144 --> 00:00:14.824
+or if you're on iOS a.ipa file.
+
+00:00:14.824 --> 00:00:16.344
+So that's what we're going to do in this video,
+
+00:00:16.344 --> 00:00:18.899
+we're not going to actually walk through how to upload
+
+00:00:18.899 --> 00:00:22.274
+an app to the App Store just because it's kind of a long process.
+
+00:00:22.274 --> 00:00:25.469
+But what we will walk through is the toughest part of that process,
+
+00:00:25.469 --> 00:00:28.469
+which is building or bundling these specific files
+
+00:00:28.469 --> 00:00:31.769
+that you need to actually upload to the app stores.
+
+00:00:31.769 --> 00:00:35.469
+So the very first thing we're going to do is head over to your terminal,
+
+00:00:35.469 --> 00:00:40.189
+and if you don't already have the EXP app from Expo,
+
+00:00:40.189 --> 00:00:44.604
+go ahead and install that as a global module on your computer.
+
+00:00:44.604 --> 00:00:46.314
+I already have it so I'm not going to install it.
+
+00:00:46.314 --> 00:00:47.519
+But if you don't have it, run
+
+00:00:47.520 --> 00:00:53.460
+mpminstall-G.exp and then once you have that what you can do,
+
+00:00:53.460 --> 00:00:57.329
+assuming your app is currently running and assuming you
+
+00:00:57.329 --> 00:01:03.000
+have updated your app.json file which we did in a previous video,
+
+00:01:03.000 --> 00:01:07.019
+what you can do now is if you're inside of your project,
+
+00:01:07.019 --> 00:01:10.439
+you can run EXP, build,
+
+00:01:10.439 --> 00:01:14.509
+call an Android or call an iOS depending on what you want to build for,
+
+00:01:14.510 --> 00:01:16.950
+I want to build for Android right now.
+
+00:01:16.950 --> 00:01:18.740
+So we run that,
+
+00:01:18.739 --> 00:01:22.045
+and then it's eventually going to ask you this question.
+
+00:01:22.045 --> 00:01:25.840
+Would you like to upload a key store or have us generate one for you?
+
+00:01:25.840 --> 00:01:28.615
+If you don't know what this means, let us handle it.
+
+00:01:28.614 --> 00:01:32.259
+What that means is I am very gladly going to let them handle it,
+
+00:01:32.260 --> 00:01:34.785
+so I'm going to say one,
+
+00:01:34.784 --> 00:01:37.700
+let Expo handle the process.
+
+00:01:37.700 --> 00:01:40.670
+After a few minutes you're going to get a view that looks like this,
+
+00:01:40.670 --> 00:01:43.310
+saying hey we went ahead and started building it
+
+00:01:43.310 --> 00:01:46.010
+because it's going to take forever or it's going to take a little bit while,
+
+00:01:46.010 --> 00:01:51.620
+you can go ahead and monitor the build by running EXP build call status.
+
+00:01:51.620 --> 00:01:56.725
+And if we do that, you'll notice that we get some warnings, which is fine.
+
+00:01:56.724 --> 00:01:59.349
+And it says hey your project looks good,
+
+00:01:59.349 --> 00:02:02.099
+checking if current build exists.
+
+00:02:02.099 --> 00:02:05.269
+And then it says the build is still in progress,
+
+00:02:05.269 --> 00:02:06.869
+so wait a little bit longer.
+
+00:02:06.870 --> 00:02:12.450
+Now, after about 15 minutes when you run the build status command,
+
+00:02:12.449 --> 00:02:14.339
+you'll get this URL right here.
+
+00:02:14.340 --> 00:02:17.814
+Now what you can do is enter in this URL into your browser,
+
+00:02:17.814 --> 00:02:22.050
+and that will allow you to download your.apk file,
+
+00:02:22.050 --> 00:02:24.810
+and then when you are submitting your apps to the app store,
+
+00:02:24.810 --> 00:02:27.765
+when they ask you for your.apk file,
+
+00:02:27.764 --> 00:02:31.794
+you can just give them this file right here that you downloaded from this URL.
+
+00:02:31.794 --> 00:02:36.629
+Now if you want to do that exact same process but for iOS,
+
+00:02:36.629 --> 00:02:40.179
+all you need to do is run EXP build:iOS.,
+
+00:02:40.179 --> 00:02:46.000
+and that will give you a.ipa file to upload when the iOS App Store asks you for that.
+

@@ -1,0 +1,351 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>App Store Preparation</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Native Features</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Geolocation.html">02. Geolocation</a>
+    </li>
+    <li class="">
+      <a href="03. Animations.html">03. Animations</a>
+    </li>
+    <li class="">
+      <a href="04. Local Notifications.html">04. Local Notifications</a>
+    </li>
+    <li class="">
+      <a href="05. Handling Photos.html">05. Handling Photos</a>
+    </li>
+    <li class="">
+      <a href="06. App Store Preparation.html">06. App Store Preparation</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. App Store Preparation</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="app-store-preparations">App Store Preparations</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Preparing for the App Stores</p></h3>
+  <video controls>
+  <source src="06. Preparing for the App Stores-_tyCx2yAkc0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Preparing for the App Stores-_tyCx2yAkc0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Preparing for the App Stores-_tyCx2yAkc0.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="06. Preparing for the App Stores-_tyCx2yAkc0.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>When you submit an app to either app store, there is more information you need to submit than just the app itself. For example, you need details such as the app description, icon, etc. Luckily for us, Expo make it easy to specify these sorts of things just by editing the <code>app.json</code> file at the root of our app folder. Here's an example of configurations we'll be adding in our UdaciFitness app:</p>
+<pre><code class="js language-js">{
+  "expo": {
+    "sdkVersion": "19.0.0",
+    "orientation": "portrait",
+    "name": "Udacifitness",
+    "description": "The best triathlon training app in the world.",
+    "slug": "udacifitness",
+    "version": "1.0",
+    "icon": "https://maxcdn.icons8.com/Color/PNG/512/Sports/triathlon-512.png",
+    "notification": {
+      "icon": "http://www.student-scholarships.com/images/made/img/featured/nav_basketball_45_45.png"
+    },
+    "ios": {
+     "bundleIdentifier": "org.udacifitness.exp",
+    },
+    "android": {
+     "package": "org.udacifitness.exp",
+    }
+  },
+}</code></pre>
+<p>Let's go ahead and add this to our app!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>App-Prep</p></h3>
+  <video controls>
+  <source src="06. App-Prep-4rcPX-bIneE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. App-Prep-4rcPX-bIneE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. App-Prep-4rcPX-bIneE.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="06. App-Prep-4rcPX-bIneE.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/ca00e023b9c01139efdfb54d7dfa9e18c75b4297" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>This is the final check-in!</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="9540ba58-6055-466b-b750-8f215d95a6a2--0">
+        <label for="9540ba58-6055-466b-b750-8f215d95a6a2--0"><p>I have added application details to <code>app.json</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which file do you need to change in order to configure your application for the app store?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505170522097" name="394665" id="a1505170522097">
+      <label for="a1505170522097"><p>app.json</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505170527078" name="394665" id="a1505170527078">
+      <label for="a1505170527078"><p>config.json</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505170528553" name="394665" id="a1505170528553">
+      <label for="a1505170528553"><p>app.js</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505170529295" name="394665" id="a1505170529295">
+      <label for="a1505170529295"><p>config.js</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>app.json</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="what-are-apk-and-ipa-files">What are .apk and .ipa Files?</h2>
+<p>Before you submit your application to either app store, you need to "package" it appropriately. The iOS App Store will ask you for a <em>.ipa</em> ("iOS App Store Package") file and the Android Google Play store will ask you for a <em>.apk</em> ("Android Application Package") file. When you create either an ipa or a apk file, you're essentially creating a bundle of all of the necessary information that either App store needs in order to process and run your application. </p>
+<p>The easiest way to generate both the .apk and the .ipa files is to use Expo's <code>exp</code> CLI. First, run <code>npm install -g exp</code>. Once that's installed (and after you've configured your <code>app.json</code> file), you can run <code>exp build:ios</code> to build your .ipa file, and <code>exp build:android</code> to build your .apk file.</p>
+<p>Note that these will take anywhere from 10-20 minutes to build, so you'll need to be patient. To check the status of the build you can run <code>exp build:status</code>. Eventually that command will give you a URL where you can go to download either your .ipa or .apk files.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Generating .apk and .ipa Files</p></h3>
+  <video controls>
+  <source src="06. Generating .apk and .ipa Files-IryVgEQ0SvE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Generating .apk and .ipa Files-IryVgEQ0SvE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Generating .apk and .ipa Files-IryVgEQ0SvE.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="06. Generating .apk and .ipa Files-IryVgEQ0SvE.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-the-rest-of-the-way-⚠️">⚠️ The Rest of the Way ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>The hardest part about uploading your application to either app store is generating a .ipa or .apk file. Because we covered that in the previous section, we're not going to cover the entire process of actually uploading your app. The following documents should help you: for iOS, <a href="https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/UploadingBinariesforanApp.html#//apple_ref/doc/uid/TP40011225-CH38-SW1" rel="noopener noreferrer" target="_blank">Uploading a Build for an App</a> and for Android, <a href="https://support.google.com/googleplay/android-developer/answer/113469?hl=en" rel="noopener noreferrer" target="_blank">Upload an App</a>.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>In this section we learned about preparing your application for the app store and generating .apk and .ipa files. For further reading, feel free t ocheck out <a href="https://docs.expo.io/versions/latest/guides/building-standalone-apps.html" rel="noopener noreferrer" target="_blank">Building Standalone Apps with Expo</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. App Store Preparation')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

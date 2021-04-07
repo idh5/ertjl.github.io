@@ -1,0 +1,54 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.333 --> 00:00:05.667
+E se, em vez de indeterminado,
+o status for negado?
+
+00:00:05.700 --> 00:00:12.500
+O usuário negou logo de cara
+o acesso à localização dele.
+
+00:00:12.533 --> 00:00:17.767
+Neste caso, isto também
+ficará centralizado,
+
+00:00:17.800 --> 00:00:21.600
+usaremos o mesmo ícone,
+de que eu gosto,
+
+00:00:21.633 --> 00:00:26.833
+e embaixo, em vez de dizer
+"é preciso ativar
+
+00:00:26.867 --> 00:00:29.200
+os serviços de localização
+deste aplicativo",
+
+00:00:29.233 --> 00:00:34.600
+diremos: "O acesso aos serviços
+de localização foi negado.
+
+00:00:34.633 --> 00:00:43.633
+Ative os serviços de localização
+deste app em configurações."
+
+00:00:43.667 --> 00:00:45.433
+Esta mensagem é bem direta.
+
+00:00:45.467 --> 00:00:50.533
+Agora, ao clicar em Live,
+veremos este texto aqui.
+
+00:00:50.567 --> 00:00:51.767
+De novo, esta é a IU.
+
+00:00:51.800 --> 00:00:54.300
+Então, se o usuário não permitir,
+diremos:
+
+00:00:54.333 --> 00:00:58.333
+"Não podemos fazer nada,
+pois você negou o nosso acesso."
+

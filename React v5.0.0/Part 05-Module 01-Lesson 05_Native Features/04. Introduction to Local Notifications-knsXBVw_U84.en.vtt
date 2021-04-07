@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.440
+In this section, we're going to add notification reminders toward your UdaciFitness app.
+
+00:00:06.440 --> 00:00:08.870
+If you're not familiar with what a notification is,
+
+00:00:08.869 --> 00:00:13.324
+it's a little pop up you get on your phone whether or not the app is running.
+
+00:00:13.324 --> 00:00:18.454
+So, on our app every day at 8 o'clock if the user hasn't logged their stats for that day,
+
+00:00:18.454 --> 00:00:21.394
+they should get a notification reminding them to.
+
+00:00:21.394 --> 00:00:24.919
+Expo provides us with a notifications API which
+
+00:00:24.920 --> 00:00:28.325
+has a scheduleLocalNotificationAsync method on it,
+
+00:00:28.324 --> 00:00:32.000
+which is exactly what we'll need to have local notifications to our app.
+

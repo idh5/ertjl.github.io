@@ -1,0 +1,153 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:03.333
+Neste vídeo,
+mexeremos no estilo
+
+00:00:03.367 --> 00:00:07.767
+e adicionaremos uma IU
+para esta seção "undetermined".
+
+00:00:07.800 --> 00:00:10.700
+Vamos configurar o status
+para indeterminado,
+
+00:00:10.733 --> 00:00:12.333
+para vermos isto,
+
+00:00:12.367 --> 00:00:16.600
+e importarei algumas coisas.
+
+00:00:16.633 --> 00:00:20.433
+Usaremos o TouchableOpacity aqui,
+assim como Style Sheets.
+
+00:00:20.467 --> 00:00:26.033
+Também importaremos
+um Foundation dos ícones do Expo.
+
+00:00:26.067 --> 00:00:29.800
+E, por fim,
+vamos configurar as cores.
+
+00:00:29.833 --> 00:00:32.200
+Colocaremos roxo e branco.
+
+00:00:32.333 --> 00:00:35.767
+Colarei alguns estilos aqui
+
+00:00:35.833 --> 00:00:39.500
+porque já me viram fazer
+estilos o suficiente neste curso.
+
+00:00:39.533 --> 00:00:40.767
+Temos um container,
+
+00:00:40.800 --> 00:00:44.767
+um center, que centraliza tudo
+horizontalmente e verticalmente.
+
+00:00:44.800 --> 00:00:48.500
+Um botão roxo, está bom assim,
+e um botão de texto.
+
+00:00:48.533 --> 00:00:53.933
+Agora, em "undetermined",
+em vez de dizer que é indeterminado,
+
+00:00:53.967 --> 00:00:56.467
+podemos colocar...
+
+00:00:56.533 --> 00:00:58.600
+Adicionamos style.center
+
+00:00:58.633 --> 00:01:01.900
+para centralizarmos
+horizontalmente e verticalmente.
+
+00:01:02.000 --> 00:01:05.333
+E assim,
+teremos o ícone Foundation.
+
+00:01:05.367 --> 00:01:07.500
+O nome será "alert",
+
+00:01:07.533 --> 00:01:11.767
+porque diremos:
+"Por que você disse não?
+
+00:01:11.800 --> 00:01:15.767
+Tinha que ter nos aceitado
+para mostrarmos essa IU legal."
+
+00:01:15.800 --> 00:01:20.067
+Faremos exatamente isso e dizer:
+
+00:01:20.100 --> 00:01:23.767
+"É preciso ativar
+os serviços de localização
+
+00:01:23.800 --> 00:01:25.267
+para este aplicativo."
+
+00:01:25.300 --> 00:01:30.467
+E aqui teremos o botão onPress.
+
+00:01:30.500 --> 00:01:33.733
+Criaremos um método
+chamado askPermission
+
+00:01:33.767 --> 00:01:35.333
+que pedirá permissão.
+
+00:01:35.367 --> 00:01:37.900
+O estilo será styles.button,
+
+00:01:37.933 --> 00:01:43.200
+e dentro dele
+podemos colocar "enable".
+
+00:01:43.233 --> 00:01:47.067
+Usaremos o estilo de texto
+styles.buttonText,
+
+00:01:47.100 --> 00:01:48.400
+que criamos mais cedo.
+
+00:01:48.500 --> 00:01:49.500
+Já está bom.
+
+00:01:49.533 --> 00:01:54.933
+Vamos criar um espaço reservado
+para o askPermission.
+
+00:01:54.967 --> 00:01:58.667
+O que vai acontecer
+se tudo estiver correto,
+
+00:01:58.700 --> 00:02:02.467
+ao clicarmos em Live,
+teremos esta IU aqui.
+
+00:02:02.500 --> 00:02:07.567
+Esta é a IU de quando a posição
+é indeterminada.
+
+00:02:07.600 --> 00:02:10.700
+Precisamos dizer:
+"É preciso ativar
+
+00:02:10.733 --> 00:02:13.133
+os serviços de localização
+deste aplicativo."
+
+00:02:13.300 --> 00:02:16.467
+Clicando aqui,
+aparece uma caixa de texto que diz:
+
+00:02:16.500 --> 00:02:20.633
+"Permita que este aplicativo
+use a sua localização."
+

@@ -1,0 +1,241 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+All right. So this is where things start to get
+
+00:00:02.669 --> 00:00:05.189
+fun if you have not been having fun already.
+
+00:00:05.190 --> 00:00:07.740
+So what we are going to do now is build out this view.
+
+00:00:07.740 --> 00:00:11.759
+You will notice here that what we are doing is this is kind of like a live detailed view.
+
+00:00:11.759 --> 00:00:13.349
+What we are doing is we are pulling information
+
+00:00:13.349 --> 00:00:15.209
+from the phone in order to render this view.
+
+00:00:15.210 --> 00:00:16.620
+So it shows which way we are heading,
+
+00:00:16.620 --> 00:00:18.780
+the altitude, the current speed.
+
+00:00:18.780 --> 00:00:21.140
+All of this is going to be coming from your phone.
+
+00:00:21.140 --> 00:00:23.429
+So in order to do that, we actually need to go ahead and
+
+00:00:23.429 --> 00:00:26.300
+use the phone's API to get that information.
+
+00:00:26.300 --> 00:00:28.650
+And one side note, if you are trying to do this on Android in the
+
+00:00:28.649 --> 00:00:31.664
+simulator,is probably not going to work for some reason.
+
+00:00:31.664 --> 00:00:34.490
+The Android simulator does not work with what we are doing,
+
+00:00:34.490 --> 00:00:39.030
+but if you have it on a actual real device using the Expo app, you will be fine.
+
+00:00:39.030 --> 00:00:42.105
+So you either forget about the Android emulator and use the Expo app
+
+00:00:42.104 --> 00:00:45.469
+or the iOS simulator. All right. Let us jump into it.
+
+00:00:45.469 --> 00:00:47.640
+So what we are going to do is,
+
+00:00:47.640 --> 00:00:51.369
+this new view is going to be called Live.js.
+
+00:00:51.369 --> 00:00:54.719
+What we are going to have for now is
+
+00:00:54.719 --> 00:00:59.153
+just react in a component and then we will import the View,
+
+00:00:59.154 --> 00:01:03.570
+Text and this thing called ActivityIndicator,
+
+00:01:03.570 --> 00:01:07.459
+which are all coming from react-native.
+
+00:01:07.459 --> 00:01:13.034
+And then we will go ahead and export this class which extends component.
+
+00:01:13.034 --> 00:01:16.379
+So what state this component is going to have,
+
+00:01:16.379 --> 00:01:20.155
+it is going to have some coordinates which are set to null initially.
+
+00:01:20.155 --> 00:01:22.945
+It is going to have a status which we will also set to
+
+00:01:22.944 --> 00:01:27.204
+null and a direction which is just going to be an empty string.
+
+00:01:27.204 --> 00:01:34.030
+So what we can do is we can grab this information off of the state.
+
+00:01:34.030 --> 00:01:37.140
+And then there are a few different views that we are going to get
+
+00:01:37.140 --> 00:01:41.310
+depending on the specific permissions that you are granted.
+
+00:01:41.310 --> 00:01:45.564
+So what we are going to say is if status equals null,
+
+00:01:45.564 --> 00:01:48.495
+so the user really has not given us any permissions yet,
+
+00:01:48.495 --> 00:01:50.820
+nothing has changed from the default state,
+
+00:01:50.819 --> 00:01:56.024
+then what we want to do is render an ActivityIndicator,
+
+00:01:56.025 --> 00:01:59.160
+and we will give it a margin top of 30.
+
+00:01:59.159 --> 00:02:02.729
+All in ActivityIndicator is it's basically a loading spinners.
+
+00:02:02.730 --> 00:02:05.670
+So you've seen it before. It's just going render a spinner like,
+
+00:02:05.670 --> 00:02:07.200
+"Hey, we are waiting on something."
+
+00:02:07.200 --> 00:02:10.770
+If the status equals denied,
+
+00:02:10.770 --> 00:02:14.880
+meaning you asked for permission and they did not give it to you,
+
+00:02:14.879 --> 00:02:22.764
+what we are going to do for now is just render a view with some text in that says denied,
+
+00:02:22.764 --> 00:02:35.615
+and then we are going to do this exact same thing,
+
+00:02:35.615 --> 00:02:38.254
+but instead of denied,
+
+00:02:38.254 --> 00:02:41.914
+it is going to be for undetermined.
+
+00:02:41.914 --> 00:02:44.929
+And when you are messing around with the simulator, again,
+
+00:02:44.930 --> 00:02:46.790
+some of these permissions are going to be a little bit
+
+00:02:46.789 --> 00:02:50.314
+wonky because we are not on an actual real device,
+
+00:02:50.314 --> 00:02:53.375
+but we will get to that when we get to that.
+
+00:02:53.375 --> 00:02:57.800
+And then lastly, if it is not denied or undetermined,
+
+00:02:57.800 --> 00:03:00.020
+that means it was granted.
+
+00:03:00.020 --> 00:03:01.909
+So what we will say is,
+
+00:03:01.909 --> 00:03:03.355
+we will render a view,
+
+00:03:03.355 --> 00:03:05.329
+and then for now,
+
+00:03:05.330 --> 00:03:08.965
+what we are going to do is we will render a few text components.
+
+00:03:08.965 --> 00:03:11.120
+We will just go ahead and show the state for now,
+
+00:03:11.120 --> 00:03:13.849
+and this looks pretty good.
+
+00:03:13.849 --> 00:03:17.875
+So let us go ahead and add this as a new tab.
+
+00:03:17.875 --> 00:03:20.055
+So inside of App.js,
+
+00:03:20.055 --> 00:03:21.800
+first, we need to import it.
+
+00:03:21.800 --> 00:03:25.915
+And next, what we need to do is inside of tabs,
+
+00:03:25.914 --> 00:03:29.204
+let us go ahead and add any property.
+
+00:03:29.205 --> 00:03:30.615
+We will call it Live,
+
+00:03:30.615 --> 00:03:32.425
+and just as we have done before,
+
+00:03:32.425 --> 00:03:36.210
+screen is going to be the Live component.
+
+00:03:36.210 --> 00:03:40.862
+Some options here, the tabBarLabe,
+
+00:03:40.862 --> 00:03:43.055
+we're just going to just say Live,
+
+00:03:43.055 --> 00:03:45.230
+and then I am actually just going to copy
+
+00:03:45.229 --> 00:03:49.129
+this one because we are also going to use Ionicon font,
+
+00:03:49.129 --> 00:03:56.305
+but the name of this one is going to be ios-speedometer.
+
+00:03:56.305 --> 00:03:58.835
+All right, let us see if this is working.
+
+00:03:58.835 --> 00:04:01.180
+So we got a Live.
+
+00:04:01.180 --> 00:04:02.486
+Notice, we get an indicator.
+
+00:04:02.485 --> 00:04:08.704
+That is because the current status is set to null,
+
+00:04:08.705 --> 00:04:11.705
+so we can just assume that this is working for sure.
+
+00:04:11.705 --> 00:04:13.670
+We can set it to denied.
+
+00:04:13.669 --> 00:04:15.729
+Now, what we should see it is denied up here.
+
+00:04:15.729 --> 00:04:17.327
+All right. Let's set this back to null,
+
+00:04:17.327 --> 00:04:20.409
+and we will continue building this out in future videos.
+

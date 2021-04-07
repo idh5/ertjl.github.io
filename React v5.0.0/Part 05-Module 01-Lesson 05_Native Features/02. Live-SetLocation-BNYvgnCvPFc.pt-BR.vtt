@@ -1,0 +1,305 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:03.500
+Bom, agora é a parte divertida.
+
+00:00:03.533 --> 00:00:04.833
+O que faremos neste vídeo
+
+00:00:04.867 --> 00:00:09.600
+é pedir permissão ao usuário
+para usar a localização dele
+
+00:00:09.633 --> 00:00:14.467
+e mostrar dados em tempo real
+em vez destes dados fictícios.
+
+00:00:14.500 --> 00:00:16.933
+A primeira coisa que faremos
+
+00:00:16.967 --> 00:00:19.900
+é importar algumas coisas,
+
+00:00:19.933 --> 00:00:23.933
+localização e permissões,
+que virão do Expo,
+
+00:00:23.967 --> 00:00:27.400
+e também calcular a direção,
+
+00:00:27.433 --> 00:00:30.967
+que virá de utils/helpers.
+
+00:00:31.000 --> 00:00:32.867
+A primeira coisa que faremos
+
+00:00:32.900 --> 00:00:36.900
+é um método chamado
+setLocation.
+
+00:00:36.933 --> 00:00:42.100
+Este método será chamado
+quando tivermos confirmado
+
+00:00:42.133 --> 00:00:45.633
+a permissão para usar
+a localização do usuário.
+
+00:00:45.667 --> 00:00:53.000
+Vamos então chamá-lo
+de Location.watchPositionAsync.
+
+00:00:53.033 --> 00:00:57.567
+E aqui temos algumas opções.
+
+00:00:57.600 --> 00:01:01.033
+Escrevemos
+enableHighAccuracy: true,
+
+00:01:01.067 --> 00:01:02.867
+porque queremos acompanhar
+
+00:01:02.900 --> 00:01:06.033
+toda e qualquer mudança
+na localização do telefone.
+
+00:01:06.067 --> 00:01:08.900
+O timeInterval será 1,
+
+00:01:08.933 --> 00:01:12.333
+e distanceInterval será 1.
+
+00:01:12.333 --> 00:01:16.100
+Esta é a frequência
+para ele atualizar a localização,
+
+00:01:16.133 --> 00:01:18.033
+e não sei direito o valor mínimo.
+
+00:01:18.067 --> 00:01:20.700
+Coloquei 1
+porque quero que ele atualize,
+
+00:01:20.733 --> 00:01:23.933
+que a localização atualize
+o mais rápido possível.
+
+00:01:23.967 --> 00:01:29.200
+Agora passaremos
+por uma função de callback
+
+00:01:29.233 --> 00:01:31.967
+como o segundo argumento
+de watchPositionAsync,
+
+00:01:32.000 --> 00:01:35.800
+assim, sempre que a posição
+do telefone mudar,
+
+00:01:35.833 --> 00:01:38.300
+esta função será chamada,
+
+00:01:38.333 --> 00:01:41.167
+e passaremos
+pelas coordenadas do telefone.
+
+00:01:41.200 --> 00:01:47.167
+Agora viremos aqui e diremos
+newDirection = calculateDirections,
+
+00:01:47.367 --> 00:01:50.600
+passando por coords.heading.
+
+00:01:50.633 --> 00:01:54.833
+Isto vai nos retornar
+Norte, Nordeste ou algo assim.
+
+00:01:54.867 --> 00:02:00.033
+E agora teremos também
+a direção de this.states.
+
+00:02:00.067 --> 00:02:02.000
+E o que faremos...
+
+00:02:02.033 --> 00:02:05.267
+O motivo para fazermos isto
+você verá em um vídeo por vir,
+
+00:02:05.300 --> 00:02:07.167
+mas faremos isto
+por enquanto.
+
+00:02:07.200 --> 00:02:10.100
+Agora usaremos o setStates,
+
+00:02:10.133 --> 00:02:13.333
+e o que faremos aqui
+
+00:02:13.367 --> 00:02:17.567
+é atualizar o estado
+com as coordenadas,
+
+00:02:17.600 --> 00:02:20.867
+com o status "granted"
+
+00:02:20.900 --> 00:02:24.600
+e com a direção newDirection.
+
+00:02:24.633 --> 00:02:29.333
+Agora temos o setLocation,
+mas, antes disso,
+
+00:02:29.367 --> 00:02:30.933
+dentro de componentDidMount,
+
+00:02:30.933 --> 00:02:34.000
+precisamos ter certeza
+de que temos as permissões corretas
+
+00:02:34.033 --> 00:02:36.833
+ou se precisamos pedir
+essas permissões ao usuário.
+
+00:02:36.867 --> 00:02:42.167
+Podemos chamar
+de Permissions.getAsync,
+
+00:02:42.200 --> 00:02:47.400
+e a permissão importante para nós
+é Permissions.LOCATION,
+
+00:02:47.433 --> 00:02:48.767
+em letras maiúsculas.
+
+00:02:48.800 --> 00:02:52.933
+E então passaremos
+por um objeto
+
+00:02:52.967 --> 00:02:55.267
+com uma propriedade
+de status.
+
+00:02:55.300 --> 00:02:59.067
+Se o status,
+como vimos antes,
+
+00:02:59.100 --> 00:03:04.700
+for permitido,
+chamaremos setLocation.
+
+00:03:04.733 --> 00:03:07.533
+Se pedirmos permissão,
+e eles derem a permissão,
+
+00:03:07.567 --> 00:03:10.900
+ou se já recebemos
+a permissão,
+
+00:03:10.933 --> 00:03:13.667
+vá para setLocation.
+
+00:03:13.700 --> 00:03:20.900
+Se não, colocaremos setStates
+e atualizaremos o status.
+
+00:03:20.933 --> 00:03:27.467
+Se houver algum problema aqui,
+é bom encontrarmos o erro.
+
+00:03:27.500 --> 00:03:30.200
+Escrevemos "console.worn".
+
+00:03:30.233 --> 00:03:34.733
+Por exemplo,
+"Error getting location permission".
+
+00:03:34.767 --> 00:03:38.067
+E então atualizamos o setStates.
+
+00:03:38.100 --> 00:03:43.267
+Digamos que o status
+é "undetermined".
+
+00:03:43.300 --> 00:03:46.300
+Vamos ver se funciona.
+
+00:03:46.333 --> 00:03:51.200
+Redefini todas as configurações
+do meu simulador
+
+00:03:51.233 --> 00:03:56.800
+porque queria mostrar
+o que acontece começando do zero.
+
+00:03:58.433 --> 00:04:00.267
+E dá tudo errado.
+
+00:04:00.300 --> 00:04:02.600
+Variável "Permissions"
+não encontrada,
+
+00:04:02.633 --> 00:04:06.000
+porque chamamos de "Permission"
+em vez de "Permissions".
+
+00:04:06.033 --> 00:04:08.200
+Então agora deve funcionar.
+
+00:04:08.367 --> 00:04:10.567
+Certo, entendi, Expo...
+
+00:04:10.600 --> 00:04:13.433
+Agora vamos para a aba Live.
+
+00:04:14.000 --> 00:04:15.200
+E deu errado.
+
+00:04:15.233 --> 00:04:19.400
+Temos esta tela aqui dizendo
+que precisamos ativar a localização.
+
+00:04:19.433 --> 00:04:22.700
+O motivo para isso é que,
+em se tratando de valores,
+
+00:04:22.733 --> 00:04:25.633
+dizemos:
+"Será que temos permissão?"
+
+00:04:25.667 --> 00:04:29.433
+Ou seja, precisamos da permissão
+para usar a localização.
+
+00:04:29.467 --> 00:04:32.033
+Se ela já foi dada,
+dê a localização.
+
+00:04:32.067 --> 00:04:36.567
+Se não, configure o status
+que ele tiver.
+
+00:04:36.600 --> 00:04:40.700
+Na verdade,
+ainda não pedimos permissão.
+
+00:04:40.733 --> 00:04:42.867
+É o que faremos
+no próximo vídeo:
+
+00:04:42.900 --> 00:04:45.833
+aprender a pedir
+permissão ao usuário.
+
+00:04:45.867 --> 00:04:48.400
+Assim, aqui,
+se ela não tiver sido dada,
+
+00:04:48.433 --> 00:04:49.967
+podemos pedir permissão
+
+00:04:50.000 --> 00:04:53.867
+e também pedir permissão
+quando clicarem neste botão aqui.
+

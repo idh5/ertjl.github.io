@@ -1,0 +1,390 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Details</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Mobile Flashcards</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Details.html">01. Project Details</a>
+    </li>
+    <li class="">
+      <a href="02. Project Instructions &amp; Rubric.html">02. Project Instructions &amp; Rubric</a>
+    </li>
+    <li class="">
+      <a href="03. Step by Step Guide - Mobile Flashcards Project.html">03. Step by Step Guide - Mobile Flashcards Project</a>
+    </li>
+    <li class="">
+      <a href="04. Step by Step Guide - ReactRedux Apps.html">04. Step by Step Guide - React/Redux Apps</a>
+    </li>
+    <li class="">
+      <a href="05. Step by Step Guide - React Apps.html">05. Step by Step Guide - React Apps</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Mobile Flashcards.html">Project Description - Mobile Flashcards</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Mobile Flashcards.html">Project Rubric - Mobile Flashcards</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Project Details</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Project: Mobile Flashcards</p></h3>
+  <video controls>
+  <source src="01. Project Mobile Flashcards-fa1yhSA90-w.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. Project Mobile Flashcards-fa1yhSA90-w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="01. Project Mobile Flashcards-fa1yhSA90-w.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-overview">Project Overview</h1>
+<p>For the <strong>UdaciCards</strong> project, you will build a mobile application (Android or iOS - or both) that allows users to study collections of flashcards. The app will allow users to create different categories of flashcards called "decks", add flashcards to those decks, then take quizzes on those decks.</p>
+<h2 id="why-this-project">Why this project?</h2>
+<p>This project encompasses the fundamental aspects of building a native application including handling infinite lists, routing, and user input. By building this project, you will gain an understanding of how to use React Native to build an iOS and Android application.</p>
+<h1 id="specification">Specification</h1>
+<p>You'll create your project using <strong>create-react-native-app</strong>. There will be no starter code that you need to download. </p>
+<p>The specification provided in this <a href="https://review.udacity.com/#!/rubrics/1021/view" rel="noopener noreferrer" target="_blank">rubric</a> is the minimum required for this project. You may extend your project however you'd like.</p>
+<h2 id="specific-requirements">Specific Requirements</h2>
+<ul>
+<li>Use create-react-native-app to build your project.</li>
+<li>Allow users to create a deck which can hold an unlimited number of cards.</li>
+<li>Allow users to add a card to a specific deck. </li>
+<li>The front of the card should display the question.</li>
+<li>The back of the card should display the answer.</li>
+<li>Users should be able to quiz themselves on a specific deck and receive a score once they're done. </li>
+<li>Users should receive a notification to remind themselves to study if they haven't already for that day.</li>
+</ul>
+<h2 id="views">Views</h2>
+<p>Your application should have, at a minimum, five views.</p>
+<ul>
+<li>Deck List View (Default View)<ul>
+<li>displays the title of each Deck</li>
+<li>displays the number of cards in each deck</li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/20170919-151343.png" alt="Deck List View" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Deck List View</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>Individual Deck View<ul>
+<li>displays the title of the Deck</li>
+<li>displays the number of cards in the deck</li>
+<li>displays an option to start a quiz on this specific deck</li>
+<li>An option to add a new question to the deck</li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/20170919-153231.png" alt="Individual Deck View" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Individual Deck View</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>Quiz View<ul>
+<li>displays a card question</li>
+<li>an option to view the answer (flips the card)</li>
+<li>a "Correct" button</li>
+<li>an "Incorrect" button</li>
+<li>the number of cards left in the quiz</li>
+<li>Displays the percentage correct once the quiz is complete</li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/20170919-151227.png" alt="Quiz View" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Quiz View</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/20170919-151123.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>New Deck View<ul>
+<li>An option to enter in the title for the new deck</li>
+<li>An option to submit the new deck title</li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/20170919-151320.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>New Question View<ul>
+<li>An option to enter in the question</li>
+<li>An option to enter in the answer</li>
+<li>An option to submit the new question</li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/20170919-151259.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="data">Data</h2>
+<p>We'll use <code>AsyncStorage</code> to store our decks and flashcards. Redux is optional for this project.</p>
+<p>Using <code>AsyncStorage</code> you'll manage an object whose shape is similar to this:</p>
+<pre><code class="js language-js">{
+  React: {
+    title: 'React',
+    questions: [
+      {
+        question: 'What is React?',
+        answer: 'A library for managing user interfaces'
+      },
+      {
+        question: 'Where do you make Ajax requests in React?',
+        answer: 'The componentDidMount lifecycle event'
+      }
+    ]
+  },
+  JavaScript: {
+    title: 'JavaScript',
+    questions: [
+      {
+        question: 'What is a closure?',
+        answer: 'The combination of a function and the lexical environment within which that function was declared.'
+      }
+    ]
+  }
+}</code></pre>
+<p>Notice each deck creates a new key on the object. Each deck has a <code>title</code> and a <code>questions</code> key. <code>title</code> is the title for the specific deck and <code>questions</code> is an array of questions and answers for that deck. </p>
+<h2 id="tip">Tip</h2>
+<blockquote>
+  <p>To manage your <code>AsyncStorage</code> database, you'll want to create four different helper methods.</p>
+</blockquote>
+<blockquote>
+  <p><code>getDecks</code>: return all of the decks along with their titles, questions, and answers. <br><br />
+  <code>getDeck</code>: take in a single <code>id</code> argument and return the deck associated with that id. <br><br />
+  <code>saveDeckTitle</code>: take in a single <code>title</code> argument and add it to the decks. <br><br />
+  <code>addCardToDeck</code>: take in two arguments, <code>title</code> and <code>card</code>, and will add the card to the list of questions for the deck with the associated title. <br></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Project Instructions &amp; Rubric.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Project Details')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

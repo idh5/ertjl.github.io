@@ -1,0 +1,259 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:01.767
+Vamos nos divertir.
+
+00:00:01.833 --> 00:00:04.967
+Neste vídeo,
+quero adicionar animações
+
+00:00:05.033 --> 00:00:07.067
+a este texto específico.
+
+00:00:07.100 --> 00:00:11.667
+Quando este texto mudar,
+conforme mudarmos de direção,
+
+00:00:11.733 --> 00:00:16.367
+quero animar essa mudança
+com um efeito bounce no texto.
+
+00:00:16.433 --> 00:00:20.833
+Nós usaremos a biblioteca Animated,
+da React Native.
+
+00:00:20.900 --> 00:00:26.100
+A primeira coisa a fazer é adicionar
+um "bounceValue" a "state",
+
+00:00:26.133 --> 00:00:30.400
+que será uma nova instância
+do comando "Animated.Value()",
+
+00:00:30.467 --> 00:00:33.667
+com "V" maiúsculo,
+de valor 1.
+
+00:00:33.700 --> 00:00:35.900
+Então "bounceValue"
+vai começar de 1.
+
+00:00:35.933 --> 00:00:40.667
+Depois, o que faremos
+aqui embaixo...
+
+00:00:40.733 --> 00:00:43.000
+Vejamos dentro
+de "setLocation".
+
+00:00:43.067 --> 00:00:47.633
+Isto está estruturado assim
+porque o que quero fazer...
+
+00:00:47.700 --> 00:00:49.267
+É aqui que vamos determinar
+
+00:00:49.300 --> 00:00:52.367
+se a direção
+em que estamos indo mudou.
+
+00:00:52.400 --> 00:00:56.600
+Temos a direção velha
+e a direção nova.
+
+00:00:56.633 --> 00:01:01.633
+Se "newDirection" diferir
+da direção antiga,
+
+00:01:01.667 --> 00:01:05.933
+nós pegaremos o "bounceValue"
+
+00:01:06.000 --> 00:01:08.167
+e o animaremos um pouco.
+
+00:01:08.200 --> 00:01:10.767
+Para tanto,
+entraremos "Animated.sequence",
+
+00:01:10.833 --> 00:01:14.000
+ou seja, teremos
+uma sequência de animações,
+
+00:01:14.067 --> 00:01:17.067
+e passaremos um array.
+
+00:01:17.100 --> 00:01:21.767
+A primeira das animações que faremos
+será em função do tempo,
+
+00:01:21.833 --> 00:01:24.200
+usando o método Timing.
+
+00:01:24.267 --> 00:01:28.100
+O que temos de mudar
+é "bounceValue".
+
+00:01:28.133 --> 00:01:32.700
+Depois, queremos
+que leve 200 milissegundos...
+
+00:01:32.767 --> 00:01:37.033
+e queremos que transicione
+do valor inicial que definimos,
+
+00:01:37.100 --> 00:01:41.300
+que é 1, até 1,04.
+
+00:01:41.333 --> 00:01:44.600
+Parece pouco,
+mas você já vai ver.
+
+00:01:44.667 --> 00:01:47.467
+Feito isso, o que precisamos...
+
+00:01:47.500 --> 00:01:51.367
+é passar uma animação Spring
+
+00:01:51.400 --> 00:01:53.900
+no nosso "bounceValue".
+
+00:01:53.933 --> 00:01:58.400
+Desta vez, queremos voltar
+para o valor de 1
+
+00:01:58.433 --> 00:02:01.433
+com "friction" igual a 4.
+
+00:02:01.467 --> 00:02:05.367
+Nosso "bounceValue"
+começará em 1.
+
+00:02:05.400 --> 00:02:07.267
+Quando a localização mudar,
+
+00:02:07.333 --> 00:02:13.300
+nós partiremos de 1 e subiremos,
+em 200 milissegundos, até 1,04.
+
+00:02:13.367 --> 00:02:17.733
+Depois voltaremos a 1
+usando Spring.
+
+00:02:17.767 --> 00:02:19.800
+E, nunca se esqueça,
+
+00:02:19.833 --> 00:02:24.000
+para animações,
+precisamos chamar ".start()".
+
+00:02:24.033 --> 00:02:27.633
+Agora o que acontecerá é...
+
+00:02:27.667 --> 00:02:30.467
+"bounceValue" indefinido?
+
+00:02:30.533 --> 00:02:34.500
+É porque faltou adicionarmos
+"bounceValue" aqui.
+
+00:02:35.033 --> 00:02:37.133
+Não deveríamos ver nada ainda
+
+00:02:37.167 --> 00:02:40.200
+porque ainda não engatilhamos
+este "bounceValue"
+
+00:02:40.267 --> 00:02:42.067
+à nossa IU.
+
+00:02:42.100 --> 00:02:46.433
+O que podemos fazer é, aqui embaixo,
+dentro do componente "render",
+
+00:02:46.467 --> 00:02:49.300
+substituir...
+
+00:02:49.367 --> 00:02:52.533
+Onde está? Aqui.
+
+00:02:52.600 --> 00:02:56.400
+Transformaremos
+os componentes "Text"
+
+00:02:56.467 --> 00:03:01.133
+em componentes
+"Animated.Text".
+
+00:03:01.200 --> 00:03:03.900
+Vamos abaixar aqui...
+
+00:03:03.967 --> 00:03:09.000
+E, agora,
+queremos manter o estilo prévio,
+
+00:03:09.067 --> 00:03:11.067
+que era "styles.direction",
+
+00:03:11.100 --> 00:03:14.633
+mas adicionando
+um "transform".
+
+00:03:14.667 --> 00:03:18.033
+Ficará mais ou menos assim.
+Adicionaremos "transform"...
+
+00:03:18.100 --> 00:03:20.033
+passaremos um array
+
+00:03:20.100 --> 00:03:23.833
+e definiremos
+"scale: bounceValue".
+
+00:03:23.867 --> 00:03:26.867
+Agora, conforme
+"bounceValue" mudar,
+
+00:03:26.900 --> 00:03:32.700
+transformaremos
+o tamanho do texto.
+
+00:03:32.767 --> 00:03:36.400
+Parece estar tudo certo.
+Acho que é isso.
+
+00:03:36.433 --> 00:03:39.433
+Vamos subir rapidinho
+
+00:03:39.500 --> 00:03:42.833
+e pegar "bounceValue"
+de "this.state".
+
+00:03:42.867 --> 00:03:46.700
+Acho que é isso.
+Vamos testar.
+
+00:03:46.767 --> 00:03:49.367
+Perceba que, na mesma hora,
+
+00:03:49.400 --> 00:03:52.367
+mudou de "West" para "North West"
+e aconteceu a animação.
+
+00:03:52.433 --> 00:03:53.867
+Vamos esperar
+uns segundinhos
+
+00:03:53.933 --> 00:03:56.567
+para que outra mudança de direção
+seja acusada.
+
+00:03:56.600 --> 00:04:00.367
+Estamos na rodovia
+a 75 milhas por hora.
+
+00:04:01.267 --> 00:04:06.367
+Prontinho. Voltamos para "West"
+e pudemos notar uma animação sutil.
+

@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.965
+All right, let's do some more fun stuff.
+
+00:00:01.965 --> 00:00:07.250
+So what I want to do in this video is I want to add some animations to the specific text.
+
+00:00:07.250 --> 00:00:11.780
+So whenever this text or whichever direction we are heading changes,
+
+00:00:11.779 --> 00:00:16.574
+I want to go ahead and animate that change and kind of bounce the text a little bit.
+
+00:00:16.574 --> 00:00:20.899
+So what we'll do is we're going to use react-native's animated library.
+
+00:00:20.899 --> 00:00:23.375
+The very first thing we're going to do is add
+
+00:00:23.375 --> 00:00:27.259
+a bounce value to our state which is going to be
+
+00:00:27.260 --> 00:00:33.880
+a new instance of calling animated.value with a capital v and passing in once.
+
+00:00:33.880 --> 00:00:35.945
+The bounceValue is going to start at one.
+
+00:00:35.945 --> 00:00:40.890
+And then what we're going to do is down here.
+
+00:00:40.890 --> 00:00:43.285
+Let's see inside of set location.
+
+00:00:43.284 --> 00:00:47.839
+The reason we set it up like this is because what I want to do here is,
+
+00:00:47.840 --> 00:00:51.320
+and this is where we're going to determine if the specific direction we're heading has
+
+00:00:51.320 --> 00:00:56.750
+changed because we have the old direction and then we also have the new direction.
+
+00:00:56.750 --> 00:01:01.619
+So what we can say, is we can say if new direction does not equal the old direction,
+
+00:01:01.619 --> 00:01:04.250
+then what we want to do is we want to
+
+00:01:04.250 --> 00:01:08.310
+take our bounceValue and we want to animate it a little bit.
+
+00:01:08.310 --> 00:01:11.030
+So what we can do is we can say Animated.sequence
+
+00:01:11.030 --> 00:01:14.155
+meaning we're going to have a sequence of animations.
+
+00:01:14.155 --> 00:01:17.355
+We're going to pass in an array.
+
+00:01:17.355 --> 00:01:21.825
+The very first animation we're going to do is it's going to be timed,
+
+00:01:21.825 --> 00:01:24.799
+so using Animated.timing what we
+
+00:01:24.799 --> 00:01:28.244
+want to animate or what we want to change is the bounceValue.
+
+00:01:28.245 --> 00:01:32.660
+And then we want this to take 200 milliseconds,
+
+00:01:32.659 --> 00:01:41.500
+and we want to go from an initial value that we set at 1 to 1.04.
+
+00:01:41.500 --> 00:01:44.814
+So that sounds small but you'll see it in action here in a second.
+
+00:01:44.814 --> 00:01:48.980
+And then once that's complete what we want to do is we want
+
+00:01:48.980 --> 00:01:53.935
+to do a spring animation on our bounceValue again.
+
+00:01:53.935 --> 00:02:01.605
+And now what we want to do is go back to a value of one with a friction of four.
+
+00:02:01.605 --> 00:02:02.719
+So what's going to happen here,
+
+00:02:02.719 --> 00:02:05.359
+our bounceValue is going to start at one.
+
+00:02:05.359 --> 00:02:07.429
+When the location changes,
+
+00:02:07.430 --> 00:02:10.444
+we're going to take it from one, time it,
+
+00:02:10.444 --> 00:02:13.359
+taking 200 milliseconds up to 1.04,
+
+00:02:13.360 --> 00:02:17.870
+and then take it back down to one using a spring.
+
+00:02:17.870 --> 00:02:20.420
+And what you always need to remember is that
+
+00:02:20.419 --> 00:02:24.209
+with animations you need to call.start on them.
+
+00:02:24.210 --> 00:02:28.655
+So now what's going to happen right now is bounceValue
+
+00:02:28.655 --> 00:02:35.240
+is undefined that's because we need to come in here and say bounceValue.
+
+00:02:35.240 --> 00:02:38.300
+So we shouldn't see anything just yet because we haven't
+
+00:02:38.300 --> 00:02:42.260
+actually tied up this bounceValue to our UI.
+
+00:02:42.259 --> 00:02:45.679
+So what we can do is down here inside
+
+00:02:45.680 --> 00:02:49.280
+of our end of component where we're going to use this instead,
+
+00:02:49.280 --> 00:02:52.479
+where is that? Right here.
+
+00:02:52.479 --> 00:02:56.409
+Instead of having just text components what we can say
+
+00:02:56.409 --> 00:03:00.819
+is we want these to be Animated.Text components,
+
+00:03:00.819 --> 00:03:03.965
+we just want to bring this down.
+
+00:03:03.965 --> 00:03:07.150
+And then now what we want to do is we want it to
+
+00:03:07.150 --> 00:03:11.004
+have the style that it had which was styles that direction,
+
+00:03:11.004 --> 00:03:14.444
+but we also want to give it a transform.
+
+00:03:14.444 --> 00:03:18.094
+So the way that will look is something like this, we'll say transform,
+
+00:03:18.094 --> 00:03:24.030
+we'll pass it an array and we want it to scale with our bounceValue.
+
+00:03:24.030 --> 00:03:27.939
+So now as the bounceValue is changing that's going to
+
+00:03:27.939 --> 00:03:32.764
+scale and transform this specific text.
+
+00:03:32.764 --> 00:03:35.194
+So that looks pretty good to me,
+
+00:03:35.194 --> 00:03:36.599
+I think that is it.
+
+00:03:36.599 --> 00:03:43.060
+We need real quick up here to grab bounceValue off of this state.
+
+00:03:43.060 --> 00:03:46.805
+All right, it looks good. Let's go ahead and test this out.
+
+00:03:46.805 --> 00:03:48.110
+So I'm going to go here.
+
+00:03:48.110 --> 00:03:52.600
+So you'll notice right away it changed from west to northwest and we got that animation.
+
+00:03:52.599 --> 00:03:54.159
+Let's wait a few more seconds,
+
+00:03:54.159 --> 00:03:57.009
+hopefully we'll get another direction change here as
+
+00:03:57.009 --> 00:04:01.024
+we're on the freeway going 75 miles per hour.
+
+00:04:01.025 --> 00:04:03.810
+There we go. We went back to west and you'll notice
+
+00:04:03.810 --> 00:04:06.969
+we got the subtle little animation change there.
+

@@ -1,0 +1,503 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Step by Step Guide - Mobile Flashcards Project</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Mobile Flashcards</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Details.html">01. Project Details</a>
+    </li>
+    <li class="">
+      <a href="02. Project Instructions &amp; Rubric.html">02. Project Instructions &amp; Rubric</a>
+    </li>
+    <li class="">
+      <a href="03. Step by Step Guide - Mobile Flashcards Project.html">03. Step by Step Guide - Mobile Flashcards Project</a>
+    </li>
+    <li class="">
+      <a href="04. Step by Step Guide - ReactRedux Apps.html">04. Step by Step Guide - React/Redux Apps</a>
+    </li>
+    <li class="">
+      <a href="05. Step by Step Guide - React Apps.html">05. Step by Step Guide - React Apps</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Mobile Flashcards.html">Project Description - Mobile Flashcards</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Mobile Flashcards.html">Project Rubric - Mobile Flashcards</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Step by Step Guide - Mobile Flashcards Project</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-by-step-guide---mobile-flashcards"><em>Step by Step Guide - Mobile Flashcards</em></h1>
+<h2 id="planning-stage--📐">Planning Stage  📐</h2>
+<h3 id="step-1---draw-all-of-the-views-of-the-app">Step 1 - Draw All of the Views of the App</h3>
+<p>We need to determine the look and functionality of each view in your app. One of the best approaches is to draw each view of the app on paper so that you'll have a good idea of what information and data you're planning to have on each page.</p>
+<p>Instead of paper and pencil, you can be a bit more digital and use <a href="https://codingsans.com/blog/mockup-tools" rel="noopener noreferrer" target="_blank">software for creating mockups</a>. Check your mock against the project <a href="https://review.udacity.com/#!/rubrics/1021/view" rel="noopener noreferrer" target="_blank">rubric</a> to make sure that you have all of the required features. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="3adad035-97bb-47c4-931a-ae45dee51ac9--0">
+        <label for="3adad035-97bb-47c4-931a-ae45dee51ac9--0"><p>I drew all of the views required for this app.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Awesome! You now have a clear idea of what you're trying to build.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-2---break-each-view-into-a-hierarchy-of-components">Step 2 - Break Each View Into a Hierarchy of Components</h3>
+<p>For this step, do the following:</p>
+<ul>
+<li>draw boxes around every component; and</li>
+<li>arrange our components into a hierarchy</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="afc43a01-e96f-469d-bd6c-380b6af6a056--0">
+        <label for="afc43a01-e96f-469d-bd6c-380b6af6a056--0"><p>I broke each view into a hierarchy of components.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great job making your components reusable!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-3---plan-out-how-your-app-will-manage-data">Step 3 - Plan out How Your App Will Manage Data</h3>
+<p>Your project must make use of AsyncStorage to store your data. If are planning to use Redux (which we encourage you to do in order to get more practice with it), make sure to plan out which data will go into the store and which components (if any) will hold their own data. Please feel free to follow the <em>Step by Step Guide for React/Redux Apps</em>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="6ef80f9d-62c7-481a-a90d-23a9569cf832--0">
+        <label for="6ef80f9d-62c7-481a-a90d-23a9569cf832--0"><p>I have a clear idea of how each piece of data will be managed in my app.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great - this is critical to building predictable, well-structured apps!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="coding-stage🔨">Coding Stage🔨</h3>
+<h3 id="step-1---create-the-required-views">Step 1 - Create the Required Views.</h3>
+<p>For this step, don't style your components, and don't worry about putting any data or functionality in them; just make bare-bones components. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="0b31cff7-cb01-4474-a0a4-40841971b72e--0">
+        <label for="0b31cff7-cb01-4474-a0a4-40841971b72e--0"><p>I have built all of the required views for this app.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great job!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-2---use-react-native-navigation-to-connect-the-views">Step 2 - Use React Native Navigation to Connect the Views.</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="ed2467b4-ba92-4caa-b8bb-20cf5f4dc204--0">
+        <label for="ed2467b4-ba92-4caa-b8bb-20cf5f4dc204--0"><p>I am able to navigate between screens in accordance with the <a href="https://review.udacity.com/#!/rubrics/1021/view" rel="noopener noreferrer" target="_blank">rubric</a>.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>You've made a LOT of progress on your app so far. Keep up the good work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-3---work-on-the-views-and-state">Step 3 - Work on the Views and State.</h3>
+<p>Work on the views and state in accordance with the <em>Step by Step Guide for React Apps</em> or the <em>Step by Step Guide for React/Redux Apps</em>, depending on whether you choose to use Redux.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="c6db563d-70f8-41a5-bb8e-03453dfa7208--0">
+        <label for="c6db563d-70f8-41a5-bb8e-03453dfa7208--0"><p>I have tested my app and the app behaves as expected.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-4---add-asyncstorage">Step 4 - Add <code>AsyncStorage</code>.</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="91426019-1b06-42fd-92c9-e6afe72c70c5--0">
+        <label for="91426019-1b06-42fd-92c9-e6afe72c70c5--0"><p>I am using AsyncStorage to store and retrieve decks and flashcards.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Very good! You're close to finishing the project.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-5----add-notifications">Step 5  - Add notifications.</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="8c76b650-4c9a-4240-b28f-30991e4d7ce0--0">
+        <label for="8c76b650-4c9a-4240-b28f-30991e4d7ce0--0"><p>I have added Notifications to my app.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="8c76b650-4c9a-4240-b28f-30991e4d7ce0--1">
+        <label for="8c76b650-4c9a-4240-b28f-30991e4d7ce0--1"><p>A Notification is generated at a specific time if the user hasn't completed at least one quiz for that day.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great job!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-6---add-finishing-touches-and-make-sure-the-project-meets-the-rubrichttpsreviewudacitycomrubrics1021view">Step 6 - Add finishing touches and make sure the project meets the <a href="https://review.udacity.com/#!/rubrics/1021/view" rel="noopener noreferrer" target="_blank">rubric</a>.</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="d136afa9-aba1-4f24-ba38-99e8b759b41a--0">
+        <label for="d136afa9-aba1-4f24-ba38-99e8b759b41a--0"><p>I have thoroughly tested the app against the <a href="https://review.udacity.com/#!/rubrics/1021/view" rel="noopener noreferrer" target="_blank">rubric</a>.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d136afa9-aba1-4f24-ba38-99e8b759b41a--1">
+        <label for="d136afa9-aba1-4f24-ba38-99e8b759b41a--1"><p>The app works as expected.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great work - you're now ready to submit your project!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Step by Step Guide - ReactRedux Apps.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Step by Step Guide - Mobile Flashcards Project')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.500
+No tocante a funcionalidades,
+o aplicativo está pronto.
+
+00:00:03.533 --> 00:00:06.967
+Só há uma pequena mudança
+que quero fazer.
+
+00:00:07.000 --> 00:00:11.533
+É preciso ajustar umas configurações
+para que o seu aplicativo
+
+00:00:11.600 --> 00:00:12.900
+possa ser disponibilizado.
+
+00:00:12.967 --> 00:00:16.800
+Podemos ajustar
+no arquivo app.json.
+
+00:00:16.833 --> 00:00:21.500
+Podemos fazer coisas
+como definir a orientação.
+
+00:00:21.533 --> 00:00:24.700
+Digamos que só queiramos
+o modo retrato ativo,
+
+00:00:24.767 --> 00:00:27.733
+ou seja, que a tela não gire
+junto com o telefone.
+
+00:00:27.767 --> 00:00:29.100
+Podemos fazer isso aqui.
+
+00:00:29.133 --> 00:00:32.933
+Também podemos definir
+o nome do aplicativo,
+
+00:00:33.000 --> 00:00:35.867
+que chamaremos
+de UdaciFitness.
+
+00:00:35.900 --> 00:00:39.100
+Também podemos
+adicionar uma descrição:
+
+00:00:39.133 --> 00:00:42.900
+"O melhor registrador
+de triatlos."
+
+00:00:42.933 --> 00:00:46.433
+"Slug" é algo para o Expo,
+
+00:00:46.467 --> 00:00:50.067
+seu próprio URL customizado.
+
+00:00:50.133 --> 00:00:52.333
+Diremos "UdaciFitness".
+
+00:00:52.367 --> 00:00:57.800
+Versão pode ser 1.0.
+Acho que está de bom tamanho.
+
+00:00:57.867 --> 00:01:02.633
+Podemos definir um ícone.
+Vou usar um ícone local
+
+00:01:02.667 --> 00:01:06.067
+hospedado no meu site.
+Você pode fazer o mesmo.
+
+00:01:06.100 --> 00:01:08.267
+Assim, quando o usuário
+baixar o app,
+
+00:01:08.333 --> 00:01:12.300
+o ícone que verá
+será este aqui.
+
+00:01:12.333 --> 00:01:17.267
+Outra coisa que podemos fazer
+é definir ou editar
+
+00:01:17.300 --> 00:01:21.900
+o ícone de notificação,
+que será a mesma imagem,
+
+00:01:21.967 --> 00:01:24.600
+mas um pouquinho menor.
+
+00:01:24.667 --> 00:01:25.933
+Ao fazer isso,
+
+00:01:26.000 --> 00:01:28.467
+você não verá mudança
+nos seus emuladores.
+
+00:01:28.500 --> 00:01:31.700
+É preciso compilar o aplicativo
+para ver a notificação mudar.
+
+00:01:31.733 --> 00:01:34.967
+Se não funcionar
+porque você não está compilando,
+
+00:01:35.000 --> 00:01:35.867
+não se preocupe.
+
+00:01:35.933 --> 00:01:38.333
+Deve funcionar
+quando mandar para a App Store.
+
+00:01:38.367 --> 00:01:40.967
+Ademais, só o que é preciso
+
+00:01:41.033 --> 00:01:44.000
+para preparar o aplicativo
+para a App Store
+
+00:01:44.067 --> 00:01:47.500
+é esta coisa aqui,
+"bundleIdentifier".
+
+00:01:47.567 --> 00:01:52.533
+É um mero identificador do seu app
+na App Store.
+
+00:01:52.600 --> 00:01:56.500
+Coloquemos
+"udacifitness.exp".
+
+00:01:56.533 --> 00:02:00.800
+E o Android
+também precisa de um,
+
+00:02:00.867 --> 00:02:03.333
+mas, no Android,
+chama-se "package".
+
+00:02:03.367 --> 00:02:06.433
+O nome será o mesmo.
+
+00:02:07.200 --> 00:02:10.467
+Enfim, após vários vídeos,
+chegamos ao fim.
+
+00:02:10.533 --> 00:02:12.933
+Aprendemos a compilar
+um aplicativo React Native,
+
+00:02:12.967 --> 00:02:18.267
+sobre roteamento,
+sobre funcionalidades do Native,
+
+00:02:18.300 --> 00:02:21.467
+e aprendemos até
+a preparar o aplicativo
+
+00:02:21.500 --> 00:02:23.800
+para a App Store.
+Espero que tenha gostado.
+

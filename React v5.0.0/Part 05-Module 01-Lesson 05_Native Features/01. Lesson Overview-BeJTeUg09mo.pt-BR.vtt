@@ -1,0 +1,33 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.801 --> 00:00:01.968
+Até agora,
+
+00:00:02.001 --> 00:00:04.334
+aprendemos tudo
+sobre o React Native.
+
+00:00:04.367 --> 00:00:08.801
+Mas o que ainda não fizemos
+foi tirar vantagem de API nativos.
+
+00:00:08.834 --> 00:00:11.567
+Nesta aula, faremos apenas isso.
+
+00:00:11.701 --> 00:00:14.834
+Veremos como animações funcionam
+no React Native,
+
+00:00:14.968 --> 00:00:17.234
+depois vamos nos concentrar
+em geolocalização,
+
+00:00:17.267 --> 00:00:19.734
+notificações, câmera
+
+00:00:19.767 --> 00:00:23.234
+e em preparar os seus aplicativos
+para as app stores do iOS e Android.
+

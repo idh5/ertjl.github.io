@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.759
+Now, what would a native course be without
+
+00:00:02.759 --> 00:00:05.434
+playing around with the camera and the camera roll?
+
+00:00:05.434 --> 00:00:09.224
+Even though we won't be using this API in the Udacity Fitness Project,
+
+00:00:09.224 --> 00:00:11.039
+it's still important to go over.
+
+00:00:11.039 --> 00:00:15.000
+To do that, we'll be using Expo's ImagePicker method.
+

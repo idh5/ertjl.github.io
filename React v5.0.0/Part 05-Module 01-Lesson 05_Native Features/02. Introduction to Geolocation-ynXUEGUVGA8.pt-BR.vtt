@@ -1,0 +1,36 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.801
+Seria bom adicionar
+ao nosso aplicativo
+
+00:00:02.834 --> 00:00:05.767
+uma forma de o usuário
+acompanhar a velocidade,
+
+00:00:05.801 --> 00:00:07.801
+a elevação
+e a direção atuais.
+
+00:00:08.200 --> 00:00:10.367
+Para tal,
+precisamos incorporar
+
+00:00:10.400 --> 00:00:13.334
+a informação de geolocalização
+dos dispositivos.
+
+00:00:13.501 --> 00:00:17.634
+Felizmente, o Expo nos dá
+uma API de localização
+
+00:00:17.667 --> 00:00:20.567
+com o método
+getCurrentPositionAsync
+
+00:00:20.601 --> 00:00:23.801
+para conseguirmos exatamente
+a informação de que precisamos.
+

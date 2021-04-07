@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.000
+So what I want to do in this video is style and add
+
+00:00:04.000 --> 00:00:08.000
+some UI to this undetermined section right here.
+
+00:00:08.000 --> 00:00:12.219
+So what we'll do is let's just set the status to undetermined that we can see this,
+
+00:00:12.220 --> 00:00:16.609
+and then I'm going to import a few things.
+
+00:00:16.609 --> 00:00:18.550
+Let's get TouchableOpacity in here,
+
+00:00:18.550 --> 00:00:20.560
+as well as StyleSheets.
+
+00:00:20.559 --> 00:00:26.125
+We're also going to import foundation from our expo icons.
+
+00:00:26.125 --> 00:00:29.362
+And then finally, let's go and get some colors.
+
+00:00:29.361 --> 00:00:32.699
+We'll get purple, as well as whites. All right.
+
+00:00:32.700 --> 00:00:35.859
+So what I'm going to do is just paste in some styles here
+
+00:00:35.859 --> 00:00:39.530
+because you've seen me do enough styles in this course.
+
+00:00:39.530 --> 00:00:41.829
+So we have a container, a center which is just
+
+00:00:41.829 --> 00:00:44.939
+centering everything horizontally and vertically.
+
+00:00:44.939 --> 00:00:46.044
+A button, which is purple,
+
+00:00:46.045 --> 00:00:48.524
+looks nice, as well as some button text.
+
+00:00:48.524 --> 00:00:51.295
+So what we're going to do now is inside of undetermined,
+
+00:00:51.295 --> 00:00:53.789
+instead of just saying undetermined,
+
+00:00:53.789 --> 00:00:56.582
+what we can do is,
+
+00:00:56.582 --> 00:01:02.237
+let's add styles.center, so we want to center this both horizontally and vertically.
+
+00:01:02.237 --> 00:01:04.609
+And then, we will have the foundation icon.
+
+00:01:04.609 --> 00:01:07.269
+Name is going to be alert,
+
+00:01:07.269 --> 00:01:08.979
+because we're going to say,
+
+00:01:08.980 --> 00:01:11.700
+why did you deny us?
+
+00:01:11.700 --> 00:01:15.805
+You should have accepted us so that we can show you this cool UI.
+
+00:01:15.805 --> 00:01:20.200
+So what we'll do now is we will do just that and we will say you
+
+00:01:20.200 --> 00:01:25.165
+need to enable location services for this app.
+
+00:01:25.165 --> 00:01:30.430
+And then here, what we will do is we will have our button, onPress.
+
+00:01:30.430 --> 00:01:32.980
+We will create a method called,
+
+00:01:32.980 --> 00:01:35.215
+askPermission, which will do just that.
+
+00:01:35.215 --> 00:01:37.795
+Style is going to be styles.button.
+
+00:01:37.795 --> 00:01:40.030
+And then inside of this,
+
+00:01:40.030 --> 00:01:43.040
+we can say, enable.
+
+00:01:43.040 --> 00:01:46.835
+And we want to style this with the styles.button text,
+
+00:01:46.834 --> 00:01:49.479
+which we created earlier. This looks good.
+
+00:01:49.480 --> 00:01:54.875
+Let's go ahead and create just a placeholder for askPermission right now.
+
+00:01:54.875 --> 00:01:58.629
+And now, what should happen is if everything is good,
+
+00:01:58.629 --> 00:02:02.405
+when we click on live we get this UI here.
+
+00:02:02.405 --> 00:02:07.495
+So this is the UI again for if the status is undetermined,
+
+00:02:07.495 --> 00:02:09.189
+we're going to go ahead and say, hey,
+
+00:02:09.189 --> 00:02:13.324
+you need to enable location services for this application.
+
+00:02:13.324 --> 00:02:16.375
+Click here, and eventually what that should do is open up a dialog saying,
+
+00:02:16.375 --> 00:02:20.430
+hey, go ahead and get this app permission to track your location.
+
