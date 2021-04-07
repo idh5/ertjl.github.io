@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.299
+We have the entire state of the application in the state tree.
+
+00:00:03.299 --> 00:00:07.379
+We also know about every action that can change the application state.
+
+00:00:07.379 --> 00:00:10.289
+So we have these two distinct pieces of data,
+
+00:00:10.289 --> 00:00:12.254
+but we need something to tie them together.
+
+00:00:12.255 --> 00:00:17.130
+Meaning, we need a way to update our state based on the current action which occurred.
+
+00:00:17.129 --> 00:00:20.108
+But, what if we just used a function to do this?
+
+00:00:20.109 --> 00:00:22.589
+We could have that function taking two arguments,
+
+00:00:22.588 --> 00:00:25.515
+the current state, and the action which occurred.
+
+00:00:25.515 --> 00:00:28.188
+Then, based off of that action,
+
+00:00:28.187 --> 00:00:31.829
+this function would be responsible for returning the new updated
+
+00:00:31.829 --> 00:00:34.369
+state.That sounds pretty good but
+
+00:00:34.369 --> 00:00:37.339
+we can't forget that the whole goal here is predictability.
+
+00:00:37.340 --> 00:00:40.580
+This function has to be as predictable as possible.
+
+00:00:40.579 --> 00:00:42.765
+But, what does that actually mean?
+
+00:00:42.765 --> 00:00:45.184
+We should be able to know what the return value will
+
+00:00:45.185 --> 00:00:48.365
+be of the function based on the input values.
+
+00:00:48.365 --> 00:00:51.260
+Now this sounds complicated but it turns out that
+
+00:00:51.259 --> 00:00:53.554
+the functional programming community has
+
+00:00:53.554 --> 00:00:56.299
+already solved this problem and they've given it a name.
+
+00:00:56.299 --> 00:00:58.250
+It's called pure functions.
+
+00:00:58.250 --> 00:01:01.850
+This brings us to rule number two for increasing predictability.
+
+00:01:01.850 --> 00:01:06.200
+The function that returns the new state needs to be a pure function.
+
+00:01:06.200 --> 00:01:10.760
+Let's take a look at what pure functions are and how they maximize predictability.
+

@@ -1,0 +1,122 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.310 --> 00:00:04.197
+Quero que visualize a arquitetura
+de um aplicativo recente seu.
+
+00:00:04.239 --> 00:00:07.237
+Agora visualize o estado
+desse aplicativo.
+
+00:00:07.279 --> 00:00:08.850
+Onde ele reside?
+
+00:00:08.892 --> 00:00:12.060
+Aposto que ele está distribuído
+por todo o aplicativo.
+
+00:00:12.102 --> 00:00:16.268
+Isso não é necessariamente ruim,
+mas quero propor outra abordagem.
+
+00:00:16.310 --> 00:00:20.445
+O objetivo deste curso
+é tornar o estado mais previsível.
+
+00:00:20.487 --> 00:00:25.156
+O que o tornaria mais previsível
+do que espalhá-lo pelo aplicativo?
+
+00:00:25.198 --> 00:00:27.444
+E se estivesse tudo
+em um único lugar?
+
+00:00:27.486 --> 00:00:31.157
+E se todo estado de um aplicativo
+estivesse em um único lugar?
+
+00:00:31.199 --> 00:00:33.885
+Quais benefícios
+isso traria?
+
+00:00:33.927 --> 00:00:36.324
+Isso facilitaria
+compartilhar o estado
+
+00:00:36.366 --> 00:00:38.727
+para diferentes partes
+do aplicativo.
+
+00:00:38.769 --> 00:00:41.990
+Tipicamente, quando duas partes
+dependem do mesmo dado,
+
+00:00:42.032 --> 00:00:44.452
+se cada uma tiver uma cópia
+do dado,
+
+00:00:44.494 --> 00:00:48.040
+precisaremos fazer um malabarismo
+para mantê-los em sincronia.
+
+00:00:48.082 --> 00:00:51.351
+Este é um problema pelo qual
+quase todo mundo já passou:
+
+00:00:51.393 --> 00:00:54.503
+você altera o avatar no perfil,
+faz uma nova postagem
+
+00:00:54.545 --> 00:00:58.430
+e percebe que o avatar antigo
+foi utilizado na postagem.
+
+00:00:58.472 --> 00:01:00.791
+Se o estado estivesse
+em um único local,
+
+00:01:00.833 --> 00:01:02.865
+evitaríamos esse problema
+por completo,
+
+00:01:02.907 --> 00:01:05.330
+pois cada seção do aplicativo
+que precisar dele
+
+00:01:05.372 --> 00:01:07.584
+obteria a referência do dado
+do mesmo local
+
+00:01:07.626 --> 00:01:09.399
+em vez de duplicá-lo.
+
+00:01:09.441 --> 00:01:12.839
+Outro benefício,
+e o que mais nos importa,
+
+00:01:12.881 --> 00:01:15.200
+é ter alterações de estado
+mais previsíveis.
+
+00:01:15.242 --> 00:01:17.284
+Se todo estado
+estiver em um local,
+
+00:01:17.326 --> 00:01:20.083
+podemos estabelecer regras
+de atualização do estado
+
+00:01:20.125 --> 00:01:22.187
+tornando o estado
+mais previsível.
+
+00:01:22.229 --> 00:01:26.620
+Vamos dar um nome a este conceito
+de colocar o estado em um só lugar.
+
+00:01:26.662 --> 00:01:28.639
+Vamos chamá-lo
+de "árvore de estado".
+

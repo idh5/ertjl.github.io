@@ -1,0 +1,152 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.602
+Quero fazer
+uma última mudança aqui.
+
+00:00:02.635 --> 00:00:05.605
+Você pode pensar
+na função createStore
+
+00:00:05.638 --> 00:00:07.173
+como um código
+de biblioteca, certo?
+
+00:00:07.207 --> 00:00:10.877
+Isto é parte da biblioteca
+de gerenciamento de estado
+
+00:00:10.910 --> 00:00:14.614
+que estamos escrevendo,
+então nós vamos copiá-la.
+
+00:00:14.647 --> 00:00:18.118
+É um código de biblioteca,
+e vou colá-lo aqui.
+
+00:00:18.151 --> 00:00:20.253
+Você pode pensar
+na função reducer
+
+00:00:20.286 --> 00:00:21.621
+como código de aplicativo.
+
+00:00:21.654 --> 00:00:24.124
+Este é o código
+que o usuário pode escrever
+
+00:00:24.157 --> 00:00:27.460
+para decidir como o estado muda
+com base na ação.
+
+00:00:27.494 --> 00:00:30.897
+Mas tudo isto dentro
+da função createStore
+
+00:00:30.930 --> 00:00:35.101
+se parece mais com uma biblioteca
+que você baixaria da MPM.
+
+00:00:35.135 --> 00:00:40.306
+Não faz sentido
+esta linha funcionar,
+
+00:00:40.340 --> 00:00:42.542
+porque estamos presumindo
+
+00:00:42.575 --> 00:00:48.014
+que a todos será acessível
+dentro da createStore,
+
+00:00:48.048 --> 00:00:50.083
+porque ela vive
+no mesmo escopo
+
+00:00:50.116 --> 00:00:51.918
+em que a função todos
+atualmente está.
+
+00:00:51.951 --> 00:00:53.586
+E, no momento,
+a suposição está correta
+
+00:00:53.620 --> 00:00:55.021
+porque tudo é um só arquivo.
+
+00:00:55.055 --> 00:00:58.224
+Mas pense nisto
+como um código de biblioteca,
+
+00:00:58.258 --> 00:01:01.494
+como um código
+que você pode baixar da MPM.
+
+00:01:01.528 --> 00:01:05.198
+Não faz sentido acessar
+a todos dentro dele.
+
+00:01:05.231 --> 00:01:07.467
+O que podemos fazer é,
+
+00:01:07.500 --> 00:01:10.837
+ao usar a createStore,
+
+00:01:10.870 --> 00:01:16.109
+permitir que o usuário passe
+a função reducer específica,
+
+00:01:16.142 --> 00:01:18.445
+que vai decidir
+como o estado deveria mudar
+
+00:01:18.478 --> 00:01:20.647
+com base na ação específica
+que ocorreu.
+
+00:01:20.680 --> 00:01:23.583
+O que significa que queremos
+que elas façam algo assim.
+
+00:01:23.616 --> 00:01:25.418
+Então quando eles usam
+a createStore,
+
+00:01:25.452 --> 00:01:28.855
+eles passam
+a função todos reducer.
+
+00:01:28.888 --> 00:01:34.260
+E agora, em vez de usar a todos
+dentro da createStore,
+
+00:01:34.294 --> 00:01:38.164
+a createStore receberia
+uma função reducer.
+
+00:01:38.198 --> 00:01:41.101
+Agora a função reducer
+será chamada,
+
+00:01:41.134 --> 00:01:45.839
+em vez de só depender da todos
+estar exatamente no mesmo escopo.
+
+00:01:45.872 --> 00:01:47.774
+Então vou deletar isto.
+
+00:01:47.807 --> 00:01:50.510
+Agora temos a função reducer,
+
+00:01:50.543 --> 00:01:53.113
+assim como getState,
+subscribe e dispatch.
+
+00:01:53.146 --> 00:01:54.280
+No próximo vídeo,
+
+00:01:54.314 --> 00:01:58.251
+veremos como isso tudo funciona
+em ação.
+

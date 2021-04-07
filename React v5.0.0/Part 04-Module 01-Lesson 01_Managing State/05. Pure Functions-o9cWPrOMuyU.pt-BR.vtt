@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.295 --> 00:00:03.627
+As funções puras são definidas
+por três características:
+
+00:00:03.669 --> 00:00:06.167
+primeiro, elas sempre retornam
+o mesmo resultado
+
+00:00:06.209 --> 00:00:08.373
+quando os mesmos argumentos
+são passados.
+
+00:00:08.415 --> 00:00:11.454
+Mesmo chamando a função
+um milhão de vezes,
+
+00:00:11.496 --> 00:00:15.025
+ela retornará sempre
+o mesmo valor.
+
+00:00:15.067 --> 00:00:19.033
+Segundo, elas dependem somente
+do argumento que foi passado.
+
+00:00:19.075 --> 00:00:23.121
+Elas nunca acessam valores
+fora do próprio escopo.
+
+00:00:23.163 --> 00:00:26.287
+O valor retornado de uma função pura
+é determinado apenas
+
+00:00:26.329 --> 00:00:27.718
+pelos valores de input.
+
+00:00:27.760 --> 00:00:31.488
+Por fim, elas jamais produzirão
+efeitos colaterais.
+
+00:00:31.530 --> 00:00:35.542
+Elas não interagem
+com o mundo,
+
+00:00:35.584 --> 00:00:39.031
+não fazem solicitações de rede
+nem mudam o estado externo.
+
+00:00:39.073 --> 00:00:41.873
+Se uma função tiver
+esses três requisitos,
+
+00:00:41.915 --> 00:00:43.784
+então ela será
+uma função pura.
+
+00:00:43.826 --> 00:00:47.336
+Se não houver um deles,
+então ela será impura.
+
+00:00:47.378 --> 00:00:50.657
+Estamos tentando gerenciar
+o estado de forma previsível.
+
+00:00:50.699 --> 00:00:55.273
+As funções impuras não são ruins,
+mas não são previsíveis.
+
+00:00:55.315 --> 00:00:58.344
+Por outro lado,
+as funções puras são previsíveis,
+
+00:00:58.386 --> 00:01:00.906
+então precisamos
+que nossas funções sejam puras,
+
+00:01:00.948 --> 00:01:02.646
+para aumentar
+a previsibilidade.
+

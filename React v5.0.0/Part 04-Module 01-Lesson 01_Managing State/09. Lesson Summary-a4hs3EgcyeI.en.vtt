@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.254
+Well, that's it for less than one.
+
+00:00:02.254 --> 00:00:03.839
+At this point, you've already covered
+
+00:00:03.839 --> 00:00:06.500
+the most important parts of our state management library,
+
+00:00:06.500 --> 00:00:09.550
+the store, actions and reducers.
+
+00:00:09.550 --> 00:00:10.640
+In the next lesson,
+
+00:00:10.640 --> 00:00:13.440
+we'll take our app and add some UI to it so you can see
+
+00:00:13.439 --> 00:00:16.730
+how our library commands the state of a Javascript application.
+

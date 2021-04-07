@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+Now there's one last change I want to make here.
+
+00:00:02.669 --> 00:00:07.230
+You can think of our createStore function as library code, right?
+
+00:00:07.230 --> 00:00:08.730
+So, this is part of
+
+00:00:08.730 --> 00:00:11.250
+our state management library that we're
+
+00:00:11.250 --> 00:00:14.669
+writing so what I'm going to do is just copy that.
+
+00:00:14.669 --> 00:00:18.164
+This is library code and then I will just paste it right here.
+
+00:00:18.164 --> 00:00:21.660
+And you can think of our reducer function as app code.
+
+00:00:21.660 --> 00:00:24.344
+So this is code that the user might write to
+
+00:00:24.344 --> 00:00:27.509
+decide how the state should change based off of the action.
+
+00:00:27.510 --> 00:00:31.080
+But all of this inside of our createStore function is
+
+00:00:31.079 --> 00:00:35.159
+really something more closer to a library that you would download from MPM.
+
+00:00:35.159 --> 00:00:38.984
+So, it doesn't make sense for
+
+00:00:38.984 --> 00:00:43.560
+this line to work because what's happening is we are assuming that todos,
+
+00:00:43.560 --> 00:00:50.145
+is going to be accessible inside of createStore because it lives in the same scope.
+
+00:00:50.145 --> 00:00:52.020
+Currently that the todos function is.
+
+00:00:52.020 --> 00:00:55.080
+And right now that assumption is correct because everything is just one in file.
+
+00:00:55.079 --> 00:00:56.684
+But again, if this is,
+
+00:00:56.685 --> 00:00:58.260
+think of it as library code,
+
+00:00:58.259 --> 00:01:01.530
+think of it as code that you would download from MPM,
+
+00:01:01.530 --> 00:01:05.234
+it doesn't make sense for us to have access todos inside of it.
+
+00:01:05.234 --> 00:01:10.885
+So what we can do is when you invoke createStore,
+
+00:01:10.885 --> 00:01:14.570
+we want the user to be able to pass in
+
+00:01:14.569 --> 00:01:17.359
+the specific reducer function that's going to decide how
+
+00:01:17.359 --> 00:01:20.689
+the state should change based on the specific action that occurred.
+
+00:01:20.689 --> 00:01:23.644
+Meaning, we want them to be able to do something like this.
+
+00:01:23.644 --> 00:01:25.459
+So when they createStore,
+
+00:01:25.459 --> 00:01:28.894
+they pass in these specific todos reducer function,
+
+00:01:28.894 --> 00:01:34.304
+and then now instead of using todos inside of createStore,
+
+00:01:34.305 --> 00:01:38.200
+createStore would receive a reducer function,
+
+00:01:38.200 --> 00:01:41.560
+and then now that reducer function will be invoked rather
+
+00:01:41.560 --> 00:01:45.894
+than just relying on todos being in the exact same scope.
+
+00:01:45.894 --> 00:01:47.828
+So, I'm going to delete this.
+
+00:01:47.828 --> 00:01:50.559
+And now that we have our reducer function,
+
+00:01:50.560 --> 00:01:52.390
+as well as getState, subscribe,
+
+00:01:52.390 --> 00:01:54.280
+and dispatch, in the next video,
+
+00:01:54.280 --> 00:01:58.280
+we're actually going to see what all of this looks like in action.
+

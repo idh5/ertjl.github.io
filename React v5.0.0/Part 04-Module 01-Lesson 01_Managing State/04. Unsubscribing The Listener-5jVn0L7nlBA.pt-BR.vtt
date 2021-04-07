@@ -1,0 +1,74 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.179 --> 00:00:03.145
+Agora que possibilitamos
+que o usuário
+
+00:00:03.187 --> 00:00:07.402
+se inscreva para as mudanças,
+também queremos que ele possa
+
+00:00:07.444 --> 00:00:08.754
+cancelar essa inscrição.
+
+00:00:08.796 --> 00:00:12.202
+Por exemplo, se ele fez
+os dois subscribes
+
+00:00:12.244 --> 00:00:14.627
+e quer cancelar essa função,
+
+00:00:14.669 --> 00:00:17.068
+nós precisamos fornecer
+um meio para isso.
+
+00:00:17.110 --> 00:00:20.167
+Quando ele invocar
+o subscribe,
+
+00:00:20.209 --> 00:00:23.485
+nós retornaremos
+uma nova função,
+
+00:00:23.527 --> 00:00:25.678
+e, quando ele
+invocar a função,
+
+00:00:26.784 --> 00:00:31.465
+internamente,
+podemos chamar listeners.filter...
+
+00:00:34.654 --> 00:00:38.271
+e queremos filtrar
+a função listener original,
+
+00:00:38.313 --> 00:00:41.663
+que foi passada
+quando subscribe foi invocado.
+
+00:00:41.705 --> 00:00:45.906
+Agora,
+para cancelar o subscribe,
+
+00:00:46.569 --> 00:00:49.150
+o usuário precisará criar
+uma nova variável aqui.
+
+00:00:49.785 --> 00:00:52.162
+Quando invocar
+store.subscribe,
+
+00:00:53.746 --> 00:00:56.633
+essa será uma função
+que poderá ser invocada
+
+00:00:56.675 --> 00:01:01.152
+para cancelar a inscrição
+deste listener específico.
+
+00:01:01.194 --> 00:01:04.354
+Vou me livrar
+do código de exemplo.
+

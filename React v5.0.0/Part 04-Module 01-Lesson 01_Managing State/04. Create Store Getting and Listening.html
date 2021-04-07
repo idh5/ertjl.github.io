@@ -1,0 +1,595 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create Store: Getting and Listening</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Managing State</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Rating Your Career Confidence.html">01. Rating Your Career Confidence</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction.html">02. Introduction</a>
+    </li>
+    <li class="">
+      <a href="03. The Store.html">03. The Store</a>
+    </li>
+    <li class="">
+      <a href="04. Create Store Getting and Listening.html">04. Create Store: Getting and Listening</a>
+    </li>
+    <li class="">
+      <a href="05. Updating State.html">05. Updating State</a>
+    </li>
+    <li class="">
+      <a href="06. Putting it all together.html">06. Putting it all together</a>
+    </li>
+    <li class="">
+      <a href="07. Managing more State.html">07. Managing more State</a>
+    </li>
+    <li class="">
+      <a href="08. Better Practices.html">08. Better Practices</a>
+    </li>
+    <li class="">
+      <a href="09. Lesson Summary.html">09. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Create Store: Getting and Listening</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this section, we'll be building the store. If you remember from the previous section, the store has the following information:</p>
+<ul>
+<li>the state tree</li>
+<li>a way to get the state tree</li>
+<li>a way to listen and respond to the state changing</li>
+<li>a way to update the state</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/nd019-redux-l1-04-the-store.png" alt="The Store contains the state tree and provides ways to interact with the state tree." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The Store contains the state tree and provides ways to interact with the state tree.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>So this is what we're going to do in this lesson - we're going to actually <em>create</em> the store code ourselves, from scratch.</p>
+<p>In the following video, we'll start with a blank <code>index.js</code> file and create a factory function that creates <em>store</em> objects. Then we'll have the store keep track of the state, and we'll write the method to get the state from the store.</p>
+<p>Pop open your code editor, and let's get started!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Getting The State</p></h3>
+  <video controls>
+  <source src="04. Getting The State-YqmnAPNCxkQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Getting The State-YqmnAPNCxkQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Getting The State-YqmnAPNCxkQ.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/blob/getting-the-state/index.js" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this screencast, we started building out the <code>createStore</code> function. Currently, this factory function:</p>
+<ul>
+<li>takes in no arguments</li>
+<li>sets up a local (private) variable to hold the state</li>
+<li>sets up a <code>getState()</code> function</li>
+<li>returns an object that publicly exposes the <code>getState()</code> function</li>
+</ul>
+<p>Let's take a look at the <code>getState()</code> function</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: getState()</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Thinking about the code we just wrote, what does the <code>getState()</code> function do?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522090650605" name="571666" id="a1522090650605">
+        <label for="a1522090650605"><p>It modifies the existing state variable.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522090651794" name="571666" id="a1522090651794">
+        <label for="a1522090651794"><p>It logs who access the state variable.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522090652282" name="571666" id="a1522090652282">
+        <label for="a1522090652282"><p>It returns the existing state variable.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522090652841" name="571666" id="a1522090652841">
+        <label for="a1522090652841"><p>It formats the state object for easy parsing.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    It returns the existing state variable.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Our list of things we need to build for the store is shrinking:</p>
+<ul>
+<li><del>the state tree</del></li>
+<li><del>a way to get the state tree</del></li>
+<li>a way to listen and respond to the state changing</li>
+<li>a way to update the state</li>
+</ul>
+<p>Our next task on the list is to make a way to listen for changes to the state. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Listening To Changes</p></h3>
+  <video controls>
+  <source src="04. Listening To Changes-AWOuF_qoEh8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Listening To Changes-AWOuF_qoEh8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Listening To Changes-AWOuF_qoEh8.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Unsubscribing The Listener</p></h3>
+  <video controls>
+  <source src="04. Unsubscribing The Listener-5jVn0L7nlBA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Unsubscribing The Listener-5jVn0L7nlBA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Unsubscribing The Listener-5jVn0L7nlBA.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/blob/listening-to-changes/index.js" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Keep in mind that </p>
+<pre><code class="js language-js">const subscribe = (listener) =&gt; {
+    listeners.push(listener)
+    return () =&gt; {
+      listeners = listeners.filter((l) =&gt; l !== listener)
+    }
+  }</code></pre>
+<p>is equivalent to the following ES5: </p>
+<pre><code class="js language-js">var subscribe = function subscribe(listener) {
+  listeners.push(listener);
+  return function () {
+    listeners = listeners.filter(function (l) {
+      return l !== listener;
+    });
+  };
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>subscribe()</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following are true about <code>store.subscribe()</code>?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522094568825" name="571671" id="a1522094568825">
+      <label for="a1522094568825"><p>It is a function.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522094630415" name="571671" id="a1522094630415">
+      <label for="a1522094630415"><p>When called, it is passed a single function.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522094630956" name="571671" id="a1522094630956">
+      <label for="a1522094630956"><p>When called, it is passed multiple functions.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522094631469" name="571671" id="a1522094631469">
+      <label for="a1522094631469"><p>It modifies the internal state tree variable.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522094632035" name="571671" id="a1522094632035">
+      <label for="a1522094632035"><p>It invokes the function that was passed to it.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522094655856" name="571671" id="a1522094655856">
+      <label for="a1522094655856"><p>It returns an Array of listener functions.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522094656381" name="571671" id="a1522094656381">
+      <label for="a1522094656381"><p>It returns a function.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>It is a function.</li>
+      <li>When called, it is passed a single function.</li>
+      <li>It returns a function.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Updating The State</p></h3>
+  <video controls>
+  <source src="04. Updating The State--MtD_RCqKK4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Updating The State--MtD_RCqKK4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Updating The State--MtD_RCqKK4.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We've got our first rule!</p>
+<blockquote>
+  <p>Only an event can change the state of the store.</p>
+</blockquote>
+<p>Ok…well, without knowing what an "event" is, this rule is less than helpful :-\ Fear not, because we're going to look at what events are in this video:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Intro To Actions</p></h3>
+  <video controls>
+  <source src="04. Intro To Actions-4SSkRoVunbI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Intro To Actions-4SSkRoVunbI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Intro To Actions-4SSkRoVunbI.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>When an event takes place in a Redux application, we use a plain JavaScript object to keep track of what the specific event was. This object is called an <strong>Action</strong>. </p>
+<p>Let's take another look at an Action:</p>
+<pre><code class="js language-js">{
+  type: "ADD_PRODUCT_TO_CART"
+}</code></pre>
+<p>As you can see, an Action is clearly just a <strong>plain JavaScript object</strong>. What makes this plain JavaScript object special in Redux, is that <em>every Action must have a <code>type</code> property</em>. The purpose of the <code>type</code> property is to let our app (Redux) know <em>exactly</em> what event just took place. This Action tells us that a product was added to the cart. That's incredibly descriptive and quite helpful, isn't it?</p>
+<p>Now, since an Action is just a regular object, we can include extra data about the event that took place:</p>
+<pre><code class="js language-js">{
+  type: "ADD_PRODUCT_TO_CART",
+  productId: 17
+}</code></pre>
+<p>In this Action, we're including the <code>productId</code> field. Now we know exactly which product was added to the store! </p>
+<p>One more note to keep in mind as you build your Action objects: it's better practice to pass as little data as possible in each action. That is, prefer passing the index or ID of a product rather than the <em>entire product object</em> itself.</p>
+<p><strong>Action Creators</strong> are functions that create/return action objects. For example: </p>
+<pre><code class="js language-js">const addItem = item =&gt; ({
+  type: ADD_ITEM,
+  item
+});</code></pre>
+<p>or in ES5:</p>
+<pre><code class="js language-js">var addItem = function addItem(item) {
+  return {
+    type: ADD_ITEM,
+    item: item
+  };
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Type is Required</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Is it true that <em>every</em> Action must have a <code>type</code> property?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522094843674" name="571676" id="a1522094843674">
+        <label for="a1522094843674"><p>Yes</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522094848248" name="571676" id="a1522094848248">
+        <label for="a1522094848248"><p>No</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Yes
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Additional Fields</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Can an Action have three or more fields?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522094860569" name="571677" id="a1522094860569">
+        <label for="a1522094860569"><p>Yes</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522094862347" name="571677" id="a1522094862347">
+        <label for="a1522094862347"><p>No</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Yes
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="quiz-valid-action">Quiz: Valid Action?</h1>
+<p>Consider the following five options for the next quiz:</p>
+<pre><code class="js language-js">// A
+
+const receivePost = post =&gt; ({
+  type: RECEIVE_POST,
+  post
+});</code></pre>
+<pre><code class="js language-js">// B
+
+const receivePost = post =&gt; ({
+  type: RECEIVE_POST,
+  post: post
+}); </code></pre>
+<pre><code class="js language-js">// C
+
+const clearErrors = {
+  type: CLEAR_ERRORS
+};</code></pre>
+<pre><code class="js language-js">// D
+
+const addSeven = {
+  type: 'ADD_NUMBER',
+  number: 7
+};</code></pre>
+<pre><code class="js language-js">// E
+
+const removeComments = {
+  comments: null
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: Valid Action?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the above options are valid actions?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522094874191" name="571678" id="a1522094874191">
+      <label for="a1522094874191"><p>A</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522098091156" name="571678" id="a1522098091156">
+      <label for="a1522098091156"><p>B</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522098091733" name="571678" id="a1522098091733">
+      <label for="a1522098091733"><p>C</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522098092293" name="571678" id="a1522098092293">
+      <label for="a1522098092293"><p>D</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522098097325" name="571678" id="a1522098097325">
+      <label for="a1522098097325"><p>E</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>C</li>
+      <li>D</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>In this section, we started creating our store by building out a <code>createStore()</code> function. So far, this function keeps track of the state, and provides a method to get the state and one to keep track of listener functions that will be run whenever the state changes.</p>
+<p>In the next section, we'll add a method to handle updating the state.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Updating State.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Create Store: Getting and Listening')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

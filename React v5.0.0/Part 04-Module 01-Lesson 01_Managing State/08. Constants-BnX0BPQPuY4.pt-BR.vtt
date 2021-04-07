@@ -1,0 +1,256 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:01.166
+A esta altura,
+
+00:00:01.199 --> 00:00:04.371
+toda a parte do estado do aplicativo
+já foi finalizada.
+
+00:00:04.404 --> 00:00:05.805
+Agora podemos adicionar todos,
+
+00:00:05.839 --> 00:00:08.842
+remover todos, alternar todos,
+adicionar goals, remover goals.
+
+00:00:08.875 --> 00:00:10.744
+Tudo isto parece ótimo.
+
+00:00:10.777 --> 00:00:15.782
+Mas agora o que quero fazer são
+pequenas mudanças opinativas
+
+00:00:15.815 --> 00:00:17.217
+em como fazemos as coisas,
+
+00:00:17.250 --> 00:00:20.020
+que acho que vão melhorar
+a qualidade do nosso código.
+
+00:00:20.053 --> 00:00:23.056
+Uma coisa que você deve ter notado
+que estamos fazendo é,
+
+00:00:23.089 --> 00:00:25.392
+sempre que temos
+um tipo de ação aqui,
+
+00:00:25.425 --> 00:00:27.861
+esta ação ADD_TODO
+por exemplo,
+
+00:00:27.894 --> 00:00:30.764
+estamos usando a string
+ADD_TODO.
+
+00:00:30.797 --> 00:00:33.767
+Sempre fazemos
+isto quando fazemos a dispatch
+
+00:00:33.800 --> 00:00:36.302
+e também dentro
+da função reducer.
+
+00:00:36.336 --> 00:00:40.340
+As strings são legais
+e funcionam bem neste caso,
+
+00:00:40.373 --> 00:00:43.076
+mas acho que seria
+um pouco melhor
+
+00:00:43.109 --> 00:00:47.547
+em vez de ter uma string aqui,
+transformarmos isto numa variável.
+
+00:00:47.580 --> 00:00:51.484
+Porque agora as strings são
+propensas a erros de digitação.
+
+00:00:51.518 --> 00:00:56.956
+Se viermos aqui embaixo
+e digitarmos ADD_TOO, por exemplo.
+
+00:00:56.990 --> 00:00:58.858
+É um erro bem comum
+que você pode cometer.
+
+00:00:58.892 --> 00:01:01.161
+Repentinamente,
+não vai mais funcionar
+
+00:01:01.194 --> 00:01:03.897
+por causa
+desta pequena mudança aqui.
+
+00:01:03.930 --> 00:01:06.032
+E vai ser um bug difícil
+de encontrar
+
+00:01:06.066 --> 00:01:08.468
+porque você não vai receber
+nenhuma mensagem de erro,
+
+00:01:08.501 --> 00:01:11.738
+porque a dispatch será feita
+com a ADD_TOO.
+
+00:01:11.771 --> 00:01:17.744
+Mas em nenhum lugar das reducers,
+existe um caso para a ADD_TOO.
+
+00:01:17.777 --> 00:01:21.681
+O que vai acontecer é,
+embora ele vá ser disparado,
+
+00:01:21.715 --> 00:01:25.685
+por não estarmos fazendo
+o listening da ação ADD_TOO
+
+00:01:25.719 --> 00:01:30.390
+dentro das reducers,
+não vai acontecer nada.
+
+00:01:30.423 --> 00:01:36.396
+Então viremos aqui no topo
+do código do nosso aplicativo.
+
+00:01:36.429 --> 00:01:40.533
+E vamos converter todas as strings
+diferentes em variáveis.
+
+00:01:40.567 --> 00:01:42.635
+Em vez de referenciar strings
+em vários lugares,
+
+00:01:42.669 --> 00:01:44.871
+podemos referenciar
+uma só variável.
+
+00:01:44.904 --> 00:01:49.142
+Então vamos criar
+uma variável ADD_TODO,
+
+00:01:49.175 --> 00:01:52.545
+que vai ser igual
+à string ADD_TODO.
+
+00:01:52.579 --> 00:01:56.282
+Agora, em qualquer lugar
+do aplicativo,
+
+00:01:56.316 --> 00:01:58.418
+onde usarmos ADD_TODO,
+
+00:01:58.451 --> 00:02:02.655
+em vez de usar
+a string ADD_TODO,
+
+00:02:02.689 --> 00:02:04.891
+podemos usar
+a variável ADD_TODO.
+
+00:02:04.924 --> 00:02:06.459
+Podemos fazer isto
+
+00:02:06.493 --> 00:02:10.830
+para cada action type
+dentro do nosso aplicativo.
+
+00:02:10.864 --> 00:02:13.533
+Vamos usar a REMOVE_TODO
+aqui também.
+
+00:02:13.566 --> 00:02:17.437
+Vamos procurar os lugares
+onde usamos REMOVE_TODO.
+
+00:02:17.470 --> 00:02:20.774
+Acho que serão
+só estes dois lugares.
+
+00:02:20.807 --> 00:02:24.444
+Também queremos a TOGGLE_TODO.
+
+00:02:24.477 --> 00:02:26.846
+A esta altura,
+você já deve ter entendido.
+
+00:02:26.880 --> 00:02:32.218
+Vamos ajustar a TOGGLE_TODO
+para ser a nova variável.
+
+00:02:32.252 --> 00:02:37.857
+Vamos fazer
+o mesmo com a goals reducer.
+
+00:02:37.891 --> 00:02:41.895
+Acho que temos uma ação ADD_GOAL.
+Nós temos.
+
+00:02:41.928 --> 00:02:46.114
+A ADD_GOAL precisa ser convertida
+em uma...
+
+00:02:49.060 --> 00:02:50.737
+variável ADD_GOAL.
+
+00:02:50.770 --> 00:02:52.706
+E, por último,
+
+00:02:53.606 --> 00:02:56.585
+vamos pegar a REMOVE_GOAL
+
+00:02:57.929 --> 00:02:59.679
+que precisamos converter,
+
+00:02:59.713 --> 00:03:03.149
+para selecionar
+todas as REMOVE_GOAL.
+
+00:03:03.183 --> 00:03:08.555
+Nós removemos todas as strings
+que tínhamos.
+
+00:03:08.588 --> 00:03:09.923
+As transformamos em variáveis.
+
+00:03:09.956 --> 00:03:12.659
+Agora, em qualquer lugar
+do aplicativo,
+
+00:03:12.692 --> 00:03:15.829
+se nós quisermos comparar...
+
+00:03:15.862 --> 00:03:18.198
+se quisermos adicionar
+uma nova action type
+
+00:03:18.231 --> 00:03:19.332
+chamada TOGGLE_TODO,
+
+00:03:19.366 --> 00:03:21.634
+só precisamos referenciar
+a constante,
+
+00:03:21.668 --> 00:03:23.136
+referenciar a variável aqui,
+
+00:03:23.169 --> 00:03:26.072
+em vez de sempre digitar
+a string.
+
+00:03:26.106 --> 00:03:28.241
+É só uma pequena mudança,
+
+00:03:28.274 --> 00:03:31.678
+mas todas as pequenas mudanças
+que fizemos vão contribuir
+
+00:03:31.711 --> 00:03:35.048
+para deixar o aplicativo
+um pouco melhor.
+

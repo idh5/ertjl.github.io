@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.459
+Now that we've decided we're going to put all of
+
+00:00:02.459 --> 00:00:05.370
+our state into a single location called the state tree,
+
+00:00:05.370 --> 00:00:07.230
+the next thing we need to figure out,
+
+00:00:07.230 --> 00:00:09.450
+is how we'll actually interact with it.
+
+00:00:09.449 --> 00:00:13.394
+If we're actually going to build a real application with our state tree,
+
+00:00:13.394 --> 00:00:16.259
+there are three ways in which we'll need to interface with it.
+
+00:00:16.260 --> 00:00:19.530
+First, we'll need a way of getting the state.
+
+00:00:19.530 --> 00:00:23.820
+Second, we'll need a way to listen for when the state changes.
+
+00:00:23.820 --> 00:00:27.285
+And third, we'll need a way to update the state.
+
+00:00:27.285 --> 00:00:29.579
+Let's go ahead and wrap all of these things
+
+00:00:29.579 --> 00:00:32.460
+together into a single concept called the store.
+
+00:00:32.460 --> 00:00:34.515
+So, when we talk about the store,
+
+00:00:34.515 --> 00:00:39.049
+we're talking about the state tree as well as three ways in which we'll interact with it,
+
+00:00:39.049 --> 00:00:43.669
+getting the state, listening for updates to the state and updating the state.
+

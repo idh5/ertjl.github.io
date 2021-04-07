@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.205
+Now that we have some internal states,
+
+00:00:02.205 --> 00:00:05.445
+we have a way to get that state with our GetState method,
+
+00:00:05.445 --> 00:00:08.759
+we have a way to listen to changes on it with subscribe,
+
+00:00:08.759 --> 00:00:11.009
+and then we also have a function which takes
+
+00:00:11.009 --> 00:00:13.904
+in the current state and an action that occurred,
+
+00:00:13.904 --> 00:00:16.204
+and returns us the new state of our app,
+
+00:00:16.204 --> 00:00:18.464
+the only other thing we need to figure out,
+
+00:00:18.464 --> 00:00:21.960
+is how to actually update the state of our store.
+
+00:00:21.960 --> 00:00:24.390
+And the way in which we're going to do that,
+
+00:00:24.390 --> 00:00:30.105
+is with a new function here that we will call dispatch.
+
+00:00:30.105 --> 00:00:32.685
+So what dispatch is responsible for,
+
+00:00:32.685 --> 00:00:38.655
+is it's responsible for updating the state inside of our actual store,
+
+00:00:38.655 --> 00:00:41.895
+so in order to do that, what it needs to do,
+
+00:00:41.895 --> 00:00:45.420
+is it needs to receive the action which is going to tell
+
+00:00:45.420 --> 00:00:49.679
+dispatch the specific event that occurred inside of the application.
+
+00:00:49.679 --> 00:00:56.850
+And now, with access to the state and with access to the action that occurred,
+
+00:00:56.850 --> 00:01:02.265
+what dispatch can do in order to get the new state of the application,
+
+00:01:02.265 --> 00:01:09.754
+is it can call our todos function up here passing it the state and passing it an action.
+
+00:01:09.754 --> 00:01:13.069
+So what we'll do is, the state internally
+
+00:01:13.069 --> 00:01:16.339
+inside of our store is going to now be whatever gets
+
+00:01:16.340 --> 00:01:19.430
+returned from calling todos passing at
+
+00:01:19.430 --> 00:01:22.783
+the current state and passing it the action which occurred.
+
+00:01:22.783 --> 00:01:25.849
+And then now because we just modified the state,
+
+00:01:25.849 --> 00:01:27.979
+if you remember what we need to do as well,
+
+00:01:27.980 --> 00:01:30.155
+is we need to loop through all of our listeners,
+
+00:01:30.155 --> 00:01:32.614
+which is just going to be an array of functions,
+
+00:01:32.614 --> 00:01:34.729
+and invoke each one of them,
+
+00:01:34.730 --> 00:01:38.645
+so that any listener to the user setup will be invoked.
+
+00:01:38.644 --> 00:01:41.239
+So what we will do, is we'll say
+
+00:01:41.239 --> 00:01:48.789
+listeners.forEach and then for each listener inside of listeners,
+
+00:01:48.790 --> 00:01:51.470
+we will just go and we will invoke it.
+
+00:01:51.469 --> 00:01:56.409
+So, now whenever the user wants to update the state internally inside of our store,
+
+00:01:56.409 --> 00:01:59.530
+what they need to do is they need to invoke dispatch,
+
+00:01:59.530 --> 00:02:03.370
+passing it the specific action which occurred.
+

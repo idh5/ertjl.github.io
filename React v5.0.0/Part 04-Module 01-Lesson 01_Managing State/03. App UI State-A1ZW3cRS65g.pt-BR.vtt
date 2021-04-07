@@ -1,0 +1,69 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.546 --> 00:00:03.313
+Pense em qualquer aplicativo
+que você tenha feito.
+
+00:00:03.355 --> 00:00:07.589
+Provavelmente ele foi composto
+de duas coisas: da IU e do estado.
+
+00:00:07.631 --> 00:00:10.486
+Agora pense em qualquer erro
+que você tenha encontrado.
+
+00:00:10.528 --> 00:00:13.797
+Possivelmente ele foi causado
+pelo mau gerenciamento do estado.
+
+00:00:13.839 --> 00:00:16.593
+Seu aplicativo esperava
+que o estado fosse uma coisa,
+
+00:00:16.635 --> 00:00:18.457
+mas era outra.
+
+00:00:18.499 --> 00:00:21.306
+Quando seu computador trava
+e é preciso reiniciá-lo,
+
+00:00:21.348 --> 00:00:24.872
+isso é porque algum estado dele
+foi para um lugar estranho.
+
+00:00:24.914 --> 00:00:27.584
+Ao reiniciar,
+você reinicia o estado.
+
+00:00:27.626 --> 00:00:29.740
+Quando um site
+manda uma notificação
+
+00:00:29.782 --> 00:00:31.519
+mas não há nada novo
+ao clicar,
+
+00:00:31.561 --> 00:00:34.368
+é porque o estado do aplicativo
+foi mal gerenciado.
+
+00:00:34.410 --> 00:00:35.975
+Como já foi dito,
+
+00:00:36.017 --> 00:00:39.425
+o objeto do curso é tornar
+o gerenciamento do estado
+
+00:00:39.467 --> 00:00:40.849
+mais previsível.
+
+00:00:40.891 --> 00:00:44.259
+Uma das melhores formas de aprimorar
+a qualidade dos aplicativos
+
+00:00:44.301 --> 00:00:47.347
+é aumentando a previsibilidade
+do estado dele.
+

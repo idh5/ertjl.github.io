@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.930
+Before we add our next piece of functionality to create store,
+
+00:00:03.930 --> 00:00:06.630
+let's review the functionality has so far.
+
+00:00:06.629 --> 00:00:08.745
+First, it contains the state,
+
+00:00:08.744 --> 00:00:10.964
+next, it has a getState function,
+
+00:00:10.964 --> 00:00:13.560
+which just returns us the state, and finally,
+
+00:00:13.560 --> 00:00:15.075
+it has a subscribe function,
+
+00:00:15.074 --> 00:00:18.509
+which will let each of the listeners know whenever the state changes.
+
+00:00:18.510 --> 00:00:21.735
+If you remember back to when we first talked about our store,
+
+00:00:21.734 --> 00:00:23.099
+there were four parts.
+
+00:00:23.100 --> 00:00:25.455
+The state, getting the state,
+
+00:00:25.454 --> 00:00:27.375
+listening to changes on the state,
+
+00:00:27.375 --> 00:00:28.844
+and updating the state.
+
+00:00:28.844 --> 00:00:31.454
+As of right now, we have three of the four.
+
+00:00:31.454 --> 00:00:34.994
+So let's add in that fourth piece updating the state.
+
+00:00:34.994 --> 00:00:37.739
+Now remember, the whole goal here is to increase
+
+00:00:37.740 --> 00:00:40.484
+the predictability of the state in our application.
+
+00:00:40.484 --> 00:00:43.964
+We can't just allow anything or anyone to update the state.
+
+00:00:43.965 --> 00:00:47.550
+If we did, that would drastically decrease predictability.
+
+00:00:47.549 --> 00:00:49.649
+In fact, the only way in which we can
+
+00:00:49.649 --> 00:00:52.335
+increase predictability in terms of updating the state,
+
+00:00:52.335 --> 00:00:56.085
+is by establishing a strict set of rules for how updates can be made.
+
+00:00:56.085 --> 00:00:58.649
+Let's look at an NFL team for example.
+
+00:00:58.649 --> 00:01:01.740
+In order for a team to maximize their chances of winning,
+
+00:01:01.740 --> 00:01:03.950
+they always have to be on the same page.
+
+00:01:03.950 --> 00:01:06.685
+They need to operate as one cohesive unit.
+
+00:01:06.685 --> 00:01:11.275
+Every miscommunication can and will lead to negative consequences.
+
+00:01:11.275 --> 00:01:14.710
+So in a sense, NFL teams have the same goals that we do.
+
+00:01:14.709 --> 00:01:16.524
+Increasing predictability.
+
+00:01:16.525 --> 00:01:18.835
+But how do they go about accomplishing this?
+
+00:01:18.834 --> 00:01:20.529
+Well, they create a Playbook,
+
+00:01:20.530 --> 00:01:22.614
+and each player must know it by heart.
+
+00:01:22.614 --> 00:01:25.704
+This way, when the team runs a play from the playbook,
+
+00:01:25.704 --> 00:01:29.004
+players will know exactly what each member of the team will be doing.
+
+00:01:29.004 --> 00:01:30.924
+Maximizing predictability.
+
+00:01:30.924 --> 00:01:34.899
+Can we take the same idea and apply it to our applications?
+
+00:01:34.899 --> 00:01:37.420
+Well, we can, and it's so fundamental
+
+00:01:37.420 --> 00:01:40.445
+that we'll call it rule number one to increasing predictability.
+
+00:01:40.444 --> 00:01:43.334
+Just like NFL teams have a collection of place,
+
+00:01:43.334 --> 00:01:45.809
+we too can have a collection of events that can occur
+
+00:01:45.810 --> 00:01:48.890
+in our app which will change the state of our store.
+

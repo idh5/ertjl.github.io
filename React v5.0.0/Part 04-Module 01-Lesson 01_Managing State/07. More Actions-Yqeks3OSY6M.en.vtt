@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.490
+As of right now, we are able to add new TODO items to the internal state of
+
+00:00:05.490 --> 00:00:11.585
+our store by dispatching the ADD TODO action type and passing along a TODO item.
+
+00:00:11.585 --> 00:00:16.140
+But we also want to be able to remove TODO items as well as TOGGLE TODO items.
+
+00:00:16.140 --> 00:00:20.375
+So, let's come up to our reducer function and add in that functionality.
+
+00:00:20.375 --> 00:00:23.000
+So, if the action type is not ADD TODO,
+
+00:00:23.000 --> 00:00:26.984
+what we can say is else if,
+
+00:00:26.984 --> 00:00:30.730
+action dot type equals REMOVE TODO,
+
+00:00:30.730 --> 00:00:39.233
+and then we can add one more in here saying else if action dot type equals TOGGLE TODO,
+
+00:00:39.232 --> 00:00:41.484
+and then finally, we will just say
+
+00:00:41.484 --> 00:00:47.350
+else return state which will allow us to get rid of this line right here.
+
+00:00:47.350 --> 00:00:49.390
+So, now the question is how do we want to update
+
+00:00:49.390 --> 00:00:52.614
+the state based on the REMOVE TODO action?
+
+00:00:52.613 --> 00:00:59.579
+Well, what we'll do is we will use dot filter and we want to filter
+
+00:00:59.579 --> 00:01:07.189
+out the TODO that has an id which does not equal the id on the action.
+
+00:01:07.189 --> 00:01:14.609
+So, when we dispatch the REMOVE TODO action type we need to make sure that we pass along
+
+00:01:14.609 --> 00:01:17.939
+an ID which represents the id of the action or
+
+00:01:17.939 --> 00:01:22.814
+the id of the TODO item that we want to remove from our state.
+
+00:01:22.814 --> 00:01:27.504
+And now, the last piece of functionality we want to add is for TOGGLE TODO.
+
+00:01:27.504 --> 00:01:32.399
+And this one's a little bit tricky because what we want to do is we want
+
+00:01:32.400 --> 00:01:37.900
+to update the complete property on the TODO item from false to true.
+
+00:01:37.900 --> 00:01:42.040
+But remember, our TODO's reducer needs to be a pure function.
+
+00:01:42.040 --> 00:01:44.733
+So, we can't just modify complete directly.
+
+00:01:44.733 --> 00:01:49.859
+So, what we'll do is we can call state dot map.
+
+00:01:49.859 --> 00:01:53.590
+So, we're going to map over each TODO item in our state,
+
+00:01:54.019 --> 00:01:56.584
+and for each TODO item,
+
+00:01:56.584 --> 00:02:01.393
+we will say if todo dot id equals,
+
+00:02:01.394 --> 00:02:05.725
+does not equal action dot id then just return the todo item,
+
+00:02:05.724 --> 00:02:07.109
+don't do anything with it.
+
+00:02:07.109 --> 00:02:10.500
+But if it does equal action dot id,
+
+00:02:10.500 --> 00:02:16.637
+then what we want to do is invoke object dot assign,
+
+00:02:16.637 --> 00:02:19.164
+pass to it an empty object,
+
+00:02:19.164 --> 00:02:25.189
+then pass to it what we want to merge into this empty object which is our TODO objects,
+
+00:02:25.189 --> 00:02:28.250
+and then pass to it any updates we want to make to
+
+00:02:28.250 --> 00:02:31.270
+this merged object which we will say complete.
+
+00:02:31.270 --> 00:02:35.500
+We want to be the opposite of TODO dot complete.
+
+00:02:35.500 --> 00:02:40.150
+So again, what's happening here is when the TOGGLE TODO action is dispatched,
+
+00:02:40.150 --> 00:02:47.510
+we want to update the complete property on whatever id is passed along on the action.
+
+00:02:47.509 --> 00:02:50.389
+So, we will map over all of our TODO items,
+
+00:02:50.389 --> 00:02:54.349
+if the id matches the id on the action,
+
+00:02:54.349 --> 00:02:58.264
+if the id on the TODO does not match the id on the action,
+
+00:02:58.264 --> 00:03:01.159
+then we will just return that TODO we don't want to do anything with it.
+
+00:03:01.159 --> 00:03:02.405
+But if it does,
+
+00:03:02.405 --> 00:03:05.840
+then what we want to do is use object dot assign which is going to allow us
+
+00:03:05.840 --> 00:03:10.414
+to create a new object and merge different properties onto that object.
+
+00:03:10.414 --> 00:03:12.109
+So, we create this new object,
+
+00:03:12.110 --> 00:03:16.340
+we merge all of the properties on TODO onto that object except
+
+00:03:16.340 --> 00:03:21.564
+for complete which is just going to be the opposite of what complete currently is.
+
+00:03:21.564 --> 00:03:24.379
+So, now what we've done is we've added the functionality for
+
+00:03:24.379 --> 00:03:27.319
+dispatching REMOVE TODO action types, as well as,
+
+00:03:27.319 --> 00:03:31.009
+TOGGLE TODO action types and our TODOs reducer is still
+
+00:03:31.009 --> 00:03:35.099
+a pure function because we're not modifying any state inside of here,
+
+00:03:35.099 --> 00:03:38.180
+instead, we're using concat filter map,
+
+00:03:38.180 --> 00:03:41.150
+and a little bit of object dollar sign.
+
+00:03:41.150 --> 00:03:45.250
+And you'll notice what happened here is when we added in our new action types,
+
+00:03:45.250 --> 00:03:47.585
+our TODOs reducer got a little large
+
+00:03:47.585 --> 00:03:50.219
+because we are handling now more than just one action type.
+
+00:03:50.219 --> 00:03:54.935
+So, you don't have to do this but whenever I see an if statement like this,
+
+00:03:54.935 --> 00:03:56.860
+I break it out into what's called a switch statement.
+
+00:03:56.860 --> 00:03:59.195
+So, if you've used a switch statement before,
+
+00:03:59.194 --> 00:04:02.757
+you're going to be more familiar with what this code is doing.
+
+00:04:02.757 --> 00:04:07.949
+So, what we want to do is we will say switch on action dot type,
+
+00:04:07.949 --> 00:04:13.843
+and then the first case just as we have down here is going to be ADD TODO,
+
+00:04:13.842 --> 00:04:17.240
+and what we're going to do when
+
+00:04:17.240 --> 00:04:22.400
+the ADD TODO action is dispatched is just return state dot concat.
+
+00:04:22.399 --> 00:04:26.819
+The second case is going to be REMOVE TODO,
+
+00:04:26.819 --> 00:04:30.284
+and again what we want to do when we remove to action
+
+00:04:30.285 --> 00:04:34.510
+is dispatched is this line right here.
+
+00:04:34.509 --> 00:04:38.110
+The third case is going to
+
+00:04:38.110 --> 00:04:45.780
+be TOGGLE TODO and we will just copy this line right here,
+
+00:04:49.560 --> 00:04:58.185
+and then now the default case is going to be this line right here.
+
+00:04:58.185 --> 00:05:01.129
+So again, this is just a preference but I think it's a little bit cleaner.
+
+00:05:01.129 --> 00:05:05.219
+So, what we've done is we've now replaced our if, else if, else if,
+
+00:05:05.220 --> 00:05:09.520
+else, statement with this single switch statement.
+
+00:05:09.519 --> 00:05:12.579
+And it's essentially doing the exact same thing.
+

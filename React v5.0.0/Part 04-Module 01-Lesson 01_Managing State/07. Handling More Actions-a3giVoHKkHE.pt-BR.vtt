@@ -1,0 +1,26 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:03.638
+Até agora, nós só lidamos
+com a ação ADD_TODO.
+
+00:00:03.671 --> 00:00:04.771
+Isto é ótimo,
+
+00:00:04.804 --> 00:00:07.574
+mas queremos fazer mais
+que apenas ADD_TODO.
+
+00:00:07.607 --> 00:00:10.276
+Se lembra
+de todas as nossas ações,
+
+00:00:10.310 --> 00:00:13.813
+também queremos lidar
+com a REMOVE_TODO e a TOGGLE_TODO.
+
+00:00:13.847 --> 00:00:15.415
+Então vamos fazer isto agora.
+

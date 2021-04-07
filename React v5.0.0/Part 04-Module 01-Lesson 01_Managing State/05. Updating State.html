@@ -1,0 +1,560 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Updating State</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Managing State</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Rating Your Career Confidence.html">01. Rating Your Career Confidence</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction.html">02. Introduction</a>
+    </li>
+    <li class="">
+      <a href="03. The Store.html">03. The Store</a>
+    </li>
+    <li class="">
+      <a href="04. Create Store Getting and Listening.html">04. Create Store: Getting and Listening</a>
+    </li>
+    <li class="">
+      <a href="05. Updating State.html">05. Updating State</a>
+    </li>
+    <li class="">
+      <a href="06. Putting it all together.html">06. Putting it all together</a>
+    </li>
+    <li class="">
+      <a href="07. Managing more State.html">07. Managing more State</a>
+    </li>
+    <li class="">
+      <a href="08. Better Practices.html">08. Better Practices</a>
+    </li>
+    <li class="">
+      <a href="09. Lesson Summary.html">09. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Updating State</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's step back one more time and think about <em>what</em> Redux is all about. The whole goal of Redux is to increase predictability:</p>
+<blockquote>
+  <p>Redux is a predictable state container for JavaScript apps.</p>
+</blockquote>
+<p>With this in mind, let's see dig into how we can use actions and our state tree to predictably manage an application's state.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Predictable Functions</p></h3>
+  <video controls>
+  <source src="05. Predictable Functions-15sTwJsyWbU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Predictable Functions-15sTwJsyWbU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Predictable Functions-15sTwJsyWbU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>And we've got our second rule!</p>
+<blockquote>
+  <p>The function that returns the new state needs to be a pure function.</p>
+</blockquote>
+<p>So far, our rules are:</p>
+<ol>
+<li>Only an event can change the state of the store.</li>
+</ol>
+<ul>
+<li>The function that returns the new state needs to be a pure function.</li>
+</ul>
+<p>A <a href="https://en.wikipedia.org/wiki/Pure_function" rel="noopener noreferrer" target="_blank">pure function</a> can be a bit theoretical, so we'll take it step by step and explain why a pure function is so powerful and how it helps improve predictability.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Pure Functions</p></h3>
+  <video controls>
+  <source src="05. Pure Functions-o9cWPrOMuyU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Pure Functions-o9cWPrOMuyU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Pure Functions-o9cWPrOMuyU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="what-are-pure-functions">What are Pure Functions?</h2>
+<p><strong>Pure functions</strong> are integral to how state in Redux applications is updated. By definition, pure functions:</p>
+<ol>
+<li>Return the same result if the same arguments are passed in</li>
+</ol>
+<ul>
+<li>Depend solely on the arguments passed into them</li>
+<li>Do not produce side effects, such as API requests and I/O operations</li>
+</ul>
+<p>Let’s check out an example of a pure function, <code>square()</code>:</p>
+<pre><code class="js language-js">// `square()` is a pure function
+
+const square = x =&gt; x * x;</code></pre>
+<p><code>square()</code> is a pure function because it outputs the same value every single time, given that the same argument is passed into it. There is no dependence on any other values to produce that result, and we can safely expect <em>just</em> that result to be returned -- no side effects (more on this in a bit!).</p>
+<p>On the other hand, let’s check out an example of an <em>impure</em> function, <code>calculateTip()</code>:</p>
+<pre><code class="js language-js">// `calculateTip()` is an impure function
+
+const tipPercentage = 0.15;
+
+const calculateTip = cost =&gt; cost * tipPercentage;</code></pre>
+<p><code>calculateTip()</code> calculates and returns a number value. However, it relies on a variable (<code>tipPercentage</code>) that lives <em>outside</em> the function to produce that value. Since it fails one of the requirements of pure functions, <code>calculateTip()</code> is an impure function. However, we could convert this function to a pure function by passing in the outside variable, <code>tipPercentage</code>, as a second argument to this function!</p>
+<pre><code class="js language-js">const calculateTip = (cost, tipPercentage = 0.15) =&gt; cost * tipPercentage;</code></pre>
+<h3 id="why-pure-functions-are-great">Why Pure Functions Are Great</h3>
+<p>For our purposes, the most important feature of a pure function is that it's predictable. If we have a function that takes in our state and an action that occurred, the function should (if it's pure!) return the exact same result <em>every single time</em>. </p>
+<p>You're going to be sick of this by the end ;-) but this course (and Redux!) are all about predictability!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: Pure Functions facts</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about pure functions? Check all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522095078112" name="571686" id="a1522095078112">
+      <label for="a1522095078112"><p>Pure functions do not rely on information other than the arguments passed in to them to generate an output.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095080070" name="571686" id="a1522095080070">
+      <label for="a1522095080070"><p>Pure functions can produce different outputs even with the same arguments passed in each time.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095080871" name="571686" id="a1522095080871">
+      <label for="a1522095080871"><p>Pure functions do not depend on external state.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095081616" name="571686" id="a1522095081616">
+      <label for="a1522095081616"><p>Pure functions are expected to modify shared state.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095103310" name="571686" id="a1522095103310">
+      <label for="a1522095103310"><p>Pure functions should modify the original arguments passed in to them.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Pure functions do not rely on information other than the arguments passed in to them to generate an output.</li>
+      <li>Pure functions do not depend on external state.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: Is this Pure?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following are pure functions? Please check all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522095125054" name="571687" id="a1522095125054">
+      <label for="a1522095125054"><p>Math.random();</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095130653" name="571687" id="a1522095130653">
+      <label for="a1522095130653"><p>const add = (a, b) =&gt; (<br>&nbsp;&nbsp;&nbsp;&nbsp;a + b  <br>);</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095131245" name="571687" id="a1522095131245">
+      <label for="a1522095131245"><p>Date.now();</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095131797" name="571687" id="a1522095131797">
+      <label for="a1522095131797"><p>const addAndPrint = (a, b) =&gt; {<br>&nbsp;&nbsp;&nbsp;&nbsp;const sum = a + b;<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`The sum is: ${sum}`);<br>&nbsp;&nbsp;&nbsp;&nbsp;return sum;<br>};</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522095152603" name="571687" id="a1522095152603">
+      <label for="a1522095152603"><p>const double = array =&gt; {<br>&nbsp;&nbsp;&nbsp;&nbsp;let doubledArray = [];<br>&nbsp;&nbsp;&nbsp;&nbsp;array.forEach(n =&gt; doubledArray.push(n * 2));<br>&nbsp;&nbsp;&nbsp;&nbsp;return doubledArray;<br>};</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>const add = (a, b) => (<br>&nbsp;&nbsp;&nbsp;&nbsp;a + b  <br>);</li>
+      <li>const double = array => {<br>&nbsp;&nbsp;&nbsp;&nbsp;let doubledArray = [];<br>&nbsp;&nbsp;&nbsp;&nbsp;array.forEach(n => doubledArray.push(n * 2));<br>&nbsp;&nbsp;&nbsp;&nbsp;return doubledArray;<br>};</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The Reducer Function</p></h3>
+  <video controls>
+  <source src="05. The Reducer Function-QU_WvPaC6cM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. The Reducer Function-QU_WvPaC6cM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. The Reducer Function-QU_WvPaC6cM.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/blob/the-reducer-function/index.js" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>⚠️ Please, <em>do not use</em> default parameters in the following programming quiz. It will throw an error when evaluating the response and you'll not be able to get the correct answer.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#578116-StudentMain-js" class="nav-item nav-link  active show" id="tab-578116-StudentMain-js" data-toggle="tab" role="tab"
+      aria-controls="578116-StudentMain-js" aria-selected="true">StudentMain.js</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="578116-StudentMain-js" aria-labelledby="tab-578116-StudentMain-js" role="tabpanel">
+      <pre><code></code>/* Create A Reducer
+ *
+ * You need to create a reducer called &quot;appReducer&quot; that accepts two arguments:
+ * - First, an array containing information about ice cream 
+ * - Second, an object with a &#x27;DELETE_FLAVOR&#x27; &#x60;type&#x60; key
+ * (i.e., the object contains information to delete the flavor from the state)
+ *
+ * The action your reducer will receive will look like this:
+ * { type: &#x27;DELETE_FLAVOR&#x27;, flavor: &#x27;Vanilla&#x27; }
+ *
+ * And the initial state will look something like this (as such, refrain 
+ * from passing in default values for any parameters!):
+ * [{ flavor: &#x27;Chocolate&#x27;, count: 36 }, { flavor: &#x27;Vanilla&#x27;, count: 210 }];
+*/
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Dispatch</p></h3>
+  <video controls>
+  <source src="05. Dispatch-z5yJhTOxmMU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Dispatch-z5yJhTOxmMU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Dispatch-z5yJhTOxmMU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Create Store Dispatch</p></h3>
+  <video controls>
+  <source src="05. Create Store Dispatch-wIyRfRSpvDo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Create Store Dispatch-wIyRfRSpvDo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Create Store Dispatch-wIyRfRSpvDo.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match the following store methods with their role:</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>the state tree</p></button>
+  <button class="btn btn-primary"><p>.dispatch()</p></button>
+  <button class="btn btn-primary"><p>.getState()</p></button>
+  <button class="btn btn-primary"><p>.subscribe()</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Functionality</p>
+      </th>
+      <th>
+        <p>Store Method</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>gets the current state</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>takes in functions that will be called when the state changes</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>the application's state</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>modifies the state</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Functionality</p>
+        </th>
+        <th>
+          <p>Store Method</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>the application's state</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>the state tree</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>modifies the state</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>.dispatch()</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>gets the current state</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>.getState()</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>takes in functions that will be called when the state changes</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>.subscribe()</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Identifying The Library Code</p></h3>
+  <video controls>
+  <source src="05. Identifying The Library Code-P09BK4IXzmk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Identifying The Library Code-P09BK4IXzmk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Identifying The Library Code-P09BK4IXzmk.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/blob/create-store-dispatch/index.js" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The new <code>dispatch()</code> method is pretty small, but is vital to our functioning store code. To briefly recap how the method functions:</p>
+<ul>
+<li><code>dispatch()</code> is called with an Action</li>
+<li>the reducer that was passed to <code>createStore()</code> is called with the current state tree and the action…this updates the state tree</li>
+<li>because the state has (potentially) changed, all listener functions that have been registered with the <code>subscribe()</code> method are called</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>In this section, we learned about a number of important points about Redux. We learned about pure functions, a Reducer function (which, itself, needs to be a pure function), dispatching changes in our store, and identifying which parts of our code are generic library code and which are specific to our app.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Putting it all together.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Updating State')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

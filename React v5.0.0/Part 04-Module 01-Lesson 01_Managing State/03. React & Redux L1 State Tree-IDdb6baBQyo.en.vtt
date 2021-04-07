@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.035
+I want you to envision the architecture of an app you've worked on recently.
+
+00:00:04.035 --> 00:00:07.330
+Now envision all of the state of that application.
+
+00:00:07.330 --> 00:00:08.974
+Where did that state live?
+
+00:00:08.974 --> 00:00:12.144
+Odds are, it was sprinkled throughout the entire app.
+
+00:00:12.144 --> 00:00:14.129
+This isn't necessarily a bad thing,
+
+00:00:14.130 --> 00:00:16.350
+but I want to propose another approach.
+
+00:00:16.350 --> 00:00:20.705
+Remember, the goal of this course is learn how to make your state more predictable.
+
+00:00:20.704 --> 00:00:22.769
+What would make our state more predictable than
+
+00:00:22.769 --> 00:00:24.870
+having it sprinkled throughout our entire app.
+
+00:00:24.870 --> 00:00:27.380
+What if it was all in one place?
+
+00:00:27.379 --> 00:00:31.214
+All of our state for application in a single location.
+
+00:00:31.214 --> 00:00:33.825
+Now what hard benefits would that actually give us?
+
+00:00:33.825 --> 00:00:38.535
+Well, to start it would improve sharing state amongst different parts of our application.
+
+00:00:38.534 --> 00:00:41.954
+Typically, when two parts of your app rely on the same piece of data,
+
+00:00:41.954 --> 00:00:44.429
+if they each have their own copy of that data,
+
+00:00:44.429 --> 00:00:47.939
+you have to do a lot of tricky work to make sure that they stay in sync.
+
+00:00:47.939 --> 00:00:51.179
+This is a pain point almost all of us have probably felt at one point.
+
+00:00:51.179 --> 00:00:54.636
+You've changed your avatar under your profile then make a new post,
+
+00:00:54.636 --> 00:00:58.500
+only to find out that your old Avatar was used for that new post.
+
+00:00:58.500 --> 00:01:00.659
+If all of our state is in one location,
+
+00:01:00.659 --> 00:01:02.729
+you avoid this problem entirely,
+
+00:01:02.729 --> 00:01:05.189
+because each section of your app that needs it,
+
+00:01:05.189 --> 00:01:09.545
+will just reference the data from the one location rather than duplicating it.
+
+00:01:09.545 --> 00:01:12.060
+Another benefit and really the most important benefit we
+
+00:01:12.060 --> 00:01:15.109
+care about is more predictable state changes.
+
+00:01:15.109 --> 00:01:17.250
+If all of our state is in one location,
+
+00:01:17.250 --> 00:01:22.314
+we can set strict rules for how to update that state leading to a more predictable state.
+
+00:01:22.314 --> 00:01:26.530
+Now, let's give this concept of putting all of our state in a single location a name.
+
+00:01:26.530 --> 00:01:28.750
+Let's call it the state tree.
+

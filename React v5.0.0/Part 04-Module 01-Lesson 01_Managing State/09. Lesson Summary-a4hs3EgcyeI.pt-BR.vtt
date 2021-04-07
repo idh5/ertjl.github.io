@@ -1,0 +1,32 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.068
+Bem, fim da aula 1.
+
+00:00:02.102 --> 00:00:04.904
+A esta altura, você já viu
+as partes mais importantes
+
+00:00:04.938 --> 00:00:06.639
+da biblioteca
+de gerenciamento de estado:
+
+00:00:06.673 --> 00:00:09.377
+Store, actions e reducers.
+
+00:00:09.410 --> 00:00:10.577
+Na próxima aula,
+
+00:00:10.610 --> 00:00:12.812
+adicionaremos um pouco de IU
+ao nosso aplicativo,
+
+00:00:12.846 --> 00:00:15.081
+para você ver como a biblioteca
+comanda o estado
+
+00:00:15.115 --> 00:00:16.716
+de um aplicativo JavaScript.
+

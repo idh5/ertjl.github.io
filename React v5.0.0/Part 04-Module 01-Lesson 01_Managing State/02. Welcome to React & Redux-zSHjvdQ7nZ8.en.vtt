@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.745
+Welcome to Udacity's Redux course.
+
+00:00:02.745 --> 00:00:05.129
+The goal of this course is to help you learn how to more
+
+00:00:05.129 --> 00:00:07.875
+effectively manage state in your applications.
+
+00:00:07.875 --> 00:00:09.449
+As a byproduct of that,
+
+00:00:09.449 --> 00:00:11.564
+you'll have to learn Redux along the way.
+
+00:00:11.564 --> 00:00:15.344
+Now, you may find this course a little slow. That's on purpose.
+
+00:00:15.345 --> 00:00:17.429
+The reason we're going to take it slow is because
+
+00:00:17.429 --> 00:00:20.204
+historically Redux is pretty difficult to learn.
+
+00:00:20.204 --> 00:00:22.829
+The problem isn't necessarily Redux itself,
+
+00:00:22.829 --> 00:00:25.724
+but everything else that you typically pair with Redux.
+
+00:00:25.725 --> 00:00:28.365
+What happens is traditionally when you learn Redux,
+
+00:00:28.364 --> 00:00:30.640
+you also learn alongside React,
+
+00:00:30.640 --> 00:00:34.890
+React-Router, React-Redux bindings, and a few other helper libraries.
+
+00:00:34.890 --> 00:00:37.020
+This causes all sorts of issues because
+
+00:00:37.020 --> 00:00:39.540
+your brain has a hard time separating what's what.
+
+00:00:39.539 --> 00:00:43.094
+To fix this, we're going to take a slow gradual approach.
+
+00:00:43.094 --> 00:00:46.185
+We'll start off by looking at just Redux, nothing else.
+
+00:00:46.185 --> 00:00:48.225
+Once you've mastered Redux itself,
+
+00:00:48.225 --> 00:00:51.505
+we'll add in some basic UI with just HTML and JavaScript.
+
+00:00:51.505 --> 00:00:54.905
+Then, when you're feeling comfortable with hooking up Redux to a simple UI,
+
+00:00:54.905 --> 00:00:57.050
+we'll swap out that UI for React,
+
+00:00:57.049 --> 00:00:59.119
+and you'll learn how the two work together.
+
+00:00:59.119 --> 00:01:03.268
+We'll then look at some common pain points when combining React and Redux,
+
+00:01:03.268 --> 00:01:07.460
+and we'll learn how the React-Redux bindings help solve these pain points.
+
+00:01:07.459 --> 00:01:13.129
+Finally, we'll use Create React App to see how a real-world React and Redux app is built.
+
+00:01:13.129 --> 00:01:14.780
+Now, we're covering quite a lot,
+
+00:01:14.780 --> 00:01:18.004
+but remember we're going to take it slow and go step-by-step.
+
+00:01:18.004 --> 00:01:20.339
+With that said, let's get started.
+

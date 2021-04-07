@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.879
+Right now, all of the state in our application is
+
+00:00:02.879 --> 00:00:05.794
+just an array full of different todo items.
+
+00:00:05.794 --> 00:00:10.259
+But what if we wanted to add a little more functionality to our application?
+
+00:00:10.259 --> 00:00:13.589
+So instead of just having and managing a todo list,
+
+00:00:13.589 --> 00:00:16.600
+let's say we also wanted to manage a list of goals.
+
+00:00:16.600 --> 00:00:20.010
+So our todo list would be more like day-to-day items,
+
+00:00:20.010 --> 00:00:23.295
+and our list of goals would be more like long term goals.
+
+00:00:23.295 --> 00:00:26.350
+So just as we did with our todo's reducer,
+
+00:00:26.350 --> 00:00:28.720
+let's make a new reducer down here,
+
+00:00:28.719 --> 00:00:31.019
+and we will call it goals.
+
+00:00:31.019 --> 00:00:34.144
+It's going to take in the state and action.
+
+00:00:34.145 --> 00:00:37.580
+And the first time goals is invoked when state is undefined,
+
+00:00:37.579 --> 00:00:40.695
+we're going to set it to an empty array.
+
+00:00:40.695 --> 00:00:42.210
+And then now again,
+
+00:00:42.210 --> 00:00:43.905
+just as we did in todos,
+
+00:00:43.905 --> 00:00:47.410
+we'll have a switch statement here switching on action.type.
+
+00:00:47.409 --> 00:00:53.339
+This first case is going to be when the action.type property is ADD_GOAL,
+
+00:00:53.340 --> 00:00:55.750
+and what we want to do is we'll say state.concat,
+
+00:00:55.750 --> 00:00:59.478
+adding on the brand new goal.
+
+00:00:59.478 --> 00:01:05.140
+And the second case is when the action type is REMOVE_GOAL,
+
+00:01:05.140 --> 00:01:08.150
+and what we want to do in this case is really similar to
+
+00:01:08.150 --> 00:01:11.015
+what we did up here with REMOVE_TODO.
+
+00:01:11.015 --> 00:01:13.114
+So I'll just copy this,
+
+00:01:13.114 --> 00:01:17.689
+and now this is going to be goal instead of todo.
+
+00:01:17.689 --> 00:01:19.234
+And then as always,
+
+00:01:19.234 --> 00:01:20.915
+we need a default case here,
+
+00:01:20.915 --> 00:01:26.120
+which is just going to return the state that was parsed into it.
+
+00:01:26.120 --> 00:01:28.954
+So now instead of just having a single reducer,
+
+00:01:28.954 --> 00:01:30.620
+we now have two reducers,
+
+00:01:30.620 --> 00:01:32.150
+todo as well as goals.
+
+00:01:32.150 --> 00:01:34.262
+But, when we invoke createStore,
+
+00:01:34.262 --> 00:01:35.674
+what we have to parse it,
+
+00:01:35.674 --> 00:01:38.409
+is just a single reducer.
+

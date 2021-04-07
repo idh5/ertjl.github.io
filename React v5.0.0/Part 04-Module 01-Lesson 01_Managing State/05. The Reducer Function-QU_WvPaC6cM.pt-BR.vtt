@@ -1,0 +1,236 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.866 --> 00:00:05.521
+Agora precisamos de uma forma
+de unir o estado e as ações,
+
+00:00:05.563 --> 00:00:08.953
+ou seja, uma forma de atualizar
+o estado interno da Store
+
+00:00:08.995 --> 00:00:11.976
+a partir
+de uma ação específica.
+
+00:00:12.018 --> 00:00:14.977
+Mas e se utilizarmos
+uma função pura para isso?
+
+00:00:15.019 --> 00:00:17.440
+E se houvesse uma função -
+
+00:00:18.570 --> 00:00:22.832
+e chamaremos de "todos", pois
+será um aplicativo de listas -,
+
+00:00:22.874 --> 00:00:25.769
+e essa função
+usasse dois argumentos?
+
+00:00:25.811 --> 00:00:30.849
+Digamos que ela pega o estado,
+que será o estado interno da Store,
+
+00:00:30.891 --> 00:00:34.680
+e também pega a ação
+que ocorreu.
+
+00:00:34.722 --> 00:00:39.291
+Agora, a partir
+da ação específica que ocorreu,
+
+00:00:39.333 --> 00:00:42.433
+ela precisará retornar uma cópia
+do nosso estado,
+
+00:00:42.475 --> 00:00:44.162
+pois essa é uma função pura,
+
+00:00:44.204 --> 00:00:48.720
+e não queremos mudar o objeto state,
+nem o array diretamente.
+
+00:00:48.762 --> 00:00:50.705
+O que podemos fazer
+
+00:00:50.747 --> 00:00:55.340
+é criar uma instrução IF que observa
+um tipo de evento específico.
+
+00:00:55.382 --> 00:01:00.988
+Podemos dizer:
+"if (action.type === 'ADD_TODO')."
+
+00:01:01.030 --> 00:01:04.062
+Agora a pergunta
+é como modificar o estado
+
+00:01:04.104 --> 00:01:06.771
+a partir desse
+evento ADD_TODO?
+
+00:01:06.813 --> 00:01:12.618
+O que desejamos é pegar
+o evento que ocorreu...
+
+00:01:12.660 --> 00:01:15.875
+Queremos pegar
+o novo item TODO,
+
+00:01:15.917 --> 00:01:18.379
+que podemos acessar
+de action.todo,
+
+00:01:18.421 --> 00:01:21.346
+e concatenar isso ao estado.
+
+00:01:21.388 --> 00:01:26.483
+Então nós diremos
+"state.concat" passando
+
+00:01:26.525 --> 00:01:28.362
+action.todo.
+
+00:01:28.404 --> 00:01:32.186
+Agora se o tipo de evento
+for ADD_TODO,
+
+00:01:32.228 --> 00:01:34.858
+a forma como modificaremos
+o estado
+
+00:01:34.900 --> 00:01:38.082
+será a partir da concatenação
+do action.todo.
+
+00:01:38.124 --> 00:01:41.226
+Como concat nos retornará
+um novo array,
+
+00:01:41.268 --> 00:01:42.978
+essa será uma função pura,
+
+00:01:43.020 --> 00:01:45.572
+pois não modificamos
+nenhum estado diretamente
+
+00:01:45.614 --> 00:01:47.499
+dentro dela.
+
+00:01:47.541 --> 00:01:50.917
+Por fim, se o tipo de ação
+não for igual a ADD_TODO,
+
+00:01:50.959 --> 00:01:54.420
+então retornaremos
+um estado.
+
+00:01:55.541 --> 00:02:01.156
+Isso nos mostra como atualizaremos
+o estado de uma função createStore,
+
+00:02:01.198 --> 00:02:03.397
+porque agora,
+
+00:02:03.439 --> 00:02:06.391
+para obtermos um novo estado
+do aplicativo,
+
+00:02:06.433 --> 00:02:08.667
+invocamos a função todos
+
+00:02:08.709 --> 00:02:11.845
+passando o estado atual
+e a ação que ocorreu,
+
+00:02:11.887 --> 00:02:14.940
+e isso nos dará
+o novo estado.
+
+00:02:14.982 --> 00:02:18.774
+A outra única atualização necessária
+na função todos
+
+00:02:19.605 --> 00:02:23.029
+é que, na primeira vez
+em que a função for invocada,
+
+00:02:23.071 --> 00:02:25.524
+o estado será indefinido.
+
+00:02:25.566 --> 00:02:28.124
+Não poderemos usar
+state.concat,
+
+00:02:28.166 --> 00:02:31.852
+pois só realizamos concat
+em arrays.
+
+00:02:31.894 --> 00:02:36.668
+Podemos usar
+os parâmetros padrão ES6
+
+00:02:36.710 --> 00:02:38.957
+para dizer que, se o estado
+for indefinido,
+
+00:02:38.999 --> 00:02:41.397
+ele deverá ser configurado
+a um array vazio.
+
+00:02:41.439 --> 00:02:43.517
+Assim, se o estado
+for um array -
+
+00:02:43.563 --> 00:02:47.499
+e será quando
+aqui for indefinido -
+
+00:02:47.541 --> 00:02:49.980
+poderemos chamar .concat
+
+00:02:50.022 --> 00:02:54.707
+adicionando
+o novo item todo.
+
+00:02:54.749 --> 00:02:59.495
+Sempre que criarmos uma função
+que usará o estado atual e a ação
+
+00:02:59.537 --> 00:03:02.520
+e retornará o novo estado
+do aplicativo,
+
+00:03:02.562 --> 00:03:05.505
+a chamaremos de "reducer".
+
+00:03:05.547 --> 00:03:09.244
+Esta função todos
+chamará uma função reducer,
+
+00:03:09.286 --> 00:03:12.053
+pois ela pega o estado
+e uma ação
+
+00:03:12.095 --> 00:03:16.615
+e os reduz a um novo estado.
+
+00:03:17.550 --> 00:03:19.414
+Voltando ao gráfico,
+
+00:03:19.456 --> 00:03:23.110
+a função aqui é um reducer,
+pois usa o estado e uma ação
+
+00:03:23.152 --> 00:03:24.733
+e retorna um novo estado.
+
+00:03:24.775 --> 00:03:26.286
+E vamos repetir,
+
+00:03:26.328 --> 00:03:28.749
+o reducer deve ser
+uma função pura.
+

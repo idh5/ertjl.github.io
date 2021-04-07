@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.136
+Agora que terminamos
+as quatro partes da Store,
+
+00:00:03.169 --> 00:00:05.405
+temos o estado interno,
+um jeito de receber o estado,
+
+00:00:05.438 --> 00:00:06.840
+ver as mudanças no estado,
+
+00:00:06.873 --> 00:00:09.175
+e um jeito
+de atualizar o estado.
+
+00:00:09.209 --> 00:00:11.811
+Nós também temos
+uma função reducer aqui,
+
+00:00:11.845 --> 00:00:14.347
+que especifica
+como o estado vai mudar
+
+00:00:14.381 --> 00:00:17.384
+com base na ação
+que ocorreu no aplicativo.
+
+00:00:17.417 --> 00:00:20.356
+Vamos ver como é
+
+00:00:20.389 --> 00:00:23.957
+quando usamos
+a função createStore.
+
+00:00:23.990 --> 00:00:25.658
+Para criar a Store,
+
+00:00:25.692 --> 00:00:30.163
+nós vamos digitar
+const store = createStore.
+
+00:00:30.196 --> 00:00:34.067
+Lembre-se de que precisamos passar
+a função reducer para a createStore.
+
+00:00:34.100 --> 00:00:36.069
+Podemos passar a todos.
+
+00:00:36.102 --> 00:00:40.206
+A Store vai ter três métodos.
+
+00:00:40.240 --> 00:00:42.976
+GetState, subscribe,
+assim como dispatch.
+
+00:00:43.009 --> 00:00:46.980
+Primeiro, vamos digitar
+store.subscribe,
+
+00:00:47.013 --> 00:00:48.882
+e, sempre que nosso estado
+mudar,
+
+00:00:48.915 --> 00:00:53.219
+nós usaremos o console.log.
+
+00:00:53.253 --> 00:00:55.622
+O novo estado é...
+
+00:00:55.655 --> 00:00:58.525
+Como recebemos
+o estado da Store,
+
+00:00:58.558 --> 00:01:02.028
+podemos usar store.getState.
+
+00:01:02.062 --> 00:01:04.931
+Agora que configuramos
+o listener,
+
+00:01:04.964 --> 00:01:08.034
+o próximo passo é fazer
+a dispatch de uma ação,
+
+00:01:08.068 --> 00:01:10.904
+para ver como a Store
+vai mudar.
+
+00:01:10.937 --> 00:01:15.442
+O que podemos fazer é digitar
+store.dispatch.
+
+00:01:15.475 --> 00:01:17.410
+Agora queremos passar
+uma ação.
+
+00:01:17.444 --> 00:01:20.619
+Você deve lembrar
+que tínhamos uma ação
+
+00:01:20.652 --> 00:01:23.583
+com uma ADD_TODO,
+
+00:01:23.616 --> 00:01:27.020
+e esta ação também tinha
+uma propriedade todo
+
+00:01:27.053 --> 00:01:30.423
+que tinha uma ID,
+para qual nós daremos 0.
+
+00:01:30.457 --> 00:01:34.361
+E ela também vai ter
+uma propriedade de nome:
+
+00:01:34.394 --> 00:01:36.162
+Learn Redux.
+
+00:01:36.196 --> 00:01:40.066
+E temos a complete,
+que vamos configurar para false.
+
+00:01:40.100 --> 00:01:43.136
+Agora, quando executamos
+este código,
+
+00:01:43.169 --> 00:01:46.473
+esta função será executada,
+porque atualizamos o estado,
+
+00:01:46.506 --> 00:01:50.443
+e veremos que agora há
+um novo objeto
+
+00:01:50.477 --> 00:01:53.480
+dentro do nosso estado,
+
+00:01:53.513 --> 00:01:57.450
+porque é
+isto que especificamos aqui.
+
+00:01:57.484 --> 00:02:01.054
+Eu vou copiar tudo
+e ir para o meu console.
+
+00:02:01.087 --> 00:02:04.758
+Agora vou executar isto aqui,
+então preciso colar aqui.
+
+00:02:04.791 --> 00:02:08.129
+Primeiro, vamos usar
+o store.subscribe.
+
+00:02:08.162 --> 00:02:09.262
+Tudo parece bom.
+
+00:02:09.295 --> 00:02:11.965
+Note que recebemos
+do store.subscribe
+
+00:02:11.998 --> 00:02:13.466
+uma função
+que podíamos ter usado
+
+00:02:13.500 --> 00:02:15.335
+para fazer o unsubscribe
+neste listener.
+
+00:02:15.368 --> 00:02:19.072
+Agora quando eu colo
+em store.dispatch,
+
+00:02:19.105 --> 00:02:22.075
+recebemos este novo array.
+
+00:02:22.108 --> 00:02:23.677
+O novo estado é este array.
+
+00:02:23.710 --> 00:02:27.414
+Então temos um item no array.
+Complete é false, a ID é 0,
+
+00:02:27.447 --> 00:02:29.749
+e o nome é Learn Redux.
+
+00:02:29.783 --> 00:02:34.988
+O legal nisto é poder usar
+a dispatch quantas vezes quisermos.
+
+00:02:35.021 --> 00:02:38.658
+Ainda queremos fazer a dispatch
+da ADD_TODO.
+
+00:02:38.692 --> 00:02:41.661
+Vamos dar a ela uma ID de 1.
+
+00:02:41.695 --> 00:02:44.497
+Vamos mudar o nome
+para Read a book.
+
+00:02:44.531 --> 00:02:49.202
+E a complete para true.
+
+00:02:49.235 --> 00:02:52.439
+Agora você vai notar que há
+dois itens no estado:
+
+00:02:52.472 --> 00:02:54.474
+Learn Redux e Read a book.
+
+00:02:54.507 --> 00:02:58.678
+Sempre que quisermos atualizar
+o estado da Store,
+
+00:02:58.712 --> 00:03:01.214
+o que precisamos fazer é
+a chamada dispatch,
+
+00:03:01.247 --> 00:03:04.851
+passando para ela
+a ação que aconteceu.
+

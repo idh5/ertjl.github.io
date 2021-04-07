@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.285
+Now that we have some internal state inside of our store,
+
+00:00:03.285 --> 00:00:05.640
+and we also have a way to get that state,
+
+00:00:05.639 --> 00:00:10.974
+the next feature we want to add is a way to listen for changes on the state.
+
+00:00:10.974 --> 00:00:13.774
+So, if we look at the final implementation here,
+
+00:00:13.775 --> 00:00:16.068
+what's going to happen is
+
+00:00:16.068 --> 00:00:20.929
+the user of createStore can invoke it in order to get back the store.
+
+00:00:20.929 --> 00:00:23.149
+Right now, it only has a getState property.
+
+00:00:23.149 --> 00:00:27.500
+But eventually, it would be nice if they were able to do something like this.
+
+00:00:27.500 --> 00:00:31.166
+Where what if we provide them a subscribe method,
+
+00:00:31.166 --> 00:00:34.250
+they could then pass subscribe a callback function.
+
+00:00:34.250 --> 00:00:37.520
+And whenever the state changes internally,
+
+00:00:37.520 --> 00:00:42.260
+we can invoke this callback function and then the user could do anything they want.
+
+00:00:42.259 --> 00:00:43.489
+For now as an example,
+
+00:00:43.490 --> 00:00:48.825
+let's just say the new state is store dot getState.
+
+00:00:48.825 --> 00:00:51.990
+So, what we want to add internally inside of
+
+00:00:51.990 --> 00:00:56.294
+createStore is a way to support this functionality right here.
+
+00:00:56.293 --> 00:01:01.604
+And we have to keep in mind too that the user might want to subscribe more than one time.
+
+00:01:01.604 --> 00:01:05.280
+So, let's just say here if the user subscribes again,
+
+00:01:05.280 --> 00:01:08.534
+they just want to say the store changed.
+
+00:01:08.534 --> 00:01:11.145
+So, what we need to do internally is we need to
+
+00:01:11.144 --> 00:01:13.709
+keep track of every time the user call subscribe.
+
+00:01:13.709 --> 00:01:15.329
+And then eventually, when we add
+
+00:01:15.329 --> 00:01:18.179
+the functionality to be able to change the state of our store,
+
+00:01:18.180 --> 00:01:23.670
+we need to then call every function that was passed in when subscribe was invoked.
+
+00:01:23.670 --> 00:01:28.320
+So, what we'll do is let's come up here and create a new array.
+
+00:01:28.319 --> 00:01:30.103
+We'll call it listeners.
+
+00:01:30.103 --> 00:01:34.859
+And then we also need to create our subscribe function here.
+
+00:01:34.859 --> 00:01:37.319
+And then we want to return that as
+
+00:01:37.319 --> 00:01:42.794
+well so that the user can then invoke store dot subscribe.
+
+00:01:42.795 --> 00:01:45.719
+So now, what is subscribe responsible for?
+
+00:01:45.719 --> 00:01:51.120
+Again, the first thing we want to do is we want to take our listeners array and then we
+
+00:01:51.120 --> 00:01:56.850
+want to push into it the function that is being passed to subscribe when it is invoked.
+
+00:01:56.849 --> 00:02:00.129
+Which we will just call the listener.
+
+00:02:01.019 --> 00:02:05.109
+So now, what we've done is we have an array of listeners
+
+00:02:05.109 --> 00:02:09.969
+here that whenever we add the functionality for updating the state,
+
+00:02:09.969 --> 00:02:14.560
+we want to loop through and invoke all of the functions so that
+
+00:02:14.560 --> 00:02:20.310
+these will log to the console whenever the state inside of our store changes.
+

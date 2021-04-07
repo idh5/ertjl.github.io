@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.934
+But now that we've given a way for the user to subscribe to changes,
+
+00:00:04.934 --> 00:00:08.730
+we also want them to have a way to unsubscribe for changes.
+
+00:00:08.730 --> 00:00:12.224
+For example, if they did both of these subscribes,
+
+00:00:12.224 --> 00:00:14.535
+and then they wanted to unsubscribe this function,
+
+00:00:14.535 --> 00:00:17.125
+we need to provide them a way to do that.
+
+00:00:17.125 --> 00:00:20.129
+So what we'll do, is when they invoke subscribe,
+
+00:00:20.129 --> 00:00:23.410
+let's return them a brand new function,
+
+00:00:23.410 --> 00:00:26.903
+and when they invoke that function,
+
+00:00:26.903 --> 00:00:28.510
+what we can do internally,
+
+00:00:28.510 --> 00:00:31.790
+is we can call listeners.filter,
+
+00:00:33.719 --> 00:00:36.475
+and we want to filter out
+
+00:00:36.475 --> 00:00:41.695
+the original listener function that was parsed in when subscribe was invoked.
+
+00:00:41.695 --> 00:00:43.969
+So now, in order to unsubscribe,
+
+00:00:43.969 --> 00:00:49.149
+all the user has to do is create a new variable here,
+
+00:00:49.149 --> 00:00:52.689
+when they invoke store.subscribe,
+
+00:00:52.859 --> 00:00:57.144
+and then that's going to be a function that they can invoke in order to
+
+00:00:57.145 --> 00:01:01.162
+unsubscribe this specific listener.
+
+00:01:01.161 --> 00:01:04.810
+So, we'll get rid of all our example code here.
+

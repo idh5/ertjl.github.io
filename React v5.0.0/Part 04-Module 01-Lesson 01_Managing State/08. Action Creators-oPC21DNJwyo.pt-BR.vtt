@@ -1,0 +1,336 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.002
+A próxima mudança
+que quero fazer
+
+00:00:02.035 --> 00:00:05.605
+tem relação com como lidamos
+com ações diferentes.
+
+00:00:05.638 --> 00:00:06.806
+Por exemplo,
+
+00:00:06.840 --> 00:00:09.476
+quando queremos fazer a dispatch
+da ação ADD_TODO,
+
+00:00:09.509 --> 00:00:13.113
+temos um objeto,
+temos um tipo de ADD_TODO
+
+00:00:13.146 --> 00:00:15.081
+e nós passamos o item todo.
+
+00:00:15.115 --> 00:00:17.050
+Isto funciona,
+
+00:00:17.083 --> 00:00:19.753
+mas estamos duplicando
+muito código aqui,
+
+00:00:19.786 --> 00:00:21.921
+especificamente
+entre estas duas partes aqui.
+
+00:00:21.955 --> 00:00:23.957
+A duplicação não é
+necessariamente ruim,
+
+00:00:23.990 --> 00:00:26.526
+mas acho que, neste exemplo,
+podemos dar uma melhorada.
+
+00:00:26.559 --> 00:00:30.830
+Então, em vez de fazer o hard-coding
+de todos os objetos
+
+00:00:30.864 --> 00:00:34.100
+na dispatch específica,
+
+00:00:34.134 --> 00:00:36.536
+poderíamos criar uma função
+
+00:00:36.569 --> 00:00:39.572
+cujo trabalho fosse retornar
+para nós o objeto.
+
+00:00:39.606 --> 00:00:43.710
+Assim não precisamos lembrar
+que usamos uma ação ADD_TODO
+
+00:00:43.743 --> 00:00:46.312
+sempre que quisermos fazer
+a dispatch da ADD_TODO,
+
+00:00:46.346 --> 00:00:48.515
+e não precisamos lembrar
+
+00:00:48.548 --> 00:00:51.117
+que é necessário passar
+um todo específico,
+
+00:00:51.151 --> 00:00:54.688
+porque a função vai lidar
+com isso para nós.
+
+00:00:54.721 --> 00:00:57.357
+Vamos para o topo
+do arquivo de novo,
+
+00:00:57.390 --> 00:00:59.759
+e vamos fazer
+algumas funções diferentes aqui.
+
+00:00:59.793 --> 00:01:01.828
+Elas serão chamadas
+de "criadoras de ação"
+
+00:01:01.861 --> 00:01:03.663
+porque elas estão criando
+uma ação.
+
+00:01:03.697 --> 00:01:07.834
+Primeiro,
+vamos escrever addTodoAction
+
+00:01:07.867 --> 00:01:11.304
+para lidar
+com as ações ADD_TODO.
+
+00:01:11.338 --> 00:01:13.640
+Ela vai conter um item todo,
+
+00:01:13.673 --> 00:01:18.912
+e vai nos retornar aquela ação,
+que terá um tipo de ADD_TODO.
+
+00:01:18.945 --> 00:01:21.715
+E ela vai passar o item todo.
+
+00:01:21.748 --> 00:01:26.853
+A próxima ação que será disparada
+é a REMOVE_TODO aqui.
+
+00:01:26.886 --> 00:01:31.925
+Podemos escrever
+removeTodoAction.
+
+00:01:31.958 --> 00:01:34.294
+Vai receber uma ID,
+
+00:01:34.327 --> 00:01:39.666
+e a ação que ela vai devolver será
+um tipo de REMOVE_TODO.
+
+00:01:39.699 --> 00:01:41.401
+Nós passaremos a ID.
+
+00:01:41.434 --> 00:01:45.372
+Nós faremos
+isto mais três vezes.
+
+00:01:45.405 --> 00:01:47.807
+Depois temos a TOGGLE_TODO.
+
+00:01:47.841 --> 00:01:51.378
+Escrevemos toggleTodoAction
+aqui.
+
+00:01:51.411 --> 00:01:53.313
+Isto vai conter uma ID
+
+00:01:53.346 --> 00:01:58.418
+e devolver uma ação ou objeto
+do tipo TOGGLE_TODO,
+
+00:01:58.451 --> 00:01:59.719
+e nós passaremos a ID.
+
+00:01:59.753 --> 00:02:02.555
+A esta altura,
+você já entendeu.
+
+00:02:02.589 --> 00:02:05.392
+Temos uma addGoalAction,
+
+00:02:05.425 --> 00:02:08.814
+que vai conter a goal
+
+00:02:08.848 --> 00:02:12.365
+e devolver um objeto
+
+00:02:12.399 --> 00:02:17.671
+com um tipo de ADD_GOAL
+e o próprio goal.
+
+00:02:17.704 --> 00:02:21.741
+E, do ponto de vista
+das criadoras de ação,
+
+00:02:21.775 --> 00:02:25.345
+temos
+a removeGoalAction creator,
+
+00:02:25.378 --> 00:02:27.180
+que contém uma ID
+
+00:02:27.213 --> 00:02:31.317
+e devolve um objeto
+com um tipo de REMOVE_GOAL
+
+00:02:31.351 --> 00:02:32.886
+e depois uma ID.
+
+00:02:32.919 --> 00:02:36.623
+Agora, sempre que chamarmos
+a dispatch dentro do aplicativo,
+
+00:02:36.656 --> 00:02:38.725
+queremos atualizar todos,
+
+00:02:38.758 --> 00:02:41.027
+para, em vez de
+só passar a ação,
+
+00:02:41.061 --> 00:02:43.530
+chamar as criadoras de ações.
+
+00:02:43.563 --> 00:02:47.167
+Agora nós vamos escrever
+store.dispatch.
+
+00:02:47.200 --> 00:02:51.905
+Queremos chamar
+a addTodoAction.
+
+00:02:51.938 --> 00:02:55.141
+Se você se lembra,
+
+00:02:55.175 --> 00:02:57.877
+o que temos que passar é
+o item todo.
+
+00:02:57.911 --> 00:03:00.780
+Agora temos que copiar isto
+
+00:03:03.016 --> 00:03:05.485
+e colar o item todo aqui.
+
+00:03:05.518 --> 00:03:07.253
+Parece muito bom.
+
+00:03:07.287 --> 00:03:10.357
+Agora a mesma coisa aqui.
+
+00:03:11.827 --> 00:03:13.373
+Vou copiar isto
+
+00:03:13.407 --> 00:03:16.996
+e substituir o item todo
+que estamos passando
+
+00:03:17.030 --> 00:03:21.134
+por este aqui,
+que tem uma ID de 1.
+
+00:03:26.206 --> 00:03:29.576
+E faremos a mesma coisa
+para este aqui.
+
+00:03:29.609 --> 00:03:34.814
+Acho que esta vai ser
+a última das addTodoActions.
+
+00:03:34.848 --> 00:03:38.518
+Vou copiar a ação
+ou o próprio item todo.
+
+00:03:41.212 --> 00:03:44.462
+O que faremos agora é...
+
+00:03:44.496 --> 00:03:48.728
+vamos usar a removeTodoAction,
+
+00:03:48.762 --> 00:03:54.200
+passando a ID para ela,
+que vai ser este 1 aqui.
+
+00:03:55.660 --> 00:03:57.370
+A mesma coisa aqui,
+
+00:03:57.404 --> 00:04:01.508
+exceto que queremos usar
+a toggleTodoAction creator,
+
+00:04:01.541 --> 00:04:03.276
+passando para ela a ID de 0,
+
+00:04:03.309 --> 00:04:05.779
+que vai permitir nos livrarmos
+desta linha aqui.
+
+00:04:05.812 --> 00:04:09.249
+E, finalmente, temos ADD_GOAL,
+ADD_GOAL e REMOVE_GOAL.
+
+00:04:11.151 --> 00:04:14.387
+A addGoalAction creator
+vai conter o goal,
+
+00:04:14.421 --> 00:04:18.291
+assim como a addTodoAction
+continha o item todo,
+
+00:04:18.324 --> 00:04:20.927
+então eu colo o goal.
+
+00:04:21.661 --> 00:04:24.631
+Eu vou copiar e colar isto
+
+00:04:24.664 --> 00:04:27.567
+porque estamos fazendo a dispatch
+da ação de goal aqui.
+
+00:04:27.600 --> 00:04:30.737
+E o novo goal será
+este bem aqui.
+
+00:04:35.508 --> 00:04:39.045
+E, finalmente, nós vamos usar
+store.dispatch,
+
+00:04:39.079 --> 00:04:42.716
+usar a removeGoalAction
+
+00:04:42.749 --> 00:04:45.518
+e passar uma ID de 0 para ela.
+
+00:04:45.552 --> 00:04:49.543
+O que fizemos foi resumir
+
+00:04:49.573 --> 00:04:51.758
+todas as nossas ações diferentes
+
+00:04:51.791 --> 00:04:54.661
+em suas próprias funções
+chamadas de "criadoras de ação".
+
+00:04:54.694 --> 00:04:57.297
+Agora, sempre que quisermos
+uma ação
+
+00:04:57.330 --> 00:04:59.366
+ou sempre que quisermos fazer
+a dispatch da ação,
+
+00:04:59.399 --> 00:05:02.702
+só precisamos usar
+as criadoras de ação
+
+00:05:02.736 --> 00:05:05.638
+que vão nos retornar
+a ação específica.
+

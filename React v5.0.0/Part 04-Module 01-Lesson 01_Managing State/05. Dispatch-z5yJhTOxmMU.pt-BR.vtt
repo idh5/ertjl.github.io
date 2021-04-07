@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.213 --> 00:00:02.436
+Vejamos o que fizemos
+até agora.
+
+00:00:02.478 --> 00:00:04.429
+Nosso aplicativo
+tem três partes:
+
+00:00:04.471 --> 00:00:08.036
+as ações, as funções reducer
+e a createStore.
+
+00:00:08.078 --> 00:00:12.156
+As ações representam os eventos
+que alteram o estado da Store.
+
+00:00:12.198 --> 00:00:14.933
+O reducer é uma função,
+que pega o estado atual
+
+00:00:14.975 --> 00:00:16.556
+e a ação que ocorreu
+
+00:00:16.598 --> 00:00:18.293
+e retorna um novo estado.
+
+00:00:18.335 --> 00:00:21.806
+E o createStore
+cria a Store.
+
+00:00:21.848 --> 00:00:24.764
+Se voltarmos à implementação
+do createStore,
+
+00:00:24.806 --> 00:00:27.373
+até agora
+temos três das quatro partes.
+
+00:00:27.415 --> 00:00:28.949
+Temos o estado atual.
+
+00:00:28.991 --> 00:00:31.309
+Para obter o estado,
+temos a função getState,
+
+00:00:31.351 --> 00:00:34.228
+e, para observar as alterações,
+a função subscribe.
+
+00:00:34.270 --> 00:00:36.246
+A última parte
+que precisamos resolver
+
+00:00:36.288 --> 00:00:37.989
+é como atualizar o estado.
+
+00:00:38.031 --> 00:00:41.060
+Para isso, criaremos uma função
+chamada "dispatch".
+
+00:00:41.102 --> 00:00:42.385
+Vamos fazer isso agora.
+

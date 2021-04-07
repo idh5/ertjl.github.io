@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.020 --> 00:00:05.474
+Now, what we need is a way to tie our state and our actions together.
+
+00:00:05.474 --> 00:00:08.369
+Meaning we need a way to update the internal state of
+
+00:00:08.369 --> 00:00:11.849
+our store based on the specific action that occurred.
+
+00:00:11.849 --> 00:00:14.910
+Well, what if we use a pure function to do this.
+
+00:00:14.910 --> 00:00:17.894
+So, what if we had a function,
+
+00:00:17.894 --> 00:00:22.619
+we'll just call this todos because we're going to be building a todos app.
+
+00:00:22.620 --> 00:00:25.620
+And this function is going to take in two arguments.
+
+00:00:25.620 --> 00:00:27.225
+Let's say it took in the state,
+
+00:00:27.225 --> 00:00:30.730
+which is going to be the internal state inside of our store.
+
+00:00:30.730 --> 00:00:34.460
+And it also took in the action which occurred.
+
+00:00:34.460 --> 00:00:39.289
+And then now, what it needs to do is based on the specific action which occurred,
+
+00:00:39.289 --> 00:00:42.859
+it needs to return us a new copy of our state because again,
+
+00:00:42.859 --> 00:00:44.960
+this is a pure function and we don't want to
+
+00:00:44.960 --> 00:00:48.575
+mutate the state objects or these state array directly.
+
+00:00:48.575 --> 00:00:51.020
+So, what we can do is,
+
+00:00:51.020 --> 00:00:54.904
+let's have an if statement here that listens for a specific event type.
+
+00:00:54.904 --> 00:01:00.717
+So, we can say if action.type equals ADD_TODO.
+
+00:01:00.716 --> 00:01:01.835
+So, now the question is,
+
+00:01:01.835 --> 00:01:06.754
+how do we want to modify this state based on this ADD_TODO event?
+
+00:01:06.754 --> 00:01:09.394
+Well, what we want to do is,
+
+00:01:09.394 --> 00:01:12.512
+we just want to take the event that occurred,.
+
+00:01:12.513 --> 00:01:13.940
+Well, what we want to do is,
+
+00:01:13.939 --> 00:01:15.829
+we want to take the new todo item,
+
+00:01:15.829 --> 00:01:18.200
+which we can access from action.todo,
+
+00:01:18.200 --> 00:01:21.275
+and concatenate that on to our state.
+
+00:01:21.275 --> 00:01:23.180
+So, what we will do is we will say,
+
+00:01:23.180 --> 00:01:28.331
+state.concat parsing it action.todo.
+
+00:01:28.331 --> 00:01:32.225
+So now, if the event type is ADD_TODO,
+
+00:01:32.224 --> 00:01:34.819
+the way in which we're going to modify the state
+
+00:01:34.819 --> 00:01:38.000
+is just by concatenating action.todo onto it.
+
+00:01:38.000 --> 00:01:41.284
+And again, because concat is going to return us a new array,
+
+00:01:41.284 --> 00:01:43.859
+this is a pure function because we're not
+
+00:01:43.859 --> 00:01:47.355
+modifying any state directly inside of this function.
+
+00:01:47.355 --> 00:01:50.790
+And last thing, if the action type does not equal ADD_TODO,
+
+00:01:50.790 --> 00:01:54.734
+then all we ought to do is just return a state.
+
+00:01:54.734 --> 00:01:58.170
+So, this gives us a preview into how
+
+00:01:58.170 --> 00:02:01.140
+we will be updating the state from our createStore function.
+
+00:02:01.140 --> 00:02:03.930
+Because now all we need to do is,
+
+00:02:03.930 --> 00:02:06.285
+in order to get the new state of our application,
+
+00:02:06.284 --> 00:02:08.564
+we just invoke our todos function,
+
+00:02:08.564 --> 00:02:11.819
+parsing the current state as well as the action which occurred,
+
+00:02:11.819 --> 00:02:14.834
+and that will be responsible for getting us the new state.
+
+00:02:14.835 --> 00:02:18.570
+Now, the only other update we need to make to our todos function here
+
+00:02:18.569 --> 00:02:22.674
+is the first time that this function is invoked,
+
+00:02:22.675 --> 00:02:25.285
+state is going to be undefined.
+
+00:02:25.284 --> 00:02:28.435
+Meaning we won't be able to do state.concat because
+
+00:02:28.435 --> 00:02:31.795
+obviously you can only do concat on arrays.
+
+00:02:31.794 --> 00:02:37.104
+So, what we can do is use ES6's default parameters here to say,
+
+00:02:37.104 --> 00:02:38.828
+if the state is undefined,
+
+00:02:38.829 --> 00:02:41.320
+go ahead and set it to an empty array.
+
+00:02:41.319 --> 00:02:43.780
+And then, if state is an array,
+
+00:02:43.780 --> 00:02:47.485
+which it will be when this line runs and state is undefined,
+
+00:02:47.485 --> 00:02:50.020
+then we can call dot concat,
+
+00:02:50.020 --> 00:02:54.385
+adding onto it or adding into it the brand new todo item.
+
+00:02:54.384 --> 00:02:56.859
+Now, whenever we make a function that's going to
+
+00:02:56.860 --> 00:02:59.515
+take in the current state as well as the action,
+
+00:02:59.514 --> 00:03:02.559
+and then return us the new state of our application,
+
+00:03:02.560 --> 00:03:05.500
+we're going to call that function a reducer.
+
+00:03:05.500 --> 00:03:10.300
+So this todos function will call a reducer function because what it's doing is,
+
+00:03:10.300 --> 00:03:12.115
+it's taking the state in an action,
+
+00:03:12.115 --> 00:03:17.020
+and then reducing that to a brand new state.
+
+00:03:17.020 --> 00:03:19.360
+So, going back to this visual,
+
+00:03:19.360 --> 00:03:23.065
+the function here is a reducer since it takes in the state and an action,
+
+00:03:23.064 --> 00:03:24.594
+and returns the new state.
+
+00:03:24.594 --> 00:03:26.215
+And to say just one more time,
+
+00:03:26.215 --> 00:03:29.360
+a reducer must be a pure function.
+

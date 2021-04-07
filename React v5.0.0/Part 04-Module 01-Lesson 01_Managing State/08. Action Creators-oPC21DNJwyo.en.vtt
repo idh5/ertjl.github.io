@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.644
+The next change I want to make has to do with how we're handling different actions.
+
+00:00:05.644 --> 00:00:09.521
+So right now for example, whenever we want to dispatch the ADD_TODO action,
+
+00:00:09.522 --> 00:00:11.400
+what we do is we have an object,
+
+00:00:11.400 --> 00:00:15.137
+we have a type of ADD_TODO and then we pass along the TODO item.
+
+00:00:15.137 --> 00:00:17.114
+Now, again this works,
+
+00:00:17.114 --> 00:00:19.814
+but we're duplicating a lot of code here,
+
+00:00:19.815 --> 00:00:21.750
+specifically between these two parts right here,
+
+00:00:21.750 --> 00:00:23.902
+and duplication isn't necessarily a bad thing,
+
+00:00:23.902 --> 00:00:25.030
+but I think in this instance,
+
+00:00:25.030 --> 00:00:26.580
+we can clean it up quite a bit.
+
+00:00:26.579 --> 00:00:30.000
+So what we'll do is instead of just hard coding all of
+
+00:00:30.000 --> 00:00:34.139
+the objects into the specific dispatch and location,
+
+00:00:34.139 --> 00:00:39.630
+what if we made a function whose whole job was to return us to the object,
+
+00:00:39.630 --> 00:00:42.150
+so that way we didn't necessarily have to remember that
+
+00:00:42.149 --> 00:00:44.879
+the type was ADD_TODO every time that we wanted to
+
+00:00:44.880 --> 00:00:49.570
+dispatch the add_todo type and we don't have to remember that we need to
+
+00:00:49.570 --> 00:00:51.909
+pass along a specific todo because we can just invoke
+
+00:00:51.909 --> 00:00:54.729
+the function and it will handle a lot of that for us.
+
+00:00:54.729 --> 00:00:57.422
+So let's come up to the top of our file again,
+
+00:00:57.423 --> 00:00:59.590
+and we're going to make a few different functions here.
+
+00:00:59.590 --> 00:01:03.715
+These are going to be called action creators because they are creating an action.
+
+00:01:03.715 --> 00:01:11.356
+So first, let's do addTodoAction to handle our addtodo actions,
+
+00:01:11.356 --> 00:01:13.685
+it's going to take a todo item,
+
+00:01:13.685 --> 00:01:17.210
+and then it's going to return us that action which will have a type
+
+00:01:17.209 --> 00:01:21.750
+of ADD_TODO and then we will just pass along the todo item.
+
+00:01:21.750 --> 00:01:26.888
+The next action that is going to be dispatched is REMOVE_TODO right here.
+
+00:01:26.888 --> 00:01:31.984
+So we can say, removeTodoAction.
+
+00:01:31.984 --> 00:01:34.359
+It's going to receive an Id,
+
+00:01:34.359 --> 00:01:37.420
+and then the action that it is going to return will have
+
+00:01:37.420 --> 00:01:41.445
+a type of REMOVE_TODO and will pass along the Id.
+
+00:01:41.444 --> 00:01:45.429
+And we're going to do this three more times.
+
+00:01:45.430 --> 00:01:47.810
+Next we have toggle todo.
+
+00:01:48.109 --> 00:01:51.435
+So we have toggleTodoAction creator here,
+
+00:01:51.435 --> 00:01:54.650
+this is also going to take an Id and return
+
+00:01:54.650 --> 00:01:58.445
+an action or an object that has a type of TOGGLE_TODO,
+
+00:01:58.444 --> 00:01:59.659
+and then we'll pass along the id.
+
+00:01:59.659 --> 00:02:02.614
+At this point, you probably get the point.
+
+00:02:02.614 --> 00:02:05.439
+We have an addGoalAction,
+
+00:02:05.439 --> 00:02:10.995
+which is going to take in the goal and return
+
+00:02:10.995 --> 00:02:17.736
+an objects with a type of ADD_GOAL and the goal itself,
+
+00:02:17.736 --> 00:02:21.699
+and then finally as far as our action creators are concerned,
+
+00:02:21.699 --> 00:02:26.754
+we have our removeGoalAction creator which takes in an
+
+00:02:26.754 --> 00:02:32.935
+Id and returns an object with a type of REMOVE_GOAL and then an Id.
+
+00:02:32.935 --> 00:02:35.055
+So now inside of our application,
+
+00:02:35.055 --> 00:02:36.659
+whenever we are calling dispatch,
+
+00:02:36.659 --> 00:02:41.073
+we want to update all of those to instead of just passing in the action themselves,
+
+00:02:41.073 --> 00:02:43.569
+we want to invoke our action creators.
+
+00:02:43.569 --> 00:02:46.049
+So, here what we'll do is let's say,
+
+00:02:46.050 --> 00:02:51.960
+store.dispatch, we want to invoke the addTodoAction action creator.
+
+00:02:51.960 --> 00:02:57.925
+What we want to pass it is if you remember, the todo item.
+
+00:02:57.925 --> 00:02:59.430
+So, what we can do is,
+
+00:02:59.430 --> 00:03:05.550
+let's copy this and then we will just paste the to do item in there.
+
+00:03:05.550 --> 00:03:07.310
+So it looks pretty good.
+
+00:03:07.310 --> 00:03:10.379
+Now, same thing here,
+
+00:03:11.139 --> 00:03:18.404
+copy this and replace the todo item that we're passing it with this one right here,
+
+00:03:18.405 --> 00:03:21.150
+that it has an id of one.
+
+00:03:26.219 --> 00:03:29.625
+And then we'll do the exact same thing for this one.
+
+00:03:29.625 --> 00:03:34.875
+I think this will be the last of our addTodoActions.
+
+00:03:34.875 --> 00:03:38.550
+Copy the action or the todo item itself.
+
+00:03:40.409 --> 00:03:48.769
+And then now what we want to do is we want to invoke our removeTodoAction creator,
+
+00:03:48.770 --> 00:03:54.210
+passing it the id which is just going to be one right here.
+
+00:03:54.879 --> 00:03:59.299
+Same thing down here except we want to invoke
+
+00:03:59.300 --> 00:04:02.150
+our toggleTodoAction creator passing at
+
+00:04:02.150 --> 00:04:05.825
+the id of zero which will allow us to get rid of this line right here.
+
+00:04:05.824 --> 00:04:11.155
+And then finally, we just have ADD_GOAL, ADD_GOAL and REMOVE_GOAL.
+
+00:04:11.155 --> 00:04:14.710
+So our addGoalAction creator is going to take in the goal just
+
+00:04:14.710 --> 00:04:18.329
+as our addTodoAction took in the todo item,
+
+00:04:18.329 --> 00:04:20.930
+so paste in the goal their.
+
+00:04:21.670 --> 00:04:27.617
+I'm going to copy and paste this because we are dispatching at goal action again.
+
+00:04:27.617 --> 00:04:33.608
+And then the new goal will be this one right here.
+
+00:04:33.608 --> 00:04:37.800
+And then finally, what we want to do is call
+
+00:04:37.800 --> 00:04:45.579
+store.dispatch invoking the removeGoalAction and passing it in Id of zero.
+
+00:04:45.579 --> 00:04:47.769
+So now again what we've done,
+
+00:04:47.769 --> 00:04:50.069
+is we have abstracted all of
+
+00:04:50.069 --> 00:04:54.704
+our different actions into their own functions called Action creators.
+
+00:04:54.704 --> 00:04:59.399
+So now, whenever we want to get an action or whenever we want to dispatch an action,
+
+00:04:59.399 --> 00:05:05.639
+what we need to do is call our action creators which will return us the specific action.
+

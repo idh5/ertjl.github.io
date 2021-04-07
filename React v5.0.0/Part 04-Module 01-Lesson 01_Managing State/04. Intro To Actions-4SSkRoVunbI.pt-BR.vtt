@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.187 --> 00:00:04.738
+Vimos a primeira regra para aumentar
+a previsibilidade do estado
+
+00:00:04.780 --> 00:00:06.057
+na Store:
+
+00:00:06.099 --> 00:00:09.337
+ter um conjunto de eventos
+que podem ocorrer no aplicativo,
+
+00:00:09.379 --> 00:00:11.521
+que mudarão o estado
+da Store.
+
+00:00:11.563 --> 00:00:13.978
+Como isso fica?
+
+00:00:14.020 --> 00:00:16.932
+Imagine que estamos construindo
+um aplicativo de listas.
+
+00:00:16.974 --> 00:00:19.059
+Um evento que altera
+o estado da Store
+
+00:00:19.101 --> 00:00:22.551
+seria quando o usuário
+adiciona um novo item à uma lista.
+
+00:00:22.593 --> 00:00:25.987
+Como representaríamos isso
+como um evento?
+
+00:00:26.029 --> 00:00:28.755
+E se usássemos um objeto
+com propriedade type
+
+00:00:28.797 --> 00:00:31.196
+que descrevesse o evento?
+
+00:00:31.238 --> 00:00:34.740
+No exemplo,
+esse objeto pode ser assim.
+
+00:00:34.782 --> 00:00:37.084
+Um objeto comum
+com propriedade type,
+
+00:00:37.126 --> 00:00:39.979
+que indica o tipo de evento
+que ocorreu.
+
+00:00:40.021 --> 00:00:43.059
+Podemos adicionar
+qualquer informação ao evento
+
+00:00:43.101 --> 00:00:45.848
+simplesmente adicionando
+uma propriedade ao objeto.
+
+00:00:45.890 --> 00:00:50.418
+O evento ADD_TODO aconteceu,
+mas qual foi o TODO adicionado?
+
+00:00:50.460 --> 00:00:52.146
+Adicionamos
+uma propriedade TODO,
+
+00:00:52.188 --> 00:00:54.713
+o nome do TODO
+e as informações.
+
+00:00:54.755 --> 00:00:58.251
+Se eu deletar o TODO,
+qual evento seria esse?
+
+00:00:58.293 --> 00:01:02.252
+Eu provavelmente rotularia
+como evento REMOVE_TODO.
+
+00:01:02.294 --> 00:01:04.881
+E como saberemos
+qual TODO foi removido?
+
+00:01:04.923 --> 00:01:07.552
+Passamos o ID do item TODO.
+
+00:01:07.594 --> 00:01:12.104
+Da mesma forma, marcar um item
+como "feito" mudará o estado.
+
+00:01:12.146 --> 00:01:16.047
+O evento de alteração do estado
+pode ser como este objeto.
+
+00:01:16.089 --> 00:01:19.527
+Temos estes objetos, que registram
+os eventos que aconteceram.
+
+00:01:19.569 --> 00:01:21.911
+Vamos dar um nome a eles.
+
+00:01:21.953 --> 00:01:26.232
+Nós os chamaremos de "ações",
+pois podem ocorrer no aplicativo
+
+00:01:26.274 --> 00:01:28.704
+mudando o estado.
+
+00:01:28.746 --> 00:01:32.216
+E se quiséssemos adicionar
+outro recurso ao aplicativo?
+
+00:01:32.258 --> 00:01:35.167
+Em vez de só adicionarmos
+pequenos itens à lista,
+
+00:01:35.209 --> 00:01:38.888
+também queremos que o usuário
+adicione objetivos a longo prazo.
+
+00:01:38.930 --> 00:01:43.080
+A ação para adicionar um objetivo
+pode ser algo assim.
+
+00:01:43.122 --> 00:01:46.072
+Perceba que a propriedade type
+é ADD_GOAL,
+
+00:01:46.114 --> 00:01:48.768
+e uma propriedade goal
+foi passada.
+
+00:01:48.810 --> 00:01:51.863
+Assim como no TODO,
+precisamos de uma ação
+
+00:01:51.925 --> 00:01:54.336
+para representar
+esse cancelamento.
+
+00:01:54.378 --> 00:01:56.216
+Viu como isso é descritivo?
+
+00:01:56.258 --> 00:02:00.656
+Jamais confundiremos essa ação
+com a ação REMOVE_TODO.
+
+00:02:00.698 --> 00:02:03.151
+Todas as ações
+terão propriedade type.
+
+00:02:03.833 --> 00:02:09.472
+Nós criamos uma coleção das ações
+que alteram o estado do aplicativo.
+
+00:02:09.514 --> 00:02:11.617
+Se o estado do aplicativo
+for alterado,
+
+00:02:11.659 --> 00:02:13.776
+saberemos que uma dessas ações
+aconteceu.
+

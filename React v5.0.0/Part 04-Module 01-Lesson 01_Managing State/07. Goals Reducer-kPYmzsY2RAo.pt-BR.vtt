@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.702
+Agora todo o estado
+no aplicativo
+
+00:00:02.736 --> 00:00:05.739
+é apenas um array cheio
+de itens todo diferentes.
+
+00:00:05.772 --> 00:00:09.010
+Mas e se quiséssemos adicionar
+mais funcionalidades
+
+00:00:09.043 --> 00:00:10.210
+ao nosso aplicativo?
+
+00:00:10.243 --> 00:00:13.546
+Em vez de ter e gerenciar
+uma lista de afazeres,
+
+00:00:13.580 --> 00:00:16.549
+nós também queremos gerenciar
+uma lista de metas.
+
+00:00:16.583 --> 00:00:19.953
+Então nossa lista teria afazeres
+do dia a dia,
+
+00:00:19.986 --> 00:00:23.256
+e a lista de metas seriam
+metas a longo prazo.
+
+00:00:23.289 --> 00:00:26.292
+Então, assim como fizemos
+com a todo reducer,
+
+00:00:26.326 --> 00:00:30.964
+vamos criar uma nova reducer aqui
+e chamá-la de "goals".
+
+00:00:30.997 --> 00:00:34.100
+Ela vai conter
+o estado e a ação.
+
+00:00:34.134 --> 00:00:36.169
+E na primeira vez
+que a goals é chamada
+
+00:00:36.202 --> 00:00:37.570
+quando o estado
+está indefinido,
+
+00:00:37.604 --> 00:00:40.640
+vamos configurá-la
+para um array vazio.
+
+00:00:40.674 --> 00:00:43.843
+E, novamente,
+como fizemos na todos,
+
+00:00:43.877 --> 00:00:47.347
+teremos um comando switch,
+escrevendo switch(action.type).
+
+00:00:47.380 --> 00:00:49.449
+Este primeiro caso será
+
+00:00:49.482 --> 00:00:53.286
+quando a propriedade action.type é
+ADD_GOAL.
+
+00:00:53.319 --> 00:00:56.656
+Nós vamos escrever
+state.concat,
+
+00:00:56.690 --> 00:00:59.426
+adicionando a nova meta.
+
+00:00:59.459 --> 00:01:05.098
+E o segundo caso é
+quando o tipo de ação é REMOVE_GOAL,
+
+00:01:05.131 --> 00:01:08.001
+e o que queremos fazer
+neste caso é similar
+
+00:01:08.034 --> 00:01:10.970
+ao que fizemos
+com a REMOVE_TODO.
+
+00:01:11.004 --> 00:01:13.073
+Então eu vou copiar isto.
+
+00:01:13.106 --> 00:01:17.644
+Agora vai ser goal
+em vez de todo.
+
+00:01:17.677 --> 00:01:20.880
+E, como sempre,
+precisamos do default aqui,
+
+00:01:20.914 --> 00:01:25.719
+que vai nos retornar o estado
+que foi passado a ele.
+
+00:01:25.752 --> 00:01:28.888
+Então, em vez de ter
+uma só reducer,
+
+00:01:28.922 --> 00:01:32.092
+nós temos duas reducers:
+a todos e a goals.
+
+00:01:32.125 --> 00:01:34.227
+Mas, quando usamos
+a createStore,
+
+00:01:34.260 --> 00:01:38.398
+só temos que passar
+uma reducer.
+

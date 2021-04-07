@@ -1,0 +1,168 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.156 --> 00:00:03.298
+Agora que temos um estado interno
+dentro da Store
+
+00:00:03.331 --> 00:00:05.658
+e uma forma
+de obter o estado,
+
+00:00:05.691 --> 00:00:07.512
+o próximo recurso
+a ser adicionado
+
+00:00:07.545 --> 00:00:10.954
+é a forma de observar
+as alterações no estado.
+
+00:00:10.987 --> 00:00:13.898
+Se observarmos
+a implementação final aqui,
+
+00:00:13.931 --> 00:00:18.850
+o usuário do createStore
+pode invocá-lo
+
+00:00:18.883 --> 00:00:21.082
+para obter a Store de volta.
+
+00:00:21.115 --> 00:00:23.361
+No momento,
+só há uma propriedade getState,
+
+00:00:23.394 --> 00:00:27.528
+mas seria legal
+poder realizar algo assim.
+
+00:00:27.561 --> 00:00:31.024
+Se fornecermos
+um método subscribe,
+
+00:00:31.057 --> 00:00:34.408
+então eles poderiam passar
+uma função callback para subscribe.S
+
+00:00:34.441 --> 00:00:37.880
+Assim, sempre que o estado
+for alterado internamente,
+
+00:00:37.913 --> 00:00:42.368
+poderemos invocar a função callback,
+e o usuário fará o que quiser.
+
+00:00:42.401 --> 00:00:44.452
+Por ora, como exemplo,
+diremos:
+
+00:00:44.485 --> 00:00:49.196
+"'The new state is: ',
+store.getState".
+
+00:00:49.229 --> 00:00:52.714
+O que desejamos adicionar
+dentro do createStore
+
+00:00:52.747 --> 00:00:56.451
+é uma forma de apoiar
+essa funcionalidade.
+
+00:00:56.484 --> 00:01:00.155
+Lembre-se de que o usuário
+pode se inscrever
+
+00:01:00.188 --> 00:01:01.763
+mais de uma vez.
+
+00:01:01.796 --> 00:01:05.322
+Vamos dizer que, se o usuário
+se inscrever novamente,
+
+00:01:05.355 --> 00:01:08.754
+eles dirão:
+"The store changed."
+
+00:01:08.787 --> 00:01:13.714
+Internamente, rastreamos as vezes
+que o usuário chama subscribe
+
+00:01:13.747 --> 00:01:15.926
+e, quando adicionarmos
+a funcionalidade
+
+00:01:15.959 --> 00:01:18.279
+capaz de alterar
+o estado da Store,
+
+00:01:18.312 --> 00:01:21.527
+precisaremos chamar
+todas as funções que foram passadas
+
+00:01:21.560 --> 00:01:23.966
+quando subscribe
+foi invocado.
+
+00:01:23.999 --> 00:01:28.573
+Então nós criaremos
+um novo array.
+
+00:01:28.606 --> 00:01:30.390
+Nós o chamaremos
+de "listeners".
+
+00:01:30.423 --> 00:01:34.624
+Também precisamos criar
+a função subscribe aqui.
+
+00:01:35.631 --> 00:01:38.337
+E também queremos
+retornar isso.
+
+00:01:39.072 --> 00:01:43.270
+Assim o usuário poderá invocar
+store.subscribe.
+
+00:01:43.303 --> 00:01:45.677
+O subscribe
+será responsável pelo quê?
+
+00:01:45.710 --> 00:01:50.895
+A primeira coisa é pegar
+o array listeners
+
+00:01:50.928 --> 00:01:54.815
+e empurrar para ele
+a função que está sendo passada
+
+00:01:54.848 --> 00:01:57.102
+para o subscribe
+quando ele é invocado,
+
+00:01:57.135 --> 00:01:59.872
+que chamaremos de "listener".
+
+00:02:01.903 --> 00:02:06.372
+Agora temos
+um array listeners,
+
+00:02:06.405 --> 00:02:08.624
+que, ao adicionarmos
+a funcionalidade
+
+00:02:08.657 --> 00:02:11.312
+de atualizar o estado,
+iremos fazer o loop
+
+00:02:11.345 --> 00:02:13.960
+e invocar todas as funções
+
+00:02:13.993 --> 00:02:16.537
+para que isso faça
+o log no console
+
+00:02:16.570 --> 00:02:19.867
+sempre que o estado na Store
+for alterado.
+

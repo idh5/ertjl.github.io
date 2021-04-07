@@ -1,0 +1,110 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.165 --> 00:00:03.347
+Tenho aqui
+um novo arquivo index.js,
+
+00:00:03.380 --> 00:00:06.513
+e a primeira coisa a ser feita
+é a construção de uma função,
+
+00:00:06.546 --> 00:00:09.166
+que criará uma Store nova.
+
+00:00:09.199 --> 00:00:13.319
+Vamos criar uma função aqui,
+que chamaremos de "createStore".
+
+00:00:14.887 --> 00:00:18.702
+A Store será responsável
+por quatro coisas:
+
+00:00:18.735 --> 00:00:20.750
+ela gerenciará o estado,
+
+00:00:20.783 --> 00:00:24.062
+fornecerá uma API
+ou uma forma de obter o estado,
+
+00:00:24.095 --> 00:00:27.984
+observará as alterações
+e atualizará o estado.
+
+00:00:28.017 --> 00:00:30.587
+Para fazer a primeira coisa,
+
+00:00:31.466 --> 00:00:35.720
+podemos criar uma variável
+chamada de "state".
+
+00:00:35.753 --> 00:00:39.593
+Essa variável conterá o estado
+do aplicativo.
+
+00:00:39.626 --> 00:00:44.273
+Este está pronto. Agora precisamos
+disponibilizar uma forma
+
+00:00:44.306 --> 00:00:46.257
+de acessar o estado.
+
+00:00:46.290 --> 00:00:49.096
+E se eu viesse aqui
+e fizesse algo assim?
+
+00:00:49.129 --> 00:00:53.214
+Vamos criar
+uma nova função -
+
+00:00:53.672 --> 00:00:55.157
+que será
+uma função lambda -,
+
+00:00:55.190 --> 00:01:00.457
+e essa getState será responsável
+por retornar o estado do aplicativo,
+
+00:01:00.490 --> 00:01:03.136
+o que pode ser feito
+ao retornar state.
+
+00:01:03.169 --> 00:01:07.985
+Agora, sempre que createStore
+for invocada,
+
+00:01:08.018 --> 00:01:10.152
+queremos retornar
+um objeto...
+
+00:01:10.185 --> 00:01:13.417
+Como já foi dito,
+uma das propriedades do objeto
+
+00:01:13.450 --> 00:01:14.862
+que daremos ao usuário
+
+00:01:14.895 --> 00:01:17.285
+é ter a capacidade
+de obter o estado.
+
+00:01:17.318 --> 00:01:19.079
+Agora precisamos...
+
+00:01:20.471 --> 00:01:22.669
+adicionar a propriedade
+getState aqui.
+
+00:01:22.702 --> 00:01:26.805
+Assim, sempre que invocarem
+createStore, obterão um objeto.
+
+00:01:26.838 --> 00:01:30.204
+Para acessar
+o estado interno da Store,
+
+00:01:30.237 --> 00:01:33.900
+podemos simplesmente invocar
+o método getState.
+

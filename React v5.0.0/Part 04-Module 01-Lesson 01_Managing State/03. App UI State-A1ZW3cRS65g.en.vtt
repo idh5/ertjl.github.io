@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.193
+Think about any application you've ever made.
+
+00:00:03.193 --> 00:00:07.634
+Most likely that app was composed of two things, UI and state.
+
+00:00:07.634 --> 00:00:10.244
+Now, think of any bug you've ever had.
+
+00:00:10.244 --> 00:00:13.500
+Odds are that bug was caused by state mismanagement.
+
+00:00:13.500 --> 00:00:16.500
+Your application was expecting the state to be one thing,
+
+00:00:16.500 --> 00:00:18.390
+but it was actually something else.
+
+00:00:18.390 --> 00:00:21.210
+When your computer freezes and you have to restart it,
+
+00:00:21.210 --> 00:00:24.825
+that's because some state inside of your computer got to a weird place.
+
+00:00:24.824 --> 00:00:27.480
+By restarting it, you reset that state.
+
+00:00:27.480 --> 00:00:29.699
+When a website says you have a new notification,
+
+00:00:29.699 --> 00:00:31.469
+but you click on that and there's nothing new,
+
+00:00:31.469 --> 00:00:34.365
+that's because the state of the app was mismanaged.
+
+00:00:34.365 --> 00:00:36.060
+As I said previously,
+
+00:00:36.060 --> 00:00:38.651
+the goal of this course is to make state management,
+
+00:00:38.651 --> 00:00:40.875
+any app you build more predictable.
+
+00:00:40.875 --> 00:00:43.740
+One of the best ways to improve the quality of the apps you
+
+00:00:43.740 --> 00:00:47.810
+build is to improve the predictability of the state in an application.
+

@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.940
+Previously, you were introduced to rule number one for
+
+00:00:02.940 --> 00:00:06.029
+increasing the predictability of state within the store.
+
+00:00:06.030 --> 00:00:08.280
+Have a collection of events that can occur in
+
+00:00:08.279 --> 00:00:11.324
+the application which will change the state of the store.
+
+00:00:11.324 --> 00:00:13.934
+Now, what does this actually look like?
+
+00:00:13.935 --> 00:00:16.664
+Let's say we were building a to-do list app.
+
+00:00:16.664 --> 00:00:19.379
+One event that would change the state of the store would be
+
+00:00:19.379 --> 00:00:22.394
+when the user adds a new item to their to-do list.
+
+00:00:22.394 --> 00:00:25.875
+How might we go about representing that as an event?
+
+00:00:25.875 --> 00:00:31.094
+What if we just use an object with a type property that describes the event taking place?
+
+00:00:31.094 --> 00:00:32.519
+So in our example,
+
+00:00:32.520 --> 00:00:34.515
+that object might look like this.
+
+00:00:34.515 --> 00:00:39.674
+It's just a plain object with a type property that indicates what type of event occurred.
+
+00:00:39.674 --> 00:00:42.479
+Now, we could add any information we want into
+
+00:00:42.479 --> 00:00:45.614
+the event just by adding a property to the object.
+
+00:00:45.615 --> 00:00:50.325
+The add to-do event took place but what was the to do that was actually added?
+
+00:00:50.325 --> 00:00:54.540
+We can add a to-do property and include the to-dos name and information.
+
+00:00:54.539 --> 00:00:56.339
+If I delete that to do,
+
+00:00:56.340 --> 00:00:58.065
+what event might this be?
+
+00:00:58.064 --> 00:01:01.824
+Well, I would probably label it a REMOVE_TODO event.
+
+00:01:01.825 --> 00:01:04.668
+And how do we know which to do was removed?
+
+00:01:04.668 --> 00:01:07.325
+We'll pass along the to-do items id.
+
+00:01:07.325 --> 00:01:11.750
+Similarly, marking an item as "completed" would toggle its state.
+
+00:01:11.750 --> 00:01:15.739
+This event of toggling the state might look like this object.
+
+00:01:15.739 --> 00:01:19.429
+So, we have these objects that record the events that have happened.
+
+00:01:19.430 --> 00:01:21.769
+Let's give a name to these objects,
+
+00:01:21.769 --> 00:01:24.980
+we'll call them "actions" because they're the type of actions which
+
+00:01:24.980 --> 00:01:28.715
+can occur in the app which will change the application state.
+
+00:01:28.715 --> 00:01:32.165
+Now, what if we wanted to add another feature to our app?
+
+00:01:32.165 --> 00:01:35.225
+Let's say instead of just adding short-term to-do items,
+
+00:01:35.224 --> 00:01:38.609
+we also wanted the user to be able to add long-term goals.
+
+00:01:38.609 --> 00:01:42.834
+The action for adding a goal might look something like this.
+
+00:01:42.834 --> 00:01:46.015
+Notice that the type property is ADD_GOAL,
+
+00:01:46.015 --> 00:01:48.594
+and a goal property is being passed along.
+
+00:01:48.594 --> 00:01:50.724
+And just like deleting a to-do,
+
+00:01:50.724 --> 00:01:54.204
+we need an action to represent the event of deleting a goal.
+
+00:01:54.204 --> 00:01:56.170
+See how descriptive that is?
+
+00:01:56.170 --> 00:02:00.579
+We will never be able to confuse this action with the removed to do actions.
+
+00:02:00.579 --> 00:02:03.579
+All actions must have a type property.
+
+00:02:03.579 --> 00:02:06.459
+Now, what we've done is we've created a collection
+
+00:02:06.459 --> 00:02:09.430
+of all of the actions which can change the state of our app.
+
+00:02:09.430 --> 00:02:11.605
+If the state of our app changes,
+
+00:02:11.604 --> 00:02:14.019
+we'll know that one of those actions occurred.
+

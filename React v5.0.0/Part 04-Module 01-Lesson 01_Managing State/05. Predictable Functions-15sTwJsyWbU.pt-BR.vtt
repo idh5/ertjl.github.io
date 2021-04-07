@@ -1,0 +1,99 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.194 --> 00:00:03.426
+Temos todo o estado do aplicativo
+nesta árvore de estado.
+
+00:00:03.468 --> 00:00:07.433
+Conhecemos todas as ações
+que podem alterar o estado.
+
+00:00:07.475 --> 00:00:10.089
+Temos dois tipos diferentes
+de dados
+
+00:00:10.131 --> 00:00:12.345
+e precisamos de algo
+para juntá-los.
+
+00:00:12.387 --> 00:00:14.778
+Precisamos de uma forma
+de atualizar o estado
+
+00:00:14.820 --> 00:00:17.244
+a partir da ação
+que aconteceu.
+
+00:00:17.286 --> 00:00:20.132
+E se usarmos uma função
+para isso?
+
+00:00:20.174 --> 00:00:22.635
+A função poderá usar
+dois argumentos:
+
+00:00:22.677 --> 00:00:25.475
+o estado atual
+e a ação que aconteceu.
+
+00:00:25.517 --> 00:00:27.860
+Depois, a partir dessa ação,
+
+00:00:27.902 --> 00:00:32.732
+essa função será responsável
+por retornar o estado atualizado.
+
+00:00:32.774 --> 00:00:34.107
+Isso parece bom,
+
+00:00:34.149 --> 00:00:37.276
+mas nosso objetivo
+é a previsibilidade.
+
+00:00:37.318 --> 00:00:40.562
+Essa função precisa
+ser a mais previsível possível.
+
+00:00:40.604 --> 00:00:42.614
+Mas o que isso significa?
+
+00:00:42.656 --> 00:00:46.240
+Precisamos saber qual será
+o valor retornado da função
+
+00:00:46.282 --> 00:00:48.584
+a partir
+dos valores de entrada.
+
+00:00:48.626 --> 00:00:50.287
+Isso parece complicado,
+
+00:00:50.329 --> 00:00:53.134
+mas a comunidade
+de programação funcional
+
+00:00:53.176 --> 00:00:56.327
+já resolveu esse problema
+e deu um nome a isso:
+
+00:00:56.369 --> 00:00:58.335
+"funções puras".
+
+00:00:58.377 --> 00:01:01.864
+Isso nos leva à segunda regra
+para aumentar a previsibilidade:
+
+00:01:01.906 --> 00:01:06.257
+a função que retorna o novo estado
+precisa ser uma função pura.
+
+00:01:06.299 --> 00:01:08.433
+Vejamos o que são
+as funções puras
+
+00:01:08.475 --> 00:01:10.513
+e como elas melhoram
+a previsibilidade.
+

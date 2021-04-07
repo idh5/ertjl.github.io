@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.168
+Agora que temos
+alguns estados internos,
+
+00:00:02.202 --> 00:00:05.405
+podemos obter este estado
+com o método getState
+
+00:00:05.438 --> 00:00:08.708
+e podemos ver as mudanças nele
+com o subscribe.
+
+00:00:08.742 --> 00:00:10.343
+Nós também temos uma função
+
+00:00:10.377 --> 00:00:13.847
+que contém o estado atual
+e uma ação que ocorreu,
+
+00:00:13.880 --> 00:00:16.149
+e nos retorna
+o novo estado do aplicativo.
+
+00:00:16.182 --> 00:00:21.921
+Só precisamos descobrir
+como atualizar o estado da Store.
+
+00:00:21.955 --> 00:00:26.626
+E faremos isto
+com uma nova função
+
+00:00:26.659 --> 00:00:30.063
+que chamaremos de "dispatch".
+
+00:00:30.096 --> 00:00:35.769
+A dispatch é responsável
+por atualizar o estado
+
+00:00:35.802 --> 00:00:38.605
+dentro da Store.
+
+00:00:38.638 --> 00:00:41.841
+Então, para fazer isto,
+
+00:00:41.875 --> 00:00:44.444
+ele precisa receber a ação
+
+00:00:44.477 --> 00:00:47.080
+que vai dizer à dispatch
+o evento específico
+
+00:00:47.113 --> 00:00:49.616
+que ocorreu dentro
+do aplicativo.
+
+00:00:49.649 --> 00:00:53.631
+Agora... com acesso ao estado
+
+00:00:53.665 --> 00:00:56.790
+e à ação que ocorreu,
+
+00:00:56.823 --> 00:00:58.625
+o que a dispatch pode fazer
+
+00:00:58.658 --> 00:01:02.228
+para conseguir o novo estado
+do aplicativo
+
+00:01:02.262 --> 00:01:06.299
+é usar a função todos aqui,
+
+00:01:06.332 --> 00:01:09.703
+passando o estado
+e a ação para ela.
+
+00:01:09.736 --> 00:01:11.438
+Então o que faremos...
+
+00:01:11.471 --> 00:01:16.643
+O estado dentro da Store será
+o que recebemos de volta
+
+00:01:16.676 --> 00:01:18.912
+após usar a todos,
+
+00:01:18.945 --> 00:01:22.749
+passando para ele
+o estado atual e a ação que ocorreu.
+
+00:01:22.782 --> 00:01:25.785
+E porque acabamos de modificar
+o estado -
+
+00:01:25.819 --> 00:01:28.888
+se você se lembra,
+nós precisamos fazer o loop
+
+00:01:28.922 --> 00:01:30.090
+em todos os listeners,
+
+00:01:30.123 --> 00:01:34.694
+que vai ser só um array de funções,
+e usar cada uma delas.
+
+00:01:34.728 --> 00:01:38.598
+Os listeners de configuração
+do usuário serão chamados.
+
+00:01:38.631 --> 00:01:42.902
+Escreveremos
+listeners.forEach,
+
+00:01:45.304 --> 00:01:48.742
+e para cada listener
+dentro da listeners,
+
+00:01:48.775 --> 00:01:51.411
+nós vamos usá-lo.
+
+00:01:51.444 --> 00:01:54.214
+Agora, quando o usuário
+quer atualizar o estado
+
+00:01:54.247 --> 00:01:59.486
+dentro da Store,
+ele precisa usar a dispatch,
+
+00:01:59.519 --> 00:02:03.356
+passando a ação específica
+que ocorreu para ela.
+

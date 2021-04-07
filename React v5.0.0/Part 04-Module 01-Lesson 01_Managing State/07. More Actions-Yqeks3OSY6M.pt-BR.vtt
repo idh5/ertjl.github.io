@@ -1,0 +1,355 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.570
+Até agora, nós conseguimos adicionar
+novos itens todo
+
+00:00:03.603 --> 00:00:05.972
+ao estado interno da store,
+
+00:00:06.006 --> 00:00:09.442
+fazendo a dispatch
+da ação ADD_TODO
+
+00:00:09.476 --> 00:00:11.544
+e passando um item todo.
+
+00:00:11.578 --> 00:00:14.247
+Mas também queremos
+poder remover itens todo
+
+00:00:14.280 --> 00:00:16.082
+e alternar itens todo.
+
+00:00:16.116 --> 00:00:18.385
+Então vamos pegar
+a função reducer
+
+00:00:18.418 --> 00:00:20.320
+e adicionar
+esta funcionalidade.
+
+00:00:20.353 --> 00:00:22.956
+Se o tipo de ação não é
+ADD_TODO,
+
+00:00:22.989 --> 00:00:26.455
+nós podemos escrever else if
+
+00:00:26.489 --> 00:00:30.663
+(action.type ===
+'REMOVE_TODO').
+
+00:00:30.697 --> 00:00:33.533
+E podemos adicionar
+mais um aqui,
+
+00:00:33.566 --> 00:00:39.172
+escrevendo else if (action.type
+=== 'TOGGLE_TODO'),
+
+00:00:39.205 --> 00:00:44.177
+e, finalmente, vamos escrever
+else e return state,
+
+00:00:44.210 --> 00:00:47.313
+o que permite nos livrarmos
+desta linha bem aqui.
+
+00:00:47.347 --> 00:00:50.050
+Agora a questão é
+como atualizar o estado
+
+00:00:50.083 --> 00:00:52.552
+com base na ação REMOVE_TODO?
+
+00:00:52.585 --> 00:00:57.424
+Nós usaremos o .filter
+
+00:00:57.457 --> 00:01:03.396
+para filtrar o todo
+que tem uma ID
+
+00:01:03.430 --> 00:01:07.133
+que não é igual à ID na ação.
+
+00:01:07.167 --> 00:01:12.672
+Então, quando fazemos a dispatch
+na ação REMOVE_TODO,
+
+00:01:12.706 --> 00:01:15.508
+precisamos garantir
+que passamos uma ID
+
+00:01:15.542 --> 00:01:19.913
+que representa a ID da ação
+ou a ID do item todo
+
+00:01:19.946 --> 00:01:22.749
+que queremos remover
+do estado.
+
+00:01:22.782 --> 00:01:25.885
+E agora, a última funcionalidade
+que queremos adicionar
+
+00:01:25.919 --> 00:01:27.454
+é para a TOGGLE_TODO.
+
+00:01:27.487 --> 00:01:29.022
+E esta é um pouco
+mais delicada
+
+00:01:29.055 --> 00:01:34.627
+porque queremos atualizar
+a propriedade complete
+
+00:01:34.661 --> 00:01:37.864
+no item todo,
+de false para true.
+
+00:01:37.897 --> 00:01:42.002
+Mas lembre-se, a todo reducer
+precisa ser uma função pura.
+
+00:01:42.035 --> 00:01:44.671
+Então não podemos modificar
+a complete diretamente.
+
+00:01:44.704 --> 00:01:49.809
+Então, o que faremos é usar
+o state.map.
+
+00:01:49.843 --> 00:01:53.580
+Vamos mapear cada item todo
+no estado.
+
+00:01:54.014 --> 00:01:56.549
+E para cada item todo,
+
+00:01:56.583 --> 00:02:01.354
+vamos dizer se todo.id ===...
+
+00:02:01.388 --> 00:02:05.725
+Quer dizer, !== action.id,
+devolva o item todo,
+
+00:02:05.759 --> 00:02:07.060
+não faça nada com ele.
+
+00:02:07.093 --> 00:02:10.463
+Mas se ele é igual
+ao action.id,
+
+00:02:10.497 --> 00:02:15.377
+então nós usaremos
+o Object.assign,
+
+00:02:16.636 --> 00:02:19.472
+passaremos para ele
+um objeto vazio
+
+00:02:19.506 --> 00:02:23.076
+e o que queremos fundir
+neste objeto vazio,
+
+00:02:23.109 --> 00:02:25.145
+que é nosso objeto todo.
+
+00:02:25.178 --> 00:02:27.080
+Depois passaremos para ele
+as atualizações
+
+00:02:27.113 --> 00:02:29.482
+que queiramos fazer
+neste objeto fundido,
+
+00:02:29.516 --> 00:02:31.217
+em que escreveremos complete.
+
+00:02:31.251 --> 00:02:35.455
+Queremos que seja o oposto
+do todo.complete.
+
+00:02:35.488 --> 00:02:37.424
+O que está acontecendo aqui
+é que,
+
+00:02:37.457 --> 00:02:40.093
+quando fazemos a dispatch
+da ação TOGGLE_TODO,
+
+00:02:40.126 --> 00:02:43.496
+queremos atualizar
+a propriedade complete
+
+00:02:43.530 --> 00:02:47.467
+em qualquer ID
+que é passada junto na ação.
+
+00:02:47.500 --> 00:02:50.337
+Então vamos mapear
+todos os nossos itens todo,
+
+00:02:50.370 --> 00:02:54.307
+se a ID é equivalente
+à ID na ação...
+
+00:02:54.341 --> 00:02:58.211
+Quer dizer, se a ID no todo
+não equivale à ID na ação,
+
+00:02:58.244 --> 00:02:59.946
+nós devolvemos este todo.
+
+00:02:59.979 --> 00:03:01.114
+Não queremos nada com ele.
+
+00:03:01.147 --> 00:03:02.349
+Mas, se ele for equivalente,
+
+00:03:02.382 --> 00:03:08.054
+usaremos o Object.assign,
+que nos permite criar um novo objeto
+
+00:03:08.088 --> 00:03:10.357
+e fundir diferentes propriedades
+neste objeto.
+
+00:03:10.390 --> 00:03:12.058
+Nós criamos este novo objeto,
+
+00:03:12.092 --> 00:03:15.962
+fundimos toda a propriedade
+no todo neste objeto,
+
+00:03:15.995 --> 00:03:17.397
+exceto a complete,
+
+00:03:17.430 --> 00:03:21.501
+que vai ser o oposto
+do que a complete atualmente é.
+
+00:03:21.534 --> 00:03:24.304
+Nós acabamos de adicionar
+a funcionalidade
+
+00:03:24.337 --> 00:03:26.606
+para fazer a dispatch
+da ação REMOVE_TODO,
+
+00:03:26.639 --> 00:03:29.209
+assim como tipos
+de ação TOGGLE_TODO.
+
+00:03:29.242 --> 00:03:32.145
+E a todo reducer ainda é
+uma função pura
+
+00:03:32.178 --> 00:03:35.048
+porque não estamos modificando
+nenhum estado dentro dela.
+
+00:03:35.081 --> 00:03:38.118
+Em vez disso, estamos usando
+concat, filter, map,
+
+00:03:38.151 --> 00:03:40.954
+e um pouco do Object.assign.
+
+00:03:40.987 --> 00:03:45.191
+Você vai notar que, ao adicionarmos
+os novos tipos de ação,
+
+00:03:45.225 --> 00:03:47.594
+a todo reducer ficou
+um pouco grande
+
+00:03:47.627 --> 00:03:50.163
+porque agora estamos lidando
+com mais de um tipo de ação.
+
+00:03:50.196 --> 00:03:51.564
+Você não tem que fazer isto,
+
+00:03:51.598 --> 00:03:54.567
+mas sempre que vejo
+um if statement como este,
+
+00:03:54.601 --> 00:03:56.803
+eu o transformo
+no chamado "comando switch".
+
+00:03:56.836 --> 00:03:59.139
+Então se você já usou
+um comando switch antes,
+
+00:03:59.172 --> 00:04:02.709
+você vai estar mais familiarizado
+com o que o código está fazendo.
+
+00:04:02.742 --> 00:04:07.914
+Então nós vamos escrever
+switch(action.type),
+
+00:04:07.947 --> 00:04:11.818
+e o primeiro caso,
+como nós temos aqui,
+
+00:04:11.851 --> 00:04:14.521
+será ADD_TODO.
+
+00:04:14.554 --> 00:04:19.125
+Quando a dispatch da ação ADD_TODO
+for feita,
+
+00:04:19.159 --> 00:04:22.362
+no return colocaremos
+state.concat.
+
+00:04:22.395 --> 00:04:26.766
+O segundo caso vai ser
+REMOVE_TODO,
+
+00:04:26.800 --> 00:04:28.363
+e o que queremos criar
+
+00:04:28.396 --> 00:04:31.037
+quando for feita a dispatch
+da REMOVE_TODO
+
+00:04:31.071 --> 00:04:33.239
+é esta linha aqui.
+
+00:04:35.703 --> 00:04:40.814
+O terceiro caso vai ser
+TOGGLE_TODO.
+
+00:04:41.375 --> 00:04:45.752
+Vamos apenas copiar
+esta linha aqui,
+
+00:04:50.560 --> 00:04:55.567
+e agora o caso default será
+
+00:04:55.603 --> 00:04:58.131
+esta linha bem aqui.
+
+00:04:58.164 --> 00:05:01.167
+Isto é só uma preferência,
+mas acho que é um pouco mais limpa.
+
+00:05:01.201 --> 00:05:06.639
+O que fizemos foi substituir
+o if, else if, else if e else
+
+00:05:06.673 --> 00:05:09.476
+por este comando switch
+único.
+
+00:05:09.509 --> 00:05:12.579
+E está essencialmente fazendo
+a mesma coisa.
+

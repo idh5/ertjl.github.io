@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.625
+At this point, we now have to reducers,
+
+00:00:02.625 --> 00:00:05.445
+our Todos Reducer and our Goals Reducer.
+
+00:00:05.445 --> 00:00:10.195
+Each is responsible for handling their specific slice of the state tree.
+
+00:00:10.195 --> 00:00:12.165
+This introduces a new problem though.
+
+00:00:12.164 --> 00:00:14.137
+When we called createStore,
+
+00:00:14.137 --> 00:00:16.815
+we passed to it our single Todos reducer.
+
+00:00:16.815 --> 00:00:18.966
+Whenever dispatch was called,
+
+00:00:18.966 --> 00:00:20.294
+we'd call this reducer,
+
+00:00:20.294 --> 00:00:23.260
+passing at the current state and the action which was dispatched,
+
+00:00:23.260 --> 00:00:24.810
+and we get back the new state.
+
+00:00:24.809 --> 00:00:28.350
+Well, now we not only have our Todos reducer,
+
+00:00:28.350 --> 00:00:31.529
+we also have our Goals reducer and each are expected to
+
+00:00:31.530 --> 00:00:36.450
+receive their specific slice of the state tree whenever an action is dispatched.
+
+00:00:36.450 --> 00:00:41.240
+What we need to do, is instead of passing createStore out single Todos reducer,
+
+00:00:41.240 --> 00:00:44.294
+we want to create almost like a root reducer function,
+
+00:00:44.293 --> 00:00:46.140
+which will be responsible for calling
+
+00:00:46.140 --> 00:00:50.189
+the correct reducer whenever specific actions are dispatched.
+
+00:00:50.189 --> 00:00:53.449
+That was a lot of words to say that we want our app to now work
+
+00:00:53.450 --> 00:00:56.585
+with both our to Todos reducer as well as our Goals reducer.
+
+00:00:56.585 --> 00:00:58.369
+Let's see what that will look like.
+

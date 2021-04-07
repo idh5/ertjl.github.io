@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.600
+So what I have here is a brand new index.js file,
+
+00:00:03.600 --> 00:00:05.519
+and the first thing we want to do is we want to build
+
+00:00:05.519 --> 00:00:09.320
+a function that's going to create us a brand new store.
+
+00:00:09.320 --> 00:00:11.745
+So what we'll do is let's create a function here first,
+
+00:00:11.744 --> 00:00:13.929
+we'll call it createStore,
+
+00:00:13.970 --> 00:00:18.644
+and again remember the store is going to be responsible for four things;
+
+00:00:18.644 --> 00:00:21.102
+it's going to manage the state,
+
+00:00:21.102 --> 00:00:23.865
+then we need to provide an API or a way to get the state,
+
+00:00:23.864 --> 00:00:27.854
+a way to list all the changes on the state as well as a way to update the state.
+
+00:00:27.855 --> 00:00:30.929
+So, in order to do number one here,
+
+00:00:30.929 --> 00:00:34.244
+what if we came in here and create a variable,
+
+00:00:34.244 --> 00:00:36.959
+let's just call 'state,' so this state variable
+
+00:00:36.960 --> 00:00:39.524
+is going to hold the state of our entire application.
+
+00:00:39.524 --> 00:00:40.979
+So this one is done right here.
+
+00:00:40.979 --> 00:00:46.214
+Now, what we need to do is we need to provide a way to get access to the state.
+
+00:00:46.215 --> 00:00:49.095
+So what if we came in here and did something like this,
+
+00:00:49.094 --> 00:00:53.795
+well lets create a new function,
+
+00:00:53.795 --> 00:00:58.140
+we'll use an arrow function and all getState is going to be responsible for is
+
+00:00:58.140 --> 00:01:03.015
+returning us the state of our application which it can do just by returning state,
+
+00:01:03.015 --> 00:01:08.064
+and then now what we want to do is whenever createStore is invoked,
+
+00:01:08.063 --> 00:01:10.064
+we want to return an object,
+
+00:01:10.064 --> 00:01:13.649
+and as I mentioned earlier one of the properties on that object that we
+
+00:01:13.650 --> 00:01:17.430
+want to give the user is the ability to get the state.
+
+00:01:17.430 --> 00:01:21.210
+So all we need to do is add
+
+00:01:21.209 --> 00:01:25.349
+the getState property here so whenever they invoke createStore,
+
+00:01:25.349 --> 00:01:30.305
+they'll get an object back and in order to access the internal state of our store,
+
+00:01:30.305 --> 00:01:34.359
+they can just invoke the getState method.
+

@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.615
+Pure functions are defined by three characteristics.
+
+00:00:03.615 --> 00:00:08.265
+First, they always return the same result if the same arguments are passed in.
+
+00:00:08.265 --> 00:00:11.610
+This means that even if you call the function a million times,
+
+00:00:11.609 --> 00:00:14.879
+the function will return the same value every single time.
+
+00:00:14.880 --> 00:00:18.929
+Second, they depend only on the arguments passed into them.
+
+00:00:18.929 --> 00:00:23.054
+In other words, they'd never access values outside of their own scope.
+
+00:00:23.054 --> 00:00:27.589
+The return value of a pure function is determined only by its input values.
+
+00:00:27.589 --> 00:00:31.553
+And finally, pure functions should never produce any side effects.
+
+00:00:31.553 --> 00:00:35.574
+This means that the function has absolutely no interaction with the outside world,
+
+00:00:35.575 --> 00:00:38.890
+such as making network requests or mutating external state.
+
+00:00:38.890 --> 00:00:43.585
+If a function passes all three of these requirements, then it's a pure function.
+
+00:00:43.585 --> 00:00:45.685
+If it fails even one of these,
+
+00:00:45.685 --> 00:00:47.410
+then it's an impure function.
+
+00:00:47.409 --> 00:00:50.500
+Remember that we're trying to manage state predictably.
+
+00:00:50.500 --> 00:00:52.719
+Impure functions aren't bad,
+
+00:00:52.719 --> 00:00:55.164
+but they are inherently not predictable.
+
+00:00:55.164 --> 00:00:58.548
+On the other hand, pure functions are predictable,
+
+00:00:58.548 --> 00:01:03.020
+and this is why we need our functions to be pure to increase state predictability.
+

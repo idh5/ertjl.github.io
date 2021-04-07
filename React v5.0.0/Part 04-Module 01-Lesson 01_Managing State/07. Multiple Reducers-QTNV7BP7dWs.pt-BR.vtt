@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.569
+A esta altura,
+temos duas reducers,
+
+00:00:02.602 --> 00:00:05.405
+a todos reducer
+e a goals reducer.
+
+00:00:05.438 --> 00:00:08.508
+Cada uma delas lida
+com um pedaço específico
+
+00:00:08.541 --> 00:00:09.843
+da árvore de estado.
+
+00:00:09.876 --> 00:00:12.112
+Mas isto introduz
+um novo problema:
+
+00:00:12.145 --> 00:00:14.080
+quando chamamos a createStore
+
+00:00:14.114 --> 00:00:16.750
+e passamos para ela
+a todos reducer.
+
+00:00:16.783 --> 00:00:18.918
+Quando a dispatch era chamada,
+
+00:00:18.952 --> 00:00:20.086
+usávamos a todos reducer,
+
+00:00:20.120 --> 00:00:21.388
+passávamos o estado atual
+
+00:00:21.421 --> 00:00:23.223
+e a ação que foi disparada
+para ela,
+
+00:00:23.256 --> 00:00:24.891
+e recebíamos o novo estado.
+
+00:00:24.924 --> 00:00:30.196
+Agora, além da todos reducer,
+também temos a goals reducer,
+
+00:00:30.230 --> 00:00:33.201
+e espera-se que cada uma delas
+receba seus pedaços específicos
+
+00:00:33.234 --> 00:00:34.367
+da árvore de estado,
+
+00:00:34.401 --> 00:00:36.403
+sempre que é feita
+a dispatch de uma ação.
+
+00:00:36.436 --> 00:00:37.904
+O que precisamos fazer é,
+
+00:00:37.937 --> 00:00:41.174
+em vez de passar a todos reducer
+para a createStore,
+
+00:00:41.207 --> 00:00:44.244
+queremos criar
+uma função root reducer,
+
+00:00:44.277 --> 00:00:47.447
+que será responsável por chamar
+a reducer correta
+
+00:00:47.480 --> 00:00:50.150
+sempre que for feita a dispatch
+de ações específicas.
+
+00:00:50.183 --> 00:00:53.586
+Isto tudo quer dizer que queremos
+que o aplicativo trabalhe
+
+00:00:53.620 --> 00:00:56.523
+tanto com a todos reducer
+quanto com a goals reducer.
+
+00:00:56.556 --> 00:00:58.358
+Vamos ver como fica.
+
