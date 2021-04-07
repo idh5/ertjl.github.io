@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.105
+In this lesson, we're going to learn all about routing.
+
+00:00:04.105 --> 00:00:07.570
+Admittedly, the routing senior react native is a little crazy.
+
+00:00:07.570 --> 00:00:08.785
+The solutions are great,
+
+00:00:08.785 --> 00:00:11.935
+but there are many different solutions with different trade offs.
+
+00:00:11.935 --> 00:00:15.130
+The router that we're going to go with, is react navigation.
+
+00:00:15.130 --> 00:00:17.460
+The reason for this, is because it was built by a team at
+
+00:00:17.460 --> 00:00:21.414
+Facebook and is the official routing solution for React Native.
+
+00:00:21.414 --> 00:00:26.609
+Routing on Native is a completely different paradigm than routing on the web.
+
+00:00:26.609 --> 00:00:28.259
+When you're routing on the web,
+
+00:00:28.260 --> 00:00:32.954
+typically what you're doing is you're mapping a URL to a specific component.
+
+00:00:32.954 --> 00:00:36.899
+On Native, instead of mapping a URL to a component,
+
+00:00:36.899 --> 00:00:39.344
+the router keeps track of a route stack.
+
+00:00:39.344 --> 00:00:41.795
+You can think of it like an array of routes.
+
+00:00:41.795 --> 00:00:44.280
+So when you navigate around your application,
+
+00:00:44.280 --> 00:00:47.865
+the router pushes and pops routes off the route stack.
+
+00:00:47.865 --> 00:00:50.760
+To introduce this new routing paradigm,
+
+00:00:50.759 --> 00:00:55.479
+let's take a look at react navigations, tab navigator API.
+

@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.434 --> 00:00:03.904
+Já falamos sobre como o React Native
+usa CSS no JS
+
+00:00:03.937 --> 00:00:06.240
+para adicionar estilização
+ao aplicativo
+
+00:00:06.273 --> 00:00:08.775
+e, especificamente,
+aos seus componentes.
+
+00:00:08.809 --> 00:00:12.846
+Mas não falamos de como
+o React Native lida com o layout.
+
+00:00:12.879 --> 00:00:15.349
+Se você desenvolve Web
+há algum tempo,
+
+00:00:15.382 --> 00:00:19.186
+deve conhecer os conceitos
+de "block" e "float".
+
+00:00:19.219 --> 00:00:22.656
+De acordo com a MDN,
+a propriedade float do CSS
+
+00:00:22.689 --> 00:00:24.658
+diz se um elemento
+deve ser ajustado
+
+00:00:24.691 --> 00:00:27.427
+à esquerda ou à direita
+de seu container,
+
+00:00:27.460 --> 00:00:30.497
+e quais elementos text e inline
+o envolvem.
+
+00:00:30.530 --> 00:00:32.032
+Em outras palavras,
+
+00:00:32.065 --> 00:00:36.570
+floats permitem que você especifique
+a posição entre os elementos.
+
+00:00:36.603 --> 00:00:38.605
+Se você está atualizado
+com as opções
+
+00:00:38.638 --> 00:00:40.541
+de layout em CSS
+nos últimos anos,
+
+00:00:40.574 --> 00:00:42.743
+já deve ter ouvido falar
+em "flexbox".
+
+00:00:42.776 --> 00:00:44.511
+Novamente, segundo o MDN:
+
+00:00:45.112 --> 00:00:46.880
+"Flexbox é um modo de layout
+
+00:00:46.914 --> 00:00:51.318
+que pretende acomodar diferentes
+tamanhos de tela e dispositivos."
+
+00:00:51.351 --> 00:00:55.222
+Para muitos aplicativos,
+o modelo flexbox é mais fácil
+
+00:00:55.255 --> 00:00:58.859
+do que o block,
+já que não emprega floats.
+
+00:00:58.892 --> 00:01:00.894
+Flexbox veio para substituir
+
+00:01:00.927 --> 00:01:03.463
+a antiga tendência
+de layout em blocks.
+
+00:01:03.496 --> 00:01:06.567
+E, na minha opinião
+e na de muitos outros,
+
+00:01:06.600 --> 00:01:07.868
+é muito melhor.
+
+00:01:07.901 --> 00:01:11.104
+Naturalmente, React Native
+escolheu implementar flexboxes
+
+00:01:11.137 --> 00:01:13.907
+para o layout,
+em detrimento dos antigos blocks.
+
+00:01:13.940 --> 00:01:16.310
+Se você não conhecer flexbox,
+não se preocupe.
+
+00:01:16.343 --> 00:01:18.979
+Toda a seção seguinte
+se dedica a ensinar-lhe isso.
+
+00:01:19.012 --> 00:01:22.049
+E, se você já sabe,
+é meio caminho andado.
+
+00:01:22.082 --> 00:01:24.151
+Há, contudo,
+diferenças sutis
+
+00:01:24.184 --> 00:01:26.687
+entre a especificação
+flexbox oficial
+
+00:01:26.720 --> 00:01:29.990
+e a implementação do React Native.
+Cobriremos isso também.
+

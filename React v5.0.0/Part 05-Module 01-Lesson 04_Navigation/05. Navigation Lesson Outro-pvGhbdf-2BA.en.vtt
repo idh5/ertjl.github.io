@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.070
+In this lesson you learned about routeing with React navigation.
+
+00:00:04.070 --> 00:00:08.300
+Tab navigator allows you to set up a screen with several tabs.
+
+00:00:08.300 --> 00:00:11.600
+Stack navigator provides a way for your app to
+
+00:00:11.599 --> 00:00:16.364
+transition between screens where each new screen is placed on top of a stack,
+
+00:00:16.364 --> 00:00:21.964
+and drawer navigator is used to easily set up a screen with a drawer navigation.
+
+00:00:21.964 --> 00:00:23.914
+Finally, you learned how to nest
+
+00:00:23.914 --> 00:00:27.049
+the different navigators to get any routing flow you need.
+
+00:00:27.050 --> 00:00:29.150
+In the next lesson,
+
+00:00:29.149 --> 00:00:34.000
+you'll learn how to extend the functionality of your app by leveraging native features.
+

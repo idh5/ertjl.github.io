@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:03.200
+Já falamos bastante
+de como cada plataforma,
+
+00:00:03.233 --> 00:00:06.267
+seja iOS ou Android,
+tem sua própria cara
+
+00:00:06.300 --> 00:00:08.333
+e seu próprio estilo.
+
+00:00:08.367 --> 00:00:12.333
+Quando criamos um aplicativo,
+precisamos ter isso em mente.
+
+00:00:12.367 --> 00:00:16.500
+Um exemplo que vimos mais cedo
+quando criávamos nosso ícone:
+
+00:00:16.533 --> 00:00:19.233
+procurei pelo ícone pizza,
+
+00:00:19.267 --> 00:00:23.267
+e a pizza que usamos
+foi a iOS-pizza.
+
+00:00:23.300 --> 00:00:26.100
+Veja que aqui temos
+algumas pizzas diferentes.
+
+00:00:26.133 --> 00:00:27.733
+Esta é a do iOS, obviamente,
+
+00:00:27.767 --> 00:00:32.933
+e esta é a MD-pizza
+ou a Material Design Pizza.
+
+00:00:32.967 --> 00:00:35.333
+Não faz sentido nenhum
+
+00:00:35.600 --> 00:00:40.600
+usarmos uma iOS-Pizza
+em um Android.
+
+00:00:40.633 --> 00:00:45.300
+Em vez disso, devemos usar
+a Material Design Pizza.
+
+00:00:45.333 --> 00:00:49.333
+Se um usuário usar o aplicativo,
+ele pode ficar ofendido
+
+00:00:49.367 --> 00:00:53.400
+por você ter usado
+uma pizza do iOS no Android.
+
+00:00:53.433 --> 00:00:57.167
+Ele espera
+que tenha a cara do Android,
+
+00:00:57.200 --> 00:00:58.900
+a cara do Material Design.
+
+00:00:58.933 --> 00:01:01.267
+Para resolver isso,
+
+00:01:01.300 --> 00:01:04.100
+o React Native tem
+uma propriedade de plataforma.
+
+00:01:04.133 --> 00:01:08.267
+Então
+podemos escrever aqui...
+
+00:01:08.300 --> 00:01:12.433
+se "Platform.OS = iOS",
+
+00:01:12.467 --> 00:01:16.867
+queremos mostrar
+a "iOS-pizza".
+
+00:01:16.900 --> 00:01:19.867
+E se não for, ou seja,
+se for um Android,
+
+00:01:19.900 --> 00:01:25.700
+queremos mostrar
+a Material Design Pizza.
+
+00:01:25.733 --> 00:01:28.933
+Agora, quando os aplicativos
+recarregarem,
+
+00:01:28.967 --> 00:01:33.767
+veja que temos uma pizza específica
+para cada plataforma,
+
+00:01:33.800 --> 00:01:37.700
+porque usamos "Platform.OS"
+
+00:01:37.733 --> 00:01:40.667
+para detectar
+que plataforma estamos usando.
+
+00:01:40.700 --> 00:01:44.867
+Podemos fazer a mesma coisa
+com os estilos, se quisermos.
+
+00:01:44.900 --> 00:01:48.600
+Imagine que são nomes de classe
+na nossa StyleSheet.
+
+00:01:48.633 --> 00:01:52.400
+Podemos escrever:
+se for iOS, usar os botões do iOS,
+
+00:01:52.433 --> 00:01:55.500
+se não,
+usar os botões do Android.
+

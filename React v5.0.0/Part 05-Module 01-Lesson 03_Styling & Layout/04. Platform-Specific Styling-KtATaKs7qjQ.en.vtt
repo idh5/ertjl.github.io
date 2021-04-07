@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.350
+We've talked over and over again how each platform,
+
+00:00:03.350 --> 00:00:06.320
+whether it's iOS or Android has their own unique feel,
+
+00:00:06.320 --> 00:00:08.405
+and their own unique style to it.
+
+00:00:08.404 --> 00:00:09.919
+And when you're building an app,
+
+00:00:09.919 --> 00:00:12.195
+you really need to keep that in mind.
+
+00:00:12.195 --> 00:00:16.365
+One example we saw earlier when we were building out our icon,
+
+00:00:16.364 --> 00:00:19.264
+I searched for the icon pizza,
+
+00:00:19.265 --> 00:00:23.410
+and the pizza that we used was the iOS-pizza.
+
+00:00:23.410 --> 00:00:25.969
+Now you'll notice here there are a few different pizzas,
+
+00:00:25.969 --> 00:00:27.529
+this is the iOS-pizza obviously,
+
+00:00:27.530 --> 00:00:32.950
+and this is the MD-pizza or the Material Design pizza.
+
+00:00:32.950 --> 00:00:40.530
+Now, it doesn't make sense to have an iOS pizza on an Android device.
+
+00:00:40.530 --> 00:00:42.020
+What we should have instead,
+
+00:00:42.020 --> 00:00:45.700
+is we should have the Material Design pizza.
+
+00:00:45.700 --> 00:00:48.035
+If you had a user using this,
+
+00:00:48.034 --> 00:00:53.329
+they might be offended that you're using an iOS pizza on an Android device,
+
+00:00:53.329 --> 00:00:58.789
+they expect their experience to be more Androidy, more Material Designy.
+
+00:00:58.789 --> 00:01:03.598
+So what we can do to fix this is React Native has this platform property.
+
+00:01:03.598 --> 00:01:08.884
+And so in here what we can do is we can say if
+
+00:01:08.885 --> 00:01:16.475
+Platform.OS is iOS then what we want to do is show them the iOS-pizza,
+
+00:01:16.474 --> 00:01:19.579
+and if it's not meaning it's Android,
+
+00:01:19.579 --> 00:01:25.769
+then what we want to do is show them the md-pizza.
+
+00:01:25.769 --> 00:01:28.944
+So now what's going to happen when our apps refresh,
+
+00:01:28.944 --> 00:01:33.634
+notice we have the distinct pizza for the distinct platform
+
+00:01:33.635 --> 00:01:40.670
+because we are using Platform.OS in order to detect which platform we're on.
+
+00:01:40.670 --> 00:01:44.644
+We can also do this exact same things with styles if we want to.
+
+00:01:44.644 --> 00:01:48.429
+Imagine these were class names here with our stylesheet,
+
+00:01:48.430 --> 00:01:52.370
+we can say if we're on iOS go ahead and apply the iOS button,
+
+00:01:52.370 --> 00:01:56.000
+if we're not then go ahead and apply the Android button.
+

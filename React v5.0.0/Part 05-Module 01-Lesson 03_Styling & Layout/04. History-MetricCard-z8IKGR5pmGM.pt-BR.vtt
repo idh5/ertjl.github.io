@@ -1,0 +1,228 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:04.200
+Agora, o próximo passo
+é estilizar esta seção aqui,
+
+00:00:04.233 --> 00:00:05.933
+onde temos o dia.
+
+00:00:05.966 --> 00:00:09.967
+Nós faremos o nosso próprio
+componente para isso.
+
+00:00:10.000 --> 00:00:13.100
+Vamos chamá-lo
+de "MetricCard".
+
+00:00:13.133 --> 00:00:17.000
+E agora precisaremos
+do React.
+
+00:00:17.033 --> 00:00:20.033
+Os componentes "react-native"
+de que precisamos são:
+
+00:00:20.066 --> 00:00:23.567
+View, StyleSheet e Text.
+
+00:00:23.600 --> 00:00:26.167
+Todos vindos
+de "react-native".
+
+00:00:26.200 --> 00:00:30.167
+E então precisaremos
+do nosso componente DateHeader.
+
+00:00:30.200 --> 00:00:32.367
+Também vamos importar
+
+00:00:32.400 --> 00:00:37.167
+"getMetricMetaInfo"
+do nosso arquivo helpers.
+
+00:00:37.200 --> 00:00:41.600
+Por fim, precisamos do cinza,
+
+00:00:41.633 --> 00:00:45.433
+advindo de "../utils/colors".
+
+00:00:45.466 --> 00:00:50.400
+Este será um componente funcional
+desprovido de estado,
+
+00:00:50.433 --> 00:00:55.767
+que aceitará
+"date" e "metrics".
+
+00:00:55.800 --> 00:00:59.100
+E vamos retornar uma View.
+
+00:00:59.133 --> 00:01:03.067
+Agora, se houver uma data,
+
+00:01:03.100 --> 00:01:06.900
+vamos renderizar
+nosso cabeçalho "DateHeader"
+
+00:01:06.933 --> 00:01:10.967
+passando a data específica.
+Se não houver,
+
+00:01:11.000 --> 00:01:14.333
+não vamos renderizar nada.
+
+00:01:14.367 --> 00:01:16.533
+Na sequência,
+
+00:01:16.566 --> 00:01:20.900
+diremos
+"object.keys(metrics)",
+
+00:01:20.933 --> 00:01:25.567
+que nos dará um array com todos
+os itens sendo "key" nas medições.
+
+00:01:25.600 --> 00:01:29.467
+E chamaremos ".map".
+Já vimos isso antes.
+
+00:01:29.500 --> 00:01:33.067
+Aqui estará
+a medição "metric".
+
+00:01:33.100 --> 00:01:38.533
+Agora, diremos
+"getIcon, displayName"...
+
+00:01:38.566 --> 00:01:43.933
+Todas as propriedades até "unit",
+além de "backgroundColor",
+
+00:01:43.966 --> 00:01:47.300
+que virão do que retornar
+
+00:01:47.333 --> 00:01:49.533
+de "getMetricMetaInfo"
+
+00:01:49.566 --> 00:01:52.067
+passando
+a medição específica.
+
+00:01:52.100 --> 00:01:57.033
+A IU desta seção
+será uma View.
+
+00:01:57.357 --> 00:02:03.301
+Vamos dar o estilo
+"styles.metric"
+
+00:02:03.334 --> 00:02:08.133
+e a "key", que estamos mapeando,
+será a própria medição.
+
+00:02:08.166 --> 00:02:12.500
+Vamos criar este estilo.
+
+00:02:12.533 --> 00:02:14.233
+Será bem pequeno.
+
+00:02:14.266 --> 00:02:19.433
+Apenas definiremos
+"flexDirection: row"
+
+00:02:19.466 --> 00:02:23.933
+e "marginTop: 12".
+
+00:02:23.966 --> 00:02:27.433
+Agora vamos chamar getIcon
+
+00:02:27.466 --> 00:02:31.467
+para mostrar o ícone
+correspondente à medição.
+
+00:02:31.500 --> 00:02:35.133
+Depois teremos outra seção
+com View,
+
+00:02:35.166 --> 00:02:40.367
+com a qual queremos...
+Estamos recriando esta seção aqui.
+
+00:02:40.400 --> 00:02:44.767
+O que queremos mostrar
+é o displayName.
+
+00:02:44.800 --> 00:02:49.233
+Vamos dar uma fonte
+com tamanho 20.
+
+00:02:49.266 --> 00:02:54.333
+E, abaixo, queremos...
+Aqui temos "displayName".
+
+00:02:54.366 --> 00:02:58.467
+Abaixo, queremos mostrar
+o valor específico e a unidade.
+
+00:02:58.500 --> 00:03:04.233
+O que podemos fazer
+é dizer "metrics[metric]"
+
+00:03:04.266 --> 00:03:06.833
+e "{unit}".
+
+00:03:06.866 --> 00:03:12.633
+E agora definiremos
+"fontSize: 16"
+
+00:03:12.666 --> 00:03:15.367
+e "color: gray".
+
+00:03:15.400 --> 00:03:19.033
+Acho que é isso.
+
+00:03:19.066 --> 00:03:22.422
+Agora o que falta é
+importar MetricCard
+
+00:03:22.455 --> 00:03:25.267
+para History.js.
+
+00:03:25.300 --> 00:03:30.233
+E, em vez de renderizar isto,
+
+00:03:30.266 --> 00:03:33.833
+diremos "MetricCard",
+
+00:03:33.866 --> 00:03:38.433
+"metrics={metrics}",
+que virá daqui,
+
+00:03:38.466 --> 00:03:41.500
+e depois passaremos a data,
+
+00:03:41.533 --> 00:03:46.000
+que será "formattedDate".
+
+00:03:46.033 --> 00:03:49.933
+Agora deveríamos ver,
+se estiver dado tudo certo,
+
+00:03:49.966 --> 00:03:51.767
+tudo direitinho.
+
+00:03:51.800 --> 00:03:56.567
+Mas, ao visitarmos um dia
+já preenchido, vemos esta IU.
+
+00:03:56.600 --> 00:04:00.800
+Ótimo no iOS.
+Vejamos no Android.
+
+00:04:01.833 --> 00:04:04.867
+Também ficou ótimo
+no Android.
+

@@ -1,0 +1,41 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.300
+O React Native usa flexbox
+para o layout.
+
+00:00:03.334 --> 00:00:05.434
+No entanto,
+há diferenças sutis
+
+00:00:05.467 --> 00:00:07.968
+entre a especificação oficial
+do flexbox
+
+00:00:08.001 --> 00:00:10.267
+e a implementação
+do React Native.
+
+00:00:10.300 --> 00:00:14.367
+Por exemplo: na Web,
+a direção padrão é "linha".
+
+00:00:14.400 --> 00:00:16.601
+No React Native, é "coluna",
+
+00:00:16.634 --> 00:00:18.934
+já que estamos programando
+para mobile.
+
+00:00:18.968 --> 00:00:20.467
+Tais diferenças,
+
+00:00:20.500 --> 00:00:23.701
+juntamente com outras APIs
+de estilo do React Native,
+
+00:00:23.734 --> 00:00:26.033
+serão o assunto desta seção.
+

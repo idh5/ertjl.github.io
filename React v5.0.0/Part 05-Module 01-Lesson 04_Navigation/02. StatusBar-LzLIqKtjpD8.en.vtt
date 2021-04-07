@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.280
+So if you remember back to this section right here,
+
+00:00:04.280 --> 00:00:09.214
+what we did was we threw in a view to basically give our calendar,
+
+00:00:09.214 --> 00:00:12.210
+give our app a little bit of padding from this status bar.
+
+00:00:12.210 --> 00:00:14.443
+We just gave an arbitrary height of 20.
+
+00:00:14.442 --> 00:00:18.079
+But what we actually want to do now is make a real status bar.
+
+00:00:18.079 --> 00:00:19.971
+So what we'll do is up here,
+
+00:00:19.972 --> 00:00:25.325
+let's import status bar which is a component on the React Native package.
+
+00:00:25.324 --> 00:00:28.849
+But instead of just using status bar outright down here,
+
+00:00:28.850 --> 00:00:33.679
+what I want to do is I want to actually make our own custom status bar.
+
+00:00:33.679 --> 00:00:35.350
+So we'll come up here, will say,
+
+00:00:35.350 --> 00:00:39.620
+you'd ask your status bar and then what we will
+
+00:00:39.619 --> 00:00:44.470
+take in is a background color and then basically just everything else.
+
+00:00:44.470 --> 00:00:48.439
+So what we'll do is we basically want to wrap
+
+00:00:48.439 --> 00:00:53.869
+this status bar component inside of a view that we can better control the styling on.
+
+00:00:53.869 --> 00:00:58.759
+So what we'll say is we'll give it an object as its styling.
+
+00:00:58.759 --> 00:01:01.909
+We have background color and then height is
+
+00:01:01.909 --> 00:01:05.219
+going to be whatever height we need the status bar to be,
+
+00:01:05.219 --> 00:01:08.439
+whether that's an iOS or Android it's going to be different.
+
+00:01:08.439 --> 00:01:13.579
+So what's nice about expo is it comes with this thing.
+
+00:01:13.579 --> 00:01:17.659
+I say thing, I mean object called Constants which is coming from
+
+00:01:17.659 --> 00:01:24.724
+the expo package and it has on it a very convenient status bar height.
+
+00:01:24.724 --> 00:01:26.289
+So we don't have to worry about that.
+
+00:01:26.290 --> 00:01:29.570
+That will just work because expo knew we would need that,
+
+00:01:29.569 --> 00:01:31.579
+so it threw it in that we don't have to worry
+
+00:01:31.579 --> 00:01:33.769
+about a magic number here like 50 or whatnot.
+
+00:01:33.769 --> 00:01:37.095
+It's just coming from Constants.statusBarHeight.
+
+00:01:37.096 --> 00:01:43.880
+So now what we can do is we can render a status bar where you want it to be translucent,
+
+00:01:43.879 --> 00:01:45.199
+if I can spell that right,
+
+00:01:45.200 --> 00:01:50.299
+and then the background color of this is also going to be background color.
+
+00:01:50.299 --> 00:01:53.390
+Then we're just passing along any props that we get.
+
+00:01:53.390 --> 00:01:57.692
+So basically what we've done is we've created this wrapper for status bar.
+
+00:01:57.692 --> 00:02:02.355
+And then now what we can do down here is instead of rendering this view,
+
+00:02:02.355 --> 00:02:05.635
+let's render a UdaciStatusBar.
+
+00:02:05.635 --> 00:02:07.835
+We will pass it a few things.
+
+00:02:07.834 --> 00:02:11.539
+Let's give it a background color of purple and then we will
+
+00:02:11.539 --> 00:02:15.169
+give it a bar style of light-content.
+
+00:02:15.169 --> 00:02:19.959
+This is going to make all of the items in the status bar white.
+
+00:02:19.960 --> 00:02:23.270
+So now when our apps reload you'll
+
+00:02:23.270 --> 00:02:27.765
+notice that up here it is the perfect height for what we need.
+
+00:02:27.764 --> 00:02:33.154
+The actual background is purple and the items in the status bar is white.
+
+00:02:33.155 --> 00:02:36.000
+So it looks a lot better than what we used to have.
+

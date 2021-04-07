@@ -1,0 +1,310 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.209
+So now that our add entry screen is all styled then set up and everything.
+
+00:00:06.209 --> 00:00:11.405
+What I want to do now is let's go ahead and start working on our main history view,
+
+00:00:11.404 --> 00:00:14.644
+which is this view right here with the calendars.
+
+00:00:14.644 --> 00:00:17.120
+And before we actually render any UI,
+
+00:00:17.120 --> 00:00:19.475
+what we'll need to do is we'll need to fetch
+
+00:00:19.475 --> 00:00:23.750
+our calendar from our fake database so we can get all of those things,
+
+00:00:23.750 --> 00:00:29.445
+all of those items and then we could eventually render a calendar that looks like this.
+
+00:00:29.445 --> 00:00:32.615
+So to do that what we'll do is inside
+
+00:00:32.615 --> 00:00:37.925
+of our api.js file we need to go ahead and make another function,
+
+00:00:37.924 --> 00:00:41.664
+and we will call it fetchCalendarResults.
+
+00:00:41.664 --> 00:00:46.262
+What this is going to do is we're going to call AsyncStorage.getItem.
+
+00:00:46.262 --> 00:00:49.645
+Again, we're using AsyncStorage as our fake little database.
+
+00:00:49.645 --> 00:00:56.135
+We are going to get all of the items which are living in the calendar store key property.
+
+00:00:56.134 --> 00:00:59.179
+And then what we are going to do when we have
+
+00:00:59.179 --> 00:01:04.180
+those before we return them to whoever called fetchCalendarResults.
+
+00:01:04.180 --> 00:01:07.355
+What we're going to do is we want to
+
+00:01:07.355 --> 00:01:13.204
+import formatCalendarResults which is coming from our calendar file.
+
+00:01:13.204 --> 00:01:14.914
+Which we will go and format those,
+
+00:01:14.915 --> 00:01:18.900
+and then return whatever formatCalendarResults returns us.
+
+00:01:18.900 --> 00:01:23.600
+So now that we have fetch calendar results we can actually go ahead and fetch all of the
+
+00:01:23.599 --> 00:01:30.554
+day's or our entire calendar which are living in our AsyncStorage or our fake database.
+
+00:01:30.555 --> 00:01:38.155
+So now what we need to do is let's create a new file for our history.js component.
+
+00:01:38.155 --> 00:01:42.409
+What I'm going to do is just paste in all this code which is just the typical.
+
+00:01:42.409 --> 00:01:44.864
+We have a history component.
+
+00:01:44.864 --> 00:01:49.009
+It's rendering the text history and then we are exporting it.
+
+00:01:49.010 --> 00:01:56.630
+So now, inside of our app.js file instead of rendering add entry,
+
+00:01:56.629 --> 00:02:04.274
+before we get our router set up let's go ahead and render our history component.
+
+00:02:04.275 --> 00:02:06.365
+So now, if this works,
+
+00:02:06.364 --> 00:02:09.870
+we see history up here behind the status bar.
+
+00:02:09.870 --> 00:02:12.680
+So now what I want to do in history as I mentioned,
+
+00:02:12.680 --> 00:02:15.860
+is we actually want to go ahead and invoke
+
+00:02:15.860 --> 00:02:20.350
+the fetchCalendarResults function that we just barely set up.
+
+00:02:20.349 --> 00:02:24.319
+So what we will do here is let's import some stuff.
+
+00:02:24.319 --> 00:02:31.185
+We're going to need to connect and then we're also eventually going to need some actions.
+
+00:02:31.185 --> 00:02:34.400
+If you remember, we have receive entries which is for
+
+00:02:34.400 --> 00:02:37.900
+when we get our entries from the database.
+
+00:02:37.900 --> 00:02:41.060
+And then we're also going to need add entry just
+
+00:02:41.060 --> 00:02:44.064
+in case we don't have any entries for today.
+
+00:02:44.064 --> 00:02:48.534
+We want to add the item for the current day.
+
+00:02:48.534 --> 00:02:50.430
+Those are coming from actions.
+
+00:02:50.430 --> 00:02:54.629
+And then we are also going to need some stuff from our helper's file.
+
+00:02:54.629 --> 00:02:59.870
+We'll use time to string and then we'll use get daily reminder value.
+
+00:02:59.870 --> 00:03:04.495
+Again, both of those are coming from utils/helpers.
+
+00:03:04.495 --> 00:03:07.219
+And then lastly, what we need is again,
+
+00:03:07.219 --> 00:03:13.659
+the fetchCalendarResults function that we built just a little bit ago.
+
+00:03:13.659 --> 00:03:17.840
+All right, so now what we want to do is when this component
+
+00:03:17.840 --> 00:03:24.155
+mounts we want to go ahead and fetch our calendar results.
+
+00:03:24.155 --> 00:03:25.520
+So, before we do this,
+
+00:03:25.520 --> 00:03:27.865
+let's go ahead and connect our components,
+
+00:03:27.865 --> 00:03:32.400
+so that we get access to the this.props.dispatch.
+
+00:03:32.400 --> 00:03:35.360
+So we'll come down here and we will say,
+
+00:03:35.360 --> 00:03:39.680
+dispatch is going to be coming from the this.props.
+
+00:03:39.680 --> 00:03:43.460
+And then let's go ahead and fetch our calendar results.
+
+00:03:43.460 --> 00:03:45.695
+And then what we want to do,
+
+00:03:45.694 --> 00:03:48.500
+that's going to give us all of our entries.
+
+00:03:48.500 --> 00:03:51.716
+And then we can simply just dispatch
+
+00:03:51.716 --> 00:03:55.635
+receive entries passing in the entry. So what's going to happen here?
+
+00:03:55.634 --> 00:04:00.479
+We call fetchCalendarResults, we get all of our entries and then we dispatch receive
+
+00:04:00.479 --> 00:04:06.500
+entries which if you remember is eventually going to end up right here.
+
+00:04:06.500 --> 00:04:12.310
+And we're going to take all those entries and just add them to our current state.
+
+00:04:12.310 --> 00:04:18.579
+But, what we also want to do here is let's go ahead and chain a.then onto this.
+
+00:04:18.579 --> 00:04:21.704
+Which will give us entries as a property on an object.
+
+00:04:21.704 --> 00:04:29.519
+Right here, if entries at time to string is not a thing.
+
+00:04:29.519 --> 00:04:30.526
+So if it's falsie,
+
+00:04:30.526 --> 00:04:37.199
+what that means is that we haven't entered any information in for the current day.
+
+00:04:37.199 --> 00:04:40.589
+And what we want to do is if you remember back to
+
+00:04:40.589 --> 00:04:43.859
+our get daily reminder value method that we
+
+00:04:43.860 --> 00:04:48.150
+created inside of our helpers file which is right here.
+
+00:04:48.149 --> 00:04:50.789
+We basically want to set the property on
+
+00:04:50.790 --> 00:04:56.980
+our Redux Store for the current day to this value right here.
+
+00:04:56.980 --> 00:04:58.785
+So what we will do is we will say,
+
+00:04:58.785 --> 00:05:02.040
+if- this should be entries.
+
+00:05:02.040 --> 00:05:10.495
+If entries at the current day is falsie then go ahead and dispatch add entry passing
+
+00:05:10.495 --> 00:05:14.280
+it the time to string as the key and
+
+00:05:14.279 --> 00:05:19.324
+the value is just going to be the result of calling get daily reminder values.
+
+00:05:19.324 --> 00:05:21.180
+So again, what's going on here is we receive
+
+00:05:21.180 --> 00:05:24.915
+our entries if we don't have any entry for today.
+
+00:05:24.915 --> 00:05:28.830
+What we want to display is the little hand-wave saying,
+
+00:05:28.829 --> 00:05:30.675
+"Hey, don't forget to log your data today."
+
+00:05:30.675 --> 00:05:33.480
+And in order to do that we need to go ahead and add
+
+00:05:33.480 --> 00:05:38.515
+that as a property on our state under the key today.
+
+00:05:38.514 --> 00:05:41.039
+So now, notice we don't have any local state here because
+
+00:05:41.040 --> 00:05:44.220
+the calendar state is living inside of Redux.
+
+00:05:44.220 --> 00:05:48.750
+So what we want to do real quick is let's get some space,
+
+00:05:48.750 --> 00:05:50.685
+and let's make a function here.
+
+00:05:50.685 --> 00:05:52.454
+So we'll map state to props.
+
+00:05:52.454 --> 00:05:56.629
+We are going to receive state which is really just the entries.
+
+00:05:56.629 --> 00:06:00.754
+And we want to return all of the entries.
+
+00:06:00.754 --> 00:06:04.139
+So now if we pass map state to props to
+
+00:06:04.139 --> 00:06:09.099
+connect what we will get as props is all of the entries.
+
+00:06:09.100 --> 00:06:13.245
+So let's just go ahead and instead of rendering history,
+
+00:06:13.245 --> 00:06:17.694
+let's just render JSON.stringfy (this.props).
+
+00:06:17.694 --> 00:06:20.699
+And so, now what should happen is when we run
+
+00:06:20.699 --> 00:06:23.964
+this what we should see is the components going to mount.
+
+00:06:23.964 --> 00:06:26.189
+We're going to fetch some results.
+
+00:06:26.189 --> 00:06:27.870
+We're going to update Redux with
+
+00:06:27.870 --> 00:06:32.569
+those results and then eventually that will cause a re-render.
+
+00:06:32.569 --> 00:06:35.579
+And so, we will see under this.props all of
+
+00:06:35.579 --> 00:06:40.264
+those entries we got when we called fetchCalendarResults.
+
+00:06:40.264 --> 00:06:44.413
+So, you'll notice here that we just have this huge object right here,
+
+00:06:44.413 --> 00:06:51.090
+which is everything that is coming in from our Redux state which is all of our entries,
+
+00:06:51.089 --> 00:06:53.000
+or basically our whole calendar.
+

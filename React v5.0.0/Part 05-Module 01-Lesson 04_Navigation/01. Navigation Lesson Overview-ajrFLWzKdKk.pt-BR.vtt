@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:03.767
+Nesta lição, aprenderemos tudo
+sobre routing.
+
+00:00:03.801 --> 00:00:07.434
+É verdade que o roteamento
+no React Native é meio louco.
+
+00:00:07.467 --> 00:00:11.701
+As diversas e ótimas soluções
+têm resultados muito distintos.
+
+00:00:11.734 --> 00:00:15.033
+O método que escolhemos
+é o React Navigation,
+
+00:00:15.067 --> 00:00:18.067
+que foi criado
+por uma equipe do Facebook
+
+00:00:18.133 --> 00:00:21.601
+e é a solução oficial de roteamento
+para React Native.
+
+00:00:21.634 --> 00:00:24.001
+Rotear no Native
+é totalmente diferente
+
+00:00:24.033 --> 00:00:25.501
+de rotear na Web.
+
+00:00:26.467 --> 00:00:28.267
+Na Web,
+
+00:00:28.334 --> 00:00:33.133
+o que se faz é mapear um URL
+a um componente específico.
+
+00:00:33.200 --> 00:00:36.834
+No Native, em vez de mapear
+um URL até um componente,
+
+00:00:36.901 --> 00:00:39.334
+o roteador memoriza
+uma sequência de roteamentos.
+
+00:00:39.400 --> 00:00:41.734
+Tente imaginar
+um array de roteamentos.
+
+00:00:41.801 --> 00:00:44.234
+Quando você navega
+pelo aplicativo,
+
+00:00:44.267 --> 00:00:47.534
+o roteador vai tirando
+roteamentos da pilha.
+
+00:00:48.400 --> 00:00:50.701
+Para apresentar
+esse novo paradigma,
+
+00:00:50.767 --> 00:00:54.767
+vejamos a API de navegador de abas
+do React Navigations.
+

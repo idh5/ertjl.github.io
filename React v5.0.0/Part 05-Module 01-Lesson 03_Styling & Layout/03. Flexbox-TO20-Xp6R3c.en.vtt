@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.309
+We've talked about how React Native uses CSS in JS for
+
+00:00:04.309 --> 00:00:08.839
+adding styling to your application and specifically, to your components.
+
+00:00:08.839 --> 00:00:10.679
+What we haven't talked about,
+
+00:00:10.679 --> 00:00:12.987
+is how React Native handles layout.
+
+00:00:12.987 --> 00:00:15.439
+If you've been building for the web for awhile,
+
+00:00:15.439 --> 00:00:19.144
+you're probably familiar with the idea of the block model and floats.
+
+00:00:19.144 --> 00:00:22.804
+According to MDN, the float CSS property
+
+00:00:22.804 --> 00:00:27.704
+specifies that an element should be placed along the left or right side of its container,
+
+00:00:27.704 --> 00:00:30.794
+where text and inline elements will wrap around it.
+
+00:00:30.795 --> 00:00:36.609
+In other words, floats lying to specify how elements are placed related to each other.
+
+00:00:36.609 --> 00:00:40.211
+If you've been keeping up to date with the layout options in CSS for the last few years,
+
+00:00:40.212 --> 00:00:42.785
+you've probably heard of flexbox.
+
+00:00:42.784 --> 00:00:44.539
+Again, according to MDN,
+
+00:00:44.539 --> 00:00:47.659
+flexbox is a layout mode intended to
+
+00:00:47.659 --> 00:00:51.769
+accommodate different screen sizes and different display devices.
+
+00:00:51.770 --> 00:00:54.875
+For many applications, the flexible box model is
+
+00:00:54.875 --> 00:00:59.019
+easier than the block model since it does not use floats.
+
+00:00:59.020 --> 00:01:03.455
+Flexbox is essentially a replacement on the old block model approach to layout.
+
+00:01:03.454 --> 00:01:05.090
+And one, that in mind,
+
+00:01:05.090 --> 00:01:07.915
+many other people's opinion is much better.
+
+00:01:07.915 --> 00:01:10.760
+So naturally, react native chose to implement
+
+00:01:10.760 --> 00:01:14.005
+flexbox for the layout over the original block model.
+
+00:01:14.004 --> 00:01:16.339
+If you don't know flexbox, don't worry.
+
+00:01:16.340 --> 00:01:19.174
+The whole next section is dedicated to help you learn it.
+
+00:01:19.174 --> 00:01:22.219
+Now, if you do know what it is, you're pretty good shape.
+
+00:01:22.219 --> 00:01:24.739
+There are however, some small differences between
+
+00:01:24.739 --> 00:01:27.019
+the official flexbox specification in
+
+00:01:27.019 --> 00:01:30.000
+react native implementation. We'll cover that as well.
+

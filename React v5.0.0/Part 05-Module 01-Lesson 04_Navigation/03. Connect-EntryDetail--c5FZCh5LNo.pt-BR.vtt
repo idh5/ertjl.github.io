@@ -1,0 +1,167 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.800 --> 00:00:05.700
+Agora, a próxima coisa óbvia
+é fazer com que a tela fique melhor
+
+00:00:05.733 --> 00:00:08.333
+se conectando a read X
+
+00:00:08.367 --> 00:00:12.100
+e pegando o dia
+para a chave específica.
+
+00:00:12.400 --> 00:00:17.367
+Dentro de EntryDetail,
+vamos importar algumas coisas.
+
+00:00:17.400 --> 00:00:20.267
+Adicionaremos estilos,
+então vamos importar style sheets.
+
+00:00:20.300 --> 00:00:22.067
+Também vamos importar connect
+
+00:00:22.100 --> 00:00:27.000
+e, já que estamos aqui,
+vamos importar a cor branca.
+
+00:00:27.033 --> 00:00:31.067
+E agora,
+em vez de exportar EntryDetail,
+
+00:00:31.100 --> 00:00:33.700
+exportaremos connect.
+
+00:00:33.733 --> 00:00:40.100
+Vamos criar uma função
+mapStateToProps aqui.
+
+00:00:40.133 --> 00:00:41.933
+Passamos este estado,
+
+00:00:41.967 --> 00:00:44.833
+mas também passamos
+as propriedades atuais,
+
+00:00:44.867 --> 00:00:48.233
+que têm
+uma propriedade de navegação.
+
+00:00:48.267 --> 00:00:52.767
+E aqui vamos pegar aquela entryID
+que conseguimos
+
+00:00:52.800 --> 00:00:55.400
+ao rotear para EntryDetail.
+
+00:00:55.433 --> 00:00:59.233
+Podemos pegá-la
+de navigation.state.params.
+
+00:00:59.267 --> 00:01:01.800
+O que retornaremos
+
+00:01:01.833 --> 00:01:05.533
+ou a informação que passaremos
+para o componente será...
+
+00:01:05.567 --> 00:01:07.900
+Vamos passar o entryId
+
+00:01:07.933 --> 00:01:11.400
+e também podemos
+passar as métricas
+
+00:01:11.433 --> 00:01:17.233
+que serão o estado
+onde este entryID estiver.
+
+00:01:17.267 --> 00:01:21.367
+Ou seja, o entryID será a chave
+para o dia específico.
+
+00:01:21.400 --> 00:01:24.200
+Estamos passando isso
+para o componente,
+
+00:01:24.233 --> 00:01:27.967
+mas também estamos passando
+a informação do dia
+
+00:01:28.000 --> 00:01:30.100
+sob as propriedades
+de métricas.
+
+00:01:30.133 --> 00:01:34.700
+Então agora,
+dentro do componente EntryDetail,
+
+00:01:34.733 --> 00:01:39.633
+vamos pegar as métricas
+das propriedades.
+
+00:01:39.667 --> 00:01:43.267
+Se você se lembra,
+
+00:01:43.300 --> 00:01:46.333
+nós criamos um componente
+de card de métrica
+
+00:01:46.367 --> 00:01:51.367
+que é a IU
+para este card aqui.
+
+00:01:51.400 --> 00:01:53.433
+Vamos então
+renderizar isso também.
+
+00:01:53.467 --> 00:01:57.933
+Aqui dentro,
+importamos o card de métrica
+
+00:01:57.967 --> 00:02:01.113
+e renderizamos um desses,
+
+00:02:01.505 --> 00:02:04.267
+passando as métricas.
+
+00:02:04.300 --> 00:02:06.400
+E, antes que me esqueça,
+
+00:02:06.433 --> 00:02:11.233
+vamos criar alguns estilos
+para o nosso container.
+
+00:02:11.267 --> 00:02:15.067
+Temos então um container
+com flex 1, como sempre,
+
+00:02:15.100 --> 00:02:18.367
+a cor de fundo será branca,
+
+00:02:18.400 --> 00:02:24.133
+o padding será 15,
+e isto vai para este ano aqui.
+
+00:02:24.167 --> 00:02:26.167
+Está ótimo.
+
+00:02:26.200 --> 00:02:29.267
+Não vamos nos esquecer
+de passar mapsStateToProps
+
+00:02:29.300 --> 00:02:31.400
+para esta
+connecting location aqui.
+
+00:02:31.433 --> 00:02:36.133
+O que deve acontecer agora,
+se tudo estiver funcionando,
+
+00:02:36.167 --> 00:02:40.667
+quando clicarmos aqui,
+é termos esta IU.
+

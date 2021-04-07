@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.735
+So now instead of just rendering these text components here let's actually go ahead
+
+00:00:06.735 --> 00:00:08.144
+and work on taking
+
+00:00:08.144 --> 00:00:13.675
+our history component and making it look closer to something like this.
+
+00:00:13.675 --> 00:00:17.740
+So the very first thing we'll do is we need to import a few things.
+
+00:00:17.739 --> 00:00:21.689
+We will grab Style Sheet Platform as well as
+
+00:00:21.690 --> 00:00:26.495
+Touchable Opacity and then we also need the color white.
+
+00:00:26.495 --> 00:00:29.550
+And then lastly let's go ahead and grab
+
+00:00:29.550 --> 00:00:35.320
+our Date Header component because we'll be using that right here.
+
+00:00:35.320 --> 00:00:40.605
+All right so the very first thing we need to do is let's go ahead and create some styles.
+
+00:00:40.604 --> 00:00:47.164
+First, let's go ahead and style the specific day.
+
+00:00:47.164 --> 00:00:50.045
+So up here we will say style equal styles.
+
+00:00:50.045 --> 00:00:52.230
+Let's call this styles.item.
+
+00:00:52.229 --> 00:00:54.809
+And so that means down here.
+
+00:00:54.810 --> 00:00:56.620
+Let's create some styles.
+
+00:00:56.619 --> 00:00:59.504
+So what this is going to have,
+
+00:00:59.505 --> 00:01:05.245
+is we will say background color is going to be white, border radius.
+
+00:01:05.245 --> 00:01:08.160
+You'll notice here that depending on the platform,
+
+00:01:08.159 --> 00:01:10.979
+we have a different border radius.
+
+00:01:10.980 --> 00:01:13.980
+So we will say if we're on iOS
+
+00:01:13.980 --> 00:01:19.125
+then the border radius is going to be 16 and if not it will be two.
+
+00:01:19.125 --> 00:01:22.590
+And we'll just have some typical stuff here some padding,
+
+00:01:22.590 --> 00:01:26.340
+margin left and right of 10 pixels.
+
+00:01:26.340 --> 00:01:33.870
+Let's actually change our padding to 20 and say margin top 17 pixels.
+
+00:01:33.870 --> 00:01:36.810
+We want to align everything on the main axis in
+
+00:01:36.810 --> 00:01:43.189
+the center and then let's go ahead and add some shadows to this.
+
+00:01:43.189 --> 00:01:47.709
+We'll say shadow radius it's going to be three,
+
+00:01:47.709 --> 00:01:53.609
+say shadow opacity is going to be zero point eight shadow color.
+
+00:01:53.609 --> 00:01:59.192
+Let's go ahead and give an rgba value of zero zero zero,
+
+00:01:59.192 --> 00:02:03.420
+and then zero point two four and some more shadow stuff,
+
+00:02:03.420 --> 00:02:09.670
+we'll say shadow offset width of zero and a height of three.
+
+00:02:09.669 --> 00:02:12.879
+And that looks pretty good.
+
+00:02:12.879 --> 00:02:17.650
+I just noticed we didn't actually give this a key.
+
+00:02:17.650 --> 00:02:23.670
+So we'll put all of this stuff inside of item.
+
+00:02:23.669 --> 00:02:27.429
+So now let's look at what we have going on here. Alright! Very good.
+
+00:02:27.430 --> 00:02:30.375
+So you'll notice it's a little bit styled right here.
+
+00:02:30.375 --> 00:02:36.884
+And so now what we want to do is let's go ahead and change out some of this stuff.
+
+00:02:36.884 --> 00:02:40.989
+So what we want to do here is we actually want to do something like this where we say,
+
+00:02:40.990 --> 00:02:44.275
+if today is a thing,
+
+00:02:44.275 --> 00:02:48.670
+then let's show this view and inside of
+
+00:02:48.669 --> 00:02:53.394
+this view what we're going to have is our date header.
+
+00:02:53.395 --> 00:02:58.284
+Date is going to be this formatted date argument that were being passed,
+
+00:02:58.284 --> 00:03:02.639
+and then below that what we want to say is we will say text,
+
+00:03:02.639 --> 00:03:10.629
+and let's go ahead and we will give this a style of styles dot no data text,
+
+00:03:10.629 --> 00:03:14.275
+and then we will just show whatever today is,
+
+00:03:14.275 --> 00:03:17.980
+and then if it's not today,
+
+00:03:17.979 --> 00:03:23.659
+what we're going to do is we will render our touchable opacity button.
+
+00:03:23.659 --> 00:03:27.520
+For now let's give it an on press,
+
+00:03:27.520 --> 00:03:30.730
+we'll just go ahead and say console dot log, pressed.
+
+00:03:30.729 --> 00:03:33.969
+And then inside of here,
+
+00:03:33.969 --> 00:03:41.050
+let's still just render a text component which is going to stringify our metrics,
+
+00:03:41.050 --> 00:03:46.735
+and then let's just go ahead and clean up render empty date real quick.
+
+00:03:46.735 --> 00:03:51.625
+So here we can say style equal styles dot item,
+
+00:03:51.625 --> 00:03:54.254
+just as we did above.
+
+00:03:54.254 --> 00:03:58.299
+And then we're also going to have a date header with
+
+00:03:58.300 --> 00:04:03.465
+the date being this format of date that we're being passed.
+
+00:04:03.465 --> 00:04:09.950
+And then we will render a text with just like we did above.
+
+00:04:09.949 --> 00:04:13.000
+We'll say styles dot no data texts,
+
+00:04:13.000 --> 00:04:17.470
+and it will say you didn't log any data on this day.
+
+00:04:17.470 --> 00:04:19.960
+Alright so last thing we need to do is,
+
+00:04:19.959 --> 00:04:24.055
+go ahead and fill out styles dot no data text,
+
+00:04:24.055 --> 00:04:27.689
+so we will come down here and all this is going to have,
+
+00:04:27.689 --> 00:04:35.529
+say font size is 20 padding top is 20 and padding bottom is also going to be 20.
+
+00:04:35.529 --> 00:04:38.649
+So now if we look at this,
+
+00:04:38.649 --> 00:04:42.129
+let's go ahead and select that day.
+
+00:04:42.129 --> 00:04:45.750
+So notice here it says you didn't log any data.
+
+00:04:45.750 --> 00:04:50.274
+Here is a day we did log data we haven't styled that yet, you didn't log any data.
+
+00:04:50.274 --> 00:04:52.000
+And then this is today.
+

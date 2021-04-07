@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:03.533
+Nossa History View
+está bem legal agora,
+
+00:00:03.567 --> 00:00:07.033
+e se você se lembra,
+também temos uma AddEntry View,
+
+00:00:07.067 --> 00:00:08.967
+que também está bem legal.
+
+00:00:09.000 --> 00:00:13.933
+Não podemos ir adiante
+sem adicionar uma navegação.
+
+00:00:13.967 --> 00:00:19.200
+A primeira coisa da qual precisamos
+é ir até o terminal
+
+00:00:19.233 --> 00:00:22.933
+e fazer um yarn add
+react-navigation.
+
+00:00:22.967 --> 00:00:25.500
+Assim que terminar,
+reinicie o aplicativo
+
+00:00:25.533 --> 00:00:29.667
+e volte para o arquivo App.js.
+
+00:00:29.700 --> 00:00:33.767
+O que vamos fazer aqui...
+Primeiro vamos pegar uma plataforma,
+
+00:00:33.800 --> 00:00:35.867
+porque precisaremos disso
+para os estilos,
+
+00:00:35.900 --> 00:00:39.778
+depois pegue o TabNavigator
+
+00:00:39.811 --> 00:00:42.733
+do React Navigation.
+
+00:00:42.767 --> 00:00:47.231
+E, já que estamos aqui,
+vamos pegar algumas cores,
+
+00:00:47.248 --> 00:00:53.067
+roxo e branco do utils/colors.
+
+00:00:53.100 --> 00:00:56.267
+E também precisamos especificar
+
+00:00:56.300 --> 00:01:00.467
+os ícones que ficarão nas abas
+que estamos criando.
+
+00:01:00.500 --> 00:01:06.334
+Usaremos FontAwesome
+e Ionicons.
+
+00:01:06.578 --> 00:01:12.536
+Agora criaremos
+o componente das abas.
+
+00:01:12.800 --> 00:01:18.700
+Faremos isso recorrendo
+ao TabNavigator,
+
+00:01:18.733 --> 00:01:21.567
+e o primeiro objeto
+que passaremos
+
+00:01:21.600 --> 00:01:24.967
+representará as abas
+que veremos na tela.
+
+00:01:25.000 --> 00:01:27.233
+Temos o histórico,
+
+00:01:27.267 --> 00:01:31.333
+a tela que vamos renderizar
+é o nosso componente do histórico,
+
+00:01:31.367 --> 00:01:35.167
+e vamos adicionar
+algumas opções de navegação,
+
+00:01:35.200 --> 00:01:37.433
+como a tabBarLabel.
+
+00:01:37.467 --> 00:01:43.333
+O que aparecerá na barra
+será a palavra "History",
+
+00:01:43.367 --> 00:01:47.485
+e o tabBarIcon
+será uma função
+
+00:01:47.518 --> 00:01:49.700
+com um tintColor,
+
+00:01:49.733 --> 00:01:51.667
+que vamos montar
+daqui a pouco.
+
+00:01:51.700 --> 00:01:55.667
+Renderizaremos este ícone,
+foi por isso que nós o importamos.
+
+00:01:55.700 --> 00:01:59.233
+O nome dele será "iOS bookmarks",
+
+00:01:59.267 --> 00:02:02.700
+o tamanho será igual a 30,
+
+00:02:02.733 --> 00:02:06.000
+e a cor será tintColor.
+
+00:02:06.033 --> 00:02:08.633
+Temos então
+nossa aba History.
+
+00:02:08.667 --> 00:02:11.967
+Agora precisamos também
+da aba AddEntry,
+
+00:02:12.000 --> 00:02:14.400
+o outro componente que criamos.
+
+00:02:14.433 --> 00:02:18.600
+De forma parecida,
+a tela será "AddEntry".
+
+00:02:18.633 --> 00:02:21.033
+Teremos algumas opções
+de navegação.
+
+00:02:21.067 --> 00:02:25.000
+tabBarLabel será "AddEntry",
+
+00:02:25.033 --> 00:02:29.933
+e o tabBarIcon será uma função
+
+00:02:29.967 --> 00:02:34.133
+que também terá um tintColor.
+
+00:02:34.167 --> 00:02:38.200
+Ele renderizará
+um ícone FontAwesome
+
+00:02:38.233 --> 00:02:41.667
+com o nome "plus square",
+
+00:02:41.700 --> 00:02:46.800
+tamanho 30,
+e a cor será tintColor.
+
+00:02:46.833 --> 00:02:50.633
+Estas aqui são as nossas abas.
+
+00:02:50.667 --> 00:02:54.133
+E agora especificaremos
+algumas opções para elas.
+
+00:02:54.167 --> 00:02:56.800
+Especificamente,
+como elas vão aparentar etc.
+
+00:02:56.833 --> 00:03:02.633
+Como segundo argumento
+ao TabNavigator,
+
+00:03:02.667 --> 00:03:08.333
+passaremos um objeto
+e escreveremos "tabBarOptions".
+
+00:03:08.367 --> 00:03:10.469
+Ele terá um activeTintColor,
+
+00:03:10.502 --> 00:03:16.237
+ou seja,
+será a cor da aba selecionada.
+
+00:03:16.667 --> 00:03:20.767
+Aqui diremos que,
+se estivermos no iOS,
+
+00:03:20.800 --> 00:03:25.133
+ela será roxa,
+e, se não, ela será branca.
+
+00:03:25.167 --> 00:03:28.100
+Você verá o porquê disso
+daqui a pouco.
+
+00:03:28.133 --> 00:03:33.367
+Agora,
+embaixo de tabBarOptions,
+
+00:03:33.400 --> 00:03:37.600
+mexemos no estilo
+que aplicaremos à barra da aba.
+
+00:03:37.633 --> 00:03:40.200
+Daremos a ela uma altura 56.
+
+00:03:40.233 --> 00:03:44.400
+A cor de fundo, novamente,
+se estivermos no iOS,
+
+00:03:44.433 --> 00:03:49.500
+será branca,
+e, se não, será roxa.
+
+00:03:49.533 --> 00:03:51.367
+Agora vamos colocar
+uma sombra.
+
+00:03:51.400 --> 00:03:53.500
+Vou apenas colar isso aqui.
+
+00:03:53.533 --> 00:03:58.900
+Temos shadowColor, shadowOffset,
+shadowRadius e shadowOpacity.
+
+00:03:59.767 --> 00:04:01.633
+Acho que está ótimo.
+
+00:04:01.667 --> 00:04:05.300
+O que temos aqui
+são as abas como componentes,
+
+00:04:05.333 --> 00:04:07.967
+porque é isso
+que o TabNavigator nos retorna.
+
+00:04:08.000 --> 00:04:12.400
+O que podemos fazer aqui,
+em vez de renderizar History
+
+00:04:12.433 --> 00:04:18.100
+ou AddEntry, como fizemos antes,
+é renderizar apenas as abas.
+
+00:04:18.133 --> 00:04:21.167
+Se tudo estiver
+funcionando bem...
+
+00:04:22.633 --> 00:04:24.900
+Podemos ver
+que temos estas abas aqui.
+
+00:04:24.933 --> 00:04:28.167
+O legal aqui é que o Android
+tem sua própria cara,
+
+00:04:28.200 --> 00:04:30.200
+assim como o iOS.
+
+00:04:30.233 --> 00:04:33.900
+Agora podemos navegar
+pelas duas abas.
+
+00:04:33.933 --> 00:04:37.467
+E tem mais uma coisa
+que gostaria de adicionar
+
+00:04:37.500 --> 00:04:40.700
+que não vai mudar nada neste vídeo,
+mas que vai no futuro.
+
+00:04:40.733 --> 00:04:45.100
+Aqui, dentro do objeto
+de opções,
+
+00:04:45.133 --> 00:04:50.055
+escrevo navigationOptions,
+
+00:04:50.088 --> 00:04:51.667
+e o cabeçalho será null.
+
+00:04:51.700 --> 00:04:55.800
+Isto vai nos livrar dos cabeçalhos
+que um dia teremos no aplicativo,
+
+00:04:55.833 --> 00:04:57.267
+mas que ainda não temos.
+
+00:04:57.300 --> 00:04:59.533
+Salvamos isso.
+E, novamente, está tudo ótimo.
+
+00:04:59.567 --> 00:05:03.233
+Podemos navegar
+por estes dois componentes.
+

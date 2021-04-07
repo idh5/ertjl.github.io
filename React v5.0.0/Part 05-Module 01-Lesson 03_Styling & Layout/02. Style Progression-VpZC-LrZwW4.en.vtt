@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.030
+Let's look at a few different ways we might approach styling our React Native components.
+
+00:00:06.030 --> 00:00:08.730
+So the first one and the obvious one is we can
+
+00:00:08.730 --> 00:00:12.419
+pass inline styles to any component that we want.
+
+00:00:12.419 --> 00:00:17.410
+So both to our view component as well as our text component.
+
+00:00:17.410 --> 00:00:21.035
+And then, what we can do is style takes in an object.
+
+00:00:21.035 --> 00:00:24.339
+So what we can say here is come in here and say flex: 1,
+
+00:00:24.339 --> 00:00:26.515
+will say marginLeft: 10,
+
+00:00:26.515 --> 00:00:34.615
+marginRight: 10, alignItems: 'center' and then, justifyContent: 'center'.
+
+00:00:34.615 --> 00:00:39.770
+And then, what we can do here is we can just say, color: 'red'.
+
+00:00:39.770 --> 00:00:41.837
+All right, so this looks pretty good if we go to our app,
+
+00:00:41.837 --> 00:00:47.410
+you'll notice that we get those styles but something feels a little bit off here.
+
+00:00:47.409 --> 00:00:50.489
+Inline styling is fine with React Native because
+
+00:00:50.490 --> 00:00:53.880
+styles are kind of coupled to the component regardless but,
+
+00:00:53.880 --> 00:00:58.240
+it feels a little weird to have all of these styles just inline like this.
+
+00:00:58.240 --> 00:01:04.740
+So what we can do is what if we came in here and really just moved these out out of here.
+
+00:01:04.739 --> 00:01:07.141
+So let's say, container,
+
+00:01:07.141 --> 00:01:08.664
+it's going to be that.
+
+00:01:08.665 --> 00:01:12.310
+And then, what we can do is we can say,
+
+00:01:12.310 --> 00:01:15.704
+text, is going to be this.
+
+00:01:15.704 --> 00:01:19.939
+And then now, we can do something like this.
+
+00:01:19.939 --> 00:01:22.469
+And then, we can also do something like that,
+
+00:01:22.469 --> 00:01:27.969
+where we now have the same styles applied to our components.
+
+00:01:27.969 --> 00:01:30.530
+But now, they're living in an object,
+
+00:01:30.530 --> 00:01:33.599
+and if we format this properly,
+
+00:01:33.599 --> 00:01:38.369
+it's going to look a lot more reasonable because we're not inlining everything,
+
+00:01:38.370 --> 00:01:40.189
+even though we're getting the same effect.
+
+00:01:40.189 --> 00:01:42.810
+Now, this is actually a pretty good approach to
+
+00:01:42.810 --> 00:01:46.424
+styling components and to styling React Native components.
+
+00:01:46.424 --> 00:01:50.959
+So good, in fact, that React Native has something similar built in.
+
+00:01:50.959 --> 00:01:55.905
+So what we can do is there the style sheet method here.
+
+00:01:55.905 --> 00:01:59.754
+And instead of just having this be a raw object,
+
+00:01:59.754 --> 00:02:02.334
+what we can do is we can say,
+
+00:02:02.334 --> 00:02:07.084
+StyleSheet.creates and then, we can pass it an object.
+
+00:02:07.084 --> 00:02:12.569
+And then now, it's going to be the exact same as we had above.
+
+00:02:12.569 --> 00:02:15.810
+But now what React Native is going to do is it's going to optimize
+
+00:02:15.810 --> 00:02:21.240
+the styles a little bit and give us a little bit of a performance boost.
+
+00:02:21.240 --> 00:02:25.830
+So whenever you are using styles with React Native what I like to do,
+
+00:02:25.830 --> 00:02:31.680
+if it's really more than just one or two properties on the components itself as a style,
+
+00:02:31.680 --> 00:02:35.450
+I'll go ahead and create a StyleSheet and move it down here.
+
+00:02:35.449 --> 00:02:39.000
+So in this case, what I would really do is I would probably just do something
+
+00:02:39.000 --> 00:02:43.344
+like this because I don't like to think of names.
+
+00:02:43.344 --> 00:02:44.909
+And so this text,
+
+00:02:44.909 --> 00:02:49.060
+it's going to have a color of red but because we have all of these styles here,
+
+00:02:49.060 --> 00:02:52.140
+we'll go ahead and use StyleSheet.create to
+
+00:02:52.139 --> 00:02:55.589
+create that StyleSheet and then just apply the styles with styles.
+
+00:02:55.590 --> 00:02:57.615
+whatever the property name is,
+
+00:02:57.615 --> 00:02:59.040
+in this case, container.
+

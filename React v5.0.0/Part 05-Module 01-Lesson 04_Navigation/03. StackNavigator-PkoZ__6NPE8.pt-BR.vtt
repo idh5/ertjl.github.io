@@ -1,0 +1,298 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.767 --> 00:00:05.000
+Quero agora tornar cada dia
+que preenchemos clicável.
+
+00:00:05.033 --> 00:00:08.200
+Então, sempre que clicarmos
+em um dia como esse,
+
+00:00:08.233 --> 00:00:10.233
+teremos uma transição
+esquerda-direita,
+
+00:00:10.267 --> 00:00:12.800
+aprofundamos
+nossa pilha de rotas,
+
+00:00:12.833 --> 00:00:15.533
+vemos as mesmas estatísticas
+
+00:00:15.567 --> 00:00:19.967
+e um botão para redefinir
+um dia específico.
+
+00:00:20.000 --> 00:00:22.967
+Precisamos de algumas coisas
+para fazer isso.
+
+00:00:23.000 --> 00:00:27.533
+Primeiro,
+vamos criar um novo arquivo
+
+00:00:27.567 --> 00:00:30.633
+e chamá-lo de EntryDetail.
+
+00:00:30.667 --> 00:00:32.800
+Importamos o react,
+
+00:00:32.833 --> 00:00:37.267
+assim como os outros componentes
+que usamos do React Native.
+
+00:00:37.300 --> 00:00:43.000
+Retornamos uma view
+com o texto "EntryDetail"
+
+00:00:43.033 --> 00:00:45.933
+e depois exportamos isto.
+
+00:00:45.967 --> 00:00:49.400
+Agora que temos este componente
+dentro do arquivo App.js,
+
+00:00:49.433 --> 00:00:53.567
+a primeira coisa
+que temos que fazer é importá-lo,
+
+00:00:53.600 --> 00:00:57.433
+e isto virá
+da pasta de componentes.
+
+00:00:57.467 --> 00:01:02.600
+Veja que agora estamos renderizando
+o componente de abas.
+
+00:01:02.633 --> 00:01:06.400
+Mas, porque estamos fazendo
+um tipo diferente de navegação,
+
+00:01:06.433 --> 00:01:07.700
+em vez de ter abas,
+
+00:01:07.733 --> 00:01:11.200
+estamos usando
+a hierarquia de rotas,
+
+00:01:11.233 --> 00:01:13.833
+precisamos
+de um StackNavigator.
+
+00:01:13.867 --> 00:01:17.181
+Então, do React Navigation,
+
+00:01:17.214 --> 00:01:20.133
+pegamos
+a função StackNavigator.
+
+00:01:20.167 --> 00:01:22.493
+Agora fazemos aqui
+
+00:01:22.526 --> 00:01:26.400
+como fizemos
+com o tabNavigator.
+
+00:01:26.433 --> 00:01:29.933
+Vamos fazer uma nova variável
+que chamaremos de MainNavigator,
+
+00:01:29.967 --> 00:01:34.567
+e ela será igual
+à chamada do StackNavigator.
+
+00:01:34.600 --> 00:01:39.633
+As propriedades deste objeto serão
+nossas novas rotas.
+
+00:01:39.667 --> 00:01:41.467
+Escrevemos "Home",
+
+00:01:41.500 --> 00:01:45.933
+e isto renderizará
+o componente Abas.
+
+00:01:45.967 --> 00:01:49.533
+Portanto, renderizamos
+este componente aqui,
+
+00:01:49.567 --> 00:01:51.267
+que renderizará essas abas.
+
+00:01:51.300 --> 00:01:54.133
+Veremos a importância disso
+daqui a pouco.
+
+00:01:54.167 --> 00:01:57.400
+Temos aqui EntryDetail,
+
+00:01:57.433 --> 00:02:01.967
+a tela será o componente EntryDetail
+que acabamos de fazer,
+
+00:02:02.000 --> 00:02:05.667
+e vamos criar algumas opções
+de navegação.
+
+00:02:05.700 --> 00:02:09.633
+Escrevemos headerTintColor,
+e ele será branco.
+
+00:02:09.667 --> 00:02:12.333
+Escrevemos headerStyle,
+
+00:02:12.367 --> 00:02:15.667
+e ele terá
+backgroundColor roxa.
+
+00:02:15.700 --> 00:02:19.500
+Agora, em vez de renderizar
+as abas,
+
+00:02:19.533 --> 00:02:23.233
+vamos renderizar
+o MainNavigator.
+
+00:02:23.267 --> 00:02:26.400
+Vamos ver se está
+tudo funcionando.
+
+00:02:26.433 --> 00:02:28.100
+Parece que sim.
+
+00:02:28.133 --> 00:02:32.767
+Veja que, se eu clicar aqui,
+nada acontece.
+
+00:02:32.800 --> 00:02:35.500
+Porque, se você
+se lembra disso,
+
+00:02:35.533 --> 00:02:40.400
+acho que dentro
+de history.js,
+
+00:02:40.433 --> 00:02:43.700
+quando renderizamos
+aquele card métrico
+
+00:02:43.733 --> 00:02:46.800
+que colocamos neste componente
+TouchableOpacity,
+
+00:02:46.833 --> 00:02:49.700
+fizemos
+um console.log "Pressed".
+
+00:02:49.733 --> 00:02:55.367
+Como o React Navigation
+está controlando o roteador
+
+00:02:55.400 --> 00:02:58.200
+e renderizando
+o componente de histórico,
+
+00:02:58.233 --> 00:03:05.158
+temos acesso
+a this.props.navigation.navigate
+
+00:03:05.191 --> 00:03:06.933
+como uma função.
+
+00:03:06.967 --> 00:03:10.467
+Isto nos levará
+para uma nova tela.
+
+00:03:10.500 --> 00:03:14.000
+O primeiro argumento que passaremos
+será a tela que vamos usar,
+
+00:03:14.033 --> 00:03:16.633
+porque queremos ir
+para a tela Entry Detail.
+
+00:03:16.667 --> 00:03:19.967
+O bom é que podemos também
+passar a informação adiante.
+
+00:03:20.000 --> 00:03:23.700
+Então a tela da qual queremos
+ter mais detalhes
+
+00:03:23.733 --> 00:03:26.500
+ou o evento do qual queremos
+mais detalhes
+
+00:03:26.533 --> 00:03:28.700
+é este aqui,
+
+00:03:28.733 --> 00:03:34.733
+a chave do terceiro argumento
+passado no renderItem.
+
+00:03:34.767 --> 00:03:38.367
+Então agora,
+se isto estiver funcionando,
+
+00:03:38.400 --> 00:03:42.100
+ao clicar aqui,
+
+00:03:42.133 --> 00:03:45.867
+seremos levados
+para a tela Entry Detail.
+
+00:03:45.900 --> 00:03:48.700
+Veja que o cabeçalho é roxo
+
+00:03:48.733 --> 00:03:52.167
+porque é
+o que especificamos aqui.
+
+00:03:52.200 --> 00:03:56.067
+E o tintColor é branco,
+esta seta bem aqui.
+
+00:03:56.100 --> 00:04:01.333
+Agora, em vez de adicionar
+um detalhe qualquer,
+
+00:04:01.367 --> 00:04:05.867
+quero que ele mostre
+o ID específico
+
+00:04:05.900 --> 00:04:08.433
+ou o evento específico
+que estamos passando.
+
+00:04:08.467 --> 00:04:10.400
+Podemos fazer isso...
+
+00:04:10.433 --> 00:04:13.367
+É um pouco longo,
+mas podemos fazer isso
+
+00:04:13.400 --> 00:04:19.000
+em this.props.navigation.state.
+params.entryId.
+
+00:04:19.033 --> 00:04:21.267
+Vamos ver como ficou.
+
+00:04:21.300 --> 00:04:24.667
+Quando navegamos
+em uma tela específica,
+
+00:04:24.700 --> 00:04:27.167
+veja que aparece
+Entry Detail,
+
+00:04:27.200 --> 00:04:30.567
+mas também aparece
+a chave dos dados
+
+00:04:30.600 --> 00:04:34.433
+que precisamos do react
+para ser exibido aqui.
+

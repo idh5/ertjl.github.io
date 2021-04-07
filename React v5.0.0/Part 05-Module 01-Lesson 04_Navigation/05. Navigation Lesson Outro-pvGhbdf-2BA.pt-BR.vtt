@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:04.538
+Nesta lição, você aprendeu a rotear
+usando o React Navigation.
+
+00:00:04.571 --> 00:00:07.007
+"TabNavigator" permite
+programar uma tela
+
+00:00:07.040 --> 00:00:08.675
+com diversas abas,
+
+00:00:08.708 --> 00:00:13.380
+"StackNavigator" permite que seu app
+mude de uma tela para outra,
+
+00:00:13.413 --> 00:00:16.416
+deixando a tela mais recente
+no topo de uma pilha,
+
+00:00:16.449 --> 00:00:19.653
+e "DrawerNavigator" é usado
+para programar facilmente
+
+00:00:19.686 --> 00:00:21.755
+uma tela
+com gaveta de navegação.
+
+00:00:21.788 --> 00:00:24.958
+Por fim, você aprendeu a aninhar
+diferentes navegadores
+
+00:00:24.992 --> 00:00:27.728
+para obter o fluxo de roteamento
+que bem entender.
+
+00:00:27.761 --> 00:00:29.096
+Na próxima lição,
+
+00:00:29.129 --> 00:00:31.765
+você aprenderá a aumentar
+a funcionalidade do seu app
+
+00:00:31.798 --> 00:00:34.101
+tirando máximo proveito
+dos recursos do Native.
+

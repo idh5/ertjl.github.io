@@ -1,0 +1,313 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.309
+Let's go ahead and continue to style our at entry screens here.
+
+00:00:05.309 --> 00:00:08.820
+You'll notice looking at these final versions that there are some things different.
+
+00:00:08.820 --> 00:00:12.120
+You'll notice the buttons are a little bit different based on what platform we're on.
+
+00:00:12.119 --> 00:00:13.410
+You'll also notice that
+
+00:00:13.410 --> 00:00:16.155
+these increment decorative buttons are a little bit different too.
+
+00:00:16.155 --> 00:00:19.830
+So it's something we'll have to keep in mind as we style this.
+
+00:00:19.829 --> 00:00:25.199
+First, let's go ahead and import a few things from react-native.
+
+00:00:25.199 --> 00:00:29.250
+We're going to need platform so we can see what platform we're currently on
+
+00:00:29.250 --> 00:00:34.170
+and then we're also going to use the style sheet API.
+
+00:00:34.170 --> 00:00:36.660
+Here, what we can do is,
+
+00:00:36.659 --> 00:00:39.959
+let's go down here and create some styles,
+
+00:00:39.960 --> 00:00:44.910
+which is going to be the result of calling StyleSheet.create and what I first want
+
+00:00:44.909 --> 00:00:50.640
+to do is let's first go ahead and style the submit button up here.
+
+00:00:50.640 --> 00:00:53.155
+What we'll do is,
+
+00:00:53.155 --> 00:00:56.429
+let's create a iOS submit button,
+
+00:00:56.429 --> 00:01:00.750
+and then we will create an Android submit button because as I talked about,
+
+00:01:00.750 --> 00:01:05.129
+they're a little bit different and then we will create a submit button text,
+
+00:01:05.129 --> 00:01:07.589
+which is going to be the same on both platforms.
+
+00:01:07.590 --> 00:01:10.620
+Let's do the text first. We're going to have a color of
+
+00:01:10.620 --> 00:01:13.740
+whites and we need to go ahead and import this
+
+00:01:13.739 --> 00:01:20.294
+up here so we'll import white from utils/colors and then now,
+
+00:01:20.295 --> 00:01:22.376
+our text is also going to have,
+
+00:01:22.376 --> 00:01:28.800
+say font size 22 and then we will make sure the text align is center.
+
+00:01:28.799 --> 00:01:30.683
+Then now, the iOS button,
+
+00:01:30.683 --> 00:01:32.310
+what we're going to have here is,
+
+00:01:32.310 --> 00:01:36.210
+let's say the background color is going to be purple,
+
+00:01:36.209 --> 00:01:41.579
+which we also need to import real quick and then on top of the background color,
+
+00:01:41.579 --> 00:01:43.465
+what we're also going to have,
+
+00:01:43.465 --> 00:01:45.615
+this will give it a padding of 10,
+
+00:01:45.614 --> 00:01:49.545
+border radius is going to be 7, height,
+
+00:01:49.545 --> 00:01:57.125
+we'll say is 45 and then margin left and margin right are both going to be 40
+
+00:01:57.125 --> 00:02:01.230
+and then the Android's submit button is going to be similar so
+
+00:02:01.230 --> 00:02:05.780
+it's also going to have a background of purple and a padding of 10,
+
+00:02:05.780 --> 00:02:09.134
+say padding left though is going to be 30,
+
+00:02:09.134 --> 00:02:14.549
+padding rights is also going to be 30, height 45.
+
+00:02:14.550 --> 00:02:19.735
+Border radius, it's going to be a little bit smaller than iOS. We'll just say two.
+
+00:02:19.735 --> 00:02:23.650
+We're going to align it at the end and
+
+00:02:23.650 --> 00:02:29.569
+then everything inside of it is going to be justified and aligned center.
+
+00:02:29.569 --> 00:02:33.780
+Now, what we can do is let's go ahead and add these styles to our button.
+
+00:02:33.780 --> 00:02:38.390
+We have our button up here and then we will say,
+
+00:02:38.389 --> 00:02:42.719
+style if we are on iOS.
+
+00:02:42.719 --> 00:02:48.185
+The styles we want to apply to this button are going to be styles.iOS submit button.
+
+00:02:48.185 --> 00:02:49.800
+If we're not on iOS,
+
+00:02:49.800 --> 00:02:51.300
+which means we're on Android,
+
+00:02:51.300 --> 00:02:54.105
+we're going to apply the Android submit button styles.
+
+00:02:54.104 --> 00:02:56.754
+Then texts, no matter what platform we're on,
+
+00:02:56.754 --> 00:03:02.644
+we're going to say style is equal to styles.submitButton text.
+
+00:03:02.645 --> 00:03:03.790
+Now, if we look at this,
+
+00:03:03.789 --> 00:03:05.250
+if everything is working,
+
+00:03:05.250 --> 00:03:09.444
+you'll notice that we have a button down here and eventually,
+
+00:03:09.444 --> 00:03:13.389
+when we fix the styling on this one we'll be able to see the Android button.
+
+00:03:13.389 --> 00:03:17.929
+Now, let's go ahead and continue to add styles here.
+
+00:03:17.930 --> 00:03:21.569
+What we can do is let's come to our styles.
+
+00:03:21.569 --> 00:03:22.829
+We will have a container,
+
+00:03:22.830 --> 00:03:25.500
+which is going to be around the main container
+
+00:03:25.500 --> 00:03:28.514
+and almost always whenever you have a container component,
+
+00:03:28.514 --> 00:03:30.464
+as we do right here,
+
+00:03:30.465 --> 00:03:34.365
+you'll want to give it a flex of one so its children will take up all of the space
+
+00:03:34.365 --> 00:03:39.480
+say padding 20 and then we'll give it a background color of white.
+
+00:03:39.479 --> 00:03:44.539
+Let's go ahead and apply this here, Styles.container.
+
+00:03:44.539 --> 00:03:48.750
+Now, let's go ahead and apply some styles to this.
+
+00:03:48.750 --> 00:03:50.460
+What we want to have happen here,
+
+00:03:50.460 --> 00:03:53.010
+you'll notice this is the thing that we're mapping over,
+
+00:03:53.009 --> 00:03:56.310
+instead of these being aligned in a column,
+
+00:03:56.310 --> 00:04:00.004
+as they are by default, we actually want to align them in a row.
+
+00:04:00.004 --> 00:04:06.544
+We can say is let's say style equals styles.row and then here in our style sheet,
+
+00:04:06.544 --> 00:04:10.359
+let's add a row, which is going to say,
+
+00:04:10.360 --> 00:04:14.030
+flex direction of row so it's setting the main access to row, flex: 1.
+
+00:04:14.030 --> 00:04:21.194
+It'll take a couple of space and then we want to align items along the cross axis,
+
+00:04:21.194 --> 00:04:24.425
+which is going to be vertical center.
+
+00:04:24.425 --> 00:04:28.076
+If we look at our app, there we go,
+
+00:04:28.076 --> 00:04:33.590
+just hit refresh on Android.
+
+00:04:33.589 --> 00:04:35.110
+It's looking a lot better.
+
+00:04:35.110 --> 00:04:37.545
+We have now these rows.
+
+00:04:37.545 --> 00:04:41.165
+Now, the last thing I want to styles if you remember,
+
+00:04:41.165 --> 00:04:42.810
+we have this view right here.
+
+00:04:42.810 --> 00:04:44.377
+let's go ahead and style that,
+
+00:04:44.377 --> 00:04:49.335
+and that's just coming from the section right here.
+
+00:04:49.334 --> 00:04:54.745
+First, let's go ahead and we all make a little container for this, we'll call it center.
+
+00:04:54.745 --> 00:04:58.834
+What we want to do is basically just align or have everything positioned in the center.
+
+00:04:58.834 --> 00:05:02.734
+Say flex: 1, justify content is going to be centered,
+
+00:05:02.735 --> 00:05:05.840
+align items are going to be centered,
+
+00:05:05.839 --> 00:05:10.564
+margin left and margin right are both going to be set to
+
+00:05:10.564 --> 00:05:16.079
+30 and then we will apply this styles to this view right here.
+
+00:05:16.079 --> 00:05:18.589
+That way, it's going to center everything.
+
+00:05:18.589 --> 00:05:24.799
+Now, all we need to do is let's go ahead and give this just an inline style.
+
+00:05:24.800 --> 00:05:30.454
+We'll add some padding to it so we'll say padding is going to be,
+
+00:05:30.454 --> 00:05:33.409
+let's just say 10 pixels and then now,
+
+00:05:33.410 --> 00:05:35.945
+if we submit one of these again,
+
+00:05:35.944 --> 00:05:40.269
+you'll notice that we get this icon right here.
+
+00:05:40.269 --> 00:05:41.779
+What I want to do is I want to have
+
+00:05:41.779 --> 00:05:45.934
+a different icon depending on what platform you're on because there are more
+
+00:05:45.935 --> 00:05:52.269
+Android and iOS specific smiley faces I guess so we can say is, inside of iOSicons.
+
+00:05:52.269 --> 00:05:54.109
+Instead of just having iOS-happy-outline,
+
+00:05:54.110 --> 00:05:56.000
+what we want to say this will say,
+
+00:05:56.000 --> 00:05:58.264
+if we are on iOS,
+
+00:05:58.264 --> 00:06:03.740
+then have the name be iOS-happy-outline and if we are not,
+
+00:06:03.740 --> 00:06:05.805
+meaning we are on Android,
+
+00:06:05.805 --> 00:06:08.309
+then we will say md-happy,
+
+00:06:08.309 --> 00:06:13.370
+which stands for material design happy and so that way,
+
+00:06:13.370 --> 00:06:18.019
+if we refresh both of these then we submit both of these.
+
+00:06:18.019 --> 00:06:20.389
+You'll notice that the icon is a little
+
+00:06:20.389 --> 00:06:23.000
+bit different depending on which platform you're on.
+

@@ -1,0 +1,263 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:02.967
+Estamos quase terminando
+de estilizar a view AddEntry,
+
+00:00:03.000 --> 00:00:06.633
+só precisamos fazer
+algumas mudanças.
+
+00:00:06.667 --> 00:00:10.800
+Este slider aqui
+e as medições logo embaixo,
+
+00:00:10.833 --> 00:00:15.633
+a data, e precisamos estilizar
+este botão Reset aqui.
+
+00:00:15.667 --> 00:00:18.333
+Vamos então começar.
+
+00:00:18.367 --> 00:00:21.933
+Primeiro, vamos fazer o DateHeader,
+já que ele é bem pequeno.
+
+00:00:21.967 --> 00:00:27.933
+Vamos adicionar
+um estilo de linha aqui.
+
+00:00:27.966 --> 00:00:31.733
+A cor será roxa,
+a qual importaremos daqui a pouco,
+
+00:00:31.767 --> 00:00:34.933
+e a fonte será 25.
+
+00:00:34.967 --> 00:00:38.733
+Agora importamos a cor roxa,
+
+00:00:38.767 --> 00:00:41.867
+ela está vindo
+de utils.colors.
+
+00:00:42.433 --> 00:00:47.533
+Nosso cabeçalho de data
+está lindo e estilizado.
+
+00:00:47.567 --> 00:00:51.700
+Em seguida,
+vamos fazer o slider,
+
+00:00:51.733 --> 00:00:54.433
+que está em UdaciSlider.
+
+00:00:54.467 --> 00:00:59.167
+Primeiro, precisamos importar
+a StyleSheet
+
+00:00:59.200 --> 00:01:03.633
+e o cinza das nossas cores.
+
+00:01:03.667 --> 00:01:09.400
+Aqui queremos que os itens
+fiquem organizados em linha,
+
+00:01:09.433 --> 00:01:12.167
+como fizemos
+com os outros componentes.
+
+00:01:12.200 --> 00:01:17.333
+Podemos então criar
+uma StyleSheet,
+
+00:01:17.366 --> 00:01:19.367
+dar a ela
+uma propriedade de linha,
+
+00:01:19.400 --> 00:01:23.633
+onde "flexDiretion"
+será "row",
+
+00:01:23.667 --> 00:01:28.667
+"flex" será 1 novamente,
+e "alignItems" será centralizado.
+
+00:01:28.700 --> 00:01:32.767
+Usaremos o metricCounter
+novamente,
+
+00:01:32.800 --> 00:01:35.300
+daremos uma largura 85
+
+00:01:35.333 --> 00:01:38.800
+e justificaremos
+o conteúdo ao centro,
+
+00:01:38.833 --> 00:01:42.567
+assim como o alignItems.
+
+00:01:42.600 --> 00:01:45.967
+Agora, precisamos vir aqui
+
+00:01:46.000 --> 00:01:51.433
+e aplicar o metricCounter
+a esta view aqui.
+
+00:01:51.467 --> 00:01:55.500
+A esta view,
+aplicaremos "styles.row"
+
+00:01:55.533 --> 00:02:00.767
+e daremos um estilo de linha
+a estes dois componentes de texto.
+
+00:02:00.800 --> 00:02:03.833
+O "fontSize" será 24,
+
+00:02:03.867 --> 00:02:09.100
+o "textAlign" será ao centro,
+e faremos parecido aqui.
+
+00:02:09.133 --> 00:02:12.967
+O "fontSize" será 18,
+e a cor será cinza.
+
+00:02:13.000 --> 00:02:16.367
+Você deve ter percebido
+que, nesta seção,
+
+00:02:16.400 --> 00:02:20.867
+estes estilos são bem parecidos
+com o arquivo Steppers.
+
+00:02:20.900 --> 00:02:22.567
+Se quiser consolidá-los,
+
+00:02:22.600 --> 00:02:25.633
+faça um único objeto
+em algum lugar,
+
+00:02:25.667 --> 00:02:29.867
+importe-o para ambos
+os componentes,
+
+00:02:29.900 --> 00:02:34.000
+e assim os estilos
+não ficarão duplicados.
+
+00:02:34.033 --> 00:02:38.500
+Não sou muito fã disso
+porque, se quisermos mudar um deles,
+
+00:02:38.533 --> 00:02:40.767
+teríamos que dissociá-los.
+
+00:02:40.800 --> 00:02:42.500
+Mas, novamente,
+você decide.
+
+00:02:42.533 --> 00:02:45.433
+Aqui no slider,
+
+00:02:45.467 --> 00:02:50.100
+veja que ele não está ocupando
+todo o espaço dos pais.
+
+00:02:50.133 --> 00:02:56.000
+Para resolver isso,
+podemos colocar um flex de 1.
+
+00:02:56.033 --> 00:02:59.933
+É por isso que sempre falo
+que, sempre que quiser
+
+00:02:59.967 --> 00:03:02.400
+que um componente ocupe
+todo o espaço do seu pai,
+
+00:03:02.433 --> 00:03:07.633
+o flex precisa ser 1,
+fazendo com que fique assim.
+
+00:03:08.300 --> 00:03:09.333
+Está ótimo.
+
+00:03:09.367 --> 00:03:13.633
+Por fim, vamos estilizar
+este botão Reset aqui
+
+00:03:13.667 --> 00:03:17.533
+que está dentro
+de "TextButton".
+
+00:03:17.567 --> 00:03:21.667
+Precisaremos da cor roxa
+
+00:03:21.700 --> 00:03:26.367
+e vamos importar a StyleSheet,
+já que estamos aqui.
+
+00:03:26.400 --> 00:03:27.967
+Criaremos alguns estilos...
+
+00:03:28.767 --> 00:03:32.267
+teremos uma propriedade
+de redefinição,
+
+00:03:32.467 --> 00:03:35.833
+e textAlign ficará ao centro.
+
+00:03:35.867 --> 00:03:39.567
+Poderíamos usar a linha,
+mas usaremos a StyleSheet mesmo.
+
+00:03:39.600 --> 00:03:41.800
+A cor será roxa,
+
+00:03:41.833 --> 00:03:45.919
+e aqui nós vamos escrever
+
+00:03:45.952 --> 00:03:50.000
+que "style" será igual
+a "styles.reset",
+
+00:03:50.033 --> 00:03:54.455
+e então poderemos
+passar Styles
+
+00:03:54.488 --> 00:03:56.167
+como uma propriedade.
+
+00:03:56.200 --> 00:03:58.167
+Aqui diremos que,
+
+00:03:58.200 --> 00:04:00.767
+se "style" for indefinido,
+ele será igual a um objeto vazio.
+
+00:04:00.800 --> 00:04:04.533
+Mas, em vez de aplicar
+"styles.reset",
+
+00:04:04.567 --> 00:04:10.333
+também quero poder aplicar "style"
+que vem das propriedades.
+
+00:04:10.767 --> 00:04:16.067
+Agora uma pequena mudança rápida
+em "./utils".
+
+00:04:18.167 --> 00:04:21.567
+Agora,
+se olharmos para esta view,
+
+00:04:21.600 --> 00:04:25.400
+vemos que o botão Reset
+está estilizado
+
+00:04:25.433 --> 00:04:26.633
+e podemos clicar nele.
+

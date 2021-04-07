@@ -1,0 +1,24 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.901
+Até aqui, cobrimos um bocado
+sobre a API do React Native.
+
+00:00:03.934 --> 00:00:06.534
+Mas e como estilizar
+os aplicativos?
+
+00:00:06.567 --> 00:00:08.934
+Usando CSS normal
+com style sheets?
+
+00:00:08.967 --> 00:00:11.133
+Ou tem
+alguma sintaxe especial?
+
+00:00:11.166 --> 00:00:14.100
+Essas são as perguntas
+que esta lição responderá.
+

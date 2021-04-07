@@ -1,0 +1,420 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:06.200
+Agora que a tela AddEntry
+está estilizada e tudo mais,
+
+00:00:06.233 --> 00:00:11.300
+vamos começar
+com a MainHistoryView,
+
+00:00:11.333 --> 00:00:14.600
+esta view aqui
+com os calendários.
+
+00:00:14.633 --> 00:00:17.400
+E antes de renderizar
+qualquer IU,
+
+00:00:17.433 --> 00:00:22.200
+vamos usar o calendário
+do nosso banco de dados falso
+
+00:00:22.233 --> 00:00:25.100
+para pegarmos
+todos esses itens.
+
+00:00:25.133 --> 00:00:29.433
+Assim, renderizaremos
+um calendário que ficará assim.
+
+00:00:29.467 --> 00:00:35.367
+Dentro do arquivo Api.js,
+
+00:00:35.400 --> 00:00:37.933
+precisamos criar
+outra função.
+
+00:00:37.966 --> 00:00:41.733
+Vamos chamá-la
+de "fetchCalendarResults",
+
+00:00:41.767 --> 00:00:46.533
+e ela chamará
+AsyncStorage.getItem.
+
+00:00:46.567 --> 00:00:49.633
+Estamos usando AsyncStorage
+como um banco de dados falso.
+
+00:00:49.667 --> 00:00:51.349
+Vamos pegar todos os itens
+
+00:00:51.382 --> 00:00:55.933
+que estão
+em CALENDAR_STORAGE_KEY.
+
+00:00:55.967 --> 00:01:01.667
+E antes de retorná-los
+
+00:01:01.700 --> 00:01:04.467
+para quem chamou
+fetchCalendarResults,
+
+00:01:04.500 --> 00:01:10.467
+vamos importar
+formatCalendarResults
+
+00:01:10.500 --> 00:01:13.367
+do arquivo calendar.
+
+00:01:13.400 --> 00:01:14.867
+Vamos formatar isso aqui,
+
+00:01:14.900 --> 00:01:18.900
+e retornar o que
+formatCalendarResults nos retornar.
+
+00:01:18.933 --> 00:01:21.100
+Agora que pegamos
+os resultados do calendário,
+
+00:01:21.133 --> 00:01:26.700
+podemos pegar todos os dias,
+ou o calendário inteiro,
+
+00:01:26.733 --> 00:01:29.967
+que estão em AsyncStorage,
+nosso banco de dados falso.
+
+00:01:30.000 --> 00:01:34.700
+Agora vamos criar
+um novo arquivo
+
+00:01:34.733 --> 00:01:38.167
+para o componente
+History.js.
+
+00:01:38.200 --> 00:01:42.400
+Vou copiar todo este código,
+que é o de sempre.
+
+00:01:42.433 --> 00:01:44.833
+Temos o componente
+"History",
+
+00:01:44.867 --> 00:01:46.933
+ele está renderizando
+TextHistory,
+
+00:01:46.967 --> 00:01:48.900
+e vamos exportá-lo.
+
+00:01:48.933 --> 00:01:52.967
+Dentro do arquivo App.js,
+
+00:01:53.000 --> 00:01:56.767
+em vez de renderizar
+AddEntry,
+
+00:01:56.800 --> 00:01:58.633
+antes de configurar
+nosso roteador,
+
+00:01:58.667 --> 00:02:04.133
+vamos renderizar
+o componente History.
+
+00:02:04.167 --> 00:02:09.467
+Se funcionar, veremos "History"
+atrás da barra de status.
+
+00:02:09.500 --> 00:02:12.700
+Então em "History",
+como eu já disse,
+
+00:02:12.733 --> 00:02:18.533
+vamos chamar a função
+fetchCalendarResults,
+
+00:02:18.567 --> 00:02:19.967
+que acabamos de configurar.
+
+00:02:20.000 --> 00:02:24.333
+Vamos importar
+algumas coisas aqui.
+
+00:02:24.367 --> 00:02:26.167
+Vamos precisar de "connect"
+
+00:02:26.436 --> 00:02:31.233
+e de algumas ações.
+
+00:02:31.267 --> 00:02:33.867
+Se você se lembra,
+recebemos as entradas,
+
+00:02:33.900 --> 00:02:38.200
+que é quando recebemos entradas
+do banco de dados.
+
+00:02:38.233 --> 00:02:40.733
+Vamos também precisar
+de AddEntry
+
+00:02:40.767 --> 00:02:43.967
+no caso de não termos
+nenhuma entrada para hoje.
+
+00:02:44.000 --> 00:02:48.300
+Queremos adicionar itens
+para o dia de hoje,
+
+00:02:48.333 --> 00:02:50.700
+eles estão vindo
+de "actions".
+
+00:02:50.733 --> 00:02:54.500
+Também precisaremos de algumas
+coisas do arquivo Helpers,
+
+00:02:54.533 --> 00:03:00.033
+usaremos timeToString
+e getDailyReminderValue.
+
+00:03:00.067 --> 00:03:04.500
+Os dois vêm
+de utils/helpers.
+
+00:03:04.533 --> 00:03:09.667
+E, finalmente, precisaremos
+da função "fetchCalendarResults"
+
+00:03:09.700 --> 00:03:13.600
+que criamos agora há pouco.
+
+00:03:13.633 --> 00:03:19.133
+Quando este componente
+montar,
+
+00:03:19.167 --> 00:03:24.000
+pegaremos os resultados
+do nosso calendário.
+
+00:03:24.033 --> 00:03:27.967
+Antes disso, vamos conectar
+os componentes
+
+00:03:28.000 --> 00:03:32.567
+para termos acesso
+a this.props.dispatch.
+
+00:03:32.600 --> 00:03:36.289
+Escrevemos que "dispatch"
+
+00:03:36.322 --> 00:03:39.900
+virá de "this.props".
+
+00:03:39.933 --> 00:03:43.567
+Vamos então pegar
+os resultados do calendário.
+
+00:03:43.600 --> 00:03:48.733
+Isso vai nos dar
+todas as entradas,
+
+00:03:48.767 --> 00:03:53.100
+então simplesmente fazemos
+um "dispatch(receiveEntries)",
+
+00:03:53.133 --> 00:03:54.667
+passando as "entries".
+
+00:03:54.700 --> 00:03:58.500
+Chamamos "fetchCalendarResults",
+conseguimos todas as entradas,
+
+00:03:58.533 --> 00:04:02.200
+então fazemos
+"dispatch(receive.Entries)",
+
+00:04:02.233 --> 00:04:06.567
+que, se você se lembra,
+vai terminar aqui.
+
+00:04:06.600 --> 00:04:12.233
+Vamos pegar todas essas entradas
+e adicioná-las ao estado atual.
+
+00:04:12.267 --> 00:04:16.615
+Mas também vamos colocar
+
+00:04:16.648 --> 00:04:18.733
+um ".then" aqui.
+
+00:04:18.767 --> 00:04:22.000
+Isso vai fazer com que as entradas
+sejam as propriedades de um objeto.
+
+00:04:22.033 --> 00:04:28.017
+Aqui, se "entries"
+em "timeToString"
+
+00:04:28.050 --> 00:04:30.767
+não for nada,
+ou seja, se for falso,
+
+00:04:30.800 --> 00:04:34.739
+é porque não adicionamos
+nenhuma informação
+
+00:04:34.772 --> 00:04:37.167
+no dia de hoje.
+
+00:04:37.200 --> 00:04:43.301
+Se você se lembra
+do método getDailyReminderValue
+
+00:04:43.334 --> 00:04:48.267
+que criamos dentro
+do arquivo Helpers, que está aqui...
+
+00:04:48.300 --> 00:04:52.433
+Queremos configurar
+a propriedade em Redux Store
+
+00:04:52.467 --> 00:04:56.533
+para o dia de hoje
+neste valor aqui.
+
+00:04:56.567 --> 00:05:02.233
+Escrevemos, então, se...
+Isso daqui tem que ser "entries"...
+
+00:05:02.267 --> 00:05:06.433
+Se as entradas do dia
+forem falsas,
+
+00:05:06.467 --> 00:05:09.567
+faça um "dispatch(addEntry)"
+
+00:05:09.600 --> 00:05:13.967
+passando "timeToString"
+como chave.
+
+00:05:14.000 --> 00:05:19.300
+O valor será o resultado da chamada
+de "getDailyReminderValue".
+
+00:05:19.333 --> 00:05:22.267
+Novamente,
+recebemos nossas entradas,
+
+00:05:22.300 --> 00:05:25.100
+e, se não tivermos
+nenhuma entrada hoje,
+
+00:05:25.133 --> 00:05:28.767
+mostramos uma mão acenando
+que diz:
+
+00:05:28.800 --> 00:05:30.800
+"Não esqueça de adicionar
+seus dados de hoje!"
+
+00:05:30.833 --> 00:05:34.467
+Para tal,
+vamos adicionar isso
+
+00:05:34.500 --> 00:05:38.500
+como propriedade do nosso estado
+na chave de hoje.
+
+00:05:38.533 --> 00:05:40.733
+Veja que não temos
+nenhum estado local
+
+00:05:40.767 --> 00:05:44.133
+porque o estado do calendário
+está dentro de Redux.
+
+00:05:44.167 --> 00:05:48.667
+Então, rapidamente,
+vamos abrir espaço
+
+00:05:48.700 --> 00:05:50.533
+e criar uma função aqui.
+
+00:05:50.567 --> 00:05:52.433
+Escrevemos
+"mapStateToProps",
+
+00:05:52.467 --> 00:05:56.700
+vamos receber um estado,
+que são as entradas
+
+00:05:56.733 --> 00:06:00.433
+e queremos retornar
+todas as entradas.
+
+00:06:00.467 --> 00:06:05.167
+Se passarmos "mapStateToProps"
+para conectá-las,
+
+00:06:05.200 --> 00:06:09.733
+ele será as propriedades
+de todas as entradas.
+
+00:06:09.767 --> 00:06:13.300
+Em vez de renderizar
+"History",
+
+00:06:13.333 --> 00:06:17.667
+vamos renderizar
+"JSON.stringify(this.props)".
+
+00:06:17.700 --> 00:06:20.833
+E agora,
+quando rodarmos isso,
+
+00:06:20.867 --> 00:06:23.900
+veremos que os componentes
+montarão.
+
+00:06:23.933 --> 00:06:26.033
+Vamos pegar
+alguns resultados.
+
+00:06:26.067 --> 00:06:29.000
+Vamos atualizar Redux
+com esses resultados,
+
+00:06:29.033 --> 00:06:32.467
+e isso vai acabar causando
+uma nova renderização.
+
+00:06:32.500 --> 00:06:35.300
+Assim,
+veremos em "this.props",
+
+00:06:35.333 --> 00:06:40.100
+todas as entradas que chamamos
+em "fetchCalendarResults".
+
+00:06:40.133 --> 00:06:44.433
+Veja que temos
+um objeto enorme aqui,
+
+00:06:44.467 --> 00:06:49.167
+que é tudo o que está vindo
+do estado Redux,
+
+00:06:49.200 --> 00:06:51.033
+ou seja, nossas entradas,
+
+00:06:51.067 --> 00:06:53.033
+ou, basicamente,
+o calendário inteiro.
+

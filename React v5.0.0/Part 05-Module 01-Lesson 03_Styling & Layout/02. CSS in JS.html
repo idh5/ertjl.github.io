@@ -1,0 +1,358 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS in JS</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Styling &amp; Layout</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. CSS in JS.html">02. CSS in JS</a>
+    </li>
+    <li class="">
+      <a href="03. Flexbox Guide.html">03. Flexbox Guide</a>
+    </li>
+    <li class="">
+      <a href="04. Layout In React Native.html">04. Layout In React Native</a>
+    </li>
+    <li class="">
+      <a href="05. How Professionals Handle Styling.html">05. How Professionals Handle Styling</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. CSS in JS</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>CSS In JS</p></h3>
+  <video controls>
+  <source src="02. CSS In JS-xZ_vg2sP4bA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. CSS In JS-xZ_vg2sP4bA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. CSS In JS-xZ_vg2sP4bA.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. CSS In JS-xZ_vg2sP4bA.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="css-in-js">CSS in JS</h2>
+<p>Before we jump into how CSS in JavaScript works, let's check out an example of some "normal" HTML and CSS:</p>
+<pre><code class="html language-html">&lt;!-- index.css --&gt;
+.avatar {
+  border-radius: 5px;
+  margin: 10px;
+  width: 48px;
+  height: 48px;
+}
+
+&lt;!-- // index.html --&gt;
+&lt;div&gt;
+  &lt;img class='avatar' src='https://tylermcginnis.com/tylermcginnis_glasses-300.png' /&gt;
+&lt;/div&gt;</code></pre>
+<p>Nothing too surprising! But since we're not using HTML or CSS files to build mobile apps -- how would this look in React Native? </p>
+<p>First, it's important to know that all of the core components in React Native can accept a prop named <code>style</code>. One way we can leverage this prop is to provide styling to components with inline JavaScript objects:</p>
+<pre><code class="js language-js">function Avatar ({ src }) {
+  return (
+    &lt;View&gt;
+      &lt;Image
+        style={{borderRadius: 5, margin: 10, width: 48, height: 48}}
+        source={{uri: 'https://tylermcginnis.com/tylermcginnis_glasses-300.png'}}
+      /&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+<p>In the example above, the <code>&lt;Image&gt;</code> component receives two props: <code>style</code> and <code>source</code>. The value of <code>style</code> is just a plain old JavaScript object with <code>borderRadius</code>, <code>margin</code>, <code>width</code>, and <code>height</code> properties. Keep in mind that unlike CSS on the web, properties are written in camelCase (i.e., <code>borderRadius</code> in CSS in JS, but <code>border-radius</code> on the web).</p>
+<p>This works, but things can get muddy quickly. Imagine if the inline object contained a dozen properties, or if we wanted the same style to apply to more than just one component! One way to keep your code DRY and reusable is to store the object in a variable:</p>
+<pre><code class="js language-js">const styles = {
+  image: {
+    borderRadius: 5,
+    margin: 10,
+    width: 48,
+    height: 48
+  }
+};
+
+function Avatar ({ src }) {
+  return (
+    &lt;View&gt;
+      &lt;Image
+        style={styles.image}
+        source={{uri: 'https://tylermcginnis.com/tylermcginnis_glasses-300.png'}}
+      /&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+<p>It's a great way to clean things up a bit, but React Native goes a step further with its <code>StyleSheet</code> API. Check out the following example:</p>
+<pre><code class="js language-js">import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default class TextExample extends React.Component {
+  render() {
+    return (
+      &lt;View&gt;
+        &lt;Text style={styles.greenLarge}&gt;This is large green text!&lt;/Text&gt;
+        &lt;Text style={styles.red}&gt;This is smaller red text!&lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  greenLarge: {
+    color: 'green',
+    fontWeight: 'bold',
+    fontSize: 40
+  },
+  red: {
+    color: 'red',
+    padding: 30
+  },
+});</code></pre>
+<p>Here, an object containing styles is passed into <code>StyleSheet</code>'s <code>create</code> method. It looks similar to styling with a JavaScript object variable! However, using <code>StyleSheet</code> gives us a few benefits in terms of code quality and performance. We’ll take a closer look later in this Lesson as well, but this is how the React Native docs describe it:</p>
+<blockquote>
+  <p>Code quality</p>
+  <ul>
+  <li>By moving styles away from the render function, you're making the code easier to understand.</li>
+  <li>Naming the styles is a good way to add meaning to the low-level components in the render function.</li>
+  </ul>
+  <p>Performance</p>
+  <ul>
+  <li>Making a stylesheet from a style object makes it possible to refer to it by ID instead of creating a new style object every time.</li>
+  <li>It also allows to send the style only once through the bridge. All subsequent uses are going to refer to an id (not implemented yet).</li>
+  </ul>
+  <p>Another benefit is that <code>StyleSheet</code> validates the content within the style object as well. This means that should there be any errors in any properties or values in your style objects, the console will throw an error during compilation instead of at runtime.</p>
+  <h2 id="💡-additional-styling💡">💡 Additional Styling💡</h2>
+  <p>If you wanted to implement more than one style to a component, the <code>style</code> prop can accept styles as an array:</p>
+<pre><code class="js language-js">&lt;Text style={[styles.red, styles.greenLarge]}&gt;This will be red, then greenLarge&lt;/Text&gt;</code></pre>
+  <p>The above <code>&lt;Text&gt;</code> component will render large green text, as the last style in the array will take precedence. This is a great way to inherit styles!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Style Progression</p></h3>
+  <video controls>
+  <source src="02. Style Progression-VpZC-LrZwW4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Style Progression-VpZC-LrZwW4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Style Progression-VpZC-LrZwW4.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Style Progression-VpZC-LrZwW4.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-libraries-for-css-in-js💡">💡 Libraries for CSS in JS💡</h2>
+  <p>Styling in React is going through a renaissance period right now just as Flux did a few years ago (which eventually gave us Redux). There are many different styling libraries popping up and each has different tradeoffs. Two of the most popular are <a href="https://github.com/robinpowered/glamorous-native" rel="noopener noreferrer" target="_blank">Glamorous</a> and <a href="https://github.com/styled-components/styled-components" rel="noopener noreferrer" target="_blank">Styled Components</a>. The whole idea behind both of these libraries is that styling is a primary concern of the component, and therefore styling should be coupled with the component itself. We'll take a look at using Styled Component with React Native a little bit later.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about styling in React Native?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505165516809" name="394628" id="a1505165516809">
+      <label for="a1505165516809"><p>All of the core components accept a <code>style</code> property.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505165519261" name="394628" id="a1505165519261">
+      <label for="a1505165519261"><p>Styling React Native apps requires a special syntax to define styles that is unlike anything in traditional JavaScript</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505165519867" name="394628" id="a1505165519867">
+      <label for="a1505165519867"><p>Style names and values always match how they are used on the web (e.g., we need to use <code>background-color</code> in React Native)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505165521196" name="394628" id="a1505165521196">
+      <label for="a1505165521196"><p>The <code>StyleSheet</code> API allows us to define multiple styles in a single place</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1528315640344" name="394628" id="a1528315640344">
+      <label for="a1528315640344"><p>With React Native, applications are styled using JavaScript.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>All of the core components accept a `style` property.</li>
+      <li>The `StyleSheet` API allows us to define multiple styles in a single place</li>
+      <li>With React Native, applications are styled using JavaScript.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>CSS in JS is a distinct approach to styling. The main idea is that styling is handled by JavaScript objects rather than traditional CSS. Styles can be written inline or accessed via object variables, but React Native offers a <code>StyleSheet</code> API that provides a performant and compositional way to style components. </p>
+<p>Now that we've seen React Native handle <em>styling</em>, how do we manage the <em>layout</em> of a mobile application? We'll take a look at CSS's <strong>flexbox</strong> in the next section to do just that!</p>
+<h3 id="further-learning">Further Learning</h3>
+<ul>
+<li><a href="https://reactarmory.com/answers/how-can-i-use-css-in-js-securely" rel="noopener noreferrer" target="_blank">How can I use CSS-in-JS securely?</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Flexbox Guide.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. CSS in JS')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

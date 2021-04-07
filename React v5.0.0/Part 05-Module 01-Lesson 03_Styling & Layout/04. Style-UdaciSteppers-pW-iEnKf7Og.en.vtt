@@ -1,0 +1,394 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.040
+Now, let's go ahead and style our Udacity Stepper component,
+
+00:00:03.040 --> 00:00:06.490
+which is this component right here.
+
+00:00:06.490 --> 00:00:09.185
+This one's actually pretty fun because if you'll notice,
+
+00:00:09.185 --> 00:00:11.589
+on the final version, again,
+
+00:00:11.589 --> 00:00:14.169
+as we've talked about the iOS version is very different
+
+00:00:14.169 --> 00:00:16.989
+than the Android version so what we want to do
+
+00:00:16.989 --> 00:00:19.419
+is we want to get these things positioned in
+
+00:00:19.420 --> 00:00:24.100
+a row and then what we want to do is just style the buttons a little bit differently.
+
+00:00:24.100 --> 00:00:28.525
+Let's head over to our Udacity Steppers component,
+
+00:00:28.524 --> 00:00:34.359
+and we need to go ahead and imports the style sheet as well as platform and then,
+
+00:00:34.359 --> 00:00:37.524
+as I just barely talked about what we want to do,
+
+00:00:37.524 --> 00:00:45.519
+is we want to make sure that these items are displayed in a row rather than vertically.
+
+00:00:45.520 --> 00:00:47.200
+Eventually, what we'll have is we will have
+
+00:00:47.200 --> 00:00:50.345
+different buttons for iOS and different buttons for Android.
+
+00:00:50.344 --> 00:00:54.240
+Let's go ahead and just worry about the iOS versions for now.
+
+00:00:54.240 --> 00:00:56.495
+What we can do, as always,
+
+00:00:56.494 --> 00:00:59.829
+is we can say styles is going to be whatever gets
+
+00:00:59.829 --> 00:01:03.579
+returned from StyleSheet.create and first,
+
+00:01:03.579 --> 00:01:06.164
+let's create our row property.
+
+00:01:06.165 --> 00:01:07.865
+So, flexDirection to row,
+
+00:01:07.864 --> 00:01:10.824
+so now the main access is going to be
+
+00:01:10.825 --> 00:01:16.530
+horizontally say flex: 1 as always and then align items center.
+
+00:01:16.530 --> 00:01:21.155
+We are going to align the items vertically along the center.
+
+00:01:21.155 --> 00:01:24.519
+What we want to do is up here,
+
+00:01:24.519 --> 00:01:30.789
+we want to say style is going to be say styles.row and then what we
+
+00:01:30.790 --> 00:01:37.355
+also want to do is we also want to say justifyContent space-between.
+
+00:01:37.355 --> 00:01:40.859
+What's happening here, if this is a row,
+
+00:01:40.859 --> 00:01:43.150
+so the main axis is horizontal,
+
+00:01:43.150 --> 00:01:47.065
+then justify content is going to align everything horizontally
+
+00:01:47.064 --> 00:01:51.549
+spaced out with space evenly between the items and then now,
+
+00:01:51.549 --> 00:01:52.974
+what we can do here,
+
+00:01:52.974 --> 00:01:55.359
+is we'll just do an inline style and we will
+
+00:01:55.359 --> 00:01:58.920
+say flexDirection is going to be row as well,
+
+00:01:58.920 --> 00:02:01.969
+but without all of the stuff on it.
+
+00:02:01.969 --> 00:02:04.795
+Now, if we just save that, you'll notice,
+
+00:02:04.795 --> 00:02:07.390
+let's refresh Android, you'll notice that things
+
+00:02:07.390 --> 00:02:10.240
+are aligned horizontally now which is good.
+
+00:02:10.240 --> 00:02:14.550
+Next, let's go ahead and make our iosBtn style,
+
+00:02:14.550 --> 00:02:17.350
+so we'll come down here and we'll say iosBtn.
+
+00:02:17.349 --> 00:02:21.439
+If you remember what it's going to look like is this right here.
+
+00:02:21.439 --> 00:02:25.050
+We will say the background is going to be white,
+
+00:02:25.050 --> 00:02:27.525
+and let's go ahead and import that real quick.
+
+00:02:27.525 --> 00:02:30.039
+Eventually, we're going to need a few other colors as well,
+
+00:02:30.039 --> 00:02:31.829
+so I'll do that right now.
+
+00:02:31.830 --> 00:02:33.400
+Just gray and purple,
+
+00:02:33.400 --> 00:02:36.534
+backgroundColor is going to be a white,
+
+00:02:36.534 --> 00:02:39.549
+borderColor is going to be purple,
+
+00:02:39.550 --> 00:02:42.100
+borderWidth is going to be one,
+
+00:02:42.099 --> 00:02:47.155
+borderRadius, let's go ahead and set that to let's say three.
+
+00:02:47.155 --> 00:02:48.659
+We'll give it a padding of five,
+
+00:02:48.659 --> 00:02:54.969
+and a paddingLeft of 25 as well as a paddingRight of 25.
+
+00:02:54.969 --> 00:03:03.344
+Now, let's apply our iosBtn to both of these touchable components right here.
+
+00:03:03.344 --> 00:03:05.134
+Right here, we will say style and
+
+00:03:05.134 --> 00:03:08.530
+style.iosBtn and then we will
+
+00:03:08.530 --> 00:03:12.145
+do the exact same thing for this touchable component right here.
+
+00:03:12.145 --> 00:03:15.250
+Now, let's take a look at what this looks like.
+
+00:03:15.250 --> 00:03:17.439
+We're getting there, it's a little bit closer,
+
+00:03:17.439 --> 00:03:20.829
+you'll notice that right down the middle here,
+
+00:03:20.830 --> 00:03:22.960
+we still have that borderRadius.
+
+00:03:22.960 --> 00:03:28.189
+What we want to do is we want to make these flat rather than having a borderRadius.
+
+00:03:28.189 --> 00:03:29.620
+What we can do is,
+
+00:03:29.620 --> 00:03:32.629
+let's go ahead and pass an array to this first one.
+
+00:03:32.629 --> 00:03:35.215
+We want to apply all of these styles,
+
+00:03:35.215 --> 00:03:38.620
+but we also want to come in here and we will say
+
+00:03:38.620 --> 00:03:42.210
+borderTopRightRadius is going to be
+
+00:03:42.210 --> 00:03:47.685
+zero and borderBottomRightRadius is also going to be zero.
+
+00:03:47.685 --> 00:03:49.240
+Now, if we look at our app,
+
+00:03:49.240 --> 00:03:50.545
+you'll notice right here,
+
+00:03:50.544 --> 00:03:57.269
+that's flat as well as on the bottom and then we want to do the same thing down here.
+
+00:03:57.270 --> 00:04:03.900
+This will be an array and then we want to say on this one borderTopLeftRadius is zero,
+
+00:04:03.900 --> 00:04:09.295
+and borderBottomLeftRadius is also going to be zero,
+
+00:04:09.294 --> 00:04:10.750
+which should flatten those out a bit.
+
+00:04:10.750 --> 00:04:13.264
+I'm not sure whether it is bleeding right here.
+
+00:04:13.264 --> 00:04:15.319
+It looks like it's a bug with React Native.
+
+00:04:15.319 --> 00:04:18.269
+When I built this for production and the other version of the app, I didn't have that.
+
+00:04:18.269 --> 00:04:21.524
+I think it should be fine to not worry about that for right now.
+
+00:04:21.524 --> 00:04:26.864
+This looks pretty good as far as the iOS buttons are concerned.
+
+00:04:26.865 --> 00:04:28.470
+Instead of using black, here,
+
+00:04:28.470 --> 00:04:31.600
+let's go ahead and iOS,
+
+00:04:31.600 --> 00:04:34.260
+or at least on this button, we'll use purple,
+
+00:04:34.259 --> 00:04:37.365
+and then down here let's have purple as well.
+
+00:04:37.365 --> 00:04:39.939
+All right. That looks great.
+
+00:04:39.939 --> 00:04:42.060
+Before we jump into styling for Android,
+
+00:04:42.060 --> 00:04:46.370
+let's go ahead and style our metrics right here.
+
+00:04:46.370 --> 00:04:49.490
+What we can do is,
+
+00:04:49.490 --> 00:04:52.165
+let's say this one is going to have,
+
+00:04:52.165 --> 00:04:59.319
+we'll call it metricCounter and what that's going to have say width is going to be 85,
+
+00:04:59.319 --> 00:05:06.639
+then we want to justify everything on the center using justifyContent and alignItems.
+
+00:05:06.639 --> 00:05:13.319
+Then now, let's go ahead and add some inline styles to the text components.
+
+00:05:13.319 --> 00:05:18.685
+Let's say font size of 24 on this one with textAlign center.
+
+00:05:18.685 --> 00:05:24.285
+On this one, all we will say is font size of 18 so it's a little bit smaller,
+
+00:05:24.285 --> 00:05:27.865
+and the color instead of being black is going to be gray.
+
+00:05:27.865 --> 00:05:29.949
+Now, let's see what that looks like.
+
+00:05:29.949 --> 00:05:31.539
+That looks pretty good.
+
+00:05:31.540 --> 00:05:36.635
+Now, let's go ahead and style our Android buttons real quick.
+
+00:05:36.634 --> 00:05:39.240
+Down here, let's create a new property.
+
+00:05:39.240 --> 00:05:42.915
+We'll call it an androidBtn.
+
+00:05:42.915 --> 00:05:44.140
+What this is going to have?
+
+00:05:44.139 --> 00:05:48.849
+It's going to be a lot simpler than the iOS one will just say margin of five.
+
+00:05:48.850 --> 00:05:51.105
+The backgroundColor is going to be purple,
+
+00:05:51.105 --> 00:05:56.050
+give it some padding of 10 and then a borderRadius of two.
+
+00:05:56.050 --> 00:06:02.620
+Now, what we need to do is depending on what platform we're on,
+
+00:06:02.620 --> 00:06:05.230
+that's what style we need to apply.
+
+00:06:05.230 --> 00:06:07.944
+Up here, let's say,
+
+00:06:07.944 --> 00:06:10.899
+if the platform is iOS,
+
+00:06:10.899 --> 00:06:16.469
+then what we want to do is render these components,
+
+00:06:16.470 --> 00:06:22.745
+we fix the formatting here and then if it's not on iOS,
+
+00:06:22.745 --> 00:06:26.889
+just copy and paste this, render these components.
+
+00:06:26.889 --> 00:06:29.694
+We do need to make some changes real quick.
+
+00:06:29.694 --> 00:06:31.915
+You'll notice if we look at the final version,
+
+00:06:31.915 --> 00:06:36.310
+these icons are actually a little bit thinner than these ones over here.
+
+00:06:36.310 --> 00:06:40.750
+The reason for that is because we are using a different component library.
+
+00:06:40.750 --> 00:06:42.745
+We'll say, if we're on iOS,
+
+00:06:42.745 --> 00:06:46.545
+instead of rendering FontAwesome icons.
+
+00:06:46.545 --> 00:06:49.905
+Let's go ahead and render these Entypo ones.
+
+00:06:49.904 --> 00:06:51.964
+We can still use minus and plus,
+
+00:06:51.964 --> 00:06:54.159
+still use the same sizes.
+
+00:06:54.160 --> 00:06:57.439
+Then now, down here FontAwesome works for Android,
+
+00:06:57.439 --> 00:06:59.844
+but instead of iOS,
+
+00:06:59.845 --> 00:07:03.300
+we will say render our androidBtn styles.
+
+00:07:03.300 --> 00:07:07.400
+We have an error on line 36.
+
+00:07:07.399 --> 00:07:11.435
+It's because we're missing a curly brace right there.
+
+00:07:11.435 --> 00:07:16.035
+That's because we're missing a curly brace right there.
+
+00:07:16.035 --> 00:07:19.255
+All right, this looks good.
+
+00:07:19.254 --> 00:07:22.839
+You'll notice on Android R, the color of our icons are purple.
+
+00:07:22.839 --> 00:07:24.214
+We do not want that.
+
+00:07:24.214 --> 00:07:26.924
+We want them to be white.
+
+00:07:26.925 --> 00:07:29.620
+We can say it is down here,
+
+00:07:29.620 --> 00:07:31.420
+it's going to be whites.
+
+00:07:31.420 --> 00:07:38.220
+There we go, we now have our Android styles over here and our iOS styles over here.
+

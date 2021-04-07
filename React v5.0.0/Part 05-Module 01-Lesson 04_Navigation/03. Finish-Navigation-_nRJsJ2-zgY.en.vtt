@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.750
+Now before we finish up with our navigator section,
+
+00:00:04.750 --> 00:00:07.970
+there are just a few small changes that we need to make.
+
+00:00:07.969 --> 00:00:12.390
+If you remember back to our AddEntry component that we made,
+
+00:00:12.390 --> 00:00:15.280
+we have these sections right here.
+
+00:00:15.279 --> 00:00:16.890
+Navigate to home and Route to home.
+
+00:00:16.890 --> 00:00:21.405
+So what we want to do, is whenever we submit a new day basically,
+
+00:00:21.405 --> 00:00:23.929
+or whenever we reset the current day,
+
+00:00:23.929 --> 00:00:27.015
+what we want to do is all of these things as well,
+
+00:00:27.015 --> 00:00:29.339
+as navigate back to the home screen.
+
+00:00:29.339 --> 00:00:31.589
+So the way that we need to do that in this file,
+
+00:00:31.589 --> 00:00:36.435
+is with this method called NavigationActions,
+
+00:00:36.435 --> 00:00:40.454
+which is coming from the React Navigation package.
+
+00:00:40.454 --> 00:00:41.820
+And the way we can do this,
+
+00:00:41.820 --> 00:00:45.090
+is let's go ahead and down here,
+
+00:00:45.090 --> 00:00:49.120
+make a new method, we'll call it toHome.
+
+00:00:49.119 --> 00:00:50.464
+And what this is going to do,
+
+00:00:50.465 --> 00:00:51.720
+is it's going to call,
+
+00:00:51.719 --> 00:00:57.254
+this.props.navigation.dispatch, so it's similar to Redux.
+
+00:00:57.255 --> 00:01:02.400
+And what we are going to dispatch, is NavigationsActions.back.
+
+00:01:02.399 --> 00:01:03.920
+So we want to go back,
+
+00:01:03.920 --> 00:01:06.075
+and where we want to go back from,
+
+00:01:06.075 --> 00:01:10.299
+is the route that has the key of AddEntry.
+
+00:01:10.299 --> 00:01:12.539
+So we want to basically, go from where we are,
+
+00:01:12.540 --> 00:01:14.980
+back to where we previously were.
+
+00:01:14.980 --> 00:01:17.219
+And so now what we can do is right here,
+
+00:01:17.219 --> 00:01:19.739
+we can say, this.toHome.
+
+00:01:19.739 --> 00:01:23.119
+And here, we can say this.toHome as well.
+
+00:01:23.120 --> 00:01:25.800
+Now, you'll notice here that we're not
+
+00:01:25.799 --> 00:01:29.099
+really worrying too much about the order of the way things happen.
+
+00:01:29.099 --> 00:01:30.629
+You could get kind of picky about that,
+
+00:01:30.629 --> 00:01:32.009
+I'm not going to worry about it,
+
+00:01:32.010 --> 00:01:34.315
+but if you want to, by all means feel free to.
+
+00:01:34.314 --> 00:01:36.329
+What I mean by that is, we're dispatching,
+
+00:01:36.329 --> 00:01:38.060
+we're setting state, this is all kind of asynchronous,
+
+00:01:38.060 --> 00:01:39.484
+so it's all just going to happen.
+
+00:01:39.484 --> 00:01:44.310
+But it works fine. But if you want to refactor it by yourself, by all means go ahead.
+
+00:01:44.310 --> 00:01:47.790
+So now let's go ahead and check at entry.
+
+00:01:47.790 --> 00:01:52.535
+So let's just enter in some information for the day. That looks great.
+
+00:01:52.534 --> 00:01:54.030
+When we add a new entry,
+
+00:01:54.030 --> 00:01:57.409
+we get taken to our home view that shows this.
+
+00:01:57.409 --> 00:01:59.759
+And now what should happen, is when we reset,
+
+00:01:59.760 --> 00:02:01.660
+we also get taken back to the home view,
+
+00:02:01.659 --> 00:02:02.759
+and then it says, "Hey,
+
+00:02:02.760 --> 00:02:04.605
+don't forget to log your data for today!"
+
+00:02:04.605 --> 00:02:06.000
+Because we just cleared that.
+

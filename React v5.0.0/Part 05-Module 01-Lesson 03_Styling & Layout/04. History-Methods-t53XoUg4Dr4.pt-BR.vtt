@@ -1,0 +1,287 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:05.433
+Agora, em vez de apenas renderizar
+estes componentes Text aqui,
+
+00:00:05.466 --> 00:00:09.600
+vamos trabalhar
+no nosso componente History
+
+00:00:09.633 --> 00:00:13.467
+e deixá-lo
+mais parecido com isto.
+
+00:00:13.500 --> 00:00:17.533
+Antes de mais nada,
+vamos importar algumas coisas.
+
+00:00:17.567 --> 00:00:23.167
+Importaremos StyleSheet,
+Platform e Touchable Opacity.
+
+00:00:23.200 --> 00:00:26.433
+E precisamos da cor branca.
+
+00:00:26.466 --> 00:00:31.333
+E, por último, vamos importar
+o componente DateHeader,
+
+00:00:31.867 --> 00:00:34.867
+que usaremos bem aqui.
+
+00:00:35.367 --> 00:00:40.433
+Certo, o que precisamos fazer
+é criar alguns estilos.
+
+00:00:41.067 --> 00:00:46.633
+Primeiro, vamos estilizar
+o dia específico.
+
+00:00:47.200 --> 00:00:52.367
+Aqui em cima,
+diremos "style={styles.item}".
+
+00:00:52.400 --> 00:00:56.600
+E, aqui embaixo,
+vamos criar alguns estilos.
+
+00:00:56.633 --> 00:00:59.800
+O que isto fará...
+
+00:00:59.833 --> 00:01:03.133
+é um plano de fundo branco...
+
+00:01:04.000 --> 00:01:05.133
+"borderRadius"...
+
+00:01:05.166 --> 00:01:08.300
+Perceba que,
+dependendo da plataforma,
+
+00:01:08.333 --> 00:01:10.767
+temos bordas
+de espessuras diferentes.
+
+00:01:10.800 --> 00:01:14.067
+Então, se estivermos no iOS,
+
+00:01:14.100 --> 00:01:19.067
+borderRadius será "16".
+Se não, será "2".
+
+00:01:19.100 --> 00:01:21.167
+Aqui embaixo,
+teremos o de sempre:
+
+00:01:21.200 --> 00:01:22.533
+"padding",
+
+00:01:22.566 --> 00:01:26.000
+"marginLeft" e "marginRight"
+de 10 pixels.
+
+00:01:26.033 --> 00:01:28.533
+Aliás, vamos mudar
+"padding" para "20"
+
+00:01:30.467 --> 00:01:33.767
+e "marginTop"
+para "17" pixels.
+
+00:01:33.800 --> 00:01:38.367
+Queremos que tudo no eixo principal
+fique centralizado.
+
+00:01:38.400 --> 00:01:42.900
+E, depois, vamos adicionar
+umas sombras aqui.
+
+00:01:42.933 --> 00:01:47.933
+Diremos "shadowRadius: 3"
+
+00:01:47.967 --> 00:01:52.233
+e "shadowOpacity: 0.8".
+
+00:01:52.267 --> 00:01:55.833
+Já shadowColor
+terá um valor RGBA
+
+00:01:55.866 --> 00:02:01.067
+de "0,0,0,0.24".
+
+00:02:01.767 --> 00:02:03.200
+E mais sombras.
+
+00:02:03.233 --> 00:02:05.584
+Diremos "shadowOffset"
+
+00:02:05.617 --> 00:02:09.567
+com "width"
+e "height" de "3".
+
+00:02:09.600 --> 00:02:12.733
+Parece tudo certo.
+
+00:02:12.767 --> 00:02:17.333
+Só acabei de notar
+que não atribuímos uma "key",
+
+00:02:17.366 --> 00:02:19.433
+então vamos pôr tudo isso
+
+00:02:19.467 --> 00:02:23.333
+dentro de "item".
+
+00:02:23.366 --> 00:02:26.633
+Agora vejamos
+o que temos aqui.
+
+00:02:26.667 --> 00:02:30.300
+Muito bem.
+Perceba que já está meio estilizado.
+
+00:02:30.333 --> 00:02:32.033
+Agora,
+
+00:02:32.067 --> 00:02:36.833
+vamos dar uma mexida
+nestas coisas aqui.
+
+00:02:36.867 --> 00:02:40.200
+O que queremos fazer
+é mais ou menos isto:
+
+00:02:40.233 --> 00:02:44.233
+diremos que, se "today" existir,
+
+00:02:44.267 --> 00:02:47.500
+esta "View" será exibida.
+
+00:02:47.533 --> 00:02:51.400
+E, dentro de "View",
+teremos...
+
+00:02:51.433 --> 00:02:53.667
+nosso DateHeader.
+
+00:02:53.700 --> 00:02:56.767
+Date será este argumento
+"formattedDate"
+
+00:02:56.800 --> 00:02:58.367
+que está sendo passado.
+
+00:02:58.400 --> 00:03:02.700
+E, abaixo, diremos "Text"...
+
+00:03:02.733 --> 00:03:06.767
+e adicionaremos o estilo...
+
+00:03:06.800 --> 00:03:10.633
+"styles.noDataText".
+
+00:03:10.667 --> 00:03:14.167
+E depois mostraremos
+o que quer que "today" seja.
+
+00:03:14.200 --> 00:03:18.967
+Então, se não for "today",
+o que faremos...
+
+00:03:19.000 --> 00:03:23.600
+é renderizar nosso botão
+de TouchableOpacity.
+
+00:03:23.633 --> 00:03:27.333
+Por enquanto,
+deixaremos "onPress".
+
+00:03:27.367 --> 00:03:30.700
+E vamos adicionar
+"console.log{'Pressed!'}".
+
+00:03:30.733 --> 00:03:33.533
+E, aqui dentro,
+
+00:03:33.567 --> 00:03:37.000
+vamos renderizar
+um componente Text,
+
+00:03:37.033 --> 00:03:41.233
+que transformará
+nossas medições em strings.
+
+00:03:41.266 --> 00:03:46.600
+Depois, vamos dar uma limpada
+em "renderEmptyDate" rapidinho.
+
+00:03:46.633 --> 00:03:51.567
+Aqui, podemos dizer
+"style={styles.item}",
+
+00:03:51.600 --> 00:03:54.267
+como fizemos acima.
+
+00:03:54.300 --> 00:03:57.833
+E também teremos
+um DateHeader
+
+00:03:57.866 --> 00:04:03.300
+com "date" igual ao "formattedDate"
+que nos está sendo passado.
+
+00:04:03.333 --> 00:04:06.700
+Então,
+renderizaremos um Text,
+
+00:04:06.733 --> 00:04:09.767
+como fizemos acima,
+
+00:04:09.800 --> 00:04:12.900
+com "styles.noDataText",
+
+00:04:12.933 --> 00:04:17.200
+que dirá: "Você não reportou
+dados neste dia."
+
+00:04:17.233 --> 00:04:19.867
+A última coisa
+que temos de fazer
+
+00:04:19.900 --> 00:04:24.200
+é preencher
+"styles.noDataText".
+
+00:04:24.233 --> 00:04:27.633
+Nós viremos aqui para baixo,
+e só o que isso terá...
+
+00:04:28.233 --> 00:04:30.400
+é "fontSize: 20",
+
+00:04:30.433 --> 00:04:35.367
+"paddingTop: 20"
+e "paddingBottom: 20".
+
+00:04:35.400 --> 00:04:38.900
+Agora, se dermos
+uma olhada...
+
+00:04:38.933 --> 00:04:42.000
+Vamos selecionar o dia.
+
+00:04:42.033 --> 00:04:45.667
+Perceba que aqui diz:
+"Você não reportou dados."
+
+00:04:45.700 --> 00:04:49.267
+Neste dia nós registramos,
+mas ainda não estilizamos isto.
+
+00:04:49.300 --> 00:04:52.233
+Aqui é: "Você não reportou dados."
+E aqui é hoje.
+

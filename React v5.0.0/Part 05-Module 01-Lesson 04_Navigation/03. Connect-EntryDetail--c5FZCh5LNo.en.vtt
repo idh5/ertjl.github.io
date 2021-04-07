@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.929
+Now, the next obvious thing we need to do is make this screen look a little bit better by
+
+00:00:05.929 --> 00:00:12.094
+connecting the screen to read X and then going and grabbing the day for the specific key.
+
+00:00:12.095 --> 00:00:14.575
+So what we'll do is inside of entry details,
+
+00:00:14.574 --> 00:00:17.030
+go ahead and import some things.
+
+00:00:17.030 --> 00:00:19.925
+We will add some style so import style sheets.
+
+00:00:19.925 --> 00:00:23.060
+We will also import connect and then because we're here,
+
+00:00:23.059 --> 00:00:26.869
+let's also import the color whites.
+
+00:00:26.870 --> 00:00:30.980
+All right, so now what we want to do is instead of exporting entry detail.
+
+00:00:30.980 --> 00:00:33.390
+We want to export connect.
+
+00:00:33.390 --> 00:00:39.909
+And then now, let's go ahead and build out our map state to props function right here.
+
+00:00:39.909 --> 00:00:43.309
+So we get past the state but we also get past
+
+00:00:43.310 --> 00:00:47.980
+the current props which has a navigation property on it.
+
+00:00:47.979 --> 00:00:49.939
+And then here what we want to do,
+
+00:00:49.939 --> 00:00:55.024
+is let's grab that entryId that we're getting when we route to entry detail.
+
+00:00:55.024 --> 00:00:59.539
+We can grab that from navigation.state.params and then
+
+00:00:59.539 --> 00:01:05.239
+now what we want to return or the information that we want to pass to our component is,
+
+00:01:05.239 --> 00:01:07.604
+and go ahead and pass it the entryId.
+
+00:01:07.605 --> 00:01:12.050
+And then we can also pass it the metrics which is going to
+
+00:01:12.049 --> 00:01:17.209
+be state at whatever this entryId is.
+
+00:01:17.209 --> 00:01:21.349
+So what we're saying is the entryId is going to be the key of the specific day.
+
+00:01:21.349 --> 00:01:25.219
+And so we are passing that to the component but we're also passing
+
+00:01:25.219 --> 00:01:29.980
+the specific information about that day under the metrics prop.
+
+00:01:29.980 --> 00:01:34.413
+So now, inside of our entry detail component,
+
+00:01:34.412 --> 00:01:39.489
+let's go ahead and grab these metrics off of props.
+
+00:01:39.489 --> 00:01:43.219
+And then what we can do is if you remember,
+
+00:01:43.219 --> 00:01:46.775
+we created this nice little metric card component that
+
+00:01:46.775 --> 00:01:51.255
+is really the UI for this card right here.
+
+00:01:51.254 --> 00:01:53.129
+So let's go ahead and render that as well.
+
+00:01:53.129 --> 00:01:54.689
+So inside of here,
+
+00:01:54.689 --> 00:02:04.429
+let's import metric card and then we can render one of those passing it the metrics.
+
+00:02:04.430 --> 00:02:06.230
+And then now before we forget,
+
+00:02:06.230 --> 00:02:11.000
+let's go ahead and create some styles here just for our container.
+
+00:02:11.000 --> 00:02:12.590
+So we will have, let's say,
+
+00:02:12.590 --> 00:02:14.930
+container flex of one as always,
+
+00:02:14.930 --> 00:02:19.159
+we'll say background color is going to be white and then we'll just give
+
+00:02:19.159 --> 00:02:24.145
+it a padding of 15 and this is going to go on this year right here.
+
+00:02:24.145 --> 00:02:26.115
+So this is looking pretty good.
+
+00:02:26.115 --> 00:02:31.395
+Let's not forget to pass maps state to props to our connecting location down here.
+
+00:02:31.395 --> 00:02:35.855
+So now what should happen is if everything is working correctly,
+
+00:02:35.854 --> 00:02:37.579
+when we click on this,
+
+00:02:37.580 --> 00:02:41.000
+we now get this UI right here.
+

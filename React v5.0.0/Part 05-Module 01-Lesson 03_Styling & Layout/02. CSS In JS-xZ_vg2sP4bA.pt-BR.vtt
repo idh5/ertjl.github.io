@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:03.167
+Lembra-se da primeira vez
+em que viu JSX?
+
+00:00:03.200 --> 00:00:04.767
+Talvez tenha achado esquisito
+
+00:00:04.801 --> 00:00:07.367
+adicionar linguagem de marcação
+no seu JavaScript.
+
+00:00:07.400 --> 00:00:09.200
+Mas,
+conforme foi se acostumando,
+
+00:00:09.234 --> 00:00:11.467
+você deve ter acabado
+até gostando.
+
+00:00:11.501 --> 00:00:13.200
+A separação de conceitos
+no React
+
+00:00:13.233 --> 00:00:17.133
+acontece no nível dos componentes,
+e não da tecnologia.
+
+00:00:17.166 --> 00:00:18.734
+Mas resta a pergunta:
+
+00:00:18.767 --> 00:00:21.367
+quais são as preocupações
+de um componente?
+
+00:00:21.400 --> 00:00:22.801
+Na minha opinião,
+
+00:00:22.834 --> 00:00:25.334
+um componente tem
+duas preocupações primordiais:
+
+00:00:25.367 --> 00:00:27.934
+estado e apresentação.
+
+00:00:27.967 --> 00:00:30.133
+Os componentes do React
+têm um estado local,
+
+00:00:30.166 --> 00:00:34.000
+e JSX dá conta da marcação
+da apresentação.
+
+00:00:34.033 --> 00:00:37.534
+Mas, para mim, apresentação
+é mais do que marcação.
+
+00:00:37.567 --> 00:00:40.901
+É um misto de marcação
+e estilos.
+
+00:00:40.934 --> 00:00:44.334
+Por isso, proponho que retiremos
+nossos estilos das style sheets
+
+00:00:44.367 --> 00:00:46.467
+e ponhamos
+no nível dos componentes.
+
+00:00:46.500 --> 00:00:48.300
+Parece loucura,
+
+00:00:48.334 --> 00:00:51.701
+mas é uma tendência
+na comunidade do React Native.
+
+00:00:51.734 --> 00:00:56.734
+Tanto que é o padrão do React Native
+para estilização de componentes.
+
+00:00:56.767 --> 00:01:00.667
+"Então a CSS mora
+no componente?"
+
+00:01:00.701 --> 00:01:04.334
+Você pode estranhar isto
+se não estiver acostumado,
+
+00:01:04.367 --> 00:01:06.801
+mas, para estilizar aplicativos
+no React Native,
+
+00:01:06.834 --> 00:01:09.567
+em vez de usar CSS,
+como de praxe,
+
+00:01:09.600 --> 00:01:13.834
+nós só usamos JavaScript.
+Vejamos um exemplo.
+

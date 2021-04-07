@@ -1,0 +1,265 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>How Professionals Handle Styling</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Styling &amp; Layout</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. CSS in JS.html">02. CSS in JS</a>
+    </li>
+    <li class="">
+      <a href="03. Flexbox Guide.html">03. Flexbox Guide</a>
+    </li>
+    <li class="">
+      <a href="04. Layout In React Native.html">04. Layout In React Native</a>
+    </li>
+    <li class="">
+      <a href="05. How Professionals Handle Styling.html">05. How Professionals Handle Styling</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. How Professionals Handle Styling</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Professional CSS Intro</p></h3>
+  <video controls>
+  <source src="05. Professional CSS Intro-I3T17kupyv0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Professional CSS Intro-I3T17kupyv0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Professional CSS Intro-I3T17kupyv0.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Professional CSS Intro-I3T17kupyv0.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="styling-stylesheet-vs-inline">Styling: <code>Stylesheet</code> vs. Inline</h2>
+<p>Earlier you were introduced to React Native’s <code>StyleSheet</code> API for creating “stylesheets” out of JavaScript objects. At first this approach may seem a little strange, but there are some reasons behind it. Primarily those reasons are code quality and performance. Let’s take a look at some comparisons in regards to code quality.</p>
+<pre><code>&lt;View style={{
+  borderRadius: 4,
+  borderWidth: 0.5,
+  borderColor: '#d6d7da',
+}}&gt;
+  &lt;Text style={[
+    {fontSize: 19, fontWeight: 'bold'}, 
+    props.isActive &amp;&amp; { color: 'red' }
+  ]}&gt;
+    Welcome
+  &lt;/Text&gt;
+&lt;/View&gt;</code></pre>
+<p>Above we have some JSX for a pretty simple UI. Notice, that even though this UI is rather simple, the styling of it makes it rather messy. This is perhaps the biggest benefit to the StyleSheet API: by moving styles away from the render function, the code becomes easier to read and understand. Not only that, but <em>naming</em> the styles is a good way to make components a little more declarative. With the <code>StyleSheet</code> API, we can change the code above to now look like this:</p>
+<pre><code>var styles = StyleSheet.create({
+  container: {
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#d6d7da',
+  },
+  title: {
+    fontSize: 19,
+    fontWeight: 'bold',
+  },
+  activeTitle: {
+    color: 'red',
+  },
+});
+
+&lt;View style={styles.container}&gt;
+  &lt;Text style={[styles.title, props.isActive &amp;&amp; styles.activeTitle]} /&gt;
+&lt;/View&gt;</code></pre>
+<p>On top of quality benefits, there are also performance benefits as well. Making a stylesheet from a style object makes it possible to refer to it by ID instead of creating a new style object every render.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="media-queries">Media Queries</h2>
+<p>One thing you may have noticed is that React Native (and specifically the <code>StyleSheet</code> API) doesn’t support <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" rel="noopener noreferrer" target="_blank">media queries</a>. The reason for this is because, for the most part, you can design responsive grids with flexbox which will bypass the need to use media queries. In the rare case where flexbox just won’t work for your specific needs, you can use the <a href="https://facebook.github.io/react-native/docs/dimensions.html" rel="noopener noreferrer" target="_blank">Dimensions</a> API which we covered earlier to get similar results.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="css-in-js-libraries">CSS in JS Libraries</h2>
+<p>Styling in React is going through a renaissance period right now just as Flux did a few years ago (which eventually gave us Redux). There are many different styling libraries popping up and each has different tradeoffs. </p>
+<p>Two of the most popular are <a href="https://github.com/robinpowered/glamorous-native" rel="noopener noreferrer" target="_blank">Glamorous</a> and <a href="https://github.com/styled-components/styled-components" rel="noopener noreferrer" target="_blank">Styled Components</a>. The whole idea of both of these libraries is that styling is a primary concern of the component and because of that, should be coupled with the component itself. </p>
+<p>Let’s take a look at not only the Styled Components library, but also how you’d use it with React Native.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Styled Components Preview</p></h3>
+  <video controls>
+  <source src="05. Styled Components Preview-XF_4MPpvRqs.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Styled Components Preview-XF_4MPpvRqs.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Styled Components Preview-XF_4MPpvRqs.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Styled Components Preview-XF_4MPpvRqs.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>In this section we took a deeper look into the benefits of the StyleSheet API as well as the Styled Components API and how it works on React Native. </p>
+<h3 id="further-research">Further Research</h3>
+<p>For further research on Styled Components, you can visit the <a href="https://www.styled-components.com/" rel="noopener noreferrer" target="_blank">official documentation</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. How Professionals Handle Styling')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

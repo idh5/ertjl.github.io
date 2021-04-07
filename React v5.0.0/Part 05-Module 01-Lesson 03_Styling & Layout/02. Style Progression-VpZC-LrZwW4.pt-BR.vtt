@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.533 --> 00:00:03.600
+Vejamos algumas formas
+de abordar a estilização
+
+00:00:03.633 --> 00:00:07.767
+de componentes React Native.
+A primeira coisa é óbvia:
+
+00:00:07.800 --> 00:00:12.267
+podemos passar estilos "inline"
+para o componente que quisermos,
+
+00:00:12.300 --> 00:00:17.267
+tanto para nosso componente "View",
+quanto para o componente "Text".
+
+00:00:17.300 --> 00:00:20.933
+E podemos estilizar os objetos.
+
+00:00:20.967 --> 00:00:24.300
+Digamos: "flex: 1,
+
+00:00:24.333 --> 00:00:26.467
+marginLeft: 10,
+
+00:00:26.500 --> 00:00:31.833
+marginRight: 10,
+alignItems: 'center'
+
+00:00:31.867 --> 00:00:34.567
+justifyContent: 'center'".
+
+00:00:34.600 --> 00:00:39.200
+E, aqui embaixo, podemos dizer:
+"color: 'red'".
+
+00:00:39.233 --> 00:00:42.033
+Fica bom.
+Se formos até o app...
+
+00:00:42.067 --> 00:00:44.500
+veremos os estilos.
+
+00:00:44.533 --> 00:00:47.500
+Mas tem algo
+de estranho aqui.
+
+00:00:47.533 --> 00:00:49.833
+Estilizar dentro da linha
+é aceitável
+
+00:00:49.867 --> 00:00:53.367
+porque os estilos são interligados
+aos componentes,
+
+00:00:53.400 --> 00:00:58.067
+mas é esquisito todo esse estilo
+aqui na linha.
+
+00:00:58.100 --> 00:01:00.633
+O que podemos fazer
+é vir até aqui
+
+00:01:00.667 --> 00:01:04.500
+e mover tudo isto para cá.
+
+00:01:04.533 --> 00:01:08.400
+Adicionamos "container"
+e colamos aqui.
+
+00:01:08.433 --> 00:01:12.767
+Depois, adicionamos "text"
+
+00:01:12.800 --> 00:01:15.600
+e escrevemos aqui.
+
+00:01:15.633 --> 00:01:19.833
+E agora podemos fazer
+algo assim...
+
+00:01:19.867 --> 00:01:22.333
+e algo assim.
+
+00:01:22.367 --> 00:01:27.933
+Agora temos os mesmos estilos
+aplicados aos componentes,
+
+00:01:27.967 --> 00:01:30.300
+mas eles vivem em um objeto.
+
+00:01:30.333 --> 00:01:36.267
+Formatando isto direito,
+a aparência fica muito melhor,
+
+00:01:36.300 --> 00:01:38.167
+porque não fica tudo
+na mesma linha
+
+00:01:38.200 --> 00:01:39.967
+e a consequência é a mesma.
+
+00:01:40.000 --> 00:01:42.300
+Esta abordagem é muito boa
+
+00:01:42.333 --> 00:01:46.367
+para estilizar componentes
+no React Native.
+
+00:01:46.400 --> 00:01:50.700
+Tanto que o React Native
+traz algo do tipo incluso.
+
+00:01:50.733 --> 00:01:55.867
+Temos este método
+"StyleSheet" aqui.
+
+00:01:55.900 --> 00:01:59.567
+Em vez de ter isto
+como um objeto,
+
+00:01:59.600 --> 00:02:04.067
+podemos dizer
+"StyleSheet.create"
+
+00:02:04.100 --> 00:02:06.867
+e passar um objeto.
+
+00:02:06.900 --> 00:02:12.433
+Agora,
+o resultado será o mesmo,
+
+00:02:12.467 --> 00:02:17.233
+mas o React Native otimizará
+estes estilos um pouco
+
+00:02:17.267 --> 00:02:20.933
+e os rodará
+com mais eficiência.
+
+00:02:20.967 --> 00:02:25.833
+Então, quando estou usando estilos
+no React Native, gosto,
+
+00:02:25.867 --> 00:02:31.533
+se forem mais de duas propriedades
+no componente,
+
+00:02:31.567 --> 00:02:35.300
+de criar uma "StyleSheet"
+e mover tudo para cá.
+
+00:02:35.333 --> 00:02:39.967
+Aqui, provavelmente, eu faria
+algo assim,
+
+00:02:40.000 --> 00:02:43.133
+porque não gosto de nomes.
+
+00:02:43.167 --> 00:02:46.667
+Agora, o texto será vermelho,
+
+00:02:46.700 --> 00:02:49.000
+mas, como temos
+todos os estilos aqui,
+
+00:02:49.033 --> 00:02:51.733
+usaremos "StyleSheet.create"
+
+00:02:51.767 --> 00:02:54.233
+para criar esta StyleSheet
+e aplicar os estilos
+
+00:02:54.267 --> 00:02:57.267
+com "style"
+e mais o nome da propriedade.
+
+00:02:57.300 --> 00:02:59.233
+Neste caso, "container".
+

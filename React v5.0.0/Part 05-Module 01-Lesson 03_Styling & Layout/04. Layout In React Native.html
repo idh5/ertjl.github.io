@@ -1,0 +1,625 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Layout In React Native</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Styling &amp; Layout</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. CSS in JS.html">02. CSS in JS</a>
+    </li>
+    <li class="">
+      <a href="03. Flexbox Guide.html">03. Flexbox Guide</a>
+    </li>
+    <li class="">
+      <a href="04. Layout In React Native.html">04. Layout In React Native</a>
+    </li>
+    <li class="">
+      <a href="05. How Professionals Handle Styling.html">05. How Professionals Handle Styling</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Layout In React Native</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Flexbox Implementation</p></h3>
+  <video controls>
+  <source src="04. Flexbox Implementation-Yl69abRLGbY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Flexbox Implementation-Yl69abRLGbY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Flexbox Implementation-Yl69abRLGbY.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Flexbox Implementation-Yl69abRLGbY.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="react-natives-flexbox-implementation">React Native's Flexbox Implementation</h2>
+<p>React Native implements flexbox for build layouts, but there are some key differences to keep in mind as you develop your applications. First, all containers in React Native are <em>flex containers</em> by default. Recall that in traditional CSS flexbox, you would normally define a flex container like so:</p>
+<pre><code class="css language-css">/*example.css*/
+
+.container {
+  display: flex;
+}</code></pre>
+<p>However, this is completely <em>unnecessary</em> in React Native! By default, everything is <code>display: flex;</code>. You can just use the defaults as they are, without adding different properties or writing extra code.</p>
+<p>Another important distinction is how React Native handles <code>flex-direction</code>, a property that establishes the main axis (i.e., defining the direction in which flex items are placed). In web applications, items default to <code>row</code>. But since we're working on mobile devices, React Native sets the default to <code>column</code>, which lays out items <em>vertically</em>.</p>
+<p>One more major difference you'll encounter is how the <code>flex</code> property is used. On the web, <code>flex</code> specifies how a flex item grows or shrinks to manage the space around it (along the main axis). In React Native, <code>flex</code> is generally used with flex items that are on the same level, but hold different <code>flex</code> values. For example:</p>
+<pre><code class="js language-js">import React from 'react';
+import { View } from 'react-native';
+
+const FlexDemo = props =&gt; (
+  &lt;View style={{flex: 1}}&gt;
+    &lt;View style={{flex: 1, backgroundColor: 'red'}} /&gt;
+    &lt;View style={{flex: 2, backgroundColor: 'green'}} /&gt;
+    &lt;View style={{flex: 3, backgroundColor: 'blue'}} /&gt;
+  &lt;/View&gt;
+);
+
+export default FlexDemo;</code></pre>
+<p>Here, <code>FlexDemo</code> is a stateless functional component which renders <code>&lt;View&gt;</code> components with different <code>flex</code> values. Its outermost container is set to <code>flex: 1</code>, which will expand the full available width along the main axis (i.e., the entire screen in this example). Its children <code>&lt;View&gt;</code> components will fill the space accordingly, rendering a <code>blue</code> background color that takes up three times as much space as <code>red</code> takes, and <code>green</code> that takes up exactly twice as much space as <code>red</code> takes.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="other-differences">Other Differences</h2>
+<p>In addition to the above, here is a list of defaults in other common CSS properties that React Native applies to components:</p>
+<pre><code class="css language-css">box-sizing: border-box;
+position: relative;
+align-items: stretch;
+flex-shrink: 0;
+align-content: flex-start;
+border: 0 solid black;
+margin: 0;
+padding: 0;
+min-width: 0;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How does React Native's implementation of CSS flexbox differ from that on the web? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505168220412" name="394640" id="a1505168220412">
+      <label for="a1505168220412"><p>Containers are flex containers by default in React Native (i.e., setting <code>display: flex</code> is not necessary).</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168227644" name="394640" id="a1505168227644">
+      <label for="a1505168227644"><p>In React Native, CSS properties are written in camelCase.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168228208" name="394640" id="a1505168228208">
+      <label for="a1505168228208"><p>The defaults for <code>flex-direction</code> are the same in both React Native and on the web.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168228905" name="394640" id="a1505168228905">
+      <label for="a1505168228905"><p>Dimensions in React Native are unitless.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Containers are flex containers by default in React Native (i.e., setting `display: flex` is not necessary).</li>
+      <li>In React Native, CSS properties are written in camelCase.</li>
+      <li>Dimensions in React Native are unitless.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Style-Metainfo</p></h3>
+  <video controls>
+  <source src="04. Style-Metainfo-6ZgAFY6Lakg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Style-Metainfo-6ZgAFY6Lakg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Style-Metainfo-6ZgAFY6Lakg.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Style-Metainfo-6ZgAFY6Lakg.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/4b145ff1126a60b026aaffc72970f46c5e8692d2" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="platform-api">Platform API</h2>
+<p>Recall that React's approach to app development is "learn once, write anywhere." The goal is to use the same principles, technologies, and in the case of React Native -- the same <em>code</em> -- to develop applications. However, there may be cases that make sense to use <em>distinct</em> code for each mobile platform. For example, what if we wanted unique styling between iOS and Android visual components? </p>
+<p>React Native gives us a convenient way to organize and separate code through the <code>Platform</code> API. Let's check out an example!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Platform-Specific Styling</p></h3>
+  <video controls>
+  <source src="04. Platform-Specific Styling-KtATaKs7qjQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Platform-Specific Styling-KtATaKs7qjQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Platform-Specific Styling-KtATaKs7qjQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Platform-Specific Styling-KtATaKs7qjQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Style-AddEntry</p></h3>
+  <video controls>
+  <source src="04. Style-AddEntry-vBIDOsEkUK8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Style-AddEntry-vBIDOsEkUK8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Style-AddEntry-vBIDOsEkUK8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Style-AddEntry-vBIDOsEkUK8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/c5c645478a1f631f7851463b80e216289b17b4d4" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Style-UdaciSteppers</p></h3>
+  <video controls>
+  <source src="04. Style-UdaciSteppers-pW-iEnKf7Og.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Style-UdaciSteppers-pW-iEnKf7Og.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Style-UdaciSteppers-pW-iEnKf7Og.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Style-UdaciSteppers-pW-iEnKf7Og.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/2c0d0b9ef0b36f53d793ae1452d2d20857bd9d96" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Style-Rest</p></h3>
+  <video controls>
+  <source src="04. Style-Rest-nm8mq8__U8Q.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Style-Rest-nm8mq8__U8Q.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Style-Rest-nm8mq8__U8Q.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Style-Rest-nm8mq8__U8Q.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/93add38d61a4891ae40f8c295fda079f7c1cc5d6" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>That was a lot of styling! Let's recap what we've done up to this point.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--0">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--0"><p>I have added the <code>style</code> prop to the parent <code>View</code> in <code>app.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--1">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--1"><p>I have created <code>styles</code> in <code>helper.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--2">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--2"><p>I have updated <code>View</code> components in <code>helper.js</code> with proper container styling</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--3">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--3"><p>I have styled <code>AddEntry</code> (including platform-specific styling)</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--4">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--4"><p>I have styled <code>UdaciSteppers</code> (including platform-specific styling)</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--5">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--5"><p>I have styled <code>Dateheader</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--6">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--6"><p>I have styled <code>UdaciSlider</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--7">
+        <label for="d131d84d-8fa1-462a-bef4-5f8f2a65fe23--7"><p>I have styled <code>TextButton</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-dimensions-api💡">💡 <code>Dimensions</code> API💡</h2>
+  <p>React Native also comes with <a href="https://facebook.github.io/react-native/docs/dimensions.html" rel="noopener noreferrer" target="_blank">Dimensions</a>, which allows you to select window's width and height in the user's device!</p>
+  <p>First, make sure you pull the API from React Native:</p>
+<pre><code class="js language-js">import { Dimensions } from 'react-native';</code></pre>
+  <p>Then, you can simply grab the window sizes with the Dimensions API's <code>get</code> method:</p>
+<pre><code class="js language-js">const { width, height } = Dimensions.get('window');</code></pre>
+  <p>Feel free to use these measurements to, for example, plan how your <code>&lt;View&gt;</code>s will look.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>History</p></h3>
+  <video controls>
+  <source src="04. History-4edBztoh2rk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. History-4edBztoh2rk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. History-4edBztoh2rk.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. History-4edBztoh2rk.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/f2f0342661d87060376bf54c425793b4c3b239c9" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>History-Calendar</p></h3>
+  <video controls>
+  <source src="04. History-Calendar-6qWrHcBJF3c.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. History-Calendar-6qWrHcBJF3c.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. History-Calendar-6qWrHcBJF3c.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. History-Calendar-6qWrHcBJF3c.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>💡 UdaciFitness Calendar Update💡</p>
+<p>To install the UdaciFitness Calendar, follow the steps below.</p>
+<ol>
+<li><p>Run <code>npm uninstall udacifitness-calendar</code> to uninstall the calendar package from the video above</p></li>
+<li><p>Run <code>npm install ftrevo/react-native-calendars#master --save</code></p></li>
+</ol>
+<p>PLEASE NOTE: you must uninstall the udacifitness-calendar package in order for the react-native-calendars package to work.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/57d249307036bc97c8b539fc3b5fcc38455a3419" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>History-Methods</p></h3>
+  <video controls>
+  <source src="04. History-Methods-t53XoUg4Dr4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. History-Methods-t53XoUg4Dr4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. History-Methods-t53XoUg4Dr4.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. History-Methods-t53XoUg4Dr4.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/556a167f9f773c128c6d982c27130fe7b0b27d82" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>History-MetricCard</p></h3>
+  <video controls>
+  <source src="04. History-MetricCard-z8IKGR5pmGM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. History-MetricCard-z8IKGR5pmGM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. History-MetricCard-z8IKGR5pmGM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. History-MetricCard-z8IKGR5pmGM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/cdcef7571fecac412cdb1995538114b0f36a91c7" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>History-AppLoading</p></h3>
+  <video controls>
+  <source src="04. History-AppLoading-0MY2yNuMiBg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. History-AppLoading-0MY2yNuMiBg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. History-AppLoading-0MY2yNuMiBg.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. History-AppLoading-0MY2yNuMiBg.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/1cc6fd9ce59e9acf6012aa5800b872ac98b5e209" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>The layout is nearly complete! One more check-in before the next section.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--0">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--0"><p>I have created the <code>fetchCalendarResults()</code> function in <code>api.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--1">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--1"><p>I have created the <code>History</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--2">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--2"><p>I have styled <code>History</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--3">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--3"><p>I have connected <code>History</code> to the store context with <code>connect()</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--4">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--4"><p>I am rendering the <code>UdaciFitnessCalendar</code> in <code>History</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--5">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--5"><p>I am rendering <code>History</code> in <code>app.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--6">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--6"><p>I have created the <code>MetricCard</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--7">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--7"><p>I have styled <code>MetricCard</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--8">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--8"><p>I am rendering <code>MetricCard</code> in <code>History</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="687db2f3-fcef-48e3-bd75-2ba3344113a2--9">
+        <label for="687db2f3-fcef-48e3-bd75-2ba3344113a2--9"><p>I am showing a loading screen in <code>History</code> by leveraging <code>AppLoading</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Native uses <strong>flexbox</strong> to manage layout in mobile applications. However, there are some minor distinctions between the official flexbox specification (i.e., CSS <em>on the web</em>) and React Native's own implementation. Most of these distinctions are just differences in default settings.</p>
+<p>Since differences also exist in how Android and iOS applications should look and feel, React Native also offers a <code>Platform</code> API, which we can leverage to style each platform independently. </p>
+<p>In the next section, we'll take a look at some common "gotchas" and best practices when styling components. </p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://medium.com/the-react-native-log/understanding-react-native-flexbox-layout-7a528200afd4" rel="noopener noreferrer" target="_blank">Understanding React Native flexbox layout</a></li>
+<li><a href="https://facebook.github.io/react-native/docs/platform-specific-code.html" rel="noopener noreferrer" target="_blank">Platform Specific Code</a> from the React Native docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. How Professionals Handle Styling.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Layout In React Native')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

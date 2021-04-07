@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.365
+Congrats on finishing lesson number three.
+
+00:00:03.365 --> 00:00:07.080
+In this lesson, you learned about styling and lay out in React Native.
+
+00:00:07.080 --> 00:00:09.050
+You've learned Flexbox and how
+
+00:00:09.050 --> 00:00:13.455
+React Native's limitation is just a bit different than the official spec.
+
+00:00:13.455 --> 00:00:17.170
+You were also introduced to some popular CSS and JS libraries.
+
+00:00:17.170 --> 00:00:19.550
+And now there's one piece of information we'll
+
+00:00:19.550 --> 00:00:22.275
+need to get further in building our application.
+
+00:00:22.274 --> 00:00:25.269
+How to do routing. That's coming up next.
+

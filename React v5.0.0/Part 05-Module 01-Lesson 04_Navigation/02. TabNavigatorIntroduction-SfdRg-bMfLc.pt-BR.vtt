@@ -1,0 +1,242 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:02.933
+Neste e nos próximos vídeos,
+
+00:00:02.967 --> 00:00:07.233
+vamos fazer uma introdução
+ao React Navigation,
+
+00:00:07.267 --> 00:00:10.467
+que é uma biblioteca de roteamento
+para o React Native.
+
+00:00:10.500 --> 00:00:12.900
+React Navigation nada mais é
+que navegadores.
+
+00:00:12.933 --> 00:00:16.133
+Você pode perceber aqui que,
+por padrão, temos três navegadores:
+
+00:00:16.167 --> 00:00:19.167
+TabNavigator, StackNavigator
+e DrawerNavigator.
+
+00:00:19.200 --> 00:00:23.467
+Eles permitem definir a estrutura
+de navegação do aplicativo.
+
+00:00:23.500 --> 00:00:27.300
+Vamos falar sobre TabNavigator
+neste vídeo,
+
+00:00:27.333 --> 00:00:31.133
+e ele basicamente nos permite
+ter abas em nosso aplicativo,
+
+00:00:31.167 --> 00:00:34.900
+para trocarmos de uma para outra
+e renderizarmos componentes,
+
+00:00:34.933 --> 00:00:37.633
+tanto o Home
+quanto Painel de Controle.
+
+00:00:37.667 --> 00:00:39.967
+O que faremos então...
+
+00:00:40.000 --> 00:00:42.767
+Bem aqui,
+vamos criar uma nova variável,
+
+00:00:42.800 --> 00:00:45.733
+vamos chamá-la
+de "TabNavigator".
+
+00:00:45.767 --> 00:00:49.367
+E se você ainda não fez isso
+e quiser mexer com isso também,
+
+00:00:49.400 --> 00:00:51.633
+coloque um yarn add
+react-navigation.
+
+00:00:51.667 --> 00:00:55.567
+Dentro de TabNavigator,
+passamos um objeto,
+
+00:00:55.600 --> 00:01:00.300
+e as propriedades dele serão
+as rotas e abas específicas.
+
+00:01:00.333 --> 00:01:04.433
+Podemos então vir aqui
+e escrever Home,
+
+00:01:04.467 --> 00:01:06.333
+que será a primeira aba,
+
+00:01:06.667 --> 00:01:10.333
+e podemos vir aqui e dizer
+que a tela seja a Home.
+
+00:01:10.367 --> 00:01:14.033
+A segunda aba será
+o Painel de Controle,
+
+00:01:14.067 --> 00:01:16.667
+e queremos que a tela exiba
+
+00:01:16.700 --> 00:01:19.200
+este componente
+Painel de Controle aqui.
+
+00:01:19.233 --> 00:01:23.667
+Assim, o que o TabNavigator retorna
+é este componente.
+
+00:01:23.700 --> 00:01:25.900
+Então, aqui embaixo,
+
+00:01:25.933 --> 00:01:28.933
+podemos renderizar o componente
+como já estamos acostumados.
+
+00:01:28.967 --> 00:01:30.367
+No nosso aplicativo,
+
+00:01:30.400 --> 00:01:34.133
+que à esquerda é um iOS
+e à direita é um Android,
+
+00:01:34.167 --> 00:01:37.100
+vemos que o layout e os estilos são
+um pouco diferentes.
+
+00:01:37.133 --> 00:01:42.333
+Isto acontece porque o iOS
+e o Android têm caras bem próprias.
+
+00:01:42.367 --> 00:01:44.667
+Quando usamos
+o TabNavigator no iOS,
+
+00:01:44.700 --> 00:01:46.667
+as abas ficam assim.
+
+00:01:46.700 --> 00:01:50.700
+Não dá para ver muito bem,
+mas este texto aqui está mudando.
+
+00:01:50.733 --> 00:01:53.433
+E também no Android
+
+00:01:53.467 --> 00:01:57.767
+podemos trocar
+de uma aba para outra.
+
+00:01:57.800 --> 00:02:01.933
+Se quiser adicionar um ícone
+ao aplicativo do iOS,
+
+00:02:01.967 --> 00:02:06.600
+porque está um pouco vazio sem nada,
+podemos fazer o seguinte...
+
+00:02:06.633 --> 00:02:11.967
+Veja que já importamos nossos ícones
+de vector-icons.
+
+00:02:12.000 --> 00:02:14.400
+Dentro de TabNavigator,
+
+00:02:14.433 --> 00:02:20.167
+podemos adicionar
+algumas opções de navegação.
+
+00:02:20.200 --> 00:02:22.867
+Escrevemos tabBarIcon
+
+00:02:22.900 --> 00:02:26.933
+e em seguida
+renderizamos FontAwesome.
+
+00:02:26.967 --> 00:02:29.433
+O nome dela será "home",
+
+00:02:29.467 --> 00:02:31.667
+o tamanho da fonte será 30,
+
+00:02:31.700 --> 00:02:33.933
+a cor será preta por enquanto.
+
+00:02:33.967 --> 00:02:38.867
+Faremos algo bem parecido
+na tela do Painel de Controle,
+
+00:02:38.900 --> 00:02:41.367
+mas, em vez de home,
+será "dashboard".
+
+00:02:41.400 --> 00:02:45.667
+Agora temos estas abas
+e podemos trocar de uma para outra.
+
+00:02:45.700 --> 00:02:50.000
+O mais legal do React Navigation é
+que é muito personalizável.
+
+00:02:50.033 --> 00:02:53.933
+Se olharmos para a documentação
+da TabNavigation sozinha,
+
+00:02:53.967 --> 00:02:55.767
+perceberemos alguns exemplos.
+
+00:02:55.800 --> 00:02:58.733
+Mas aqui embaixo vemos
+tudo o que podemos configurar.
+
+00:02:58.767 --> 00:03:03.333
+Podemos configurar tabBarPosition,
+initialRouteNames...
+
+00:03:03.367 --> 00:03:05.500
+Podemos também
+configurar alguns estilos,
+
+00:03:05.533 --> 00:03:09.867
+activeTintColor, showLabel,
+inactiveTintColor,
+
+00:03:09.900 --> 00:03:11.167
+muitas opções diferentes.
+
+00:03:11.200 --> 00:03:14.567
+Novamente, se precisar fazer algo
+com React Navigation,
+
+00:03:14.600 --> 00:03:17.300
+você vai conseguir,
+porque há muitas opções aqui.
+
+00:03:17.333 --> 00:03:19.033
+Pode parecer muita coisa,
+
+00:03:19.067 --> 00:03:23.167
+porque você acaba passando
+objetos enormes como estes
+
+00:03:23.200 --> 00:03:25.367
+para configurar suas rotas.
+
+00:03:25.400 --> 00:03:27.200
+Mas ainda assim é bom porque,
+
+00:03:27.233 --> 00:03:29.767
+basicamente, você consegue fazer
+tudo o que quiser.
+

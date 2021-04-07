@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.044
+Remember when you first saw JSX?
+
+00:00:03.044 --> 00:00:07.379
+You might have thought it was a little strange mixing markup into your JavaScript.
+
+00:00:07.379 --> 00:00:09.240
+But as you got more used to it,
+
+00:00:09.240 --> 00:00:11.615
+you probably learned to really like it.
+
+00:00:11.615 --> 00:00:14.970
+React's separation of concern is at the component level,
+
+00:00:14.970 --> 00:00:17.394
+not at the technology level.
+
+00:00:17.394 --> 00:00:18.780
+Now the question becomes,
+
+00:00:18.780 --> 00:00:21.414
+what are the concerns of a component?
+
+00:00:21.414 --> 00:00:22.904
+Now, in my opinion,
+
+00:00:22.905 --> 00:00:27.685
+a component has two primary concerns: state and presentation.
+
+00:00:27.684 --> 00:00:30.059
+React components have local state,
+
+00:00:30.059 --> 00:00:33.859
+and JSX manages the markup portion of the presentation.
+
+00:00:33.859 --> 00:00:37.575
+But to me, presentation is more than just markup,
+
+00:00:37.575 --> 00:00:41.115
+it's the combination of markup and styles.
+
+00:00:41.115 --> 00:00:44.385
+So I propose that we move our styles out of the style-sheets,
+
+00:00:44.384 --> 00:00:46.769
+and into the component level.
+
+00:00:46.770 --> 00:00:48.533
+Now, it sounds crazy,
+
+00:00:48.533 --> 00:00:51.750
+but it's actually a fairly common pattern in the React community.
+
+00:00:51.750 --> 00:00:56.784
+So much, that it's React Native's primary pattern for styling components.
+
+00:00:56.784 --> 00:01:00.912
+So, do we just have the CSS live inside of the component?
+
+00:01:00.912 --> 00:01:04.340
+Well, this may seem weird to you if you're not used to the idea,
+
+00:01:04.340 --> 00:01:09.130
+but to style applications in React Native instead of using CSS as you used to,
+
+00:01:09.129 --> 00:01:12.144
+you actually just use JavaScript.
+
+00:01:12.144 --> 00:01:14.000
+Let's look at an example.
+

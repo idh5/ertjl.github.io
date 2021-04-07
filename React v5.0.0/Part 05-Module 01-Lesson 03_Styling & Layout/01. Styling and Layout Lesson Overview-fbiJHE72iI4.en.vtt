@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.014
+Up until this point, we've covered quite a bit of the React native API.
+
+00:00:04.014 --> 00:00:06.484
+But how do you style your apps?
+
+00:00:06.485 --> 00:00:09.025
+Do you use normal CSS with style sheets?
+
+00:00:09.025 --> 00:00:11.400
+Or, is there a special syntax?
+
+00:00:11.400 --> 00:00:14.000
+These are the questions we'll be answering in this lesson.
+

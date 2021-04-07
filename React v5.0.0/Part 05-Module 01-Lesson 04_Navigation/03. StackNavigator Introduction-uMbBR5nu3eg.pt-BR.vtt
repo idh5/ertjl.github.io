@@ -1,0 +1,212 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:04.000
+Vimos mais cedo como o TabNavigator
+nos permite navegar
+
+00:00:04.033 --> 00:00:06.733
+por diferentes abas
+no nosso aplicativo.
+
+00:00:06.767 --> 00:00:08.967
+Agora veremos
+como o StackNavigator
+
+00:00:09.000 --> 00:00:12.800
+nos permite aprofundar mais
+a hierarquia de rotas,
+
+00:00:12.833 --> 00:00:15.533
+assim como uma boa transição
+entre direita e esquerda.
+
+00:00:15.567 --> 00:00:19.500
+Faremos exatamente
+como o TabNavigator.
+
+00:00:19.533 --> 00:00:23.900
+Aqui embaixo,
+vamos criar uma pilha.
+
+00:00:23.933 --> 00:00:26.267
+Vamos recorrer
+a um StackNavigator,
+
+00:00:26.300 --> 00:00:28.133
+e assim teremos
+duas rotas diferentes.
+
+00:00:28.167 --> 00:00:30.667
+A primeira será
+o componente Home.
+
+00:00:30.700 --> 00:00:34.067
+Veja que o que renderizamos aqui
+é o texto "HOME".
+
+00:00:34.100 --> 00:00:37.533
+Depois, renderizamos
+um botão que, clicando nele,
+
+00:00:37.567 --> 00:00:42.667
+nos leva ao Painel de Controle,
+este componente aqui.
+
+00:00:42.700 --> 00:00:47.100
+Faremos exatamente
+como o TabNavigator.
+
+00:00:47.133 --> 00:00:51.467
+Escrevemos Home
+e renderizamos o componente Home.
+
+00:00:51.500 --> 00:00:54.533
+Teremos também
+a rota do Painel de Controle,
+
+00:00:54.567 --> 00:00:57.167
+e a tela que usaremos será
+o Painel de Controle.
+
+00:00:57.200 --> 00:00:58.767
+Está bom assim.
+
+00:00:58.800 --> 00:01:02.967
+Agora precisamos renderizar
+o componente de pilha.
+
+00:01:03.000 --> 00:01:08.200
+Se olharmos para o nosso aplicativo,
+veremos as duas telas de Home aqui,
+
+00:01:08.233 --> 00:01:11.600
+mas se clicarmos neste botão,
+obviamente nada acontecerá,
+
+00:01:11.633 --> 00:01:16.800
+porque não fechamos nada
+no componente TouchableOpacity.
+
+00:01:16.833 --> 00:01:17.900
+O que podemos fazer,
+
+00:01:17.933 --> 00:01:20.467
+e veja que passamos
+esta propriedade de navegação,
+
+00:01:20.500 --> 00:01:26.100
+é dizer que, quando o usuário clicar
+neste componente,
+
+00:01:26.133 --> 00:01:30.133
+o que queremos dizer é
+"navigation.navigate"
+
+00:01:30.166 --> 00:01:34.267
+e aonde queremos ir é para
+o componente Painel de Controle.
+
+00:01:34.300 --> 00:01:38.267
+Então, quando clicarmos
+em Painel de Controle,
+
+00:01:38.300 --> 00:01:42.733
+veja que somos levados
+por uma nova rota.
+
+00:01:42.767 --> 00:01:44.667
+O legal do React Navigation
+
+00:01:44.700 --> 00:01:48.133
+é que ele leva em conta
+as diferentes plataformas.
+
+00:01:48.167 --> 00:01:53.667
+A animação no Android é
+um pouco diferente da no iOS.
+
+00:01:53.700 --> 00:01:58.667
+Podemos fazer
+algumas coisas no cabeçalho.
+
+00:01:58.700 --> 00:02:03.833
+Podemos especificar isso
+neste objeto de navegação aqui.
+
+00:02:03.867 --> 00:02:08.700
+Quero que a tela home
+tenha um título "Home".
+
+00:02:08.733 --> 00:02:11.400
+Veja que agora temos
+a palavra "Home" aqui.
+
+00:02:11.433 --> 00:02:13.800
+E na tela do Painel de Controle,
+
+00:02:13.833 --> 00:02:17.033
+também teremos
+algumas opções de navegação.
+
+00:02:17.067 --> 00:02:19.100
+O título será "Dashboard".
+
+00:02:19.133 --> 00:02:21.300
+Mas agora vamos ser
+mais sofisticados.
+
+00:02:21.333 --> 00:02:25.333
+Quero que o headerTintColor
+seja vermelho
+
+00:02:25.367 --> 00:02:28.246
+e que headerStyle
+
+00:02:28.279 --> 00:02:31.700
+tenha backgroundColor verde.
+
+00:02:31.733 --> 00:02:36.433
+Veja que a Home View
+continua igual,
+
+00:02:36.467 --> 00:02:38.633
+mas, quando vamos
+para o Painel de Controle,
+
+00:02:38.667 --> 00:02:40.467
+tanto no iOS,
+
+00:02:42.067 --> 00:02:46.933
+quanto no Android,
+o cabeçalho está verde e vermelho.
+
+00:02:46.967 --> 00:02:49.567
+Novamente,
+o React Navigation é legal
+
+00:02:49.600 --> 00:02:53.067
+porque podemos ajustar
+tudo o que precisarmos.
+
+00:02:53.100 --> 00:02:57.667
+Falamos sobre o TabNavigator,
+que nos permite navegar por abas,
+
+00:02:57.700 --> 00:02:59.600
+falamos
+sobre o StackNavigator,
+
+00:02:59.633 --> 00:03:03.667
+que nos permite aprofundar
+a pilha ou a hierarquia de rotas,
+
+00:03:03.700 --> 00:03:05.733
+e, por fim,
+temos o DrawerNavigator,
+
+00:03:05.767 --> 00:03:09.400
+que nos permitirá criar
+um menu deslizante de navegação.
+

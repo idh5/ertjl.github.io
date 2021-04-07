@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.339
+Previously, we saw how TabNavigator allows
+
+00:00:03.339 --> 00:00:06.820
+us to navigate between different tabs in our application.
+
+00:00:06.820 --> 00:00:10.839
+And now, we're going to see how StackNavigator allows us to drill deeper
+
+00:00:10.839 --> 00:00:15.480
+into our route hierarchy and also have a nice little right to the left transition there.
+
+00:00:15.480 --> 00:00:19.440
+So what we'll do is just like we did with TabNavigator.
+
+00:00:19.440 --> 00:00:22.165
+Let's go down here and we will create,
+
+00:00:22.164 --> 00:00:23.769
+let's just call it Stack.
+
+00:00:23.769 --> 00:00:25.059
+And we are going to invoke
+
+00:00:25.059 --> 00:00:28.029
+StackNavigator and then we are going to have two different routes.
+
+00:00:28.030 --> 00:00:30.700
+The first one is going to be this home component.
+
+00:00:30.699 --> 00:00:34.210
+And you'll notice what we're rendering here is the text, Home View.
+
+00:00:34.210 --> 00:00:37.990
+And then we want to render a button that when we click on it is going to
+
+00:00:37.990 --> 00:00:42.510
+take us to the Dashboard View which is just this component right here.
+
+00:00:42.509 --> 00:00:46.960
+So what we will do, exactly like we did with TabNavigator.
+
+00:00:46.960 --> 00:00:51.445
+We will say, Home and what we want to render is the Home Component.
+
+00:00:51.445 --> 00:00:57.054
+And then we will also have a Dashboard route and the screen we will use is Dashboard.
+
+00:00:57.054 --> 00:00:58.600
+So that looks good.
+
+00:00:58.600 --> 00:01:02.789
+Now, what we need to do is just render our StatComponent.
+
+00:01:02.789 --> 00:01:04.179
+And now, if we look at our app,
+
+00:01:04.180 --> 00:01:08.080
+you'll notice that we have both our home screen showing here.
+
+00:01:08.079 --> 00:01:10.149
+But if we click on this button,
+
+00:01:10.150 --> 00:01:12.984
+obviously nothing happens because we haven't tied up
+
+00:01:12.984 --> 00:01:16.734
+anything to our TouchableOpacity component.
+
+00:01:16.734 --> 00:01:20.120
+So what we can do and you'll notice we're being passed this Navigation Prop,
+
+00:01:20.120 --> 00:01:26.020
+we can come in here and we can say when the user presses on this component,
+
+00:01:26.019 --> 00:01:29.894
+what we want to do is we want to say navigation.navigate,
+
+00:01:29.894 --> 00:01:34.174
+and where we want to go is the Dashboard Component.
+
+00:01:34.174 --> 00:01:37.959
+So now, what will happen is when I hit two Dashboard,
+
+00:01:37.959 --> 00:01:42.584
+notice we get taken to a brand new route here.
+
+00:01:42.584 --> 00:01:44.939
+And what's nice again about React Navigation is it
+
+00:01:44.939 --> 00:01:48.120
+takes into account the different platform differences.
+
+00:01:48.120 --> 00:01:53.625
+So the animation on Android is a little different than the animation on iOS.
+
+00:01:53.625 --> 00:01:57.540
+And so now what I want to do is there's some things we can do with the header up
+
+00:01:57.540 --> 00:02:03.830
+here and we can go ahead and specify those in our Navigations object right here.
+
+00:02:03.829 --> 00:02:08.775
+So I want to have a title on the home screen and it's just going to say, Home.
+
+00:02:08.775 --> 00:02:11.175
+So now you'll notice that we have Home up here.
+
+00:02:11.175 --> 00:02:13.755
+And on the Dashboard screen,
+
+00:02:13.754 --> 00:02:16.900
+we'll also have some Navigation options.
+
+00:02:16.900 --> 00:02:18.855
+Title will be Dashboard.
+
+00:02:18.854 --> 00:02:21.149
+But now, let's go ahead and get a little bit fancy.
+
+00:02:21.150 --> 00:02:25.710
+I want the header tint color to be red and I
+
+00:02:25.710 --> 00:02:31.965
+want the header style to have a background color of let's say green.
+
+00:02:31.965 --> 00:02:36.364
+So now what's going to happen is you'll notice our Home View looks the exact same,
+
+00:02:36.364 --> 00:02:38.370
+but when we go to Dashboard,
+
+00:02:38.370 --> 00:02:43.060
+both on iOS, now on Android,
+
+00:02:43.060 --> 00:02:46.854
+you'll notice that our header is green with the color of red.
+
+00:02:46.854 --> 00:02:49.780
+So again, ReactNavigation is great because
+
+00:02:49.780 --> 00:02:53.340
+you can tweak basically anything that you need.
+
+00:02:53.340 --> 00:02:57.520
+So we've looked at the TabNavigator which allows us to route between tabs,
+
+00:02:57.520 --> 00:03:00.189
+we've looked at StackNavigator which allows us to
+
+00:03:00.189 --> 00:03:03.564
+drill deeper into our stack or into our route hierarchy.
+
+00:03:03.564 --> 00:03:05.710
+And last up is DrawerNavigator,
+
+00:03:05.710 --> 00:03:09.000
+which is going to allow us to have a drawer to navigate between items there.
+

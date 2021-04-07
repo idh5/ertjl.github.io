@@ -1,0 +1,317 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.400
+Agora que temos todas as informações
+do nosso calendário,
+
+00:00:04.433 --> 00:00:07.867
+o próximo passo é renderizá-lo.
+
+00:00:07.900 --> 00:00:11.767
+Usando o terminal,
+
+00:00:11.800 --> 00:00:14.500
+executaremos "yarn add"
+
+00:00:14.533 --> 00:00:19.533
+e o nome do componente,
+"udacifitness-calendar".
+
+00:00:20.567 --> 00:00:23.733
+Quando terminar de instalar,
+reinicie o aplicativo
+
+00:00:23.767 --> 00:00:27.767
+e volte
+para o seu arquivo History.js
+
+00:00:27.800 --> 00:00:31.400
+Obviamente,
+precisaremos importar isso.
+
+00:00:31.433 --> 00:00:34.133
+Entraremos
+"UdaciFitnessCalendar",
+
+00:00:34.167 --> 00:00:38.000
+que provém
+do que acabamos de instalar.
+
+00:00:38.033 --> 00:00:40.333
+Agora, o que temos de fazer,
+
+00:00:40.366 --> 00:00:45.233
+em vez de renderizar
+uma versão string de "this.props",
+
+00:00:45.266 --> 00:00:50.500
+é renderizar nosso calendário
+e passar algumas coisas.
+
+00:00:50.533 --> 00:00:54.667
+Primeiro,
+vamos importar "entries",
+
+00:00:54.700 --> 00:00:58.800
+praticamente o calendário todo,
+de "this.props".
+
+00:00:59.567 --> 00:01:03.000
+UdaciFitnessCalendar
+aceita diferentes entradas:
+
+00:01:03.033 --> 00:01:06.233
+items, que são as entries,
+
+00:01:06.267 --> 00:01:09.467
+a propriedade renderItem
+
+00:01:09.500 --> 00:01:13.267
+e também a propriedade
+renderEmptyDate.
+
+00:01:13.300 --> 00:01:15.133
+O que isto vai fazer
+
+00:01:15.166 --> 00:01:18.333
+é passar uma função
+
+00:01:18.366 --> 00:01:21.200
+que retornará alguma IU
+ou algum GSX,
+
+00:01:21.233 --> 00:01:22.533
+que será renderizado
+
+00:01:22.566 --> 00:01:25.533
+toda vez que o calendário
+for renderizar um dado dia.
+
+00:01:25.566 --> 00:01:28.367
+Se dado dia for vazio,
+será renderizado
+
+00:01:28.400 --> 00:01:31.767
+seja qual for o GSX
+retornado desta função
+
+00:01:31.800 --> 00:01:33.733
+que passamos
+a renderEmptyDate.
+
+00:01:33.767 --> 00:01:35.933
+Vejamos como fica.
+
+00:01:35.967 --> 00:01:37.500
+Para renderItem,
+
+00:01:37.533 --> 00:01:39.567
+criaremos um método
+chamado "renderItem",
+
+00:01:39.600 --> 00:01:43.200
+e, para renderEmptyDate,
+criaremos,
+
+00:01:43.233 --> 00:01:44.633
+como pode imaginar,
+
+00:01:44.666 --> 00:01:47.633
+um método chamado
+"renderEmptyDate".
+
+00:01:47.667 --> 00:01:50.200
+Primeiro digamos "renderItem".
+
+00:01:50.867 --> 00:01:55.000
+Isso passará um objeto
+
+00:01:55.033 --> 00:01:58.633
+que tem uma propriedade "today",
+bem como todas as medições.
+
+00:01:58.666 --> 00:02:01.533
+Então este "item" será...
+
+00:02:01.567 --> 00:02:05.333
+Será... Vejamos.
+
+00:02:05.367 --> 00:02:07.333
+Vamos até AddEntry.
+
+00:02:07.366 --> 00:02:12.133
+Será assim ou...
+
+00:02:12.167 --> 00:02:14.567
+Vamos até helpers.js.
+
+00:02:15.067 --> 00:02:17.433
+Ou será assim,
+
+00:02:17.466 --> 00:02:22.967
+dependendo do que houver
+no estado Redux do dia.
+
+00:02:23.000 --> 00:02:28.267
+Este será o dia, que provirá
+da nossa memória redux.
+
+00:02:28.300 --> 00:02:29.600
+No item seguinte...
+
+00:02:29.633 --> 00:02:33.133
+pediremos "formattedDate"
+e receberemos uma chave.
+
+00:02:33.167 --> 00:02:35.300
+O que queremos fazer aqui...
+
+00:02:35.333 --> 00:02:38.600
+Vamos trocar isto
+para parênteses,
+
+00:02:38.633 --> 00:02:41.767
+assim teremos
+um retorno implícito.
+
+00:02:41.800 --> 00:02:43.533
+Adicionaremos uma View
+
+00:02:43.566 --> 00:02:46.867
+e diremos que,
+se "today" existir
+
+00:02:47.367 --> 00:02:50.300
+e ainda não tivermos registrado
+os dados do dia,
+
+00:02:50.333 --> 00:02:53.800
+usaremos JSON.stringify
+de novo
+
+00:02:53.833 --> 00:02:58.067
+e passaremos "today".
+E, se "today" não existir,
+
+00:02:58.100 --> 00:03:02.300
+significa que estamos no dia prévio
+e que já registramos os dados,
+
+00:03:02.333 --> 00:03:05.267
+então só passaremos
+as medições "metrics".
+
+00:03:05.300 --> 00:03:08.300
+Isso é tudo que renderItem
+fará por enquanto.
+
+00:03:08.333 --> 00:03:12.100
+Na sequência,
+teremos renderEmptyDate,
+
+00:03:12.133 --> 00:03:15.667
+que será chamado
+se o item específico
+
+00:03:15.700 --> 00:03:18.867
+na nossa memória Redux do dia
+for nulo.
+
+00:03:18.900 --> 00:03:22.733
+Também passaremos
+"formattedDate"
+
+00:03:22.766 --> 00:03:24.667
+e podemos tirar
+a função seta,
+
+00:03:24.700 --> 00:03:29.300
+pois não precisamos
+que seja uma função lambda.
+
+00:03:29.333 --> 00:03:32.767
+O que faremos aqui
+é retornar uma View.
+
+00:03:32.800 --> 00:03:36.933
+Aqui vai a nossa View.
+
+00:03:37.633 --> 00:03:40.967
+E entraremos:
+"Sem dados para o dia".
+
+00:03:41.000 --> 00:03:44.533
+Certo. Está ficando bem bom.
+
+00:03:44.567 --> 00:03:46.533
+Quando o calendário
+for renderizado,
+
+00:03:46.567 --> 00:03:50.100
+se o dia tiver
+dados registrados,
+
+00:03:50.133 --> 00:03:54.067
+teremos esta IU.
+Se não, esta aqui.
+
+00:03:54.100 --> 00:03:55.700
+O que podemos fazer,
+
+00:03:55.733 --> 00:03:57.833
+posto que já renderizamos
+este componente,
+
+00:03:57.867 --> 00:04:01.500
+é retirar
+este componente View aqui.
+
+00:04:01.533 --> 00:04:04.967
+Vamos arrumar
+a endentação rapidinho.
+
+00:04:05.000 --> 00:04:09.100
+Agora, o que quero fazer
+aqui em App.js
+
+00:04:09.133 --> 00:04:12.200
+é adicionar uma View.
+
+00:04:12.233 --> 00:04:15.933
+Vou adicionar "height: 20"
+só para tirar a barra de status.
+
+00:04:15.966 --> 00:04:18.967
+Mais tarde substituiremos
+esta barra,
+
+00:04:19.000 --> 00:04:20.933
+mas, por ora,
+esta View funcionará.
+
+00:04:20.966 --> 00:04:23.533
+Agora, se atualizarmos,
+
+00:04:26.267 --> 00:04:31.100
+veremos nosso calendário aqui.
+
+00:04:31.133 --> 00:04:34.033
+E, selecionando um dia,
+
+00:04:34.067 --> 00:04:38.900
+veremos que temos todos os dias,
+começando pelo selecionado,
+
+00:04:38.933 --> 00:04:41.167
+assim como
+suas respectivas medições.
+
+00:04:41.200 --> 00:04:43.767
+Ou, se não houver
+dados reportados,
+
+00:04:43.800 --> 00:04:46.933
+vemos "Sem dados para o dia".
+

@@ -1,0 +1,472 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.633 --> 00:00:05.033
+Vamos então estilizar
+o componente UdacityStepper,
+
+00:00:05.067 --> 00:00:06.467
+este componente aqui.
+
+00:00:06.500 --> 00:00:12.100
+Este é bem divertido porque,
+na versão final, como já falamos,
+
+00:00:12.133 --> 00:00:15.767
+a versão do iOS é bem diferente
+da versão do Android.
+
+00:00:15.800 --> 00:00:20.500
+Por isso, queremos posicionar
+tudo isso em linha
+
+00:00:20.533 --> 00:00:24.000
+e estilizar os botões
+de forma um pouco diferente.
+
+00:00:24.033 --> 00:00:28.567
+Vamos para o componente
+UdacityStepper.
+
+00:00:28.600 --> 00:00:33.667
+Precisamos importar
+StyleSheet e Platform.
+
+00:00:33.700 --> 00:00:36.167
+E, como acabei de falar,
+
+00:00:36.200 --> 00:00:41.357
+quero que estes itens
+
+00:00:41.594 --> 00:00:45.267
+fiquem alinhados em linha,
+e não verticalmente.
+
+00:00:45.300 --> 00:00:50.233
+Teremos, então, diferentes botões
+para o iOS e para o Android.
+
+00:00:50.267 --> 00:00:54.333
+Vamos nos preocupar
+com a versão do iOS por enquanto.
+
+00:00:54.367 --> 00:00:56.367
+Como sempre,
+
+00:00:56.400 --> 00:01:00.167
+os estilos serão tudo
+o que for retornado
+
+00:01:00.200 --> 00:01:02.800
+pelo StyleSheet.create.
+
+00:01:02.833 --> 00:01:06.367
+Mas, antes,
+vamos criar a propriedade da linha.
+
+00:01:06.400 --> 00:01:08.000
+Escrevemos
+"flexDirection: row",
+
+00:01:08.033 --> 00:01:11.967
+e o acesso principal será
+horizontal.
+
+00:01:12.000 --> 00:01:16.467
+Flex será 1, como sempre,
+e os itens serão centralizados.
+
+00:01:16.500 --> 00:01:21.100
+Vamos alinhar os itens
+verticalmente ao centro.
+
+00:01:21.133 --> 00:01:24.700
+Aqui em cima,
+
+00:01:24.733 --> 00:01:30.100
+queremos
+que o estilo seja "style.row"
+
+00:01:30.133 --> 00:01:34.035
+e também escrevemos
+
+00:01:34.068 --> 00:01:37.300
+"justifyContent: space-between".
+
+00:01:37.333 --> 00:01:40.700
+O que vai acontecer aqui,
+já que é uma linha
+
+00:01:40.733 --> 00:01:43.133
+e o eixo principal é
+horizontal,
+
+00:01:43.167 --> 00:01:47.033
+é que justifyContent alinhará tudo
+horizontalmente,
+
+00:01:47.067 --> 00:01:50.300
+com espaçamento igual
+entre os itens.
+
+00:01:50.333 --> 00:01:54.900
+Aqui faremos
+a estilização da linha
+
+00:01:54.933 --> 00:01:59.033
+e diremos que "flexDirection"
+será "row" também,
+
+00:01:59.067 --> 00:02:01.933
+mas sem tudo isso aqui.
+
+00:02:01.967 --> 00:02:06.133
+Ao salvarmos isso, veja que...
+Vamos atualizar o Android.
+
+00:02:06.167 --> 00:02:10.167
+Veja que tudo está alinhado
+horizontalmente, o que é bom.
+
+00:02:10.200 --> 00:02:14.567
+Em seguida,
+vamos estilizar o botão do iOS.
+
+00:02:14.600 --> 00:02:17.467
+Vamos, então,
+escrever aqui "iosBtn".
+
+00:02:17.500 --> 00:02:21.400
+Se você se lembra,
+ele vai ficar assim.
+
+00:02:21.433 --> 00:02:24.967
+Escrevemos que o fundo
+será branco
+
+00:02:25.000 --> 00:02:27.433
+e vamos importar isso
+rapidamente.
+
+00:02:27.467 --> 00:02:30.000
+Vamos precisar
+de outras cores também,
+
+00:02:30.033 --> 00:02:33.200
+então vou fazer isso agora,
+cinza e roxo.
+
+00:02:33.233 --> 00:02:36.800
+A cor de fundo será branca,
+
+00:02:36.833 --> 00:02:39.800
+a borderColor será roxa,
+
+00:02:39.833 --> 00:02:42.333
+a borderWidth será 1,
+
+00:02:42.367 --> 00:02:47.067
+o borderRadius,
+vamos colocar 3.
+
+00:02:47.100 --> 00:02:48.600
+Padding será 5,
+
+00:02:48.633 --> 00:02:55.167
+paddingLeft e paddingRight
+serão 25.
+
+00:02:55.200 --> 00:02:58.927
+Agora vamos aplicar o iosBtn
+
+00:02:58.960 --> 00:03:02.833
+nestes dois componentes
+touchable.
+
+00:03:02.867 --> 00:03:07.967
+Aqui diremos "style"
+e "style.iosBtn",
+
+00:03:08.000 --> 00:03:12.133
+e fazemos a mesma coisa
+neste componente touchable aqui.
+
+00:03:12.167 --> 00:03:15.067
+Agora vamos ver
+como está ficando.
+
+00:03:15.100 --> 00:03:17.333
+Estamos chegando lá,
+já está mais próximo.
+
+00:03:17.367 --> 00:03:22.767
+Veja que aqui no meio
+ainda temos o borderRadius.
+
+00:03:22.800 --> 00:03:28.067
+Queremos os botões retos,
+sem borda arredondada.
+
+00:03:28.100 --> 00:03:32.633
+Vamos passar um array
+para este primeiro.
+
+00:03:32.667 --> 00:03:35.433
+Vamos aplicar
+todos estes estilos,
+
+00:03:35.467 --> 00:03:38.755
+mas queremos vir aqui
+e dizer
+
+00:03:38.788 --> 00:03:43.000
+que "borderTopRightRadius"
+será 0
+
+00:03:43.033 --> 00:03:47.567
+e que "borderBottomRightRadius"
+também será 0.
+
+00:03:47.600 --> 00:03:52.167
+Olhando para o nosso aplicativo,
+veja que aqui está reto,
+
+00:03:52.200 --> 00:03:54.267
+assim como a parte de baixo.
+
+00:03:54.300 --> 00:03:57.267
+Vamos fazer
+a mesma coisa aqui.
+
+00:03:57.300 --> 00:03:58.467
+Isto será um array,
+
+00:03:58.500 --> 00:04:04.267
+e vamos escrever
+que borderTopLeftRadius será 0
+
+00:04:04.300 --> 00:04:09.267
+e que borderBottomLeftRadius
+também será 0,
+
+00:04:09.300 --> 00:04:10.933
+deixando os botões
+mais retos.
+
+00:04:10.967 --> 00:04:13.633
+Não sei por que
+está vazando aqui.
+
+00:04:13.667 --> 00:04:15.233
+Parece que é um bug
+do React Native.
+
+00:04:15.267 --> 00:04:18.333
+Quando criei uma outra versão,
+isso não acontecia.
+
+00:04:18.367 --> 00:04:21.567
+Acho que não precisamos
+nos preocupar com isso agora.
+
+00:04:21.600 --> 00:04:26.900
+Está ótimo
+em relação aos botões do iOS.
+
+00:04:26.933 --> 00:04:30.167
+Em vez de usar preto,
+vamos...
+
+00:04:30.200 --> 00:04:34.000
+No iOS, pelo menos neste botão,
+usaremos roxo.
+
+00:04:34.033 --> 00:04:37.233
+E aqui,
+vamos usar roxo também.
+
+00:04:37.267 --> 00:04:40.000
+Está ótimo.
+
+00:04:40.033 --> 00:04:42.000
+Antes de estilizar
+para o Android,
+
+00:04:42.033 --> 00:04:46.300
+vamos estilizar
+estas medições aqui.
+
+00:04:46.333 --> 00:04:49.967
+Vamos fazer o seguinte...
+
+00:04:50.000 --> 00:04:54.667
+Aqui teremos
+um "metricCounter",
+
+00:04:54.700 --> 00:04:59.800
+e ele terá uma largura 85.
+
+00:04:59.833 --> 00:05:03.370
+Queremos justificar tudo
+ao centro
+
+00:05:03.403 --> 00:05:06.600
+usando justifyContent
+e alignItems.
+
+00:05:06.633 --> 00:05:09.830
+Agora vamos estilizar
+
+00:05:09.863 --> 00:05:13.533
+as linhas
+dos componentes de texto.
+
+00:05:13.567 --> 00:05:18.800
+A fonte terá tamanho 24,
+e "textAlign" será centralizado.
+
+00:05:18.833 --> 00:05:24.400
+Neste aqui, a fonte será 18,
+um pouco menor.
+
+00:05:24.433 --> 00:05:28.000
+E a cor, em vez de preta,
+será cinza.
+
+00:05:28.033 --> 00:05:31.467
+Vamos ver como ficou.
+Está muito bom.
+
+00:05:31.500 --> 00:05:36.533
+Agora vamos estilizar
+os botões do Android.
+
+00:05:36.567 --> 00:05:39.167
+Vamos criar aqui
+uma nova propriedade.
+
+00:05:39.200 --> 00:05:42.733
+Chamaremos de "androidBtn".
+
+00:05:42.767 --> 00:05:48.700
+Ele será bem mais simples
+do que no iOS, com uma margem 5.
+
+00:05:48.733 --> 00:05:51.300
+A cor de fundo será roxa,
+
+00:05:51.333 --> 00:05:56.033
+o padding será 10,
+e o borderRadius será 2.
+
+00:05:56.652 --> 00:05:59.583
+E agora,
+
+00:05:59.616 --> 00:06:02.533
+dependendo da plataforma,
+
+00:06:02.567 --> 00:06:05.167
+aplicaremos
+um tipo de estilo.
+
+00:06:05.200 --> 00:06:07.854
+Escrevemos aqui,
+
+00:06:07.900 --> 00:06:11.900
+se a plataforma for iOS,
+
+00:06:11.933 --> 00:06:16.700
+renderizaremos
+estes componentes.
+
+00:06:16.733 --> 00:06:19.233
+Vamos arrumar
+a formatação aqui.
+
+00:06:19.267 --> 00:06:22.900
+E se não for iOS...
+
+00:06:22.933 --> 00:06:25.633
+Copio e colo isto...
+
+00:06:25.667 --> 00:06:27.133
+Renderizaremos
+estes componentes.
+
+00:06:27.167 --> 00:06:29.700
+Precisamos fazer
+algumas mudanças rapidamente.
+
+00:06:29.733 --> 00:06:32.033
+Veja que, na versão final,
+
+00:06:32.067 --> 00:06:36.100
+estes ícones estão mais finos
+do que estes aqui.
+
+00:06:36.133 --> 00:06:39.333
+É porque estamos usando
+
+00:06:39.367 --> 00:06:41.267
+uma biblioteca de componentes
+diferente.
+
+00:06:41.300 --> 00:06:43.333
+Então, se estivermos no iOS,
+
+00:06:43.367 --> 00:06:46.600
+em vez de renderizar
+os ícones FontAwesome,
+
+00:06:46.633 --> 00:06:50.033
+renderizaremos os Entypo.
+
+00:06:50.067 --> 00:06:53.933
+Ainda podemos usar o menos e o mais,
+e usar os mesmos tamanhos.
+
+00:06:53.967 --> 00:06:57.400
+Aqui FontAwesome funciona
+para o Android,
+
+00:06:57.433 --> 00:06:59.833
+mas em vez de iOS,
+
+00:06:59.867 --> 00:07:03.933
+dizemos para renderizar
+os estilos do androidBtn.
+
+00:07:04.167 --> 00:07:07.333
+Temos um erro na linha 36.
+
+00:07:07.367 --> 00:07:09.933
+É porque esquecemos
+uma chave ali.
+
+00:07:12.267 --> 00:07:15.733
+É porque esquecemos
+uma chave ali...
+
+00:07:16.033 --> 00:07:19.000
+Agora... está bom assim.
+
+00:07:19.033 --> 00:07:22.833
+Veja que, no Android,
+os ícones são roxos.
+
+00:07:22.867 --> 00:07:27.200
+Não queremos isso,
+queremos que sejam brancos.
+
+00:07:27.233 --> 00:07:31.467
+Escrevemos aqui
+que serão brancos.
+
+00:07:31.500 --> 00:07:35.600
+Pronto, agora temos
+os estilos do Android aqui
+
+00:07:35.633 --> 00:07:38.133
+e os estilos do iOS aqui.
+

@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:04.600
+Antes de terminarmos
+a seção do navegador,
+
+00:00:04.633 --> 00:00:07.833
+há alguns pequenos ajustes
+a serem feitos.
+
+00:00:07.866 --> 00:00:12.500
+Se formos lembrar
+do nosso componente "AddEntry",
+
+00:00:12.533 --> 00:00:16.700
+temos estas seções aqui:
+navegar e rotear para início.
+
+00:00:16.733 --> 00:00:21.200
+Sempre que submetermos
+um novo dia
+
+00:00:21.233 --> 00:00:23.867
+ou resetarmos o dia atual,
+
+00:00:23.900 --> 00:00:26.167
+queremos fazer
+todas estas coisas aqui
+
+00:00:26.200 --> 00:00:29.200
+e navegar de volta
+à tela inicial.
+
+00:00:29.233 --> 00:00:31.533
+Para fazer isso
+neste arquivo,
+
+00:00:31.566 --> 00:00:36.400
+usaremos este método,
+chamado "NavigationActions",
+
+00:00:36.433 --> 00:00:40.400
+que já vem
+no pacote React Navigation.
+
+00:00:40.433 --> 00:00:45.033
+Para fazer isso,
+vamos descer até aqui
+
+00:00:45.066 --> 00:00:48.800
+e criar um novo método
+chamado "toHome".
+
+00:00:48.833 --> 00:00:50.400
+Esse método
+
+00:00:50.433 --> 00:00:55.233
+chamará
+"this.props.navigation.dispatch",
+
+00:00:55.266 --> 00:00:57.167
+parecido com o Redux.
+
+00:00:57.200 --> 00:01:02.200
+E o que vamos disparar
+é "NavigationsActions.back",
+
+00:01:02.233 --> 00:01:03.833
+então queremos voltar,
+
+00:01:03.867 --> 00:01:06.033
+e voltaremos
+
+00:01:06.067 --> 00:01:10.100
+da rota que tem a chave
+de "AddEntry".
+
+00:01:10.133 --> 00:01:12.500
+Queremos voltar
+de onde estamos
+
+00:01:12.533 --> 00:01:14.833
+para onde estávamos antes.
+
+00:01:14.867 --> 00:01:17.067
+Aqui, onde estamos,
+
+00:01:17.100 --> 00:01:19.700
+podemos adicionar
+"this.toHome"
+
+00:01:19.733 --> 00:01:22.967
+e, aqui,
+"this.toHome" também.
+
+00:01:23.000 --> 00:01:26.833
+Deve ter notado que não estou
+me preocupando muito
+
+00:01:26.867 --> 00:01:28.833
+com a ordem das coisas aqui.
+
+00:01:28.866 --> 00:01:32.000
+Talvez isso o incomode,
+mas não vou me preocupar.
+
+00:01:32.033 --> 00:01:34.167
+Se você quiser reorganizar,
+à vontade.
+
+00:01:34.200 --> 00:01:36.867
+A questão é: estamos disparando,
+atualizando estados.
+
+00:01:36.900 --> 00:01:40.400
+Embora aconteça de forma assíncrona,
+tudo funciona.
+
+00:01:40.433 --> 00:01:44.067
+Mas se você quiser refatorar,
+por favor, vá em frente.
+
+00:01:44.100 --> 00:01:47.733
+Vamos dar uma olhada
+em "Entry".
+
+00:01:47.766 --> 00:01:51.633
+Vamos submeter
+os dados do dia.
+
+00:01:51.667 --> 00:01:53.833
+Ótimo.
+Ao submetermos novos dados,
+
+00:01:53.866 --> 00:01:57.267
+somos levados à tela inicial,
+que mostra isto.
+
+00:01:57.300 --> 00:01:59.700
+E, quando resetamos,
+
+00:01:59.733 --> 00:02:02.267
+também somos levados à tela inicial,
+que agora diz:
+
+00:02:02.300 --> 00:02:04.500
+"Submeta
+seus dados diários",
+
+00:02:04.533 --> 00:02:06.600
+uma vez
+que acabamos de excluí-los.
+

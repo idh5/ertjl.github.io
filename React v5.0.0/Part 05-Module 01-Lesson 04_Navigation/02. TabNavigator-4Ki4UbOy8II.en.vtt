@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.169
+Our history view is now looking pretty good and if you remember,
+
+00:00:04.169 --> 00:00:07.094
+we also have our AddEntry view,
+
+00:00:07.094 --> 00:00:08.820
+which is also looking pretty good.
+
+00:00:08.820 --> 00:00:13.914
+We can't really go much further in our app without adding navigation.
+
+00:00:13.914 --> 00:00:17.820
+The very first thing we need to do is head over to
+
+00:00:17.820 --> 00:00:23.250
+your terminal and yarn add re-act navigation.
+
+00:00:23.250 --> 00:00:29.789
+Once that's done, go ahead and restart your app and head back over to your App.js file.
+
+00:00:29.789 --> 00:00:31.799
+What we're going to do here is,
+
+00:00:31.800 --> 00:00:37.380
+let's first grab platform because we'll need that for some styling and then go ahead and
+
+00:00:37.380 --> 00:00:44.505
+grab the TabNavigator off of react-navigation and then while we are here,
+
+00:00:44.505 --> 00:00:46.995
+let's go ahead and grab a few colors,
+
+00:00:46.994 --> 00:00:50.675
+purple and white from
+
+00:00:50.676 --> 00:00:57.420
+util/colors and then we're also going to need to specify the specific icons,
+
+00:00:57.420 --> 00:01:00.660
+which are going to be on the tabs that we're about to build.
+
+00:01:00.659 --> 00:01:06.689
+What we'll use is Fontawesome as well as Ionicons.
+
+00:01:06.689 --> 00:01:08.774
+All right. Now what we want to do,
+
+00:01:08.775 --> 00:01:14.715
+is we want to actually create our tabs component so the way we can do that,
+
+00:01:14.715 --> 00:01:18.870
+is we can invoke TabNavigator and
+
+00:01:18.870 --> 00:01:21.615
+the first object we are going to pass it
+
+00:01:21.614 --> 00:01:25.204
+is going to represent the tabs that we want to see on the screen.
+
+00:01:25.204 --> 00:01:26.995
+We will have history,
+
+00:01:26.995 --> 00:01:32.100
+the screen we're going to render is our history component and let's go
+
+00:01:32.099 --> 00:01:37.334
+ahead and give it some navigation options, the tabBarLabel.
+
+00:01:37.334 --> 00:01:40.634
+What it's going to show on the tab bar,
+
+00:01:40.635 --> 00:01:47.415
+is it will say history and then the tabBarIcon is going to be a function,
+
+00:01:47.415 --> 00:01:49.680
+which is going to take in a tintColor,
+
+00:01:49.680 --> 00:01:53.820
+which we will set here in a minute and we want to render this icon,
+
+00:01:53.819 --> 00:01:55.394
+which is why we imported it,
+
+00:01:55.394 --> 00:01:59.164
+the name we will say is iOS bookmarks.
+
+00:01:59.165 --> 00:02:02.484
+Size, we'll set it equal to 30,
+
+00:02:02.484 --> 00:02:08.580
+and then the color is going to be this tintColor so we have a history tab.
+
+00:02:08.580 --> 00:02:10.215
+Now we also need
+
+00:02:10.215 --> 00:02:14.319
+our AddEntry tab because that was the other component that we built as well.
+
+00:02:14.319 --> 00:02:18.629
+Similar, the screen is going to be AddEntry.
+
+00:02:18.629 --> 00:02:21.030
+We're going to have some navigation options,
+
+00:02:21.030 --> 00:02:29.715
+tabBarLabel is going to be AddEntry and then the tabBarIcon is going to be a function,
+
+00:02:29.715 --> 00:02:37.814
+which also accepts the tintColor and is going to render a Fontawesome icon,
+
+00:02:37.814 --> 00:02:41.384
+with the name of plus square,
+
+00:02:41.384 --> 00:02:47.039
+the size of 30 and the color is going to be tintColor.
+
+00:02:47.039 --> 00:02:49.094
+All right. These are
+
+00:02:49.094 --> 00:02:54.060
+our tabs and now what we want to do is we want to specify some options for these tabs.
+
+00:02:54.060 --> 00:02:56.717
+Specifically, things like how they look and whatnot.
+
+00:02:56.717 --> 00:03:02.564
+What we'll do is as the second argument to TabNavigator,
+
+00:03:02.564 --> 00:03:08.049
+we will pass it an object and we will say tabBarOptions.
+
+00:03:08.049 --> 00:03:11.340
+It's going to have an active tintColor so this is going to
+
+00:03:11.340 --> 00:03:16.520
+be the color of the selected tab.
+
+00:03:16.520 --> 00:03:18.255
+What we want to do here is we will say,
+
+00:03:18.254 --> 00:03:20.534
+if we're on iOS,
+
+00:03:20.534 --> 00:03:24.060
+then this is going to be purple and if we're not then
+
+00:03:24.060 --> 00:03:27.860
+it's going to be white and you'll see why we're doing that here in a second.
+
+00:03:27.860 --> 00:03:33.180
+Then now what we want to do is under tabBarOptions as well,
+
+00:03:33.180 --> 00:03:37.395
+we want to have some styling that we're going to apply to the tab bar.
+
+00:03:37.395 --> 00:03:41.250
+We will give it a height of 56, background color.
+
+00:03:41.250 --> 00:03:44.205
+Again, if we're on iOS,
+
+00:03:44.205 --> 00:03:47.355
+we want it to be white and if we're not,
+
+00:03:47.354 --> 00:03:51.239
+then we want it to be purple and then let's go ahead and give us some shadow.
+
+00:03:51.240 --> 00:03:55.460
+I'm just going to paste this in so what we've done is we have a shadowColor,
+
+00:03:55.460 --> 00:03:59.670
+shadowOffset, shadowRadius and shadowOpacity.
+
+00:03:59.669 --> 00:04:01.679
+I believe that looks pretty good.
+
+00:04:01.680 --> 00:04:03.360
+Now, what we have is,
+
+00:04:03.360 --> 00:04:07.790
+tab's as a component because that's what TabNavigator returns us.
+
+00:04:07.789 --> 00:04:11.099
+What we can actually do here is instead of
+
+00:04:11.099 --> 00:04:14.280
+rendering history or instead of rendering AddEntry here,
+
+00:04:14.280 --> 00:04:18.154
+as we did earlier, we can just render tabs.
+
+00:04:18.154 --> 00:04:21.334
+If everything is working right,
+
+00:04:21.334 --> 00:04:24.824
+you'll see here, that we now have these tabs.
+
+00:04:24.824 --> 00:04:30.144
+What's nice here is Android has its own styling and so does iOS.
+
+00:04:30.144 --> 00:04:37.250
+Now, we can navigate between these two and one thing I want to add real quick.
+
+00:04:37.250 --> 00:04:40.319
+That won't affect us in this video but it'll affect us in the future,
+
+00:04:40.319 --> 00:04:45.170
+is up here inside of our kind of options object.
+
+00:04:45.170 --> 00:04:49.610
+What I want to do is say navigationOptions,
+
+00:04:49.610 --> 00:04:51.590
+headers are just going to be set to NULL.
+
+00:04:51.589 --> 00:04:53.764
+This is just going to get rid of any headers
+
+00:04:53.764 --> 00:04:57.110
+that we will eventually have in our app but we don't have right now.
+
+00:04:57.110 --> 00:04:59.090
+We'll save that. Again, everything looks good.
+
+00:04:59.089 --> 00:05:03.229
+We can now navigate between these two components.
+

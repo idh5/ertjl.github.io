@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.890
+Now that you know how to style and layout a React Native application,
+
+00:00:03.890 --> 00:00:06.710
+let's add to that knowledge with some more advanced topics.
+
+00:00:06.710 --> 00:00:10.640
+In this section, we'll take a look at some popular CSS and JavaScript
+
+00:00:10.640 --> 00:00:13.310
+libraries because they offer a different approach
+
+00:00:13.310 --> 00:00:17.000
+to styling both React and React Native applications.
+

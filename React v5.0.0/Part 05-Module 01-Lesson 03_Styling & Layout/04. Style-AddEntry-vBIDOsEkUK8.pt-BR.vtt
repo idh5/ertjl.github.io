@@ -1,0 +1,386 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.633 --> 00:00:05.267
+Vamos continuar a estilizar
+nossas telas de entrada.
+
+00:00:05.300 --> 00:00:08.767
+Veja que, nestas versões finais,
+há algumas diferenças.
+
+00:00:08.800 --> 00:00:11.967
+Os botões são um pouco diferentes,
+dependendo da plataforma.
+
+00:00:12.000 --> 00:00:16.133
+Estes botões de aumento
+também são um pouco diferentes.
+
+00:00:16.167 --> 00:00:19.767
+Temos que prestar atenção nisso
+na hora de fazer a estilização.
+
+00:00:19.800 --> 00:00:25.233
+Primeiro, vamos importar
+algumas coisas do React Native.
+
+00:00:25.267 --> 00:00:26.933
+Vamos precisar de Platform
+
+00:00:26.967 --> 00:00:29.200
+para sabermos que plataforma
+estamos usando.
+
+00:00:29.233 --> 00:00:34.233
+Também vamos usar
+a API StyleSheet.
+
+00:00:34.267 --> 00:00:40.100
+Aqui embaixo,
+vamos criar alguns estilos
+
+00:00:40.133 --> 00:00:43.767
+que serão o resultado da chamada
+de StyleSheet.create,
+
+00:00:43.800 --> 00:00:48.442
+mas primeiro vamos estilizar
+
+00:00:48.475 --> 00:00:50.467
+o botão "Submit"
+aqui em cima.
+
+00:00:50.500 --> 00:00:56.400
+Vamos criar
+um botão Submit do iOS
+
+00:00:56.433 --> 00:00:59.867
+e um botão Submit
+do Android,
+
+00:00:59.900 --> 00:01:02.000
+porque, como já falamos,
+eles são um pouco diferentes.
+
+00:01:02.033 --> 00:01:05.667
+Vamos também criar
+um botão "Submit Text",
+
+00:01:05.700 --> 00:01:07.533
+que será o mesmo para ambos.
+
+00:01:07.567 --> 00:01:11.867
+Vamos fazer o texto primeiro.
+Usaremos a cor branca.
+
+00:01:11.900 --> 00:01:14.683
+Vamos importar isto aqui,
+
+00:01:14.716 --> 00:01:19.133
+importar "white" de utils/colors.
+
+00:01:19.167 --> 00:01:24.767
+O texto terá
+fonte tamanho 22,
+
+00:01:24.800 --> 00:01:28.867
+e garantimos que o alinhamento
+esteja centralizado.
+
+00:01:28.900 --> 00:01:30.700
+E agora,
+para o botão do iOS,
+
+00:01:30.733 --> 00:01:36.343
+a cor de fundo será roxa,
+
+00:01:36.376 --> 00:01:39.200
+a qual vamos importar
+rapidamente.
+
+00:01:39.233 --> 00:01:41.495
+Embaixo disso,
+
+00:01:41.528 --> 00:01:45.733
+vamos colocar um padding 10,
+
+00:01:45.767 --> 00:01:49.067
+o borderRadius será 7,
+
+00:01:49.100 --> 00:01:51.833
+a altura será 45,
+
+00:01:51.867 --> 00:01:57.267
+e marginLeft
+e marginRight serão 40.
+
+00:01:57.300 --> 00:02:01.067
+O botão Submit
+do Android será parecido,
+
+00:02:01.100 --> 00:02:03.900
+também terá
+uma cor de fundo roxa
+
+00:02:03.933 --> 00:02:05.967
+e um padding 10.
+
+00:02:06.000 --> 00:02:09.200
+O paddingLeft será 30,
+
+00:02:09.233 --> 00:02:14.600
+paddingRight também será 30,
+a altura será 45,
+
+00:02:14.633 --> 00:02:19.633
+borderRadius será
+um pouco menor que no iOS: 2.
+
+00:02:19.667 --> 00:02:23.433
+Vamos alinhá-la no final,
+
+00:02:23.467 --> 00:02:25.261
+e tudo dentro disso
+
+00:02:25.294 --> 00:02:29.633
+será justificado e centralizado.
+
+00:02:29.667 --> 00:02:33.600
+Agora vamos adicionar
+estes estilos ao botão.
+
+00:02:33.633 --> 00:02:39.533
+Nosso botão está aqui,
+e escrevemos "style",
+
+00:02:39.567 --> 00:02:42.633
+se estivermos no iOS,
+
+00:02:42.667 --> 00:02:47.667
+os estilos deste botão
+serão "styles.iosSubmitBtn".
+
+00:02:47.700 --> 00:02:51.367
+E se não estivermos no iOS,
+ou seja, se estivermos no Android,
+
+00:02:51.400 --> 00:02:54.167
+vamos aplicar os estilos
+do botão Submit do Android.
+
+00:02:54.200 --> 00:02:56.800
+Para os textos,
+independentemente da plataforma,
+
+00:02:56.833 --> 00:03:02.400
+escrevemos
+"style = styles.submitBtnText".
+
+00:03:02.433 --> 00:03:05.200
+Ao olharmos para ele,
+se tudo estiver funcionando,
+
+00:03:05.233 --> 00:03:08.633
+veremos um botão
+aqui embaixo
+
+00:03:08.667 --> 00:03:13.433
+e, quando arrumarmos o estilo aqui,
+veremos o botão do Android.
+
+00:03:13.467 --> 00:03:17.767
+Agora vamos continuar
+a adicionar os estilos aqui.
+
+00:03:17.800 --> 00:03:22.767
+Vamos até os estilos,
+criamos um container,
+
+00:03:22.800 --> 00:03:25.567
+que ficará perto
+do container principal.
+
+00:03:25.600 --> 00:03:28.567
+Sempre que tivermos
+um componente container
+
+00:03:28.600 --> 00:03:30.467
+como este aqui,
+
+00:03:30.500 --> 00:03:34.433
+damos um flex 1, para seus filhos
+tomarem todo o espaço.
+
+00:03:34.467 --> 00:03:39.267
+O padding será 20,
+e a cor de fundo será branca.
+
+00:03:39.300 --> 00:03:44.267
+Vamos aplicar isto aqui,
+"styles.container".
+
+00:03:44.300 --> 00:03:48.933
+Agora vamos aplicar
+mais alguns estilos aqui.
+
+00:03:48.967 --> 00:03:53.033
+Veja que isto
+é o que estamos mapeando.
+
+00:03:53.067 --> 00:03:56.300
+Em vez de alinhar tudo
+em uma coluna,
+
+00:03:56.333 --> 00:04:00.067
+como é o padrão,
+queremos tudo alinhando em linha.
+
+00:04:00.100 --> 00:04:03.633
+Podemos dizer
+que "style = styles.row",
+
+00:04:03.667 --> 00:04:08.633
+e aqui, em StyleSheet,
+adicionamos uma linha,
+
+00:04:08.667 --> 00:04:11.900
+e ela dirá
+"flexDirection: row",
+
+00:04:11.933 --> 00:04:14.633
+dando o acesso principal
+à linha.
+
+00:04:14.667 --> 00:04:16.733
+Flex será 1,
+tomando todo o espaço,
+
+00:04:16.767 --> 00:04:21.100
+e os itens serão alinhados
+ao longo do eixo cruzado,
+
+00:04:21.133 --> 00:04:24.233
+ou seja,
+centralizados verticalmente.
+
+00:04:24.267 --> 00:04:27.267
+Se olharmos
+para o aplicativo...
+
+00:04:30.500 --> 00:04:33.367
+Pronto,
+acabei de atualizar o Android.
+
+00:04:33.400 --> 00:04:37.667
+Está bem melhor,
+agora temos estas linhas.
+
+00:04:37.700 --> 00:04:40.000
+Agora é a última coisa
+que quero estilizar.
+
+00:04:40.033 --> 00:04:42.933
+Se você se lembra,
+temos esta view aqui.
+
+00:04:42.967 --> 00:04:44.333
+Vamos estilizá-la,
+
+00:04:44.367 --> 00:04:48.800
+e tudo está vindo
+desta seção aqui.
+
+00:04:48.833 --> 00:04:52.933
+Primeiro, vamos criar
+um pequeno container,
+
+00:04:52.967 --> 00:04:54.667
+vamos chamá-lo de "center".
+
+00:04:54.700 --> 00:04:58.800
+Vamos basicamente deixar
+tudo centralizado.
+
+00:04:58.833 --> 00:05:02.633
+Flex será 1,
+justifyContent ficará centralizado,
+
+00:05:02.667 --> 00:05:06.167
+alignItems ficarão
+centralizados,
+
+00:05:06.200 --> 00:05:11.933
+marginLeft
+e marginRight serão 30.
+
+00:05:11.967 --> 00:05:16.267
+Vamos aplicar os estilos
+a esta view aqui.
+
+00:05:16.300 --> 00:05:18.866
+Assim,
+tudo ficará centralizado.
+
+00:05:18.899 --> 00:05:24.868
+Agora vamos estilizar a linha
+
+00:05:24.901 --> 00:05:27.600
+e adicionar um padding.
+
+00:05:27.633 --> 00:05:32.300
+O padding terá 10 pixels.
+
+00:05:32.333 --> 00:05:35.833
+E agora,
+se enviarmos novamente,
+
+00:05:35.867 --> 00:05:39.667
+teremos este ícone aqui.
+
+00:05:39.700 --> 00:05:44.900
+Quero ter um ícone diferente,
+dependendo da plataforma,
+
+00:05:44.933 --> 00:05:49.433
+porque há mais carinhas específicas
+no Android e no iOS.
+
+00:05:49.467 --> 00:05:54.000
+Dentro de Ionicons,
+em vez de "ios-happy-outline",
+
+00:05:54.033 --> 00:05:58.333
+diremos,
+se estivermos no iOS,
+
+00:05:58.367 --> 00:06:02.633
+o nome será
+"ios-happy-outline".
+
+00:06:02.667 --> 00:06:05.833
+Se não, ou seja,
+se estivermos no Android,
+
+00:06:05.867 --> 00:06:08.913
+diremos "md-happy",
+
+00:06:08.946 --> 00:06:12.033
+que é o Material Design Happy.
+
+00:06:12.067 --> 00:06:16.467
+Assim,
+quando recarregarmos os dois
+
+00:06:16.500 --> 00:06:17.933
+e apertarmos enviar,
+
+00:06:17.967 --> 00:06:21.200
+os ícones estarão
+um pouco diferentes,
+
+00:06:21.233 --> 00:06:22.833
+dependendo
+da plataforma usada.
+

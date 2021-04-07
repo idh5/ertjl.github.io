@@ -1,0 +1,445 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stack Navigator</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Navigation</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Tab Navigator.html">02. Tab Navigator</a>
+    </li>
+    <li class="">
+      <a href="03. Stack Navigator.html">03. Stack Navigator</a>
+    </li>
+    <li class="">
+      <a href="04. Drawer Navigator.html">04. Drawer Navigator</a>
+    </li>
+    <li class="">
+      <a href="05. Lesson Summary.html">05. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Stack Navigator</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>StackNavigator Introduction</p></h3>
+  <video controls>
+  <source src="03. StackNavigator Introduction-uMbBR5nu3eg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. StackNavigator Introduction-uMbBR5nu3eg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. StackNavigator Introduction-uMbBR5nu3eg.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. StackNavigator Introduction-uMbBR5nu3eg.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="stack-navigator-v1">Stack Navigator v1</h2>
+<p>When pressing an item in, say, an index view, we expect to go to a new screen with details on that item. React Navigation offers another navigator to do just that! With <code>Stack Navigator</code>, new screens are added and removed as a <em>stack</em>. This places screens on top of one another in a "last in, first out" manner, similar to <code>Array</code>'s <code>push()</code> and <code>pop()</code> methods.</p>
+<p><code>StackNavigator</code>'s usage is largely similar to that of <code>TabNavigator</code>. But rather than passing in an object of different tabs, we pass in an object of the different screens that should be available in that stack.</p>
+<h2 id="stack-navigator-v2">Stack Navigator v2</h2>
+<p><code>StackNavigator</code> has been deprecated in favor of <a href="https://reactnavigation.org/docs/en/stack-navigator.html" rel="noopener noreferrer" target="_blank"><code>createStackNavigator</code></a>, which is functionally identical but clearly communicates that it's a function that returns a component.</p>
+<p>According to the <a href="https://reactnavigation.org/blog/" rel="noopener noreferrer" target="_blank">documentation</a>, the new <a href="https://reactnavigation.org/docs/en/stack-navigator.html" rel="noopener noreferrer" target="_blank"><code>StackNavigator</code></a> is “less pushy”:</p>
+<blockquote>
+  <p><a href="https://reactnavigation.org/docs/en/navigating.html" rel="noopener noreferrer" target="_blank">Each time you call push we add a new route to the navigation stack. When you call <code>navigate</code>, it first tries to find an existing route with that name, and only pushes a new route if there isn't yet one on the stack.</a></p>
+</blockquote>
+<blockquote>
+  <p><a href="https://reactnavigation.org/docs/en/navigating.html" rel="noopener noreferrer" target="_blank">Let's suppose that we actually <em>want</em> to add another details screen. This is pretty common in cases where you pass in some unique data to each route (more on that later when we talk about <code>params</code>!). To do this, we can change <code>navigate</code> to <code>push</code>. This allows us to express the intent to add another route regardless of the existing navigation history.</a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's see how we'd use the Stack Navigator from React Navigation v2.</p>
+<p>First, go ahead an import <code>createStackNavigator</code> from <code>react-navigation</code>. </p>
+<pre><code>import { createStackNavigator } from 'react-navigation';</code></pre>
+<p>Say we have two basic components, <code>Home</code> and <code>Dashboard</code>:</p>
+<pre><code class="js language-js">const Home = ({ navigation }) =&gt; (
+  &lt;View&gt;
+    &lt;Text&gt;This is the Home view&lt;/Text&gt;
+    &lt;TouchableOpacity onPress={() =&gt; navigation.navigate('Dashboard')}&gt;
+      &lt;Text&gt;Press here for the Dashboard&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  &lt;/View&gt;
+);
+
+const Dashboard = () =&gt; (
+  &lt;View&gt;
+    &lt;Text&gt;This is the Dashboard&lt;/Text&gt;
+  &lt;/View&gt;
+);</code></pre>
+<p>Note that a <code>navigation</code> prop is passed to the stateless functional <code>Home</code> component, which allows navigation to another route. Once this is done, we can pass an object into <code>createStackNavigator</code> similar to how we did for <code>createBottomTabNavigator</code>:</p>
+<pre><code class="js language-js">const Stack = createStackNavigator({
+  Home: {
+    screen: Home
+  },
+  Dashboard: {
+    screen: Dashboard
+  }
+})</code></pre>
+<p>The return value of passing an object into <code>createStackNavigator</code> is a component as well, and we can render it as such!</p>
+<pre><code class="js language-js">// App.js
+
+// ...
+
+export default class App extends React.Component {
+  render() {
+    return (
+      &lt;Stack /&gt;
+    );
+  }
+}</code></pre>
+<p><a href="https://reactnavigation.org/docs/en/stack-navigator.html" rel="noopener noreferrer" target="_blank">Stack Navigator</a> and <a href="https://reactnavigation.org/docs/en/bottom-tab-navigator.html" rel="noopener noreferrer" target="_blank">Tab Navigator</a> often go hand-in-hand. Since they each return <em>components</em>, you'll often see one nested within the other. Let's see this in action as we implement this into UdaciFitness!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>StackNavigator</p></h3>
+  <video controls>
+  <source src="03. StackNavigator-PkoZ__6NPE8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. StackNavigator-PkoZ__6NPE8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. StackNavigator-PkoZ__6NPE8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. StackNavigator-PkoZ__6NPE8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/86af918722052eebafbc2892b6cd772b51a18dd4" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about the Stack Navigator? Please select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505169089248" name="394643" id="a1505169089248">
+      <label for="a1505169089248"><p>Stack Navigator functions like a <em>queue</em>, implementing a "first in, first out" approach of managing screens.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169095638" name="394643" id="a1505169095638">
+      <label for="a1505169095638"><p>Stack Navigator cannot render the component returned by <code>createBottomTabNavigator</code>; they must be used separately.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169096200" name="394643" id="a1505169096200">
+      <label for="a1505169096200"><p>Stack Navigator animations render differently in Android and iOS.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169096774" name="394643" id="a1505169096774">
+      <label for="a1505169096774"><p>Similar to the Tab Navigator, the Stack Navigator can also leverage <code>navigationOptions</code>.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Stack Navigator animations render differently in Android and iOS.</li>
+      <li>Similar to the Tab Navigator, the Stack Navigator can also leverage `navigationOptions`.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>NavigationOptions</p></h3>
+  <video controls>
+  <source src="03. NavigationOptions-JosvkjGlt30.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. NavigationOptions-JosvkjGlt30.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. NavigationOptions-JosvkjGlt30.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. NavigationOptions-JosvkjGlt30.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/7d4fba6fba7e0f9833e9645c2f34e9c058c9feed" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Connect-EntryDetail</p></h3>
+  <video controls>
+  <source src="03. Connect-EntryDetail--c5FZCh5LNo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Connect-EntryDetail--c5FZCh5LNo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Connect-EntryDetail--c5FZCh5LNo.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Connect-EntryDetail--c5FZCh5LNo.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/5d77f8d831e170fc0ffdeae1bc92a0825e71e14a" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>EntryDetail-Reset</p></h3>
+  <video controls>
+  <source src="03. EntryDetail-Reset-Hv_EbcrmbDY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. EntryDetail-Reset-Hv_EbcrmbDY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. EntryDetail-Reset-Hv_EbcrmbDY.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. EntryDetail-Reset-Hv_EbcrmbDY.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/7b2103a06e2394f938168d9f1040dd6ba9ac2e2d" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Finish-Navigation</p></h3>
+  <video controls>
+  <source src="03. Finish-Navigation-_nRJsJ2-zgY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Finish-Navigation-_nRJsJ2-zgY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Finish-Navigation-_nRJsJ2-zgY.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Finish-Navigation-_nRJsJ2-zgY.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/18aeee6aac40702c2d86cf976a9a67c5691505cf" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Navigation should be good to go at this point! Be sure you have done the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--0">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--0"><p>I have created the <code>EntryDetail</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--1">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--1"><p>I have created the <code>MainNavigator</code> component, nesting <code>Tabs</code> into it</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--2">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--2"><p>I have updated the <code>renderItem()</code> method in <code>History</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--3">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--3"><p>I have added <code>navigationOptions</code> to <code>EntryDetail</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--4">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--4"><p>I have connected <code>EntryDetail</code> to the store context with <code>connect()</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--5">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--5"><p>I have implemented a <strong>reset</strong> feature to <code>EntryDetail</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--6">
+        <label for="fee537a9-a71e-46f8-bd1a-b0c31a5f4bff--6"><p>I have integrated <code>NavigationActions</code> to <code>AddEntry</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Navigation's Stack Navigator is another customizable navigation option based on adding and removing new screens to a stack. Its API is similar to that of the Tab Navigator; it takes in an object that defines all screens, then returns a component. Since both the Stack Navigator and the Tab Navigator both return components, a common practice is to nest these navigators within one another.</p>
+<p>In the next section, we'll take a look at the Drawer Navigator, in which screens are switched from a drawer that pops out from the side of the screen!</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://medium.com/@swathylenjini/stack-navigation-in-react-native-2cd00374ff3a" rel="noopener noreferrer" target="_blank">Stack Navigation in React Native</a></li>
+<li><a href="https://v1.reactnavigation.org/docs/stack-navigator.html" rel="noopener noreferrer" target="_blank">StackNavigator v1</a> from the React Navigator docs</li>
+<li><a href="https://reactnavigation.org/docs/en/stack-navigator.html" rel="noopener noreferrer" target="_blank">StackNavigator v2</a> from the React Navigator docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Drawer Navigator.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Stack Navigator')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

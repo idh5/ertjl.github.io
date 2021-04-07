@@ -1,0 +1,397 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drawer Navigator</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Navigation</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Tab Navigator.html">02. Tab Navigator</a>
+    </li>
+    <li class="">
+      <a href="03. Stack Navigator.html">03. Stack Navigator</a>
+    </li>
+    <li class="">
+      <a href="04. Drawer Navigator.html">04. Drawer Navigator</a>
+    </li>
+    <li class="">
+      <a href="05. Lesson Summary.html">05. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Drawer Navigator</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>DrawerNavigator Introduction</p></h3>
+  <video controls>
+  <source src="04. DrawerNavigator Introduction-rxb47NRwix8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. DrawerNavigator Introduction-rxb47NRwix8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. DrawerNavigator Introduction-rxb47NRwix8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. DrawerNavigator Introduction-rxb47NRwix8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="drawer-navigator-v1">Drawer Navigator v1</h2>
+<p>React Navigation offers one more basic navigator to create custom navigation through React Native apps: the <code>DrawerNavigator</code>. While <code>TabNavigator</code> uses tabs to help users navigate to specific screens, <code>DrawerNavigator</code> uses a drawer-like menu that slides in from the side of the screen. While we won't be implementing this into UdaciFitness -- it's still important to know and fairly common in React Native applications!</p>
+<p>To use <code>DrawerNavigator</code>, be sure to install version 1 of <code>react-navigation</code> and import the following from <code>react-navigation</code>:</p>
+<pre><code>import { DrawerNavigator } from 'react-navigation';</code></pre>
+<p>Luckily, many of the same philosophies shared by <code>StackNavigator</code> and <code>TabNavigator</code> apply here as well! Let's check out two basic components again and see how <code>DrawerNavigator</code> renders them:</p>
+<pre><code class="js language-js">const Home = ({ navigation }) =&gt; (
+  &lt;View&gt;
+    &lt;Text&gt;This is the Home view&lt;/Text&gt;
+    &lt;TouchableOpacity onPress={() =&gt; navigation.navigate('DrawerOpen')}&gt;
+      &lt;Text&gt;Press here to open the drawer!&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  &lt;/View&gt;
+);
+
+const Dashboard = ({ navigation }) =&gt; (
+  &lt;View&gt;
+    &lt;Text&gt;This is the Dashboard view&lt;/Text&gt;
+    &lt;TouchableOpacity onPress={() =&gt; navigation.navigate('DrawerOpen')}&gt;
+      &lt;Text&gt;Press here to open the drawer!&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  &lt;/View&gt;
+);</code></pre>
+<p>Note that rather than routing to another component, each <code>TouchableOpacity</code> wrapper opens the drawer. Likewise, <code>'DrawerClose</code>' can be used to close the drawer. To simplify things, React Navigation also offers <code>'DrawerToggle'</code> to automatically select which navigation is appropriate based on the current drawer state.</p>
+<p>Similar to <code>TabNavigator</code> and <code>StackNavigator</code>, we can then pass an object into <code>DrawerNavigator</code>, render the component returned, and we're all set!</p>
+<pre><code class="js language-js">const Drawer = DrawerNavigator({
+  Home: {
+    screen: Home
+  },
+  Dashboard: {
+    screen: Dashboard
+  }
+});</code></pre>
+<pre><code class="js language-js">// App.js
+
+// ...
+
+export default class App extends React.Component {
+  render() {
+    return (
+      &lt;Drawer /&gt;
+    );
+  }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="drawer-navigator-v2">Drawer Navigator v2</h2>
+<p><code>DrawerNavigator</code> has been deprecated in favor of <a href="https://reactnavigation.org/docs/en/drawer-navigator.html" rel="noopener noreferrer" target="_blank"><code>createDrawerNavigator</code></a>, which  is functionally identical but clearly communicates that it's a function that returns a component. </p>
+<p>According to the documentation:</p>
+<blockquote>
+  <p><a href="https://reactnavigation.org/blog/" rel="noopener noreferrer" target="_blank">Rather than opening a drawer with <code>navigation.navigate(‘DrawerOpen’)</code>, you can now call <code>navigation.openDrawer()</code>. Other methods are <code>closeDrawer()</code> and <code>toggleDrawer()</code>.</a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about the Drawer Navigator? Please select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505169245638" name="394645" id="a1505169245638">
+      <label for="a1505169245638"><p>Drawer Navigator's drawer generally spans the height of the screen.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169249812" name="394645" id="a1505169249812">
+      <label for="a1505169249812"><p>The component returned by <code>createStackNavigator</code> can be nested inside a Drawer Navigator.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169251610" name="394645" id="a1505169251610">
+      <label for="a1505169251610"><p>Drawer Navigator is provided by <code>react-native</code>.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169252106" name="394645" id="a1505169252106">
+      <label for="a1505169252106"><p>Unlike the Tab Navigator and the Stack Navigator, the Drawer Navigator does not return a component.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Drawer Navigator's drawer generally spans the height of the screen.</li>
+      <li>The component returned by `createStackNavigator` can be nested inside a Drawer Navigator.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Time for a quick review! Please match the navigator with how it manages screens:</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Drawer Navigator</p></button>
+  <button class="btn btn-primary"><p>Tab Navigator</p></button>
+  <button class="btn btn-primary"><p>Drawer Navigator</p></button>
+  <button class="btn btn-primary"><p>Stack Navigator</p></button>
+  <button class="btn btn-primary"><p>Tab Navigator</p></button>
+  <button class="btn btn-primary"><p>Stack Navigator</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Description</p>
+      </th>
+      <th>
+        <p>Component</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Screens are rendered and placed on top of one another</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Screens are switched by using a tab bar</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Screens are switched by a menu that slides in from the side</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Description</p>
+        </th>
+        <th>
+          <p>Component</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Screens are switched by a menu that slides in from the side</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Drawer Navigator</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Screens are switched by using a tab bar</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Tab Navigator</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Screens are switched by a menu that slides in from the side</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Drawer Navigator</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Screens are rendered and placed on top of one another</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Stack Navigator</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Screens are switched by using a tab bar</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Tab Navigator</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Screens are rendered and placed on top of one another</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Stack Navigator</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Navigation's Drawer Navigator is used to easily set up a screen with drawer navigation. Many of the same practices we use to set up the Stack Navigator and the Tab Navigator apply to the Drawer Navigator as well. Simply pass in an object containing the different screens, and the return value is a component ready to be rendered. As a result, this makes Drawer Navigator components easy for nesting with other navigators!</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://v1.reactnavigation.org/docs/drawer-navigator.html" rel="noopener noreferrer" target="_blank">DrawerNavigator v1</a> from the React Navigator docs</li>
+<li><a href="https://reactnavigation.org/docs/en/drawer-navigator.html" rel="noopener noreferrer" target="_blank">DrawerNavigator v2</a> from the React Navigator docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Drawer Navigator')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

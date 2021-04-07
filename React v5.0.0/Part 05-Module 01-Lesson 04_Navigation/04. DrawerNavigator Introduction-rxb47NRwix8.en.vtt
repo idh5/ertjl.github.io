@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.964
+Now that we've talked about tab navigator as well as our stack navigator,
+
+00:00:04.964 --> 00:00:08.550
+the last navigator we need to discuss is the DrawerNavigator,
+
+00:00:08.550 --> 00:00:11.850
+which is going to allow us to route using a drawer which
+
+00:00:11.849 --> 00:00:15.564
+pops out either on the left or the right hand side of the screen.
+
+00:00:15.564 --> 00:00:17.714
+So you'll notice here that we have two components.
+
+00:00:17.714 --> 00:00:19.920
+And now in each one of these,
+
+00:00:19.920 --> 00:00:22.260
+instead of just routing from
+
+00:00:22.260 --> 00:00:25.470
+the home component to the dashboard component as we've seen before,
+
+00:00:25.469 --> 00:00:29.024
+what we're going to eventually do is we will have this button and when we click on it,
+
+00:00:29.024 --> 00:00:30.314
+no matter which route where in,
+
+00:00:30.315 --> 00:00:34.245
+it's going to open the drawer so that we can navigate to the other route.
+
+00:00:34.244 --> 00:00:36.179
+So the very first thing we want to do is,
+
+00:00:36.179 --> 00:00:41.039
+let's come in here and we will create our drawer component,
+
+00:00:41.039 --> 00:00:45.344
+which is going to be the result of calling DrawerNavigator.
+
+00:00:45.344 --> 00:00:46.484
+So the very first route,
+
+00:00:46.484 --> 00:00:48.049
+as we've seen before,
+
+00:00:48.049 --> 00:00:49.334
+is going to be our home route.
+
+00:00:49.335 --> 00:00:50.939
+The screen is just going to be home.
+
+00:00:50.939 --> 00:00:54.149
+And then we will have the dashboard route and
+
+00:00:54.149 --> 00:00:57.750
+the screen is going to be the dashboard component.
+
+00:00:57.750 --> 00:00:59.295
+So now what we need to do,
+
+00:00:59.295 --> 00:01:03.445
+because React Navigation is rendering both of these views,
+
+00:01:03.445 --> 00:01:07.099
+it's going to be past navigation as we've seen in the past.
+
+00:01:07.099 --> 00:01:08.879
+So what we can do here,
+
+00:01:08.879 --> 00:01:14.054
+is when this touchable opacity component is pressed,
+
+00:01:14.055 --> 00:01:17.380
+what we can do is we can call navigation.navigate.
+
+00:01:17.379 --> 00:01:23.015
+And now what we want to do is pass in the string drawer open.
+
+00:01:23.015 --> 00:01:24.659
+And what this is going to do,
+
+00:01:24.659 --> 00:01:26.625
+is it's going to open the drawer,
+
+00:01:26.625 --> 00:01:28.290
+which we will see here in a minute.
+
+00:01:28.290 --> 00:01:36.390
+So now we have it both on our home component as well as our dashboard component.
+
+00:01:36.390 --> 00:01:43.825
+And now the last thing we need to do is just render our drawer that we created.
+
+00:01:43.825 --> 00:01:45.935
+So now, you'll see here we have our home view.
+
+00:01:45.935 --> 00:01:48.820
+And we can open the drawer and we get the drawer pop out.
+
+00:01:48.819 --> 00:01:53.689
+And now, we can navigate between our two routes using the drawer.
+
+00:01:53.689 --> 00:01:58.859
+So let's go ahead and add a few alterations just really quickly.
+
+00:01:58.859 --> 00:02:03.685
+What I want to do is I want an icon to be shown in the drawer itself.
+
+00:02:03.685 --> 00:02:07.905
+So we as we've done before can add some navigation options.
+
+00:02:07.905 --> 00:02:12.740
+We'll say, drawer label is going to be home and then
+
+00:02:12.740 --> 00:02:17.860
+we will say drawer icon is going to be a font awesome icon.
+
+00:02:17.860 --> 00:02:20.355
+The name is going to be home.
+
+00:02:20.354 --> 00:02:24.694
+We'll say a size of 20 and we'll give it
+
+00:02:24.694 --> 00:02:29.560
+a color of black and then now I'm just going to copy and paste these down here.
+
+00:02:29.560 --> 00:02:34.604
+Now instead of home we will call this dashboard and we will change this to dashboard.
+
+00:02:34.604 --> 00:02:37.340
+So now what should happen when we open the drawer is we
+
+00:02:37.340 --> 00:02:41.175
+should see these icons right here.
+
+00:02:41.175 --> 00:02:45.210
+And we can still navigate between the two components.
+

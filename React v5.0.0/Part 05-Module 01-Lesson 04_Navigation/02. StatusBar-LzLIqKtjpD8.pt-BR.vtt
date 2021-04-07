@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.800 --> 00:00:04.267
+Se você se lembrar
+desta seção aqui,
+
+00:00:04.300 --> 00:00:09.200
+nós jogamos uma view
+para dar ao nosso calendário,
+
+00:00:09.233 --> 00:00:12.567
+ao nosso aplicativo, um conteúdo
+para a barra de status.
+
+00:00:12.600 --> 00:00:14.633
+Demos uma altura qualquer
+de 20,
+
+00:00:14.667 --> 00:00:18.167
+mas o que queremos agora é criar
+uma barra de status de verdade.
+
+00:00:18.200 --> 00:00:22.167
+Vamos importar StatusBar,
+
+00:00:22.200 --> 00:00:25.600
+que é um componente
+do pacote do React Native.
+
+00:00:25.633 --> 00:00:28.867
+Mas, em vez de usar
+a barra de status aqui,
+
+00:00:28.900 --> 00:00:33.767
+faremos nossa própria
+barra de status.
+
+00:00:33.800 --> 00:00:39.000
+Então escrevemos aqui...
+"UdaciStatusBar"
+
+00:00:39.033 --> 00:00:44.500
+e colocamos o backgroundColor,
+e basicamente todo o resto.
+
+00:00:44.533 --> 00:00:46.300
+Em seguida,
+
+00:00:46.333 --> 00:00:51.500
+resumimos o componente
+da barra de status dentro da view
+
+00:00:51.533 --> 00:00:54.000
+em que podemos
+controlar melhor os estilos.
+
+00:00:54.033 --> 00:00:58.767
+Então criamos um objeto
+para o estilo.
+
+00:00:58.800 --> 00:01:00.633
+Temos a cor de fundo,
+
+00:01:00.667 --> 00:01:05.200
+e a altura será a que quisermos
+para a barra de status,
+
+00:01:05.233 --> 00:01:08.367
+sendo que será diferente
+para o iOS e o Android.
+
+00:01:08.400 --> 00:01:13.533
+O legal do Expo é que ele vem
+com esse negócio aqui.
+
+00:01:13.567 --> 00:01:17.167
+Quer dizer,
+um objeto chamado Constants,
+
+00:01:17.200 --> 00:01:19.600
+que vem no pacote do Expo
+
+00:01:19.633 --> 00:01:24.500
+e que tem uma boa altura
+para uma barra de status.
+
+00:01:24.533 --> 00:01:26.700
+Então não precisamos
+nos preocupar com isso.
+
+00:01:26.733 --> 00:01:30.000
+Funciona porque o Expo sabe
+que precisamos disso,
+
+00:01:30.033 --> 00:01:33.967
+para não nos preocuparmos
+com um número específico.
+
+00:01:34.000 --> 00:01:36.933
+Ele vem
+em Constants.statusBarHeight.
+
+00:01:36.967 --> 00:01:40.900
+Agora podemos renderizar
+a barra de status,
+
+00:01:40.933 --> 00:01:44.133
+a qual queremos
+que seja translúcida,
+
+00:01:44.167 --> 00:01:45.600
+se eu conseguir
+escrever isso,
+
+00:01:45.633 --> 00:01:50.300
+e a cor de fundo também será
+backgroundColor.
+
+00:01:50.333 --> 00:01:53.300
+Então passamos
+qualquer propriedade que tivermos.
+
+00:01:53.333 --> 00:01:57.933
+Basicamente, criamos um envoltório
+para a barra de status.
+
+00:01:57.967 --> 00:02:02.467
+E agora,
+em vez de renderizar esta view,
+
+00:02:02.500 --> 00:02:05.767
+vamos renderizar
+UdaciStatusBar.
+
+00:02:05.800 --> 00:02:07.933
+Passaremos algumas coisas.
+
+00:02:07.967 --> 00:02:10.667
+A cor de fundo será roxa,
+
+00:02:10.700 --> 00:02:15.533
+e o barStyle
+terá light-content.
+
+00:02:15.567 --> 00:02:20.000
+Isso fará com que todos os itens
+da barra de status sejam brancos.
+
+00:02:20.033 --> 00:02:23.233
+E, agora,
+quando os aplicativos recarregarem,
+
+00:02:23.267 --> 00:02:27.733
+veja que ela tem a altura perfeita
+para o que precisamos.
+
+00:02:27.767 --> 00:02:33.167
+O fundo é roxo, e os itens
+da barra de status são brancos.
+
+00:02:33.200 --> 00:02:35.600
+Assim fica melhor
+do que estava antes.
+

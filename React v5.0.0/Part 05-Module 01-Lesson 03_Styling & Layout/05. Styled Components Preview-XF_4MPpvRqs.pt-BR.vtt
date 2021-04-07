@@ -1,0 +1,359 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:04.567
+Neste vídeo, quero falar
+de uma alternativa ao CSS e ao JS
+
+00:00:04.600 --> 00:00:09.267
+oferecida pelo React Native
+usando a API "StyleSheet.create".
+
+00:00:09.300 --> 00:00:13.533
+É uma biblioteca chamada
+"styled-components".
+
+00:00:13.566 --> 00:00:17.533
+Não a usaremos ao longo do curso,
+mas acho interessante conhecê-la,
+
+00:00:17.567 --> 00:00:22.033
+pois ela está mudando o panorama
+dos estilos e componentes.
+
+00:00:22.067 --> 00:00:25.533
+O que você precisa fazer,
+se quiser testar,
+
+00:00:25.567 --> 00:00:29.667
+é entrar "NPM"
+ou "yarn add styled-components".
+
+00:00:29.700 --> 00:00:33.367
+Então, você poderá
+fazer algo assim:
+
+00:00:33.400 --> 00:00:37.700
+importar "styled"
+de "styled-components",
+
+00:00:37.733 --> 00:00:41.667
+e, no React Native,
+acrescente "/native".
+
+00:00:41.700 --> 00:00:44.933
+Agora,
+temos este objeto estilizado.
+
+00:00:44.967 --> 00:00:47.767
+O cerne da questão
+da estilização de componentes
+
+00:00:47.800 --> 00:00:53.200
+é priorizar os estilos
+dentro dos componentes.
+
+00:00:53.233 --> 00:00:55.067
+Já tocamos no assunto,
+
+00:00:55.100 --> 00:00:57.400
+mas, assim como seu componente
+tem estado,
+
+00:00:57.433 --> 00:01:01.767
+deveria ter estilos
+dispostos dentro de si.
+
+00:01:01.800 --> 00:01:05.167
+Perceba que aqui
+temos "View"
+
+00:01:05.200 --> 00:01:08.267
+com este "styles.container"
+centralizando tudo
+
+00:01:08.300 --> 00:01:10.367
+e depois temos "Text".
+
+00:01:10.400 --> 00:01:14.867
+E se, em vez
+de adicionarmos estilo assim,
+
+00:01:14.900 --> 00:01:18.933
+criássemos um componente
+em que estes estilos aparecessem?
+
+00:01:18.966 --> 00:01:21.467
+Esta é a ideia
+dos "styled-components".
+
+00:01:21.500 --> 00:01:25.733
+Aqui em cima, quero criar algo
+chamado "CenterView".
+
+00:01:25.766 --> 00:01:30.200
+Aí, nós chamaremos
+"styled.View".
+
+00:01:30.233 --> 00:01:35.233
+Depois, veremos que há
+estes pequenos símbolos aqui,
+
+00:01:35.266 --> 00:01:37.067
+estes acentos graves.
+
+00:01:37.100 --> 00:01:41.467
+Isto é um recurso do ES6
+que nos permite,
+
+00:01:41.500 --> 00:01:46.867
+em vez de escrever nossos estilos
+em JavaScript com estes objetos,
+
+00:01:46.900 --> 00:01:50.300
+podemos escrever "quase"
+um CSS de verdade aqui.
+
+00:01:50.333 --> 00:01:53.505
+O que vou fazer é entrar
+
+00:01:53.538 --> 00:01:56.700
+"flex: 1", "align-items: center".
+
+00:01:56.733 --> 00:02:00.600
+Perceba que eu não deveria
+estar usando vírgulas
+
+00:02:00.633 --> 00:02:02.933
+e nem usar CamelCase,
+
+00:02:02.967 --> 00:02:05.633
+pois estamos escrevendo
+como um CSS normal.
+
+00:02:05.667 --> 00:02:09.267
+Alinhamento centralizado
+
+00:02:09.300 --> 00:02:12.667
+e background "#333".
+
+00:02:12.700 --> 00:02:15.900
+Agora, "CenterView"
+será apenas...
+
+00:02:15.933 --> 00:02:18.000
+um componente "View"
+do React Native.
+
+00:02:18.033 --> 00:02:21.133
+Mas estes estilos
+serão embutidos.
+
+00:02:21.167 --> 00:02:25.167
+Agora, em vez de:
+"style={styles.container}",
+
+00:02:25.200 --> 00:02:27.900
+podemos renderizar
+"CenterView",
+
+00:02:27.933 --> 00:02:31.367
+o que permite que limpemos
+os estilos aqui embaixo.
+
+00:02:31.400 --> 00:02:34.200
+Ao recarregar o aplicativo,
+o que veremos...
+
+00:02:34.233 --> 00:02:35.833
+é tudo igualzinho,
+
+00:02:35.867 --> 00:02:40.300
+pois este componente simplesmente
+tem os estilos embutidos.
+
+00:02:40.333 --> 00:02:41.833
+Vamos adiante.
+
+00:02:41.867 --> 00:02:47.800
+Podemos vir aqui e dizer:
+"WelcomeText = styled.Text"
+
+00:02:47.833 --> 00:02:49.533
+e adicionar acentos graves.
+
+00:02:49.567 --> 00:02:53.200
+Agora, vamos levar isto
+mais para cima.
+
+00:02:53.233 --> 00:02:56.700
+A cor será branca,
+
+00:02:56.733 --> 00:03:00.300
+e a fonte
+terá 20 de tamanho.
+
+00:03:00.333 --> 00:03:03.767
+Agora, em vez deste texto,
+
+00:03:03.800 --> 00:03:06.833
+podemos vir aqui
+dizer "CenterView".
+
+00:03:07.400 --> 00:03:11.967
+Abriremos "WelcomeText"
+e, aqui embaixo, fecharemos.
+
+00:03:12.000 --> 00:03:14.967
+Agora, podemos dizer "Hello".
+
+00:03:15.000 --> 00:03:18.700
+Tudo na mesma. Agora,
+só para provar, "Different".
+
+00:03:21.000 --> 00:03:22.100
+Prontinho.
+
+00:03:22.133 --> 00:03:26.833
+Perceba que a estilização
+é embutida no componente.
+
+00:03:26.866 --> 00:03:28.333
+Vamos ainda mais longe.
+
+00:03:28.367 --> 00:03:32.467
+E se quiséssemos
+usar um botão
+
+00:03:32.500 --> 00:03:35.333
+e adicionar os estilos a ele?
+
+00:03:35.366 --> 00:03:38.600
+O que podemos fazer
+é dizer "WelcomeBtn"
+
+00:03:38.633 --> 00:03:42.067
+e usar
+"styled.TouchableOpacity".
+
+00:03:42.100 --> 00:03:45.367
+Este botão terá
+algumas propriedades:
+
+00:03:45.400 --> 00:03:48.267
+largura 100,
+
+00:03:48.300 --> 00:03:52.400
+altura 50,
+fundo vermelho...
+
+00:03:52.433 --> 00:03:55.133
+Perceba que é como se estivéssemos
+digitando CSS.
+
+00:03:55.167 --> 00:03:59.400
+Se você odiou CSS e JS
+esse tempo todo,
+
+00:03:59.433 --> 00:04:01.300
+fique alegre
+com "styled-components".
+
+00:04:01.333 --> 00:04:04.000
+Pode até usar
+até o final do curso.
+
+00:04:04.033 --> 00:04:08.500
+Eu não vou, mas, se você quiser,
+à vontade. Você vai aprender muito.
+
+00:04:08.533 --> 00:04:11.567
+E ainda temos
+"alignItems: center".
+
+00:04:11.600 --> 00:04:16.733
+Agora, quero renderizar
+nosso "WelcomeBtn".
+
+00:04:16.766 --> 00:04:19.000
+A pergunta
+que não quer calar é:
+
+00:04:19.033 --> 00:04:21.667
+"onde eu adiciono
+a propriedade 'onPress'?"
+
+00:04:21.700 --> 00:04:25.067
+Podemos fazer isso
+no próprio componente.
+
+00:04:25.100 --> 00:04:27.533
+Qualquer propriedade passada
+a um styled-component
+
+00:04:27.566 --> 00:04:30.667
+será passada diretamente
+para o componente real.
+
+00:04:30.700 --> 00:04:34.933
+Aqui, diremos: "Hello!"
+
+00:04:34.966 --> 00:04:38.900
+Aqui, "PUSH ME".
+
+00:04:38.933 --> 00:04:41.167
+Se tudo estiver
+funcionando...
+
+00:04:43.233 --> 00:04:44.300
+É isso aí.
+
+00:04:44.333 --> 00:04:48.200
+Ao apertarmos, aparece "Hello".
+Uma última mudança:
+
+00:04:48.233 --> 00:04:50.633
+em vez
+de um componente "Text",
+
+00:04:50.666 --> 00:04:55.033
+vamos reusar
+nosso componente "WelcomeText",
+
+00:04:55.066 --> 00:04:56.800
+que fizemos mais cedo,
+
+00:04:56.833 --> 00:04:59.967
+para pegar os estilos.
+Nós diremos...
+
+00:05:00.000 --> 00:05:01.333
+"PUSH ME"
+
+00:05:02.667 --> 00:05:04.667
+Prontinho.
+
+00:05:04.700 --> 00:05:07.300
+O que fizemos
+foi levar adiante
+
+00:05:07.333 --> 00:05:10.733
+a ideia de adicionar CSS
+aos componentes.
+
+00:05:10.766 --> 00:05:14.933
+Agora, os estilos estão
+embutidos nos componentes.
+
+00:05:14.966 --> 00:05:18.300
+Se você não conhecer
+"styled-components", "glamorous"...
+
+00:05:18.333 --> 00:05:19.767
+São todos similares.
+
+00:05:19.800 --> 00:05:23.067
+Dê uma investigada,
+eles estão em alta.
+

@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.830
+Now, what we can do is we can finally start styling our application.
+
+00:00:03.830 --> 00:00:06.230
+So what we're going to do is we're going to go back and
+
+00:00:06.230 --> 00:00:09.950
+style all of the components that we initially didn't style.
+
+00:00:09.949 --> 00:00:11.619
+There are a few different ways to approach this.
+
+00:00:11.619 --> 00:00:15.364
+If you are comfortable with flexbox or if you just want a challenge,
+
+00:00:15.365 --> 00:00:17.109
+go ahead and try to do this on your own.
+
+00:00:17.109 --> 00:00:19.234
+And then once you do that, you can come back and watch me do it,
+
+00:00:19.234 --> 00:00:21.439
+or you can just skip this entirely.
+
+00:00:21.440 --> 00:00:22.807
+If you're not super comfortable,
+
+00:00:22.806 --> 00:00:24.674
+then you can go ahead and watch me go through it.
+
+00:00:24.675 --> 00:00:26.210
+So the very first thing we're going to do is in App.js,
+
+00:00:26.210 --> 00:00:30.589
+the only style we're going to add here is we're
+
+00:00:30.589 --> 00:00:35.210
+going to give this parent view a flex of one.
+
+00:00:35.210 --> 00:00:37.700
+The reason we're doing that is we're saying we
+
+00:00:37.700 --> 00:00:40.995
+want this component to take up all the available space,
+
+00:00:40.994 --> 00:00:46.909
+so that way, any children components will be able to expand the full size of the phone.
+
+00:00:46.909 --> 00:00:49.519
+Without this, that wouldn't be possible.
+
+00:00:49.520 --> 00:00:52.670
+Next, let's go ahead and style all of
+
+00:00:52.670 --> 00:00:57.679
+the components inside of our getMetricMetaInfo function.
+
+00:00:57.679 --> 00:01:00.394
+So to do this, let's go ahead, and up here,
+
+00:01:00.395 --> 00:01:05.204
+let's import StyleSheet, and then we're also going to import some more colors.
+
+00:01:05.204 --> 00:01:08.390
+Say, red, orange, blue,
+
+00:01:08.390 --> 00:01:12.015
+light purple, as well as pink.
+
+00:01:12.015 --> 00:01:14.564
+And then now, what we can do is down here,
+
+00:01:14.564 --> 00:01:17.509
+let's go ahead and create some styles.
+
+00:01:17.510 --> 00:01:21.840
+We're going to use the StyleSheet.create API.
+
+00:01:21.840 --> 00:01:24.631
+And let's just go ahead and we'll have iconContainer.
+
+00:01:24.631 --> 00:01:30.659
+So this is going to be the container around the icon or this view right here.
+
+00:01:30.659 --> 00:01:32.390
+So what we want to do is,
+
+00:01:32.390 --> 00:01:34.299
+let's go ahead and give it a padding of five.
+
+00:01:34.299 --> 00:01:36.500
+We'll say borderRadius.
+
+00:01:36.500 --> 00:01:38.079
+Let's give that eight.
+
+00:01:38.079 --> 00:01:41.594
+Width and height are going to be set to 50.
+
+00:01:41.594 --> 00:01:44.870
+We want everything inside of it to be aligned on
+
+00:01:44.870 --> 00:01:52.895
+the main axes in the center as well as the cross axes.
+
+00:01:52.894 --> 00:01:56.959
+And then we'll just give it a marginRight of 20 pixels.
+
+00:01:56.959 --> 00:01:58.489
+So now, what we can do is,
+
+00:01:58.489 --> 00:02:03.709
+let's go ahead and select every view inside of this document,
+
+00:02:03.709 --> 00:02:07.655
+and we will give it this iconContainer styles,
+
+00:02:07.656 --> 00:02:09.694
+but we're also going to give it something else.
+
+00:02:09.694 --> 00:02:12.555
+So we can pass style in array.
+
+00:02:12.555 --> 00:02:18.890
+The first styles that are going to be added to this component is our iconContainer,
+
+00:02:18.889 --> 00:02:21.784
+which is coming from styles.iconContainer.
+
+00:02:21.784 --> 00:02:24.129
+And then what we want to do is we want to have
+
+00:02:24.129 --> 00:02:27.449
+each of these have their own background color.
+
+00:02:27.449 --> 00:02:30.264
+So let's come up here, and we'll say backgroundColor,
+
+00:02:30.264 --> 00:02:33.404
+and we will just give all of them red for now.
+
+00:02:33.405 --> 00:02:36.985
+So getIcon for running,
+
+00:02:36.985 --> 00:02:38.975
+let's go ahead and set that to red.
+
+00:02:38.974 --> 00:02:40.909
+And then for biking,
+
+00:02:40.909 --> 00:02:42.829
+let's set this to orange.
+
+00:02:42.830 --> 00:02:45.200
+For swimming, we'll say blue.
+
+00:02:45.199 --> 00:02:48.560
+For sleeping, we will say light purple.
+
+00:02:48.560 --> 00:02:51.224
+And then finally, we will say pink.
+
+00:02:51.224 --> 00:02:53.824
+So let's go ahead and take a look at what this looks like now.
+
+00:02:53.824 --> 00:02:55.274
+So it looks like we have a typo.
+
+00:02:55.275 --> 00:03:02.205
+alignItem should be alignItems up here inside of our styles. All right.
+
+00:03:02.205 --> 00:03:04.243
+So you'll notice here, this looks pretty good,
+
+00:03:04.242 --> 00:03:08.659
+but instead of having black as the actual icon color,
+
+00:03:08.659 --> 00:03:11.599
+what we want to do is we want this to be white.
+
+00:03:11.599 --> 00:03:17.164
+And we just did this initially so that we could see the icon on the black background.
+
+00:03:17.164 --> 00:03:19.939
+So let's go ahead and set that to white, and again,
+
+00:03:19.939 --> 00:03:24.026
+the reason we can type white as a variable is because we've imported it right here.
+
+00:03:24.026 --> 00:03:27.380
+And then now, notice that we have these icons,
+
+00:03:27.379 --> 00:03:30.000
+and the icons themselves are white.
+

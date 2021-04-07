@@ -1,0 +1,394 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tab Navigator</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Navigation</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Tab Navigator.html">02. Tab Navigator</a>
+    </li>
+    <li class="">
+      <a href="03. Stack Navigator.html">03. Stack Navigator</a>
+    </li>
+    <li class="">
+      <a href="04. Drawer Navigator.html">04. Drawer Navigator</a>
+    </li>
+    <li class="">
+      <a href="05. Lesson Summary.html">05. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Tab Navigator</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡react-navigation-v2💡">💡React Navigation v2💡</h2>
+  <p>The videos in this course cover React Navigation v1. Recently, an updated version of React Navigation was released. <a href="https://reactnavigation.org/blog" rel="noopener noreferrer" target="_blank">Here</a> are some of the main differences between these two versions. The documentation for version 1 is located <a href="https://v1.reactnavigation.org/" rel="noopener noreferrer" target="_blank">here</a>, and the documentation for version 2 is <a href="https://reactnavigation.org/" rel="noopener noreferrer" target="_blank">here</a>. The default version shipped with <code>npm</code> is v2, so if you want to use v1, you'd have to specify that in your <code>package.json</code> file.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>TabNavigatorIntroduction</p></h3>
+  <video controls>
+  <source src="02. TabNavigatorIntroduction-SfdRg-bMfLc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. TabNavigatorIntroduction-SfdRg-bMfLc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. TabNavigatorIntroduction-SfdRg-bMfLc.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. TabNavigatorIntroduction-SfdRg-bMfLc.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="tab-navigator-v1">Tab Navigator v1</h2>
+<p>By using <code>TabNavigator</code>, users can navigate through different screens within an application simply by pressing tabs that render different components. </p>
+<h2 id="tab-navigator-v2">Tab Navigator v2</h2>
+<p><code>TabNavigator</code> is deprecated in favor of <a href="https://reactnavigation.org/docs/en/tab-based-navigation.html" rel="noopener noreferrer" target="_blank"><code>createBottomTabNavigator</code></a>. <a href="https://reactnavigation.org/docs/en/material-top-tab-navigator.html" rel="noopener noreferrer" target="_blank"><code>createMaterialTopTabNavigator</code></a> and <a href="https://reactnavigation.org/docs/en/material-bottom-tab-navigator.html" rel="noopener noreferrer" target="_blank"><code>createMaterialBottomTabNavigator</code></a> are also available as options for Android. Please note that <code>createBottomTabNavigator</code> does not support the <code>animationEnabled</code> and <code>swipeEnabled</code> properties.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's see how we'd use Tab Navigator v2.</p>
+<p>Say we have two basic functional components that just render some text, <code>Hello</code> and <code>Goodbye</code>:</p>
+<pre><code class="js language-js">const Hello = () =&gt; (
+  &lt;View&gt;
+    &lt;Text&gt;Hello!&lt;/Text&gt;
+  &lt;/View&gt;
+);
+
+const Goodbye = () =&gt; (
+  &lt;View&gt;
+    &lt;Text&gt;Goodbye!&lt;/Text&gt;
+  &lt;/View&gt;
+);</code></pre>
+<p>If we want to add two tabs for users to select (one rendering <code>Hello</code>, the other rendering <code>Goodbye</code>), first we'll need to install <code>react-navigation</code> and then import <code>createBottomTabNavigator</code>:</p>
+<pre><code>yarn add react-navigation</code></pre>
+<p>or</p>
+<pre><code class="bash language-bash">npm install --save react-navigation</code></pre>
+<pre><code>import { createBottomTabNavigator } from 'react-navigation';</code></pre>
+<p>Once this is done, we can pass an object into <code>createBottomTabNavigator</code> like so:</p>
+<pre><code class="js language-js">const Tabs = createBottomTabNavigator({
+  Hello: {
+    screen: Hello
+  },
+  Goodbye: {
+    screen: Goodbye
+  },
+});</code></pre>
+<p>Inside the object, each key-and-value pair represents a single tab. The keys represent the <em>name</em> of the tab; this is what users will see and press. Note that a <code>screen</code> property is included as well; this is the component that is rendered when the tab is active.</p>
+<p>Here comes the interesting part: what <code>createBottomTabNavigator</code> returns is actually a <em>component</em>! Since we have stored this in a <code>Tabs</code> variable, we can just render this as we would with any component:</p>
+<pre><code class="js language-js">// App.js
+
+// ...
+
+export default class App extends React.Component {
+  render() {
+    return (
+      &lt;Tabs /&gt;
+    );
+  }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>TabNavigator</p></h3>
+  <video controls>
+  <source src="02. TabNavigator-4Ki4UbOy8II.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. TabNavigator-4Ki4UbOy8II.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. TabNavigator-4Ki4UbOy8II.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. TabNavigator-4Ki4UbOy8II.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/9ff26370e4e5593195fdcad4d85e74f540a39220" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about the Tab Navigator? Please select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505168885383" name="394642" id="a1505168885383">
+      <label for="a1505168885383"><p><code>createBottomTabNavigator</code> is provided by React Native.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168891129" name="394642" id="a1505168891129">
+      <label for="a1505168891129"><p>The return value of <code>createBottomTabNavigator</code> is just a component that can be rendered like any other.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168892479" name="394642" id="a1505168892479">
+      <label for="a1505168892479"><p>Tab Navigator renders tabs that look identical in both Android and iOS.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168893154" name="394642" id="a1505168893154">
+      <label for="a1505168893154"><p>Tab Navigator is fully customizable.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The return value of `createBottomTabNavigator` is just a component that can be rendered like any other.</li>
+      <li>Tab Navigator is fully customizable.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="statusbar">StatusBar</h2>
+<p>Recall that so far, our application has been using arbitrary <code>padding</code> to account for the status bar at the top of the device's screen. Let's go ahead and change that! React Native actually provides a simple <code>StatusBar</code> component to customize how the status bar appears in an application.</p>
+<p>Before we take a look at how to implement <code>StatusBar</code>, be sure to import it from <code>react-native</code>:</p>
+<pre><code class="js language-js">import { StatusBar } from 'react-native';</code></pre>
+<p>Let's jump in!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>StatusBar</p></h3>
+  <video controls>
+  <source src="02. StatusBar-LzLIqKtjpD8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. StatusBar-LzLIqKtjpD8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. StatusBar-LzLIqKtjpD8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. StatusBar-LzLIqKtjpD8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/b5a0e8840cbc48486056331cd92399b729700b56" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>We've just made it possible for users to navigate between different screens. How are things looking?</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--0">
+        <label for="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--0"><p>I have installed <code>react-navigation</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--1">
+        <label for="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--1"><p>I have passed an object into <code>createBottomTabNavigator</code> and saved the return value to <code>Tabs</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--2">
+        <label for="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--2"><p>I am rendering <code>Tabs</code> in <code>app.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--3">
+        <label for="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--3"><p>I have created the <code>UdaciStatusBar</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--4">
+        <label for="0bfa8bf7-afc9-4089-ae8f-781208b9eb66--4"><p>I am rendering <code>UdaciStatusBar</code> in <code>app.js</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Navigator v1 offers a <code>TabNavigator</code> (and React Navigator v2 offers us <code>createBottomTabNavigator</code>) API that allows for navigation between different screens via individual tabs. Each tab is dedicated to rendering a specific component.</p>
+<p>This section also detailed React Native's <code>StatusBar</code> component. <code>StatusBar</code> is relatively straightforward to use and is fully customizable -- we typically just set properties to change it!</p>
+<p>In the next section, we'll take a look at React Navigator's Stack Navigator, which allows users to add and remove screens from a stack.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://facebook.github.io/react-native/docs/statusbar.html#props" rel="noopener noreferrer" target="_blank">StatusBar props</a> from the React Native docs</li>
+<li><a href="https://v1.reactnavigation.org/docs/tab-navigator.html" rel="noopener noreferrer" target="_blank">TabNavigator v1</a> from the React Navigator docs</li>
+<li><a href="https://reactnavigation.org/docs/en/bottom-tab-navigator.html" rel="noopener noreferrer" target="_blank">TabNavigator v2</a> from the React Navigator docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Stack Navigator.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Tab Navigator')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
