@@ -1,0 +1,45 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.278 --> 00:00:02.869
+Quanto mais nos aprofundamos,
+
+00:00:02.902 --> 00:00:06.364
+a API que precisamos aprender
+do React ficará menor.
+
+00:00:06.397 --> 00:00:10.878
+O React não gosta de recriar
+funcionalidades do JavaScript.
+
+00:00:10.911 --> 00:00:14.285
+Por exemplo, se quisermos criar
+um monte de itens de lista
+
+00:00:14.318 --> 00:00:19.597
+a serem exibidas pela View,
+no React, usamos o método map.
+
+00:00:19.630 --> 00:00:22.117
+Veremos mais exemplos disso
+durante o curso,
+
+00:00:22.150 --> 00:00:25.590
+mas, se você já estiver
+familiarizado com o JavaScript,
+
+00:00:25.623 --> 00:00:28.221
+você se familiarizará
+com o React.
+
+00:00:28.254 --> 00:00:29.821
+E, como bônus,
+
+00:00:29.854 --> 00:00:32.229
+se esse não for o caso,
+
+00:00:32.262 --> 00:00:34.867
+o React fará de você
+um desenvolvedor de JavaScript.
+

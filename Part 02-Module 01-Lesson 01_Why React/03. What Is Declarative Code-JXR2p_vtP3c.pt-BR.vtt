@@ -1,0 +1,90 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.349 --> 00:00:04.271
+Um dos conceitos-chave do React
+é o do código declarativo.
+
+00:00:04.304 --> 00:00:07.820
+Você já deve ter ouvido falar
+de código imperativo e declarativo.
+
+00:00:07.853 --> 00:00:12.665
+Espero conseguir explicar usando
+algo que você já deve ter visto.
+
+00:00:12.698 --> 00:00:17.010
+Imagine que eu esteja no carro
+e queira uma temperatura agradável,
+
+00:00:17.043 --> 00:00:19.681
+talvez em torno dos 20°C.
+
+00:00:19.714 --> 00:00:22.381
+Meu carro tem dois botões
+para atingir esse estado,
+
+00:00:22.414 --> 00:00:26.483
+um que controla a temperatura
+e outro que controla o fluxo de ar.
+
+00:00:26.516 --> 00:00:30.658
+Quando fica quente ou frio demais,
+eu realizo um trabalho imperativo,
+
+00:00:30.691 --> 00:00:33.784
+pois gerencio os botões
+o tempo todo.
+
+00:00:33.817 --> 00:00:37.442
+Eu acumulo, com o tempo,
+o estado dos 20°C,
+
+00:00:37.475 --> 00:00:40.849
+mas não falo sobre o estado.
+
+00:00:40.882 --> 00:00:43.310
+Agora imagine
+que eu compre outro carro,
+
+00:00:43.343 --> 00:00:45.895
+que não tem os botões
+de controle de temperatura,
+
+00:00:45.928 --> 00:00:48.826
+em vez disso,
+eu possa declarar a temperatura.
+
+00:00:48.859 --> 00:00:53.523
+Em vez de mexer nos botões durante
+o trajeto para alcançar os 20°C,
+
+00:00:53.556 --> 00:00:55.874
+eu informo ao carro
+o estado desejado,
+
+00:00:55.907 --> 00:00:58.019
+configuro a temperatura
+para 20°C,
+
+00:00:58.052 --> 00:01:00.971
+e ele lidará
+com o trabalho imperativo.
+
+00:01:01.004 --> 00:01:03.362
+O React permite fazer o mesmo
+com o código,
+
+00:01:03.395 --> 00:01:05.330
+pois declaramos o estado
+e a marcação,
+
+00:01:05.363 --> 00:01:07.185
+e ele realiza
+o trabalho imperativo
+
+00:01:07.218 --> 00:01:09.637
+de manter o DOM
+sincronizado com o aplicativo.
+

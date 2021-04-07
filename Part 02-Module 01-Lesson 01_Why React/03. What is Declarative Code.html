@@ -1,0 +1,297 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What is Declarative Code</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Why React</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is Composition.html">02. What is Composition</a>
+    </li>
+    <li class="">
+      <a href="03. What is Declarative Code.html">03. What is Declarative Code</a>
+    </li>
+    <li class="">
+      <a href="04. Unidirectional Data Flow.html">04. Unidirectional Data Flow</a>
+    </li>
+    <li class="">
+      <a href="05. React Is “just JavaScript”.html">05. React Is “just JavaScript”</a>
+    </li>
+    <li class="">
+      <a href="06. Outro.html">06. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. What is Declarative Code</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>What Is Declarative Code</p></h3>
+  <video controls>
+  <source src="03. What Is Declarative Code-JXR2p_vtP3c.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. What Is Declarative Code-JXR2p_vtP3c.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. What Is Declarative Code-JXR2p_vtP3c.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="imperative-code">Imperative Code</h2>
+<p>A lot of JavaScript is <strong>imperative code</strong>. If you don't know what "imperative" means here, then you might be scratching your head a bit. <a href="http://www.dictionary.com/browse/imperative" rel="noopener noreferrer" target="_blank">According to the dictionary</a>, "imperative" means:</p>
+<blockquote>
+  <p>expressing a command; commanding</p>
+</blockquote>
+<p>When JavaScript code is written <em>imperatively</em>, we tell JavaScript exactly <strong>what</strong> to do and <strong>how</strong> to do it. Think of it as if we're giving JavaScript <em>commands</em> on exactly what steps it should take. For example, I give you the humble <code>for</code> loop:</p>
+<pre><code class="js language-js">const people = ['Amanda', 'Farrin', 'Geoff', 'Karen', 'Richard', 'Tyler']
+const excitedPeople = []
+
+for (let i = 0; i &lt; people.length; i++) {
+ excitedPeople[i] = people[i] + '!'
+}</code></pre>
+<p>If you've worked with JavaScript any length of time, then this should be pretty straightforward. We're looping through each item in the <code>people</code> array, adding an exclamation mark to their name, and storing the new string in the <code>excitedPeople</code> array. Pretty simple, right? </p>
+<p>This is <em>imperative</em> code, though. We're commanding JavaScript what to do at every single step. We have to give it commands to:</p>
+<ul>
+<li>set an initial value for the iterator - (<code>let i = 0</code>)</li>
+<li>tell the <code>for</code> loop when it needs to stop - (<code>i &lt; people.length</code>)</li>
+<li>get the person at the current position and add an exclamation mark - (<code>people[i] + '!'</code>)</li>
+<li>store the data in the <code>i</code><sup style="position:relative; top:-0.5em; font-size:0.8em">th</sup> position in the other array - (<code>excitedPeople[i]</code>)</li>
+<li>increment the <code>i</code> variable by one - (<code>i++</code>)</li>
+</ul>
+<p>Remember the example of keeping the air temperature at 71º? In my old car, I would turn the knob to get the cold air flowing. But if it got too cold, then I'd turn the knob up higher. Eventually, it would get too warm, and I'd have to turn the knob down a bit, again. I'd have to manage the temperature myself with every little change. Doesn't this sound like an imperative situation to you? I have to manually do multiple steps. It's not ideal, so let's improve things!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="declarative-code">Declarative Code</h2>
+<p>In contrast to imperative code, we've got <strong>declarative code</strong>. With declarative code, we don't code up all of the steps to get us to the end result. Instead, we <em>declare</em> what we want done, and JavaScript will take care of doing it. This explanation is a bit abstract, so let's look at an example. Let's take the imperative <code>for</code> loop code we were just looking at and refactor it to be more declarative.</p>
+<p>With the imperative code we were performing all of the steps to get to the end result. What <em>is</em> the end result that we actually want, though? Well, our starting point was just an array of names:</p>
+<pre><code class="js language-js">const people = ['Amanda', 'Farrin', 'Geoff', 'Karen', 'Richard', 'Tyler']</code></pre>
+<p>The end goal that we want is an array of the same names but where each name ends with an exclamation mark:</p>
+<pre><code class="js language-js">["Amanda!", "Farrin!", "Geoff!", "Karen!", "Richard!", "Tyler!"]</code></pre>
+<p>To get us from the starting point to the end, we'll just use JavaScript's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?v=example" rel="noopener noreferrer" target="_blank"><code>.map()</code></a> function to declare what we want done.</p>
+<pre><code class="js language-js">const excitedPeople = people.map(name =&gt; name + '!')</code></pre>
+<p>That's it! Notice that with this code we haven't:</p>
+<ul>
+<li>created an iterator object</li>
+<li>told the code when it should stop running</li>
+<li>used the iterator to access a specific item in the <code>people</code> array</li>
+<li>stored each new string in the <code>excitedPeople</code> array</li>
+</ul>
+<p>…all of those steps are taken care of by JavaScript's <code>.map()</code> Array method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Declarative or Imperative</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Is the following code imperative or declarative?</p>
+<pre><code class="js language-js">const people = ['Amanda', 'Farrin', 'Geoff', 'Karen', 'Richard', 'Tyler']
+const longNames = people.filter(name =&gt; name.length &gt; 6)</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522131384330" name="572977" id="a1522131384330">
+        <label for="a1522131384330"><p>Imperative</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522131399101" name="572977" id="a1522131399101">
+        <label for="a1522131399101"><p>Declarative</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Declarative
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="map-and-filter"><code>.map()</code> and <code>.filter()</code></h2>
+</blockquote>
+<blockquote>
+  <p>A bit rusty on JavaScript's <code>.map()</code> and <code>.filter()</code> Array methods? Or perhaps they're brand new to you. In either case, we'll be diving into them in the React is "just JavaScript" section. Hold tight!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="react-is-declarative">React is Declarative</h2>
+<p>We'll get to writing React code very soon, but let's take another glimpse at it to show how it's declarative. </p>
+<pre><code class="js language-js">&lt;button onClick={activateTeleporter}&gt;Activate Teleporter&lt;/button&gt;</code></pre>
+<p>It might seem odd, but this is valid React code and should be pretty easy to understand. Notice that there's just an <code>onClick</code> attribute on the button…we aren't using <code>.addEventListener()</code> to set up event handling with all of the steps involved to set it up. Instead, we're just declaring that we want the <code>activateTeleporter</code> function to run when the button is clicked.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="declarative-code-recap">Declarative Code Recap</h2>
+<p><em>Imperative</em> code instructs JavaScript on <em>how</em> it should perform each step. With <em>declarative</em> code, we tell JavaScript <em>what</em> we want to be done, and let JavaScript take care of performing the steps.</p>
+<p>React is declarative because we write the code that we <em>want</em>, and React is in charge of taking our declared code and performing all of the JavaScript/DOM steps to get us to our desired result.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li>Tyler's <a href="https://tylermcginnis.com/imperative-vs-declarative-programming/" rel="noopener noreferrer" target="_blank">Imperative vs Declarative Programming</a> blog post</li>
+<li><a href="https://stackoverflow.com/questions/33655534/difference-between-declarative-and-imperative-in-react-js" rel="noopener noreferrer" target="_blank">Difference between declarative and imperative in React.js?</a> from StackOverflow</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Unidirectional Data Flow.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. What is Declarative Code')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

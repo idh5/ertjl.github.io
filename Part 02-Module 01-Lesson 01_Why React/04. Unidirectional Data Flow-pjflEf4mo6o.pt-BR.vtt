@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.193 --> 00:00:01.640
+Antes do React,
+
+00:00:01.673 --> 00:00:05.503
+uma técnica popular para gerenciar
+a mudança de estado de um aplicativo
+
+00:00:05.536 --> 00:00:07.232
+era pela ligação de dados.
+
+00:00:07.265 --> 00:00:09.648
+Assim, quando um dado
+era alterado,
+
+00:00:09.681 --> 00:00:13.289
+isso refletiria automaticamente
+em outros lugares no aplicativo.
+
+00:00:13.322 --> 00:00:15.746
+Qualquer parte do aplicativo
+que tivesse o dado
+
+00:00:15.779 --> 00:00:17.269
+também poderia ser alterada.
+
+00:00:17.302 --> 00:00:19.227
+Mas, conforme
+o aplicativo crescia,
+
+00:00:19.260 --> 00:00:22.597
+isso dificultava determinar
+como uma mudança
+
+00:00:22.630 --> 00:00:26.660
+afetava automaticamente
+o resto do aplicativo.
+
+00:00:26.693 --> 00:00:30.620
+O React usa um método explícito
+para passar dados entre componentes
+
+00:00:30.653 --> 00:00:33.767
+que facilita muito o rastreamento
+das alterações de estado
+
+00:00:33.800 --> 00:00:36.573
+e de como isso afeta
+outros lugares do aplicativo.
+
+00:00:36.606 --> 00:00:39.115
+Chamamos isso
+de "fluxo de dados unidirecional",
+
+00:00:39.148 --> 00:00:42.875
+porque eles fluem em uma direção,
+dos elementos pais para os filhos.
+

@@ -1,0 +1,90 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.135 --> 00:00:02.957
+Você deve estar familiarizado
+com a ideia de funções
+
+00:00:02.990 --> 00:00:07.270
+e deve saber quando usá-las
+e quando não usá-las.
+
+00:00:07.303 --> 00:00:09.118
+Uma das melhores partes
+do React
+
+00:00:09.151 --> 00:00:12.147
+é que podemos utilizar
+as mesmas intuições das funções
+
+00:00:12.180 --> 00:00:14.596
+na hora de criarmos
+os componentes React.
+
+00:00:14.629 --> 00:00:18.852
+Porém, em vez de a função usar
+argumentos para retornar um valor,
+
+00:00:18.885 --> 00:00:23.303
+a função usará argumentos
+e retornará a IU.
+
+00:00:23.336 --> 00:00:25.065
+Vejamos alguns códigos.
+
+00:00:25.825 --> 00:00:30.040
+Aqui temos três funções
+e uma invocação de função.
+
+00:00:30.073 --> 00:00:31.840
+O código está organizado,
+
+00:00:31.873 --> 00:00:34.455
+pois cada função
+tem um propósito específico.
+
+00:00:34.488 --> 00:00:39.441
+Compomos as funções juntas,
+pois temos a função getProfileData
+
+00:00:39.474 --> 00:00:43.911
+alavancando outras duas,
+getProfilePic e getProfileLink.
+
+00:00:43.944 --> 00:00:46.536
+Quando invocamos
+getProfileData,
+
+00:00:46.569 --> 00:00:50.120
+recebemos um objeto,
+que representa nosso usuário.
+
+00:00:50.153 --> 00:00:53.449
+Em vez de as funções retornarem
+um objeto com dados,
+
+00:00:53.482 --> 00:00:56.519
+vamos modificá-las um pouco
+para retornar a IU.
+
+00:00:56.552 --> 00:00:58.888
+Não se assuste
+com essa sintaxe,
+
+00:00:58.921 --> 00:01:02.016
+nós falaremos mais sobre o código
+em outras aulas.
+
+00:01:02.049 --> 00:01:04.448
+Por ora, perceba que,
+com o React,
+
+00:01:04.481 --> 00:01:07.227
+em vez de compormos funções
+para obtermos valores,
+
+00:01:07.260 --> 00:01:09.636
+compomos funções
+para obtermos a IU.
+

@@ -1,0 +1,270 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What is Composition</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Why React</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is Composition.html">02. What is Composition</a>
+    </li>
+    <li class="">
+      <a href="03. What is Declarative Code.html">03. What is Declarative Code</a>
+    </li>
+    <li class="">
+      <a href="04. Unidirectional Data Flow.html">04. Unidirectional Data Flow</a>
+    </li>
+    <li class="">
+      <a href="05. React Is “just JavaScript”.html">05. React Is “just JavaScript”</a>
+    </li>
+    <li class="">
+      <a href="06. Outro.html">06. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. What is Composition</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>From <a href="https://en.wikipedia.org/wiki/Function_composition_(computer_science)">Wikipedia</a>, Composition is:</p>
+<blockquote>
+  <p>to combine simple functions to build more complicated ones</p>
+</blockquote>
+<p>Let's take a look at how we can build up complex functions just by combining simple ones together.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What Is Composition</p></h3>
+  <video controls>
+  <source src="02. What Is Composition-IDDIvXqMiD4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. What Is Composition-IDDIvXqMiD4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. What Is Composition-IDDIvXqMiD4.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="benefits-of-composition">Benefits of Composition</h2>
+<p>Because the concept of composition is such a large part of what makes React awesome and incredible to work with, let's dig into it a little bit. Remember that composition is just combining simple functions together to create complex functions. There are a couple of key ingredients here that we don't want to lose track of. These ingredients are:</p>
+<ul>
+<li>simple functions</li>
+<li>combined to create another function</li>
+</ul>
+<p>Composition is built from <em>simple</em> functions. Let's look at an example:</p>
+<pre><code class="js language-js">function getProfileLink (username) {
+ return 'https://github.com/' + username
+}</code></pre>
+<p>This function is <em>ridiculously</em> simple, isn't it? It's just one line! Similarly, the <code>getProfilePic</code> function is <em>also</em> just a single line:</p>
+<pre><code class="js language-js">function getProfilePic (username) {
+ return 'https://github.com/' + username + '.png?size=200'
+}</code></pre>
+<p>These are definitely <em>simple</em> functions, so to compose them, we'd just <em>combine</em> them together inside another function:</p>
+<pre><code class="js language-js">function getProfileData (username) {
+ return {
+ pic: getProfilePic(username),
+ link: getProfileLink(username)
+ }
+}</code></pre>
+<p>Now we <em>could</em> have written <code>getProfileData</code> <em>without</em> composition by providing the data directly:</p>
+<pre><code class="js language-js">function getProfileData (username) {
+ return {
+ pic: 'https://github.com/' + username + '.png?size=200',
+ link: 'https://github.com/' + username
+ }
+}</code></pre>
+<p>There's nothing technically wrong with this at all; this is entirely accurate JavaScript code. But this <em>isn't</em> composition. There are also a couple of potential issues with this version that <em>isn't</em> using composition. If the user's link to GitHub is needed somewhere else, then duplicate code would be needed. A good function should follow the "DOT" rule:</p>
+<blockquote>
+  <p>Do One Thing</p>
+</blockquote>
+<p>This function is doing a couple of different (however minor) things; it's creating two different URLs, storing them as properties on an object, and then returning that object. In the composed version, each function just does one thing:</p>
+<ul>
+<li><code>getProfileLink</code> – just builds up a string of the user's GitHub profile link</li>
+<li><code>getProfilePic</code> – just builds up a string the user's GitHub profile picture</li>
+<li><code>getProfileData</code> – returns a new object</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="react--composition">React &amp; Composition</h2>
+<p>React makes use of the power of composition, heavily! React builds up pieces of a UI using <strong>components</strong>. Let's take a look at some pseudo code for an example. Here are three different components:</p>
+<pre><code class="js language-js">&lt;Page /&gt;
+&lt;Article /&gt;
+&lt;Sidebar /&gt;</code></pre>
+<p>Now let's take these <em>simple</em> components, combine them together, and create a more complex component (aka, composition in action!):</p>
+<pre><code class="js language-js">&lt;Page&gt;
+ &lt;Article /&gt;
+ &lt;Sidebar /&gt;
+&lt;/Page&gt;</code></pre>
+<p>Now the <code>Page</code> component has the <code>Article</code> and <code>Sidebar</code> components <em>inside</em>. This is just like the earlier example where <code>getProfileData</code> had <code>getProfileLink</code> and <code>getProfilePic</code> inside it.</p>
+<p>We'll dig into components soon, but just know that composition plays a huge part in building React components.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="composition-recap">Composition Recap</h2>
+<p>Composition occurs when <em>simple</em> functions are <em>combined</em> together to create <em>more complex</em> functions. Think of each function as a single building block that <em>does one thing</em> (DOT). When you combine these simple functions together to form a more complex function, this is <strong>composition</strong>.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/compose-me-function-composition-javascript-kevin-greene" rel="noopener noreferrer" target="_blank">Compose me That: Function Composition in JavaScript</a></li>
+<li><a href="https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10" rel="noopener noreferrer" target="_blank">Functional JavaScript: Function Composition For Every Day Use</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. What is Declarative Code.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. What is Composition')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
