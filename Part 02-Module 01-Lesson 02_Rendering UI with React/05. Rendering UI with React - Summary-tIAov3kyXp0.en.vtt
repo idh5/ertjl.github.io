@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.044
+The principles we've discussed in this lesson are
+
+00:00:03.044 --> 00:00:06.074
+absolutely fundamental to getting the most out of a React.
+
+00:00:06.075 --> 00:00:11.100
+Just to recap, we learned about how JSX just uses JavaScript to let us
+
+00:00:11.099 --> 00:00:16.309
+describe the UI by creating elements instead of writing these rigid string templates.
+
+00:00:16.309 --> 00:00:20.469
+We also learned how to encapsulate groups of elements in React components,
+
+00:00:20.469 --> 00:00:25.570
+and how to build larger portions of the UI by composing those components together.
+
+00:00:25.570 --> 00:00:27.969
+We also installed create React App,
+
+00:00:27.969 --> 00:00:31.179
+and used it to get a quick start on using the latest technologies
+
+00:00:31.179 --> 00:00:34.990
+commonly used to create a modern React application.
+
+00:00:34.990 --> 00:00:39.520
+But React's code we use in encapsulation story gets really interesting in
+
+00:00:39.520 --> 00:00:43.780
+the next lesson where we could talk about how each of these little components can hold,
+
+00:00:43.780 --> 00:00:45.230
+and manage it's own state
+

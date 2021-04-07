@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.156 --> 00:00:04.138
+Eu disse que os componentes
+eram as peças do React,
+
+00:00:04.171 --> 00:00:06.434
+mas o que eu quis dizer
+com isso?
+
+00:00:06.467 --> 00:00:09.347
+Se observamos a API
+e a documentação do React,
+
+00:00:09.380 --> 00:00:13.051
+elas são relativamente pequenas,
+e a grande maioria das APIs React
+
+00:00:13.084 --> 00:00:15.002
+são constituídas
+de componentes.
+
+00:00:15.035 --> 00:00:18.626
+Eles são a unidade principal
+do encapsulamento do React.
+
+00:00:18.659 --> 00:00:23.290
+Os componentes são ótimos,
+pois dividem a IU em partes menores.
+
+00:00:23.323 --> 00:00:27.628
+Essas peças têm responsabilidades
+claras e interfaces bem definidas.
+
+00:00:27.661 --> 00:00:30.435
+Isso é valioso na construção
+de um aplicativo grande,
+
+00:00:30.468 --> 00:00:33.186
+pois trabalhamos em partes pequenas
+do aplicativo
+
+00:00:33.219 --> 00:00:35.778
+sem que isso
+interfira no resto.
+
+00:00:35.811 --> 00:00:37.858
+Outra coisa boa
+dos componentes
+
+00:00:37.891 --> 00:00:40.466
+é que eles nos motivam
+a construir aplicativos
+
+00:00:40.499 --> 00:00:43.435
+usando a composição
+e não a herança.
+
+00:00:43.468 --> 00:00:46.381
+Vamos dar uma olhada
+nessa ideia de "composição".
+

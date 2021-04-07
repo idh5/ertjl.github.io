@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.230 --> 00:00:04.941
+Usar o JSX no código JavaScript
+torna-o muito mais legível.
+
+00:00:04.974 --> 00:00:09.413
+Mas ele exige um passo
+que você talvez nunca tenha feito.
+
+00:00:09.446 --> 00:00:12.694
+Precisaremos que o compilador
+pegue o código JSX
+
+00:00:12.727 --> 00:00:17.237
+e o compile no código JavaScript,
+que pode ser executado no navegador.
+
+00:00:17.270 --> 00:00:19.963
+Existem ferramentas
+de construção de projetos web,
+
+00:00:19.996 --> 00:00:23.457
+mas a mais utilizada
+no ecossistema React é o Webpack.
+
+00:00:23.490 --> 00:00:26.508
+Poderíamos parar e gastar um tempo
+configurando o Webpack,
+
+00:00:26.541 --> 00:00:28.092
+mas, felizmente,
+
+00:00:28.125 --> 00:00:31.315
+os desenvolvedores do Facebook
+já fizeram isso.
+
+00:00:31.348 --> 00:00:34.660
+O create-react-app do Facebook
+configura tudo que precisamos
+
+00:00:34.693 --> 00:00:37.849
+para desenvolvermos aplicativos
+que usam React no JSX.
+
+00:00:37.883 --> 00:00:39.273
+Então vamos usá-lo.
+

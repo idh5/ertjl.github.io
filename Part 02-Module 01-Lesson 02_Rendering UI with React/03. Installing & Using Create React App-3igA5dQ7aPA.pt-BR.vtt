@@ -1,0 +1,104 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.317 --> 00:00:02.643
+Vamos instalar
+o create-react-app
+
+00:00:02.676 --> 00:00:05.652
+e usá-lo para criar
+nosso primeiro aplicativo React.
+
+00:00:05.685 --> 00:00:09.988
+Usamos
+"npm install -g create-react-app".
+
+00:00:10.021 --> 00:00:13.935
+O npm install
+obtém o pacote create-react-app
+
+00:00:13.968 --> 00:00:16.034
+do registro npm,
+
+00:00:16.067 --> 00:00:19.497
+e o -g garante que ele seja
+instalado globalmente.
+
+00:00:19.530 --> 00:00:24.971
+Agora temos o comando
+disponível no terminal.
+
+00:00:25.004 --> 00:00:27.251
+Diremos "create-react-app"
+
+00:00:27.284 --> 00:00:30.402
+e criaremos um aplicativo
+chamado "Contacts"
+
+00:00:30.435 --> 00:00:33.842
+a fim de exibir o JSX
+no qual trabalhamos até agora.
+
+00:00:33.875 --> 00:00:37.652
+O create-react-app
+instala o react, o react-dom,
+
+00:00:37.685 --> 00:00:39.307
+que já foi mostrado,
+
+00:00:39.340 --> 00:00:41.828
+e também
+o pacote react-scripts.
+
+00:00:43.188 --> 00:00:46.730
+O React-scripts encapsula
+muitas bibliotecas poderosas.
+
+00:00:46.763 --> 00:00:48.155
+Ele instala o Babel,
+
+00:00:48.188 --> 00:00:51.442
+para usarmos a sintaxe JavaScript
+mais recente e o JSX,
+
+00:00:51.475 --> 00:00:53.209
+também instala o Webpack,
+
+00:00:53.242 --> 00:00:54.890
+para gerarmos a construção,
+
+00:00:54.923 --> 00:00:57.139
+e também instala
+o Webpack dev server,
+
+00:00:57.172 --> 00:00:59.363
+que permite
+o recarregamento automático,
+
+00:00:59.396 --> 00:01:01.763
+que vimos até agora.
+
+00:01:01.796 --> 00:01:03.427
+Com todas as abstrações,
+
+00:01:03.460 --> 00:01:06.379
+podemos remover as camadas
+do React-script
+
+00:01:06.412 --> 00:01:09.003
+para vermos o que acontece
+nos bastidores,
+
+00:01:09.036 --> 00:01:13.004
+mas, por ora, o create-react-app
+é uma forma de começar rapidamente
+
+00:01:13.037 --> 00:01:17.264
+usando as tecnologias mais recentes
+sem precisar gastar muito tempo
+
+00:01:17.297 --> 00:01:19.841
+para aprender antes
+de iniciar com o React.
+

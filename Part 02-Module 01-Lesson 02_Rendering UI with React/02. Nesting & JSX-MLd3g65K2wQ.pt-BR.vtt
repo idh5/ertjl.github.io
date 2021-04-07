@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.278 --> 00:00:03.714
+Agora que vimos como criar elementos
+e como aninhá-los,
+
+00:00:03.747 --> 00:00:07.883
+seria muito chato usar
+as chamadas do createElement
+
+00:00:07.916 --> 00:00:10.523
+para criar grandes partes
+do aplicativo.
+
+00:00:10.556 --> 00:00:13.217
+Podia haver
+uma sintaxe diferente
+
+00:00:13.250 --> 00:00:17.342
+para descrever a relação aninhada
+dos elementos de forma natural.
+
+00:00:17.375 --> 00:00:19.369
+E o HTML?
+
+00:00:19.402 --> 00:00:21.369
+Não é para isso que ele serve?
+
+00:00:21.402 --> 00:00:24.129
+E se pegássemos
+os colchetes angulares
+
+00:00:24.163 --> 00:00:26.258
+e colocássemos no JavaScript?
+
+00:00:26.282 --> 00:00:29.441
+Ou seja, e se tornássemos
+as chamadas do createElement
+
+00:00:29.474 --> 00:00:33.480
+parecidas com um HTML,
+que já estamos familiarizados?
+
+00:00:33.513 --> 00:00:36.041
+É exatamente isso
+que o JSX faz.
+
+00:00:36.074 --> 00:00:39.297
+O JSX é uma extensão da sintaxe
+do JavaScript,
+
+00:00:39.330 --> 00:00:43.239
+que permite compor um código
+JavaScript parecido com o HTML,
+
+00:00:43.272 --> 00:00:45.697
+tornando-o mais conciso
+e fácil de ser seguido.
+
+00:00:45.730 --> 00:00:46.882
+Vejamos.
+

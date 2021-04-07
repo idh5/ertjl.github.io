@@ -1,0 +1,167 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.387 --> 00:00:02.802
+Dissemos que,
+em vez de usar templates
+
+00:00:02.835 --> 00:00:04.897
+para descrever
+a interface do usuário,
+
+00:00:04.930 --> 00:00:07.096
+o React usará elementos.
+
+00:00:07.129 --> 00:00:09.288
+O que isso quer dizer?
+
+00:00:09.321 --> 00:00:11.784
+Temos um arquivo
+bem básico aqui.
+
+00:00:11.817 --> 00:00:15.201
+Temos o React e o ReactDOM.
+
+00:00:15.234 --> 00:00:18.145
+Por ora, não se preocupe
+com a origem do arquivo
+
+00:00:18.178 --> 00:00:19.920
+nem tente fazer isso sozinho,
+
+00:00:19.953 --> 00:00:22.577
+pois só discutiremos alguns
+conceitos fundamentais
+
+00:00:22.610 --> 00:00:25.440
+antes de falarmos
+sobre como fazer isso acontecer.
+
+00:00:25.473 --> 00:00:28.297
+O importante é que o navegador,
+à esquerda,
+
+00:00:28.330 --> 00:00:32.064
+reflita tudo que eu digitar
+no editor, à direita.
+
+00:00:32.097 --> 00:00:34.816
+Vamos criar
+um novo elemento React
+
+00:00:34.849 --> 00:00:38.041
+usando React.createElement.
+
+00:00:38.074 --> 00:00:41.379
+Isto é uma chamada
+de API de nível alto,
+
+00:00:41.412 --> 00:00:43.293
+que cria esses elementos.
+
+00:00:43.326 --> 00:00:47.252
+Ele é parecido com o método
+createElement do documento,
+
+00:00:47.285 --> 00:00:48.885
+mas é um pouco diferente.
+
+00:00:48.918 --> 00:00:53.093
+O primeiro argumento é o nome tag
+do elemento que desejamos usar,
+
+00:00:53.126 --> 00:00:54.773
+então criamos um div.
+
+00:00:54.806 --> 00:00:57.780
+Falaremos sobre o segundo argumento
+em instantes.
+
+00:00:57.813 --> 00:01:01.021
+O terceiro argumento
+será um texto,
+
+00:01:01.054 --> 00:01:03.115
+que ficará dentro do div.
+
+00:01:03.148 --> 00:01:07.173
+Como colocamos esse elemento
+na página?
+
+00:01:07.206 --> 00:01:09.620
+É aqui que o ReactDOM
+entra em ação.
+
+00:01:09.653 --> 00:01:12.852
+O ReactDOM é uma forma
+de usarmos a biblioteca React.
+
+00:01:12.885 --> 00:01:15.956
+No React,
+saber o que renderizar
+
+00:01:15.989 --> 00:01:19.133
+é completamente separada
+da renderização em si.
+
+00:01:19.166 --> 00:01:22.398
+Essa separação possibilita
+renderizar algo no servidor,
+
+00:01:22.431 --> 00:01:25.963
+em dispositivos nativos
+e até mesmo em ambientes de RV.
+
+00:01:25.996 --> 00:01:29.954
+Nesta aula, usaremos o ReactDOM,
+pois trabalhamos no navegador.
+
+00:01:30.573 --> 00:01:35.446
+Dizemos: "ReactDOM.render,
+meu elemento
+
+00:01:35.479 --> 00:01:37.700
+para um nó DOM".
+
+00:01:37.733 --> 00:01:42.348
+Aqui usaremos o elemento raiz,
+que já está na página.
+
+00:01:42.382 --> 00:01:43.717
+Ao salvarmos,
+
+00:01:43.745 --> 00:01:49.021
+vemos no navegador a mensagem
+"hello world" exibida nesta div.
+
+00:01:49.054 --> 00:01:52.829
+Podemos observar esta linha
+e perguntar: "Que elemento é este?"
+
+00:01:52.862 --> 00:01:54.956
+Vejamos no console.
+
+00:01:54.989 --> 00:01:57.416
+Ao abrirmos
+o inspetor do Chrome,
+
+00:01:57.449 --> 00:02:00.715
+vemos que ele é
+um objeto JavaScript simples
+
+00:02:00.748 --> 00:02:05.450
+com várias especificidade:
+chave, propriedade, tipo...
+
+00:02:05.483 --> 00:02:07.867
+E esta foi a string
+
+00:02:07.900 --> 00:02:10.307
+que passamos
+para o tipo de elemento.
+
+00:02:10.340 --> 00:02:13.284
+E há um monte
+de propriedades privadas aqui.
+

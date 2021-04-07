@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.286 --> 00:00:03.221
+Vamos recriar a lista de pessoas
+usando o JSX
+
+00:00:03.254 --> 00:00:05.019
+em vez do createElement.
+
+00:00:05.052 --> 00:00:09.315
+Como já foi dito,
+o JSX se parece muito com o HTML.
+
+00:00:09.348 --> 00:00:12.731
+Nós substituiremos as chamadas
+do createElement
+
+00:00:12.764 --> 00:00:15.754
+por algo que pareça
+com o HTML.
+
+00:00:15.787 --> 00:00:19.475
+O que estes colchetes angulares
+fazem no nosso JavaScript?
+
+00:00:19.508 --> 00:00:23.133
+Essa é a reação de muitas pessoas
+ao verem o JSX pela primeira vez.
+
+00:00:23.166 --> 00:00:26.599
+Se estiver estranhando,
+não se preocupe. Isso é bem comum.
+
+00:00:26.632 --> 00:00:29.497
+Veja a quantidade de sintaxe
+que deixamos de expressar.
+
+00:00:29.530 --> 00:00:31.971
+Vamos colocar
+um item da lista aqui.
+
+00:00:32.004 --> 00:00:35.874
+Queremos o nome da primeira pessoa
+do array people.
+
+00:00:35.907 --> 00:00:40.665
+Podemos dizer:
+"people[0].name".
+
+00:00:40.698 --> 00:00:42.748
+Dizemos isso
+e vemos o que obtemos.
+
+00:00:43.851 --> 00:00:45.593
+Isso não foi muito útil.
+
+00:00:45.626 --> 00:00:48.575
+Obtemos exatamente
+o mesmo código que escrevemos,
+
+00:00:48.608 --> 00:00:52.414
+mas queríamos
+avaliar a expressão.
+
+00:00:52.447 --> 00:00:57.060
+O JSX passou os caracteres
+para a página.
+
+00:00:57.093 --> 00:01:00.989
+Sempre que quisermos que o JSX
+avalie algum JavaScript,
+
+00:01:01.022 --> 00:01:04.907
+precisamos envolver o pedaço
+de JavaScript entre chaves.
+
+00:01:04.940 --> 00:01:07.747
+E isso vale para qualquer
+expressão JavaScript,
+
+00:01:07.780 --> 00:01:10.027
+para um cálculo
+
+00:01:10.060 --> 00:01:12.603
+ou para um ternário.
+
+00:01:12.636 --> 00:01:17.594
+No fundo, para qualquer expressão
+JavaScript dentro das chaves.
+
+00:01:17.627 --> 00:01:20.003
+E o mapeamento
+que tínhamos antes?
+
+00:01:20.036 --> 00:01:23.043
+Podemos fazer aquilo
+dentro das chaves?
+
+00:01:23.076 --> 00:01:24.581
+Vamos tentar.
+
+00:01:24.614 --> 00:01:27.611
+Podemos dizer "people.map"
+
+00:01:27.644 --> 00:01:32.491
+e, para cada item ou pessoa
+dentro do array people,
+
+00:01:32.524 --> 00:01:36.508
+queremos um item de lista
+como person.name.
+
+00:01:36.541 --> 00:01:39.075
+Começamos no JSX,
+
+00:01:39.108 --> 00:01:42.315
+passamos para o JavaScript
+usando as chaves,
+
+00:01:42.348 --> 00:01:44.387
+avaliamos people.map,
+
+00:01:44.420 --> 00:01:46.930
+e o valor de retorno
+da função map
+
+00:01:46.963 --> 00:01:49.219
+será outro JSX.
+
+00:01:49.252 --> 00:01:53.306
+Nele, voltamos ao JavaScript
+e dizemos "person.name".
+
+00:01:53.339 --> 00:01:57.283
+Vamos do JSX para o JavaScript
+e voltamos ao JSX
+
+00:01:57.316 --> 00:01:58.946
+e ao JavaScript.
+
+00:01:58.979 --> 00:02:01.763
+Tudo flui muito bem
+
+00:02:01.796 --> 00:02:03.731
+e é bem mais conciso
+
+00:02:03.764 --> 00:02:07.075
+do que as chamadas
+do createElement aninhado de antes.
+
+00:02:07.795 --> 00:02:11.575
+Dissemos que sempre que passássemos
+um array a um React,
+
+00:02:11.608 --> 00:02:13.591
+precisaríamos
+de uma propriedade-chave
+
+00:02:13.624 --> 00:02:15.539
+em todos
+os elementos filhos.
+
+00:02:15.572 --> 00:02:19.563
+Faremos o mesmo aqui.
+Conferimos no console do navegador
+
+00:02:19.596 --> 00:02:22.895
+e vemos que o aviso
+sobre a chave está de volta.
+
+00:02:22.928 --> 00:02:26.213
+Precisamos
+que cada elemento da lista
+
+00:02:26.246 --> 00:02:28.017
+tenha
+uma propriedade-chave única.
+
+00:02:28.050 --> 00:02:29.927
+A forma
+como fazemos isso no JSX
+
+00:02:29.960 --> 00:02:32.511
+é muito parecida
+com os atributos HTML.
+
+00:02:32.544 --> 00:02:37.760
+Digo "key=",
+abro uma nova expressão JavaScript
+
+00:02:37.793 --> 00:02:41.688
+e uso "person.name"
+como valor da propriedade-chave.
+
+00:02:41.721 --> 00:02:44.567
+Podemos salvar,
+e o aviso desaparece.
+
+00:02:44.600 --> 00:02:46.590
+Para deixar as coisas claras,
+
+00:02:46.623 --> 00:02:49.295
+vejamos o código fonte
+
+00:02:49.328 --> 00:02:53.679
+para observar a compilação
+do código.
+
+00:02:53.712 --> 00:02:56.646
+Vemos no visualizador de fonte
+
+00:02:56.679 --> 00:03:00.552
+que ainda estamos utilizando
+as chamadas do createElement
+
+00:03:00.585 --> 00:03:02.471
+para criar os elementos.
+
+00:03:02.504 --> 00:03:07.232
+Embora a gente use o JSX no editor,
+que é bom e conciso,
+
+00:03:07.265 --> 00:03:11.063
+o código compila
+como um verdadeiro JavaScript
+
+00:03:11.096 --> 00:03:12.578
+usando o createElement.
+

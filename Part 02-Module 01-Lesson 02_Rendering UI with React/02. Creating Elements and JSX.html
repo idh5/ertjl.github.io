@@ -1,0 +1,507 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creating Elements and JSX</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Rendering UI with React</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Rendering UI Intro.html">01. Rendering UI Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Creating Elements and JSX.html">02. Creating Elements and JSX</a>
+    </li>
+    <li class="">
+      <a href="03. Create React App.html">03. Create React App</a>
+    </li>
+    <li class="">
+      <a href="04. Composing with Components.html">04. Composing with Components</a>
+    </li>
+    <li class="">
+      <a href="05. Lesson Summary.html">05. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Creating Elements and JSX</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="watch-first">Watch First</h2>
+<p>We'll be looking at using React's <code>.createElement()</code> method in the next couple of videos. For starters, here is its signature:</p>
+<pre><code class="js language-js">React.createElement( /* type */, /* props */, /* content */ );</code></pre>
+<p>We'll take a deep dive into what all that entails in just a bit! We'll start things out with a project that's already set up. For now, don't worry about creating a project or coding along. There will be plenty of hands-on work for you to do soon enough! We'll start building our in-class project, Contacts App, in the next section. If you would like to code along for the next few videos, you can use this <a href="https://codesandbox.io/s/new" rel="noopener noreferrer" target="_blank">React Sandbox</a>.</p>
+<blockquote>
+  <h2 id="💡-trying-out-react-code-💡">💡 Trying Out React Code 💡</h2>
+</blockquote>
+<blockquote>
+  <p>React is an extension of JavaScript (i.e., a JavaScript <em>library</em>), but it isn't built into your browser. You wouldn't be able to test out React code samples in your browser console the way you would if you were learning JavaScript. In just a bit, we'll see how to install and use a React environment! </p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Creating Elements With CreateElement</p></h3>
+  <video controls>
+  <source src="02. Creating Elements With CreateElement-v7Ui5W6NqUk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Creating Elements With CreateElement-v7Ui5W6NqUk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Creating Elements With CreateElement-v7Ui5W6NqUk.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="rendering-elements-onto-the-dom">Rendering Elements onto the DOM</h2>
+<p>In the previous video, we used ReactDOM's <code>render()</code> method to render our element onto a particular area of a page. In particular, we rendered the <code>element</code> onto a DOM node called <code>root</code>. But where did this <code>root</code> come from?</p>
+<p>Apps built with React typically have a single <code>root</code> DOM node. For example, an HTML file may contain a <code>&lt;div&gt;</code> with the following:</p>
+<pre><code class="html language-html">&lt;div id="root"&gt;&lt;/div&gt;</code></pre>
+<p>By passing this DOM node into <code>getElementById()</code>, React will end up controlling the entirety of its contents. Another way to think about this is that this particular <code>&lt;div&gt;</code> will serve as a "hook" for our React app; this is the area where React will take over and render our UI!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>A DOM Element?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What will <code>myBio</code> hold when the following code is run?</p>
+<pre><code class="js language-js">import React from 'react';
+
+const myBio = React.createElement('div', null, 'My name is Tyler, and I love porcupines.');</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522189407678" name="573018" id="a1522189407678">
+        <label for="a1522189407678"><p>a reference to a DOM node</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522189413500" name="573018" id="a1522189413500">
+        <label for="a1522189413500"><p>a DOM node itself</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522189414004" name="573018" id="a1522189414004">
+        <label for="a1522189414004"><p>a JavaScript object</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522189414492" name="573018" id="a1522189414492">
+        <label for="a1522189414492"><p>a JavaScript class</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    a JavaScript object
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Passing Attributes In CreateElement</p></h3>
+  <video controls>
+  <source src="02. Passing Attributes In CreateElement-joSbGNA_0hY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Passing Attributes In CreateElement-joSbGNA_0hY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Passing Attributes In CreateElement-joSbGNA_0hY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Allowed Attributes</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>React allows a lot of HTML attributes to be passed along to the React element. Look through <a href="https://facebook.github.io/react/docs/dom-elements.html#all-supported-html-attributes" rel="noopener noreferrer" target="_blank">all supported HTML attributes</a> in the React docs and select which of the following attributes are allowed: </p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522189557511" name="573020" id="a1522189557511">
+      <label for="a1522189557511"><p>poster</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522189562549" name="573020" id="a1522189562549">
+      <label for="a1522189562549"><p>id</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522189563071" name="573020" id="a1522189563071">
+      <label for="a1522189563071"><p>marginWidth</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522189563477" name="573020" id="a1522189563477">
+      <label for="a1522189563477"><p>for</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>poster</li>
+      <li>id</li>
+      <li>marginWidth</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>I just used React's <code>.createElement()</code> method to construct a "React element". The <code>.createElement()</code> method has the following signature:</p>
+<pre><code class="js language-js">React.createElement( /* type */, /* props */, /* content */ ); </code></pre>
+<p>Let's break down what each item can be:</p>
+<ul>
+<li><p><code>type</code> – either a string or a React Component</p>
+<p>This can be a string of any existing HTML element (e.g. <code>'p'</code>, <code>'span'</code>, or <code>'header'</code>) or you could pass a React <em>component</em> (we'll be creating components with JSX, in just a moment).</p></li>
+<li><p><code>props</code> – either <code>null</code> or an object</p>
+<p>This is an object of HTML attributes and custom data about the element.</p></li>
+<li><p><code>content</code> – <code>null</code>, a string, a React Element, or a React Component</p>
+<p>Anything that you pass here will be the content of the rendered element. This can include plain text, JavaScript code, other React elements, etc.</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nesting ReactCreateElement Calls</p></h3>
+  <video controls>
+  <source src="02. Nesting ReactCreateElement Calls-j_FHK4jEXJ8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Nesting ReactCreateElement Calls-j_FHK4jEXJ8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Nesting ReactCreateElement Calls-j_FHK4jEXJ8.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nesting With An Array</p></h3>
+  <video controls>
+  <source src="02. Nesting With An Array-B7NJ68esH9w.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Nesting With An Array-B7NJ68esH9w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Nesting With An Array-B7NJ68esH9w.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="createelement-returns-one-root-element"><code>.createElement()</code> Returns <em>One</em> Root Element</h2>
+<p>Recall that <code>React.createElement();</code> creates a single React element of a particular type. We'd normally pass in a tag such as a <code>&lt;div&gt;</code> or a <code>&lt;span&gt;</code> to represent that type, but the content argument can be <em>another</em> React element!</p>
+<p>Consider the following example:</p>
+<pre><code class="js language-js">const element = React.createElement('div', null,
+ React.createElement('strong', null, 'Hello world!')
+);</code></pre>
+<p>Here, "Hello world!" will be wrapped in a <code>&lt;div&gt;</code> when this React element renders as HTML. While we can indeed nest React elements, remember the overall call just returns a single element.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nesting &amp; JSX</p></h3>
+  <video controls>
+  <source src="02. Nesting &amp; JSX-MLd3g65K2wQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Nesting &amp; JSX-MLd3g65K2wQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Nesting &amp; JSX-MLd3g65K2wQ.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ReactCreateElement To JSX</p></h3>
+  <video controls>
+  <source src="02. ReactCreateElement To JSX-MDfyG5SDdEo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. ReactCreateElement To JSX-MDfyG5SDdEo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. ReactCreateElement To JSX-MDfyG5SDdEo.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>convert nested createElement calls to JSX</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following example in JSX:</p>
+<pre><code class="js language-js">const greeting = (
+ &lt;div className='greeting'&gt;
+ &lt;h2&gt;Hello world!&lt;/h2&gt;
+ &lt;/div&gt;
+);</code></pre>
+<p>If we want to output the same HTML, what goes into <code>1</code>, <code>2</code>, and <code>3</code> when calling <code>createElement()</code>?</p>
+<pre><code class="js language-js">const greeting = React.createElement(
+ __1__,
+ { className: 'greeting' },
+ React.createElement(
+ __2__,
+ {},
+ __3__
+ )
+);</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522190521654" name="573027" id="a1522190521654">
+        <label for="a1522190521654"><p><code>'h2'</code>, <code>'div'</code>, <code>'Hello world!'</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522190529055" name="573027" id="a1522190529055">
+        <label for="a1522190529055"><p><code>div</code>, <code>h2</code>, <code>Hello world!</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522190529645" name="573027" id="a1522190529645">
+        <label for="a1522190529645"><p><code>'div'</code>, <code>'h2'</code>, <code>'Hello world!'</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522190530894" name="573027" id="a1522190530894">
+        <label for="a1522190530894"><p><code>Hello world!</code>, <code>div</code>, <code>h2</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `'div'`, `'h2'`, `'Hello world!'`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="jsx-returns-one-main-element-too">JSX Returns <em>One</em> Main Element, Too</h2>
+<p>When writing JSX, keep in mind that it must only return a single element. This element may have any number of descendants, but there <em>must</em> be a single root element wrapping your overall JSX (typically a <code>&lt;div&gt;</code> or a <code>&lt;span&gt;</code>). Check out the following example:</p>
+<pre><code class="js language-js">const message = (
+ &lt;div&gt;
+ &lt;h1&gt;All About JSX:&lt;/h1&gt;
+ &lt;ul&gt;
+ &lt;li&gt;JSX&lt;/li&gt;
+ &lt;li&gt;is&lt;/li&gt;
+ &lt;li&gt;awesome!&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/div&gt;
+);</code></pre>
+<p>See how there's only one <code>&lt;div&gt;</code> element in the code above and that all other JSX is nested inside it? This is how you have to write it if you want multiple elements. To be completely clear, the following is incorrect and will cause an error:</p>
+<pre><code class="js language-js">const message = (
+ &lt;h1&gt;All About JSX:&lt;/h1&gt;
+ &lt;ul&gt;
+ &lt;li&gt;JSX&lt;/li&gt;
+ &lt;li&gt;is&lt;/li&gt;
+ &lt;li&gt;awesome!&lt;/li&gt;
+ &lt;/ul&gt;
+);</code></pre>
+<p>In this example, we have two sibling elements that are both at the root level (i.e. <code>&lt;h1&gt;</code> and <code>&lt;ul&gt;</code>) . This won't work and will give the error:</p>
+<blockquote>
+  <p>Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag</p>
+</blockquote>
+<p>Since we know that JSX is really just a syntax extension for <code>.createElement()</code>, this makes sense; <code>.createElement()</code> takes in only one tag name (as a string) as its first argument.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="intro-to-components">Intro to Components</h2>
+<p>So far we've seen how <code>.createElement()</code> and JSX can help us produce some HTML. Typically, though, we'll use one of React's key features, Components, to construct our UI. Components refer to <em>reusable</em> pieces of code ultimately responsible for returning HTML to be rendered onto the page. More often than not, you'll see React components written with JSX.</p>
+<p>Since React's main focus is to streamline building our app's UI, there is only one method that is absolutely required in any React component class: <code>render()</code>.</p>
+<p>Let's go ahead and build our first component class!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Create A Component</p></h3>
+  <video controls>
+  <source src="02. Create A Component-II-fxVwAjeE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Create A Component-II-fxVwAjeE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Create A Component-II-fxVwAjeE.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-declaring-components-in-react-💡">💡 Declaring Components in React 💡</h2>
+  <p>In the previous video, we defined the <code>ContactList</code> component like so:</p>
+  <p>```js<br />
+  class ContactList extends React.Component {<br />
+  // …<br />
+  }</p>
+</blockquote>
+<pre><code>&gt;
+&gt; In other words, we are defining a component that's really just a JavaScript class that inherits from `React.Component`.
+&gt;
+&gt; In real-world use (and throughout this course), you may also see declarations like:
+&gt;
+&gt; ```js
+class ContactList extends Component {
+// ...
+}</code></pre>
+<blockquote>
+  <p>Both ways are functionally the same, but be sure your module imports match accordingly! That is, if you choose to declare components like the example directly above, your import from <code>React</code> will now look like:</p>
+<pre><code class="js language-js">import React, { Component } from 'react';</code></pre>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="creating-elements-recap">Creating Elements Recap</h2>
+<p>In the end, remember that React is only concerned with the View layer of our app. This is what the user sees and interacts with. As such, we can use <code>.createElement()</code> to render HTML onto a document. More often than not, however, you'll use a syntax extension to describe what your UI should look like. This syntax extension is known as JSX, and just looks similar to plain HTML written right into a JavaScript file. The JSX gets transpiled to React's <code>.createElement()</code> method that outputs HTML to be rendered in the browser.</p>
+<p>A great mindset to have when building React apps is to <a href="https://facebook.github.io/react/docs/thinking-in-react.html" rel="noopener noreferrer" target="_blank">think in <code>components</code></a>. Components represent the modularity and reusability of React. You can think of your component classes as factories that produce instances of components. These component classes should follow the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" rel="noopener noreferrer" target="_blank">single responsibility principle</a> and just "do one thing". If it manages too many different tasks, it may be a good idea to decompose your component into smaller subcomponents.</p>
+<p>Further Research:</p>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/rendering-elements.html" rel="noopener noreferrer" target="_blank">Rendering Elements</a> from the React docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Create React App.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Creating Elements and JSX')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

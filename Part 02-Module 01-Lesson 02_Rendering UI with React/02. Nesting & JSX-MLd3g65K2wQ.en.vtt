@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.754
+Now that we've learned how to create elements and how to nest them,
+
+00:00:03.754 --> 00:00:06.689
+it can get pretty tedious if we're just using these nested
+
+00:00:06.690 --> 00:00:10.665
+create element calls to create large portions of our app.
+
+00:00:10.664 --> 00:00:13.439
+If only we had a different syntax we could use to
+
+00:00:13.439 --> 00:00:17.094
+describe nested relationships of elements in a natural way.
+
+00:00:17.094 --> 00:00:19.570
+Well, what about HTML?
+
+00:00:19.570 --> 00:00:21.535
+Isn't that what it's used for?
+
+00:00:21.535 --> 00:00:22.679
+What if we could borrow some of
+
+00:00:22.679 --> 00:00:26.370
+the sweet angle brackets and put them right in our JavaScript?
+
+00:00:26.370 --> 00:00:31.213
+In other words, what if we can make or create element calls look a little more like HTML,
+
+00:00:31.213 --> 00:00:33.804
+which we're already familiar with?
+
+00:00:33.804 --> 00:00:36.109
+This is exactly what JSX does.
+
+00:00:36.109 --> 00:00:39.255
+JSX is a syntax extension to JavaScript,
+
+00:00:39.255 --> 00:00:43.290
+that lets us write JavaScript code that looks a little bit more like HTML,
+
+00:00:43.289 --> 00:00:47.000
+making it more concise and easier to follow. Let's check it out.
+

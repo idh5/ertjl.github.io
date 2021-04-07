@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.318 --> 00:00:02.301
+Vamos falar sobre aninhamento.
+
+00:00:02.334 --> 00:00:06.852
+A maioria das interfaces do usuário
+são Views dentro de outras Views.
+
+00:00:06.885 --> 00:00:10.348
+Como o React é uma biblioteca
+de criação de interfaces,
+
+00:00:10.381 --> 00:00:12.268
+ele é muito bom nisso.
+
+00:00:12.301 --> 00:00:14.629
+Vamos pegar este div
+
+00:00:14.662 --> 00:00:17.404
+e, em vez de simplesmente
+colocarmos "hello world",
+
+00:00:17.437 --> 00:00:19.789
+adicionaremos outros elementos.
+
+00:00:19.822 --> 00:00:22.276
+Podemos colocar um span
+aqui dentro,
+
+00:00:22.309 --> 00:00:23.965
+para armazenar a mensagem,
+
+00:00:23.998 --> 00:00:27.365
+ou um elemento strong,
+para ficar em negrito.
+
+00:00:27.398 --> 00:00:30.429
+Podemos aninhar elementos
+dentro de outros elementos
+
+00:00:30.462 --> 00:00:34.916
+passando-os como terceiro argumento
+do createElement.
+
+00:00:34.949 --> 00:00:36.884
+Vamos fazer algo
+mais interessante.
+
+00:00:36.917 --> 00:00:38.797
+Vamos criar uma lista.
+
+00:00:38.830 --> 00:00:42.996
+Este será um item de lista,
+e o primeiro item será Tyler.
+
+00:00:43.029 --> 00:00:45.372
+Criaremos
+uma lista de pessoas.
+
+00:00:45.405 --> 00:00:49.804
+O segundo será Karen,
+e, por fim,
+
+00:00:49.837 --> 00:00:52.373
+teremos Richard.
+
+00:00:52.406 --> 00:00:58.100
+Usando o createElement,
+criamos uma lista de pessoas.
+

@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.129
+Now, let's talk about nesting.
+
+00:00:02.129 --> 00:00:06.629
+Most user interfaces are represented as views inside other views.
+
+00:00:06.629 --> 00:00:10.275
+And since react is a library for creating user interfaces,
+
+00:00:10.275 --> 00:00:12.560
+it's actually really good at this.
+
+00:00:12.560 --> 00:00:16.304
+So, let's take this div and instead of just saying,
+
+00:00:16.304 --> 00:00:19.559
+"Hello world", let's put some other elements inside.
+
+00:00:19.559 --> 00:00:23.714
+Maybe we can put a span inside of here to hold our message,
+
+00:00:23.714 --> 00:00:27.179
+or a strong element so that it's bold.
+
+00:00:27.179 --> 00:00:30.910
+So, we can nest elements inside other elements just by
+
+00:00:30.910 --> 00:00:34.950
+passing them as this third argument to create element.
+
+00:00:34.950 --> 00:00:37.100
+Now, let's do something a little more interesting.
+
+00:00:37.100 --> 00:00:38.660
+Let's create a list.
+
+00:00:38.659 --> 00:00:40.434
+So this is going to be a list item,
+
+00:00:40.435 --> 00:00:42.885
+this first item will be Tyler.
+
+00:00:42.884 --> 00:00:45.210
+So, we're going to create a list of people.
+
+00:00:45.210 --> 00:00:48.225
+The second one will be Karen.
+
+00:00:48.225 --> 00:00:52.160
+And then finally, we will have Richard.
+
+00:00:52.159 --> 00:00:55.424
+So, now what we've done is using create element,
+
+00:00:55.424 --> 00:00:58.559
+we have created a list of people.
+
