@@ -1,0 +1,191 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.167 --> 00:00:02.367
+Olá!
+
+00:00:02.667 --> 00:00:04.100
+Desculpa, não dá.
+
+00:00:06.234 --> 00:00:07.701
+Não pode dizer "olá"?
+
+00:00:07.734 --> 00:00:09.501
+Estava no roteiro.
+
+00:00:09.834 --> 00:00:11.968
+Foi ótimo.
+Vamos tentar de novo.
+
+00:00:12.000 --> 00:00:15.367
+SINTO MUITO, ESTAMOS
+COM DIFICULDADES TÉCNICAS
+
+00:00:15.734 --> 00:00:18.033
+Bem-vindos à Comunicação
+Cliente-Servidor,
+
+00:00:18.067 --> 00:00:19.801
+um curso sobre a web.
+
+00:00:19.834 --> 00:00:23.434
+Tecnicamente, a web é
+uma pequena parte da internet.
+
+00:00:23.501 --> 00:00:25.567
+Mas é a única parte da internet
+
+00:00:25.601 --> 00:00:29.634
+que as pessoas usam sem saber
+que é ela que estão usando.
+
+00:00:30.033 --> 00:00:33.200
+A web é a plataforma que você,
+o programador web,
+
+00:00:33.234 --> 00:00:35.801
+pode usar para publicar
+suas ideias para o mundo.
+
+00:00:35.834 --> 00:00:39.634
+É a língua franca entre
+os servidores e os clientes.
+
+00:00:40.701 --> 00:00:44.067
+Ao abrir um navegador,
+baixar um aplicativo,
+
+00:00:44.100 --> 00:00:46.934
+receber uma mensagem
+no WhatsApp ou no Facebook,
+
+00:00:46.968 --> 00:00:48.400
+você está usando a web.
+
+00:00:48.434 --> 00:00:50.601
+Falando genericamente,
+neste momento,
+
+00:00:50.634 --> 00:00:54.000
+um cliente está se comunicando
+com um servidor e vice-versa.
+
+00:00:54.033 --> 00:00:55.968
+Mas o que isso quer dizer?
+
+00:00:56.000 --> 00:00:58.467
+O que acontece
+ao navegar em um website?
+
+00:00:58.501 --> 00:01:01.534
+Como um celular sabe
+que alguém mandou mensagem?
+
+00:01:01.567 --> 00:01:03.300
+Que capacidades a web tem
+
+00:01:03.334 --> 00:01:05.934
+e, mais importante,
+quais são as limitações?
+
+00:01:06.200 --> 00:01:09.734
+Oi. Sou Surma,
+engenheiro do Google em Londres,
+
+00:01:09.767 --> 00:01:11.701
+e trabalho
+com a equipe do Chrome.
+
+00:01:11.734 --> 00:01:15.334
+Neste curso, vamos entender
+o que é a web,
+
+00:01:15.367 --> 00:01:18.734
+como podemos usá-la
+e como evitamos erros
+
+00:01:18.767 --> 00:01:22.400
+que comprometem a experiência
+do usuário e a segurança.
+
+00:01:23.000 --> 00:01:26.434
+Isso pode parecer óbvio,
+e é mesmo,
+
+00:01:26.467 --> 00:01:29.968
+mas exploraremos as partes
+mais desconhecidas do HTTP.
+
+00:01:30.001 --> 00:01:31.501
+Para pensar
+como um engenheiro,
+
+00:01:31.534 --> 00:01:34.801
+é preciso entender a semântica
+que o HTTP usa
+
+00:01:34.868 --> 00:01:37.934
+e a implementação
+dentro do navegador.
+
+00:01:37.968 --> 00:01:42.267
+Assim, exploraremos o potencial
+das APIs do navegador,
+
+00:01:42.300 --> 00:01:44.734
+protegeremos o HTTP
+de invasores
+
+00:01:44.767 --> 00:01:48.200
+e implementaremos o novo
+protocolo da web, o HTTP2.
+
+00:01:48.234 --> 00:01:51.834
+Isso ajudará na hora de tomar
+decisões para o aplicativo,
+
+00:01:51.868 --> 00:01:55.501
+ao convencer outros a otimizar
+e proteger os aplicativos deles.
+
+00:01:56.400 --> 00:01:59.501
+Oi. Sou Richard, desenvolvedor
+de cursos em Udacity
+
+00:01:59.534 --> 00:02:01.601
+e expert
+em programação da web.
+
+00:02:01.634 --> 00:02:05.033
+Surma ensinará o ciclo
+de requisição e resposta HTTP,
+
+00:02:05.067 --> 00:02:08.133
+segurança e as melhores
+práticas do HTTP2,
+
+00:02:08.167 --> 00:02:11.434
+e eu vou reforçar o conhecimento
+com exemplos e exercícios.
+
+00:02:11.467 --> 00:02:13.934
+Entendendo
+as capacidades e limitações
+
+00:02:13.968 --> 00:02:16.534
+do meio em que trabalhamos
+diariamente,
+
+00:02:16.567 --> 00:02:19.567
+vamos dar o próximo passo
+para dominar a área.
+
+00:02:19.600 --> 00:02:23.568
+Ao final do curso, entenderá
+literalmente cada byte enviado
+
+00:02:23.601 --> 00:02:25.667
+do seu navegador ao servidor
+e vice-versa.
+

@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.620
+How does HTTP work?
+
+00:00:02.620 --> 00:00:03.965
+In its original form,
+
+00:00:03.965 --> 00:00:06.150
+Berners-Lee came up with a template that you can
+
+00:00:06.150 --> 00:00:11.180
+fill in to make a request for a document on a server.
+
+00:00:11.180 --> 00:00:16.310
+The original protocol, later called HTTP 0.9, was incredibly limited.
+
+00:00:16.310 --> 00:00:19.200
+You fill in if you want to retrieve or store a document,
+
+00:00:19.200 --> 00:00:21.315
+where to store the document including the name
+
+00:00:21.315 --> 00:00:25.410
+and any additional information you think is necessary.
+
+00:00:25.410 --> 00:00:27.030
+This request has been handed to the server.
+
+00:00:27.030 --> 00:00:29.840
+Since the server speaks HTTP,
+
+00:00:29.840 --> 00:00:34.950
+it knows that this is an HTTP request and can therefore understand what the client wants.
+
+00:00:34.950 --> 00:00:38.100
+The protocol also has templates for the responses.
+
+00:00:38.100 --> 00:00:40.230
+These are a bit more versatile since a single request
+
+00:00:40.230 --> 00:00:42.525
+can have a variety of outcomes including errors,
+
+00:00:42.525 --> 00:00:46.795
+unreadable request forms, or re-routing the client to a completely different server.
+
+00:00:46.795 --> 00:00:50.295
+Luckily, Richard did a good job and I know what he wants.
+
+00:00:50.295 --> 00:00:53.700
+The only thing left for me to do is fill out this form so Richard knows
+
+00:00:53.700 --> 00:00:58.035
+which request I'm responding to.
+
+00:00:58.035 --> 00:01:08.000
+Bandwidth problems.
+

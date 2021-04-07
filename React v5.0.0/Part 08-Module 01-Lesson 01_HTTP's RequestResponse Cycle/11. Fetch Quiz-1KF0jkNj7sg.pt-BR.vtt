@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.067 --> 00:00:02.803
+A fetch é mais fácil
+de configurar e trabalhar,
+
+00:00:02.836 --> 00:00:06.607
+em vez de brigar com XHR
+e complexidades desnecessárias.
+
+00:00:06.640 --> 00:00:08.976
+Você terá a chance
+de brincar com a fetch.
+
+00:00:09.009 --> 00:00:10.376
+Para completar o exercício,
+
+00:00:10.410 --> 00:00:12.510
+é preciso buscar um arquivo
+de um servidor.
+
+00:00:12.546 --> 00:00:15.315
+Este é o servidor necessário
+para configurar e utilizar.
+
+00:00:15.349 --> 00:00:18.385
+Mas não se preocupe.
+Não é complicado configurá-lo.
+
+00:00:18.418 --> 00:00:21.588
+O binário para este servidor
+está na seção de download.
+
+00:00:21.622 --> 00:00:26.026
+Baixe o projeto, inicie-o,
+vá ao URL fornecido
+
+00:00:26.059 --> 00:00:28.128
+e verá esta página.
+
+00:00:28.161 --> 00:00:31.498
+Você precisa buscar
+o arquivo "password.txt".
+
+00:00:31.532 --> 00:00:35.135
+Ao enviar a requisição,
+envie como uma requisição PUT
+
+00:00:35.169 --> 00:00:39.606
+e inclua texto no cabeçalho
+X-Udacity-Exercise.
+
+00:00:39.640 --> 00:00:43.143
+Configurada, a requisição
+de busca retornará a senha.
+
+00:00:43.177 --> 00:00:45.078
+Insira a senha aqui.
+
+00:00:45.546 --> 00:00:49.416
+Se quiser um desafio, codifique
+a requisição fetch do zero
+
+00:00:49.449 --> 00:00:51.585
+em vez de usar
+o formulário de criação.
+
+00:00:51.618 --> 00:00:53.387
+É um desafio maior,
+
+00:00:53.420 --> 00:00:56.023
+então incluí links úteis
+nas anotações.
+
+00:00:56.056 --> 00:00:57.157
+Boa sorte.
+

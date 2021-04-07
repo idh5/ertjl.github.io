@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.230
+The tubes and forms are basically the underlying concept of HTTP, request and responses.
+
+00:00:07.230 --> 00:00:10.170
+Well, we're not really going to be shoving paper through tubes,
+
+00:00:10.170 --> 00:00:13.200
+but rather, data through network cables.
+
+00:00:13.200 --> 00:00:15.860
+This is what an actual request looks like.
+
+00:00:15.860 --> 00:00:18.000
+This is the exact text the browser sends to
+
+00:00:18.000 --> 00:00:21.320
+the server to request an image called kitty.jpg.
+
+00:00:21.320 --> 00:00:23.390
+Let's dig into the first line a little bit.
+
+00:00:23.390 --> 00:00:26.750
+In this case, we are trying to get a document from the server.
+
+00:00:26.750 --> 00:00:28.980
+The protocol is also able to add,
+
+00:00:28.980 --> 00:00:31.560
+delete, and update documents.
+
+00:00:31.560 --> 00:00:33.925
+To distinguish between these capabilities,
+
+00:00:33.925 --> 00:00:38.215
+the first line starts with an HTTP method or verb.
+
+00:00:38.215 --> 00:00:40.320
+This request uses the get method,
+
+00:00:40.320 --> 00:00:43.635
+which means we want the server to send data to us.
+
+00:00:43.635 --> 00:00:46.005
+Another example of a method is post,
+
+00:00:46.005 --> 00:00:49.355
+which instructs the server to save the data we are sending.
+
+00:00:49.355 --> 00:00:51.225
+There are more methods than these,
+
+00:00:51.225 --> 00:00:54.525
+but we'll worry about them later when we talk about REST APIs.
+
+00:00:54.525 --> 00:00:56.580
+Let's get back to the original request.
+
+00:00:56.580 --> 00:01:01.165
+After the method comes the path and name of the document we would like to get.
+
+00:01:01.165 --> 00:01:03.895
+Here, we want the server to send us a file called
+
+00:01:03.895 --> 00:01:07.755
+kitty.jpg located in the pictures directory.
+
+00:01:07.755 --> 00:01:12.445
+The last thing in the first line is the version of the HTTP protocol we are using.
+
+00:01:12.445 --> 00:01:17.475
+As of today, HTTP1.1 is the most common and widely supported version.
+
+00:01:17.475 --> 00:01:23.225
+However, HTTP2 is slowly catching up and taking over as the de facto standard.
+
+00:01:23.225 --> 00:01:26.190
+More on this later. Surma is now going to show you
+
+00:01:26.190 --> 00:01:29.220
+the different kinds of headers an HTTP request can have.
+

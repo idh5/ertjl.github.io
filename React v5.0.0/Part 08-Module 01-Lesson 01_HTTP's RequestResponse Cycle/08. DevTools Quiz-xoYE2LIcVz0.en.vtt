@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.970
+In this exercise, you're going to count the number of
+
+00:00:02.970 --> 00:00:06.930
+requests and the total amount of data being transferred over the wire.
+
+00:00:06.930 --> 00:00:08.760
+To help you accomplish this,
+
+00:00:08.760 --> 00:00:14.005
+you're going to use one of the most valuable tools of a web developer, Dev Tools.
+
+00:00:14.005 --> 00:00:18.860
+All of the big browsers have their own form of developer tools with similar features.
+
+00:00:18.860 --> 00:00:22.300
+For simplicity's sake, we're going to use Chrome's Dev Tools.
+
+00:00:22.300 --> 00:00:23.590
+To open up Dev Tools,
+
+00:00:23.590 --> 00:00:26.825
+go to the menu, down to more tools,
+
+00:00:26.825 --> 00:00:28.565
+and choose developer tools,
+
+00:00:28.565 --> 00:00:30.980
+or just press command option I on Mac,
+
+00:00:30.980 --> 00:00:32.810
+or control shift I on windows.
+
+00:00:32.810 --> 00:00:35.165
+Then switch to the Network tab.
+
+00:00:35.165 --> 00:00:38.355
+The binary for this server is in the download section below.
+
+00:00:38.355 --> 00:00:40.775
+So, launch it, go to the you URL it provides,
+
+00:00:40.775 --> 00:00:42.680
+and you should see the same page.
+
+00:00:42.680 --> 00:00:44.145
+As the page is loading,
+
+00:00:44.145 --> 00:00:47.255
+you can see all of the requests being fired off.
+
+00:00:47.255 --> 00:00:52.360
+Take a look at the requests to see the different headers and the responses.
+
+00:00:52.360 --> 00:00:55.960
+So, count the number of requests and the total amount of data
+
+00:00:55.960 --> 00:01:00.310
+in kilobytes being transferred over the wire and enter them here.
+
+00:01:00.310 --> 00:01:04.540
+One quick note, to avoid incorrect results from plugins, extensions,
+
+00:01:04.540 --> 00:01:06.610
+and the browser caching the results,
+
+00:01:06.610 --> 00:01:12.180
+make sure to run this in an incognito window and make sure disable cache is selected.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.720
+The Internet has been around for longer than the web.
+
+00:00:03.720 --> 00:00:05.730
+While computers already had something to
+
+00:00:05.730 --> 00:00:08.563
+communicate with over the internet like e-mail or FTP,
+
+00:00:08.563 --> 00:00:13.675
+there was no common and publicly available way to publish and access documents.
+
+00:00:13.675 --> 00:00:15.530
+This is where Tim Berners-Lee comes in.
+
+00:00:15.530 --> 00:00:18.450
+He wanted an open mechanism for researchers to publish,
+
+00:00:18.450 --> 00:00:21.445
+read, and comment on papers through the internet.
+
+00:00:21.445 --> 00:00:25.300
+He wanted to mesh off-link documents that were called hypertext documents.
+
+00:00:25.300 --> 00:00:28.705
+Berners-Lee shows a subset of SJML and called it HTML,
+
+00:00:28.705 --> 00:00:31.515
+the hypertext markup language.
+
+00:00:31.515 --> 00:00:37.650
+Then he designed HTTP the hypertext transfer protocol to transfer these HTML documents.
+
+00:00:37.650 --> 00:00:41.430
+Hypertext sounds all futuristic and complicated but simply means that
+
+00:00:41.430 --> 00:00:45.285
+the text in the document can have references to other documents.
+
+00:00:45.285 --> 00:00:47.610
+These references are called links.
+
+00:00:47.610 --> 00:00:48.920
+By getting a document,
+
+00:00:48.920 --> 00:00:51.540
+the user can not only read the documents but
+
+00:00:51.540 --> 00:00:54.600
+they can navigate to related documents through these links.
+
+00:00:54.600 --> 00:00:58.086
+Especially in a scientific context for which Berners-Lee designed it,
+
+00:00:58.086 --> 00:01:01.085
+this feature turned out to be incredibly useful.
+
+00:01:01.085 --> 00:01:03.360
+Hypertext can refer to more than text, though.
+
+00:01:03.360 --> 00:01:04.920
+Files can link to images,
+
+00:01:04.920 --> 00:01:07.000
+code, styles, or anything else.
+

@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.532
+The browser does a lot of heavy lifting for us.
+
+00:00:02.532 --> 00:00:03.780
+But as so often in life,
+
+00:00:03.780 --> 00:00:06.520
+we don't always know what we want right from the start.
+
+00:00:06.520 --> 00:00:10.335
+Imagine a website that wants to show an image of the current weather.
+
+00:00:10.335 --> 00:00:14.430
+We don't know what weather is going to be when the user visits the website in the future.
+
+00:00:14.430 --> 00:00:16.530
+Of course, we could have loaded all the images you
+
+00:00:16.530 --> 00:00:18.795
+might possibly need from the very start,
+
+00:00:18.795 --> 00:00:21.610
+but that becomes impractical really quickly.
+
+00:00:21.610 --> 00:00:23.850
+So let's talk about Ajax.
+
+00:00:23.850 --> 00:00:28.675
+Ajax is a group of web technologies that let you make a request programmatically
+
+00:00:28.675 --> 00:00:33.685
+with JavaScript instead of navigating and effectively reloading the entire website.
+
+00:00:33.685 --> 00:00:36.960
+XMLHttpRequest or XHR for short,
+
+00:00:36.960 --> 00:00:40.010
+is the most common way of doing it right now.
+
+00:00:40.010 --> 00:00:43.575
+The API of XHR's arguably confusing
+
+00:00:43.575 --> 00:00:47.455
+and outdated compared to what JavaScript offers nowadays.
+
+00:00:47.455 --> 00:00:53.507
+That is why we are going to skip talking about XHR and use its successor instead, Fetch.
+
+00:00:53.507 --> 00:00:57.780
+Fetch does the exact same thing but with a cleaner API utilizing
+
+00:00:57.780 --> 00:01:00.000
+promises and therefore integrates much
+
+00:01:00.000 --> 00:01:03.340
+better with the rest of the modern JavaScript APIs.
+
+00:01:03.340 --> 00:01:05.640
+If you want to know more about promises,
+
+00:01:05.640 --> 00:01:10.110
+take a look at our cost JavaScript promises linked to it in the instructor notes.
+
+00:01:10.110 --> 00:01:13.560
+With Fetch you can utilize all the HTTP methods the protocol
+
+00:01:13.560 --> 00:01:17.867
+specifies and have full control of which headers are being sent,
+
+00:01:17.867 --> 00:01:20.125
+well, almost all the headers.
+
+00:01:20.125 --> 00:01:24.793
+Richard is going to show you a small tool to explore the Fetch API with.
+
+00:01:24.793 --> 00:01:27.930
+Open up the networking tab in your dev tools to see
+
+00:01:27.930 --> 00:01:31.290
+if the browser actually sent the request as you specify
+

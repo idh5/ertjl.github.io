@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.265
+So far, we have only been requesting the server to send data to us using the GET method.
+
+00:00:05.265 --> 00:00:08.550
+However, sometimes you might want the user to type in
+
+00:00:08.550 --> 00:00:12.960
+some data or upload a picture and send that to the server.
+
+00:00:12.960 --> 00:00:16.470
+This is where the POST method comes into play that we mentioned earlier.
+
+00:00:16.470 --> 00:00:17.865
+With a POST request,
+
+00:00:17.865 --> 00:00:20.595
+the request itself can also have a payload
+
+00:00:20.595 --> 00:00:23.745
+or body something we have already seen in responses,
+
+00:00:23.745 --> 00:00:25.680
+but not in requests.
+
+00:00:25.680 --> 00:00:28.620
+What exactly happens to the data once it has been sent to
+
+00:00:28.620 --> 00:00:33.115
+the server is up to the backend developer and is not in the scope of this course.
+
+00:00:33.115 --> 00:00:36.480
+It is, however, important to know that POST requests are potentially
+
+00:00:36.480 --> 00:00:40.435
+handled differently by proxies and the browser than GET requests.
+
+00:00:40.435 --> 00:00:42.270
+Have you ever seen one of these?
+
+00:00:42.270 --> 00:00:44.730
+This is what happens when the page you're currently looking
+
+00:00:44.730 --> 00:00:47.815
+at was the result of a POST request.
+
+00:00:47.815 --> 00:00:50.175
+If you try to reload such a website,
+
+00:00:50.175 --> 00:00:52.260
+the browser will prompt you to confirm
+
+00:00:52.260 --> 00:00:55.290
+this reload action as POST requests are allowed to be
+
+00:00:55.290 --> 00:00:57.765
+destructive operations and repeating it
+
+00:00:57.765 --> 00:01:01.280
+might be more destructive than you originally intended.
+
+00:01:01.280 --> 00:01:05.510
+That's why it is usually recommended for the backend developer to not respond to
+
+00:01:05.510 --> 00:01:11.055
+a POST request with a website but with a redirect to avoid this rather jarring behavior.
+
+00:01:11.055 --> 00:01:16.320
+For the user, this redirect is practically invisible but avoids the prompt on reload.
+

@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.320 --> 00:00:03.570
+Cheerio. Sorry, I can't do it.
+
+00:00:03.570 --> 00:00:07.170
+Can't do the cheerio?
+
+00:00:07.170 --> 00:00:12.355
+That was part of the script.
+
+00:00:12.355 --> 00:00:15.297
+That was good.
+
+00:00:15.297 --> 00:00:18.025
+Welcome to Client Server Communications,
+
+00:00:18.025 --> 00:00:19.640
+a course about the web.
+
+00:00:19.640 --> 00:00:23.470
+Technically, the web is only a small part of the internet.
+
+00:00:23.470 --> 00:00:26.200
+However, it is the only part of the internet that people use
+
+00:00:26.200 --> 00:00:29.676
+without even realizing that what they're using is the web.
+
+00:00:29.676 --> 00:00:31.775
+The web is the platform that you,
+
+00:00:31.775 --> 00:00:35.790
+the web developer, can use to publish your ideas to the world.
+
+00:00:35.790 --> 00:00:40.182
+It is the common language between your servers and your clients.
+
+00:00:40.182 --> 00:00:42.340
+Every time you open a browser,
+
+00:00:42.340 --> 00:00:43.975
+every time you download an app,
+
+00:00:43.975 --> 00:00:48.135
+every time you receive a message on WhatsApp or Facebook, you're using the web.
+
+00:00:48.135 --> 00:00:50.710
+Or more generically, in that very moment,
+
+00:00:50.710 --> 00:00:54.160
+a client is communicating with a server and vice versa.
+
+00:00:54.160 --> 00:00:55.868
+But what does that actually mean?
+
+00:00:55.868 --> 00:00:58.590
+What's happening when you navigate to a website?
+
+00:00:58.590 --> 00:01:01.435
+How did the phone know that somebody sent me a message?
+
+00:01:01.435 --> 00:01:03.320
+What capabilities does the web have?
+
+00:01:03.320 --> 00:01:05.935
+And more importantly, what are its limitations?
+
+00:01:05.935 --> 00:01:07.900
+Hi, I'm Surma.
+
+00:01:07.900 --> 00:01:11.455
+I'm an engineer at Google in London and I work with the Chrome team.
+
+00:01:11.455 --> 00:01:15.415
+In this course, we're going to understand what the web actually is,
+
+00:01:15.415 --> 00:01:17.358
+how we can use it to your advantage,
+
+00:01:17.358 --> 00:01:19.390
+and how you can avoid mistakes that will make
+
+00:01:19.390 --> 00:01:23.055
+both your user experience and security suffer.
+
+00:01:23.055 --> 00:01:26.515
+Some of this may seem like a review to you, and it is.
+
+00:01:26.515 --> 00:01:29.885
+But we will also go into the lesser known parts of HTTP.
+
+00:01:29.885 --> 00:01:31.270
+To think like an engineer,
+
+00:01:31.270 --> 00:01:34.768
+you need to understand both the semantics of HTTP users,
+
+00:01:34.768 --> 00:01:37.570
+as well as the implementation inside the browser.
+
+00:01:37.570 --> 00:01:41.800
+We'll use that knowledge to use browser APIs to the fullest potential,
+
+00:01:41.800 --> 00:01:44.485
+secure HTTP against eavesdroppers,
+
+00:01:44.485 --> 00:01:48.025
+and deploy the web's newest protocol, HTTP/2.
+
+00:01:48.025 --> 00:01:51.220
+All this knowledge will help you make informed decisions for
+
+00:01:51.220 --> 00:01:56.020
+your app and persuade others when optimizing and securing their apps.
+
+00:01:56.020 --> 00:01:58.050
+Hi, I'm Richard.
+
+00:01:58.050 --> 00:02:01.650
+A course developer at Udacity and an experienced web developer.
+
+00:02:01.650 --> 00:02:05.770
+While Surma teaches you about HTTP's request and response cycle, security,
+
+00:02:05.770 --> 00:02:07.890
+and the best practices of HTTP/2,
+
+00:02:07.890 --> 00:02:11.310
+I'll be here to reinforce this knowledge with examples and quizzes.
+
+00:02:11.310 --> 00:02:15.120
+Understanding both the capabilities and limitations of the medium we work in on
+
+00:02:15.120 --> 00:02:19.470
+a day to day basis will help you take the next important step towards mastery.
+
+00:02:19.470 --> 00:02:20.995
+By the end of this course,
+
+00:02:20.995 --> 00:02:23.070
+you will understand literally every byte that is
+
+00:02:23.070 --> 00:02:26.000
+being sent from your browser to the server and back.
+

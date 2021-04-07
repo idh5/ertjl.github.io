@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.095
+We need to fetch the file password.txt,
+
+00:00:02.095 --> 00:00:04.830
+so I'll add that here.
+
+00:00:04.830 --> 00:00:08.250
+Then we need to use the PUT method and we
+
+00:00:08.250 --> 00:00:11.940
+need to send along the letter X-Udacity-Exercise.
+
+00:00:11.940 --> 00:00:14.005
+The text here can be anything,
+
+00:00:14.005 --> 00:00:16.425
+so I'll just set it to fetch rocks.
+
+00:00:16.425 --> 00:00:19.230
+Sending the request gives me the code.
+
+00:00:19.230 --> 00:00:21.320
+Great job.
+
+00:00:21.320 --> 00:00:23.745
+So, did you try coding the fetch request yourself?
+
+00:00:23.745 --> 00:00:25.740
+Let me quickly show you how I did it.
+
+00:00:25.740 --> 00:00:29.550
+Basically, it should look the same as over here except we need to handle the response.
+
+00:00:29.550 --> 00:00:32.720
+A fetch request returns a promise,
+
+00:00:32.720 --> 00:00:34.200
+so I'll chain onto that.
+
+00:00:34.200 --> 00:00:37.560
+In here, I'll get the response and return its text.
+
+00:00:37.560 --> 00:00:40.645
+This is another promise so I'll chain on another then.
+
+00:00:40.645 --> 00:00:44.275
+Finally, this is the password that gets logged out.
+
+00:00:44.275 --> 00:00:49.000
+Great work. Hopefully, you can see how fetch makes requesting files so easy.
+

@@ -1,0 +1,110 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:02.967
+Esta parte da requisição
+se chama "seção do cabeçalho",
+
+00:00:03.000 --> 00:00:04.767
+pois é onde ficam
+os cabeçalhos.
+
+00:00:04.800 --> 00:00:08.000
+Cabeçalhos são dados adicionais
+sobre a requisição.
+
+00:00:08.033 --> 00:00:10.033
+Muitos cabeçalhos
+são padronizados
+
+00:00:10.067 --> 00:00:13.633
+e contêm informações como
+qual navegador faz a requisição,
+
+00:00:13.667 --> 00:00:16.200
+que tipo de formato
+o navegador suporta
+
+00:00:16.233 --> 00:00:18.900
+e qual versão do documento
+já está disponível
+
+00:00:18.933 --> 00:00:20.633
+no cache local do navegador.
+
+00:00:20.667 --> 00:00:23.400
+Esses cabeçalhos são opcionais,
+exceto o do host.
+
+00:00:23.433 --> 00:00:25.867
+A menor requisição
+que poderia ser feita
+
+00:00:25.900 --> 00:00:29.200
+consistiria em uma linha
+e um cabeçalho do host.
+
+00:00:29.667 --> 00:00:33.767
+Visualmente, uma resposta
+se parece com uma requisição.
+
+00:00:33.800 --> 00:00:37.067
+A maior diferença é,
+provavelmente, a primeira linha.
+
+00:00:37.100 --> 00:00:39.767
+Aqui fica o código
+de status da resposta,
+
+00:00:39.800 --> 00:00:42.967
+que indica se sua requisição
+foi bem-sucedida,
+
+00:00:43.000 --> 00:00:44.733
+se o documento
+não foi encontrado
+
+00:00:44.767 --> 00:00:47.800
+ou se o servidor quer
+redirecioná-lo a outro lugar.
+
+00:00:48.133 --> 00:00:52.233
+Como na requisição, a próxima
+seção é a do cabeçalho.
+
+00:00:52.267 --> 00:00:55.167
+Ela não contém apenas
+dados do documento,
+
+00:00:55.200 --> 00:00:58.167
+mas também do servidor
+e da conexão.
+
+00:00:58.200 --> 00:01:00.367
+A maioria desses cabeçalhos
+são opcionais.
+
+00:01:00.400 --> 00:01:03.400
+O único cabeçalho obrigatório
+é o comprimento do conteúdo
+
+00:01:03.433 --> 00:01:06.967
+informando o cliente quantos
+bytes de dados ele deve esperar.
+
+00:01:07.000 --> 00:01:09.467
+Depois do cabeçalho
+e uma linha vazia,
+
+00:01:09.500 --> 00:01:11.367
+o documento é enviado.
+
+00:01:11.400 --> 00:01:14.567
+Ele pode ser uma imagem JPEG,
+um documento HTML
+
+00:01:14.600 --> 00:01:16.933
+ou qualquer coisa
+que queira enviar ao usuário.
+

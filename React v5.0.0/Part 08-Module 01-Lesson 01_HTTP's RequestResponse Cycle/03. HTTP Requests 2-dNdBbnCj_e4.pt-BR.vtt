@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:02.900
+Como funciona o HTTP?
+
+00:00:02.967 --> 00:00:06.467
+Na forma original, Berners-Lee
+fez um modelo a ser preenchido
+
+00:00:06.502 --> 00:00:09.333
+para fazer uma requisição
+de um documento em um servidor.
+
+00:00:11.033 --> 00:00:14.533
+O protocolo original,
+futuramente intitulado HTTP 0.9,
+
+00:00:14.567 --> 00:00:16.400
+era muito limitado.
+
+00:00:16.467 --> 00:00:19.167
+Você preenche para recuperar
+ou armazenar documentos,
+
+00:00:19.200 --> 00:00:20.933
+saber onde armazená-los,
+
+00:00:20.967 --> 00:00:23.767
+incluindo o nome
+ou outros dados.
+
+00:00:25.267 --> 00:00:27.600
+Essa requisição é, então,
+enviada ao servidor.
+
+00:00:27.967 --> 00:00:32.167
+Como o servidor fala HTTP,
+ele sabe que é um pedido HTTP
+
+00:00:32.200 --> 00:00:34.967
+e pode entender
+o que o cliente quer.
+
+00:00:35.000 --> 00:00:37.833
+O protocolo também tem
+modelos para respostas.
+
+00:00:37.901 --> 00:00:40.233
+Esses são mais versáteis,
+já que uma requisição
+
+00:00:40.266 --> 00:00:42.535
+pode ter diversos resultados,
+inclusive erros,
+
+00:00:42.568 --> 00:00:44.331
+formulários
+de requisição ilegíveis,
+
+00:00:44.364 --> 00:00:46.868
+ou redirecionar o cliente
+a outro servidor.
+
+00:00:47.033 --> 00:00:49.933
+Rich fez um bom trabalho,
+e eu sei o que ele quer.
+
+00:00:50.333 --> 00:00:53.067
+Agora basta preencher
+o formulário
+
+00:00:53.100 --> 00:00:55.967
+para Richard saber a qual
+requisição estou respondendo.
+
+00:01:06.267 --> 00:01:08.000
+Excesso
+na largura de banda.
+

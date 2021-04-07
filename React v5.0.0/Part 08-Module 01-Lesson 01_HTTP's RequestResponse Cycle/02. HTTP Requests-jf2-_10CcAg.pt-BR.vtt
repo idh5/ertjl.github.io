@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.292
+A internet existe
+há mais tempo que a web.
+
+00:00:03.333 --> 00:00:08.417
+Os computadores se comunicavam
+via internet por e-mail, FTP,
+
+00:00:09.042 --> 00:00:13.167
+mas publicamente não se podia
+publicar nem acessar documentos.
+
+00:00:13.208 --> 00:00:15.082
+É aí que entra
+Tim Berners-Lee.
+
+00:00:15.124 --> 00:00:18.125
+Ele queria um mecanismo aberto
+para pesquisadores publicarem,
+
+00:00:18.167 --> 00:00:21.000
+lerem e comentarem
+documentos na internet.
+
+00:00:21.033 --> 00:00:23.215
+Ele queria uma rede
+de documentos conectados
+
+00:00:23.248 --> 00:00:25.125
+chamados
+"documentos hipertexto".
+
+00:00:25.167 --> 00:00:27.460
+Berners-Lee escolheu
+um subconjunto de SGML
+
+00:00:27.493 --> 00:00:31.083
+e o batizou de HTML:
+HyperText Markup Language.
+
+00:00:31.125 --> 00:00:34.250
+Então ele criou o HTTP,
+Hypertext Transfer Protocol,
+
+00:00:34.292 --> 00:00:37.167
+para transferir
+os documentos HTML.
+
+00:00:37.333 --> 00:00:40.083
+Hipertexto parece algo
+futurista e complicado,
+
+00:00:40.125 --> 00:00:42.460
+mas quer dizer que o texto
+naquele documento
+
+00:00:42.493 --> 00:00:45.042
+pode ter referências
+a outros documentos.
+
+00:00:45.083 --> 00:00:47.250
+Essas referências
+se chamam "links".
+
+00:00:47.292 --> 00:00:51.042
+Acessando um documento,
+o usuário pode ler o documento
+
+00:00:51.083 --> 00:00:54.208
+e navegar para documentos
+relacionados por esses links.
+
+00:00:54.250 --> 00:00:56.251
+Principalmente
+em um contexto científico,
+
+00:00:56.284 --> 00:00:58.167
+que era o objetivo
+de Berners-Lee,
+
+00:00:58.208 --> 00:01:01.000
+essa função
+acabou sendo muito útil.
+
+00:01:01.042 --> 00:01:03.083
+O hipertexto pode ir
+além de textos.
+
+00:01:03.125 --> 00:01:05.293
+Arquivos podem linkar
+para imagens, códigos,
+
+00:01:05.326 --> 00:01:07.083
+estilos
+ou qualquer outra coisa.
+

@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.560
+This part of the request is called the header section as it contains the headers.
+
+00:00:04.560 --> 00:00:08.070
+Headers are additional data about the request itself.
+
+00:00:08.070 --> 00:00:11.340
+A lot of these headers are standardized and contain information like;
+
+00:00:11.340 --> 00:00:13.620
+what type of browser is making the request,
+
+00:00:13.620 --> 00:00:16.440
+what kind of format the browser supports and
+
+00:00:16.440 --> 00:00:20.595
+what version of the document is already available in the browser's local cache.
+
+00:00:20.595 --> 00:00:23.610
+All of these headers are optional except for the host header.
+
+00:00:23.610 --> 00:00:25.830
+The smallest request that can be made would
+
+00:00:25.830 --> 00:00:29.215
+only consist of the first line and the host header.
+
+00:00:29.215 --> 00:00:30.885
+At a first glance,
+
+00:00:30.885 --> 00:00:33.740
+a response looks very similar to a request.
+
+00:00:33.740 --> 00:00:37.262
+The biggest difference is probably the first line.
+
+00:00:37.262 --> 00:00:39.980
+Here you can find out the status code of a response that
+
+00:00:39.980 --> 00:00:42.815
+indicates if your request was fulfilled successfully,
+
+00:00:42.815 --> 00:00:48.080
+if the document was not found or if the server wants to redirect you somewhere else.
+
+00:00:48.080 --> 00:00:49.670
+Just like with a request,
+
+00:00:49.670 --> 00:00:52.430
+the next section is the header section.
+
+00:00:52.430 --> 00:00:55.303
+It not only contains data about the document,
+
+00:00:55.303 --> 00:00:58.280
+but also about the server and the connection.
+
+00:00:58.280 --> 00:01:00.350
+Again most of these headers are optional.
+
+00:01:00.350 --> 00:01:03.245
+The only obligatory header is content length
+
+00:01:03.245 --> 00:01:06.860
+to tell the client how many bytes of data it should expect.
+
+00:01:06.860 --> 00:01:09.539
+After the headers and an additional empty line,
+
+00:01:09.539 --> 00:01:11.495
+the actual document is sent.
+
+00:01:11.495 --> 00:01:17.580
+This can be a JPEG image an HTML document or whatever you want to transfer to the user.
+

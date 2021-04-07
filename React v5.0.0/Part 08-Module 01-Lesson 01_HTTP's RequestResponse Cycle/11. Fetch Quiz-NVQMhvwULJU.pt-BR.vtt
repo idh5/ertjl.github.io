@@ -1,0 +1,74 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.136
+Temos que buscar
+o arquivo "password.txt".
+
+00:00:03.170 --> 00:00:04.638
+Vou adicionar aqui.
+
+00:00:05.072 --> 00:00:07.274
+Temos que usar
+o método PUT
+
+00:00:07.741 --> 00:00:11.678
+e enviar o cabeçalho
+X-Udacity-Exercise.
+
+00:00:12.246 --> 00:00:14.114
+O texto pode ser
+qualquer coisa.
+
+00:00:14.147 --> 00:00:16.550
+Vou configurar
+para "a fetch é demais!"
+
+00:00:16.583 --> 00:00:19.052
+Enviar a requisição
+fornece o código.
+
+00:00:19.086 --> 00:00:20.487
+Ótimo trabalho.
+
+00:00:21.188 --> 00:00:23.590
+Você tentou codificar
+a requisição fetch?
+
+00:00:23.624 --> 00:00:25.592
+Vou mostrar como fiz.
+
+00:00:25.626 --> 00:00:27.661
+O código deve ser como este,
+
+00:00:27.694 --> 00:00:29.930
+mas temos que lidar
+com a resposta.
+
+00:00:30.397 --> 00:00:32.666
+Uma requisição fetch
+retorna uma promessa,
+
+00:00:32.699 --> 00:00:34.301
+então vou aninhar nisto.
+
+00:00:34.334 --> 00:00:37.337
+Aqui vou receber a resposta
+e retornar o texto.
+
+00:00:37.371 --> 00:00:40.707
+É mais uma promessa,
+então vou encadear outra.
+
+00:00:40.741 --> 00:00:43.610
+Finalmente esta é a senha
+que desloga.
+
+00:00:44.077 --> 00:00:45.245
+Bom trabalho!
+
+00:00:45.279 --> 00:00:49.116
+Espero que veja como a fetch
+facilita arquivos de requisição.
+

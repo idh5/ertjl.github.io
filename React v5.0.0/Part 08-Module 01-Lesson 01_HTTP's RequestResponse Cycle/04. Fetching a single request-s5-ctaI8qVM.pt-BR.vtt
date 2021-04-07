@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.567
+Os tubos e os formulários
+
+00:00:02.600 --> 00:00:05.100
+são os conceitos subjacentes
+do HTTP:
+
+00:00:05.133 --> 00:00:07.300
+requisições e respostas.
+
+00:00:07.333 --> 00:00:12.167
+Não passamos papeis por tubos
+e sim dados por cabos de rede.
+
+00:00:12.967 --> 00:00:15.800
+Requisições são assim.
+
+00:00:15.833 --> 00:00:18.733
+Este é o texto que o navegador
+envia ao servidor
+
+00:00:18.767 --> 00:00:21.433
+para requisitar uma imagem
+chamada "kitty.jpg".
+
+00:00:21.467 --> 00:00:23.267
+Vamos explorar
+a primeira linha.
+
+00:00:23.300 --> 00:00:26.567
+Neste caso, queremos
+um documento do servidor.
+
+00:00:26.600 --> 00:00:31.267
+O protocolo também adiciona,
+deleta e atualiza documentos.
+
+00:00:31.633 --> 00:00:34.000
+Para distinguir
+entre essas capacidades,
+
+00:00:34.033 --> 00:00:37.800
+a primeira linha começa
+com um método HTTP ou um verbo.
+
+00:00:38.067 --> 00:00:40.267
+Essa requisição
+usa o método GET,
+
+00:00:40.300 --> 00:00:43.000
+ou seja, queremos que o servidor
+nos envie dados.
+
+00:00:43.467 --> 00:00:46.033
+Outro exemplo de método
+é o POST,
+
+00:00:46.067 --> 00:00:49.267
+que manda o servidor
+salvar os dados que enviamos.
+
+00:00:49.300 --> 00:00:51.367
+Há outros métodos
+além desses,
+
+00:00:51.400 --> 00:00:54.500
+mas vamos vê-los depois,
+na abordagem de APIs REST.
+
+00:00:54.533 --> 00:00:56.667
+Vamos voltar
+à requisição original.
+
+00:00:56.700 --> 00:01:01.233
+Depois do método, há o caminho
+e o nome do documento desejado.
+
+00:01:01.267 --> 00:01:04.967
+Aqui queremos que o servidor
+envie o arquivo "kitty.jpg",
+
+00:01:05.000 --> 00:01:07.333
+localizado no diretório
+de imagens.
+
+00:01:07.600 --> 00:01:09.200
+A última coisa
+na primeira linha
+
+00:01:09.233 --> 00:01:12.267
+é a versão do protocolo HTTP
+que estamos usando.
+
+00:01:12.300 --> 00:01:17.367
+Por ora, o HTTP/1.1 é a versão
+mais comum e usada,
+
+00:01:17.400 --> 00:01:22.733
+mas o HTTP/2 está chegando
+e dominando o padrão.
+
+00:01:23.000 --> 00:01:24.633
+Depois falaremos disso.
+
+00:01:24.667 --> 00:01:29.400
+Surma vai mostrar os diferentes
+cabeçalhos da requisição HTTP.
+

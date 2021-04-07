@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.315
+We have looked at the requests and response cycle of HTTP.
+
+00:00:03.315 --> 00:00:05.909
+So now, you have a solid understanding on how HTTP
+
+00:00:05.909 --> 00:00:09.290
+works and what the browser actually does when you visit a website.
+
+00:00:09.290 --> 00:00:12.430
+You know how metadata is attached to both requests and responses
+
+00:00:12.430 --> 00:00:15.990
+and you know how to request additional documents using JavaScript.
+
+00:00:15.990 --> 00:00:18.780
+Next, we'll take a closer look at the HTTP protocol and
+
+00:00:18.780 --> 00:00:23.000
+the actual bytes that are being sent back and forth between the server and the browser.
+

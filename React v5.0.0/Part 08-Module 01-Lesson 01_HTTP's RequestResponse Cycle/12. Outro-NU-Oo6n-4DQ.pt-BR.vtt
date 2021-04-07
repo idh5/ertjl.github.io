@@ -1,0 +1,32 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.083 --> 00:00:03.083
+Vimos o ciclo de requisição
+e resposta do HTTP.
+
+00:00:03.125 --> 00:00:06.083
+Agora já entendeu
+como o HTTP funciona
+
+00:00:06.125 --> 00:00:09.083
+e o que um navegador faz
+quando você visita um site,
+
+00:00:09.125 --> 00:00:12.083
+como metadados são anexados
+a requisições e respostas
+
+00:00:12.125 --> 00:00:15.292
+e como se requisita documentos
+usando JavaScript.
+
+00:00:15.334 --> 00:00:19.375
+Agora veremos o protocolo HTTP
+e os bytes usados no envio
+
+00:00:19.417 --> 00:00:22.083
+entre o servidor
+e o navegador.
+

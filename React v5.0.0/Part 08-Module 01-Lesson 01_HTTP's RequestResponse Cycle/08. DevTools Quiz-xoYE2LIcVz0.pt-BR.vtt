@@ -1,0 +1,95 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.670
+Neste exercício,
+você vai contar as requisições
+
+00:00:03.704 --> 00:00:06.974
+e o total dos dados
+transferidos pelo cabo.
+
+00:00:07.007 --> 00:00:11.078
+Para isso você vai usar uma das mais
+importantes ferramentas
+
+00:00:11.111 --> 00:00:13.814
+de um programador da web,
+a DevTools.
+
+00:00:14.348 --> 00:00:17.317
+Os grandes navegadores têm
+ferramentas de desenvolvedor
+
+00:00:17.351 --> 00:00:18.919
+com funções parecidas.
+
+00:00:18.952 --> 00:00:21.989
+Para simplificar, vamos usar
+a DevTools do Chrome.
+
+00:00:22.122 --> 00:00:24.725
+Para abrir a DevTools,
+vá ao menu,
+
+00:00:25.259 --> 00:00:26.562
+"Mais Ferramentas"
+
+00:00:26.595 --> 00:00:28.695
+e selecione
+"Ferramentas do Desenvolvedor".
+
+00:00:28.728 --> 00:00:30.931
+Ou aperte "Command"+"Option-I"
+no Mac,
+
+00:00:30.964 --> 00:00:32.900
+ou "Control"+"Shift-I"
+no Windows.
+
+00:00:32.933 --> 00:00:34.768
+Vá para a aba "Network".
+
+00:00:34.801 --> 00:00:38.372
+O binário para este servidor
+está na seção de download.
+
+00:00:38.405 --> 00:00:42.709
+Inicie-o, vá ao URL fornecido
+e verá esta mesma página.
+
+00:00:42.743 --> 00:00:47.047
+Enquanto a página carrega,
+as requisições são ativadas.
+
+00:00:47.080 --> 00:00:51.852
+Observe as requisições para ver
+os cabeçalhos e as respostas.
+
+00:00:52.819 --> 00:00:54.788
+Conte o número
+de requisições
+
+00:00:54.821 --> 00:00:59.459
+e o total de dados em quilobytes
+sendo transferidos e insira aqui.
+
+00:01:00.127 --> 00:01:01.361
+Uma observação:
+
+00:01:01.395 --> 00:01:03.664
+para evitar resultados
+incorretos de plug-ins,
+
+00:01:03.697 --> 00:01:06.333
+extensões e resultados
+do cache do navegador,
+
+00:01:06.366 --> 00:01:09.002
+use o modo incógnito
+
+00:01:09.036 --> 00:01:12.506
+e selecione
+"desabilitar cache".
+

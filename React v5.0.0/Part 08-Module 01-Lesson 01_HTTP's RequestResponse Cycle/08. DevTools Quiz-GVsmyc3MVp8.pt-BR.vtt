@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:03.433
+Abri a DevTools
+e estou na aba "Network".
+
+00:00:03.900 --> 00:00:07.300
+Aqui temos uma visão geral
+da página toda enquanto carrega.
+
+00:00:07.667 --> 00:00:12.467
+Esta tabela lista as requisições
+com informações sobre cada uma.
+
+00:00:13.400 --> 00:00:17.500
+Na parte debaixo, DevTools exibe
+o resumo para carregar a página.
+
+00:00:17.700 --> 00:00:19.667
+Esta página tinha
+seis requisições
+
+00:00:19.700 --> 00:00:23.000
+e transferiu
+43,5 quilobytes de dados.
+
+00:00:23.033 --> 00:00:25.733
+Estes são os números
+que o questionário procurava.
+
+00:00:26.000 --> 00:00:30.033
+DevTools é um recurso valioso
+para um programador da web,
+
+00:00:30.067 --> 00:00:32.300
+e vamos usá-lo
+ao longo do curso.
+

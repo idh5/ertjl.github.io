@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.670
+I've opened up Dev Tools and I'm on the Network tab.
+
+00:00:03.670 --> 00:00:07.870
+Here, we see an overview of the whole page as it's being loaded.
+
+00:00:07.870 --> 00:00:12.935
+Here is a table that lists out all of the requests with information about each one.
+
+00:00:12.935 --> 00:00:14.710
+Down here at the bottom,
+
+00:00:14.710 --> 00:00:17.780
+Dev Tools displays the summary for loading the page.
+
+00:00:17.780 --> 00:00:23.225
+This page had six requests and it transferred 43.5 Kilobytes of data.
+
+00:00:23.225 --> 00:00:26.170
+So these are the numbers that the quiz was looking for.
+
+00:00:26.170 --> 00:00:29.140
+As you can see, Dev Tools is an invaluable resource
+
+00:00:29.140 --> 00:00:32.230
+for a web developer and we'll be using it throughout the entire course.
+

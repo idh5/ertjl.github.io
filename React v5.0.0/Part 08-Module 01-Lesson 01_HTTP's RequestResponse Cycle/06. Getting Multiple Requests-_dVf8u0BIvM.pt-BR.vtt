@@ -1,0 +1,117 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:04.733
+Vimos como pegar um documento
+usando uma requisição HTTP.
+
+00:00:04.767 --> 00:00:07.367
+Esses documentos podem ter
+qualquer tipo de dados.
+
+00:00:07.400 --> 00:00:11.067
+Mas na web tudo costuma começar
+com um documento de índice.
+
+00:00:11.100 --> 00:00:14.033
+O documento de índice
+é o que o servidor vai devolver
+
+00:00:14.067 --> 00:00:16.867
+se não achar arquivos explícitos
+na requisição.
+
+00:00:16.900 --> 00:00:20.167
+Ao digitar uma URL na barra
+de endereço do navegador,
+
+00:00:20.200 --> 00:00:23.400
+o usuário instrui o navegador
+a abrir uma nova conexão
+
+00:00:23.433 --> 00:00:26.767
+com o servidor identificado
+pelo nome do host na URL
+
+00:00:26.800 --> 00:00:30.467
+e a obter o documento
+especificado no caminho da URL.
+
+00:00:30.500 --> 00:00:34.133
+Nesse caso, o servidor
+responde com index.html,
+
+00:00:34.167 --> 00:00:36.467
+e o navegador pode
+começar a parsear.
+
+00:00:36.500 --> 00:00:38.333
+É um passo interessante,
+
+00:00:38.367 --> 00:00:41.833
+e o navegador faz muitas coisas
+para lidar com os dados.
+
+00:00:41.867 --> 00:00:45.967
+Veja o link no seu material
+para ver como funciona.
+
+00:00:46.200 --> 00:00:48.333
+Depois que o navegador
+parsear a resposta,
+
+00:00:48.367 --> 00:00:50.433
+as coisas ficam loucas.
+
+00:00:50.467 --> 00:00:54.867
+Ao ler o index.html, o navegador
+deve achar referências
+
+00:00:54.900 --> 00:00:58.267
+a outros documentos necessários
+para exibir o website.
+
+00:00:58.300 --> 00:01:00.100
+Podem ser imagens,
+folhas de estilo,
+
+00:01:00.133 --> 00:01:02.567
+arquivos JavaScript,
+vídeos, o que for.
+
+00:01:02.600 --> 00:01:06.100
+Para cada recurso,
+uma nova requisição é enviada
+
+00:01:06.133 --> 00:01:08.900
+e, uma vez que a resposta
+é recebida pelo navegador,
+
+00:01:08.933 --> 00:01:14.100
+o processo de parsear e enviar
+novas requisições se repete.
+
+00:01:14.133 --> 00:01:17.533
+Isso também quer dizer
+que cada recurso pode,
+
+00:01:17.567 --> 00:01:20.400
+por sua vez,
+puxar recursos adicionais.
+
+00:01:20.433 --> 00:01:23.100
+Cada página de destino
+terá suas dependências,
+
+00:01:23.133 --> 00:01:25.833
+como imagens,
+CSS e arquivos JavaScript.
+
+00:01:25.867 --> 00:01:28.167
+Então visitar uma única URL
+
+00:01:28.200 --> 00:01:31.667
+pode enviar mais requisições
+do que se pode imaginar.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.210
+Fetch is so much easier to setup and work with instead of
+
+00:00:03.210 --> 00:00:06.780
+battling against XHR and its unnecessary complexities.
+
+00:00:06.780 --> 00:00:08.910
+So we're giving you a chance to play with fetch.
+
+00:00:08.910 --> 00:00:10.380
+To complete this exercise,
+
+00:00:10.380 --> 00:00:12.445
+you need to fetch a file from a server.
+
+00:00:12.445 --> 00:00:15.270
+This is the server that you need to set up and interact with.
+
+00:00:15.270 --> 00:00:18.285
+But don't worry, it's not complicated to get up and running.
+
+00:00:18.285 --> 00:00:21.735
+The binary for this server is in the download section below.
+
+00:00:21.735 --> 00:00:24.435
+So just download the project, launch it,
+
+00:00:24.435 --> 00:00:26.145
+go to the URL it provides,
+
+00:00:26.145 --> 00:00:28.240
+and you should see this same page.
+
+00:00:28.240 --> 00:00:30.550
+You need to fetch the file /password.txt.
+
+00:00:30.550 --> 00:00:32.954
+When you send the request,
+
+00:00:32.954 --> 00:00:35.745
+you have to send it as a PUT request and include
+
+00:00:35.745 --> 00:00:39.495
+the X-Udacity-Exercise header with some text.
+
+00:00:39.495 --> 00:00:41.490
+If the fetch request is set up correctly,
+
+00:00:41.490 --> 00:00:43.410
+it will return the password.
+
+00:00:43.410 --> 00:00:45.215
+Enter that password here.
+
+00:00:45.215 --> 00:00:47.275
+If you want an extra challenge,
+
+00:00:47.275 --> 00:00:51.730
+try coding the fetch request from scratch instead of using the fetch builder form.
+
+00:00:51.730 --> 00:00:53.485
+This is definitely a bit more challenging,
+
+00:00:53.485 --> 00:00:57.000
+so I've included some helpful links in the instructor notes. Good luck.
+

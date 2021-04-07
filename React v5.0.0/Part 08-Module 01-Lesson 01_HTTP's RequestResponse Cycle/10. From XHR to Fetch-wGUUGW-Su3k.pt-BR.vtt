@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:02.503
+O navegador faz muito
+do trabalho por nós.
+
+00:00:02.536 --> 00:00:06.373
+Mas nem sempre sabemos
+o que queremos inicialmente.
+
+00:00:06.406 --> 00:00:10.143
+Imagine um site que quer exibir
+uma imagem do tempo.
+
+00:00:10.177 --> 00:00:14.181
+Não se sabe qual será o tempo
+quando o usuário entrar no site.
+
+00:00:14.214 --> 00:00:18.719
+Poderíamos ter subido
+todas as imagens possíveis,
+
+00:00:18.752 --> 00:00:21.455
+mas isso logo
+deixa de ser prático.
+
+00:00:21.488 --> 00:00:23.357
+Vamos falar sobre Ajax.
+
+00:00:24.424 --> 00:00:26.561
+Ajax é um grupo
+de tecnologias web
+
+00:00:26.594 --> 00:00:29.026
+que viabiliza fazer
+requisições programaticamente
+
+00:00:29.059 --> 00:00:33.500
+com JavaScript em vez de navegar
+e recarregar o site inteiro.
+
+00:00:33.534 --> 00:00:36.904
+XMLHttpRequest, ou XHR,
+
+00:00:36.937 --> 00:00:39.573
+é a forma mais comum
+de se fazer isso.
+
+00:00:40.107 --> 00:00:44.178
+A API XHR
+é confusa e antiga,
+
+00:00:44.211 --> 00:00:47.281
+se comparada ao que
+o JavaScript oferece.
+
+00:00:47.314 --> 00:00:50.350
+Por isso não vamos falar
+sobre XHR.
+
+00:00:50.383 --> 00:00:53.153
+Vamos usar a sucessora dela,
+fetch.
+
+00:00:53.654 --> 00:00:57.191
+A fetch faz a mesma coisa
+com uma API mais limpa,
+
+00:00:57.224 --> 00:01:00.294
+utilizando promessas e, portanto,
+é mais bem integrada
+
+00:01:00.327 --> 00:01:03.363
+ao resto das APIs
+do JavaScript moderno.
+
+00:01:03.397 --> 00:01:05.566
+Para saber mais
+sobre promessas,
+
+00:01:05.599 --> 00:01:09.636
+veja o link para o curso
+JavaScript Promises.
+
+00:01:10.237 --> 00:01:12.873
+Com a fetch, você pode usar
+os métodos HTTP
+
+00:01:12.906 --> 00:01:14.441
+que o protocolo especifica
+
+00:01:14.541 --> 00:01:17.911
+e controlar todos os cabeçalhos
+que são enviados.
+
+00:01:17.945 --> 00:01:20.113
+Bom, quase todos
+os cabeçalhos.
+
+00:01:20.347 --> 00:01:22.382
+Richard vai mostrar
+uma ferramenta
+
+00:01:22.416 --> 00:01:24.651
+para explorar a API fetch.
+
+00:01:24.918 --> 00:01:27.387
+Abra a aba "Network"
+no seu DevTools
+
+00:01:27.421 --> 00:01:31.158
+para ver se o navegador enviou
+a requisição que você pediu.
+
