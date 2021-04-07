@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.990
+With all of the changes and improvements that HTTP/2 brings,
+
+00:00:03.990 --> 00:00:06.495
+we need to change the way we develop our sites.
+
+00:00:06.495 --> 00:00:10.750
+Which of the following techniques should be used when developing for HTTP/2?
+
+00:00:10.750 --> 00:00:12.690
+Should you minify your JavaScript?
+
+00:00:12.690 --> 00:00:14.100
+What about concatenating it?
+
+00:00:14.100 --> 00:00:16.935
+Should you minify or concatenate your CSS?
+
+00:00:16.935 --> 00:00:20.790
+If you should still use image spriting techniques, check here.
+
+00:00:20.790 --> 00:00:24.240
+If a content delivery network should be used, check this box.
+
+00:00:24.240 --> 00:00:26.410
+Should you shard your assets?
+
+00:00:26.410 --> 00:00:28.920
+And lastly, should you minify your markup?
+
+00:00:28.920 --> 00:00:31.530
+If so, check here. Check all that apply.
+

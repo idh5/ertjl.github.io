@@ -1,0 +1,177 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.083 --> 00:00:02.208
+O HTTP/2 apresenta
+muitas mudanças,
+
+00:00:02.250 --> 00:00:04.583
+mas como fazemos
+a transição do HTTP/1
+
+00:00:04.625 --> 00:00:07.167
+para o incrível mundo
+do HTTP/2?
+
+00:00:07.208 --> 00:00:09.583
+O que podemos fazer
+para servir aos usuários
+
+00:00:09.616 --> 00:00:11.333
+da melhor forma possível?
+
+00:00:12.208 --> 00:00:14.458
+Tendo eliminado
+o bloqueio HOL no HTTP/2
+
+00:00:14.500 --> 00:00:18.292
+e com a nova compressão de header,
+solicitações agora são baratas.
+
+00:00:18.333 --> 00:00:23.083
+Não é mais necessário concatenar
+JavaScript ou CSS.
+
+00:00:23.116 --> 00:00:25.125
+Isso pode até
+piorar as coisas.
+
+00:00:25.167 --> 00:00:27.250
+Pense na atualização
+de um arquivo em cache.
+
+00:00:27.292 --> 00:00:29.333
+Se você conserta um erro
+num arquivo JavaScript,
+
+00:00:29.375 --> 00:00:31.000
+por exemplo,
+uma chave faltando,
+
+00:00:31.042 --> 00:00:32.333
+você obrigaria seus usuários
+
+00:00:32.375 --> 00:00:35.208
+a baixar novamente
+o conjunto inteiro de JavaScript,
+
+00:00:35.250 --> 00:00:38.250
+em vez de apenas o fragmento
+que de fato mudou.
+
+00:00:38.292 --> 00:00:40.375
+Se cada arquivo JavaScript
+estivesse separado,
+
+00:00:40.417 --> 00:00:44.250
+você invalidaria apenas o cache
+daquele arquivo específico.
+
+00:00:44.292 --> 00:00:47.292
+Outra vantagem é o novo compressor
+de header se tornar mais eficaz
+
+00:00:47.333 --> 00:00:49.333
+a medida que mais
+solicitações são enviadas.
+
+00:00:49.375 --> 00:00:51.292
+Quanto mais solicitações
+são enviadas,
+
+00:00:51.333 --> 00:00:53.333
+mais os headers
+podem ser reutilizados.
+
+00:00:53.375 --> 00:00:56.417
+Ou seja, ter várias conexões
+com servidores diferentes é,
+
+00:00:56.458 --> 00:00:58.375
+na verdade,
+ruim para o desempenho.
+
+00:00:59.125 --> 00:01:02.417
+Dito isso, minificar e comprimir
+arquivos JavaScript e CSS,
+
+00:01:02.458 --> 00:01:05.083
+assim como imagens,
+ainda é uma boa ideia.
+
+00:01:05.125 --> 00:01:06.500
+Um byte economizado
+é algo bom.
+
+00:01:07.042 --> 00:01:09.083
+Especialmente em países
+em desenvolvimento,
+
+00:01:09.125 --> 00:01:11.000
+isso significa
+dinheiro economizado.
+
+00:01:11.042 --> 00:01:13.542
+Além disso, todos os conselhos
+para otimizar o desempenho,
+
+00:01:13.583 --> 00:01:16.250
+como adiar o JavaScript
+ou fazer inline de estilos,
+
+00:01:16.292 --> 00:01:19.000
+ainda são válidos,
+assim como investir seu tempo
+
+00:01:19.042 --> 00:01:21.083
+elaborando um suporte offline
+adequado
+
+00:01:21.125 --> 00:01:22.375
+usando Service Worker.
+
+00:01:22.417 --> 00:01:26.208
+O mais importante é que HTTP/2
+é retrocompatível.
+
+00:01:26.250 --> 00:01:30.458
+Todos os servidores que usam HTTP/2
+também usam HTTP/1.
+
+00:01:30.500 --> 00:01:35.042
+Um cliente que não usa HTTP/2
+vai cair de volta no HTTP/1
+
+00:01:35.083 --> 00:01:37.083
+e continuar trabalhando
+como antes.
+
+00:01:37.125 --> 00:01:39.417
+Esses clientes
+estão cada vez mais raros.
+
+00:01:39.450 --> 00:01:42.375
+Então não tenha medo
+de trabalhar com HTTP/2.
+
+00:01:42.417 --> 00:01:45.292
+Quando filmamos este vídeo,
+no início de 2016,
+
+00:01:45.333 --> 00:01:49.375
+71% do tráfego da web
+tinha suporte para HTTP/2,
+
+00:01:49.417 --> 00:01:53.333
+então é válido dizer que você pode
+otimizar sua web para HTTP/2
+
+00:01:53.375 --> 00:01:56.167
+sem se importar muito
+com HTTP/1,
+
+00:01:56.208 --> 00:01:58.250
+já que esse número
+só crescerá.
+

@@ -1,0 +1,84 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:02.302
+Qualquer etapa
+que combine arquivos
+
+00:00:02.336 --> 00:00:04.638
+e que faça sprite
+como um conjunto de imagens,
+
+00:00:04.671 --> 00:00:07.241
+precisa ser reconsiderada
+com HTTP/2.
+
+00:00:07.274 --> 00:00:09.042
+Geralmente
+será uma péssima ideia,
+
+00:00:09.076 --> 00:00:12.112
+porque torna o armazenamento
+de cache ineficiente.
+
+00:00:12.145 --> 00:00:14.014
+Minificar ainda
+é uma boa idea,
+
+00:00:14.047 --> 00:00:17.384
+já que reduz o número de bytes
+que precisam ser transmitidos.
+
+00:00:17.417 --> 00:00:20.921
+Dessa forma, minificar JavaScript,
+CSS e Markup
+
+00:00:20.954 --> 00:00:22.356
+estão corretos.
+
+00:00:22.389 --> 00:00:23.991
+Fragmentar
+não é uma boa ideia,
+
+00:00:24.024 --> 00:00:27.394
+pois torna o compressor
+de HTTP para header menos eficiente
+
+00:00:27.427 --> 00:00:30.130
+e faz com que o navegador
+abra novas conexões,
+
+00:00:30.163 --> 00:00:31.698
+o que é custoso.
+
+00:00:31.765 --> 00:00:34.401
+Usar uma CDN, apenas uma,
+
+00:00:34.434 --> 00:00:36.370
+diminui as desvantagens
+da fragmentação,
+
+00:00:36.403 --> 00:00:39.773
+já que aproxima geograficamente
+o conteúdo dos seus usuários
+
+00:00:39.806 --> 00:00:41.508
+e reduz o tempo da roundtrip,
+
+00:00:41.542 --> 00:00:43.210
+então essa também
+está correta.
+
+00:00:43.243 --> 00:00:46.313
+Podemos ver que muitas coisas
+precisam ser feitas de outra forma.
+
+00:00:46.346 --> 00:00:49.016
+Você precisa entender as implicações
+que o HTTP/2 traz
+
+00:00:49.049 --> 00:00:50.884
+ao desenvolvimento
+de aplicativos.
+

@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.360
+Any step that combines files together and Sprite is a
+
+00:00:03.360 --> 00:00:06.625
+combination of images has to be reconsidered with HTTP/2.
+
+00:00:06.625 --> 00:00:12.110
+Most of the time it will be a bad idea since it makes caching totally inefficient.
+
+00:00:12.110 --> 00:00:14.430
+Minification is still a good idea since it
+
+00:00:14.430 --> 00:00:17.355
+reduces the number of bytes that need to be transmitted.
+
+00:00:17.355 --> 00:00:22.465
+So minifying javascript, CSS and Markup are correct.
+
+00:00:22.465 --> 00:00:26.565
+Sharding is not a good idea as it makes the HTTP/2 header compressor
+
+00:00:26.565 --> 00:00:31.455
+less efficient and causes new connections to be opened by the browser which is costly.
+
+00:00:31.455 --> 00:00:34.500
+Using a CDN, just a single one,
+
+00:00:34.500 --> 00:00:37.575
+outweighs the drawbacks of sharding as it brings your assets
+
+00:00:37.575 --> 00:00:41.562
+geographically closer to your users and reduces the round trip time,
+
+00:00:41.562 --> 00:00:43.015
+so this is also correct.
+
+00:00:43.015 --> 00:00:46.380
+As you can see there are a number of things we need to do differently,
+
+00:00:46.380 --> 00:00:51.000
+so make sure you understand the implications HTTP/2 brings to application development.
+

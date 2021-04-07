@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.005
+A completely different aspect that HTTP2 tackles is security.
+
+00:00:04.005 --> 00:00:06.270
+E-commerce has become the norm and so has handling
+
+00:00:06.270 --> 00:00:08.790
+sensitive data like credit cards and contracts.
+
+00:00:08.790 --> 00:00:13.685
+It's fair to call it gross negligence if websites handle this kind of data without TLS.
+
+00:00:13.685 --> 00:00:17.745
+That's why TLS is a required part of the specification for HTTP2.
+
+00:00:17.745 --> 00:00:20.135
+There is an unencrypted version of HTTP2,
+
+00:00:20.135 --> 00:00:23.275
+but all major browsers have opted out of supporting it.
+
+00:00:23.275 --> 00:00:25.800
+We've talked about TLS before and you'll be glad to hear
+
+00:00:25.800 --> 00:00:29.015
+that nothing's changed when using TLS with HTTP2.
+
+00:00:29.015 --> 00:00:32.020
+But how does HTTP2 solve the other problems?
+
+00:00:32.020 --> 00:00:33.805
+How does it resolve head of line blocking?
+
+00:00:33.805 --> 00:00:36.010
+And how does header compression work in HTTP2?
+
+00:00:36.010 --> 00:00:37.230
+Let's find out.
+

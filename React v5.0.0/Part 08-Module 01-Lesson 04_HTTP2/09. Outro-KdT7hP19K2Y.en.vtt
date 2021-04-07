@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.155
+As far as we are concerned,
+
+00:00:02.155 --> 00:00:05.805
+HTTP/2 works the exact same way HTTP/1 does.
+
+00:00:05.805 --> 00:00:09.350
+What changes is the performance and the precautions you have to take.
+
+00:00:09.350 --> 00:00:12.550
+You should start building a web app with HTTP/2 in mind since
+
+00:00:12.550 --> 00:00:16.815
+a number of browsers that don't support HTTP/2 is getting smaller and smaller.
+
+00:00:16.815 --> 00:00:18.580
+If you're running your own server or trying to
+
+00:00:18.580 --> 00:00:20.845
+figure out where to host your web app yourself,
+
+00:00:20.845 --> 00:00:23.665
+make sure to enable HTTP/2 there, too.
+
+00:00:23.665 --> 00:00:25.440
+For more information on how to do that,
+
+00:00:25.440 --> 00:00:27.430
+there's a link in the notes with instructions for
+
+00:00:27.430 --> 00:00:29.875
+the most common service providers and servers.
+
+00:00:29.875 --> 00:00:31.840
+In the next lesson, we'll take a look at
+
+00:00:31.840 --> 00:00:34.270
+more security measures like cross origin resource sharing,
+
+00:00:34.270 --> 00:00:36.670
+same origin policy, and cross-site scripting.
+
+00:00:36.670 --> 00:00:39.000
+You might even get a chance to do some hacking yourself.
+

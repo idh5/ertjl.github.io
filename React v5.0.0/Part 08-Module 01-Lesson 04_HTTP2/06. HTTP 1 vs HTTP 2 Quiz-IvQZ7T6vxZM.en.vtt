@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.275
+This is the result for the HTTP1 server,
+
+00:00:03.275 --> 00:00:06.585
+and over here is the result for the HTTP2 server.
+
+00:00:06.585 --> 00:00:10.900
+The HTTP1 server transferred 336 kilobytes
+
+00:00:10.900 --> 00:00:15.575
+while the HTTP2 server transferred only 177 kilobytes.
+
+00:00:15.575 --> 00:00:19.045
+That's roughly a 47 percent reduction in transfer of bytes.
+
+00:00:19.045 --> 00:00:21.230
+That's almost half the number of bytes.
+
+00:00:21.230 --> 00:00:25.605
+Not surprisingly, the HTTP2 server also loaded the site a lot faster.
+
+00:00:25.605 --> 00:00:29.670
+It loaded the site and all its assets in 911 milliseconds.
+
+00:00:29.670 --> 00:00:33.210
+The HTTP1 server took a total of 2.86 seconds.
+
+00:00:33.210 --> 00:00:36.175
+That's roughly a 68 percent increase in speed.
+
+00:00:36.175 --> 00:00:41.060
+So, the HTTP2 server is a lot faster and also transfers less information.
+

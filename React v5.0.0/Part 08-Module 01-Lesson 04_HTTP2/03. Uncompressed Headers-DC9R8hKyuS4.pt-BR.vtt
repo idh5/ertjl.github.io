@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.736
+Para reduzir o tempo
+de envio de dados,
+
+00:00:02.803 --> 00:00:05.339
+muitos sites comprimem
+seus conteúdos com o gzip
+
+00:00:05.372 --> 00:00:08.408
+ou outro algoritmo para web.
+
+00:00:08.475 --> 00:00:12.713
+O código boilerplate HTML5
+usa compressão gzip.
+
+00:00:12.746 --> 00:00:15.315
+Dê uma olhada abaixo
+para mais informações.
+
+00:00:15.349 --> 00:00:17.284
+A compressão dos dados é ótima,
+
+00:00:17.317 --> 00:00:21.622
+mas os headers de solicitação
+e resposta continuam sem compressão.
+
+00:00:21.655 --> 00:00:24.291
+Se parar pra pensar,
+isso não faz muito sentido.
+
+00:00:24.324 --> 00:00:27.694
+Eles são texto simples,
+ou seja, altamente comprimíveis.
+
+00:00:27.728 --> 00:00:30.664
+Além disso, eles são
+altamente repetitivos.
+
+00:00:30.697 --> 00:00:32.366
+O header do host é sempre igual,
+
+00:00:32.399 --> 00:00:35.068
+assim como os cookies
+e alguns outros.
+
+00:00:35.102 --> 00:00:38.539
+No artigo do Google,
+eles dizem que, em média,
+
+00:00:38.572 --> 00:00:41.175
+headers consomem 800 bytes.
+
+00:00:41.241 --> 00:00:43.911
+Vamos dar uma olhada
+na economia que poderíamos fazer.
+
+00:00:43.977 --> 00:00:46.213
+Se um site fizesse
+100 solicitações,
+
+00:00:46.246 --> 00:00:49.516
+mais ou menos 80kb
+seria de headers,
+
+00:00:49.550 --> 00:00:51.518
+e a maior parte disso
+seria redundante.
+
+00:00:51.552 --> 00:00:54.454
+Economizaria muito espaço
+se comprimíssemos os headers.
+
+00:00:54.488 --> 00:00:57.724
+Infelizmente, não podemos
+fazer isso com o HTTP/1.
+
+00:00:57.791 --> 00:00:59.660
+Mas com o HTTP2, sim!
+

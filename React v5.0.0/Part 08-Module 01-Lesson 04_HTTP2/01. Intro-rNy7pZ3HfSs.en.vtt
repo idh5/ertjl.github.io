@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.760
+HTTP has been around since the early 90s.
+
+00:00:02.760 --> 00:00:05.645
+Between just 2010 and 2015,
+
+00:00:05.645 --> 00:00:09.075
+the amount of data transferred for a single web page has tripled.
+
+00:00:09.075 --> 00:00:14.145
+The number of requests necessary to get all that data is on a steady rise as well.
+
+00:00:14.145 --> 00:00:16.105
+HTTP is used for things and in
+
+00:00:16.105 --> 00:00:19.080
+conditions that are very different from what it was designed for.
+
+00:00:19.080 --> 00:00:22.140
+Design choices that made complete sense back then are now
+
+00:00:22.140 --> 00:00:25.730
+becoming a burden both in terms of development and performance.
+
+00:00:25.730 --> 00:00:29.280
+Some current best practices like concatenating all your JavaScript into
+
+00:00:29.280 --> 00:00:34.305
+a single file solely exist to work around the shortcomings of HTTP1.
+
+00:00:34.305 --> 00:00:36.270
+This is where HTTP2 comes in.
+
+00:00:36.270 --> 00:00:38.280
+While also being backwards compatible,
+
+00:00:38.280 --> 00:00:41.350
+it solves the biggest issues HTTP1 has.
+
+00:00:41.350 --> 00:00:43.680
+We will learn how HTTP2 is different from
+
+00:00:43.680 --> 00:00:47.070
+HTTP1 and how these differences help make your apps better.
+

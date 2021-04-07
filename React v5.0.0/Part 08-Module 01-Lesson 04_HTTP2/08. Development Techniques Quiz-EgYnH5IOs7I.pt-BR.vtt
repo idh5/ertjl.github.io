@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:04.071
+Com todas as mudanças e melhorias
+que o HTTP/2 traz,
+
+00:00:04.204 --> 00:00:07.074
+precisamos mudar a forma
+como desenvolvemos sites.
+
+00:00:07.140 --> 00:00:08.408
+Quais das seguintes técnicas
+
+00:00:08.475 --> 00:00:11.078
+devem ser utilizadas
+ao desenvolver para HTTP/2?
+
+00:00:11.178 --> 00:00:13.046
+Você deve minificar
+o JavaScript?
+
+00:00:13.080 --> 00:00:14.515
+Que tal concatená-lo?
+
+00:00:14.581 --> 00:00:17.050
+Você deve minificar
+ou concatenar o CSS?
+
+00:00:17.184 --> 00:00:19.987
+Se acha que deve fazer
+sprite de imagens,
+
+00:00:20.020 --> 00:00:21.221
+assinale aqui.
+
+00:00:21.288 --> 00:00:24.691
+Se acha que uma rede CDN
+deve ser utilizada, marque aqui.
+
+00:00:24.791 --> 00:00:26.560
+Você deve fragmentar
+o conteúdo?
+
+00:00:26.627 --> 00:00:29.229
+Por fim, você deve minificar
+o Markup?
+
+00:00:29.296 --> 00:00:30.162
+Se sim, marque aqui.
+
+00:00:30.197 --> 00:00:31.999
+Assinale todos que se aplicam.
+

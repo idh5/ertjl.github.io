@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:03.303
+Neste exercício,
+quero que você veja a diferença
+
+00:00:03.337 --> 00:00:08.308
+entre carregar um site
+em HTTP/1 e em HTTP/2.
+
+00:00:08.342 --> 00:00:11.078
+O código está nas anotações
+do instrutor abaixo.
+
+00:00:11.144 --> 00:00:13.914
+Faça o download e comece
+a usar o console.
+
+00:00:13.981 --> 00:00:18.285
+Ele vai iniciar um servidor HTTP/1
+e um HTTP/2.
+
+00:00:18.318 --> 00:00:21.722
+Use os links do código
+para abrir cada site.
+
+00:00:21.788 --> 00:00:24.358
+Ambos servidores armazenam
+o mesmo site.
+
+00:00:24.391 --> 00:00:28.161
+Depois use o DevTools para ver bytes
+reduzidos e totais transferidos.
+
+00:00:28.195 --> 00:00:30.330
+Coloque
+a diferença percentual aqui.
+
+00:00:30.364 --> 00:00:33.133
+Depois descubra quanto tempo
+o carregamento aumentou.
+
+00:00:33.167 --> 00:00:34.868
+Coloque a porcentagem aqui.
+
+00:00:34.902 --> 00:00:37.070
+Veja dicas úteis nas anotações
+do instrutor
+
+00:00:37.137 --> 00:00:40.107
+sobre como operar o código
+e carregar os exercícios.
+

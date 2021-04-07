@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.850
+In this exercise, I want you to see the difference between loading
+
+00:00:03.850 --> 00:00:08.115
+a site over HTTP/1 versus loading it over HTTP/2.
+
+00:00:08.115 --> 00:00:10.895
+You'll find the binary in the instructor notes below.
+
+00:00:10.895 --> 00:00:13.760
+Download it and start it using the console.
+
+00:00:13.760 --> 00:00:18.245
+It will start both in HTTP/1 server as well as an HTTP/2 one.
+
+00:00:18.245 --> 00:00:21.670
+Use the links provided by the binary to launch each site.
+
+00:00:21.670 --> 00:00:24.235
+Both servers actually host the exact same website.
+
+00:00:24.235 --> 00:00:28.135
+Then use dev tools to figure out the reduction in total bytes transferred.
+
+00:00:28.135 --> 00:00:30.160
+Enter the percentage difference here.
+
+00:00:30.160 --> 00:00:32.902
+Then figure out how much the load time increased.
+
+00:00:32.902 --> 00:00:34.585
+Enter that percentage here.
+
+00:00:34.585 --> 00:00:37.180
+Check in the instructor notes for some helpful tips on
+
+00:00:37.180 --> 00:00:39.590
+working with the binary and loading the exercises.
+

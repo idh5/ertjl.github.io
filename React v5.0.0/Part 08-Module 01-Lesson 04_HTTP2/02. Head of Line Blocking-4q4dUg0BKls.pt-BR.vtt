@@ -1,0 +1,159 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:04.004
+O número médio de solicitações
+necessárias para exibir um site
+
+00:00:04.071 --> 00:00:08.041
+aumenta constantemente,
+e recentemente passou de 100.
+
+00:00:08.075 --> 00:00:13.013
+Em média, são necessárias mais de
+100 solicitações para ser exibido.
+
+00:00:13.080 --> 00:00:14.915
+As coisas estão ficando
+meio doidas.
+
+00:00:15.082 --> 00:00:18.819
+Lembre que o HTTP/1 não lida bem
+com muitas solicitações.
+
+00:00:18.852 --> 00:00:21.855
+Felizmente,
+o HTTP/2 veio ao resgate.
+
+00:00:21.889 --> 00:00:24.024
+Veremos alguns problemas
+do HTTP/1
+
+00:00:24.057 --> 00:00:26.860
+e como o HTTP/2 os resolve.
+
+00:00:26.894 --> 00:00:30.497
+Um dos motivos para haver
+tantas solicitações
+
+00:00:30.531 --> 00:00:32.900
+é o bloqueio HOL.
+Falamos disso antes,
+
+00:00:33.033 --> 00:00:36.203
+mas é tão iportante que vou falar
+rapidamente disso de novo.
+
+00:00:36.303 --> 00:00:39.039
+O bloqueio HOL é
+quando uma solicitação
+
+00:00:39.072 --> 00:00:41.341
+impede que as outras
+sejam executadas.
+
+00:00:41.408 --> 00:00:45.546
+O navegador abre no máximo
+seis conexões com o mesmo servidor,
+
+00:00:45.646 --> 00:00:47.714
+ou seja,
+no máximo seis solicitações
+
+00:00:47.748 --> 00:00:49.983
+podem ser transmitidas
+simultaneamente.
+
+00:00:50.017 --> 00:00:53.020
+No mínimo, você terá que esperar
+que a solicitação seja enviada
+
+00:00:53.053 --> 00:00:55.055
+e que a resposta
+seja enviada de volta.
+
+00:00:55.122 --> 00:00:57.858
+Esses dois processos juntos
+são chamados de "roundtrip".
+
+00:00:57.891 --> 00:01:01.862
+O tempo da roundtrip
+pode levar de 20ms a 50ms
+
+00:01:01.895 --> 00:01:03.897
+numa conexão boa.
+
+00:01:03.964 --> 00:01:05.833
+Vamos fazer
+umas contas rápidas.
+
+00:01:05.866 --> 00:01:08.836
+Digamos que um site
+precisa enviar 100 pedidos
+
+00:01:08.869 --> 00:01:10.404
+para carregar por completo.
+
+00:01:10.470 --> 00:01:12.873
+Podemos lidar com seis solicitações
+em paralelo,
+
+00:01:12.906 --> 00:01:14.308
+o que significa que,
+idealmente,
+
+00:01:14.341 --> 00:01:17.144
+cada conexão precisará
+de 17 conexões
+
+00:01:17.211 --> 00:01:20.347
+para baixar
+todas as 100 solicitações.
+
+00:01:20.414 --> 00:01:25.018
+Como cada solicitação tem
+tempo médio de roundtrip de 35ms,
+
+00:01:25.052 --> 00:01:28.622
+isso dá um total de 525ms.
+
+00:01:28.655 --> 00:01:31.859
+É 0,5s de espera,
+
+00:01:31.892 --> 00:01:33.460
+sem fazer nada.
+
+00:01:33.527 --> 00:01:36.864
+E isso assumindo que a transferência
+do arquivo solicitado
+
+00:01:36.897 --> 00:01:38.899
+não tome tempo algum.
+
+00:01:38.966 --> 00:01:40.834
+Se o arquivo transferido
+for grande,
+
+00:01:40.868 --> 00:01:42.836
+este número será muito maior.
+
+00:01:42.870 --> 00:01:45.839
+Este tempo de roundtrip
+é uma média.
+
+00:01:45.873 --> 00:01:48.675
+Se a conexão com a internet
+for instável ou lenta,
+
+00:01:48.709 --> 00:01:49.910
+as coisas só pioram.
+
+00:01:50.043 --> 00:01:54.047
+O bloqueio HOL é um desastre
+para o bom carregamento de um site.
+
+00:01:54.081 --> 00:01:57.317
+No HTTP/2, não precisamos
+nos preocupar com bloqueio HOL.
+

@@ -1,0 +1,60 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.083 --> 00:00:02.917
+O HTTP surgiu
+no início dos anos 90.
+
+00:00:02.958 --> 00:00:05.625
+Entre 2010 e 2015,
+
+00:00:05.667 --> 00:00:09.125
+a quantidade de dados transferidos
+de uma única página triplicou.
+
+00:00:09.167 --> 00:00:14.042
+O número de solicitações necessárias
+para obter os dados também cresce.
+
+00:00:14.083 --> 00:00:17.417
+O HTTP é utilizado com objetivos
+e em condições muito diferentes
+
+00:00:17.458 --> 00:00:19.292
+daqueles para os quais foi criado.
+
+00:00:19.333 --> 00:00:23.042
+Escolhas que faziam sentido na época
+estão se tornando problemáticas,
+
+00:00:23.083 --> 00:00:25.625
+tanto em termos de desenvolvimento
+quanto de desempenho.
+
+00:00:25.667 --> 00:00:27.042
+Algumas práticas atuais,
+
+00:00:27.083 --> 00:00:30.125
+como concatenar todos os Javascripts
+num único arquivo,
+
+00:00:30.167 --> 00:00:34.167
+existem somente para resolver
+limitações do HTTP/1.
+
+00:00:34.208 --> 00:00:36.375
+É aí que entra o HTTP/2.
+
+00:00:36.417 --> 00:00:41.250
+Além de ser retrocompatível,
+ele resolve os problemas do HTTP/1.
+
+00:00:41.292 --> 00:00:44.500
+Aprenderemos o que o HTTP/2
+tem de diferente do HTTP/1
+
+00:00:44.542 --> 00:00:47.292
+e como essas diferenças ajudam
+a tornar seus aplicativos melhores.
+

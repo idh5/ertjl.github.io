@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.417 --> 00:00:02.083
+Até onde sabemos,
+
+00:00:02.125 --> 00:00:05.458
+o HTTP/2 funciona da mesma forma
+que o HTTP/1.
+
+00:00:05.500 --> 00:00:09.208
+O que muda são as precauções
+que você deve tomar.
+
+00:00:09.250 --> 00:00:12.083
+Você deve criar aplicativos
+para a web pensando no HTTP/2,
+
+00:00:12.125 --> 00:00:15.042
+já que o número de navegadores
+que não suporta HTTP/2
+
+00:00:15.083 --> 00:00:16.458
+está cada vez menor.
+
+00:00:16.500 --> 00:00:18.333
+Se estiver rodando
+seu próprio navegador
+
+00:00:18.375 --> 00:00:20.583
+ou tentando descobrir
+onde hospedar o aplicativo,
+
+00:00:20.625 --> 00:00:23.333
+certifique-se de habilitar o HTTP/2
+lá também.
+
+00:00:23.375 --> 00:00:25.208
+Para mais informações
+sobre isso,
+
+00:00:25.250 --> 00:00:27.333
+veja o link nas anotações
+
+00:00:27.375 --> 00:00:30.000
+com os provedores
+e navegadores mais comuns.
+
+00:00:30.042 --> 00:00:32.417
+Na próxima aula, veremos
+medidas de segurança
+
+00:00:32.458 --> 00:00:35.167
+como compartilhamento de recursos,
+política de mesma origem
+
+00:00:35.208 --> 00:00:36.583
+e cross-site scripting.
+
+00:00:36.625 --> 00:00:39.042
+Talvez você tenha a chance
+de hackear um pouco.
+

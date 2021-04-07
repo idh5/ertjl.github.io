@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:03.100
+Este é o resultado
+do servidor HTTP/1,
+
+00:00:03.133 --> 00:00:06.767
+e este aqui
+é o do servidor HTTP/2.
+
+00:00:06.800 --> 00:00:10.833
+O servidor HTTP/1
+transferiu 336kb,
+
+00:00:10.867 --> 00:00:15.400
+enquanto o servidor HTTP/2
+transferiu apenas 177kb.
+
+00:00:15.433 --> 00:00:18.867
+É uma redução de mais ou menos
+47% nos bytes transferidos.
+
+00:00:18.900 --> 00:00:21.067
+É quase metade
+do número de bytes.
+
+00:00:21.100 --> 00:00:23.500
+Também não surpreende
+que o servidor HTTP/2
+
+00:00:23.533 --> 00:00:25.500
+tenha carregado o site
+muito mais rápido.
+
+00:00:25.533 --> 00:00:29.533
+Ele carregou o site
+e todo o conteúdo em 911ms.
+
+00:00:29.567 --> 00:00:33.167
+O servidor HTTP/1
+demorou 2,86s.
+
+00:00:33.200 --> 00:00:36.167
+É um aumento aproximado de 68%
+na velocidade.
+
+00:00:36.200 --> 00:00:38.933
+O servidor HTTP/2
+é muito mais rápido
+
+00:00:38.967 --> 00:00:41.100
+e também transfere
+menos informações.
+

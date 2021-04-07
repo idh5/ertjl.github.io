@@ -1,0 +1,296 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Development Techniques for HTTP/2 Quiz</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTTP/2</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. HTTP2 Intro.html">01. HTTP/2 Intro</a>
+    </li>
+    <li class="">
+      <a href="02. HTTP1 Problem Head of Line Blocking.html">02. HTTP/1 Problem: Head of Line Blocking</a>
+    </li>
+    <li class="">
+      <a href="03. HTTP1 Problem Uncompressed Headers.html">03. HTTP/1 Problem: Uncompressed Headers</a>
+    </li>
+    <li class="">
+      <a href="04. HTTP1 Problem Security.html">04. HTTP/1 Problem: Security</a>
+    </li>
+    <li class="">
+      <a href="05. HTTP2 Improvements.html">05. HTTP/2 Improvements</a>
+    </li>
+    <li class="">
+      <a href="06. HTTP1 vs HTTP2 Quiz.html">06. HTTP/1 vs HTTP/2 Quiz</a>
+    </li>
+    <li class="">
+      <a href="07. Working with HTTP2.html">07. Working with HTTP/2</a>
+    </li>
+    <li class="">
+      <a href="08. Development Techniques for HTTP2 Quiz.html">08. Development Techniques for HTTP/2 Quiz</a>
+    </li>
+    <li class="">
+      <a href="09. Outro.html">09. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Development Techniques for HTTP/2 Quiz</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Development Techniques Quiz</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="08. Development Techniques Quiz-EgYnH5IOs7I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. Development Techniques Quiz-EgYnH5IOs7I.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="ko" src="08. Development Techniques Quiz-EgYnH5IOs7I.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="08. Development Techniques Quiz-EgYnH5IOs7I.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="08. Development Techniques Quiz-EgYnH5IOs7I.zh-CN.vtt" label="CN">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8387559532.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 40.635393569844794%; left: 37.05774625935162%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="Minify JavaScript">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 52.90673503325942%; left: 37.16879675810474%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check2" aria-label="Concatenate JavaScript">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 65.10878603104213%; left: 37.14541770573566%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check3" aria-label="Minify CSS">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 77.68154101995566%; left: 36.99929862842893%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check4" aria-label="Concatenate CSS">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 40.26468957871397%; left: 72.33673628428927%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check5" aria-label="Sprite Images">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 53.1319290465632%; left: 72.330891521197%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check6" aria-label="Use a CDN">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 65.0360310421286%; left: 72.3698566084788%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check7" aria-label="Shard your assets">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 77.65382483370288%; left: 72.42245947630923%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check8" aria-label="Minify your Markup">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="08. Development Techniques Quiz-CIoOHxR9Gew.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. Development Techniques Quiz-CIoOHxR9Gew.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="ko" src="08. Development Techniques Quiz-CIoOHxR9Gew.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="08. Development Techniques Quiz-CIoOHxR9Gew.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="08. Development Techniques Quiz-CIoOHxR9Gew.zh-CN.vtt" label="CN">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Outro.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Development Techniques for HTTP/2 Quiz')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
