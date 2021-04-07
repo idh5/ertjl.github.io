@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.083 --> 00:00:03.375
+Se o documento de index
+for enviado via HTTPS,
+
+00:00:03.417 --> 00:00:05.500
+ótimo! Mas e o restante
+do conteúdo?
+
+00:00:05.542 --> 00:00:08.250
+Eles também são enviados
+via HTTPS?
+
+00:00:08.292 --> 00:00:10.458
+Um jeito rápido de romper
+o cadeado verde
+
+00:00:10.500 --> 00:00:13.542
+é ter o conteúdo enviado
+via HTTP normal.
+
+00:00:13.583 --> 00:00:17.583
+Quando isso acontece,
+o site fica num estado misto.
+
+00:00:17.625 --> 00:00:22.458
+Isso acontece quando abrimos um site
+que deveria usar HTTPS,
+
+00:00:22.500 --> 00:00:26.542
+mas contém conteúdo de imagens,
+iframes, folhas de estilo e scripts
+
+00:00:26.583 --> 00:00:29.375
+de origens não asseguradas
+pelo HTTPS.
+
+00:00:29.417 --> 00:00:33.583
+Um erro comum é puxar um jQuery
+de uma CDN não habilitada para TLS.
+
+00:00:34.625 --> 00:00:38.625
+Dependendo do tipo de recurso
+incluído via um canal não seguro,
+
+00:00:39.042 --> 00:00:40.500
+as consequências podem variar.
+
+00:00:40.542 --> 00:00:43.625
+O site pode não ter o cadeado verde,
+mas continuar funcional,
+
+00:00:44.042 --> 00:00:46.458
+o recurso pode ser bloqueado
+ou quebrar sua página,
+
+00:00:46.500 --> 00:00:50.083
+ou o site pode até mesmo receber
+o vergonhoso cadeado vermelho.
+
+00:00:50.125 --> 00:00:52.250
+O efeito varia
+de acordo com os navegadores,
+
+00:00:52.292 --> 00:00:55.583
+então evite isso e procure verificar
+se seu site tem conteúdo misto.
+
+00:00:55.625 --> 00:01:00.333
+O Google recomenda que você envie
+todo o seu conteúdo via HTTPS.
+
+00:01:00.375 --> 00:01:03.208
+Assim evita-se o conteúdo misto
+no seu site
+
+00:01:03.250 --> 00:01:06.208
+e o conteúdo será transferido
+de forma segura.
+

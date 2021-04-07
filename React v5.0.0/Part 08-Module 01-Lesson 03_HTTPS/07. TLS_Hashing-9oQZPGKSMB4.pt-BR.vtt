@@ -1,0 +1,87 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:02.033
+Vimos um pouco
+de criptografia,
+
+00:00:02.067 --> 00:00:05.200
+mas lembre que o TLS
+é composto de duas partes:
+
+00:00:05.233 --> 00:00:06.667
+criptografia e hashing.
+
+00:00:06.700 --> 00:00:09.333
+Hashing é o processo
+de transformar dados
+
+00:00:09.367 --> 00:00:12.167
+numa representação menor
+deles mesmos.
+
+00:00:12.200 --> 00:00:15.033
+Pequenas modificações
+nos dados originais
+
+00:00:15.067 --> 00:00:17.200
+causarão mudanças enormes
+na hash.
+
+00:00:17.267 --> 00:00:20.200
+Se dois documentos tiverem
+os mesmos valores de hash,
+
+00:00:20.267 --> 00:00:23.833
+é muito provável que sejam
+o mesmo documento.
+
+00:00:23.867 --> 00:00:27.167
+Há algumas coisas importantes
+em relação à função hash.
+
+00:00:27.200 --> 00:00:31.033
+Primeiro deve ser impossível
+reverter o processo de conversão.
+
+00:00:31.067 --> 00:00:34.067
+Ou seja, uma vez que os dados
+são convertidos em hash,
+
+00:00:34.167 --> 00:00:38.067
+não podem ser "desconvertidos"
+de volta aos dados originais.
+
+00:00:38.100 --> 00:00:39.200
+Em segundo lugar,
+
+00:00:39.233 --> 00:00:42.833
+deve ser igualmente impossível
+encontrar outro documento
+
+00:00:42.867 --> 00:00:44.567
+com valor de hash idêntico.
+
+00:00:45.200 --> 00:00:47.933
+Uma das funções de hash
+mais comuns é "SHA",
+
+00:00:48.000 --> 00:00:52.433
+que existe de várias formas,
+como "SHA256" e "SHA512".
+
+00:00:52.467 --> 00:00:56.933
+O número indica o tamanho
+do output da hash em bits.
+
+00:00:57.000 --> 00:01:00.167
+Não importa o tamanho original
+do documento,
+
+00:01:00.200 --> 00:01:03.433
+o output sempre terá 256 bits
+
+00:01:03.467 --> 00:01:05.800
+quando você usar SHA256.
+

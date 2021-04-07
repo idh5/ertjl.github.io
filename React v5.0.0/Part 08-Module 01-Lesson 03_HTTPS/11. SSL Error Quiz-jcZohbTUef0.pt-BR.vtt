@@ -1,0 +1,41 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:04.071
+A cor de fundo de cada link
+indica o que acontecerá.
+
+00:00:04.137 --> 00:00:06.540
+Vermelho: não vai funcionar.
+Verde: vai funcionar.
+
+00:00:06.573 --> 00:00:10.043
+Outras cores, como laranja,
+indicam resultados questionáveis.
+
+00:00:10.077 --> 00:00:13.514
+Um certificado expirado
+ou um para o host errado
+
+00:00:13.547 --> 00:00:15.749
+negam o acesso.
+
+00:00:15.816 --> 00:00:18.185
+Conteúdo misto,
+
+00:00:18.218 --> 00:00:20.287
+cadeia incompleta
+
+00:00:20.320 --> 00:00:23.223
+e SHA256
+permitem que o usuário acesse.
+
+00:00:23.290 --> 00:00:26.793
+Porém, nem todos estes
+resultam no cadeado verde.
+
+00:00:26.827 --> 00:00:29.696
+Estas são as respostas corretas.
+Ótimo trabalho!
+

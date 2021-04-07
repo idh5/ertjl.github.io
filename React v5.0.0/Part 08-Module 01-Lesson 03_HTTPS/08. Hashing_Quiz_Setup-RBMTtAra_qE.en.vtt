@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.960
+With this text the SHA1 hashing function gave me this.
+
+00:00:04.960 --> 00:00:08.430
+SHA256 resulted in this.
+
+00:00:08.430 --> 00:00:11.030
+And here's what SHA512 produced.
+
+00:00:11.030 --> 00:00:14.400
+Each one of these hashing functions started with the same text.
+
+00:00:14.400 --> 00:00:17.435
+But the hashes that were produced are completely different.
+
+00:00:17.435 --> 00:00:20.015
+Let's say that my message is not all that exciting,
+
+00:00:20.015 --> 00:00:22.550
+so I should only be cheering with one arm in the air.
+
+00:00:22.550 --> 00:00:26.555
+Removing just one character produced entirely different hashes.
+
+00:00:26.555 --> 00:00:30.440
+As you can see if anyone tries to tamper with even one character,
+
+00:00:30.440 --> 00:00:32.870
+they'll end up changing the entire hash.
+
+00:00:32.870 --> 00:00:35.240
+So it's easy for browsers and servers to see
+
+00:00:35.240 --> 00:00:38.030
+this difference and know that the data has been altered.
+

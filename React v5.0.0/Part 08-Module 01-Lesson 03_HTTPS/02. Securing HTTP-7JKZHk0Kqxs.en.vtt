@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.667
+At this point, we are painfully aware that HTTP is very easy to read even for humans.
+
+00:00:05.667 --> 00:00:08.130
+You can almost literally want to request fly
+
+00:00:08.130 --> 00:00:11.385
+by on a console and still understand what is going on.
+
+00:00:11.385 --> 00:00:13.770
+So I think we can agree that if someone manages to
+
+00:00:13.770 --> 00:00:16.350
+somehow eavesdrop on an open HTTP connection,
+
+00:00:16.350 --> 00:00:19.155
+the eServer can read all the requests and responses,
+
+00:00:19.155 --> 00:00:21.510
+and extract all the data they need.
+
+00:00:21.510 --> 00:00:24.675
+But how easy is it to eavesdrop on a connection?
+
+00:00:24.675 --> 00:00:26.475
+As I mentioned in the introduction,
+
+00:00:26.475 --> 00:00:28.695
+Wi-Fi makes it much easier as you're
+
+00:00:28.695 --> 00:00:32.015
+literally broadcasting your connection over radio waves.
+
+00:00:32.015 --> 00:00:35.695
+So all someone needs to do is listen and with special listening software,
+
+00:00:35.695 --> 00:00:37.150
+it gets even easier.
+
+00:00:37.150 --> 00:00:39.725
+Look in the instructor notes for more information about this.
+
+00:00:39.725 --> 00:00:41.710
+Encrypting the Wi-Fi will help,
+
+00:00:41.710 --> 00:00:44.430
+but you have no control over the settings of the Wi-Fi at
+
+00:00:44.430 --> 00:00:48.165
+a cafe and old encryptions are easily breakable.
+
+00:00:48.165 --> 00:00:51.470
+That's why one feature of HTTPS is encryption.
+
+00:00:51.470 --> 00:00:54.315
+It will make your browser encrypt requests in a way that
+
+00:00:54.315 --> 00:00:57.475
+only the server you're connected to can decrypt them.
+
+00:00:57.475 --> 00:00:59.460
+Neither the store owner nor
+
+00:00:59.460 --> 00:01:03.275
+the malicious eavesdropper at your local cafe will be able to read your data stream.
+
+00:01:03.275 --> 00:01:07.240
+But what if you think you're connected to the right server when you're not?
+
+00:01:07.240 --> 00:01:10.105
+In a man in the middle attack or MITM for short,
+
+00:01:10.105 --> 00:01:13.459
+the attacker gets between you and the server you're trying to connect to.
+
+00:01:13.459 --> 00:01:17.615
+When this happens, your browser will make an encrypted connection to their server,
+
+00:01:17.615 --> 00:01:21.240
+as if of the server you thought you were trying to connect to, like Facebook.
+
+00:01:21.240 --> 00:01:23.120
+The attacker will decrypt your data,
+
+00:01:23.120 --> 00:01:24.730
+read all of your private information,
+
+00:01:24.730 --> 00:01:28.800
+re-encrypt it and forward it to Facebook's server and vice versa.
+
+00:01:28.800 --> 00:01:32.200
+Neither Facebook nor you would know that they are sitting in the middle.
+
+00:01:32.200 --> 00:01:37.365
+To remedy this, HTTPS's other feature besides encryption is authentication.
+
+00:01:37.365 --> 00:01:41.130
+The seller will have to identify itself in a way only the real server could,
+
+00:01:41.130 --> 00:01:44.560
+so you can be sure that you are talking to the right server.
+

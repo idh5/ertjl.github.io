@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.435
+Security is an important but sometimes intimidating aspect of web development.
+
+00:00:04.435 --> 00:00:06.990
+If you didn't know what HTTPS was before this lesson,
+
+00:00:06.990 --> 00:00:09.450
+you should feel much more comfortable with it now.
+
+00:00:09.450 --> 00:00:13.410
+Most hosting services and CDN's have support for TLS nowadays and with
+
+00:00:13.410 --> 00:00:17.310
+more and more browser API's being enabled for HTTP web sites only,
+
+00:00:17.310 --> 00:00:21.365
+you should always use HTTPS for your users and your own sake.
+
+00:00:21.365 --> 00:00:23.070
+In the next lesson, we'll take a look at
+
+00:00:23.070 --> 00:00:28.000
+the new HTPP/2 standard and what that means for you and your project spill steps.
+

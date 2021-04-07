@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.445
+When we talk about HTTPS,
+
+00:00:02.445 --> 00:00:04.970
+we are actually talking about two different concepts.
+
+00:00:04.970 --> 00:00:08.370
+HTTP and TLS, formerly known as SSL.
+
+00:00:08.370 --> 00:00:10.405
+We already know about HTTP,
+
+00:00:10.405 --> 00:00:14.245
+and TLS stands for Transport Layer Security.
+
+00:00:14.245 --> 00:00:15.915
+TLS is not specific to HTTP,
+
+00:00:15.915 --> 00:00:17.610
+but any protocol can use it.
+
+00:00:17.610 --> 00:00:19.275
+For example, there is FTPS,
+
+00:00:19.275 --> 00:00:21.616
+which is FTP with TLS,
+
+00:00:21.616 --> 00:00:23.430
+to transfer files securely.
+
+00:00:23.430 --> 00:00:26.670
+TLS encrypts communication in a way that can't be
+
+00:00:26.670 --> 00:00:30.290
+read by anyone else other than the intended recipients.
+
+00:00:30.290 --> 00:00:34.005
+In practice, it is impossible to break a TLS encryption.
+
+00:00:34.005 --> 00:00:37.530
+To ensure that you're talking to the server you intend to talk to,
+
+00:00:37.530 --> 00:00:39.555
+TLS utilizes something called,
+
+00:00:39.555 --> 00:00:40.905
+a chain of trust.
+
+00:00:40.905 --> 00:00:43.980
+A server identifies itself with a certificate that contains
+
+00:00:43.980 --> 00:00:49.880
+both a little metadata about itself and the fingerprint of its encryption key.
+
+00:00:57.050 --> 00:01:03.065
+These certificates are issued by one of a handful certificate authorities.
+
+00:01:03.065 --> 00:01:05.795
+If that certificate is signed by such an authority,
+
+00:01:05.795 --> 00:01:09.320
+you know that if the key you're using matches that fingerprint,
+
+00:01:09.320 --> 00:01:12.192
+then you're talking to the correct server.
+
+00:01:12.192 --> 00:01:16.680
+The list of certificate authorities can actually be found in the browser.
+
+00:01:16.680 --> 00:01:19.860
+You could even add your very own authority if you wanted to.
+
+00:01:19.860 --> 00:01:23.880
+What you see here are mostly companies that you can buy certificates from.
+
+00:01:23.880 --> 00:01:26.835
+They cost money as they not only validate your server,
+
+00:01:26.835 --> 00:01:30.930
+but also validate your identity as the owner of that server.
+
+00:01:30.930 --> 00:01:34.080
+Since not every developer can or wants to pay money for
+
+00:01:34.080 --> 00:01:37.212
+a certificate to offer basic security to the users,
+
+00:01:37.212 --> 00:01:41.175
+"Let's Encrypt" has come into the market and offer certificates for free.
+
+00:01:41.175 --> 00:01:46.050
+Let's take a closer look at how certificates work and the security they provide.
+

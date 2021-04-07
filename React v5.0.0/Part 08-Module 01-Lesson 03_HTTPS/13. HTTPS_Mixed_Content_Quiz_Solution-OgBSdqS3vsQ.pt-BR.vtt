@@ -1,0 +1,74 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:03.704 --> 00:00:05.005
+Ao trabalhar localmente,
+
+00:00:05.038 --> 00:00:08.008
+desenvolvedores costumam usar
+certificados auto-assinados,
+
+00:00:08.041 --> 00:00:12.112
+que referem a si próprios
+como autoridades certificadoras.
+
+00:00:12.179 --> 00:00:15.349
+Assim eles não fornecem
+nenhuma autenticação.
+
+00:00:15.382 --> 00:00:18.485
+O navegador vai reclamar e atribuir
+um cadeado vermelho ao site,
+
+00:00:18.519 --> 00:00:21.221
+mas isso te permite testar
+se o site tem conteúdo misto.
+
+00:00:22.356 --> 00:00:24.992
+Inicialize o código
+deste projeto
+
+00:00:25.025 --> 00:00:27.327
+e carregue a URL fornecida
+no seu navegador.
+
+00:00:27.361 --> 00:00:30.364
+Você deve perceber que,
+ao inicializar o servidor,
+
+00:00:30.397 --> 00:00:33.233
+ele gera automaticamente
+um certificado auto-assinado.
+
+00:00:33.467 --> 00:00:35.736
+Como se trata
+de um certificado auto-assinado,
+
+00:00:36.003 --> 00:00:37.571
+talvez você veja
+uma página de erro.
+
+00:00:37.638 --> 00:00:40.073
+É seguro prosseguir,
+então clique em "Avançado"
+
+00:00:40.107 --> 00:00:42.309
+e depois no link
+para prosseguir.
+
+00:00:42.342 --> 00:00:46.046
+Você verá que a logo da Udacity
+se fragmentou em vários blocos.
+
+00:00:46.079 --> 00:00:48.148
+Há violações
+de conteúdo misto?
+
+00:00:48.182 --> 00:00:51.151
+Se sim, qual bloco
+está causando o problema?
+
+00:00:51.185 --> 00:00:53.020
+Insira as informações do bloco aqui.
+

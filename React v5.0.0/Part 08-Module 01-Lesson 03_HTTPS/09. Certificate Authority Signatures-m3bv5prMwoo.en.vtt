@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.205
+Now that we have a good grasp on TLS,
+
+00:00:02.205 --> 00:00:04.080
+let's talk about signatures.
+
+00:00:04.080 --> 00:00:06.240
+I mentioned certificate authorities earlier,
+
+00:00:06.240 --> 00:00:08.145
+and their job is to sign certificates.
+
+00:00:08.145 --> 00:00:09.325
+But what does it mean,
+
+00:00:09.325 --> 00:00:12.150
+and why would anyone want a signed certificate?
+
+00:00:12.150 --> 00:00:14.310
+When we say someone has signed a document,
+
+00:00:14.310 --> 00:00:16.725
+we mean that the certificate authority has reviewed
+
+00:00:16.725 --> 00:00:19.410
+and verified the contents of that document.
+
+00:00:19.410 --> 00:00:21.685
+The purpose is to have some kind of proof
+
+00:00:21.685 --> 00:00:26.780
+that document was seen or even created by that entity.
+
+00:00:30.440 --> 00:00:34.330
+Just like signing your name on a document,
+
+00:00:34.330 --> 00:00:36.540
+it's legal proof that you saw the document,
+
+00:00:36.540 --> 00:00:40.450
+a server can do the same thing with a digital signature.
+
+00:00:40.450 --> 00:00:44.635
+When a server signs a document and encrypts it with a private key,
+
+00:00:44.635 --> 00:00:47.550
+they give that back as a signed document.
+
+00:00:47.550 --> 00:00:51.501
+Since only the holder of the private key is able to encrypt documents,
+
+00:00:51.501 --> 00:00:56.875
+you know the document you received is exactly the same as the one the server sent.
+
+00:00:56.875 --> 00:00:59.755
+However, documents can become fairly large,
+
+00:00:59.755 --> 00:01:01.540
+think of DVD images for example,
+
+00:01:01.540 --> 00:01:06.540
+and encrypting and decrypting takes a long time with asymmetric ciphers.
+
+00:01:06.540 --> 00:01:09.835
+That's why instead of encrypting the entire document itself,
+
+00:01:09.835 --> 00:01:12.940
+just the hash of the document is encrypted.
+
+00:01:12.940 --> 00:01:15.490
+If you want to check if the signature is valid,
+
+00:01:15.490 --> 00:01:17.950
+you would decrypt the signature and hash
+
+00:01:17.950 --> 00:01:21.820
+the document yourself to see if those two values match.
+
+00:01:21.820 --> 00:01:24.220
+This way, we know that the document we received is
+
+00:01:24.220 --> 00:01:27.345
+exactly the same as when the server sent it.
+
+00:01:27.345 --> 00:01:29.890
+If the document was changed mid-flight,
+
+00:01:29.890 --> 00:01:33.850
+the hash will not match the one provided by the server as its signature.
+
+00:01:33.850 --> 00:01:36.000
+This is called an invalid signature.
+

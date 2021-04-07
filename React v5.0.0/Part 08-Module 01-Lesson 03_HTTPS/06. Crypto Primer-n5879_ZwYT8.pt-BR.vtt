@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.458 --> 00:00:03.375
+O TLS tem duas bases
+criptográficas importantes:
+
+00:00:03.417 --> 00:00:05.625
+criptografia e hashing.
+
+00:00:05.667 --> 00:00:07.583
+Quando as pessoas
+pensam em criptografia,
+
+00:00:07.625 --> 00:00:09.708
+provavelmente pensam
+em criptografia simétrica.
+
+00:00:09.750 --> 00:00:11.250
+Você criptografa dados
+
+00:00:11.292 --> 00:00:13.583
+e entrega os dados criptografados
+para alguém.
+
+00:00:13.625 --> 00:00:15.000
+Obrigado.
+
+00:00:15.042 --> 00:00:18.208
+Ele precisa ter a mesma chave
+para decodificar os dados,
+
+00:00:18.250 --> 00:00:21.333
+senão, não terá acesso
+a eles.
+
+00:00:22.542 --> 00:00:24.250
+Com alguns truques
+matemáticos,
+
+00:00:24.292 --> 00:00:26.708
+o navegador pode usar
+algoritmos de criptografia
+
+00:00:26.750 --> 00:00:28.542
+que têm uma chave
+para criptografar
+
+00:00:28.583 --> 00:00:30.583
+e outra para decodificar.
+
+00:00:30.625 --> 00:00:33.542
+Geralmente, a chave de criptografia
+é pública,
+
+00:00:33.583 --> 00:00:36.500
+de forma que qualquer um
+que queira enviar uma mensagem
+
+00:00:36.542 --> 00:00:38.375
+possa criptografa-la
+com essa chave.
+
+00:00:38.417 --> 00:00:43.208
+As pessoas não poderão decodificar
+a mensagem com a mesma chave,
+
+00:00:43.250 --> 00:00:47.125
+somente você, que tem a chave
+de decodificação, poderá fazer isso.
+
+00:00:47.583 --> 00:00:50.208
+Devido à matemática que acontece
+por baixo dos panos,
+
+00:00:50.250 --> 00:00:51.500
+na verdade, ambas as chaves
+
+00:00:51.542 --> 00:00:54.083
+podem ser usadas
+para criptografar e decodificar.
+
+00:00:54.125 --> 00:00:57.458
+O que uma chave criptografa
+só pode ser decodificado pela outra.
+
+00:00:58.083 --> 00:01:01.042
+Por isso faz mais sentido
+ter uma chave pública,
+
+00:01:01.083 --> 00:01:03.292
+disponível para qualquer um,
+e uma particular,
+
+00:01:03.333 --> 00:01:07.417
+disponível somente para o dono
+e devendo ser guardada em segurança.
+
+00:01:07.458 --> 00:01:09.083
+Por isso criptografia assimétrica
+
+00:01:09.125 --> 00:01:11.417
+também é chamada
+de criptografia da chave pública.
+

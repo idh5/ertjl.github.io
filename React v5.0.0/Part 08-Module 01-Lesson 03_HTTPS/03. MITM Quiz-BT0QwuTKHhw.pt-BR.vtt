@@ -1,0 +1,86 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.534 --> 00:00:01.802
+Para este exercício,
+
+00:00:01.835 --> 00:00:04.238
+você vai configurar um Proxy
+no seu sistema,
+
+00:00:04.304 --> 00:00:06.073
+carregar um site
+usando o Proxy
+
+00:00:06.139 --> 00:00:07.674
+e examinar os resultados.
+
+00:00:07.708 --> 00:00:10.210
+O Proxy é um man-in-the-middle
+legítimo
+
+00:00:10.244 --> 00:00:11.478
+e tem muitos benefícios,
+
+00:00:11.512 --> 00:00:14.348
+como economizar banda
+através de compressões adicionais,
+
+00:00:14.381 --> 00:00:17.718
+redução de tamanho de imagens
+e usando cache agressivamente.
+
+00:00:17.784 --> 00:00:20.187
+O Proxy que você vai usar
+vai apenas...
+
+00:00:20.220 --> 00:00:22.656
+Bom, é exatamente isso
+que você precisa descorbrir.
+
+00:00:22.689 --> 00:00:26.994
+Para este teste, escolha um site
+sem HTTPS.
+
+00:00:27.027 --> 00:00:31.031
+Você terá a chance de testar
+um site com HTTPS no próximo teste.
+
+00:00:31.064 --> 00:00:33.200
+O texto do site desaparece?
+
+00:00:33.233 --> 00:00:36.236
+As imagens do site
+aparecem invertidas?
+
+00:00:36.270 --> 00:00:38.138
+As cores do site
+ficam invertidas?
+
+00:00:38.172 --> 00:00:39.873
+Não é possível acessar o site?
+
+00:00:39.907 --> 00:00:42.876
+Ou nada muda visivelmente
+e o site parece normal?
+
+00:00:42.910 --> 00:00:45.512
+Lembre-se de rodar
+isto numa janela incógnita,
+
+00:00:45.546 --> 00:00:47.047
+para impedir o cache.
+
+00:00:47.080 --> 00:00:50.551
+Não esqueça de rodar o Proxy
+na sua própria máquina.
+
+00:00:50.584 --> 00:00:52.152
+O código para o Proxy
+está abaixo,
+
+00:00:52.186 --> 00:00:55.556
+junto com instruções de configuração
+do navegador para usar o Proxy.
+

@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.280
+So we have a look at encryption but remember that TLS
+
+00:00:03.280 --> 00:00:06.420
+is made up of two parts, encryption and hashing.
+
+00:00:06.420 --> 00:00:08.820
+Hashing is the process of transforming data
+
+00:00:08.820 --> 00:00:12.185
+into a short representation of the original data.
+
+00:00:12.185 --> 00:00:16.920
+The smallest change in the original data will have enormous changes in the hash.
+
+00:00:16.920 --> 00:00:19.778
+If two documents yield the same hash value,
+
+00:00:19.778 --> 00:00:23.515
+they are very very likely to be the same documents.
+
+00:00:23.515 --> 00:00:26.855
+There are a couple of things we care about with hashing functions.
+
+00:00:26.855 --> 00:00:30.615
+One, it should be impossible to revert the conversion process,
+
+00:00:30.615 --> 00:00:33.930
+meaning once data has been converted into a hash,
+
+00:00:33.930 --> 00:00:37.740
+it can't be unconverted back into the original data.
+
+00:00:37.740 --> 00:00:40.860
+And two, it should be just as impossible to
+
+00:00:40.860 --> 00:00:44.840
+find a different document yielding an identical hash value.
+
+00:00:44.840 --> 00:00:49.605
+One of the most common hashing functions is SHA which exists in multiple flavors like SHA
+
+00:00:49.605 --> 00:00:56.475
+256 or SHA 512 where the number says how big the output of the hash is in bits.
+
+00:00:56.475 --> 00:00:59.805
+No matter how big the document is that you pass in,
+
+00:00:59.805 --> 00:01:05.720
+you will always get 256 bits as output when you're using SHA 256.
+

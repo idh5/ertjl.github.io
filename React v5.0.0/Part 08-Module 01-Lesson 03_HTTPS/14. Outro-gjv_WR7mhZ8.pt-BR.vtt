@@ -1,0 +1,44 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.375 --> 00:00:01.875
+Segurança
+é um fator importante,
+
+00:00:01.917 --> 00:00:04.250
+mas às vezes intimidador,
+do desenvolvimento web.
+
+00:00:04.292 --> 00:00:06.708
+Se não sabia o que era HTTPS
+antes desta aula,
+
+00:00:06.750 --> 00:00:09.583
+deve estar se sentindo
+mais seguro agora.
+
+00:00:09.625 --> 00:00:12.792
+A maioria dos serviços de hospedagem
+na CDN suporta TLS hoje em dia
+
+00:00:12.833 --> 00:00:14.875
+e, como cada vez mais
+APIs de navegadores
+
+00:00:14.917 --> 00:00:17.333
+são habilitados apenas
+para sites com HTTPS,
+
+00:00:17.375 --> 00:00:21.333
+você deve sempre usar HTTPS,
+para o seu bem e dos seus usuários.
+
+00:00:21.375 --> 00:00:24.542
+Na próxima aula, aprenderemos
+sobre o padrão de HTTP/2
+
+00:00:24.583 --> 00:00:28.333
+e o que isso significa para você
+e para seus projetos.
+

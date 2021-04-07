@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.875
+In the previous scenario,
+
+00:00:01.875 --> 00:00:04.285
+only two things could have gone wrong.
+
+00:00:04.285 --> 00:00:09.075
+Either their certificate authority signature on the certificate turns out to be invalid,
+
+00:00:09.075 --> 00:00:13.915
+or the server wasn't able to communicate after switching to symmetric encryption.
+
+00:00:13.915 --> 00:00:16.940
+In reality, there's a whole lot more that can go wrong.
+
+00:00:16.940 --> 00:00:20.300
+Certificates have an expiration date so they can go bad.
+
+00:00:20.300 --> 00:00:24.300
+They prescribe the set of hash and symmetric encryption functions they support,
+
+00:00:24.300 --> 00:00:27.390
+some of which have been proved to be weak over the years.
+
+00:00:27.390 --> 00:00:29.320
+Sometimes the certificate is valid,
+
+00:00:29.320 --> 00:00:31.635
+but the rest of the server setup is not.
+
+00:00:31.635 --> 00:00:34.470
+A great site to see how the browser behaves when
+
+00:00:34.470 --> 00:00:38.465
+the TLS connection has some issues is badssl.com.
+
+00:00:38.465 --> 00:00:41.265
+Badssl has its own valid certificate,
+
+00:00:41.265 --> 00:00:44.280
+but it also has intentionally invalid certificates and
+
+00:00:44.280 --> 00:00:48.470
+invalid setups so we can see what the browser does in different situations.
+
+00:00:48.470 --> 00:00:50.890
+Let's check out Sha1-2016.
+
+00:00:50.890 --> 00:00:53.340
+Oh no, we've lost our green lock.
+
+00:00:53.340 --> 00:00:56.850
+Clicking this icon, gives us more information about the connection.
+
+00:00:56.850 --> 00:01:00.930
+Clicking this link, gives us specific details about the certificate being used.
+
+00:01:00.930 --> 00:01:05.070
+For this quiz, I want you to use the badssl website to
+
+00:01:05.070 --> 00:01:09.245
+figure out which setups cause Chrome to deny access to the website.
+
+00:01:09.245 --> 00:01:11.610
+Will it happen with an expired certificate?
+
+00:01:11.610 --> 00:01:14.190
+What about a certificate from another host?
+
+00:01:14.190 --> 00:01:18.120
+Does mixed content cause Chrome to deny access to the site? What about a-
+

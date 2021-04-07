@@ -1,0 +1,137 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.208 --> 00:00:02.792
+Agora podemos criptografar
+dados assimetricamente
+
+00:00:03.000 --> 00:00:04.250
+e para assinar dados.
+
+00:00:04.292 --> 00:00:08.000
+Eu disse que essas eram as bases
+do TLS, e agora provarei isso.
+
+00:00:08.042 --> 00:00:10.208
+Analisarei o processo
+de um navegador
+
+00:00:10.250 --> 00:00:13.083
+para estabelecer uma conexão TLS
+criptografada, passo a passo.
+
+00:00:13.125 --> 00:00:15.333
+Resumirei um pouco
+para ficar mais simples,
+
+00:00:15.375 --> 00:00:17.375
+mas sem prejudicar
+os conceitos.
+
+00:00:18.333 --> 00:00:21.375
+O primeiro passo é fazer o servidor
+te enviar um certificado.
+
+00:00:21.417 --> 00:00:24.208
+O certificado contém
+a chave pública do servidor,
+
+00:00:24.250 --> 00:00:27.458
+informações extra,
+como o domínio do certificado,
+
+00:00:27.500 --> 00:00:30.417
+e a assinatura
+da autoridade certificadora.
+
+00:00:31.208 --> 00:00:33.500
+Verifica-se então o domínio
+
+00:00:33.542 --> 00:00:37.125
+e se a assinatura da autoridade
+é válida.
+
+00:00:37.167 --> 00:00:39.167
+Como vimos antes,
+
+00:00:39.208 --> 00:00:42.083
+Todos os navegadores têm uma lista
+de autoridades certificadoras
+
+00:00:42.125 --> 00:00:44.250
+com as chaves públicas
+armazenadas localmente,
+
+00:00:44.292 --> 00:00:48.083
+então é essencial conferir
+se a assinatura é válida.
+
+00:00:48.125 --> 00:00:51.417
+O cliente gera uma chave aleatória
+para a criptografia simétrica,
+
+00:00:51.458 --> 00:00:53.292
+para ser usada
+desse momento em diante.
+
+00:00:53.333 --> 00:00:55.583
+O navegador criptografa
+a chave aleatória
+
+00:00:55.625 --> 00:00:58.000
+com a chave pública
+do servidor e a envia.
+
+00:00:58.042 --> 00:00:59.417
+Há duas vantagens nisso.
+
+00:00:59.458 --> 00:01:02.083
+A criptografia simétrica
+é mais rápida e eficiente
+
+00:01:02.125 --> 00:01:03.625
+e escalona melhor
+para Big Data,
+
+00:01:04.042 --> 00:01:05.625
+comparada
+à criptografia assimétrica.
+
+00:01:06.042 --> 00:01:07.292
+Porém,
+o mais importante
+
+00:01:07.333 --> 00:01:10.125
+é que o servidor só vai continuar
+se comunicando
+
+00:01:10.167 --> 00:01:12.417
+se tiver a chave particular
+
+00:01:12.458 --> 00:01:14.750
+e conseguir decodificar
+a chave aleatória.
+
+00:01:15.000 --> 00:01:17.417
+Isso valida de forma eficiente
+a identidade do servidor.
+
+00:01:18.292 --> 00:01:20.000
+Se tudo isso der certo,
+
+00:01:20.042 --> 00:01:22.167
+e sua última conexão
+for estabelecida,
+
+00:01:22.208 --> 00:01:24.417
+então o protocolo HTTP
+pode ser utilizado.
+
+00:01:24.458 --> 00:01:26.708
+Então, você verá o símbolo
+de um cadeado verde
+
+00:01:26.750 --> 00:01:28.375
+na barra de URL do navegador.
+

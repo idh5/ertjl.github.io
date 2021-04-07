@@ -1,0 +1,113 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.445 --> 00:00:04.092
+No cenário anterior, só duas coisas
+podem ter dado errado.
+
+00:00:04.127 --> 00:00:09.149
+Ou a assinatura de autoridade
+do certificado mostrou-se inválida
+
+00:00:09.184 --> 00:00:11.172
+ou o servidor não conseguiu
+se comunicar
+
+00:00:11.207 --> 00:00:13.709
+depois de alterar para algum tipo
+de criptografia métrica.
+
+00:00:13.744 --> 00:00:16.749
+Na verdade,
+muito mais coisas podem dar errado.
+
+00:00:16.784 --> 00:00:20.211
+Certificados têm data de validade,
+e isso pode dar errado.
+
+00:00:20.246 --> 00:00:21.804
+Eles prescrevem
+um conjunto de hash
+
+00:00:21.839 --> 00:00:24.364
+e funções metricamente
+criptografadas que eles suportam.
+
+00:00:24.399 --> 00:00:27.277
+Algumas se mostraram
+fracas ao longo dos anos.
+
+00:00:27.312 --> 00:00:29.245
+Às vezes,
+o certificado é válido,
+
+00:00:29.280 --> 00:00:31.604
+mas o resto da configuração
+do servidor, não.
+
+00:00:31.639 --> 00:00:34.356
+Um bom site para ver
+como o navegador se comporta
+
+00:00:34.391 --> 00:00:36.572
+quando a conexão TLS
+apresenta problemas
+
+00:00:36.607 --> 00:00:38.660
+é o badssl.com.
+
+00:00:38.695 --> 00:00:41.248
+O badssl tem o seu próprio
+certificado válido,
+
+00:00:41.283 --> 00:00:43.972
+mas tem certificados e configurações
+propositalmente inválidos,
+
+00:00:44.007 --> 00:00:48.444
+para podermos ver o que o navegador
+faz em diferentes situações.
+
+00:00:48.479 --> 00:00:50.724
+Vamos conferir sha1-2016.
+
+00:00:51.140 --> 00:00:53.284
+Ah, não! Perdemos
+o nosso cadeado verde.
+
+00:00:53.319 --> 00:00:56.612
+Ao clicar neste ícone, recebemos
+mais informações sobre a conexão.
+
+00:00:56.647 --> 00:00:58.812
+Ao clicar neste link, recebemos
+detalhes específicos
+
+00:00:58.847 --> 00:01:00.947
+do certificado
+que está sendo usado.
+
+00:01:01.256 --> 00:01:04.764
+Para este quiz, quero que você
+use o site badssl
+
+00:01:04.799 --> 00:01:07.059
+para descobrir quais configurações
+fazem o Chrome
+
+00:01:07.094 --> 00:01:09.284
+negar o acesso ao site.
+
+00:01:09.319 --> 00:01:11.524
+Isso vai acontecer
+com um certificado vencido?
+
+00:01:11.559 --> 00:01:13.716
+Ou com um certificado
+de outro host?
+
+00:01:14.140 --> 00:01:17.212
+Conteúdo misto faz o Chrome
+negar acesso ao site?
+

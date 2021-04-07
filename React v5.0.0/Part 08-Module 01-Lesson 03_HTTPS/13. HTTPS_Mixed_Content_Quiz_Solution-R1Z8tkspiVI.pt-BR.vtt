@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:04.071
+Enquanto a página em si
+é carregada via HTTPS,
+
+00:00:04.104 --> 00:00:07.074
+há um bloco sendo carregado
+em HTTP,
+
+00:00:07.107 --> 00:00:09.576
+o que causa o aviso
+de conteúdo misto.
+
+00:00:09.610 --> 00:00:12.713
+Há algumas formas
+de resolver este problema.
+
+00:00:12.746 --> 00:00:15.382
+A mais fácil
+é verificar a plataforma.
+
+00:00:15.415 --> 00:00:20.020
+O bloco em questão
+é o "X=105y=3".
+
+00:00:20.420 --> 00:00:23.123
+Outra forma é olhar
+no painel de segurança.
+
+00:00:23.156 --> 00:00:25.759
+Aqui embaixo está o aviso
+de conteúdo misto.
+
+00:00:25.993 --> 00:00:28.362
+Este link nos leva
+ao painel de rede
+
+00:00:28.395 --> 00:00:31.098
+e adiciona o filtro
+de conteúdo misto.
+
+00:00:31.131 --> 00:00:32.165
+Usando o Dev Tools,
+
+00:00:32.199 --> 00:00:35.636
+é muito fácil diagnosticar
+problemas de conteúdo misto.
+
+00:00:35.669 --> 00:00:38.172
+Se estiver desenvolvendo
+qualquer coisa na web,
+
+00:00:38.205 --> 00:00:39.706
+mantenha o Dev Tools aberto.
+
+00:00:39.740 --> 00:00:42.442
+Confie em mim.
+Ele vai poupar muito do seu tempo.
+

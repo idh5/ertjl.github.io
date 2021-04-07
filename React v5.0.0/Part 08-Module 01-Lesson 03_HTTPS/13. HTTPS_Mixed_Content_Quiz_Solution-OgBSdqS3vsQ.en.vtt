@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.670 --> 00:00:07.760
+When working locally, developers often resort to using self sign certificates.
+
+00:00:07.760 --> 00:00:11.585
+These certificates refer to themselves as their own certificate authority.
+
+00:00:11.585 --> 00:00:12.988
+Since they are self signed,
+
+00:00:12.988 --> 00:00:15.330
+they don't provide any kind of authentication.
+
+00:00:15.330 --> 00:00:18.365
+Your browser will visibly complain and give you a red padlock
+
+00:00:18.365 --> 00:00:22.128
+but it will let you test if your website has mixed content.
+
+00:00:22.128 --> 00:00:23.950
+So you need to launch the binary for
+
+00:00:23.950 --> 00:00:27.370
+this project and load the URL it provides in your browser.
+
+00:00:27.370 --> 00:00:29.725
+You might notice that when you launch the server it
+
+00:00:29.725 --> 00:00:33.105
+automatically generates a self signed certificate for you.
+
+00:00:33.105 --> 00:00:35.610
+Since this is a self signed certificate,
+
+00:00:35.610 --> 00:00:37.475
+you might see an error page.
+
+00:00:37.475 --> 00:00:38.595
+It's safe to proceed,
+
+00:00:38.595 --> 00:00:40.170
+so click on advanced and then,
+
+00:00:40.170 --> 00:00:42.090
+click on the proceed link down at the bottom.
+
+00:00:42.090 --> 00:00:46.160
+You'll see the Udacity logo has been split up into multiple tiles.
+
+00:00:46.160 --> 00:00:48.100
+Are there any mixed content violations?
+
+00:00:48.100 --> 00:00:51.150
+And if so, which tile is causing the problem?
+
+00:00:51.150 --> 00:00:53.000
+Enter the tile info here.
+

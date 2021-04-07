@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.255
+If our index document is served over HTTPS, great.
+
+00:00:04.255 --> 00:00:05.855
+But what about the site's assets,
+
+00:00:05.855 --> 00:00:08.270
+are they surfed over HTTPS as well?
+
+00:00:08.270 --> 00:00:10.830
+A fast way to break that beautiful green lock
+
+00:00:10.830 --> 00:00:13.790
+is having your assets surfed over a regular HTTP.
+
+00:00:13.790 --> 00:00:18.045
+When this happens, the site ends up in a state called Mixed Content.
+
+00:00:18.045 --> 00:00:21.270
+Mixed content occurs when you open a website that is supposed to be
+
+00:00:21.270 --> 00:00:24.925
+delivered over HTTPS but includes resources like images,
+
+00:00:24.925 --> 00:00:29.480
+Iframe, stylesheets or scripts from non TLS secured origins.
+
+00:00:29.480 --> 00:00:33.840
+A popular mistake is pulling in jQuery from a non TLS enabled CDN.
+
+00:00:33.840 --> 00:00:38.955
+Depending on the type of resources that is being included over a nonsecure channel,
+
+00:00:38.955 --> 00:00:40.800
+the consequences might differ.
+
+00:00:40.800 --> 00:00:44.120
+It might cost you a green padlock but still remain functional.
+
+00:00:44.120 --> 00:00:46.655
+The resource might get block or break your page
+
+00:00:46.655 --> 00:00:50.130
+or it might even get the horrible red padlock of shame.
+
+00:00:50.130 --> 00:00:52.730
+The behavior differs across different browsers so it should
+
+00:00:52.730 --> 00:00:55.970
+definitely avoid and check a website for mixed content.
+
+00:00:55.970 --> 00:01:00.475
+In fact, Google recommends that you'd surf all your assets over HTTPS.
+
+00:01:00.475 --> 00:01:02.870
+This way, you'll avoid mixed content mornings and
+
+00:01:02.870 --> 00:01:06.000
+your site and its assets will be transferred securely.
+

@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.995
+For this exercise, you'll set up a proxy on your system,
+
+00:00:03.995 --> 00:00:05.935
+load a web website through the proxy,
+
+00:00:05.935 --> 00:00:07.625
+and examine the result.
+
+00:00:07.625 --> 00:00:10.420
+A proxy is a legitimate man in the middle and has
+
+00:00:10.420 --> 00:00:14.185
+many benefits like saving bandwidth by adding additional compression,
+
+00:00:14.185 --> 00:00:17.500
+downsampling images, and doing aggressive caching.
+
+00:00:17.500 --> 00:00:22.450
+The proxy you'll be using is just going to well that's what you need to figure out.
+
+00:00:22.450 --> 00:00:26.635
+For this quiz, pick a non HTTPS website to test out.
+
+00:00:26.635 --> 00:00:31.135
+You'll get a chance to try out an HTTPS site in the next quiz.
+
+00:00:31.135 --> 00:00:33.105
+Does the text of the website disappear,
+
+00:00:33.105 --> 00:00:36.180
+are the site's images flipped upside down?
+
+00:00:36.180 --> 00:00:38.205
+Do the colors of the site get inverted?
+
+00:00:38.205 --> 00:00:39.770
+Is the site unreachable?
+
+00:00:39.770 --> 00:00:42.815
+Or does nothing visibly change and the site looks completely normal?
+
+00:00:42.815 --> 00:00:46.985
+Remember that you should run this in an incognito window to prevent caching.
+
+00:00:46.985 --> 00:00:50.515
+Don't forget that you'll need to run the proxy on your own machine.
+
+00:00:50.515 --> 00:00:52.330
+You'll find the binary for the proxy below,
+
+00:00:52.330 --> 00:00:55.770
+along with instructions on how to get your browser set up to
+

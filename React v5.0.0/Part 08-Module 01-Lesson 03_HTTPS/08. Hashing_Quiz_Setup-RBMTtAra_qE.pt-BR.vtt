@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:01.502
+Com este texto,
+
+00:00:01.535 --> 00:00:05.239
+a função hash SHA1
+retornou isto.
+
+00:00:05.272 --> 00:00:08.375
+A SHA256 resultou nisto.
+
+00:00:08.408 --> 00:00:11.078
+E aqui está o resultado
+da SHA512.
+
+00:00:11.111 --> 00:00:14.381
+Cada uma das funções hash
+começou com o mesmo texto,
+
+00:00:14.414 --> 00:00:17.417
+mas os hashes produzidos
+são completamente diferentes.
+
+00:00:17.518 --> 00:00:19.987
+Digamos que minha mensagem
+não seja grande coisa,
+
+00:00:20.020 --> 00:00:22.623
+então eu só queira
+comemorar com um braço pra cima.
+
+00:00:22.656 --> 00:00:26.560
+Remover um caractere resultou
+em hashes completamente diferentes.
+
+00:00:26.593 --> 00:00:27.828
+Como você pode ver,
+
+00:00:27.861 --> 00:00:30.297
+se alguém tentar
+alterar um único caractere,
+
+00:00:30.330 --> 00:00:32.933
+vai acabar alterando
+toda a hash,
+
+00:00:32.966 --> 00:00:36.236
+então fica fácil para os navegadores
+e servidores identificarem
+
+00:00:36.270 --> 00:00:38.772
+se os dados foram alterados.
+

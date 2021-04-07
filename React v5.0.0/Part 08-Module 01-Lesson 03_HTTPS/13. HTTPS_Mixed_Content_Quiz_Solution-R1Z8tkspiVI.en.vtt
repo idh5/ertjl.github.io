@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.905
+So while the page itself is loaded over HTTPS,
+
+00:00:03.905 --> 00:00:09.650
+there's a tile that's being loaded over http which causes a mixed content warning.
+
+00:00:09.650 --> 00:00:12.880
+There are actually a couple of ways to solve this problem.
+
+00:00:12.880 --> 00:00:15.250
+The easiest way is to check the console.
+
+00:00:15.250 --> 00:00:20.520
+The tile in question is x10y3.
+
+00:00:20.520 --> 00:00:23.010
+Another way is to check out the security pane.
+
+00:00:23.010 --> 00:00:25.785
+Down here is the mixed content warning.
+
+00:00:25.785 --> 00:00:30.735
+This link switches us to the network pane and adds the mixed content filter.
+
+00:00:30.735 --> 00:00:35.595
+Using dev tools, it's incredibly easy to diagnose mixed content issues.
+
+00:00:35.595 --> 00:00:37.660
+If you're developing anything on the web,
+
+00:00:37.660 --> 00:00:39.900
+you should always have the dev tools open.
+
+00:00:39.900 --> 00:00:42.180
+Trust me, they'll save you so much time.
+

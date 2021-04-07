@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.208 --> 00:00:02.250
+Quando falamos de HTTPS,
+
+00:00:02.292 --> 00:00:06.125
+estamos falando de dois conceitos
+diferentes, HTTPS e TLS,
+
+00:00:06.167 --> 00:00:08.375
+que é mais conhecido como SSL.
+
+00:00:08.417 --> 00:00:10.333
+Já aprendemos sobre HTTP.
+
+00:00:10.375 --> 00:00:13.458
+TLS significa
+"Transport Layer Security".
+
+00:00:13.500 --> 00:00:15.583
+O TLS não é específico
+do HTTP,
+
+00:00:15.616 --> 00:00:17.542
+qualquer portal
+pode utiliza-lo.
+
+00:00:17.583 --> 00:00:19.458
+Por exemplo, há o FTPS,
+
+00:00:19.500 --> 00:00:21.583
+que é o FTP com TLS
+
+00:00:21.616 --> 00:00:24.000
+para transferir arquivos
+com segurança.
+
+00:00:24.042 --> 00:00:25.625
+O TLS codifica a comunicação
+
+00:00:25.667 --> 00:00:30.083
+de forma que ninguém é capaz de ler
+o conteúdo além do destinatário.
+
+00:00:30.125 --> 00:00:34.208
+Na prática, é impossível desvendar
+uma codificação TLS.
+
+00:00:34.250 --> 00:00:37.500
+Para ter certeza que está falando
+com o servidor que deseja,
+
+00:00:37.542 --> 00:00:40.583
+o TLS usa uma coisa chamada
+cadeia de confiança.
+
+00:00:41.000 --> 00:00:43.417
+O servidor se identifica
+usando um certificado
+
+00:00:43.458 --> 00:00:45.500
+que contém metadados
+sobre ele mesmo
+
+00:00:45.542 --> 00:00:48.500
+e a digital
+de uma chave de criptografia.
+
+00:00:59.042 --> 00:01:00.583
+Esses certificados
+são emitidos
+
+00:01:00.625 --> 00:01:02.583
+por poucas autoridades
+certificadoras.
+
+00:01:03.000 --> 00:01:05.583
+Se o certificado estiver assinado
+por uma dessas autoridades
+
+00:01:05.616 --> 00:01:09.208
+e se a chave que você está usando
+é compatível com a digital,
+
+00:01:09.250 --> 00:01:11.458
+então você está falando
+com o servidor certo.
+
+00:01:12.375 --> 00:01:14.458
+A lista de autoridades
+certificadoras
+
+00:01:14.500 --> 00:01:16.417
+pode ser encontrada
+no navegador.
+
+00:01:16.458 --> 00:01:19.583
+Você pode até adicionar
+sua própria autoridade, se quiser.
+
+00:01:20.000 --> 00:01:23.542
+Vemos aqui muitas empresas das quais
+se pode comprar certificados.
+
+00:01:23.583 --> 00:01:26.583
+Eles são pagos,
+porque não só validam seu servidor,
+
+00:01:26.625 --> 00:01:31.042
+como validam sua identidade
+como o dono do servidor.
+
+00:01:31.083 --> 00:01:33.417
+Como nem todos os desenvolvedores
+podem ou querem pagar
+
+00:01:33.450 --> 00:01:37.333
+por um certificado para fornecer
+segurança básica aos usuários,
+
+00:01:37.375 --> 00:01:41.083
+O Let's Encrypt surgiu no mercado
+oferecendo certificados de graça.
+
+00:01:41.333 --> 00:01:44.167
+Vamos ver em detalhes
+como certificados funcionam
+
+00:01:44.208 --> 00:01:46.125
+e a segurança que oferecem.
+

@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:03.704
+Vocês viram o Surma brincando
+com esse projeto de hash.
+
+00:00:03.737 --> 00:00:05.939
+Neste exercício,
+você vai usar esse projeto
+
+00:00:05.973 --> 00:00:09.810
+para adquirir experiência prática
+com diferentes funções hash.
+
+00:00:09.843 --> 00:00:13.213
+Após abrir o servidor
+e carregar a URL dada por ele,
+
+00:00:13.247 --> 00:00:15.182
+você verá o projeto.
+
+00:00:15.215 --> 00:00:16.783
+Em seguida, digite algum texto
+
+00:00:16.817 --> 00:00:18.986
+para ver o produto
+das diferentes funções.
+
+00:00:19.386 --> 00:00:21.021
+Após digitar seu texto,
+
+00:00:21.054 --> 00:00:23.991
+insira a hash
+nas caixas ao lado.
+
+00:00:24.024 --> 00:00:29.062
+Por exemplo, coloque o resultado
+da função SHA256 aqui.
+
+00:00:29.129 --> 00:00:32.165
+Depois de inserir a hash
+para cada função,
+
+00:00:32.199 --> 00:00:37.204
+mude um pouco o texto
+e cole o novo SHA256 aqui.
+

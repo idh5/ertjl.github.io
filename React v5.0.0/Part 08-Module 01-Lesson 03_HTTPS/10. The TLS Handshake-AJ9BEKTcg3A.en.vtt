@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.450
+We now have the tools to encrypt data asymmetrically and to assign data.
+
+00:00:04.450 --> 00:00:08.240
+I've said these are the building blocks of TLS and now I will prove it to you.
+
+00:00:08.240 --> 00:00:10.650
+Let's go through the process a browser uses to set
+
+00:00:10.650 --> 00:00:13.080
+up a TLS encrypted connection step by step.
+
+00:00:13.080 --> 00:00:15.475
+I will still cut a few corners for simplicity,
+
+00:00:15.475 --> 00:00:18.555
+but nothing integral to the concept.
+
+00:00:18.555 --> 00:00:21.585
+The first step is having the server send you a certificate.
+
+00:00:21.585 --> 00:00:24.330
+The certificate contains the public key of the server,
+
+00:00:24.330 --> 00:00:27.630
+some additional information like the domain that the certificate is for,
+
+00:00:27.630 --> 00:00:30.850
+and the signature by a certificate authority.
+
+00:00:30.850 --> 00:00:33.960
+The client checks if the domain is correct and
+
+00:00:33.960 --> 00:00:37.080
+also checks if the authority signature is valid.
+
+00:00:37.080 --> 00:00:39.270
+As we already explored earlier,
+
+00:00:39.270 --> 00:00:41.040
+all browsers have a collection of
+
+00:00:41.040 --> 00:00:44.510
+certificate authorities including their public keys saved locally,
+
+00:00:44.510 --> 00:00:47.745
+so it is trivial to check if the signature is valid.
+
+00:00:47.745 --> 00:00:50.530
+Now the client generates a random key for
+
+00:00:50.530 --> 00:00:53.370
+a symmetric encryption to be used from here on in.
+
+00:00:53.370 --> 00:00:58.230
+The browser encrypts the random key with the server's public key and sends it over.
+
+00:00:58.230 --> 00:00:59.580
+This has two benefits,
+
+00:00:59.580 --> 00:01:01.680
+symmetric encryption is much faster,
+
+00:01:01.680 --> 00:01:05.860
+more efficient, and scales better to big data compared to asymmetric encryption.
+
+00:01:05.860 --> 00:01:10.305
+But more importantly, the server will only be able to continue communicating
+
+00:01:10.305 --> 00:01:15.180
+if it is truly in possession of the private key and can decrypt the new random key.
+
+00:01:15.180 --> 00:01:18.405
+This effectively validates the servers identity.
+
+00:01:18.405 --> 00:01:20.040
+If all of this succeeds,
+
+00:01:20.040 --> 00:01:24.585
+a TLS connection has successfully been established and the AGP protocol can take over.
+
+00:01:24.585 --> 00:01:29.000
+At this point, you'll get the green padlock symbol in your browser's URL bar.
+

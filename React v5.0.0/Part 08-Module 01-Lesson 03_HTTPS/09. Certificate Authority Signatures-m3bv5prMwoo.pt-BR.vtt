@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.333 --> 00:00:02.417
+Agora que temos
+uma boa base de TLS,
+
+00:00:02.458 --> 00:00:04.125
+vamos falar de assinaturas.
+
+00:00:04.167 --> 00:00:06.167
+Eu já mencionei
+autenticação de certificados.
+
+00:00:06.208 --> 00:00:08.042
+A função deles
+é assinar certificados.
+
+00:00:08.083 --> 00:00:12.000
+Mas o que significa isso?
+Por que alguém quer um certificado?
+
+00:00:12.042 --> 00:00:14.083
+Quando alguém
+assina um documento,
+
+00:00:14.125 --> 00:00:19.125
+quer dizer que uma autoridade
+comprovou o conteúdo do documento.
+
+00:00:19.167 --> 00:00:21.542
+A ideia é ter uma prova
+
+00:00:21.583 --> 00:00:25.250
+de que o documento foi visto
+ou criado por uma entidade.
+
+00:00:32.333 --> 00:00:36.375
+Assim como assinar o documento
+serve como prova de que você o viu,
+
+00:00:36.417 --> 00:00:39.583
+um servidor pode fazer o mesmo
+com uma assinatura digital.
+
+00:00:40.375 --> 00:00:42.292
+Quando um servidor
+assina um documento
+
+00:00:42.333 --> 00:00:44.708
+e o criptografa
+com uma chave privada,
+
+00:00:44.750 --> 00:00:47.333
+ele o devolve
+como um documento assinado.
+
+00:00:47.375 --> 00:00:51.208
+Já que apenas o dono da chave
+pode criptografar documentos,
+
+00:00:51.250 --> 00:00:56.583
+você sabe que o documento recebido
+é o mesmo enviado pelo servidor.
+
+00:00:57.083 --> 00:00:59.542
+Porém, os documentos
+podem ser muito grandes.
+
+00:00:59.583 --> 00:01:01.458
+Pense nas imagens de DVD,
+por exemplo.
+
+00:01:01.500 --> 00:01:06.375
+E o processo de criptografia
+levaria muito tempo.
+
+00:01:06.417 --> 00:01:09.708
+Por isso, em vez de criptografar
+o arquivo inteiro,
+
+00:01:09.750 --> 00:01:12.708
+apenas a hash do arquivo
+é criptografada.
+
+00:01:12.750 --> 00:01:15.583
+Se quiser verificar
+se a assinatura é válida,
+
+00:01:15.625 --> 00:01:18.750
+tem que descriptografar a assinatura
+e fazer a hash
+
+00:01:19.000 --> 00:01:21.583
+para ver se os valores batem.
+
+00:01:21.625 --> 00:01:24.625
+Assim nós sabemos
+que o arquivo recebido
+
+00:01:24.667 --> 00:01:27.208
+é o mesmo enviado pelo servidor.
+
+00:01:27.250 --> 00:01:29.583
+Se o arquivo tiver sido alterado
+na transmissão,
+
+00:01:29.625 --> 00:01:33.667
+a hash não vai bater
+com a do servidor.
+
+00:01:33.708 --> 00:01:36.042
+É o que chamamos
+de "assinatura inválida".
+

@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.970
+Have you ever thought about how naive it is to just use
+
+00:00:02.970 --> 00:00:05.910
+the free Wi-Fi at cafes and similar public places?
+
+00:00:05.910 --> 00:00:09.510
+You are trusting the store owner to not do anything dodgy and you're trusting
+
+00:00:09.510 --> 00:00:13.620
+that every other person currently using the Wi-Fi hotspot is a good person.
+
+00:00:13.620 --> 00:00:14.880
+Not only can they listen to
+
+00:00:14.880 --> 00:00:16.585
+your traffic, you are broadcasting over radio waves after all,
+
+00:00:16.585 --> 00:00:20.970
+but they could also tamper with the data you receive.
+
+00:00:20.970 --> 00:00:23.275
+This is a harmless change.
+
+00:00:23.275 --> 00:00:26.714
+But what if you wanted to check your bank account on a public Wi-Fi?
+
+00:00:26.714 --> 00:00:30.595
+Think about every other person being able to read or change your data.
+
+00:00:30.595 --> 00:00:32.595
+We definitely don't want that.
+
+00:00:32.595 --> 00:00:37.650
+HTTPS is a way to protect you and your users from malicious cafe owners and visitors.
+
+00:00:37.650 --> 00:00:40.575
+As a web developer, HTPPS is even more important since
+
+00:00:40.575 --> 00:00:45.945
+all modern browsers' APIs are only available if your website is secured with HTTPS.
+
+00:00:45.945 --> 00:00:47.940
+To exploit the full potential of the Web,
+
+00:00:47.940 --> 00:00:50.007
+you need to start using HTTPS,
+
+00:00:50.007 --> 00:00:51.350
+and not just for the log-in page,
+
+00:00:51.350 --> 00:00:53.070
+but every single page.
+
+00:00:53.070 --> 00:00:55.250
+Knowing a web page is using HTTPS,
+
+00:00:55.250 --> 00:00:59.205
+will give your users peace of mind in these kind of public places.
+
+00:00:59.205 --> 00:01:01.770
+How can you tell if a website is using HTTPS and how can you
+
+00:01:01.770 --> 00:01:04.405
+tell if a website is using HTTPS correctly,
+
+00:01:04.405 --> 00:01:07.260
+and how can you use HTTPS on your own website?
+
+00:01:07.260 --> 00:01:09.000
+That's what this lesson is about.
+

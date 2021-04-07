@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.020
+Each link's background color kind of indicates what will happen.
+
+00:00:04.020 --> 00:00:06.510
+Red means it won't work. Green means it will.
+
+00:00:06.510 --> 00:00:09.975
+And other colors like orange give questionable results.
+
+00:00:09.975 --> 00:00:15.225
+A certificate that has expired or one for wrong host, both deny access.
+
+00:00:15.225 --> 00:00:19.860
+Mixed content, incomplete chain,
+
+00:00:19.860 --> 00:00:23.250
+and sha256 all allowed the user through.
+
+00:00:23.250 --> 00:00:26.335
+But not all of these actually give you the green lock.
+
+00:00:26.335 --> 00:00:29.120
+So, these are the correct answers. Great job.
+

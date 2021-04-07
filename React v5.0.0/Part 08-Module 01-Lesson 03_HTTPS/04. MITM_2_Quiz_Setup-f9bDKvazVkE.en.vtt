@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.970
+I still have the proxy set up and Chrome is writing through it.
+
+00:00:03.970 --> 00:00:05.570
+Let's load this secure website.
+
+00:00:05.570 --> 00:00:08.545
+And it doesn't work.
+
+00:00:08.545 --> 00:00:12.000
+The proxy is sitting between my browser and the Udacity server,
+
+00:00:12.000 --> 00:00:14.920
+and since it's configured with an invalid certificate,
+
+00:00:14.920 --> 00:00:17.060
+Chrome stops me before I get to the website.
+

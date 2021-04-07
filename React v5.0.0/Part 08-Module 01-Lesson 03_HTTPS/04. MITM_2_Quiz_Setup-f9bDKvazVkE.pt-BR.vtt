@@ -1,0 +1,26 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:03.871
+Ainda tenho a configuração do Proxy,
+e o Chrome está rodando por ele.
+
+00:00:03.904 --> 00:00:06.006
+Vamos carregar um site seguro.
+
+00:00:06.406 --> 00:00:08.442
+Não funciona.
+
+00:00:08.475 --> 00:00:11.879
+O Proxy está entre meu navegador
+e o servidor da Udacity.
+
+00:00:11.912 --> 00:00:14.848
+Como ele está configurado
+com um certificado inválido,
+
+00:00:14.882 --> 00:00:17.050
+o Chrome me impede
+de chegar ao site.
+
