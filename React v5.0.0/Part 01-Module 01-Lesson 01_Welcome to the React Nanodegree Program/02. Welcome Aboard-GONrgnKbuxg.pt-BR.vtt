@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.307 --> 00:00:01.983
+Olá, eu sou o Tyler.
+
+00:00:02.016 --> 00:00:04.450
+Bem-vindo ao Nanodegree
+de Desenvolvedor React.
+
+00:00:04.483 --> 00:00:05.888
+O que torna o React ótimo
+
+00:00:05.921 --> 00:00:09.150
+é que ele muda a forma como pensamos
+a criação de aplicativos.
+
+00:00:09.183 --> 00:00:11.554
+O React fará de você
+um desenvolvedor melhor,
+
+00:00:11.587 --> 00:00:14.090
+disponibilizando
+novas plataformas,
+
+00:00:14.123 --> 00:00:16.637
+como o desenvolvimento nativo
+ou a RV.
+
+00:00:16.670 --> 00:00:19.487
+Ele tem sido utilizado
+pelas maiores empresas do mundo
+
+00:00:19.520 --> 00:00:21.017
+e por pequenas startups.
+
+00:00:21.050 --> 00:00:23.205
+Ele foi construído
+pelos engenheiros do Facebook
+
+00:00:23.239 --> 00:00:25.025
+um dos maiores sites do mundo,
+
+00:00:25.055 --> 00:00:27.611
+e pode ser usado em projetos
+de qualquer porte.
+
+00:00:27.644 --> 00:00:30.977
+Ele elimina o atrito da construção
+de uma interface de usuário.
+
+00:00:31.010 --> 00:00:34.602
+Declaramos a IU com componentes
+encapsulados que gerenciam o estado
+
+00:00:34.635 --> 00:00:39.290
+e compomos as partes menores
+do aplicativo.
+
+00:00:39.323 --> 00:00:42.307
+Neste curso, o primeiro projeto
+será um aplicativo React
+
+00:00:42.340 --> 00:00:44.410
+que gerencia
+uma lista de contatos.
+
+00:00:44.443 --> 00:00:46.516
+Ele se comunicará
+com um servidor remoto
+
+00:00:46.549 --> 00:00:49.000
+a fim de adicionar
+ou remover pessoas da lista.
+
+00:00:49.033 --> 00:00:51.532
+Você também poderá filtrá-lo
+no navegador.
+
+00:00:51.565 --> 00:00:55.372
+Nós construiremos esse aplicativo
+na primeira parte do curso.
+
+00:00:55.405 --> 00:00:56.995
+Ao finalizar o curso,
+
+00:00:57.028 --> 00:01:00.564
+você terá acesso ao cenário
+do desenvolvimento web
+
+00:01:00.597 --> 00:01:02.316
+inaugurado pelo React.
+
+00:01:02.349 --> 00:01:03.963
+Neste Nanodegree,
+
+00:01:03.996 --> 00:01:06.339
+seu código será revisado
+por especialistas,
+
+00:01:06.372 --> 00:01:09.331
+e você terá
+as melhores instruções.
+
+00:01:09.364 --> 00:01:11.838
+Bem-vindo ao curso.
+Estou feliz que esteja aqui.
+

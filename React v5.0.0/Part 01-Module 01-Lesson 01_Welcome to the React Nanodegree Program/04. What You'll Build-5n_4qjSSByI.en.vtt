@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.889
+In this program, you'll work alongside Tyler to build a number of React applications.
+
+00:00:04.889 --> 00:00:08.535
+These are projects that you'll build in class while learning React.
+
+00:00:08.535 --> 00:00:12.900
+Here at Udacity, we can't stress enough the importance of learning by doing.
+
+00:00:12.900 --> 00:00:15.105
+So in addition to the in-class projects,
+
+00:00:15.105 --> 00:00:18.035
+you'll also be given some projects that you'll build on your own.
+
+00:00:18.035 --> 00:00:20.335
+These projects will prove how much you've learned.
+
+00:00:20.335 --> 00:00:23.830
+For the first project, you'll build an application called My Reads.
+
+00:00:23.829 --> 00:00:26.125
+This app will require you to manage state,
+
+00:00:26.125 --> 00:00:28.899
+build components and leverage React Router.
+
+00:00:28.899 --> 00:00:32.515
+This project is all about mastering the fundamentals of React.
+
+00:00:32.515 --> 00:00:34.600
+By fundamentals I mean the stuff you'll be doing
+
+00:00:34.600 --> 00:00:37.135
+in every single React project you create.
+
+00:00:37.134 --> 00:00:41.259
+Check out the following sections for a more in-depth look at what you'll be building.
+

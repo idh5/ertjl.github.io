@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+Hi. I'm Tyler.
+
+00:00:02.040 --> 00:00:04.275
+Welcome to the React Nanodegree program.
+
+00:00:04.275 --> 00:00:05.880
+What makes React really great,
+
+00:00:05.879 --> 00:00:08.910
+is it changes how you think about creating web applications.
+
+00:00:08.910 --> 00:00:11.595
+Not only will React make you a better developer,
+
+00:00:11.595 --> 00:00:16.560
+but it will also open up other development platforms like native phone development or VR.
+
+00:00:16.559 --> 00:00:19.394
+React is being used by the largest companies in the world,
+
+00:00:19.394 --> 00:00:21.000
+as well as small startups.
+
+00:00:21.000 --> 00:00:23.355
+It was built by the engineers who work on Facebook,
+
+00:00:23.355 --> 00:00:25.080
+one of the world's largest websites,
+
+00:00:25.079 --> 00:00:27.509
+but it also scales to projects of any size.
+
+00:00:27.510 --> 00:00:30.810
+React eliminates a lot of the friction in building a user interface.
+
+00:00:30.809 --> 00:00:34.574
+If you declare the UI with encapsulated components that manage their own state,
+
+00:00:34.575 --> 00:00:39.255
+then you compose those smaller pieces together into a full application.
+
+00:00:39.255 --> 00:00:44.475
+In this program, your first project will be a React app that manages a list of contacts.
+
+00:00:44.475 --> 00:00:48.885
+It will communicate with a remote server to add and remove people from the list.
+
+00:00:48.884 --> 00:00:51.405
+You'll also be able to filter it in the browser.
+
+00:00:51.405 --> 00:00:53.250
+You'll be building this app from scratch
+
+00:00:53.250 --> 00:00:55.289
+along with me in the first course of the program.
+
+00:00:55.289 --> 00:00:57.060
+After completing this program,
+
+00:00:57.060 --> 00:00:58.980
+you'll be positioned to take full advantage of
+
+00:00:58.979 --> 00:01:02.250
+the changing web development landscape that React is ushering in.
+
+00:01:02.250 --> 00:01:04.140
+With this Nanodegree program,
+
+00:01:04.140 --> 00:01:07.320
+you'll receive expert code review on your projects and of course,
+
+00:01:07.319 --> 00:01:09.404
+Udacity's best in class instruction.
+
+00:01:09.405 --> 00:01:12.299
+Welcome to the program. I'm so glad you're here.
+
