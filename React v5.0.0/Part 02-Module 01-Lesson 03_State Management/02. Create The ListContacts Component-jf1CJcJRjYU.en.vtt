@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.549
+In this video what we are going to do is we are
+
+00:00:02.549 --> 00:00:05.924
+going to build out this section right here.
+
+00:00:05.924 --> 00:00:08.849
+So, where our code is at currently is you should
+
+00:00:08.849 --> 00:00:12.494
+have created an icons folder with these different icons.
+
+00:00:12.494 --> 00:00:17.405
+You should have also created a utils folder that has our contacts API file inside of it.
+
+00:00:17.405 --> 00:00:20.475
+And then now what I've done is I have pasted in
+
+00:00:20.475 --> 00:00:22.870
+a array of three different contacts that you should
+
+00:00:22.870 --> 00:00:25.275
+have got from the previous text section.
+
+00:00:25.274 --> 00:00:27.784
+So, you'll notice each contact has an ID,
+
+00:00:27.785 --> 00:00:29.414
+a name, a handle,
+
+00:00:29.414 --> 00:00:31.609
+as well as an avatar URL.
+
+00:00:31.609 --> 00:00:34.454
+Now, what the goal of this video is as I mentioned,
+
+00:00:34.454 --> 00:00:41.074
+is we want to create a brand new component which is going to take in this array as props.
+
+00:00:41.075 --> 00:00:43.859
+It will then be responsible for looping over that array.
+
+00:00:43.859 --> 00:00:45.505
+And then for each item in the array,
+
+00:00:45.505 --> 00:00:48.270
+it's going to show a brand new contact.
+
+00:00:48.270 --> 00:00:51.685
+So, what we'll do whenever we want to build out a new component,
+
+00:00:51.685 --> 00:00:53.359
+we can build up a new file.
+
+00:00:53.359 --> 00:00:55.942
+So, inside of our source folder here,
+
+00:00:55.942 --> 00:00:57.489
+let's make a new file,
+
+00:00:57.490 --> 00:01:00.750
+and we will call it ListContacts.js because
+
+00:01:00.750 --> 00:01:05.400
+this file is going to be responsible for listing all of the contacts.
+
+00:01:05.400 --> 00:01:10.425
+So, the very first thing we need to do is we need to grab two things.
+
+00:01:10.424 --> 00:01:12.924
+React which is obviously the React library,
+
+00:01:12.924 --> 00:01:14.759
+and component which is what we're going to be
+
+00:01:14.760 --> 00:01:18.390
+extending to actually build our brand new React component.
+
+00:01:18.390 --> 00:01:22.469
+So, both of those are going to be coming from the React package.
+
+00:01:22.469 --> 00:01:26.159
+And then now, we can build a new component by having
+
+00:01:26.159 --> 00:01:30.109
+a class which is going to extend component.
+
+00:01:30.109 --> 00:01:33.150
+And now what I usually do after I create my class so I
+
+00:01:33.150 --> 00:01:36.540
+don't forget is I come down here and export it.
+
+00:01:36.540 --> 00:01:40.050
+So typically, whenever we create a new module or a new file here,
+
+00:01:40.049 --> 00:01:41.579
+if we're creating a component,
+
+00:01:41.579 --> 00:01:44.659
+that component should probably be the default export.
+
+00:01:44.659 --> 00:01:49.097
+And so, now that we have our class or our components and we are exporting it.
+
+00:01:49.097 --> 00:01:53.150
+The next thing we want to do is we want to describe how this component looks.
+
+00:01:53.150 --> 00:01:55.525
+So, what we can do is we can use
+
+00:01:55.525 --> 00:01:58.635
+the render method because that's exactly what the render method is for.
+
+00:01:58.635 --> 00:02:02.700
+The render method describes the UI of our component.
+
+00:02:02.700 --> 00:02:04.420
+So, what we want to return or what
+
+00:02:04.420 --> 00:02:07.980
+the UI should look like for this component is it's going
+
+00:02:07.980 --> 00:02:14.129
+to be an ordered list with a class name of contact list.
+
+00:02:14.129 --> 00:02:16.560
+So, now that we have our component and then we are
+
+00:02:16.560 --> 00:02:19.673
+exporting that as the default export from this module,
+
+00:02:19.673 --> 00:02:23.414
+the next question we need to answer is how do we actually get
+
+00:02:23.414 --> 00:02:28.094
+our contact's array down to our ListContacts component?
+
+00:02:28.094 --> 00:02:30.750
+Because remember that's the whole goal of ListContacts.
+
+00:02:30.750 --> 00:02:32.430
+This is going to take in that array,
+
+00:02:32.430 --> 00:02:36.848
+and then for each item in the array it's going to show that was the item to the view.
+
+00:02:36.848 --> 00:02:39.810
+Well, what we can do is we can pass in contacts as
+
+00:02:39.810 --> 00:02:43.844
+a prop when we create the ListContacts element.
+
+00:02:43.844 --> 00:02:48.284
+So, what we'll do first is let's go ahead and import our component here by saying,
+
+00:02:48.284 --> 00:02:53.329
+import ListContacts from the ListContacts module that we just barely made.
+
+00:02:53.329 --> 00:02:55.572
+Then now as I mentioned,
+
+00:02:55.572 --> 00:03:00.645
+when we create this ListContacts element which we can do with this syntax right here,
+
+00:03:00.645 --> 00:03:06.090
+what we can do is we can pass a contacts prop down to ListContacts,
+
+00:03:06.090 --> 00:03:09.694
+whose value is just going to be our contacts array.
+
+00:03:09.694 --> 00:03:13.704
+So, you could think of this as you would in normal function in location.
+
+00:03:13.705 --> 00:03:16.350
+So, in order for you to get data to a function,
+
+00:03:16.349 --> 00:03:19.551
+what you need to do is you need to pass that data as an argument
+
+00:03:19.551 --> 00:03:22.889
+when you invoke the function and it's similar with components.
+
+00:03:22.889 --> 00:03:25.319
+In order for you to get data to a component,
+
+00:03:25.319 --> 00:03:30.509
+what you do is you pass that data in as a prop when you create the component element.
+
+00:03:30.509 --> 00:03:33.959
+So, now we can do is inside of ListContact,
+
+00:03:33.960 --> 00:03:38.717
+in order for us to see what data we're passing in as props,
+
+00:03:38.717 --> 00:03:41.715
+we can come in here and console log this up props.
+
+00:03:41.715 --> 00:03:43.830
+And then if we open up the console,
+
+00:03:43.830 --> 00:03:47.985
+you'll notice that we have a contacts property on our props object,
+
+00:03:47.985 --> 00:03:50.400
+which has three contacts on it.
+

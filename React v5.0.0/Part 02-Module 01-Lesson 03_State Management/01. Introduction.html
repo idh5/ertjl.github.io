@@ -1,0 +1,337 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>State Management Intro</p></h3>
+  <video controls>
+  <source src="01. State Management Intro-XBLRVoSqzVs.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. State Management Intro-XBLRVoSqzVs.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="01. State Management Intro-XBLRVoSqzVs.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>App Introduction</p></h3>
+  <video controls>
+  <source src="01. App Introduction-DIaUp9kzG_0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. App Introduction-DIaUp9kzG_0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="01. App Introduction-DIaUp9kzG_0.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="get-project-files">Get Project Files</h2>
+<p>Create React App will generate a number of default files and starter code that we need to get rid of. There will be two sets of changes you need to make, delete the starter content and add files that we're providing you.</p>
+<p>But, we've already done this for you! Please clone <a href="https://github.com/udacity/reactnd-contacts-app" rel="noopener noreferrer" target="_blank">this repo</a> and <code>checkout</code> the <code>starter-files-added</code> branch to have it all done for you.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Make sure to do each of the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="1e27f338-7a4a-46df-b3ed-a5586639a3e4--0">
+        <label for="1e27f338-7a4a-46df-b3ed-a5586639a3e4--0"><p>I've cloned the <a href="https://github.com/udacity/reactnd-contacts-app" rel="noopener noreferrer" target="_blank">reactnd-contacts-app</a> repo</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="1e27f338-7a4a-46df-b3ed-a5586639a3e4--1">
+        <label for="1e27f338-7a4a-46df-b3ed-a5586639a3e4--1"><p>I've checked out the <code>starter-files-added</code> branch</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Good work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-backend-server">The Backend Server</h2>
+<p>The Contacts app project that we're building is a front-end project. However, we'll eventually be storing the contacts on a backend server. Since we're only really focusing on the front-end for this course, we've gone ahead and built this server for you so you can focus on just the React parts of this program.</p>
+<p>The server is just a simple Node/Express app. The repo for the project is at <a href="https://github.com/udacity/reactnd-contacts-server2" rel="noopener noreferrer" target="_blank">https://github.com/udacity/reactnd-contacts-server2</a>. All you need to do is:</p>
+<ul>
+<li>clone the project with <code>git clone https://github.com/udacity/reactnd-contacts-server2.git</code></li>
+<li>install the project dependencies with <code>npm install</code></li>
+<li>start the server with <code>node server.js</code></li>
+</ul>
+<p>Once you've started the server, you can forget about it. The Contacts project we're working on will interact with this server, but we won't ever modify any of the server code.</p>
+<blockquote>
+  <h2 id="💡-running-two-servers💡">💡 Running Two Servers💡</h2>
+</blockquote>
+<blockquote>
+  <p>At this point, you should be running two different servers on your local machine: </p>
+</blockquote>
+<blockquote>
+  <ul>
+  <li>Front-end development server: Accessible on <strong>port 3000</strong> (with <code>npm start</code> or <code>yarn start</code>)</li>
+  <li>Back-end server: Accessible on <strong>port 5001</strong> (with <code>node server.js</code>)</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <p>Please be sure that both are running before moving on in this Lesson.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>To make sure we're working with the same code, check off each one of these:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="13598c72-5111-4f49-8a16-a5e9625eeb78--0">
+        <label for="13598c72-5111-4f49-8a16-a5e9625eeb78--0"><p>cloned the Contacts server</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="13598c72-5111-4f49-8a16-a5e9625eeb78--1">
+        <label for="13598c72-5111-4f49-8a16-a5e9625eeb78--1"><p>installed the server's dependencies</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="13598c72-5111-4f49-8a16-a5e9625eeb78--2">
+        <label for="13598c72-5111-4f49-8a16-a5e9625eeb78--2"><p>started the backend server</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>It's always a good idea to sanity check your code!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Pass Data Into Components With Props.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Introduction')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

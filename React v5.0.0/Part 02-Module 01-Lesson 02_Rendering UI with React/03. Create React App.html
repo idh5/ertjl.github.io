@@ -1,0 +1,342 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create React App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Rendering UI with React</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Rendering UI Intro.html">01. Rendering UI Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Creating Elements and JSX.html">02. Creating Elements and JSX</a>
+    </li>
+    <li class="">
+      <a href="03. Create React App.html">03. Create React App</a>
+    </li>
+    <li class="">
+      <a href="04. Composing with Components.html">04. Composing with Components</a>
+    </li>
+    <li class="">
+      <a href="05. Lesson Summary.html">05. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Create React App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Create React App</p></h3>
+  <video controls>
+  <source src="03. Create React App-x1fp0wLBI5w.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Create React App-x1fp0wLBI5w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Create React App-x1fp0wLBI5w.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡before-installing-create-react-app💡">💡Before Installing <code>create-react-app</code>💡</h2>
+</blockquote>
+<blockquote>
+  <p><em>If you already have Node.js on your machine, it's a good idea to reinstall it to make sure you have the latest version. Keep in mind that Node.js now comes with <code>npm</code> by default.</em></p>
+</blockquote>
+<blockquote>
+  <p><strong>MacOS</strong></p>
+  <ol>
+  <li>Install <a href="https://brew.sh/" rel="noopener noreferrer" target="_blank">Homebrew</a> by running <code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code> in the terminal. </li>
+  </ol>
+  <ul>
+  <li>Check that it was installed by running <code>brew --version</code>. You should see the version number that was installed.</li>
+  <li>Run <code>brew install node</code>.</li>
+  <li>Run <code>node --version</code>.</li>
+  <li>Check that <code>npm</code> was installed as well by running <code>npm --version</code>.</li>
+  <li>Run <code>brew install yarn</code>.</li>
+  <li>Run <code>npm --version</code>.</li>
+  <li>Run <code>yarn install &amp;&amp; yarn --version</code></li>
+  </ul>
+</blockquote>
+<blockquote>
+  <p><strong>Windows</strong></p>
+  <ol>
+  <li>Please download the <a href="https://nodejs.org/en/download/" rel="noopener noreferrer" target="_blank">Node.js Installer</a>, go through the installation process, and restart your computer once you're done.</li>
+  </ol>
+  <ul>
+  <li>Please follow the <a href="https://yarnpkg.com/lang/en/docs/install" rel="noopener noreferrer" target="_blank"><code>yarn</code> installation instructions</a>.</li>
+  <li>Run  <code>yarn --version</code> to make sure <code>yarn</code> has been successfully installed.</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <p><strong>Linux</strong></p>
+  <ol>
+  <li>Please follow [these instructions](<a href="https://www.ostechnix.com/install-node-js-linux" rel="noopener noreferrer" target="_blank">https://www.ostechnix.com/install-node-js-linux</a><br />
+  ) to install <a href="https://nodejs.org/en/download/" rel="noopener noreferrer" target="_blank">Node.js</a>.</li>
+  </ol>
+  <ul>
+  <li>Run <code>sudo apt-get install -y build-essential</code>.</li>
+  <li>Please follow the <a href="https://yarnpkg.com/lang/en/docs/install" rel="noopener noreferrer" target="_blank"><code>yarn</code> installation instructions</a>.</li>
+  <li>Run  <code>yarn --version</code> to make sure <code>yarn</code> has been successfully installed.</li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="scaffolding-your-react-app">Scaffolding Your React App</h2>
+<p>JSX is awesome, but it does need to be transpiled into regular JavaScript before reaching the browser. We typically use a transpiler like <a href="https://github.com/babel/babel" rel="noopener noreferrer" target="_blank">Babel</a> to accomplish this for us. We can run Babel through a build tool, like <a href="https://github.com/webpack/webpack" rel="noopener noreferrer" target="_blank">Webpack</a> which helps bundle all of our assets (JavaScript files, CSS, images, etc.) for web projects.</p>
+<p>To streamline these initial configurations, we can use Facebook's Create React App package to manage all the setup for us! This tool is incredibly helpful to get started in building a React app, as it sets up everything we need with <em>zero configuration</em>! Install Create React App (through the command-line with <a href="https://www.npmjs.com/get-npm" rel="noopener noreferrer" target="_blank">npm</a>), and then we can walk through what makes it so great.</p>
+<pre><code class="bash language-bash">npm install -g create-react-app</code></pre>
+<p>If you're seeing errors when trying to install a package globally, feel free to check out <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions" rel="noopener noreferrer" target="_blank">this article</a> in the npm documentation. Note that to find out where global packages are installed, you can run <code>npm list -g</code> in your console (more information <a href="https://stackoverflow.com/questions/5926672/where-does-npm-install-packages" rel="noopener noreferrer" target="_blank">here</a>).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Installing &amp; Using Create React App</p></h3>
+  <video controls>
+  <source src="03. Installing &amp; Using Create React App-3igA5dQ7aPA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Installing &amp; Using Create React App-3igA5dQ7aPA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Installing &amp; Using Create React App-3igA5dQ7aPA.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/9cbf12adbbeed5353ffe8c8d53ffef756ebc03a4" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Let's make sure we're both on the same page.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="7ad2f5c6-7f58-4ecf-8dda-fd163b3a4fd3--0">
+        <label for="7ad2f5c6-7f58-4ecf-8dda-fd163b3a4fd3--0"><p>I have installed <a href="https://github.com/facebookincubator/create-react-app" rel="noopener noreferrer" target="_blank"><code>create-react-app</code></a>.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="7ad2f5c6-7f58-4ecf-8dda-fd163b3a4fd3--1">
+        <label for="7ad2f5c6-7f58-4ecf-8dda-fd163b3a4fd3--1"><p>I have used <code>create-react-app</code> to create the <code>contacts</code> project.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>You are now ready to go!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="the-yarn-package-manager">The Yarn Package Manager</h2>
+</blockquote>
+<blockquote>
+  <p>Both in the following video and in the output of <code>create-react-app</code>, we're told to use <code>yarn start</code> to start the development server. If you haven't heard about it yet, <a href="https://yarnpkg.com" rel="noopener noreferrer" target="_blank">Yarn</a> is a package manager that's similar to NPM. Yarn was created from the ground up by Facebook to improve on some key aspects that are slow or lacking in NPM. </p>
+</blockquote>
+<blockquote>
+  <p>If you don't want to install Yarn, you don't have to! What's great about it is that almost every use of <code>yarn</code> can be swapped with <code>npm</code> and everything will work just fine! So if the command is <code>yarn start</code>, you can use <code>npm start</code> to run the same command.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Inspect Contacts Project</p></h3>
+  <video controls>
+  <source src="03. Inspect Contacts Project-Qpv2eBSsT1I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Inspect Contacts Project-Qpv2eBSsT1I.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Inspect Contacts Project-Qpv2eBSsT1I.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>The observant student might've noticed that my <code>index.js</code> file does not include the line <code>registerServiceWorker();</code> that's showing in your project. The call to the Service Worker was added in the version of Create React App right after I recorded this video. Since we're not using Service Workers in this project, it won't affect anything. If you want to remove it, though. Feel free!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="create-react-app-recap"><code>create-react-app</code> Recap</h2>
+<p>Facebook's <code>create-react-app</code> is a command-line tool that scaffolds a React application. Using this, there is no need to install or configure module bundlers like Webpack, or transpilers like Babel. These come preconfigured (and hidden) with <code>create-react-app</code>, so you can jump right into building your app!</p>
+<p>Check out these links for more info about <code>create-react-app</code>:</p>
+<ul>
+<li><a href="https://github.com/facebookincubator/create-react-app" rel="noopener noreferrer" target="_blank">create-react-app</a> on GitHub</li>
+<li><a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html" rel="noopener noreferrer" target="_blank">create-react-app Release Post</a> from the React blog</li>
+<li><a href="https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-react-app.html" rel="noopener noreferrer" target="_blank">Updates to create-react-app</a> from the React blog</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Composing with Components.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Create React App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

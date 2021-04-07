@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.204 --> 00:00:03.780
+Chegou a hora de apresentar
+três novos conceitos do React:
+
+00:00:03.813 --> 00:00:05.027
+as propriedades,
+
+00:00:05.060 --> 00:00:07.683
+que permitem passar dados
+para os componentes,
+
+00:00:07.716 --> 00:00:10.771
+os componentes funcionais,
+que são uma abordagem alternativa
+
+00:00:10.804 --> 00:00:13.594
+e mais intuitiva
+na criação dos componentes React,
+
+00:00:13.627 --> 00:00:15.266
+e os componentes controlados,
+
+00:00:15.299 --> 00:00:18.058
+que permitem associar
+os formulários do aplicativo
+
+00:00:18.091 --> 00:00:20.386
+ao estado do componente.
+Vamos começar.
+

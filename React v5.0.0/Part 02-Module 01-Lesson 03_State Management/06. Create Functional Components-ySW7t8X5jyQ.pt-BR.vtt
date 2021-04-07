@@ -1,0 +1,45 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.221 --> 00:00:03.320
+Até agora, usamos
+a sintaxe de classe do JavaScript
+
+00:00:03.353 --> 00:00:06.510
+com método de renderização
+para criar nossos componentes.
+
+00:00:06.543 --> 00:00:10.004
+Nós acabaremos acrescentando
+métodos a essas classes,
+
+00:00:10.037 --> 00:00:11.178
+mas, por ora,
+
+00:00:11.211 --> 00:00:14.448
+saiba que seu componente
+só tem um método de renderização.
+
+00:00:14.481 --> 00:00:18.247
+Você pode usar uma função comum
+para criar seu componente.
+
+00:00:18.280 --> 00:00:19.813
+Note, porém,
+
+00:00:19.846 --> 00:00:22.654
+que não acessamos mais
+as propriedades dos componentes
+
+00:00:22.687 --> 00:00:24.573
+usando a palavra-chave this.
+
+00:00:24.606 --> 00:00:28.173
+O componente funcional
+passa as propriedades
+
+00:00:28.206 --> 00:00:30.326
+como o primeiro argumento
+da função.
+

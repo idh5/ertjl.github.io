@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:05.739
+Em vez de mostrar a string de query
+na IU, sempre que digitamos,
+
+00:00:05.772 --> 00:00:09.142
+nós queremos filtrar
+nossa lista
+
+00:00:09.175 --> 00:00:12.345
+com base no que digitamos
+no campo de input.
+
+00:00:12.379 --> 00:00:16.583
+Então vamos nos livrar
+desta stringify.
+
+00:00:16.616 --> 00:00:21.287
+Agora... O que é legal no React
+é que ele é tipo JavaScript.
+
+00:00:21.321 --> 00:00:24.924
+Se você conhece JavaScript,
+isso vai ser bem fácil.
+
+00:00:24.958 --> 00:00:29.629
+Em primeiro lugar,
+vou desestruturar algumas coisas.
+
+00:00:29.662 --> 00:00:33.400
+Vamos usar this.state.query
+em alguns lugares diferentes
+
+00:00:33.433 --> 00:00:37.871
+assim como nossos contacts.
+Então vamos desestruturá-los.
+
+00:00:37.904 --> 00:00:40.333
+Contacts virão do this.props.
+
+00:00:40.371 --> 00:00:44.044
+E, aqui,
+podemos escrever query
+
+00:00:44.077 --> 00:00:48.248
+em vez de usar
+this.props.contacts,
+
+00:00:48.281 --> 00:00:50.083
+podemos usar apenas contacts
+
+00:00:50.116 --> 00:00:54.020
+e também onDeleteContact.
+
+00:00:54.054 --> 00:00:55.455
+Vamos adicioná-lo aqui.
+
+00:00:55.488 --> 00:01:00.360
+Agora, queremos filtrar
+os contatos
+
+00:01:00.393 --> 00:01:02.929
+com base no que está
+no campo de input.
+
+00:01:02.962 --> 00:01:06.132
+O que podemos fazer é
+criar uma nova variável.
+
+00:01:06.166 --> 00:01:07.500
+Vamos usar showingContacts,
+
+00:01:07.534 --> 00:01:13.139
+que será a nova variável
+que mapearemos aqui.
+
+00:01:13.173 --> 00:01:16.910
+Adicione aqui,
+que será o novo array,
+
+00:01:16.943 --> 00:01:19.612
+o novo contacts
+depois que o filtrarmos.
+
+00:01:19.646 --> 00:01:24.084
+Colocaremos que, se a query
+ainda for uma string vazia,
+
+00:01:24.117 --> 00:01:28.121
+queremos que showContacts
+seja nosso contacts original.
+
+00:01:28.154 --> 00:01:29.756
+Se não for uma string vazia,
+
+00:01:29.789 --> 00:01:32.659
+então o usuário digitou
+no campo de input.
+
+00:01:32.692 --> 00:01:35.495
+Digitaremos contacts.filter
+
+00:01:35.528 --> 00:01:37.697
+e, depois, vamos colocar assim:
+
+00:01:37.731 --> 00:01:46.806
+se c.name.toLowerCase.
+inclui a query.toLowerCase...
+
+00:01:46.840 --> 00:01:51.911
+Com isso, enquanto digitamos
+no nosso campo de input,
+
+00:01:51.945 --> 00:01:55.181
+só obteremos os usuários
+ou contatos
+
+00:01:55.215 --> 00:01:59.686
+que tenham os caracteres específicos
+dentro do nome deles,
+
+00:01:59.719 --> 00:02:02.555
+porque é isto
+que estamos fazendo aqui.
+
+00:02:02.589 --> 00:02:05.492
+Estamos dizendo
+para apenas incluir contatos
+
+00:02:05.525 --> 00:02:09.529
+em que usamos o toLowerCase
+e os normalizamos,
+
+00:02:09.562 --> 00:02:11.965
+incluindo
+qualquer que seja a query,
+
+00:02:11.998 --> 00:02:14.167
+e vamos usar
+o lowercase nela também.
+
+00:02:14.200 --> 00:02:18.271
+Ou seja, como queremos
+atualizar a IU,
+
+00:02:18.304 --> 00:02:22.108
+colocamos este campo de input
+no estado do componente
+
+00:02:22.142 --> 00:02:24.577
+e, sempre que
+o estado do componente muda,
+
+00:02:24.611 --> 00:02:26.413
+teremos uma nova renderização.
+
+00:02:26.446 --> 00:02:29.416
+Então, filtramos os contatos
+
+00:02:29.449 --> 00:02:31.785
+com base no que quer
+que seja a query.
+

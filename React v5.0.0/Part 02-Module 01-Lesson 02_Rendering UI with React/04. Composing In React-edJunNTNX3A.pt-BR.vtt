@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.190 --> 00:00:03.854
+Vamos falar o que significa
+usar composições
+
+00:00:03.887 --> 00:00:07.678
+para construir interfaces
+e como o React permite fazer isso.
+
+00:00:07.711 --> 00:00:13.030
+Eu começo com este aplicativo
+.create-react-app
+
+00:00:13.063 --> 00:00:16.308
+e removo algumas coisas
+das quais não preciso.
+
+00:00:16.341 --> 00:00:20.318
+Agora eu colarei
+o componente ContactList
+
+00:00:20.351 --> 00:00:22.911
+no qual trabalhamos
+até este momento.
+
+00:00:22.944 --> 00:00:26.630
+Em vez de renderizar tudo isso
+dentro do aplicativo,
+
+00:00:26.663 --> 00:00:29.671
+eu renderizarei o ContactList.
+
+00:00:29.704 --> 00:00:33.874
+Já podemos ver como é fácil
+criar elementos personalizados,
+
+00:00:33.907 --> 00:00:37.289
+como já falamos, e uni-los.
+
+00:00:37.322 --> 00:00:42.702
+Pegamos o ContactList e colocamos
+um deles dentro do aplicativo.
+
+00:00:42.735 --> 00:00:45.631
+Encapsular muitos elementos
+dentro de um componente
+
+00:00:45.664 --> 00:00:47.478
+nos dá algumas vantagens.
+
+00:00:47.511 --> 00:00:51.046
+Para começar, fica fácil reutilizar
+todos os elementos.
+
+00:00:51.079 --> 00:00:55.502
+Então, por exemplo, se eu quiser
+copiar o ContactList,
+
+00:00:55.535 --> 00:00:58.861
+basta copiar e colar
+esta linha três vezes
+
+00:00:58.894 --> 00:01:02.070
+para obter três cópias idênticas
+dos elementos.
+
+00:01:02.103 --> 00:01:04.710
+Outra propriedade
+desses componentes
+
+00:01:04.743 --> 00:01:07.262
+é que eles têm uma interface
+muito nítida,
+
+00:01:07.295 --> 00:01:09.917
+então posso configurá-los
+de forma diferente
+
+00:01:09.950 --> 00:01:12.470
+a partir
+de propriedades diferentes.
+
+00:01:12.503 --> 00:01:15.023
+Pegue, por exemplo,
+um ContactList.
+
+00:01:15.056 --> 00:01:17.165
+Imagine que, no primeiro,
+
+00:01:17.198 --> 00:01:19.765
+eu deseje exibir
+Tyler, Karen e Richard,
+
+00:01:19.798 --> 00:01:21.621
+e, no segundo,
+
+00:01:21.654 --> 00:01:25.518
+eu queira exibir
+outro conjunto de contatos.
+
+00:01:25.551 --> 00:01:28.029
+Nesse caso,
+
+00:01:28.062 --> 00:01:32.333
+eu desejaria configurá-lo
+de forma independente.
+
+00:01:32.366 --> 00:01:35.533
+Seria legal se o ContactList
+tivesse uma propriedade,
+
+00:01:35.566 --> 00:01:38.030
+de forma que pudéssemos
+passar os dados
+
+00:01:38.063 --> 00:01:42.605
+em vez de codificá-lo
+no método render do ContactList.
+
+00:01:42.638 --> 00:01:45.741
+E se o ContactList
+tivesse uma propriedade
+
+00:01:45.774 --> 00:01:49.421
+na qual pudéssemos passar
+um array de pessoas?
+
+00:01:49.454 --> 00:01:52.469
+Da mesma forma,
+e se pudéssemos passar outro array
+
+00:01:52.502 --> 00:01:53.949
+para o segundo ContactList
+
+00:01:53.982 --> 00:01:56.813
+configurando-os
+de forma completamente independente?
+
+00:01:56.846 --> 00:02:01.356
+Vamos pegar nosso ContactList
+e, em vez de codificá-lo,
+
+00:02:01.389 --> 00:02:03.945
+pegaremos a lista de pessoas
+
+00:02:03.978 --> 00:02:08.167
+deste .props.contacts.
+
+00:02:08.200 --> 00:02:12.648
+Vemos que cada componente
+obtém um objeto chamado ".props".
+
+00:02:12.681 --> 00:02:18.625
+As propriedades desse .props
+são as que passamos no componente.
+
+00:02:18.658 --> 00:02:21.593
+Podemos colar
+a lista people aqui.
+
+00:02:21.626 --> 00:02:23.808
+Da mesma forma,
+neste ContactList,
+
+00:02:23.841 --> 00:02:26.928
+teremos um conjunto
+diferente de contatos.
+
+00:02:26.961 --> 00:02:28.815
+O primeiro será Amanda,
+
+00:02:28.848 --> 00:02:32.103
+o segundo será Mikenzi
+
+00:02:32.136 --> 00:02:35.096
+e o terceiro será Ryan.
+
+00:02:35.129 --> 00:02:38.224
+Vamos nos livrar
+deste último ContactList.
+
+00:02:38.257 --> 00:02:40.064
+Ao salvarmos...
+
+00:02:40.097 --> 00:02:45.488
+Vemos aqui que podemos reutilizar
+os elementos do ContactList
+
+00:02:45.521 --> 00:02:48.160
+configurando-os separadamente.
+
+00:02:48.193 --> 00:02:51.352
+Isso facilita a reutilização
+dos componentes
+
+00:02:51.385 --> 00:02:54.592
+ao passarmos pequenas partes
+de configuração
+
+00:02:54.625 --> 00:02:56.041
+por meio das propriedades.
+
+00:02:56.074 --> 00:02:57.640
+Esses dois princípios -
+
+00:02:57.673 --> 00:03:01.208
+a possibilidade de encapsular
+elementos em um componente
+
+00:03:01.241 --> 00:03:03.536
+e de poder reutilizá-los,
+
+00:03:03.569 --> 00:03:07.296
+e a possibilidade de configurar
+os componentes de forma diferente
+
+00:03:07.329 --> 00:03:09.705
+e independente
+por meios das propriedades -
+
+00:03:09.738 --> 00:03:12.697
+são chaves importantes
+e fundamentais
+
+00:03:12.730 --> 00:03:15.265
+para entendermos o modelo
+de composição do React.
+

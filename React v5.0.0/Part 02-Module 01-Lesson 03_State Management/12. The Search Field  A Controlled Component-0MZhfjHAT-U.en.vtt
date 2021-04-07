@@ -1,0 +1,400 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.325
+Here we have our final project, again.
+
+00:00:02.325 --> 00:00:04.530
+And what we're going to do in this video is we are going to
+
+00:00:04.530 --> 00:00:06.855
+build out this section right here,
+
+00:00:06.855 --> 00:00:08.445
+our search contact section.
+
+00:00:08.445 --> 00:00:10.745
+And eventually what that's going to allow us to do,
+
+00:00:10.744 --> 00:00:13.514
+is that's going to allow us to filter our list,
+
+00:00:13.515 --> 00:00:16.734
+which introduces the topic of forms in React.
+
+00:00:16.734 --> 00:00:19.890
+There is actually a few different ways that you could think about forms in React.
+
+00:00:19.890 --> 00:00:22.440
+The first way is to bypass components stay completely,
+
+00:00:22.440 --> 00:00:25.170
+and have your input filled right directly to the DOM,
+
+00:00:25.170 --> 00:00:28.290
+and whatever you want to get a specific value from your input field,
+
+00:00:28.289 --> 00:00:29.974
+you crap that from the DOM.
+
+00:00:29.975 --> 00:00:31.910
+Now, that's the typical way that you would do it.
+
+00:00:31.910 --> 00:00:33.945
+But if you think about the idea of React,
+
+00:00:33.945 --> 00:00:36.204
+React is really good at managing state.
+
+00:00:36.204 --> 00:00:39.600
+So a lot of times, it makes states who also put your form state,
+
+00:00:39.600 --> 00:00:42.050
+inside of your components state.
+
+00:00:42.049 --> 00:00:43.799
+So what we're going to do in this video,
+
+00:00:43.799 --> 00:00:46.147
+is we are going to bind our input field,
+
+00:00:46.148 --> 00:00:49.535
+to whatever the value of a certain property on our state is.
+
+00:00:49.534 --> 00:00:51.254
+And what that's going to do,
+
+00:00:51.255 --> 00:00:53.925
+is that's going to allow us to update the UI,
+
+00:00:53.924 --> 00:00:56.218
+based on this form data.
+
+00:00:56.219 --> 00:00:58.560
+So here, if I come and type a t,
+
+00:00:58.560 --> 00:01:00.880
+you'll notice that we are filtering our list,
+
+00:01:00.880 --> 00:01:03.359
+but we're also showing this section right here.
+
+00:01:03.359 --> 00:01:04.784
+So a good rule of thumb is,
+
+00:01:04.784 --> 00:01:07.487
+if you want your form data to update the UI in
+
+00:01:07.487 --> 00:01:11.055
+any other way besides just updating the input field itself,
+
+00:01:11.055 --> 00:01:14.076
+then go ahead and make your form what's called a controlled component where
+
+00:01:14.075 --> 00:01:17.919
+React as controlling the state of the simple field.
+
+00:01:17.920 --> 00:01:22.545
+But if you're not worried about having your UI based off the form data,
+
+00:01:22.545 --> 00:01:25.799
+then you can go ahead and just stick this form data in the DOM somewhere,
+
+00:01:25.799 --> 00:01:27.754
+and you can grab it when you need it.
+
+00:01:27.754 --> 00:01:31.964
+So we can see this in action by looking at the React developer tools.
+
+00:01:31.965 --> 00:01:35.460
+This is just a Chrome extension that you can get in the Google Chrome store,
+
+00:01:35.459 --> 00:01:37.109
+but what it allows us to do,
+
+00:01:37.109 --> 00:01:39.944
+is it allows us to view our app as a tree structure,
+
+00:01:39.944 --> 00:01:42.209
+and what's even nicer, it allows us to
+
+00:01:42.209 --> 00:01:44.959
+see certain props and certain state of a component.
+
+00:01:44.959 --> 00:01:47.729
+So here we have our list contacts component.
+
+00:01:47.730 --> 00:01:49.799
+You'll notice that we are receiving these two props,
+
+00:01:49.799 --> 00:01:51.954
+then we also have this query history.
+
+00:01:51.954 --> 00:01:53.909
+So if I come in here and type t,
+
+00:01:53.909 --> 00:01:56.179
+you'll notice that our state updates.
+
+00:01:56.180 --> 00:01:57.750
+But what's happening here,
+
+00:01:57.750 --> 00:02:01.584
+is that our UI is updating based off of the state.
+
+00:02:01.584 --> 00:02:03.659
+So as I mentioned, what we're going to do in this video,
+
+00:02:03.659 --> 00:02:07.884
+is we were going to bind this input field to the state.
+
+00:02:07.885 --> 00:02:10.830
+Now that's a little bit backwards because what you would expect to have happen,
+
+00:02:10.830 --> 00:02:12.750
+is you'd expect to bind the value of
+
+00:02:12.750 --> 00:02:15.650
+this query property of the state, to our input field.
+
+00:02:15.650 --> 00:02:17.355
+But what's really happening,
+
+00:02:17.354 --> 00:02:22.079
+is the input value is going to be whatever state dot query is.
+
+00:02:22.080 --> 00:02:25.315
+So what we're going to do, is in order to update our input field,
+
+00:02:25.314 --> 00:02:27.284
+is we need to update our state.
+
+00:02:27.284 --> 00:02:29.370
+So it's not super intuitive right now,
+
+00:02:29.370 --> 00:02:31.259
+but again, what that allows us to do,
+
+00:02:31.259 --> 00:02:34.709
+is by having our input field state living inside of a component,
+
+00:02:34.710 --> 00:02:38.040
+we can go ahead and update our UI based on that state.
+
+00:02:38.039 --> 00:02:40.134
+So let's go ahead and see how that works.
+
+00:02:40.134 --> 00:02:42.519
+So as I mentioned, we're going to be adding state to
+
+00:02:42.520 --> 00:02:46.575
+our list contacts component because we're going to bind the input field,
+
+00:02:46.574 --> 00:02:49.709
+that we're going to eventually build to our component states.
+
+00:02:49.710 --> 00:02:52.395
+So what we'll need to do, is refactor from using
+
+00:02:52.395 --> 00:02:55.990
+a stateless functional component to a class component.
+
+00:02:55.990 --> 00:02:59.504
+So we come in here, and go back to what we had earlier,
+
+00:02:59.504 --> 00:03:01.454
+which was extending component.
+
+00:03:01.455 --> 00:03:07.870
+And then we can move all of this UI into our render method here.
+
+00:03:07.870 --> 00:03:13.185
+And then the last update we need to make as far as transforming to a class component,
+
+00:03:13.185 --> 00:03:17.039
+is let's add a property to our class.
+
+00:03:17.039 --> 00:03:20.109
+And this will also show you how to add proptypes to a class.
+
+00:03:20.110 --> 00:03:22.035
+All we need to do is add
+
+00:03:22.034 --> 00:03:27.799
+a static proptypes property on our class which is the same object.
+
+00:03:27.800 --> 00:03:34.140
+So now we've updated from a stateless functional component to a class component.
+
+00:03:34.139 --> 00:03:36.059
+The next thing we need to do is instead of
+
+00:03:36.060 --> 00:03:39.240
+accessing our props from just the props object,
+
+00:03:39.240 --> 00:03:41.230
+we need to access it from this,
+
+00:03:41.229 --> 00:03:43.804
+the instance of the component.props.
+
+00:03:43.805 --> 00:03:46.498
+So now our app is back to normal.
+
+00:03:46.498 --> 00:03:51.465
+So first, let's add a property to our component state object here.
+
+00:03:51.465 --> 00:03:52.560
+And we will just say query,
+
+00:03:52.560 --> 00:03:54.530
+and we'll set it equal to an empty string.
+
+00:03:54.530 --> 00:03:55.860
+And then what we want to do is,
+
+00:03:55.860 --> 00:03:57.915
+we actually want to build out that input field.
+
+00:03:57.914 --> 00:04:02.804
+So what we will do, is let's wrap everything inside of this div,
+
+00:04:02.805 --> 00:04:06.790
+which we will give a class name of list contacts.
+
+00:04:06.789 --> 00:04:09.584
+So let's throw our unordered list,
+
+00:04:09.585 --> 00:04:13.390
+or our ordered list inside of this div.
+
+00:04:13.530 --> 00:04:16.329
+And then now what we can do,
+
+00:04:16.329 --> 00:04:19.954
+is let's build out our input field here.
+
+00:04:19.954 --> 00:04:22.584
+So this is going to go inside of a div,
+
+00:04:22.584 --> 00:04:26.769
+we'll give it a class name of list-contacts top.
+
+00:04:26.769 --> 00:04:29.574
+And then now we get to build out this input field.
+
+00:04:29.574 --> 00:04:32.616
+So what we'll have is a normal input field.
+
+00:04:32.617 --> 00:04:36.075
+We'll give it a class name of search contacts,
+
+00:04:36.074 --> 00:04:38.245
+a type of text,
+
+00:04:38.245 --> 00:04:41.410
+placeholder will be search contacts.
+
+00:04:41.410 --> 00:04:43.330
+So this should all look normal to you so far.
+
+00:04:43.329 --> 00:04:44.979
+But now what we want to do,
+
+00:04:44.980 --> 00:04:48.040
+is we want to add two new properties to this value,
+
+00:04:48.040 --> 00:04:50.010
+as well as on change.
+
+00:04:50.009 --> 00:04:53.134
+So what we want the value again of this input field to be,
+
+00:04:53.134 --> 00:04:57.379
+is whatever this.state.query is.
+
+00:04:57.379 --> 00:04:58.689
+And then now what we need to do,
+
+00:04:58.689 --> 00:05:02.019
+is we need to figure out a way to whenever the input field changes,
+
+00:05:02.019 --> 00:05:05.199
+we want to update the query property on our state,
+
+00:05:05.199 --> 00:05:09.009
+because then that will update the value inside of the input field.
+
+00:05:09.009 --> 00:05:13.164
+So what we can do, is let's add an update query method up here,
+
+00:05:13.165 --> 00:05:15.490
+which will take in the query.
+
+00:05:15.490 --> 00:05:18.715
+And then in order to update the state, what we can do,
+
+00:05:18.714 --> 00:05:20.799
+is we'll call set states,
+
+00:05:20.800 --> 00:05:24.170
+and query will be the query that's being passed in,
+
+00:05:24.170 --> 00:05:26.314
+and then we will just call.trim on it.
+
+00:05:26.314 --> 00:05:29.019
+And so now, when on change is invoked,
+
+00:05:29.019 --> 00:05:34.500
+what we want to do is invoke this arrow function which will pass the event.
+
+00:05:34.500 --> 00:05:38.180
+And then we want to invoke our update query method,
+
+00:05:38.180 --> 00:05:40.595
+passing it the specific input,
+
+00:05:40.595 --> 00:05:46.740
+or the specific value in the input field which we can get by saying event.target.value.
+
+00:05:46.740 --> 00:05:48.574
+So now that we have our input field,
+
+00:05:48.574 --> 00:05:50.479
+in order to see what our state is,
+
+00:05:50.480 --> 00:05:53.915
+what we can do is let's come in our render method,
+
+00:05:53.915 --> 00:05:58.120
+and we will call JSON.stringify passing it the start state.
+
+00:05:58.120 --> 00:06:00.889
+So now we have this query property right here,
+
+00:06:00.889 --> 00:06:04.594
+it's set to an empty string because that was what we had.
+
+00:06:04.595 --> 00:06:08.040
+The default value be here inside of the state property,
+
+00:06:08.040 --> 00:06:10.385
+and now as we type into here,
+
+00:06:10.384 --> 00:06:13.789
+you'll notice that what's happening is we
+
+00:06:13.790 --> 00:06:17.405
+are updating this state based on whatever is in the input field.
+
+00:06:17.404 --> 00:06:19.459
+So what we will do in the next video,
+
+00:06:19.459 --> 00:06:21.649
+is we will show how we can filter our list now,
+
+00:06:21.649 --> 00:06:23.469
+based on this input field.
+

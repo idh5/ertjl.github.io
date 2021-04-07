@@ -1,0 +1,506 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pass Data Into Components With Props</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Pass Data Into Components With Props</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Passing Data With Props</p></h3>
+  <video controls>
+  <source src="02. Passing Data With Props-KJfpF08R6bw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Passing Data With Props-KJfpF08R6bw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Passing Data With Props-KJfpF08R6bw.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You'll be needing this <code>contacts</code> array in the following video:</p>
+<pre><code class="js language-js">const contacts = [
+ {
+   "id": "karen",
+   "name": "Karen Isgrigg",
+   "handle": "karen_isgrigg",
+   "avatarURL": "http://localhost:5001/karen.jpg"
+ },
+ {
+   "id": "richard",
+   "name": "Richard Kalehoff",
+   "handle": "richardkalehoff",
+   "avatarURL": "http://localhost:5001/richard.jpg"
+ },
+ {
+   "id": "tyler",
+   "name": "Tyler McGinnis",
+   "handle": "tylermcginnis",
+   "avatarURL": "http://localhost:5001/tyler.jpg"
+ }
+];</code></pre>
+<p>This <code>contacts</code> array is just temporary. Eventually, we'll be retrieving and storing contacts on our backend server. As of right now, though, we don't know how or where to make network requests. We'll get to this soon, so just stick with this static list of contacts for now.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="apps-are-running">Apps Are Running?</h2>
+  <p>To follow along, make sure that both your Contacts app and the backend server are running.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Create The ListContacts Component</p></h3>
+  <video controls>
+  <source src="02. Create The ListContacts Component-jf1CJcJRjYU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Create The ListContacts Component-jf1CJcJRjYU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Create The ListContacts Component-jf1CJcJRjYU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/c1bc05e7f73ab27c78ea32f11be0378f7daa42b4" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match the following items with their respective concept:</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>arguments</p></button>
+  <button class="btn btn-primary"><p>props</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Concept</p>
+      </th>
+      <th>
+        <p>Item</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>functions</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>components</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Concept</p>
+        </th>
+        <th>
+          <p>Item</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>functions</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>arguments</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>components</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>props</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Pass Value Into A Component?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>If there were a <code>&lt;Clock /&gt;</code> component in an app you're building, how would you pass a <code>currentTime</code> <code>prop</code> into it?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522191935709" name="573233" id="a1522191935709">
+        <label for="a1522191935709"><p><code>&lt;Clock {new Date().getTime()} /&gt;</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522191960276" name="573233" id="a1522191960276">
+        <label for="a1522191960276"><p><code>&lt;Clock this.props={new Date().getTime()} /&gt;</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522191960741" name="573233" id="a1522191960741">
+        <label for="a1522191960741"><p><code>&lt;Clock currentTime={new Date().getTime()} /&gt;</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522191961173" name="573233" id="a1522191961173">
+        <label for="a1522191961173"><p><code>&lt;Clock this.currentTime={new Date().getTime()} /&gt;</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `<Clock currentTime={new Date().getTime()} />`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Displaying The Contact Names</p></h3>
+  <video controls>
+  <source src="02. Displaying The Contact Names-mGe81Nl3zWU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Displaying The Contact Names-mGe81Nl3zWU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Displaying The Contact Names-mGe81Nl3zWU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/59e929c295c5b841eef9c62533ecfade7658e545" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Access Data In A Component?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Using the <code>&lt;Clock /&gt;</code> component example:</p>
+<pre><code class="js language-js">&lt;Clock currentTime='3:41pm' /&gt;</code></pre>
+<p>How would you access the value <code>3:41pm</code> from inside the component?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522192120155" name="573236" id="a1522192120155">
+        <label for="a1522192120155"><p>Clock.currentTime</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522192121832" name="573236" id="a1522192121832">
+        <label for="a1522192121832"><p>currentTime</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522192122339" name="573236" id="a1522192122339">
+        <label for="a1522192122339"><p>this.currentTime</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522192122778" name="573236" id="a1522192122778">
+        <label for="a1522192122778"><p>this.props.currentTime</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    this.props.currentTime
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add Contact Details</p></h3>
+  <video controls>
+  <source src="02. Add Contact Details-knLnMTgn6a8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Add Contact Details-knLnMTgn6a8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Add Contact Details-knLnMTgn6a8.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/7e77074e1a2fc63fab7374c527a301a7df08802b" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>If you're following along on your own machine and the avatar images are not loading for you, check that the server is running.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Passing data with props problem set</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How do you pass multiple props individually to a component?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522192195831" name="573240" id="a1522192195831">
+        <label for="a1522192195831"><p><code>&lt;Clock time={Date.now()} zone='MST' /&gt;</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522192198707" name="573240" id="a1522192198707">
+        <label for="a1522192198707"><p><code>&lt;Clock props={{time: Date.now(), zone: 'MST'}} /&gt;</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522192199246" name="573240" id="a1522192199246">
+        <label for="a1522192199246"><p><code>&lt;Clock [time=Date.now(), zone='MST'] /&gt;</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522192199758" name="573240" id="a1522192199758">
+        <label for="a1522192199758"><p><code>&lt;Clock props={[Date.now(), 'MST']}/&gt;</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `<Clock time={Date.now()} zone='MST' />`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="passing-data-with-props-recap">Passing Data With Props Recap</h2>
+<p>A <code>prop</code> is any input that you pass to a React component. Just like an HTML attribute, a <code>prop</code> name and value are added to the Component.</p>
+<pre><code class="js language-js">// passing a prop to a component
+&lt;LogoutButton text='Wanna log out?' /&gt;</code></pre>
+<p>In the code above, <code>text</code> is the <code>prop</code> and the string <code>'Wanna log out?'</code> is the value.</p>
+<p>All props are stored on the <code>this.props</code> object. So to access this <code>text</code> <code>prop</code> from <em>inside</em> the component, we'd use <code>this.props.text</code>:</p>
+<pre><code class="js language-js">// access the prop inside the component
+...
+render() {
+ return &lt;div&gt;{this.props.text}&lt;/div&gt;
+}
+...</code></pre>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/components-and-props.html" rel="noopener noreferrer" target="_blank">Components and Props</a> from the React Docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Exercises - Preface.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Pass Data Into Components With Props')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

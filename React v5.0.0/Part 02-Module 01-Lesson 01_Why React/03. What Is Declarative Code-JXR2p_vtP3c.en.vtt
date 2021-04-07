@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.169
+One of the key concepts in React is writing declarative code.
+
+00:00:04.169 --> 00:00:07.710
+You may have heard people talk about imperative versus declarative code.
+
+00:00:07.710 --> 00:00:09.960
+I hope to explain the difference clearly with
+
+00:00:09.960 --> 00:00:12.420
+something you've probably already experienced.
+
+00:00:12.419 --> 00:00:16.875
+Consider I'm in my car and I want to keep the temperature somewhere comfortable.
+
+00:00:16.875 --> 00:00:19.634
+Maybe that's around 71 degrees.
+
+00:00:19.635 --> 00:00:22.215
+My car has two knobs to reach that state.
+
+00:00:22.214 --> 00:00:26.295
+A knob that controls the temperature and one that controls the airflow.
+
+00:00:26.295 --> 00:00:28.770
+When it gets too hot or too cold,
+
+00:00:28.769 --> 00:00:30.689
+I have to do imperative work.
+
+00:00:30.690 --> 00:00:33.745
+I have to manage these knobs the entire drive.
+
+00:00:33.744 --> 00:00:35.644
+I accumulate over time,
+
+00:00:35.645 --> 00:00:40.550
+this state of 71 degrees but I never actually talked about that state.
+
+00:00:40.549 --> 00:00:43.294
+Now, let's consider I got a new car.
+
+00:00:43.295 --> 00:00:45.755
+It doesn't have these knobs for climate control.
+
+00:00:45.755 --> 00:00:48.770
+Instead, it lets me declare a temperature.
+
+00:00:48.770 --> 00:00:53.420
+Instead of fiddling around with the knobs over the course of my drive to get 71 degrees,
+
+00:00:53.420 --> 00:00:55.954
+I just tell the car the state I want to be in,
+
+00:00:55.954 --> 00:01:00.664
+I set the temperature to 71 degrees and it handles the imperative work for me.
+
+00:01:00.664 --> 00:01:03.409
+React lets you do the same thing with your code.
+
+00:01:03.409 --> 00:01:06.019
+You declare state and markup and react does
+
+00:01:06.019 --> 00:01:09.649
+the imperative work of keeping the dom in sync with your app
+

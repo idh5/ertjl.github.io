@@ -1,0 +1,108 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.211 --> 00:00:03.081
+Neste momento,
+você aprendeu a criar componentes,
+
+00:00:03.114 --> 00:00:07.097
+a uni-los
+e a passar dados para eles.
+
+00:00:07.130 --> 00:00:11.057
+Mas nós não falamos
+sobre a melhor parte do React:
+
+00:00:11.090 --> 00:00:12.585
+o gerenciamento de estado.
+
+00:00:12.618 --> 00:00:14.849
+Com o modelo
+do componente React,
+
+00:00:14.882 --> 00:00:18.073
+podemos encapsular
+a complexidade do gerenciamento
+
+00:00:18.106 --> 00:00:20.129
+em componentes individuais.
+
+00:00:20.162 --> 00:00:22.903
+Isso nos permite criar
+um aplicativo grande
+
+00:00:22.936 --> 00:00:25.663
+construindo um monte
+de aplicativos pequenos,
+
+00:00:25.696 --> 00:00:27.720
+que são componentes.
+
+00:00:27.753 --> 00:00:29.824
+Para adicionar o estado
+aos componentes,
+
+00:00:29.857 --> 00:00:33.015
+só precisamos adicionar
+uma propriedade state à classe
+
+00:00:33.048 --> 00:00:35.223
+cujo valor seja um objeto.
+
+00:00:35.256 --> 00:00:38.511
+Esse objeto representa
+o estado do componente.
+
+00:00:38.544 --> 00:00:40.192
+Cada chave no objeto
+
+00:00:40.225 --> 00:00:43.401
+representará uma parte distinta
+de estado para o componente.
+
+00:00:43.434 --> 00:00:45.896
+Agora, assim como fizemos
+com as propriedades,
+
+00:00:45.929 --> 00:00:48.561
+podemos acessar o nome
+de usuário no estado
+
+00:00:48.594 --> 00:00:51.791
+usando this.state.usarname.
+
+00:00:51.824 --> 00:00:53.695
+O que eu gosto do React
+
+00:00:53.728 --> 00:00:58.584
+é que ele permite separar
+dois conceitos complexos.
+
+00:00:58.617 --> 00:01:00.991
+O primeiro é
+a aparência do componente,
+
+00:01:01.024 --> 00:01:04.191
+e o segundo é o estado atual
+do aplicativo.
+
+00:01:04.224 --> 00:01:08.321
+Devido à separação, a IU,
+ou a aparência do aplicativo
+
+00:01:08.354 --> 00:01:11.384
+se torna uma função
+do estado do aplicativo.
+
+00:01:11.417 --> 00:01:14.055
+Com o React,
+as únicas preocupações serão
+
+00:01:14.088 --> 00:01:17.630
+o estado do aplicativo
+e como a IU muda
+
+00:01:17.663 --> 00:01:18.941
+de acordo com o estado.
+

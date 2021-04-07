@@ -1,0 +1,339 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.125 --> 00:00:03.395
+Agora que o estado
+está dentro do componente,
+
+00:00:03.428 --> 00:00:05.819
+o próximo passo
+será possibilitar,
+
+00:00:05.852 --> 00:00:09.506
+sempre que eu clicar
+em um dos botões para apagar,
+
+00:00:09.539 --> 00:00:13.797
+que o aplicativo apague
+um usuário específico.
+
+00:00:13.830 --> 00:00:15.694
+Vamos fazer da seguinte forma.
+
+00:00:15.748 --> 00:00:21.094
+Como o estado
+está dentro do componente App,
+
+00:00:21.127 --> 00:00:24.749
+vamos adicionar um método aqui,
+que será responsável
+
+00:00:24.782 --> 00:00:27.491
+por pegar
+um contato específico
+
+00:00:27.524 --> 00:00:31.251
+e deletá-lo do array contacts.
+
+00:00:31.284 --> 00:00:35.044
+Para inserir esse método
+no componente ListContacts
+
+00:00:35.077 --> 00:00:38.779
+a fim de associá-lo ao botão,
+ele entrará como uma propriedade.
+
+00:00:38.812 --> 00:00:42.076
+Sei que falei demais,
+então vejamos isso na prática.
+
+00:00:42.109 --> 00:00:47.678
+Primeiro,
+criamos um método removeContact.
+
+00:00:47.711 --> 00:00:51.268
+A razão para esse método
+
+00:00:51.301 --> 00:00:56.075
+estar dentro do componente App
+e não do ListContacts
+
+00:00:56.108 --> 00:00:58.157
+é porque é lá
+que os dados estão.
+
+00:00:58.190 --> 00:01:00.540
+Os dados estão
+no componente App,
+
+00:01:00.573 --> 00:01:04.668
+então, se quisermos criar um método,
+que modifica os dados,
+
+00:01:04.701 --> 00:01:07.091
+precisamos fazê-lo
+onde o estado reside,
+
+00:01:07.124 --> 00:01:09.220
+que atualmente
+é no componente App.
+
+00:01:09.253 --> 00:01:14.571
+Esse método pegará um contato
+
+00:01:14.604 --> 00:01:18.340
+e modificará
+o estado do componente.
+
+00:01:18.373 --> 00:01:21.704
+Para isso, podemos usar
+o método setState,
+
+00:01:21.737 --> 00:01:24.643
+que estará localizado
+na instância do componente.
+
+00:01:24.676 --> 00:01:26.755
+Há duas formas
+de usar setState:
+
+00:01:26.788 --> 00:01:29.691
+na primeira,
+passamos um objeto
+
+00:01:29.724 --> 00:01:32.835
+e cada chave neste objeto
+
+00:01:32.868 --> 00:01:35.468
+será fundida
+com o estado atual.
+
+00:01:36.093 --> 00:01:40.533
+Outra forma de usá-lo
+é passando uma função.
+
+00:01:40.566 --> 00:01:44.300
+Aqui passamos uma função,
+que retorna um objeto,
+
+00:01:44.333 --> 00:01:49.107
+e esse objeto retornado
+será fundido com o estado atual.
+
+00:01:49.140 --> 00:01:52.171
+Quais são as diferenças
+entre as duas?
+
+00:01:52.204 --> 00:01:55.668
+Ao atualizar o estado
+a partir do estado anterior,
+
+00:01:55.701 --> 00:01:58.316
+como faremos
+dentro desta função,
+
+00:01:58.349 --> 00:02:01.267
+precisaremos usar
+o setState callback.
+
+00:02:01.300 --> 00:02:05.140
+Isso porque, como primeiro argumento
+desta função,
+
+00:02:05.173 --> 00:02:08.340
+passaremos o estado atual.
+
+00:02:08.373 --> 00:02:12.907
+Se você não for atualizar o estado
+a partir do estado atual,
+
+00:02:12.940 --> 00:02:15.540
+então poderá usar
+o setState objeto,
+
+00:02:15.573 --> 00:02:20.587
+mas eu prefiro sempre usar
+o setState funcional,
+
+00:02:20.620 --> 00:02:24.205
+pois prefiro não ter que pensar
+em usar um ou outro.
+
+00:02:24.238 --> 00:02:27.291
+Em vez disso, simplesmente uso
+o setState funcional.
+
+00:02:27.324 --> 00:02:29.308
+Você pode usar qualquer um,
+
+00:02:29.341 --> 00:02:33.117
+mas, se estiver atualizando o estado
+a partir do estado anterior,
+
+00:02:33.150 --> 00:02:36.494
+então precisará usar
+o setState funcional,
+
+00:02:36.527 --> 00:02:40.477
+porque ele passa o estado atual
+do componente.
+
+00:02:40.510 --> 00:02:46.209
+Agora queremos atualizar contacts,
+e queremos que ele seja
+
+00:02:46.242 --> 00:02:50.677
+o resultado da chamada
+currentState.contact.filter.
+
+00:02:50.710 --> 00:02:53.293
+Então queremos filtrar
+um contato específico,
+
+00:02:53.326 --> 00:02:58.925
+e esse contato é onde o ID
+não é igual
+
+00:02:58.958 --> 00:03:01.471
+ao ID do contato que passamos.
+
+00:03:01.504 --> 00:03:06.789
+Se você nunca usou o filtro,
+isso retornará um array novo
+
+00:03:06.822 --> 00:03:09.966
+removendo o contato específico
+que foi passado
+
+00:03:09.999 --> 00:03:12.061
+quando invocamos
+removeContact.
+
+00:03:12.094 --> 00:03:14.933
+Agora, o problema
+é que temos este método,
+
+00:03:14.966 --> 00:03:17.947
+mas precisamos de uma forma
+de invocá-lo.
+
+00:03:17.980 --> 00:03:20.796
+Nós queremos invocá-lo
+
+00:03:20.829 --> 00:03:23.348
+quando algum desses botões
+forem clicados.
+
+00:03:23.381 --> 00:03:25.678
+Mas a IU da renderização
+desses botões
+
+00:03:25.711 --> 00:03:28.390
+não está dentro
+do componente App.
+
+00:03:28.423 --> 00:03:31.903
+Em vez disso, está dentro
+do componente ListContacts.
+
+00:03:31.936 --> 00:03:34.910
+Assim como passamos
+dados para baixo
+
+00:03:34.943 --> 00:03:37.886
+como propriedade
+com o contacts,
+
+00:03:37.919 --> 00:03:40.209
+também podemos passar
+uma função
+
+00:03:40.242 --> 00:03:41.969
+para ser invocada.
+
+00:03:42.002 --> 00:03:47.017
+Vamos criar uma propriedade
+onDeleteContact aqui,
+
+00:03:47.050 --> 00:03:51.200
+que fará referência
+ao método removeContact.
+
+00:03:51.233 --> 00:03:55.120
+Assim como fizemos
+com contacts,
+
+00:03:55.153 --> 00:03:58.219
+dentro
+do componente ListContact,
+
+00:03:58.252 --> 00:04:03.420
+podemos dizer que sempre
+que este botão for clicado
+
+00:04:03.453 --> 00:04:08.004
+ele deverá invocar
+esta função lambda,
+
+00:04:08.037 --> 00:04:10.341
+e, quando essa função
+for invocada,
+
+00:04:10.374 --> 00:04:14.244
+ela invocará
+props.onDeleteContact,
+
+00:04:14.277 --> 00:04:18.164
+que fará referência
+ao removeContact.
+
+00:04:18.197 --> 00:04:21.251
+Quando invocamos
+a função removeContact,
+
+00:04:21.284 --> 00:04:25.532
+queremos passar o contato
+que desejamos remover.
+
+00:04:25.565 --> 00:04:28.616
+Então podemos
+passar um contato,
+
+00:04:28.649 --> 00:04:33.674
+que será mapeado para cá.
+
+00:04:33.707 --> 00:04:39.097
+Agora, quando clicamos
+em um contato,
+
+00:04:39.130 --> 00:04:42.681
+obtemos um erro inesperado,
+mas podemos corrigir.
+
+00:04:42.714 --> 00:04:46.761
+Deveria ser "currentState.contacts"
+e não ".contact."
+
+00:04:46.794 --> 00:04:49.358
+Então vamos até o ponto
+a ser corrigido.
+
+00:04:49.391 --> 00:04:53.509
+A propriedade de estado,
+como já foi dito, é contacts,
+
+00:04:53.542 --> 00:04:55.983
+então basta adicionarmos
+um S.
+
+00:04:56.016 --> 00:05:00.613
+Agora, se tudo estiver funcionando,
+ao clicarmos em um contato -
+
+00:05:00.646 --> 00:05:02.421
+vou clicar em mim mesmo -
+
+00:05:02.454 --> 00:05:05.400
+ele será removido.
+

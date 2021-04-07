@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.700
+Here we have a basic fetch user function the whole goal of this function is to fetch
+
+00:00:05.700 --> 00:00:07.860
+a specific user the problem
+
+00:00:07.860 --> 00:00:11.460
+here is that we need to tell the function which user to fetch.
+
+00:00:11.460 --> 00:00:13.680
+We can do that by adding a parameter to
+
+00:00:13.679 --> 00:00:18.660
+our function definition and by passing in a username when the function is invoked.
+
+00:00:18.660 --> 00:00:22.500
+What I really like about React is that the same intuition you have about
+
+00:00:22.500 --> 00:00:26.335
+functions can also be applied to React components.
+
+00:00:26.335 --> 00:00:32.230
+Here we have a basic React component whose whole purpose is to display a user to the UI.
+
+00:00:32.229 --> 00:00:36.849
+Now we're running into the same problem we faced earlier with the fetch user function.
+
+00:00:36.850 --> 00:00:42.579
+We need a way to pass the user component a username so it knows which user to display.
+
+00:00:42.579 --> 00:00:47.730
+To do that we can add a custom attribute to our component and give it a value.
+
+00:00:47.729 --> 00:00:50.409
+Now we can access that value from inside of
+
+00:00:50.409 --> 00:00:54.384
+our component definition by using this dot props dot username.
+
+00:00:54.384 --> 00:00:57.820
+In fact, any attributes that are added to a component will
+
+00:00:57.820 --> 00:01:01.679
+be accessible on the props object from inside of that component
+

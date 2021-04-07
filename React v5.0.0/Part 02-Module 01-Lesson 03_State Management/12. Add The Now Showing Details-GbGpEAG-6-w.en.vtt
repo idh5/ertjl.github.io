@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.404
+Looking at our final version here you'll remember,
+
+00:00:03.404 --> 00:00:06.509
+that whenever we type in something in our input field,
+
+00:00:06.509 --> 00:00:10.349
+we get this little section right here that allows us
+
+00:00:10.349 --> 00:00:14.519
+to click this button to basically reset our input field.
+
+00:00:14.519 --> 00:00:16.725
+So, that's what we're going to do in this video.
+
+00:00:16.725 --> 00:00:19.810
+So, the first question we want to ask ourselves
+
+00:00:19.809 --> 00:00:23.539
+is when should that little filter button show up?
+
+00:00:23.539 --> 00:00:30.949
+Well, it needs to show up when our contacts don't match the contacts that we are showing.
+
+00:00:30.949 --> 00:00:34.789
+Because if we have three contacts in our array,
+
+00:00:34.789 --> 00:00:36.799
+but we're only showing two of them,
+
+00:00:36.799 --> 00:00:40.638
+then that means the user has filtered and queried those contexts.
+
+00:00:40.639 --> 00:00:45.590
+So, what we'll do is let's come in here and right above our ordered list here,
+
+00:00:45.590 --> 00:00:48.080
+let's add some more JavaScript logic,
+
+00:00:48.079 --> 00:00:56.060
+and we will say if showingContacts.length does not equal contacts.length,
+
+00:00:56.060 --> 00:01:01.175
+then what we want to do is we want to show this div.
+
+00:01:01.174 --> 00:01:04.355
+So, let's come in here and test this out real quick.
+
+00:01:04.355 --> 00:01:08.359
+So, right now we see that the contacts that we are showing is
+
+00:01:08.359 --> 00:01:13.894
+the same length as all of our contacts so we don't see this test div.
+
+00:01:13.894 --> 00:01:16.299
+But if we come and we start typing,
+
+00:01:16.299 --> 00:01:18.899
+notice that we now get test because
+
+00:01:18.899 --> 00:01:22.575
+the contact we're showing length does not match the contacts length.
+
+00:01:22.575 --> 00:01:25.109
+And if you've never seen this before,
+
+00:01:25.109 --> 00:01:27.030
+it's called a guard up operator.
+
+00:01:27.030 --> 00:01:30.359
+Basically what it does, is as you can probably guess at this point is
+
+00:01:30.359 --> 00:01:34.694
+this code will only execute if this is truthy.
+
+00:01:34.694 --> 00:01:36.839
+So, now instead of just rendering a div,
+
+00:01:36.840 --> 00:01:38.775
+we want to render the correct UI.
+
+00:01:38.775 --> 00:01:44.579
+So, what we'll do is let's add a class name here of showing-contacts.
+
+00:01:44.578 --> 00:01:45.944
+And then inside of here,
+
+00:01:45.944 --> 00:01:47.519
+we will have a span,
+
+00:01:47.519 --> 00:01:49.484
+let's say now showing.
+
+00:01:49.484 --> 00:01:55.560
+We do showingContacts.length of contacts.length,
+
+00:01:55.560 --> 00:01:57.405
+and then we'll close that span.
+
+00:01:57.405 --> 00:01:59.685
+And then what we want to have is a button.
+
+00:01:59.685 --> 00:02:02.085
+And whenever this button is clicked on,
+
+00:02:02.084 --> 00:02:04.409
+we want to show all of the context again.
+
+00:02:04.409 --> 00:02:08.219
+So, now what we need to do is we need to create a method to basically
+
+00:02:08.219 --> 00:02:10.560
+reset the value in
+
+00:02:10.560 --> 00:02:14.474
+the input field to an empty string so we will show all the contacts again.
+
+00:02:14.474 --> 00:02:18.329
+So, what we can do here is we can say when this is clicked on,
+
+00:02:18.330 --> 00:02:21.430
+go ahead and run this.clearQuery,
+
+00:02:21.430 --> 00:02:26.025
+and then that means we need to make a new method up here called clear query.
+
+00:02:26.025 --> 00:02:30.974
+And all we need to do here is we can call update query passing it an empty string,
+
+00:02:30.974 --> 00:02:34.349
+because what update query does is it takes in
+
+00:02:34.349 --> 00:02:39.194
+a query and then sets that to the state property on our component.
+
+00:02:39.194 --> 00:02:44.174
+So, now what should happen is when we type in our input field here,
+
+00:02:44.175 --> 00:02:46.574
+we now get this nice little section right here.
+
+00:02:46.574 --> 00:02:50.730
+And when we click on "Show All" it resets the input field
+
+00:02:50.729 --> 00:02:55.549
+which then re- renders and resets what we see in the view.
+

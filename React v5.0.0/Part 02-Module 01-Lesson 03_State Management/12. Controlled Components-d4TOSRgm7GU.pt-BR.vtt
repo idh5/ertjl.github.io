@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.635
+Quando você usa formulários
+num aplicativo web,
+
+00:00:02.669 --> 00:00:05.338
+o estado do formulário vive
+dentro do DOM.
+
+00:00:05.372 --> 00:00:07.841
+Mas, como já mencionamos,
+o objetivo do React
+
+00:00:07.874 --> 00:00:11.310
+é gerenciar de forma mais eficiente
+o estado dentro de seu aplicativo.
+
+00:00:11.343 --> 00:00:14.214
+O estado do formulário vive
+dentro do DOM,
+
+00:00:14.247 --> 00:00:16.516
+mas o React
+trata de gerenciamento.
+
+00:00:16.549 --> 00:00:19.219
+Como lidamos
+com os formulários no React?
+
+00:00:19.253 --> 00:00:23.189
+Isso é resolvido com o chamado
+"componentes controlados".
+
+00:00:23.223 --> 00:00:26.526
+Eles são componentes
+que renderizam um formulário,
+
+00:00:26.559 --> 00:00:29.062
+mas a fonte da verdade
+para o estado do formulário
+
+00:00:29.095 --> 00:00:32.932
+está dentro do estado do componente
+em vez de dentro do DOM.
+
+00:00:32.966 --> 00:00:35.635
+Eles se chamam
+"componentes controlados"
+
+00:00:35.669 --> 00:00:38.938
+porque o React está controlando
+o estado do formulário.
+
+00:00:38.972 --> 00:00:41.107
+Aqui temos um componente
+
+00:00:41.141 --> 00:00:44.177
+que está renderizando um formulário
+com um único elemento de input.
+
+00:00:44.210 --> 00:00:48.048
+A primeira coisa a se notar é
+que adicionamos um valor de atributo
+
+00:00:48.081 --> 00:00:51.051
+ao input this.state.email.
+
+00:00:51.084 --> 00:00:54.220
+Isto significa que o texto
+no campo de input
+
+00:00:54.254 --> 00:00:58.324
+será a propriedade de e-mail
+do estado do componente.
+
+00:00:58.358 --> 00:01:02.128
+Portanto, o único jeito de atualizar
+o estado no campo input
+
+00:01:02.162 --> 00:01:06.066
+é atualizar a propriedade do e-mail
+do estado do componente.
+
+00:01:06.099 --> 00:01:09.336
+Dá pra ver que é um componente
+verdadeiramente controlado
+
+00:01:09.369 --> 00:01:13.139
+porque o React está no controle
+da propriedade de e-mail do estado.
+
+00:01:13.173 --> 00:01:16.109
+Se quisermos mudar
+o campo de input,
+
+00:01:16.142 --> 00:01:19.139
+podemos criar um método handleChange
+que usa setState
+
+00:01:19.191 --> 00:01:21.381
+para atualizar
+o endereço de e-mail.
+
+00:01:21.412 --> 00:01:25.053
+Sempre que mudarmos esse campo,
+podemos chamar esse método,
+
+00:01:25.087 --> 00:01:28.055
+passando o input
+para o atributo onchange.
+
+00:01:28.421 --> 00:01:31.491
+Embora componentes controlados
+exijam mais digitação,
+
+00:01:31.524 --> 00:01:33.326
+eles têm alguns benefícios.
+
+00:01:33.360 --> 00:01:36.563
+Primeiro: eles suportam
+validação de input instantânea.
+
+00:01:36.596 --> 00:01:41.401
+Segundo: eles permitem
+desativar ou ativar por meses.
+
+00:01:41.434 --> 00:01:43.970
+Terceiro: eles aplicam
+os formatos de input.
+
+00:01:44.004 --> 00:01:47.874
+Note que todos esses benefícios
+têm relação com atualizar a IU
+
+00:01:47.907 --> 00:01:49.776
+com base
+em algum input de usuário.
+
+00:01:49.809 --> 00:01:52.479
+Essa é a essência
+dos componentes controlados
+
+00:01:52.512 --> 00:01:54.414
+e do React em geral.
+
+00:01:54.447 --> 00:01:56.750
+Se o estado da aplicação muda,
+
+00:01:56.783 --> 00:01:59.986
+então a IU é atualizada
+com base nesse novo estado.
+

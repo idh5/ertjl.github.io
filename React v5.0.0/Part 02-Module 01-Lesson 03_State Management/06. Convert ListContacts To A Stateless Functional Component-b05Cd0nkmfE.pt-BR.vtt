@@ -1,0 +1,99 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.141 --> 00:00:03.628
+Agora vamos refatorar
+o componente ListContact
+
+00:00:03.661 --> 00:00:07.244
+de um componente que estende
+a propriedade componente
+
+00:00:07.277 --> 00:00:11.056
+no objeto React para
+um componente funcional sem estado.
+
+00:00:11.089 --> 00:00:14.254
+A primeira coisa
+será criar uma função aqui,
+
+00:00:14.287 --> 00:00:17.240
+que chamaremos da mesma forma
+que o componente antigo,
+
+00:00:17.273 --> 00:00:18.742
+"ListContacts",
+
+00:00:18.775 --> 00:00:23.007
+e, assim como os outros componentes,
+retornaremos uma IU.
+
+00:00:23.040 --> 00:00:25.607
+Vamos copiar isto,
+
+00:00:25.640 --> 00:00:28.093
+que veio do método render.
+
+00:00:28.126 --> 00:00:32.204
+Agora podemos colar isso
+na instrução return.
+
+00:00:32.237 --> 00:00:34.918
+Vou arrumar o recuo.
+
+00:00:34.951 --> 00:00:39.658
+Agora, em vez de acessar tudo
+da palavra-chave this,
+
+00:00:39.691 --> 00:00:42.403
+que vemos
+dentro da mensagem de erro,
+
+00:00:42.436 --> 00:00:45.977
+queremos pegar tudo
+que vem do objeto props,
+
+00:00:46.010 --> 00:00:49.425
+que foi passado
+para o componente ListContacts.
+
+00:00:49.458 --> 00:00:52.617
+Como já foi dito,
+em vez de this.props,
+
+00:00:52.650 --> 00:00:56.697
+podemos acessar os contatos
+usando props.contacts.
+
+00:00:56.730 --> 00:01:00.529
+Já mencionei que podemos utilizar
+os mesmos princípios
+
+00:01:00.562 --> 00:01:03.851
+da criação dos componentes React
+para criar funções JavaScript.
+
+00:01:03.884 --> 00:01:06.348
+Agora essa afirmação
+ficou bem literal,
+
+00:01:06.381 --> 00:01:09.274
+pois podemos fazer
+com que funções JavaScript
+
+00:01:09.307 --> 00:01:12.209
+retornem um JSX.
+
+00:01:12.242 --> 00:01:15.589
+Agora que estamos utilizando
+um componente funcional sem estado,
+
+00:01:15.622 --> 00:01:18.707
+não precisamos mais importar
+o componente aqui,
+
+00:01:18.740 --> 00:01:21.233
+então também podemos deletar
+esta seção.
+

@@ -1,0 +1,380 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Functional Components</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Functional Components</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Create Functional Components</p></h3>
+  <video controls>
+  <source src="06. Create Functional Components-ySW7t8X5jyQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Create Functional Components-ySW7t8X5jyQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Create Functional Components-ySW7t8X5jyQ.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-template-literals-💡">💡 Template Literals 💡</h2>
+</blockquote>
+<blockquote>
+  <p>In the following video, you'll see us using back-ticks (` `) in the "style" attribute's value. Recall that these <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" rel="noopener noreferrer" target="_blank">template literals</a> allow for embedded expressions. Using template literals, you can interpolate expressions as normal strings through your app. </p>
+</blockquote>
+<blockquote>
+  <p>For further reading, feel free to check out <a href="https://www.udacity.com/course/es6-javascript-improved--ud356" rel="noopener noreferrer" target="_blank">ES6 - JavaScript Improved</a> to explore the latest features and improvements to the language.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Convert ListContacts To A Stateless Functional Component</p></h3>
+  <video controls>
+  <source src="06. Convert ListContacts To A Stateless Functional Component-b05Cd0nkmfE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Convert ListContacts To A Stateless Functional Component-b05Cd0nkmfE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Convert ListContacts To A Stateless Functional Component-b05Cd0nkmfE.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/b7b51c961edd507582974c60cd0c3635be66e8bb" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="class-components-vs-stateless-functional-components">Class Components vs. Stateless Functional Components</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="class-component">Class Component</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-10-29-at-2.38.39-pm.png" alt="Class Component" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Class Component</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="stateless-functional-component">Stateless Functional Component</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-10-29-at-2.38.24-pm.png" alt="Stateless Functional Component" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Stateless Functional Component</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>When to use an SFC?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>When is it appropriate to use a Stateless Functional Component? Check all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522192390027" name="573247" id="a1522192390027">
+      <label for="a1522192390027"><p>When the component needs to initialize some data</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522192391383" name="573247" id="a1522192391383">
+      <label for="a1522192391383"><p>When all the component needs is to just render something</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522192391929" name="573247" id="a1522192391929">
+      <label for="a1522192391929"><p>When the component doesn't have any props passed in</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522192392319" name="573247" id="a1522192392319">
+      <label for="a1522192392319"><p>When the component does not use JSX</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>When all the component needs is to just render something</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>If the <code>&lt;IngredientList /&gt;</code> Component in the following code is a Stateless Functional Component, how would you access the <code>items</code> prop inside the Component?</p>
+<pre><code class="js language-js">&lt;IngredientList items={ingredient.items} /&gt;</code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="stateless-functional-components-recap">Stateless Functional Components Recap</h2>
+<p>If your component does not keep track of internal state (i.e., all it really has is just a <code>render()</code> method), you can declare the component as a Stateless Functional Component.</p>
+<p>Remember that at the end of the day, React components are really just JavaScript functions that return HTML for rendering. As such, the following two examples of a simple Email component are equivalent: </p>
+<pre><code class="js language-js">class Email extends React.Component {
+ render() {
+   return (
+     &lt;div&gt;
+       {this.props.text}
+     &lt;/div&gt;
+   );
+ }
+}</code></pre>
+<pre><code class="js language-js">const Email = (props) =&gt; (
+ &lt;div&gt;
+   {props.text}
+ &lt;/div&gt;
+);</code></pre>
+<p>In the latter example (written as an ES6 function with an implicit return), rather than accessing <code>props</code> from <code>this.props</code>, we can pass in props directly as an argument to the function itself. In turn, this regular JavaScript function can serve as the Email component's <code>render()</code> method.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/" rel="noopener noreferrer" target="_blank">Functional Components vs. Stateless Functional Components vs. Stateless Components</a> from Tyler</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Exercise - Functional Components .html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Functional Components')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

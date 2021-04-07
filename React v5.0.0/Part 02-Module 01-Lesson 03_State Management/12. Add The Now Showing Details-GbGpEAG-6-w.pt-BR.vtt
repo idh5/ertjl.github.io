@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.703
+Olhando esta nossa versão final,
+você lembrará que,
+
+00:00:03.737 --> 00:00:06.473
+sempre que digitarmos algo
+no campo de input,
+
+00:00:06.506 --> 00:00:09.209
+obtemos esta seção aqui
+
+00:00:09.242 --> 00:00:12.145
+que permite
+que cliquemos neste botão
+
+00:00:12.178 --> 00:00:14.481
+para resetar o campo de input.
+
+00:00:14.514 --> 00:00:16.683
+É isso que faremos
+neste vídeo.
+
+00:00:16.716 --> 00:00:20.186
+A primeira coisa
+que devemos nos perguntar é:
+
+00:00:20.220 --> 00:00:23.490
+"Quando este botãozinho de filtro
+deve aparecer?"
+
+00:00:23.523 --> 00:00:27.808
+Ele precisa aparecer
+quando os contatos
+
+00:00:27.839 --> 00:00:30.897
+não equivalem aos contatos
+que estamos mostrando.
+
+00:00:30.930 --> 00:00:34.734
+Se tivermos três contatos
+no nosso array,
+
+00:00:34.768 --> 00:00:36.603
+mas só mostrarmos dois deles,
+
+00:00:36.636 --> 00:00:40.573
+então o usuário filtrou
+e consultou esses contatos.
+
+00:00:40.607 --> 00:00:45.545
+Então, logo acima
+da nossa lista ordenada,
+
+00:00:45.578 --> 00:00:48.014
+vamos adicionar mais lógica
+de JavaScript,
+
+00:00:48.048 --> 00:00:52.619
+e vamos digitar assim:
+se showingContacts.length
+
+00:00:52.652 --> 00:00:56.022
+não equivale a contacts.length,
+
+00:00:56.056 --> 00:01:01.127
+então queremos mostrar
+este div.
+
+00:01:01.161 --> 00:01:04.297
+Vamos fazer
+um teste bem rápido.
+
+00:01:04.330 --> 00:01:08.168
+Podemos ver que os contatos
+que estamos mostrando
+
+00:01:08.201 --> 00:01:11.304
+têm o mesmo comprimento
+que nossos contatos,
+
+00:01:11.338 --> 00:01:13.840
+então não vemos
+este div de teste.
+
+00:01:13.873 --> 00:01:17.844
+Mas, se começarmos a digitar,
+note que ele aparece,
+
+00:01:17.877 --> 00:01:20.547
+pois o comprimento do contato
+que estamos mostrando
+
+00:01:20.580 --> 00:01:22.515
+não equivale
+ao comprimento dos contatos.
+
+00:01:22.549 --> 00:01:26.986
+Se você não conhecia isto,
+chamamos de "guard up operator".
+
+00:01:27.020 --> 00:01:30.000
+Em linhas gerais, com ele -
+como você já deve ter adivinhado -,
+
+00:01:30.034 --> 00:01:34.661
+este código só vai executar
+se ele for verdadeiro.
+
+00:01:34.694 --> 00:01:38.732
+Em vez de renderizar um div,
+queremos renderizar a IU correta.
+
+00:01:38.765 --> 00:01:44.537
+Adicionaremos a classe
+showing-contacts.
+
+00:01:44.571 --> 00:01:47.474
+E, dentro daqui,
+digitaremos span
+
+00:01:47.507 --> 00:01:49.442
+e now showing.
+
+00:01:49.476 --> 00:01:55.515
+Digitamos showingContacts.length
+de contacts.length,
+
+00:01:55.548 --> 00:01:57.350
+e fecharemos este span.
+
+00:01:57.384 --> 00:01:59.619
+Vamos escrever button.
+
+00:01:59.652 --> 00:02:02.022
+Sempre que clicarem nele,
+
+00:02:02.055 --> 00:02:04.357
+queremos mostrar
+todo o contexto de novo.
+
+00:02:04.391 --> 00:02:07.460
+Agora nós precisamos criar
+um método
+
+00:02:07.494 --> 00:02:12.132
+para resetar o valor no campo
+de input para uma string vazia
+
+00:02:12.165 --> 00:02:14.434
+e, com isso, mostrarmos
+todos os contatos de novo.
+
+00:02:14.467 --> 00:02:18.271
+O que podemos fazer aqui é dizer
+que, quando o botão é clicado,
+
+00:02:18.304 --> 00:02:21.141
+ele deve executar
+this.clearQuery.
+
+00:02:21.174 --> 00:02:23.576
+Isso significa
+que precisamos criar
+
+00:02:23.610 --> 00:02:25.979
+um novo método
+chamado "clearQuery".
+
+00:02:26.012 --> 00:02:30.917
+Só precisamos usar a updateQuery,
+passando uma string vazia,
+
+00:02:30.950 --> 00:02:36.089
+porque o updateQuery contém
+uma query e a configura
+
+00:02:36.122 --> 00:02:39.159
+para a propriedade
+de estado do componente.
+
+00:02:39.192 --> 00:02:41.261
+O que deve acontecer é que,
+
+00:02:41.294 --> 00:02:44.130
+quando digitamos
+no campo de input aqui,
+
+00:02:44.164 --> 00:02:46.533
+nós vemos esta seção aqui.
+
+00:02:46.566 --> 00:02:50.670
+E, quando clicamos em "Show All",
+ele reseta o campo de input,
+
+00:02:50.704 --> 00:02:53.167
+que faz uma nova renderização
+
+00:02:53.190 --> 00:02:55.542
+e reseta o que vimos
+na visualização.
+

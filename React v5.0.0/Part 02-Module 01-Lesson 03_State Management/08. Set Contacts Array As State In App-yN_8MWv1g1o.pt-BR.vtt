@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.110 --> 00:00:04.136
+Atualmente, no nosso aplicativo,
+temos o array contacts,
+
+00:00:04.170 --> 00:00:07.582
+que passamos
+para o componente ListContacts,
+
+00:00:07.615 --> 00:00:11.582
+que é responsável
+pelo loop do array contacts
+
+00:00:11.615 --> 00:00:15.228
+e, para cada item do array,
+um contato é exibido.
+
+00:00:15.261 --> 00:00:18.207
+No momento, você deve ter notado
+que o array contacts
+
+00:00:18.240 --> 00:00:22.415
+está fora do componente App,
+
+00:00:22.448 --> 00:00:24.983
+está no escopo deste módulo.
+
+00:00:25.016 --> 00:00:27.441
+Isso não é necessariamente
+algo ruim,
+
+00:00:27.474 --> 00:00:30.375
+mas é fora do mundo do React.
+
+00:00:30.408 --> 00:00:35.272
+Se fôssemos mudar
+algum item de algum contato,
+
+00:00:35.305 --> 00:00:40.089
+adicionar ou remover um contato
+do array contacts,
+
+00:00:40.122 --> 00:00:43.031
+o React não saberia
+que isso teria acontecido.
+
+00:00:43.064 --> 00:00:46.158
+Um dos pontos fortes do React
+é o gerenciamento de estado,
+
+00:00:46.191 --> 00:00:50.933
+e manter o array contacts
+fora do componente Add
+
+00:00:50.966 --> 00:00:52.885
+não possibilita isso.
+
+00:00:52.918 --> 00:00:56.270
+Então devemos levar
+o array contacts
+
+00:00:56.303 --> 00:00:59.422
+para o estado local
+do componente App.
+
+00:00:59.455 --> 00:01:02.750
+Assim, quando começarmos a mudar
+o array contacts,
+
+00:01:02.783 --> 00:01:05.654
+o React será capaz de ver
+as alterações
+
+00:01:05.687 --> 00:01:08.543
+e atualizará a IU
+a partir delas.
+
+00:01:08.576 --> 00:01:12.806
+Para isso,
+adicionamos uma propriedade state
+
+00:01:12.839 --> 00:01:15.109
+no componente local,
+
+00:01:15.142 --> 00:01:18.614
+copiamos o array
+
+00:01:18.648 --> 00:01:20.539
+e, no objeto state -
+
+00:01:20.573 --> 00:01:24.742
+isso representará todo o estado
+do componente App -,
+
+00:01:24.775 --> 00:01:27.911
+podemos adicionar
+uma propriedade contacts,
+
+00:01:27.944 --> 00:01:33.824
+que será nosso array contacts.
+
+00:01:33.857 --> 00:01:38.142
+Agora, em vez de passarmos
+o componente ListContacts,
+
+00:01:38.175 --> 00:01:39.798
+passamos contacts.
+
+00:01:39.831 --> 00:01:44.830
+A fim de obtermos acesso
+ao estado do componente local,
+
+00:01:44.863 --> 00:01:48.696
+adicionamos
+this.state.contacts.
+
+00:01:48.729 --> 00:01:51.412
+Agora a IU continua igual,
+
+00:01:51.445 --> 00:01:56.765
+mas levamos
+o array contacts daqui,
+
+00:01:56.798 --> 00:01:58.752
+do escopo do módulo,
+
+00:01:58.785 --> 00:02:02.333
+para a propriedade
+do estado do componente local.
+

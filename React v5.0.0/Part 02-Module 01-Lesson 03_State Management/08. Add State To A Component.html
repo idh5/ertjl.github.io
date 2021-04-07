@@ -1,0 +1,352 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add State To A Component</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Add State To A Component</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="state">State</h2>
+<p>Earlier in this Lesson, we learned that <code>props</code> refer to attributes from parent components. In the end, props represent "read-only" data that are <em>immutable</em>.</p>
+<p>A component's <code>state</code>, on the other hand, represents <em>mutable</em> data that ultimately affects what is rendered on the page. State is managed internally by the component itself and is meant to change over time, commonly due to user input (e.g., clicking on a button on the page).</p>
+<p>In this section, we'll see how we can encapsulate the complexity of state management to individual components.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add State To Components</p></h3>
+  <video controls>
+  <source src="08. Add State To Components-_gQp4z4mCEQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. Add State To Components-_gQp4z4mCEQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="08. Add State To Components-_gQp4z4mCEQ.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-class-fields-💡">💡 Class Fields 💡</h2>
+</blockquote>
+<blockquote>
+  <p>In the code above, we put the <code>state</code> object directly inside the class…<em>not</em> in a <code>constructor()</code> method!</p>
+</blockquote>
+<blockquote>
+  <p>```js<br />
+  class User extends React.Component {<br />
+   state = {<br />
+     username: 'Tyler'<br />
+   } <br />
+  }</p>
+</blockquote>
+<pre><code>...rather than:
+
+&gt; ```js
+class User extends React.Component {
+ constructor(props) {
+   super(props);
+   this.state = {
+     username: 'Tyler'
+   };
+ }
+}</code></pre>
+<blockquote>
+  <p>This is slightly different from Facebook's <a href="https://facebook.github.io/react/docs/react-without-es6.html#setting-the-initial-state" rel="noopener noreferrer" target="_blank">Setting the Initial State docs</a>.</p>
+</blockquote>
+<blockquote>
+  <p>Having <code>state</code> outside the <code>constructor()</code> means it is a <a href="https://github.com/tc39/proposal-class-fields" rel="noopener noreferrer" target="_blank">class field</a>, which is a proposal for a new change to the language. It currently isn't supported by JavaScript, but thanks to Babel's fantastic powers of transpiling, we can use it!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Set Contacts Array As State In App</p></h3>
+  <video controls>
+  <source src="08. Set Contacts Array As State In App-yN_8MWv1g1o.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. Set Contacts Array As State In App-yN_8MWv1g1o.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="08. Set Contacts Array As State In App-yN_8MWv1g1o.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/d3d6eee9287313c78705793fc5dccf54de27487d" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-props-in-initial-state-⚠️">⚠️ Props in Initial State ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>When defining a component's initial state, avoid initializing that state with <code>props</code>. This is an error-prone <em>anti-pattern</em>, since state will only be initialized with <code>props</code> when the component is first created.</p>
+</blockquote>
+<blockquote>
+<pre><code class="js language-js">this.state = {
+ user: props.user
+}</code></pre>
+</blockquote>
+<blockquote>
+  <p>In the above example, if <code>props</code> are ever updated, the current state will not change unless the component is "refreshed." Using <code>props</code> to produce a component's initial state also leads to duplication of data, deviating from a dependable "source of truth."</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Properties of State?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>state</code> in React? Please select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522193674504" name="573257" id="a1522193674504">
+      <label for="a1522193674504"><p>A component's state can be defined at initialization.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193685153" name="573257" id="a1522193685153">
+      <label for="a1522193685153"><p>State that is needed by multiple components needs to be lifted up to the closest common ancestor.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193685732" name="573257" id="a1522193685732">
+      <label for="a1522193685732"><p>State should be used when you want to store information that will never change.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193686335" name="573257" id="a1522193686335">
+      <label for="a1522193686335"><p>A component can alter its own internal state.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A component's state can be defined at initialization.</li>
+      <li>State that is needed by multiple components needs to be lifted up to the closest common ancestor.</li>
+      <li>A component can alter its own internal state.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="state-recap">State Recap</h2>
+<p>By having a component manage its own state, any time there are changes made to that state, React will know and <em>automatically</em> make the necessary updates to the page.</p>
+<p>This is one of the key benefits of using React to build UI components: when it comes to re-rendering the page, we just have to think about updating state. We don't have to keep track of exactly which parts of the page change each time there are updates. We don't need to decide how we will efficiently re-render the page. React compares the previous output and new output, determines what has changed, and makes these decisions for us. This process of determining what has changed in the previous and new outputs is called <code>Reconciliation</code>.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/thinking-in-react.html#step-4-identify-where-your-state-should-live" rel="noopener noreferrer" target="_blank">Identify Where Your State Should Live</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Update state with setState.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Add State To A Component')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

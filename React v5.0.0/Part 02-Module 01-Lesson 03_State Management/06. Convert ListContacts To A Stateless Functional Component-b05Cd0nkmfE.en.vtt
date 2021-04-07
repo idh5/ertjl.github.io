@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.009
+So now, let's refactor our list contacts component from a component
+
+00:00:05.009 --> 00:00:10.890
+extending the component property on the react object to a stateless functional component.
+
+00:00:10.890 --> 00:00:14.140
+So, first what we'll do is let's create a function here.
+
+00:00:14.140 --> 00:00:18.629
+We will call it the same name as our old component, ListContacts.
+
+00:00:18.629 --> 00:00:20.570
+And just as with the other component,
+
+00:00:20.570 --> 00:00:22.839
+we are going to return some UI.
+
+00:00:22.839 --> 00:00:27.899
+Let's go and copy all of this which again is just coming from the render method.
+
+00:00:27.899 --> 00:00:31.994
+Now, we can paste that into our return statement here,
+
+00:00:31.995 --> 00:00:34.664
+and we will fix the indention real quick.
+
+00:00:34.664 --> 00:00:38.100
+Then now instead of accessing everything
+
+00:00:38.100 --> 00:00:42.179
+from this keyword as you see over here inside the error message,
+
+00:00:42.179 --> 00:00:44.490
+we want to grab everything coming from
+
+00:00:44.490 --> 00:00:49.170
+the props object that is being passed to our ListContacts component.
+
+00:00:49.170 --> 00:00:52.350
+So, as I mentioned, instead of the stop props,
+
+00:00:52.350 --> 00:00:56.475
+we can access our contacts by doing props dot contacts.
+
+00:00:56.475 --> 00:00:59.850
+In the past, I've mentioned that you can use the same intuitions for
+
+00:00:59.850 --> 00:01:03.719
+creating React components as you do normal JavaScript functions.
+
+00:01:03.719 --> 00:01:07.469
+Well, now that statement is pretty literal because you can have
+
+00:01:07.469 --> 00:01:12.075
+actual JavaScript functions return you some JSX.
+
+00:01:12.075 --> 00:01:15.359
+And now that we are using a stateless functional component,
+
+00:01:15.359 --> 00:01:18.614
+we no longer need to import component up here,
+
+00:01:18.614 --> 00:01:21.399
+so we can delete this section as well.
+

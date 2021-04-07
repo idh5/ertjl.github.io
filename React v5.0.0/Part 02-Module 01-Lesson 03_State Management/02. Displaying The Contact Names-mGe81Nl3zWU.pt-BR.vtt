@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.369 --> 00:00:05.488
+No último vídeo,
+criamos o componente ListContact
+
+00:00:05.521 --> 00:00:10.567
+e passamos o array contacts
+como uma propriedade.
+
+00:00:10.600 --> 00:00:13.863
+Dentro do ListContact,
+havia uma lista ordenada,
+
+00:00:13.896 --> 00:00:15.600
+mas não fizemos nada.
+
+00:00:15.634 --> 00:00:20.151
+Só fizemos o console.log
+do que estava no this.props,
+
+00:00:20.185 --> 00:00:21.498
+que, no console,
+
+00:00:21.532 --> 00:00:26.959
+tinha propriedade contacts
+no objeto props, com três contatos.
+
+00:00:26.992 --> 00:00:30.656
+Agora podemos usar
+o JavaScript
+
+00:00:30.689 --> 00:00:33.096
+para mapear o array contacts
+
+00:00:33.129 --> 00:00:37.400
+e, para cada item do contacts,
+podemos criar um item de lista
+
+00:00:37.433 --> 00:00:40.423
+para exibir
+o contato específico na View.
+
+00:00:40.456 --> 00:00:42.727
+Para realizar isso -
+
+00:00:42.760 --> 00:00:45.471
+primeiro vamos deletar
+o console.log -,
+
+00:00:45.504 --> 00:00:48.082
+dentro da lista ordenada,
+
+00:00:48.115 --> 00:00:51.528
+passamos para o JavaScript
+usando as chaves,
+
+00:00:51.561 --> 00:00:55.679
+e dizemos
+"this.prop.contacts".
+
+00:00:55.712 --> 00:00:57.799
+Queremos mapear isso.
+
+00:00:57.832 --> 00:00:59.591
+Teremos uma função lambda aqui.
+
+00:00:59.624 --> 00:01:03.312
+Perceba que estou usando parênteses
+e não chaves
+
+00:01:03.345 --> 00:01:07.168
+para obter o retorno implícito
+da função de erro ES6.
+
+00:01:07.201 --> 00:01:09.990
+Para cada contato,
+
+00:01:10.023 --> 00:01:15.238
+queremos criar um item de lista
+que diz "contact.name".
+
+00:01:15.271 --> 00:01:19.558
+Agora, dentro da IU,
+há três itens diferentes,
+
+00:01:19.591 --> 00:01:23.430
+sendo que cada um representa o nome
+de um contato individual.
+
+00:01:23.463 --> 00:01:27.431
+Lembre-se de que haverá
+uma mensagem de erro no console.
+
+00:01:27.464 --> 00:01:31.484
+"Cada filho no array ou iterador
+deve ter uma chave única."
+
+00:01:31.517 --> 00:01:36.134
+Então precisaremos dar a isto
+uma propriedade única.
+
+00:01:36.167 --> 00:01:39.774
+Se você se lembra
+de como era o array contacts,
+
+00:01:39.807 --> 00:01:44.409
+cada contato tinha um ID, um nome,
+um endereço e um URL do avatar,
+
+00:01:44.443 --> 00:01:48.915
+então usaremos a propriedade do ID
+como ID único.
+
+00:01:48.948 --> 00:01:51.677
+Podemos dizer aqui
+"contact.id".
+
+00:01:52.893 --> 00:01:54.715
+Nós precisamos fazer isso,
+
+00:01:54.748 --> 00:01:58.180
+porque um dos itens de lista
+pode ser alterado,
+
+00:01:58.213 --> 00:02:01.380
+e usar um atributo único
+para cada item de lista
+
+00:02:01.413 --> 00:02:05.724
+faz com que o React saiba
+quais itens foram alterados
+
+00:02:05.757 --> 00:02:08.900
+sem precisar recriar
+a lista toda vez.
+
+00:02:08.933 --> 00:02:13.467
+Ao salvarmos,
+veremos que temos a lista
+
+00:02:13.500 --> 00:02:15.364
+e que o erro desapareceu.
+
+00:02:15.397 --> 00:02:18.011
+Ao salvarmos,
+obtemos a mesma lista,
+
+00:02:18.044 --> 00:02:20.525
+mas não veremos mais o erro
+no console.
+

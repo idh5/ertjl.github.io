@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.065
+Earlier, I said that components are the building blocks of React.
+
+00:00:04.065 --> 00:00:06.344
+But what do I actually mean by that?
+
+00:00:06.344 --> 00:00:10.995
+If you look at the API and documentation for React, they're relatively small.
+
+00:00:10.994 --> 00:00:14.893
+The vast majority of React's API is all about components.
+
+00:00:14.894 --> 00:00:18.464
+They are the main unit of encapsulation that React gives us.
+
+00:00:18.464 --> 00:00:23.339
+Components are great, because they help us break down the UI into smaller pieces.
+
+00:00:23.339 --> 00:00:27.870
+These pieces have clear responsibilities and well-defined interfaces.
+
+00:00:27.870 --> 00:00:30.450
+This is valuable when building a large app,
+
+00:00:30.449 --> 00:00:32.549
+because it lets us work on tiny pieces of
+
+00:00:32.549 --> 00:00:35.759
+the app without inadvertently affecting the rest of it.
+
+00:00:35.759 --> 00:00:37.948
+Another great thing about components,
+
+00:00:37.948 --> 00:00:43.515
+is that they encourage us to build applications using composition instead of inheritance.
+
+00:00:43.515 --> 00:00:46.829
+Let's take a look at what I mean when I say composition.
+

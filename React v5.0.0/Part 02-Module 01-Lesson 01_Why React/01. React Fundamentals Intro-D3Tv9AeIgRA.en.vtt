@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.060
+Before we actually dive into the syntax of React,
+
+00:00:03.060 --> 00:00:06.720
+let's go ahead and take a step back and talk about what makes React special.
+
+00:00:06.719 --> 00:00:10.140
+It's compositional model, it's declarative nature,
+
+00:00:10.140 --> 00:00:12.225
+the way data flows through a component.
+
+00:00:12.224 --> 00:00:14.730
+And that React really is just JavaScript.
+
+00:00:14.730 --> 00:00:16.339
+So, let's get started
+

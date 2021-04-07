@@ -1,0 +1,314 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PropTypes</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. PropTypes</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="type-checking-a-components-props-with-proptypes">Type checking a Component's Props with <code>PropTypes</code></h2>
+<p>As we implement additional features into our app, we may soon find ourselves debugging our components more frequently. For example, what if the <code>props</code> that we pass to our components end up being an unintended data type (e.g. an object instead of an array)? PropTypes is a package that lets us define the data type we want to see right from the get-go and warn us during development if the prop that's passed to the component doesn't match what is expected.</p>
+<p>To use PropTypes in our app, we need to install <a href="https://facebook.github.io/react/docs/typechecking-with-proptypes.html" rel="noopener noreferrer" target="_blank">prop-types</a>:</p>
+<pre><code class="bash language-bash">npm install --save prop-types</code></pre>
+<p>Alternatively, if you have been using <a href="https://www.npmjs.com/package/yarn" rel="noopener noreferrer" target="_blank">yarn</a> to manage packages, feel free to use it as well to install:</p>
+<pre><code class="bash language-bash">yarn add prop-types</code></pre>
+<p>Let's jump right in and see how it's used!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add PropTypes Package To Verify ListContacts Props</p></h3>
+  <video controls>
+  <source src="11. Add PropTypes Package To Verify ListContacts Props-9ngd5sfC4rw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. Add PropTypes Package To Verify ListContacts Props-9ngd5sfC4rw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="11. Add PropTypes Package To Verify ListContacts Props-9ngd5sfC4rw.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/094067a5439f80481e1dd66af0468ebf41f0fc62" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="f1493b73-f4a0-469d-afd8-29c553d79a99--0">
+        <label for="f1493b73-f4a0-469d-afd8-29c553d79a99--0"><p>installed the <a href="https://www.npmjs.com/package/prop-types" rel="noopener noreferrer" target="_blank">prop-types</a> package</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="f1493b73-f4a0-469d-afd8-29c553d79a99--1">
+        <label for="f1493b73-f4a0-469d-afd8-29c553d79a99--1"><p>restarted the Contacts app server</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Way to go!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Consider this component:</p>
+<pre><code class="js language-js">import PropTypes from 'prop-types';
+
+class Email extends React.Component {
+  render() {
+    return (
+      &lt;h3&gt;Message: {this.props.text}&lt;/h3&gt;
+    );
+  }
+}
+
+Email.propTypes = {
+  text: // ???
+};</code></pre>
+<p>We want to validate that a <code>text</code> prop is indeed being passed in, and that its data type is a string. What should the value of the above object's <code>text</code> key be?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="proptypes-recap">PropTypes Recap</h2>
+<p>All in all, PropTypes is a great way to validate intended data types in our React app. Type checking our data with PropTypes helps us identify these bugs during development to ensure a smooth experience for our app's users.</p>
+<h2 id="further-research">Further Research</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/prop-types" rel="noopener noreferrer" target="_blank">prop-types</a> library from npm</li>
+<li><a href="https://facebook.github.io/react/docs/typechecking-with-proptypes.html" rel="noopener noreferrer" target="_blank">Typechecking With Proptypes</a> from the React Docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Controlled Components.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. PropTypes')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

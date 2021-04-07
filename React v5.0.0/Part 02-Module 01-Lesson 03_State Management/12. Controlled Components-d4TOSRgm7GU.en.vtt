@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.685
+Typically when you're using forms in a web app,
+
+00:00:02.685 --> 00:00:05.378
+the form state lives inside of the DOM.
+
+00:00:05.378 --> 00:00:06.629
+But as we've talked about,
+
+00:00:06.629 --> 00:00:11.309
+the whole point of React is to more effectively manage state inside of your application.
+
+00:00:11.310 --> 00:00:14.265
+So, form state typically lives inside of the DOM,
+
+00:00:14.265 --> 00:00:16.574
+but React is all about safe management.
+
+00:00:16.574 --> 00:00:19.280
+How do we handle forms in React?
+
+00:00:19.280 --> 00:00:23.234
+We can solve this problem with what React calls controlled components.
+
+00:00:23.234 --> 00:00:26.579
+Controlled components are components which render a form,
+
+00:00:26.579 --> 00:00:29.459
+but the source of truth for the form state lives
+
+00:00:29.460 --> 00:00:33.195
+inside of the component state rather than inside of the DOM.
+
+00:00:33.195 --> 00:00:35.700
+The reason they're called controlled components,
+
+00:00:35.700 --> 00:00:39.000
+is because React is controlling the state of the form.
+
+00:00:39.000 --> 00:00:44.234
+Here, we have a component which is rendering a form with a single input element.
+
+00:00:44.234 --> 00:00:47.519
+The first thing to notice is that we've added a value
+
+00:00:47.520 --> 00:00:51.105
+attribute to our input of this.state.email.
+
+00:00:51.104 --> 00:00:54.719
+What this means is that the text in the input field is going to
+
+00:00:54.719 --> 00:00:58.379
+be whatever the email property of our component state is.
+
+00:00:58.380 --> 00:01:02.179
+Therefore, the only way to update the state in the input field,
+
+00:01:02.179 --> 00:01:06.129
+is to update the email property of the component state.
+
+00:01:06.129 --> 00:01:07.219
+As you can tell,
+
+00:01:07.219 --> 00:01:09.650
+this is a true controlled component because
+
+00:01:09.650 --> 00:01:13.175
+React is in control of the email property of our state.
+
+00:01:13.174 --> 00:01:16.143
+If we want the input field to change,
+
+00:01:16.144 --> 00:01:21.243
+we can create a handleChange method that uses setState to update the email address.
+
+00:01:21.243 --> 00:01:23.719
+Whenever the input field is changed,
+
+00:01:23.719 --> 00:01:28.099
+we can call this method by passing it to the onchange attribute.
+
+00:01:28.099 --> 00:01:31.534
+Although controlled components require a little bit more typing,
+
+00:01:31.534 --> 00:01:33.363
+they do have some benefits.
+
+00:01:33.364 --> 00:01:36.605
+First, they support instant input validation.
+
+00:01:36.605 --> 00:01:41.439
+Second, they allow you to conditionally disable or enable for months.
+
+00:01:41.439 --> 00:01:44.219
+Third, they enforce input formats.
+
+00:01:44.219 --> 00:01:46.905
+Now, notice that all of these benefits have to do with
+
+00:01:46.905 --> 00:01:49.829
+updating the UI based on some user input.
+
+00:01:49.829 --> 00:01:52.515
+This is the heart of not only controlled components,
+
+00:01:52.515 --> 00:01:54.480
+but also React in general.
+
+00:01:54.480 --> 00:01:56.790
+If the state of our application changes,
+
+00:01:56.790 --> 00:02:00.000
+then our UI updates based off of that new state.
+

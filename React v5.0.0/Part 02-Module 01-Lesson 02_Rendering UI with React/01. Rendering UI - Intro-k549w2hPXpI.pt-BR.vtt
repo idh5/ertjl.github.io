@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.281 --> 00:00:02.431
+Em vez de usar
+uma string template,
+
+00:00:02.464 --> 00:00:06.263
+o React usa objetos JavaScript
+para criar a interface do usuário.
+
+00:00:06.296 --> 00:00:08.839
+Essa é uma diferença fundamental
+entre o React
+
+00:00:08.872 --> 00:00:11.519
+e os outros frameworks populares
+do JavaScript.
+
+00:00:11.552 --> 00:00:14.463
+Os elementos React
+são objetos JavaScript leves,
+
+00:00:14.496 --> 00:00:16.599
+e não nós da árvore DOM.
+
+00:00:16.632 --> 00:00:20.023
+E usamos toda a potência
+do JavaScript para uni-los.
+
+00:00:20.056 --> 00:00:23.423
+Usamos os elementos para descrever
+como a página ficará
+
+00:00:23.456 --> 00:00:27.222
+e deixamos o React
+manipular o DOM.
+
+00:00:27.255 --> 00:00:30.792
+Podemos criar elementos
+chamados de "componentes",
+
+00:00:30.825 --> 00:00:33.623
+que usamos para encapsular
+grupos de elementos
+
+00:00:33.656 --> 00:00:35.215
+e comportamento.
+
+00:00:35.248 --> 00:00:38.063
+Esses componentes
+constituem o React.
+
+00:00:38.096 --> 00:00:40.440
+Vamos começar
+criando alguns elementos.
+

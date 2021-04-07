@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.159 --> 00:00:03.533
+Muito bem, parece que o aplicativo
+foi criado com sucesso,
+
+00:00:03.566 --> 00:00:05.557
+e há um monte de instruções
+
+00:00:05.590 --> 00:00:08.646
+informando como executar
+e construir as coisas.
+
+00:00:08.679 --> 00:00:12.663
+Eu gosto do nível de detalhamento
+fornecido pelo create-react-app.
+
+00:00:12.696 --> 00:00:15.863
+Há ótimas instruções
+por toda base de código
+
+00:00:15.896 --> 00:00:17.725
+e vários arquivos.
+
+00:00:17.758 --> 00:00:20.441
+Eu aconselho
+que você dê uma olhada.
+
+00:00:20.474 --> 00:00:22.974
+Por ora, seguiremos
+as instruções
+
+00:00:23.007 --> 00:00:25.870
+para iniciarmos
+o servidor de desenvolvimento.
+
+00:00:25.903 --> 00:00:30.942
+Vá ao diretório contacts
+e execute yarn start.
+
+00:00:30.975 --> 00:00:36.309
+Com isso, o create-react-app
+abrirá a janela de navegação
+
+00:00:36.342 --> 00:00:40.477
+com o aplicativo executando
+no navegador. Isso é bem legal!
+
+00:00:40.510 --> 00:00:44.439
+Ele diz: "Para começar,
+adicione src/App.js
+
+00:00:44.472 --> 00:00:46.013
+e salve para recarregar."
+
+00:00:46.046 --> 00:00:50.482
+No nosso editor,
+abrimos src/App.js
+
+00:00:50.515 --> 00:00:52.890
+e vemos o código
+que está sendo executado
+
+00:00:52.923 --> 00:00:54.234
+no navegador.
+
+00:00:54.267 --> 00:00:56.404
+Esse código deve parecer
+bem familiar
+
+00:00:56.437 --> 00:00:58.922
+com algumas coisas
+que já fizemos.
+
+00:00:58.955 --> 00:01:02.427
+Temos um componente App,
+que está renderizando um div,
+
+00:01:02.460 --> 00:01:05.987
+e o div está renderizando um filho,
+o elemento de cabeçalho
+
+00:01:06.020 --> 00:01:08.483
+e o elemento de parágrafo.
+
+00:01:08.516 --> 00:01:11.794
+Lembre-se de que nada disso
+é uma string.
+
+00:01:11.827 --> 00:01:14.204
+Vimos em trabalhos anteriores
+
+00:01:14.237 --> 00:01:16.798
+que cada um desses elementos
+
+00:01:16.831 --> 00:01:20.616
+é criado pela chamada de função
+createElement.
+
+00:01:20.649 --> 00:01:23.287
+O JSX é apenas a sintaxe
+
+00:01:23.320 --> 00:01:26.374
+que ajuda a expressar isso
+de forma mais concisa.
+
+00:01:26.407 --> 00:01:29.112
+Uma das coisas legais
+sobre o create-react-app
+
+00:01:29.145 --> 00:01:31.142
+é que ele nos fornece
+automaticamente
+
+00:01:31.175 --> 00:01:33.765
+o comportamento de recarregamento
+que vimos antes.
+
+00:01:33.798 --> 00:01:37.536
+Por exemplo, poderíamos
+editar este cabeçalho
+
+00:01:37.569 --> 00:01:39.585
+e poderíamos dizer
+"Hello World".
+
+00:01:39.618 --> 00:01:42.928
+Ao salvarmos, o navegador
+recarregará automaticamente
+
+00:01:42.961 --> 00:01:44.817
+exibindo as alterações.
+
+00:01:44.850 --> 00:01:47.226
+Algo que não vemos
+neste arquivo
+
+00:01:47.259 --> 00:01:49.704
+é uma referência ao ReactDOM
+
+00:01:49.737 --> 00:01:52.928
+nem como o DOM
+está entrando na página.
+
+00:01:52.961 --> 00:01:56.473
+Para isso, precisaremos
+observar melhor o projeto.
+
+00:01:56.506 --> 00:01:59.031
+Ao abrirmos
+o navegador do arquivo,
+
+00:01:59.064 --> 00:02:03.024
+vemos que App.js
+está no diretório fonte,
+
+00:02:03.057 --> 00:02:06.481
+mas como o aplicativo
+está chegando até a página?
+
+00:02:06.514 --> 00:02:11.168
+Para descobrirmos isso,
+abra src/index.js.
+
+00:02:11.201 --> 00:02:13.904
+Esta chamada
+deve parecer familiar.
+
+00:02:13.937 --> 00:02:17.441
+O index.js importa o aplicativo
+do arquivo App
+
+00:02:17.474 --> 00:02:20.857
+e renderiza o aplicativo
+no elemento raiz,
+
+00:02:20.890 --> 00:02:22.624
+que já está no documento.
+
+00:02:22.657 --> 00:02:24.648
+Então você deve estar
+se perguntando
+
+00:02:24.681 --> 00:02:27.209
+de onde vem o elemento raiz?
+
+00:02:27.242 --> 00:02:31.958
+Para isso, podemos abrir
+public/index.html.
+
+00:02:31.991 --> 00:02:34.494
+Nele vemos o documento HTML
+
+00:02:34.527 --> 00:02:37.176
+no qual o JavaScript
+está sendo executado.
+
+00:02:37.209 --> 00:02:40.862
+O nosso div está aqui,
+nosso elemento raiz.
+
+00:02:40.895 --> 00:02:42.743
+Ao executarmos a construção,
+
+00:02:42.776 --> 00:02:46.366
+o Webpack gerará um pacote
+com todo o JavaScript
+
+00:02:46.399 --> 00:02:49.704
+e colocará uma tag na página
+logo após este div.
+
+00:02:49.737 --> 00:02:51.518
+É assim que tudo se junta.
+
+00:02:51.551 --> 00:02:54.870
+Se quiser saber mais sobre como
+o create-react-app funciona,
+
+00:02:54.903 --> 00:02:59.103
+confira o "Read me",
+que contém instruções
+
+00:02:59.136 --> 00:03:01.607
+e guias detalhados sobre o uso
+
+00:03:01.640 --> 00:03:04.776
+e sobre como modificá-lo
+de acordo com as necessidades.
+

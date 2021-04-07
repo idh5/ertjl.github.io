@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.340 --> 00:00:04.187
+Imagine que queiramos dar
+uma classe ao nosso elemento.
+
+00:00:04.220 --> 00:00:09.211
+O segundo argumento
+define a propriedade do nó DOM.
+
+00:00:09.244 --> 00:00:12.900
+Vamos atribuir como
+"class: 'welcome-message'".
+
+00:00:12.933 --> 00:00:14.251
+Vamos salvar.
+
+00:00:14.284 --> 00:00:17.584
+Obtemos um aviso
+no console dizendo:
+
+00:00:17.601 --> 00:00:21.504
+"Propriedade DOM inválida.
+Você quis dizer 'className'?"
+
+00:00:21.527 --> 00:00:24.079
+Esse é um aviso do React
+
+00:00:24.113 --> 00:00:29.187
+informando que a palavra "class"
+não é uma propriedade DOM válida.
+
+00:00:29.220 --> 00:00:32.075
+Ele sugere
+o uso de "className".
+
+00:00:32.108 --> 00:00:35.372
+Vamos tentar.
+O aviso desapareceu,
+
+00:00:35.405 --> 00:00:38.123
+e o elemento -
+se observamos no console -
+
+00:00:38.156 --> 00:00:40.042
+tem a classe esperada.
+
+00:00:40.075 --> 00:00:41.818
+Isso é um pouco confuso,
+
+00:00:41.851 --> 00:00:44.450
+mas basta lembrar
+que estes elementos
+
+00:00:44.483 --> 00:00:47.819
+descrevem nós DOM
+e não um HTML.
+
+00:00:47.852 --> 00:00:51.266
+"Class" é o nome
+do atributo HTML.
+
+00:00:51.299 --> 00:00:54.842
+Uma vez analisado pelo navegador
+e se transformado em um nó DOM,
+
+00:00:54.875 --> 00:00:57.971
+o nome de propriedade DOM
+será "className".
+
+00:00:58.004 --> 00:00:59.970
+Vamos inspecionar este div
+no console.
+
+00:01:00.003 --> 00:01:02.178
+Com o div no console,
+
+00:01:02.211 --> 00:01:06.394
+vemos que, embora a representação
+do HTML tenha a palavra "class",
+
+00:01:06.427 --> 00:01:08.771
+se eu disser "div.class" -
+
+00:01:08.804 --> 00:01:14.674
+e estou usando o objeto -,
+o DOM div.class não será definido,
+
+00:01:14.707 --> 00:01:19.099
+mas "div.className" seria uma string
+que poderíamos esperar.
+
+00:01:19.132 --> 00:01:21.250
+Ao criar esses elementos React,
+
+00:01:21.283 --> 00:01:25.649
+estamos descrevendo nós DOM
+e não strings HTML.
+
+00:01:26.308 --> 00:01:30.692
+Ao aprender sobre React,
+você ouvirá o termo "Virtual DOM".
+
+00:01:30.725 --> 00:01:35.400
+Isso significa que eles não são
+elementos DOM reais,
+
+00:01:35.433 --> 00:01:39.450
+mas objetos que descrevem
+nós DOM reais.
+
+00:01:39.483 --> 00:01:42.474
+Quando chamamos
+React.createElement,
+
+00:01:42.507 --> 00:01:45.571
+ainda não criamos nada no DOM.
+
+00:01:45.604 --> 00:01:47.500
+Somente quando renderizamos
+
+00:01:47.533 --> 00:01:49.942
+é que o navegador criará
+um elemento DOM real.
+

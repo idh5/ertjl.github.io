@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.549
+When we create our ListContacts element here,
+
+00:00:02.549 --> 00:00:04.934
+what we are parsing it are two different prompts.
+
+00:00:04.934 --> 00:00:09.164
+Contacts which is an array and onDeleteContact which say function.
+
+00:00:09.164 --> 00:00:12.179
+But what if instead of parsing contacts and array,
+
+00:00:12.179 --> 00:00:15.224
+what if someone on our team or even us later down the road,
+
+00:00:15.224 --> 00:00:18.149
+accidentally parsed an object?
+
+00:00:18.149 --> 00:00:22.199
+Then what would happen is you're going to see over here is we would get an error
+
+00:00:22.199 --> 00:00:27.089
+because props.contacts is no longer an array it would be an object,
+
+00:00:27.089 --> 00:00:29.850
+which would mean it doesn't have a.map property.
+
+00:00:29.850 --> 00:00:31.710
+So what we're going to do in this video,
+
+00:00:31.710 --> 00:00:34.910
+is we are going to implement a library called Prop Types,
+
+00:00:34.909 --> 00:00:38.089
+which will allow us to specify the specific
+
+00:00:38.090 --> 00:00:42.170
+prompts that a component needs when the components or when the element is created.
+
+00:00:42.170 --> 00:00:44.750
+So what we'll do, let's go over here and
+
+00:00:44.750 --> 00:00:47.899
+change this back to our normal contexts and then head
+
+00:00:47.899 --> 00:00:50.390
+over to our terminal and what we want to add to
+
+00:00:50.390 --> 00:00:54.049
+our application is the package prop-types.
+
+00:00:54.049 --> 00:00:56.089
+Once that's done, go ahead and restart
+
+00:00:56.090 --> 00:01:00.900
+your application and now head over to our ListContacts component.
+
+00:01:00.899 --> 00:01:02.000
+So as I mentioned earlier,
+
+00:01:02.000 --> 00:01:05.432
+ListContacts is going to take in two different props,
+
+00:01:05.432 --> 00:01:08.030
+contacts array and onDeleteContact,
+
+00:01:08.030 --> 00:01:09.359
+which is a function.
+
+00:01:09.359 --> 00:01:12.179
+So first what we want to do is let's import
+
+00:01:12.180 --> 00:01:15.848
+the PropTypes package that we just barely installed,
+
+00:01:15.847 --> 00:01:20.400
+and now what PropTypes will allow us to do is they will allow us to come down
+
+00:01:20.400 --> 00:01:26.025
+here and add a property to our ListContacts component, we'll say PropTypes.
+
+00:01:26.025 --> 00:01:30.000
+It's going to be set to an object and this object is going to represent all of
+
+00:01:30.000 --> 00:01:34.180
+the different props that can be parsed to our ListContacts component.
+
+00:01:34.180 --> 00:01:37.009
+So first, we are going to have contacts.
+
+00:01:37.009 --> 00:01:41.670
+Contacts as I mentioned a few times now is going to be an array and what's even
+
+00:01:41.670 --> 00:01:44.070
+nice about PropTypes is you can specify if
+
+00:01:44.069 --> 00:01:47.079
+a specific prop is going to be required or not.
+
+00:01:47.079 --> 00:01:48.905
+So we can come in here and say,
+
+00:01:48.905 --> 00:01:51.829
+isRequired and then the other prop that we're going to
+
+00:01:51.829 --> 00:01:54.920
+parse through this component is going to be onDeleteContact,
+
+00:01:54.920 --> 00:01:58.234
+which is going to be a function which is abbreviated to
+
+00:01:58.234 --> 00:02:03.064
+func and that is also going to be required as well.
+
+00:02:03.064 --> 00:02:09.650
+So now what would happen is if instead of parsing in our contacts array,
+
+00:02:09.650 --> 00:02:11.569
+what if we parsed it an object here.
+
+00:02:11.569 --> 00:02:13.400
+And then now inside of our console,
+
+00:02:13.400 --> 00:02:18.814
+we still get the original errors but what we also get is this lineup here,
+
+00:02:18.814 --> 00:02:21.680
+failed prop type, Invalid prop contacts of
+
+00:02:21.680 --> 00:02:25.379
+type objects supply to ListContacts expected array.
+
+00:02:25.379 --> 00:02:26.573
+So what it's saying is, "Hey,
+
+00:02:26.574 --> 00:02:32.285
+ListContacts needed the contacts prop to be an array but what you gave it was an object."
+
+00:02:32.284 --> 00:02:35.060
+And let's say we forgot when we use ListContacts to
+
+00:02:35.060 --> 00:02:38.260
+parse in our onDeleteContact function,
+
+00:02:38.260 --> 00:02:42.349
+you'll notice what'll happen here is even though our app will still render because
+
+00:02:42.349 --> 00:02:46.799
+the onDeleteContact function isn't going to be invoked until one of these X's is clicked,
+
+00:02:46.799 --> 00:02:49.310
+we'll get an error in the console saying, "Hey,
+
+00:02:49.310 --> 00:02:52.550
+it looks like our ListContacts component needed
+
+00:02:52.550 --> 00:02:56.580
+onDeleteContact because it was required, but it's undefined.
+
+00:02:56.580 --> 00:02:59.565
+You didn't parse it in when you created this element."
+
+00:02:59.564 --> 00:03:01.530
+And probably my favorite thing about
+
+00:03:01.530 --> 00:03:05.610
+Prop Types is related to third party components that you use.
+
+00:03:05.610 --> 00:03:10.230
+So right now this ListContacts component is just our component that we created ourselves,
+
+00:03:10.229 --> 00:03:13.409
+so it's pretty obvious to know what props that we're going to need,
+
+00:03:13.409 --> 00:03:17.460
+but what if we used another component which is coming from say MPM?
+
+00:03:17.460 --> 00:03:19.950
+Or what if this ListContacts component was
+
+00:03:19.949 --> 00:03:22.964
+a third party library that we install ourselves?
+
+00:03:22.965 --> 00:03:25.800
+Now, sometimes it might be hard to know which
+
+00:03:25.800 --> 00:03:28.545
+specific prompts you should parse the component.
+
+00:03:28.544 --> 00:03:32.224
+But if the author of that library added Prop Types,
+
+00:03:32.224 --> 00:03:36.099
+all you need to do is look at the Prop Types definition in order to
+
+00:03:36.099 --> 00:03:40.949
+know what specific props need to be parsed to the component that you're using
+

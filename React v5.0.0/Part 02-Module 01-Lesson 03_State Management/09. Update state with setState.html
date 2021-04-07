@@ -1,0 +1,314 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Update state with setState</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Update state with setState</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Update State With SetState</p></h3>
+  <video controls>
+  <source src="09. Update State With SetState-81CCwyeiaWE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. Update State With SetState-81CCwyeiaWE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="09. Update State With SetState-81CCwyeiaWE.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Using SetState To Remove Contact</p></h3>
+  <video controls>
+  <source src="09. Using SetState To Remove Contact-qLa4LEvrYn4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. Using SetState To Remove Contact-qLa4LEvrYn4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="09. Using SetState To Remove Contact-qLa4LEvrYn4.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/4b656124626a1ea127baa92530bf87f89d14389c" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-state-is-set">How State is Set</h2>
+<p>Earlier in this lesson, we saw how we can define a component's state at the time of initialization. Since state reflects <em>mutable</em> information that ultimately affects rendered output, a component may also update its state throughout its lifecycle using <code>this.setState()</code>. As we've learned, when local state changes, React will trigger a re-render of the component.</p>
+<p>There are two ways to use <code>setState()</code>. The first is to merge state updates. Consider a snippet of the following component:</p>
+<pre><code class="js language-js">class Email extends React.Component {
+ state = {
+   subject: '',
+   message: ''
+ }
+ // ...
+});</code></pre>
+<p>Though the initial state of this component contains two properties (<code>subject</code> and <code>message</code>), they can be updated independently. For example:</p>
+<pre><code class="js language-js">this.setState({
+ subject: 'Hello! This is a new subject'
+})</code></pre>
+<p>This way, we can leave <code>this.state.message</code> as-is, but replace <code>this.state.subject</code> with a new value.</p>
+<p>The second way we can use <code>setState()</code> is by passing in a function rather than an object. For example:</p>
+<pre><code class="js language-js">this.setState((prevState) =&gt; ({
+ count: prevState.count + 1
+}))</code></pre>
+<p>Here, the function passed in takes a single <code>prevState</code> argument. When a component's new state depends on the previous state (i.e., we are incrementing <code>count</code> in the previous state by 1), we want to use the functional <code>setState()</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Facts About Updating State?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about setting <code>state</code> in our components? Please check all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522193920774" name="573264" id="a1522193920774">
+      <label for="a1522193920774"><p>Whenever <code>setState()</code> is called, the component also calls <code>render()</code> with the new state</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193926861" name="573264" id="a1522193926861">
+      <label for="a1522193926861"><p>State updates can be merged by passing in an object to <code>setState()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193927566" name="573264" id="a1522193927566">
+      <label for="a1522193927566"><p>Updating state directly is ideal when you want to re-render a component (i.e., preferring <code>this.state.message = 'Hi there';</code> rather than <code>this.setState({ message: 'Hi there' }</code>);</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193928077" name="573264" id="a1522193928077">
+      <label for="a1522193928077"><p>State updates can be asynchronous (i.e., <code>setState()</code> can accept a function with the previous state as its first argument)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522193930351" name="573264" id="a1522193930351">
+      <label for="a1522193930351"><p><code>setState()</code> should be called within the component's <code>render()</code> method</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Whenever `setState()` is called, the component also calls `render()` with the new state</li>
+      <li>State updates can be merged by passing in an object to `setState()`</li>
+      <li>State updates can be asynchronous (i.e., `setState()` can accept a function with the previous state as its first argument)</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="setstate-recap"><code>setState()</code> Recap</h2>
+<p>While a component can set its state when it initializes, we expect that state to change over time, usually due to user input. The component is able to change its own internal state using <code>this.setState()</code>. Each time state is changed, React knows and will call <code>render()</code> to re-render the component. This allows for fast, efficient updates to your app's UI.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/state-and-lifecycle.html" rel="noopener noreferrer" target="_blank">Using State Correctly</a> from the React Docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Exercise - Managing State.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Update state with setState')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

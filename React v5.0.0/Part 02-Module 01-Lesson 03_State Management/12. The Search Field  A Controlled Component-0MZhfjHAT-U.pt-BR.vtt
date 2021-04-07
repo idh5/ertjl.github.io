@@ -1,0 +1,465 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.268
+Este é o nosso projeto final.
+
+00:00:02.302 --> 00:00:06.806
+Neste vídeo, vamos construir
+esta seção bem aqui,
+
+00:00:06.840 --> 00:00:08.709
+a seção de busca de contato.
+
+00:00:08.738 --> 00:00:13.480
+Com ela,
+podemos filtrar a lista,
+
+00:00:13.513 --> 00:00:16.616
+o que introduz o tópico
+de formulários no React.
+
+00:00:16.649 --> 00:00:19.919
+Há diferentes formas de pensar
+em formulários no React.
+
+00:00:19.953 --> 00:00:22.389
+O primeiro é ignorar
+o estado do componente
+
+00:00:22.422 --> 00:00:25.125
+e preencher o input
+diretamente para o DOM.
+
+00:00:25.158 --> 00:00:27.193
+Sempre que você quiser
+um valor específico
+
+00:00:27.227 --> 00:00:29.929
+do seu campo de input,
+você pega do DOM.
+
+00:00:29.963 --> 00:00:31.965
+Esse é o jeito típico de fazer.
+
+00:00:31.998 --> 00:00:36.069
+Mas, no caso do React,
+ele é ótimo gerenciando estado.
+
+00:00:36.102 --> 00:00:39.639
+Ele cria estados
+que colocam seu estado de formulário
+
+00:00:39.673 --> 00:00:42.008
+dentro do estado do componente.
+
+00:00:42.042 --> 00:00:46.112
+Então neste vídeo,
+vamos ligar o campo de input
+
+00:00:46.146 --> 00:00:49.750
+a qualquer valor
+que certa propriedade tenha.
+
+00:00:49.780 --> 00:00:53.887
+Isso vai permitir
+que atualizemos a IU
+
+00:00:53.920 --> 00:00:56.156
+com base nos dados
+de formulário.
+
+00:00:56.189 --> 00:00:58.525
+Aqui, se eu digito um t,
+
+00:00:58.558 --> 00:01:00.827
+você notará
+que estamos filtrando a lista,
+
+00:01:00.860 --> 00:01:03.296
+mas também estamos mostrando
+esta seção.
+
+00:01:03.329 --> 00:01:04.731
+Uma boa regra é,
+
+00:01:04.764 --> 00:01:07.167
+se você quer que os dados
+do formulário atualizem a IU
+
+00:01:07.200 --> 00:01:11.004
+em outros aspectos
+além do campo de input,
+
+00:01:11.037 --> 00:01:14.341
+então faça em seu formulário
+o chamado "componente controlado",
+
+00:01:14.374 --> 00:01:17.877
+no qual o React controla
+o estado do simple field.
+
+00:01:17.911 --> 00:01:22.614
+Se a sua IU pode ser baseada
+nos dados de formulário,
+
+00:01:22.647 --> 00:01:25.667
+então apenas use
+estes dados de formulário no DOM
+
+00:01:25.701 --> 00:01:27.721
+e pegue-os quando precisar.
+
+00:01:27.754 --> 00:01:31.925
+Podemos ver isto em ação
+analisando a React Developer Tools.
+
+00:01:31.958 --> 00:01:35.695
+Ela é só uma extensão do Chrome
+e está na Google Chrome Store.
+
+00:01:35.729 --> 00:01:38.665
+Ela permite
+que você visualize o aplicativo
+
+00:01:38.698 --> 00:01:41.267
+como uma estrutura de árvore.
+E o melhor:
+
+00:01:41.301 --> 00:01:44.904
+ela permite ver certos props
+e estados de um componente.
+
+00:01:44.938 --> 00:01:47.674
+Temos aqui
+o componente ListContacts.
+
+00:01:47.707 --> 00:01:50.210
+Note que estamos recebendo
+estes dois props
+
+00:01:50.243 --> 00:01:51.911
+e também temos
+estes históricos de query.
+
+00:01:51.945 --> 00:01:53.847
+Se eu digitar t,
+
+00:01:53.880 --> 00:01:56.116
+você vai notar
+que nosso estado atualiza.
+
+00:01:56.149 --> 00:01:58.251
+O que acontece é que
+
+00:01:58.284 --> 00:02:01.286
+a IU está sendo atualizada
+com base no estado.
+
+00:02:01.320 --> 00:02:03.686
+Como mencionei, neste vídeo,
+
+00:02:03.720 --> 00:02:07.806
+vamos ligar
+este campo de input ao estado.
+
+00:02:07.840 --> 00:02:12.632
+Daremos um passo atrás
+porque você esperava ligar o valor
+
+00:02:12.665 --> 00:02:15.602
+desta propriedade de query
+ao campo de input.
+
+00:02:15.635 --> 00:02:22.042
+Em vez disso, o valor de input
+será state.query.
+
+00:02:22.075 --> 00:02:25.278
+Então, para atualizar
+nosso campo de input,
+
+00:02:25.311 --> 00:02:27.247
+precisamos atualizar
+nosso estado.
+
+00:02:27.280 --> 00:02:31.317
+Não é super intuitivo agora,
+mas isso nos permite uma coisa:
+
+00:02:31.351 --> 00:02:34.654
+como o estado do campo de input
+está dentro de um componente,
+
+00:02:34.688 --> 00:02:37.991
+podemos atualizar a IU
+com base no nosso estado.
+
+00:02:38.024 --> 00:02:39.467
+Vamos testar.
+
+00:02:39.922 --> 00:02:43.863
+Como eu disse, adicionaremos
+o estado ao componente ListContacts
+
+00:02:43.897 --> 00:02:46.533
+porque vamos ligar
+o campo de input,
+
+00:02:46.566 --> 00:02:49.669
+que vamos construir,
+ao estado do componente.
+
+00:02:49.703 --> 00:02:51.560
+O que precisamos fazer é trocar
+
+00:02:51.594 --> 00:02:55.942
+um componente funcional sem estado
+por um componente de classe.
+
+00:02:55.975 --> 00:02:59.446
+É só vir aqui
+e voltar ao que tínhamos antes,
+
+00:02:59.479 --> 00:03:01.567
+que era um componente
+de extensão,
+
+00:03:01.613 --> 00:03:05.185
+e podemos mover esta IU inteira
+
+00:03:05.218 --> 00:03:07.954
+para o método de renderização.
+
+00:03:07.987 --> 00:03:10.423
+E a última atualização
+que precisamos fazer
+
+00:03:10.457 --> 00:03:13.126
+para transformar
+em um componente de classe
+
+00:03:13.159 --> 00:03:17.030
+é adicionar uma propriedade
+à nossa classe.
+
+00:03:17.063 --> 00:03:20.066
+Com isso, adicionamos prop-types
+a uma classe.
+
+00:03:20.100 --> 00:03:24.771
+Só precisamos adicionar
+static propTypes
+
+00:03:24.804 --> 00:03:27.741
+na nossa classe,
+que é o mesmo objeto.
+
+00:03:27.774 --> 00:03:30.810
+Atualizamos, então,
+um componente funcional sem estado
+
+00:03:30.844 --> 00:03:34.080
+para um componente de classe.
+
+00:03:34.114 --> 00:03:39.185
+Agora, em vez de acessar os props
+apenas do objeto props,
+
+00:03:39.219 --> 00:03:43.757
+precisamos acessá-los daqui,
+do diretório do componente .props.
+
+00:03:43.790 --> 00:03:46.459
+Agora o aplicativo voltou
+ao normal.
+
+00:03:46.493 --> 00:03:48.962
+Primeiro,
+vamos adicionar uma propriedade
+
+00:03:48.995 --> 00:03:51.431
+ao objeto
+do estado do componente.
+
+00:03:51.464 --> 00:03:54.467
+Vamos digitar query e configurá-la
+como uma string vazia.
+
+00:03:54.501 --> 00:03:57.871
+Agora queremos construir
+o campo de input.
+
+00:03:57.904 --> 00:04:02.742
+Então vamos envolver tudo
+dentro deste div,
+
+00:04:02.776 --> 00:04:06.746
+que vai dar um nome de classe
+da list-contacts.
+
+00:04:06.780 --> 00:04:09.549
+Vamos jogar
+nossa lista desordenada,
+
+00:04:09.582 --> 00:04:13.386
+ou nossa lista ordenada,
+dentro deste div.
+
+00:04:14.333 --> 00:04:19.893
+E agora nós podemos construir
+nosso campo de input.
+
+00:04:19.926 --> 00:04:22.529
+Então isto vai
+dentro de um div,
+
+00:04:22.562 --> 00:04:26.733
+com um nome de classe
+de list-contacts-top.
+
+00:04:26.766 --> 00:04:29.536
+Agora podemos construir
+este campo de input.
+
+00:04:29.569 --> 00:04:32.572
+Então teremos
+um campo de input normal.
+
+00:04:32.605 --> 00:04:36.009
+Daremos a ele um nome de classe
+de search-contacts,
+
+00:04:36.042 --> 00:04:38.211
+um tipo de texto,
+
+00:04:38.244 --> 00:04:41.114
+o placeholder será
+search contacts.
+
+00:04:41.147 --> 00:04:43.283
+Tudo isso parece normal
+para você.
+
+00:04:43.316 --> 00:04:46.019
+Agora queremos adicionar
+
+00:04:46.052 --> 00:04:49.956
+duas novas propriedades:
+value e onChange.
+
+00:04:49.989 --> 00:04:53.093
+Queremos que o value
+deste campo de input
+
+00:04:53.126 --> 00:04:57.330
+seja o mesmo
+que o this.state.query.
+
+00:04:57.364 --> 00:05:00.033
+Agora precisamos descobrir
+um jeito de,
+
+00:05:00.066 --> 00:05:01.968
+sempre que o campo
+de input mudar,
+
+00:05:02.002 --> 00:05:05.138
+atualizar a propriedade de query
+do estado,
+
+00:05:05.171 --> 00:05:08.975
+porque isso atualizará o value
+dentro de um campo de input.
+
+00:05:09.009 --> 00:05:13.113
+Podemos adicionar
+um updatequery aqui,
+
+00:05:13.146 --> 00:05:15.448
+que vai conter a query.
+
+00:05:15.482 --> 00:05:17.550
+E, para atualizar o estado,
+
+00:05:17.584 --> 00:05:20.754
+podemos fazer o que chamamos
+de "setStates",
+
+00:05:20.787 --> 00:05:24.124
+e a query será a query
+que está sendo passada,
+
+00:05:24.157 --> 00:05:26.259
+e depois vamos usar a .trim.
+
+00:05:26.292 --> 00:05:29.433
+Agora, quando o onChange
+é chamado,
+
+00:05:29.467 --> 00:05:34.434
+usamos esta função de seta
+para qual vamos passar o event.
+
+00:05:35.000 --> 00:05:38.138
+Depois usaremos o updatequery,
+
+00:05:38.171 --> 00:05:40.540
+passando o input específico
+para ele,
+
+00:05:40.573 --> 00:05:42.742
+ou o valor específico
+no campo de input,
+
+00:05:42.776 --> 00:05:46.680
+que podemos obter
+escrevendo event.target.value.
+
+00:05:46.713 --> 00:05:50.417
+Agora que temos o campo de input,
+para ver qual é o nosso estado,
+
+00:05:50.450 --> 00:05:53.853
+podemos usar nosso método
+de renderização,
+
+00:05:53.887 --> 00:05:55.855
+que chamaremos
+de JSON.stringify,
+
+00:05:55.889 --> 00:05:58.058
+passando o estado inicial
+para ele.
+
+00:05:58.091 --> 00:06:00.827
+Agora temos
+esta propriedade query,
+
+00:06:00.860 --> 00:06:04.531
+que está configurada a uma
+string vazia. Era o que tínhamos.
+
+00:06:04.564 --> 00:06:08.001
+O valor padrão está aqui,
+dentro de state.
+
+00:06:08.034 --> 00:06:10.337
+Agora, quando digitamos,
+
+00:06:10.370 --> 00:06:14.941
+você vai notar que estamos
+atualizando este estado
+
+00:06:14.974 --> 00:06:17.344
+com base no que está
+neste campo de input.
+
+00:06:17.377 --> 00:06:21.614
+No próximo vídeo, mostraremos
+como filtrar nossa lista,
+
+00:06:21.648 --> 00:06:23.450
+com base neste campo de input.
+

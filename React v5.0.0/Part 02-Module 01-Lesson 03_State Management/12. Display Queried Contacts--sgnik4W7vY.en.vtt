@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+Now what we want to do is instead of just showing
+
+00:00:02.669 --> 00:00:05.794
+the query string here in our UI whenever we type,
+
+00:00:05.794 --> 00:00:08.219
+what we actually want to do is we want to filter
+
+00:00:08.220 --> 00:00:12.390
+our list based on whatever we type in the input field.
+
+00:00:12.390 --> 00:00:16.620
+So, what we'll do is let's go ahead and get rid of this stringify invocation.
+
+00:00:16.620 --> 00:00:21.420
+And again, what's cool about React is really this is just going to be JavaScript.
+
+00:00:21.420 --> 00:00:23.030
+So if you're familiar with JavaScript,
+
+00:00:23.030 --> 00:00:24.975
+then this should be pretty straightforward.
+
+00:00:24.975 --> 00:00:29.690
+So, what I want to do first is just destructure a few different things.
+
+00:00:29.690 --> 00:00:31.940
+So, we're going to be using this.state.query
+
+00:00:31.940 --> 00:00:35.649
+a few different places as well as our contacts,
+
+00:00:35.649 --> 00:00:37.920
+so we go ahead and just destructure those.
+
+00:00:37.920 --> 00:00:39.910
+Contacts will be coming from the.props.
+
+00:00:39.909 --> 00:00:42.375
+And then now right here,
+
+00:00:42.375 --> 00:00:48.195
+we can just say query and then down here instead of saying this.props.contacts,
+
+00:00:48.195 --> 00:00:53.969
+we can just do contacts and might as well do onDeleteContact as well.
+
+00:00:53.969 --> 00:00:55.515
+So we will add that up here.
+
+00:00:55.515 --> 00:00:57.060
+And then now what we want to do,
+
+00:00:57.060 --> 00:01:02.969
+is we want to filter our contacts based on whatever is in the input field.
+
+00:01:02.969 --> 00:01:06.170
+So, what we can do is let's create a brand new variable.
+
+00:01:06.170 --> 00:01:09.105
+We will say showingContacts and this is going to be
+
+00:01:09.105 --> 00:01:13.200
+the new variable that we are going to map over down here.
+
+00:01:13.200 --> 00:01:14.995
+So add that in right there,
+
+00:01:14.995 --> 00:01:16.950
+which is going to be the new array,
+
+00:01:16.950 --> 00:01:19.650
+the new contacts after we filter them.
+
+00:01:19.650 --> 00:01:22.830
+So, we'll say is if query is still
+
+00:01:22.829 --> 00:01:28.170
+an empty string then we want showContacts to just be our original contacts.
+
+00:01:28.170 --> 00:01:29.820
+But if it's not just an empty string,
+
+00:01:29.819 --> 00:01:32.707
+that means the user has typed into this input field.
+
+00:01:32.707 --> 00:01:37.575
+So, what we'll do is we will say contacts.filter and then what we want to do here,
+
+00:01:37.575 --> 00:01:46.859
+is we'll say if c.name.toLowerCase.includes our query.toLowerCase.
+
+00:01:46.859 --> 00:01:51.959
+And then what that will do is as we type into our input field,
+
+00:01:51.959 --> 00:01:55.349
+we'll only get the users or the contacts that
+
+00:01:55.349 --> 00:01:59.740
+have the specific characters inside of their name,
+
+00:01:59.740 --> 00:02:02.617
+because that's what we are doing right here.
+
+00:02:02.617 --> 00:02:05.550
+We're saying only include the contacts
+
+00:02:05.549 --> 00:02:09.576
+whose name after we've invoked toLowerCase on it and normalize it,
+
+00:02:09.576 --> 00:02:14.204
+includes whatever the query is as well and we'll lowercase that as well.
+
+00:02:14.205 --> 00:02:15.840
+So again what we're doing here,
+
+00:02:15.840 --> 00:02:18.330
+is because we want to update the UI,
+
+00:02:18.330 --> 00:02:20.790
+we stick this input field on
+
+00:02:20.789 --> 00:02:24.840
+the component state and then whenever the component state changes that's going
+
+00:02:24.840 --> 00:02:27.810
+to cause a rerender and then we go ahead and
+
+00:02:27.810 --> 00:02:31.810
+filter our contacts based on whatever the query is.
+

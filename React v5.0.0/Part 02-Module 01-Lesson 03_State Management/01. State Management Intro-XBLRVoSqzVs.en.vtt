@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.855
+Now it's time to introduce three new concepts of React.
+
+00:00:03.855 --> 00:00:07.544
+They are props which allow you to pass data into your components,
+
+00:00:07.544 --> 00:00:10.769
+functional components which are alternative and probably,
+
+00:00:10.769 --> 00:00:13.515
+more intuitive approach to creating React components,
+
+00:00:13.515 --> 00:00:18.120
+and controlled components which allow you to hook up the forms in your application,
+
+00:00:18.120 --> 00:00:20.839
+to your component state. Let's get started.
+

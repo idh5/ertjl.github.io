@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.200
+At this point in our application,
+
+00:00:02.200 --> 00:00:05.099
+we have our contacts array that we're parsing
+
+00:00:05.099 --> 00:00:08.429
+down as a prop to our list contacts component,
+
+00:00:08.429 --> 00:00:14.625
+and inside of list contacts we are grabbing that contacts array off of our prop's object,
+
+00:00:14.625 --> 00:00:17.190
+we're using.map to map over it,
+
+00:00:17.190 --> 00:00:21.120
+and for each contact inside of our contacts array we are creating a list item,
+
+00:00:21.120 --> 00:00:23.815
+which just shows the contacts name.
+
+00:00:23.815 --> 00:00:25.385
+Right now, this is working fine,
+
+00:00:25.385 --> 00:00:28.730
+but we want to instead of just rendering their name,
+
+00:00:28.730 --> 00:00:30.855
+we want to show something like this,
+
+00:00:30.855 --> 00:00:32.660
+where we have their name,
+
+00:00:32.659 --> 00:00:35.524
+their Twitter handle as well as their Avatar.
+
+00:00:35.524 --> 00:00:43.774
+So what we will do is first let's give each list item a className of contact list item,
+
+00:00:43.774 --> 00:00:46.804
+and then now inside of the list item,
+
+00:00:46.804 --> 00:00:48.979
+let's go ahead and delete this name for now.
+
+00:00:48.979 --> 00:00:52.062
+We'll add it back in here in a second.
+
+00:00:52.063 --> 00:00:55.250
+So let's have a div, we'll give this a className of
+
+00:00:55.250 --> 00:00:58.369
+contact Avatar and then what we also want to do
+
+00:00:58.369 --> 00:01:01.669
+is we want to add an an inline style to this div.
+
+00:01:01.670 --> 00:01:05.269
+And the reason for that is we want to give this specific
+
+00:01:05.269 --> 00:01:09.363
+div a background image that is the Avatar of the contact.
+
+00:01:09.364 --> 00:01:13.207
+So what we can do is we can give it a style,
+
+00:01:13.206 --> 00:01:17.899
+so this the first curly braces here says hey we want to go into JavaScript,
+
+00:01:17.900 --> 00:01:18.995
+and then the second one,
+
+00:01:18.995 --> 00:01:20.600
+says we want to give this an object.
+
+00:01:20.599 --> 00:01:24.064
+So what you need to parse the style prop is an object with
+
+00:01:24.064 --> 00:01:28.054
+each property on that object being a specific CSS property.
+
+00:01:28.055 --> 00:01:31.025
+So we can do is we'll set background image,
+
+00:01:31.025 --> 00:01:35.409
+and then we will use backticks because we are going to use ES6 template strings.
+
+00:01:35.409 --> 00:01:41.092
+We will say URL and now we want to pass it the URL of the Avatar,
+
+00:01:41.091 --> 00:01:45.780
+which we can get by doing contact.avatarurl.
+
+00:01:45.780 --> 00:01:47.820
+So now we can close this div.
+
+00:01:47.819 --> 00:01:49.349
+Notice there's not going to be anything inside of it.
+
+00:01:49.349 --> 00:01:51.239
+So we can just immediately close it.
+
+00:01:51.239 --> 00:01:53.789
+And there we go we have all of the contacts now.
+
+00:01:53.790 --> 00:01:58.440
+The next thing we want to do is show the user's name as well as their handle.
+
+00:01:58.439 --> 00:02:04.132
+So we can say div with a className of contact details,
+
+00:02:04.132 --> 00:02:05.939
+and inside of here, as I just mentioned,
+
+00:02:05.939 --> 00:02:08.890
+we are going to have two different paragraphs.
+
+00:02:08.890 --> 00:02:15.969
+The first one, will be contact.name and the second one is going to be contact.handle,
+
+00:02:15.969 --> 00:02:18.219
+and now if we save this what we should see is
+
+00:02:18.219 --> 00:02:20.574
+the Avatar as well as name and their handle,
+
+00:02:20.574 --> 00:02:26.289
+and now the last thing we want to add here is a button that looks like this.
+
+00:02:26.289 --> 00:02:29.875
+So what we will do is we will have a button here and we'll give it
+
+00:02:29.875 --> 00:02:33.580
+a class name of contact-remove,
+
+00:02:33.580 --> 00:02:37.030
+and then for now we will just say button and we're not going to have this up here,
+
+00:02:37.030 --> 00:02:40.120
+but it'll be nice to have the UI in there, so there we go.
+
+00:02:40.120 --> 00:02:44.590
+Now instead of just rendering the contacts name,
+
+00:02:44.590 --> 00:02:47.185
+what we're rendering is their Avatar, the name,
+
+00:02:47.185 --> 00:02:51.689
+a handle and eventually an option to delete the specific contact.
+

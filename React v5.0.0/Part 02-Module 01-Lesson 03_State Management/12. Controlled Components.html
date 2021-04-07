@@ -1,0 +1,443 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Controlled Components</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State Management</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Pass Data Into Components With Props.html">02. Pass Data Into Components With Props</a>
+    </li>
+    <li class="">
+      <a href="03. Exercises - Preface.html">03. Exercises - Preface</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise 1 - Passing Data.html">04. Exercise 1 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise 2 - Passing Data.html">05. Exercise 2 - Passing Data</a>
+    </li>
+    <li class="">
+      <a href="06. Functional Components.html">06. Functional Components</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise - Functional Components .html">07. Exercise - Functional Components </a>
+    </li>
+    <li class="">
+      <a href="08. Add State To A Component.html">08. Add State To A Component</a>
+    </li>
+    <li class="">
+      <a href="09. Update state with setState.html">09. Update state with setState</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise - Managing State.html">10. Exercise - Managing State</a>
+    </li>
+    <li class="">
+      <a href="11. PropTypes.html">11. PropTypes</a>
+    </li>
+    <li class="">
+      <a href="12. Controlled Components.html">12. Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise 1 - Controlled Components.html">13. Exercise 1 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise 2 - Controlled Components.html">14. Exercise 2 - Controlled Components</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Summary.html">15. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise 1 - All Together.html">16. Exercise 1 - All Together</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise 2 - All Together.html">17. Exercise 2 - All Together</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. Controlled Components</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Controlled Components</p></h3>
+  <video controls>
+  <source src="12. Controlled Components-d4TOSRgm7GU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. Controlled Components-d4TOSRgm7GU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. Controlled Components-d4TOSRgm7GU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="react-developer-tools">React Developer Tools</h2>
+<p>While building React apps, it may be tricky at times to see exactly is going on in your components. After all, with so many props being passed and accessed, numerous nested components, and all the JSX yet to be rendered as HTML, it can be tough to put things into perspective!</p>
+<p><code>React Developer Tools</code> allows you to inspect your component hierarchy along with their respective props and states. Once you install the <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en-US" rel="noopener noreferrer" target="_blank">Chrome extension</a>, open the Chrome console and check out the <code>React</code> tab. For a detailed overview, feel free to check out the <a href="https://github.com/facebook/react-devtools" rel="noopener noreferrer" target="_blank">official documentation</a>.</p>
+<p>Let's see it in action below!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The Search Field  A Controlled Component</p></h3>
+  <video controls>
+  <source src="12. The Search Field  A Controlled Component-0MZhfjHAT-U.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. The Search Field  A Controlled Component-0MZhfjHAT-U.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. The Search Field  A Controlled Component-0MZhfjHAT-U.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/df432ab6b51202e23382487cea26ecf2276dce76" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Note that the <code>value</code> attribute is set on the <code>&lt;input&gt;</code> element. Since the displayed value will always be the value in the component's state, we can treat state, then, as the "single source of truth" for the form's state. </p>
+<p>To recap how user input affects the <code>ListContacts</code> component's own state:</p>
+<ol>
+<li>The user enters text into the input field.</li>
+</ol>
+<ul>
+<li>The <code>onChange</code> event listener invokes the <code>updateQuery()</code> function.</li>
+<li><code>updateQuery()</code> then calls <code>setState()</code>, merging in the new state to update the component's internal state.</li>
+<li>Because its state has changed, the <code>ListContacts</code> component re-renders.</li>
+</ul>
+<p>Let's see how we can leverage this updated state to filter our contacts. To help us with our filtering we'll need the following packages:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/escape-string-regexp" rel="noopener noreferrer" target="_blank">escape-string-regexp</a></li>
+<li><a href="https://www.npmjs.com/package/sort-by" rel="noopener noreferrer" target="_blank">sort-by</a></li>
+</ul>
+<pre><code class="bash language-bash">npm install --save escape-string-regexp sort-by</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What is a Controlled Component?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is a Controlled Component?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522194433780" name="573279" id="a1522194433780">
+      <label for="a1522194433780"><p>A component which controls the state of its children components</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194435348" name="573279" id="a1522194435348">
+      <label for="a1522194435348"><p>A component which renders a form, but the source of truth for that form state lives inside of the component state rather than inside of the DOM</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194435790" name="573279" id="a1522194435790">
+      <label for="a1522194435790"><p>A component which controls the UI for its children components</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194436236" name="573279" id="a1522194436236">
+      <label for="a1522194436236"><p>A component which renders a form, but the source of truth for that form state lives inside of DOM rather than inside of the component</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A component which renders a form, but the source of truth for that form state lives inside of the component state rather than inside of the DOM</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Display Queried Contacts</p></h3>
+  <video controls>
+  <source src="12. Display Queried Contacts--sgnik4W7vY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. Display Queried Contacts--sgnik4W7vY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. Display Queried Contacts--sgnik4W7vY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/1671c5ca884e7f902ac9069d866079df34e42be1" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Controlled Components vs “uncontrolled” components?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which benefit applies to Controlled Components that doesn't apply to "uncontrolled" components?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522194558150" name="573284" id="a1522194558150">
+        <label for="a1522194558150"><p>Controlled Components are more the "React way" of doing things</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522194559972" name="573284" id="a1522194559972">
+        <label for="a1522194559972"><p>Controlled Components are less typing</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522194560428" name="573284" id="a1522194560428">
+        <label for="a1522194560428"><p>Controlled Components are more performant</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522194560837" name="573284" id="a1522194560837">
+        <label for="a1522194560837"><p>Controlled Components allow you to update your UI based on the form itself</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Controlled Components allow you to update your UI based on the form itself
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="showing-the-displayed-contacts-count">Showing The Displayed Contacts Count</h2>
+<p>We're almost done working with the controlled component! Our last step is to make our app display the count of how many contacts are being displayed out of the overall total.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add The Now Showing Details</p></h3>
+  <video controls>
+  <source src="12. Add The Now Showing Details-GbGpEAG-6-w.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. Add The Now Showing Details-GbGpEAG-6-w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. Add The Now Showing Details-GbGpEAG-6-w.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/4e1e41b3234ec5297b215b137b7a5dd14ba8e3db" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Do you feel comfortable with Controlled Components? If not, check out the <a href="https://reactjs.org/docs/forms.html#controlled-components" rel="noopener noreferrer" target="_blank">documentation</a> to see another example. We'll get some practice with Controlled Components shortly. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Controlled Components</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Before we head into the next Lesson, let's check in on our knowledge of Controlled Components!</p>
+<p>Which of the following is true about Controlled Components? Please check all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522194862179" name="573291" id="a1522194862179">
+      <label for="a1522194862179"><p>Each update to state has an associated handler function</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194864139" name="573291" id="a1522194864139">
+      <label for="a1522194864139"><p>Form elements receive their current value via an attribute</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194864626" name="573291" id="a1522194864626">
+      <label for="a1522194864626"><p>Form input values are generally stored in the component's state</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194865058" name="573291" id="a1522194865058">
+      <label for="a1522194865058"><p><code>&lt;textarea&gt;</code> and <code>&lt;select&gt;</code> cannot be controlled elements</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522194876418" name="573291" id="a1522194876418">
+      <label for="a1522194876418"><p>Event handlers for a controlled element update the component's state</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Each update to state has an associated handler function</li>
+      <li>Form elements receive their current value via an attribute</li>
+      <li>Form input values are generally stored in the component's state</li>
+      <li>Event handlers for a controlled element update the component's state</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="controlled-components-recap">Controlled Components Recap</h2>
+<p>Controlled components refer to components that render a form, but the "source of truth" for that form state lives inside of the component state rather than inside of the DOM. The benefits of Controlled Components are:</p>
+<ul>
+<li>instant input validation</li>
+<li>conditionally disable/enable buttons</li>
+<li>enforce input formats</li>
+</ul>
+<p>In our <code>ListContacts</code> component, not only does the component render a form, but it also controls what happens in that form based on user input. In this case, event handlers update the component's state with the user's search query. And as we've learned: any changes to React state will cause a re-render on the page, effectively displaying our live search results.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Exercise 1 - Controlled Components.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. Controlled Components')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

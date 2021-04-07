@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.500
+Up until this point,
+
+00:00:01.500 --> 00:00:06.389
+we've used JavaScript's class syntax with a render method to build out our components.
+
+00:00:06.389 --> 00:00:11.009
+Eventually, we'll be adding more methods to these classes, but for now,
+
+00:00:11.009 --> 00:00:14.324
+it's good to know that if all your component has is a render method,
+
+00:00:14.324 --> 00:00:18.149
+you can actually just use a regular old function to create your component.
+
+00:00:18.149 --> 00:00:21.000
+Notice however, that we're no longer
+
+00:00:21.000 --> 00:00:24.420
+accessing the component's props by using the this keyword.
+
+00:00:24.420 --> 00:00:27.060
+Instead, our functional component is being
+
+00:00:27.059 --> 00:00:30.489
+passed it's props as the first argument to the function.
+

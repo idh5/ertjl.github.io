@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.294
+In the last video where we left off was we created our ListContacts component.
+
+00:00:05.294 --> 00:00:09.519
+We parsed to it our contacts array as
+
+00:00:09.519 --> 00:00:13.869
+a prop and then inside of ListContacts we had an ordered list,
+
+00:00:13.869 --> 00:00:15.609
+but we haven't done anything inside of it yet.
+
+00:00:15.609 --> 00:00:18.369
+All we have done is we are console.logging,
+
+00:00:18.370 --> 00:00:20.019
+whatever the step props is,
+
+00:00:20.019 --> 00:00:24.670
+which you'll see inside of the console has a contacts property on the props object,
+
+00:00:24.670 --> 00:00:26.770
+that has three different contacts.
+
+00:00:26.769 --> 00:00:31.300
+So, now what we can do is we can use JavaScript to map
+
+00:00:31.300 --> 00:00:35.695
+over our contacts array and for each item inside of contacts,
+
+00:00:35.695 --> 00:00:40.329
+we can create a list item to show the specific contact to the view.
+
+00:00:40.329 --> 00:00:42.655
+So, what we will do in order to do that,
+
+00:00:42.655 --> 00:00:45.374
+is let's first delete this console.log.
+
+00:00:45.374 --> 00:00:51.649
+And now inside of our ol list we'll go into JavaScript by doing the curly braces.
+
+00:00:51.649 --> 00:00:55.579
+We will then say, this.props.contacts.
+
+00:00:55.579 --> 00:00:57.695
+We want to map over those,
+
+00:00:57.695 --> 00:00:59.450
+we'll have an arrow function here.
+
+00:00:59.450 --> 00:01:02.510
+Notice, I'm using parens rather than
+
+00:01:02.509 --> 00:01:07.084
+curly braces to get the implicit return of the ES6 error function.
+
+00:01:07.084 --> 00:01:10.939
+So, for each contact what we now want to do is we want to
+
+00:01:10.939 --> 00:01:14.899
+create a list item here that says, contact.name.
+
+00:01:14.900 --> 00:01:18.130
+And now what we've done is inside of our UI,
+
+00:01:18.129 --> 00:01:19.599
+we have three different items,
+
+00:01:19.599 --> 00:01:23.431
+each item represents the name of an individual contact.
+
+00:01:23.432 --> 00:01:27.509
+And if you remember looking at our console we have an error here,
+
+00:01:27.509 --> 00:01:31.284
+each child in an array or iterator should have a unique key prop.
+
+00:01:31.284 --> 00:01:35.905
+So, what we need to do is we can come and give this a unique key prop.
+
+00:01:35.905 --> 00:01:39.655
+If you remember back to what our contacts array looks like,
+
+00:01:39.655 --> 00:01:42.159
+is each contact has an ID,
+
+00:01:42.159 --> 00:01:44.424
+a name, a handle and an avatar URL.
+
+00:01:44.424 --> 00:01:48.718
+So, what we will use is this ID property as the unique ID.
+
+00:01:48.718 --> 00:01:51.490
+So we can come in here and say, contact.id.
+
+00:01:51.489 --> 00:01:54.774
+The reason we need to do this,
+
+00:01:54.775 --> 00:01:58.105
+is because eventually one of those list items may change.
+
+00:01:58.105 --> 00:02:01.465
+And by having a unique key attribute on each list item,
+
+00:02:01.465 --> 00:02:05.814
+React is able to performantly know which items in the list has changed,
+
+00:02:05.814 --> 00:02:08.740
+rather than recreating the entire list every time.
+
+00:02:08.740 --> 00:02:10.990
+So now, if we save this,
+
+00:02:10.990 --> 00:02:14.649
+what we should see is that we have our list and that error goes away.
+
+00:02:14.649 --> 00:02:18.025
+And now when we save that we still get our same list,
+
+00:02:18.025 --> 00:02:21.140
+but we no longer get that error in the console
+

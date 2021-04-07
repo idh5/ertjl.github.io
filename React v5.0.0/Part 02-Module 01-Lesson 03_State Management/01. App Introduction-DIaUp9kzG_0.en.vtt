@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.750
+Before we actually dive into building out our application,
+
+00:00:03.750 --> 00:00:06.839
+what I want to do is give you a little tour of it first.
+
+00:00:06.839 --> 00:00:09.240
+So here what we have is a contacts app.
+
+00:00:09.240 --> 00:00:12.224
+So we have a list of contacts that we're entering.
+
+00:00:12.224 --> 00:00:16.984
+Each contact has an avatar as well as a name and their Twitter handle.
+
+00:00:16.984 --> 00:00:19.589
+What we can do is if you come up here,
+
+00:00:19.589 --> 00:00:21.620
+you can filter the contacts.
+
+00:00:21.620 --> 00:00:26.420
+So I can filter for myself by typing in TY or I can filter for Richard.
+
+00:00:26.420 --> 00:00:29.700
+You'll also notice that we have this little button right here,
+
+00:00:29.699 --> 00:00:31.289
+that when we click on it, we will reset
+
+00:00:31.289 --> 00:00:34.729
+that state so that we then get all of our contacts.
+
+00:00:34.729 --> 00:00:40.964
+We can also remove a contact and then if we wanted to add a new contact what we can do,
+
+00:00:40.965 --> 00:00:43.275
+is click on this button right here,
+
+00:00:43.274 --> 00:00:46.929
+type in the name as well as the handle.
+
+00:00:46.929 --> 00:00:52.019
+And then we can click on the little icon right there and select the avatar.
+
+00:00:52.020 --> 00:00:53.670
+And then once we have the avatar,
+
+00:00:53.670 --> 00:00:57.804
+we can click on add contact and that will be added to our list of contacts.
+
+00:00:57.804 --> 00:01:01.005
+So what I really want you to do and what I really want you to think about right now,
+
+00:01:01.005 --> 00:01:04.260
+is the way in which you're going to build out this application.
+
+00:01:04.260 --> 00:01:07.710
+With React, the way that you build a large React application
+
+00:01:07.709 --> 00:01:11.644
+is by building out a bunch of smaller applications or components.
+
+00:01:11.644 --> 00:01:14.700
+So I want you to think before we actually dive into building this out,
+
+00:01:14.700 --> 00:01:17.850
+I want you to think about how you would structure this application,
+
+00:01:17.849 --> 00:01:20.280
+if you were to break it down into components.
+

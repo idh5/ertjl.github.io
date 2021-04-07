@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.565
+Instead of using a string template,
+
+00:00:02.565 --> 00:00:06.449
+React uses JavaScript objects to build the user interface.
+
+00:00:06.450 --> 00:00:11.265
+This is a fundamental difference between React and other popular Javascript frameworks.
+
+00:00:11.265 --> 00:00:14.535
+React elements this lightweight JavaScript objects,
+
+00:00:14.535 --> 00:00:16.515
+not actual DOM nodes.
+
+00:00:16.515 --> 00:00:20.234
+And we get to use the full power of JavaScript to put them together.
+
+00:00:20.234 --> 00:00:23.364
+We use these elements to describe what the page should look like
+
+00:00:23.364 --> 00:00:27.449
+and then let React do the hard part of actually manipulating the DOM.
+
+00:00:27.449 --> 00:00:30.734
+We can even create our own custom elements called components,
+
+00:00:30.734 --> 00:00:35.375
+that we can use to neatly encapsulate groups of elements and behavior.
+
+00:00:35.375 --> 00:00:38.024
+These components are the building blocks of React.
+
+00:00:38.024 --> 00:00:40.899
+So, let's get started and create some elements.
+

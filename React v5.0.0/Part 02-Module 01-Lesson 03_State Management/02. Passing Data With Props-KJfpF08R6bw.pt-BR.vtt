@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.340 --> 00:00:03.379
+Aqui nós temos
+a função básica fetchUser.
+
+00:00:03.412 --> 00:00:06.875
+O objetivo dela é obter
+um usuário específico.
+
+00:00:06.908 --> 00:00:11.529
+O problema é que precisamos informar
+à função qual usuário obter.
+
+00:00:11.562 --> 00:00:14.938
+Podemos fazer isso adicionando
+um parâmetro à definição de função
+
+00:00:14.971 --> 00:00:18.818
+e passando um nome de usuário
+quando a função for invocada.
+
+00:00:18.851 --> 00:00:20.714
+O que eu gosto do React
+
+00:00:20.747 --> 00:00:23.265
+é que a mesma intuição
+que usamos com as funções
+
+00:00:23.298 --> 00:00:26.010
+também podem ser aplicadas
+aos componentes React.
+
+00:00:26.043 --> 00:00:28.813
+Aqui temos um componente React
+
+00:00:28.846 --> 00:00:32.382
+cujo propósito
+é exibir um usuário na IU.
+
+00:00:32.415 --> 00:00:36.853
+Temos o mesmo problema
+que tivemos com a função fetchUser,
+
+00:00:36.886 --> 00:00:40.365
+pois precisamos de uma forma
+de obter o nome do usuário
+
+00:00:40.398 --> 00:00:42.773
+para que ele saiba
+qual usuário exibir.
+
+00:00:42.806 --> 00:00:46.172
+Para isso, adicionamos um atributo
+personalizado ao componente
+
+00:00:46.205 --> 00:00:47.885
+para que ele apresente
+um valor.
+
+00:00:47.918 --> 00:00:51.653
+Podemos acessar esse valor
+na definição do componente
+
+00:00:51.686 --> 00:00:54.565
+usando this.props.username.
+
+00:00:54.598 --> 00:00:57.541
+Na verdade, qualquer atributo
+adicionado ao componente
+
+00:00:57.574 --> 00:01:01.459
+será acessível no objeto props,
+dentro do componente.
+

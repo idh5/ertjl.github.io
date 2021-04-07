@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.147 --> 00:00:02.146
+Neste ponto
+do nosso aplicativo,
+
+00:00:02.179 --> 00:00:06.394
+temos o array contacts,
+que passamos como propriedade
+
+00:00:06.427 --> 00:00:08.537
+ao componente ListContacts,
+
+00:00:08.570 --> 00:00:13.024
+e, dentro do ListContacts,
+pegamos esse array
+
+00:00:13.057 --> 00:00:17.081
+do objeto props,
+usamos .map para mapeá-lo,
+
+00:00:17.114 --> 00:00:19.593
+e, para cada contato
+dentro do array,
+
+00:00:19.626 --> 00:00:23.537
+teremos um item de lista,
+que mostrará o nome do contato.
+
+00:00:23.570 --> 00:00:26.376
+Isso funcionará bem,
+mas queremos que,
+
+00:00:26.409 --> 00:00:30.577
+em vez de renderizar o nome,
+queremos exibir algo assim,
+
+00:00:30.610 --> 00:00:35.569
+com o nome,
+o endereço do Twitter e o avatar.
+
+00:00:35.602 --> 00:00:40.657
+Primeiro, vamos atribuir
+a cada item de lista
+
+00:00:40.690 --> 00:00:43.961
+um className
+igual a contact-list-item.
+
+00:00:43.994 --> 00:00:49.218
+Agora, dentro do item de lista,
+vamos deletar este nome por ora.
+
+00:00:49.251 --> 00:00:52.049
+Voltaremos aqui em um segundo.
+
+00:00:52.082 --> 00:00:55.239
+Vamos pegar um div,
+que daremos className
+
+00:00:55.272 --> 00:00:56.838
+igual a contact-avatar.
+
+00:00:56.871 --> 00:01:01.783
+Também queremos adicionar
+estilo ao div.
+
+00:01:01.816 --> 00:01:05.839
+Isso porque queremos atribuir
+a este div específico
+
+00:01:05.872 --> 00:01:09.422
+uma imagem de segundo plano,
+que será o avatar do contato.
+
+00:01:09.455 --> 00:01:12.951
+Então podemos atribuir
+um estilo.
+
+00:01:12.984 --> 00:01:17.719
+A primeira chave informa
+que desejamos ir para o JavaScript,
+
+00:01:17.752 --> 00:01:20.614
+e a segunda,
+que queremos dar um objeto,
+
+00:01:20.647 --> 00:01:23.152
+então precisamos passar
+a propriedade do estilo,
+
+00:01:23.185 --> 00:01:28.198
+que é um objeto, sendo que cada uma
+será uma propriedade CSS específica.
+
+00:01:28.231 --> 00:01:32.437
+Diremos "backgroundImage"
+e usamos aspa invertida,
+
+00:01:32.470 --> 00:01:35.621
+pois usaremos
+strings templates ES6.
+
+00:01:35.654 --> 00:01:37.645
+Diremos "url"
+
+00:01:37.678 --> 00:01:41.317
+e passaremos o avatar do URL,
+
+00:01:41.350 --> 00:01:46.054
+que obtemos fazendo
+contact.avatarURL.
+
+00:01:46.087 --> 00:01:49.390
+Agora podemos fechar o div.
+Não haverá nada dentro dele,
+
+00:01:49.423 --> 00:01:51.325
+então posso fechá-lo
+imediatamente.
+
+00:01:51.358 --> 00:01:53.937
+Agora temos todos os contatos.
+
+00:01:53.970 --> 00:01:58.692
+A próxima coisa é exibir
+o nome do usuário e o endereço.
+
+00:01:58.725 --> 00:02:03.997
+Podemos dizer "div"
+com "className='contact-details'".
+
+00:02:04.030 --> 00:02:05.901
+Aqui dentro, como já foi dito,
+
+00:02:05.934 --> 00:02:09.014
+teremos dois parágrafos.
+
+00:02:09.047 --> 00:02:12.189
+O primeiro será contact.name,
+
+00:02:12.222 --> 00:02:16.109
+e o segundo
+será contact.handle.
+
+00:02:16.142 --> 00:02:20.718
+Ao salvarmos isso, veremos o avatar,
+o nome e o endereço.
+
+00:02:20.751 --> 00:02:24.237
+A última coisa que desejamos
+adicionar é um botão
+
+00:02:24.270 --> 00:02:26.172
+parecido com este.
+
+00:02:26.205 --> 00:02:31.597
+Nós adicionamos button aqui,
+com className
+
+00:02:31.630 --> 00:02:33.485
+igual a contact-remove.
+
+00:02:33.518 --> 00:02:39.220
+Por ora, só diremos "button",
+mas ele ainda não fará nada.
+
+00:02:39.253 --> 00:02:42.822
+Pronto. Agora,
+em vez de apenas renderizar
+
+00:02:42.855 --> 00:02:44.637
+o nome do contato,
+
+00:02:44.670 --> 00:02:48.307
+renderizamos o avatar,
+o nome, o endereço
+
+00:02:48.340 --> 00:02:51.563
+e até mesmo a opção
+de deletar um contato específico.
+

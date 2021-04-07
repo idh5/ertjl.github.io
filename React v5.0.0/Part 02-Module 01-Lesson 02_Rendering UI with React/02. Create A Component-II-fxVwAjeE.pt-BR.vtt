@@ -1,0 +1,78 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.232 --> 00:00:03.495
+O React fornece uma classe
+componente de base que podemos usar
+
+00:00:03.528 --> 00:00:07.821
+a fim de agrupar muitos elementos
+e usá-los como se fossem um só.
+
+00:00:07.854 --> 00:00:11.222
+Veja os componentes React
+como os fatores que usamos
+
+00:00:11.255 --> 00:00:13.038
+para criar elementos React.
+
+00:00:13.071 --> 00:00:15.966
+Ao construir componentes
+personalizados ou classes,
+
+00:00:15.999 --> 00:00:19.661
+podemos gerar facilmente
+elementos personalizados.
+
+00:00:19.694 --> 00:00:22.425
+Eu criarei uma nova classe,
+
+00:00:22.458 --> 00:00:25.089
+que eu chamarei
+de "ContactList",
+
+00:00:25.122 --> 00:00:28.993
+e eu estenderei
+o React.Component.
+
+00:00:29.026 --> 00:00:32.608
+O único método,
+que é necessário em uma classe,
+
+00:00:32.641 --> 00:00:33.989
+é chamado de "render".
+
+00:00:34.022 --> 00:00:38.826
+O trabalho dele é retornar o JSX
+ou os elementos
+
+00:00:38.859 --> 00:00:41.267
+que este componente renderiza.
+
+00:00:41.300 --> 00:00:43.978
+Ao renderizarmos
+o ContactList,
+
+00:00:44.011 --> 00:00:47.130
+renderizamos todo o &lt;ol&gt;
+
+00:00:47.163 --> 00:00:49.778
+e todos os itens da lista.
+
+00:00:49.811 --> 00:00:52.044
+Em vez de renderizarmos
+este elemento,
+
+00:00:52.077 --> 00:00:55.388
+renderizaremos o elemento
+ContactList.
+
+00:00:55.421 --> 00:00:58.956
+Ao agruparmos os elementos
+em um único componente,
+
+00:00:58.989 --> 00:01:02.067
+podemos renderizá-los e tratá-los
+como um elemento único.
+

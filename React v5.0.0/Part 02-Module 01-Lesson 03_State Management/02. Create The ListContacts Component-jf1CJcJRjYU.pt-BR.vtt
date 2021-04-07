@@ -1,0 +1,252 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.124 --> 00:00:05.825
+Neste vídeo, nós construiremos
+esta seção aqui.
+
+00:00:05.858 --> 00:00:10.780
+O nosso código atual
+deve ter uma pasta icons
+
+00:00:10.813 --> 00:00:12.535
+com estes diferentes ícones,
+
+00:00:12.568 --> 00:00:17.393
+e a pasta utils, com o arquivo
+da API contacts dentro dela.
+
+00:00:17.426 --> 00:00:22.522
+Eu colei um array
+com os três contatos
+
+00:00:22.555 --> 00:00:25.386
+obtidos na seção anterior.
+
+00:00:25.419 --> 00:00:28.537
+Perceba que cada contato
+tem um ID, um nome,
+
+00:00:28.570 --> 00:00:31.650
+um endereço e um URL do avatar.
+
+00:00:31.683 --> 00:00:34.546
+O objetivo deste vídeo,
+como já foi dito,
+
+00:00:34.579 --> 00:00:37.066
+é criar um novo componente
+
+00:00:37.099 --> 00:00:41.017
+que usará este array
+como propriedade,
+
+00:00:41.050 --> 00:00:43.868
+que será responsável
+pela repetição do array
+
+00:00:43.901 --> 00:00:48.380
+e que, para cada item dele,
+exibirá um novo contato.
+
+00:00:48.413 --> 00:00:51.516
+Sempre que desejarmos
+criar um componente,
+
+00:00:51.549 --> 00:00:53.588
+vamos criar um novo arquivo.
+
+00:00:53.621 --> 00:00:57.748
+Dentro da pasta src,
+criaremos um novo arquivo
+
+00:00:57.781 --> 00:01:00.079
+que chamaremos
+de "ListContacts.js".
+
+00:01:00.112 --> 00:01:05.287
+Esse arquivo será responsável
+pela listagem de todos os contatos.
+
+00:01:05.320 --> 00:01:10.510
+Em primeiro lugar,
+vamos pegar duas coisas:
+
+00:01:10.543 --> 00:01:13.047
+o React, que obviamente
+é a biblioteca React,
+
+00:01:13.080 --> 00:01:15.431
+e o componente,
+que é o que será estendido
+
+00:01:15.464 --> 00:01:18.185
+para construir
+o novo componente React.
+
+00:01:18.218 --> 00:01:22.471
+Ambos virão do pacote React.
+
+00:01:22.504 --> 00:01:25.420
+Agora podemos construir
+um novo componente
+
+00:01:25.453 --> 00:01:30.221
+obtendo uma classe,
+que estenderá o componente.
+
+00:01:30.254 --> 00:01:34.088
+Geralmente, após criar a classe -
+para eu não me esquecer -,
+
+00:01:34.121 --> 00:01:36.471
+eu venho até aqui e exporto.
+
+00:01:36.504 --> 00:01:39.816
+Sempre que criamos um novo módulo
+ou arquivo,
+
+00:01:39.849 --> 00:01:44.647
+se formos criar um componente,
+ele deve ser igual a export.default.
+
+00:01:44.680 --> 00:01:47.847
+Agora que temos a classe
+ou os componentes
+
+00:01:47.880 --> 00:01:49.256
+e estamos exportando,
+
+00:01:49.289 --> 00:01:53.135
+devemos descrever
+como será o componente.
+
+00:01:53.168 --> 00:01:58.845
+Podemos usar o método render,
+pois é para isso que ele serve.
+
+00:01:58.878 --> 00:02:02.470
+Ele descreve a IU
+do nosso componente.
+
+00:02:02.503 --> 00:02:07.238
+O que desejamos retornar -
+ou o que a IU deve ser -
+
+00:02:07.271 --> 00:02:11.189
+é uma lista ordenada
+com o nome da classe
+
+00:02:11.222 --> 00:02:13.886
+igual a contact-list.
+
+00:02:13.919 --> 00:02:19.710
+Agora que temos o componente
+e o exportamos da forma padrão,
+
+00:02:19.743 --> 00:02:25.269
+a próxima pergunta é:
+Como levamos o array contacts
+
+00:02:25.302 --> 00:02:28.286
+até o componente ListContacts?
+
+00:02:28.319 --> 00:02:30.710
+Esse é o objetivo
+do ListContacts.
+
+00:02:30.743 --> 00:02:32.519
+Ele pegará o array
+
+00:02:32.552 --> 00:02:36.766
+e, para cada item dele,
+ele exibirá o item para a View.
+
+00:02:36.799 --> 00:02:40.590
+Poderemos passar contacts
+como uma propriedade
+
+00:02:40.623 --> 00:02:43.710
+quando criarmos
+o elemento ListContacts.
+
+00:02:43.743 --> 00:02:47.451
+Primeiro,
+nós importamos o componente
+
+00:02:47.484 --> 00:02:50.483
+dizendo:
+"import ListContacts from"
+
+00:02:50.516 --> 00:02:53.525
+do módulo ListContacts
+que criamos.
+
+00:02:53.558 --> 00:02:55.324
+Agora, como eu disse,
+
+00:02:55.357 --> 00:03:00.698
+quando criamos o elemento
+ListContacts, na sintaxe,
+
+00:03:00.732 --> 00:03:06.239
+podemos passar a propriedade
+contacts para o ListContacts,
+
+00:03:06.273 --> 00:03:09.849
+cujo valor será
+o array contacts.
+
+00:03:09.882 --> 00:03:13.823
+É só encarar
+como uma função normal no local.
+
+00:03:13.856 --> 00:03:16.448
+Para levar dados
+até uma função,
+
+00:03:16.481 --> 00:03:19.469
+precisamos passá-los
+como argumento
+
+00:03:19.502 --> 00:03:21.266
+ao invocarmos a função.
+
+00:03:21.299 --> 00:03:23.106
+Da mesma forma,
+com os componentes,
+
+00:03:23.139 --> 00:03:25.247
+para levar os dados
+até o componente,
+
+00:03:25.280 --> 00:03:28.076
+passamos os dados
+como propriedade
+
+00:03:28.109 --> 00:03:30.656
+quando criamos
+o elemento componente.
+
+00:03:30.689 --> 00:03:34.030
+Agora, dentro do ListContact,
+
+00:03:34.063 --> 00:03:38.598
+para vermos quais dados
+passamos como propriedades,
+
+00:03:38.631 --> 00:03:41.941
+colocamos this.props
+no console.log.
+
+00:03:41.974 --> 00:03:43.968
+Ao abrirmos o console,
+
+00:03:44.001 --> 00:03:47.958
+vemos as propriedades do contacts,
+no objeto props,
+
+00:03:47.992 --> 00:03:50.263
+com três contatos dentro dele.
+

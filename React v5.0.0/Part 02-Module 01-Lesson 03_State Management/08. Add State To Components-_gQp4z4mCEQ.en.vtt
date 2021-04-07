@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.060
+At this point, you've learned about creating components,
+
+00:00:03.060 --> 00:00:07.080
+composing components together, and passing data to components.
+
+00:00:07.080 --> 00:00:09.599
+However, we still haven't talked about what may be
+
+00:00:09.599 --> 00:00:12.554
+the best part of React, state management.
+
+00:00:12.554 --> 00:00:14.734
+Because of React's component model,
+
+00:00:14.734 --> 00:00:20.189
+we're able to encapsulate the complexity of state management to individual components.
+
+00:00:20.190 --> 00:00:21.660
+This allows us to build
+
+00:00:21.660 --> 00:00:25.725
+a large application by building out a bunch of smaller applications,
+
+00:00:25.725 --> 00:00:27.675
+which are really just components.
+
+00:00:27.675 --> 00:00:29.804
+To add state to our components,
+
+00:00:29.804 --> 00:00:35.234
+all we need to do is add a state property to our class whose value is an object.
+
+00:00:35.234 --> 00:00:38.429
+This object represents the state of our component.
+
+00:00:38.429 --> 00:00:40.140
+Each key in the object,
+
+00:00:40.140 --> 00:00:43.215
+represents a distinct piece of state for this component.
+
+00:00:43.215 --> 00:00:45.840
+Now, just as we did with props,
+
+00:00:45.840 --> 00:00:49.680
+we can access the username property on our state by doing this,
+
+00:00:49.679 --> 00:00:51.719
+dot state dot username.
+
+00:00:51.719 --> 00:00:55.170
+What I really love about React is how it allows my brain
+
+00:00:55.170 --> 00:00:58.605
+to separate two important, yet complex concepts.
+
+00:00:58.604 --> 00:01:01.890
+First, how the component looks and second,
+
+00:01:01.890 --> 00:01:04.064
+the current state of my application.
+
+00:01:04.064 --> 00:01:06.000
+Because of the separation,
+
+00:01:06.000 --> 00:01:11.340
+the UI or how the application looks is simply a function of the application state.
+
+00:01:11.340 --> 00:01:14.159
+With React your two concerns are,
+
+00:01:14.159 --> 00:01:19.060
+which state in my application and how does my UI change based off of that state.
+

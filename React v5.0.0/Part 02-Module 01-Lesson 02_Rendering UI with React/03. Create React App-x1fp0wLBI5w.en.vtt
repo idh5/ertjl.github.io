@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.875
+Using JSX in our javascript code makes it significantly more readable.
+
+00:00:04.875 --> 00:00:07.205
+However, it does require a build step,
+
+00:00:07.205 --> 00:00:09.655
+which is something you might have not done before.
+
+00:00:09.654 --> 00:00:12.959
+Basically, we need a compiler to take our GSX code and
+
+00:00:12.960 --> 00:00:17.390
+compile it down to a real javascript code that we can actually run in the browser.
+
+00:00:17.390 --> 00:00:20.018
+There are a few popular build tools for web projects,
+
+00:00:20.018 --> 00:00:23.664
+but the most widely used in the React ecosystem is Webpack.
+
+00:00:23.664 --> 00:00:26.369
+We could stop and take a bunch of time to set up Webpack,
+
+00:00:26.370 --> 00:00:28.125
+but luckily for us,
+
+00:00:28.125 --> 00:00:31.440
+the developers of Facebook have already done this for us.
+
+00:00:31.440 --> 00:00:34.439
+Facebook's create-react-app sets up everything we
+
+00:00:34.439 --> 00:00:38.000
+need to develop and build apps that use React in JSX.
+
+00:00:38.000 --> 00:00:39.719
+So let's use it.
+

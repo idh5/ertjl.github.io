@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.044
+Now that we have state inside of our application,
+
+00:00:03.044 --> 00:00:05.859
+the next step is to figure out how to update it.
+
+00:00:05.860 --> 00:00:08.970
+Your natural intuition might be to update the state directly.
+
+00:00:08.970 --> 00:00:11.635
+Unfortunately, that's not going to work.
+
+00:00:11.634 --> 00:00:14.669
+The reason is because by mutating the state directly,
+
+00:00:14.669 --> 00:00:18.254
+React will have no idea that the state of your component actually changed.
+
+00:00:18.254 --> 00:00:19.914
+To solve this problem,
+
+00:00:19.914 --> 00:00:22.739
+React gives you a helper method called setState.
+
+00:00:22.739 --> 00:00:25.089
+There are two ways to use setState.
+
+00:00:25.089 --> 00:00:28.190
+The first way is by passing setState a function.
+
+00:00:28.190 --> 00:00:31.845
+The function will be passed the previous state as its first argument.
+
+00:00:31.844 --> 00:00:34.244
+The object return from this function,
+
+00:00:34.244 --> 00:00:38.679
+will be merged with the current state to form the new state of the component.
+
+00:00:38.679 --> 00:00:41.185
+Instead of passing setState a function,
+
+00:00:41.185 --> 00:00:44.025
+the second pattern is to pass an object.
+
+00:00:44.024 --> 00:00:49.409
+This object will be merged with the current state to form the new state of the component.
+
+00:00:49.409 --> 00:00:52.379
+Typically, you want to use the functional setState when
+
+00:00:52.380 --> 00:00:55.705
+the new state of your component depends on the previous state.
+
+00:00:55.704 --> 00:00:57.030
+And for everything else,
+
+00:00:57.030 --> 00:00:58.980
+you can use the object setState.
+
+00:00:58.979 --> 00:01:02.109
+However, I always prefer to use the functional setState.
+
+00:01:02.109 --> 00:01:04.724
+But regardless of how you use setState,
+
+00:01:04.724 --> 00:01:06.794
+the end result will always be the same.
+
+00:01:06.795 --> 00:01:08.745
+Whenever you invoke setState,
+
+00:01:08.745 --> 00:01:14.670
+React by default is going to re-render your entire application and update the UI.
+
+00:01:14.670 --> 00:01:16.447
+This is why we say that in React,
+
+00:01:16.447 --> 00:01:19.284
+your UI is just a function of your state.
+
+00:01:19.284 --> 00:01:20.625
+Once your state changes,
+
+00:01:20.625 --> 00:01:23.439
+your UI will automatically update accordingly.
+

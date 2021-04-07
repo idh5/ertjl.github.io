@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.535
+Currently inside of our application,
+
+00:00:02.535 --> 00:00:07.560
+we have our contacts array which we are parsing to our ListContacts component,
+
+00:00:07.559 --> 00:00:11.535
+and ListContacts is responsible for looping over our contacts array,
+
+00:00:11.535 --> 00:00:15.120
+and for each item in the array shows an individual contact.
+
+00:00:15.119 --> 00:00:18.629
+Right now you may have noticed that our contacts array is
+
+00:00:18.629 --> 00:00:22.410
+living outside of our app component here,
+
+00:00:22.410 --> 00:00:24.945
+it's just living on the scope of this module.
+
+00:00:24.945 --> 00:00:27.524
+Now that isn't necessarily a bad thing,
+
+00:00:27.524 --> 00:00:30.390
+but it's really outside of the world of React.
+
+00:00:30.390 --> 00:00:34.520
+Meeting if we were to change any of the items in any of
+
+00:00:34.520 --> 00:00:39.920
+the contacts or if we were to add or remove a contact from our contacts array,
+
+00:00:39.920 --> 00:00:42.875
+React would have no idea that that happened.
+
+00:00:42.875 --> 00:00:46.759
+One of Reacts strengths is state management and by having
+
+00:00:46.759 --> 00:00:50.719
+our contacts array outside of our app component here,
+
+00:00:50.719 --> 00:00:52.625
+we're not utilizing that strength at all.
+
+00:00:52.625 --> 00:00:55.295
+So what we want to do is we want to move
+
+00:00:55.295 --> 00:00:59.359
+our contacts array into the local state of our app component,
+
+00:00:59.359 --> 00:01:02.780
+so that way eventually when we start modifying our contacts array,
+
+00:01:02.780 --> 00:01:04.939
+React will be able to see that those changes are
+
+00:01:04.939 --> 00:01:08.469
+happening and then update the UI based on those changes.
+
+00:01:08.469 --> 00:01:11.519
+So what we will do, is we'll come in here and add
+
+00:01:11.519 --> 00:01:14.924
+a state property to our local component,
+
+00:01:14.924 --> 00:01:18.435
+and then let's go ahead and copy our array up here,
+
+00:01:18.435 --> 00:01:21.210
+and then now on this state object this is going to
+
+00:01:21.209 --> 00:01:24.629
+represent the entire state for our app component.
+
+00:01:24.629 --> 00:01:28.709
+What we can do is we can add a contacts property and
+
+00:01:28.709 --> 00:01:33.629
+this contacts property is now going to be our array of contacts.
+
+00:01:33.629 --> 00:01:38.084
+So now, instead of passing our list contacts component,
+
+00:01:38.084 --> 00:01:41.114
+just contacts, what we want to do,
+
+00:01:41.114 --> 00:01:44.604
+is in order to get access to the local component state,
+
+00:01:44.605 --> 00:01:51.469
+what you do is this.state.contacts so now you'll see that our UI looks the exact same,
+
+00:01:51.469 --> 00:01:56.810
+but what we've done is we've moved our contacts array from just being out here,
+
+00:01:56.810 --> 00:01:58.745
+in the scope of the module,
+
+00:01:58.745 --> 00:02:02.469
+to actually being a property on the local component state.
+

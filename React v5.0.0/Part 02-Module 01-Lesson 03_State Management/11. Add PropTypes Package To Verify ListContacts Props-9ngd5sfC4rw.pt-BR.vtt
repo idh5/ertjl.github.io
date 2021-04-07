@@ -1,0 +1,274 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.502
+Quando criamos
+o elemento ListContacts,
+
+00:00:02.535 --> 00:00:04.871
+estamos passando para ele
+dois props diferentes.
+
+00:00:04.904 --> 00:00:09.109
+Contacts, que é um array,
+e onDeleteContact, que é uma função.
+
+00:00:09.142 --> 00:00:12.145
+E se, em vez de passar
+o array contacts,
+
+00:00:12.178 --> 00:00:15.181
+alguém na nossa equipe -
+ou até nós mesmos -,
+
+00:00:15.215 --> 00:00:18.300
+acidentalmente passasse
+um objeto para ele?
+
+00:00:18.349 --> 00:00:20.987
+O que aconteceria,
+como você verá aqui,
+
+00:00:21.033 --> 00:00:23.384
+é que receberíamos
+um erro porque
+
+00:00:23.418 --> 00:00:27.027
+props.contacts não seria mais
+um array, seria um objeto,
+
+00:00:27.060 --> 00:00:29.796
+então ele não tem
+uma propriedade .map.
+
+00:00:29.829 --> 00:00:34.868
+Neste vídeo, vamos implementar
+uma biblioteca chamada "PropTypes",
+
+00:00:34.901 --> 00:00:39.539
+que nos permitirá especificar
+de que props um componente precisa
+
+00:00:39.572 --> 00:00:42.108
+quando o componente
+ou quando o elemento é criado.
+
+00:00:42.142 --> 00:00:47.013
+Então vamos mudar de volta
+para nosso contacts normal
+
+00:00:47.047 --> 00:00:48.815
+e depois vir para o terminal.
+
+00:00:48.848 --> 00:00:51.851
+O que queremos adicionar
+ao aplicativo
+
+00:00:51.885 --> 00:00:53.987
+é o pacote prop-types.
+
+00:00:54.020 --> 00:00:56.990
+Quando terminar,
+reinicie o seu aplicativo
+
+00:00:57.023 --> 00:01:00.860
+e vá para o componente
+ListContacts.
+
+00:01:00.894 --> 00:01:01.961
+Como mencionei antes,
+
+00:01:01.995 --> 00:01:05.365
+ListContacts vai conter
+dois props diferentes:
+
+00:01:05.398 --> 00:01:09.038
+contacts, que é um array,
+e onDeleteContact, que é uma função.
+
+00:01:09.072 --> 00:01:10.932
+Primeiro, o que queremos fazer
+
+00:01:10.966 --> 00:01:15.578
+é importar os pacotes PropTypes
+que acabamos de instalar.
+
+00:01:15.612 --> 00:01:20.880
+Agora PropTypes nos permite
+vir aqui embaixo
+
+00:01:20.914 --> 00:01:24.517
+e adicionar uma propriedade
+ao componente ListContacts,
+
+00:01:24.551 --> 00:01:25.985
+vamos digitar PropTypes.
+
+00:01:26.019 --> 00:01:27.821
+Ele vai ser configurado
+para um objeto,
+
+00:01:27.854 --> 00:01:31.091
+e este objeto vai representar
+todos os props diferentes
+
+00:01:31.124 --> 00:01:34.127
+que podem ser passados
+para o componente ListContacts.
+
+00:01:34.160 --> 00:01:36.963
+Primeiro, teremos o contacts.
+
+00:01:36.996 --> 00:01:40.734
+Contacts, como já mencionei
+algumas vezes, vai ser um array.
+
+00:01:40.767 --> 00:01:42.936
+E o que é legal no PropTypes
+
+00:01:42.969 --> 00:01:47.040
+é poder especificar se um prop
+é necessário ou não.
+
+00:01:47.073 --> 00:01:50.143
+Então você vem aqui
+e diz que ele é necessário,
+
+00:01:50.176 --> 00:01:52.879
+e outro prop que vamos passar
+para este componente
+
+00:01:52.912 --> 00:01:54.948
+será o onDeleteContact,
+
+00:01:54.981 --> 00:01:59.753
+que será uma função,
+abreviada para "func",
+
+00:01:59.786 --> 00:02:03.023
+e isso também será requerido.
+
+00:02:03.056 --> 00:02:05.392
+Então o que aconteceria é
+
+00:02:05.425 --> 00:02:09.596
+se, em vez de passar
+o array contacts,
+
+00:02:09.629 --> 00:02:11.531
+nós passássemos um objeto?
+
+00:02:11.564 --> 00:02:15.068
+Dentro do console,
+ainda recebemos os erros originais,
+
+00:02:15.101 --> 00:02:18.772
+mas também obteremos
+esta formação aqui:
+
+00:02:18.805 --> 00:02:21.292
+PropTypes que falharam,
+prop contacts inválidos
+
+00:02:21.320 --> 00:02:25.011
+que deveriam abastecer
+o array do ListContacts.
+
+00:02:25.045 --> 00:02:28.648
+Ela está dizendo: "Ei, ListContacts
+precisava que o prop contacts
+
+00:02:28.682 --> 00:02:32.218
+fosse um array,
+mas você deu a ele um objeto."
+
+00:02:32.252 --> 00:02:34.921
+E digamos que esquecemos
+quando usar ListContacts
+
+00:02:34.954 --> 00:02:38.091
+para passar
+a função onDeleteContact.
+
+00:02:38.124 --> 00:02:41.928
+Você vai notar que,
+mesmo que o aplicativo renderize -
+
+00:02:41.961 --> 00:02:43.868
+porque a função onDeleteContact
+
+00:02:43.893 --> 00:02:46.851
+só será chamada
+quando clicarmos nestes botões -,
+
+00:02:46.885 --> 00:02:48.502
+aparecerá uma mensagem com:
+
+00:02:48.536 --> 00:02:53.707
+"Ei, o componente ListContacts
+precisava de onDeleteContact,
+
+00:02:53.740 --> 00:02:56.543
+porque ele era requerido,
+mas está indefinido.
+
+00:02:56.576 --> 00:02:59.512
+Você não o passou
+quando você criou este elemento."
+
+00:02:59.546 --> 00:03:02.582
+Talvez o que eu prefira
+no PropTypes
+
+00:03:02.615 --> 00:03:05.552
+esteja relacionada
+aos componentes de terceiros.
+
+00:03:05.585 --> 00:03:07.887
+Agora este componente
+ListContacts
+
+00:03:07.921 --> 00:03:10.190
+é só o componente que criamos,
+
+00:03:10.223 --> 00:03:13.360
+então é bem óbvio saber
+qual props iremos necessitar,
+
+00:03:13.393 --> 00:03:17.397
+mas e se usarmos outro componente
+que está vindo da MPM?
+
+00:03:17.430 --> 00:03:19.420
+E se este
+componente ListContacts
+
+00:03:19.460 --> 00:03:22.902
+fosse uma biblioteca de terceiros
+que nós mesmos instalamos?
+
+00:03:22.936 --> 00:03:26.475
+Às vezes, pode ser difícil
+saber quais props
+
+00:03:26.509 --> 00:03:28.508
+você deve passar
+para o componente.
+
+00:03:28.541 --> 00:03:32.178
+Mas, se o autor desta biblioteca
+adicionou o PropTypes,
+
+00:03:32.212 --> 00:03:35.482
+tudo que você precisa fazer
+é olhar a definição do PropTypes
+
+00:03:35.515 --> 00:03:39.186
+para saber que prop específico
+precisa ser passado
+
+00:03:39.247 --> 00:03:40.920
+ao componente
+que você está usando.
+
