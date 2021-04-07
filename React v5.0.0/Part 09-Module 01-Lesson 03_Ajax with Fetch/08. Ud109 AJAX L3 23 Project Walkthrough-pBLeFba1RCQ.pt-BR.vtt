@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.467
+Na parte superior,
+temos os códigos de configuração.
+
+00:00:03.200 --> 00:00:06.000
+Aqui é onde fazemos
+a primeira requisição "fetch".
+
+00:00:06.067 --> 00:00:09.667
+Fazemos a requisição para o API
+do Unsplash para buscar imagem
+
+00:00:09.733 --> 00:00:13.400
+e passamos os cabeçalhos exigidos,
+convertemos a resposta para JSON
+
+00:00:13.467 --> 00:00:17.267
+e passamos os dados JSON
+para a função "addImage".
+
+00:00:18.067 --> 00:00:22.067
+Se houver um problema,
+esta linha receberá o erro
+
+00:00:22.133 --> 00:00:25.000
+e chamará a função "requestError"
+com o erro.
+
+00:00:25.067 --> 00:00:27.333
+A falha terá sido
+na requisição da imagem.
+
+00:00:27.400 --> 00:00:29.933
+É uma requisição dos artigos
+do "New York Times"
+
+00:00:30.000 --> 00:00:32.400
+e é parecida
+com a requisição do Unsplash.
+
+00:00:32.467 --> 00:00:35.333
+Manda a solicitação
+para o API do "New York Times",
+
+00:00:35.400 --> 00:00:37.600
+converte a resposta para JSON
+
+00:00:37.667 --> 00:00:40.467
+e passa os dados JSON
+para a função "addArticles".
+
+00:00:40.533 --> 00:00:42.733
+Se houver um problema,
+
+00:00:42.800 --> 00:00:45.467
+o método "catch" chamará
+a função "requestError",
+
+00:00:45.533 --> 00:00:49.467
+passando o erro. A falha terá
+sido na requisição dos artigos.
+
+00:00:49.533 --> 00:00:54.133
+Vimos a função "addImage" antes.
+Então vamos à função "addArticles".
+
+00:00:54.200 --> 00:00:59.000
+Este código vai iterar os artigos,
+adicionando a uma lista não ordenada.
+
+00:00:59.067 --> 00:01:02.533
+Se não houver artigos,
+vai mostrar esta mensagem de erro.
+
+00:01:02.733 --> 00:01:05.133
+Isso é basicamente tudo
+que tem no aplicativo.
+

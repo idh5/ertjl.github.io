@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:02.000
+Obrigado por me acompanhar
+
+00:00:02.033 --> 00:00:04.601
+pelas diferentes formas
+de fazer requisição AJAX.
+
+00:00:04.634 --> 00:00:08.601
+Agora você tem três ferramentas
+para fazer requisições assíncronas.
+
+00:00:08.634 --> 00:00:13.334
+Pode usar o consagrado,
+porém inconveniente XHR.
+
+00:00:13.367 --> 00:00:15.267
+Pode usar a biblioteca jQuery
+
+00:00:15.300 --> 00:00:18.901
+para fazer
+requisições assíncronas com API,
+
+00:00:18.934 --> 00:00:20.434
+e depois o Fetch API
+
+00:00:20.467 --> 00:00:23.701
+para fazer requisições assíncronas
+com base em promessa.
+
+00:00:23.734 --> 00:00:24.868
+Com essas ferramentas,
+
+00:00:24.901 --> 00:00:27.934
+pode fazer requisições dinâmicas
+a partir do JavaScript
+
+00:00:27.968 --> 00:00:29.300
+que não forçam atualização
+
+00:00:29.334 --> 00:00:32.267
+e fornecem uma experiência melhor
+para os usuários.
+
+00:00:32.300 --> 00:00:34.567
+Antes de fazer
+requisições assíncronas
+
+00:00:34.601 --> 00:00:36.334
+em todos os aplicativos,
+
+00:00:37.434 --> 00:00:39.267
+não seria melhor provar?
+

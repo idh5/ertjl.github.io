@@ -1,0 +1,340 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Write the Fetch Request</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Ajax with Fetch</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Ajax call with the Fetch API.html">01. Ajax call with the Fetch API</a>
+    </li>
+    <li class="">
+      <a href="02. What is Fetch.html">02. What is Fetch</a>
+    </li>
+    <li class="">
+      <a href="03. Write the Fetch Request.html">03. Write the Fetch Request</a>
+    </li>
+    <li class="">
+      <a href="04. Handle The Response.html">04. Handle The Response</a>
+    </li>
+    <li class="">
+      <a href="05. The Response Object.html">05. The Response Object</a>
+    </li>
+    <li class="">
+      <a href="06. ES6 Arrow Function.html">06. ES6 Arrow Function</a>
+    </li>
+    <li class="">
+      <a href="07. Display Content &amp; Handling Errors.html">07. Display Content &amp; Handling Errors</a>
+    </li>
+    <li class="">
+      <a href="08. Project Wrap-up.html">08. Project Wrap-up</a>
+    </li>
+    <li class="">
+      <a href="09. Fetch Outro.html">09. Fetch Outro</a>
+    </li>
+    <li class="">
+      <a href="10. Course Outro.html">10. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Write the Fetch Request</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="write-the-fetch-request">Write The Fetch Request</h2>
+<p>Ok, let's look at a sample fetch request, and then we'll make a fetch request for an image from Unsplash.</p>
+<pre><code class="js language-js">fetch('&lt;URL-to-the-resource-that-is-being-requested&gt;');</code></pre>
+<p>So yeah…that's it. In it's smallest form, a Fetch request is just the <code>fetch()</code> function and a string to the resource that's being requested. It's just so short and easy to read (<em>sigh</em> I think I'm in love!). Let's take a peek at what a real request looks like:</p>
+<pre><code class="js language-js">fetch('https://api.unsplash.com/search/photos?page=1&amp;query=flowers');</code></pre>
+<p>If you try running this Fetch request on the console, then you should get a Promise returned to you.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud109-l3-fetch-request.gif" alt="_A fetch request being run on the console of Unsplash&#x27;s website. The fetch request returns a Promise._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>A fetch request being run on the console of Unsplash's website. The fetch request returns a Promise.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-cross-origin-issues-💡">💡 <strong>Cross-Origin Issues?</strong> 💡</h2>
+</blockquote>
+<blockquote>
+  <p>Did you just try running the Fetch request and it didn't work? Were you running it on Unsplash's website? If not, make sure you go to <a href="https://unsplash.com/" rel="noopener noreferrer" target="_blank">https://unsplash.com/</a>, open the console, and try running it from there.</p>
+</blockquote>
+<blockquote>
+  <p>Just because Fetch is new and awesome and is replacing the XHR object for making asynchronous network requests <em>doesn't</em> mean it can bypass the rules for making those network requests. <strong>Fetch requests still need to obey the cross-origin protocol</strong> of how resources are shared. This means that, by default, you can only make requests for assets and data on the same domain as the site that will end up loading the data.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Remember that Unsplash requires an Authorization header to make a request through its API. Check out these links on Fetch's documentation to see how to add an <code>Authorization</code> header to the Fetch request.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Adding a Header to a Fetch Request</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Docs are a dev's best friend! Take a quick look through them and pick the correct way(s) to add a header to a Fetch request from the options below. Also, instead of cheating and guessing, try testing out the code you think is correct in your app or on the console to see how it runs!</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1485304902869" name="261353" id="a1485304902869">
+      <label for="a1485304902869"><p>fetch.setRequestHeader('Authorization', 'Client-ID abc123'); <br>  fetch(<code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>);</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485304932675" name="261353" id="a1485304932675">
+      <label for="a1485304932675"><p>fetch(<code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>, { <br>&nbsp;&nbsp;&nbsp;&nbsp; headers: {    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Authorization: 'Client-ID abc123'     <br>&nbsp;&nbsp;&nbsp;&nbsp;} <br>});</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485304938612" name="261353" id="a1485304938612">
+      <label for="a1485304938612"><p>const requestHeaders = new Headers(); <br> requestHeaders.append('Authorization', 'Client-ID abc123');  <br>  fetch(<code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>, {   <br>&nbsp;&nbsp;&nbsp;&nbsp;   headers: requestHeaders <br>});</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485304945020" name="261353" id="a1485304945020">
+      <label for="a1485304945020"><p>fetch(<code>https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}</code>).then(function(request){   <br>&nbsp;&nbsp;&nbsp;&nbsp;   request.addHeader('Authorization', 'Client-ID abc123'); <br>});</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`, { <br>&nbsp;&nbsp;&nbsp;&nbsp; headers: {    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Authorization: 'Client-ID abc123'     <br>&nbsp;&nbsp;&nbsp;&nbsp;} <br>});</li>
+      <li>const requestHeaders = new Headers(); <br> requestHeaders.append('Authorization', 'Client-ID abc123');  <br>  fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`, {   <br>&nbsp;&nbsp;&nbsp;&nbsp;   headers: requestHeaders <br>});</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Get Or Post Request By Default</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What do you think the default HTTP method is for a Fetch request? Why don't you try running a Fetch request and look in the DevTools to see the HTTP method that is used.</p>
+<p>Check out these links from the specification to find out more:</p>
+<ul>
+<li><a href="https://fetch.spec.whatwg.org/#methods" rel="noopener noreferrer" target="_blank">https://fetch.spec.whatwg.org/#methods</a></li>
+<li><a href="https://fetch.spec.whatwg.org/#requests" rel="noopener noreferrer" target="_blank">https://fetch.spec.whatwg.org/#requests</a></li>
+</ul></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1485305021974" name="261354" id="a1485305021974">
+        <label for="a1485305021974"><p>FETCH</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305052987" name="261354" id="a1485305052987">
+        <label for="a1485305052987"><p>fetch</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305053786" name="261354" id="a1485305053786">
+        <label for="a1485305053786"><p>POST</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305055407" name="261354" id="a1485305055407">
+        <label for="a1485305055407"><p>post</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305055879" name="261354" id="a1485305055879">
+        <label for="a1485305055879"><p>GET</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305056305" name="261354" id="a1485305056305">
+        <label for="a1485305056305"><p>get</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305070475" name="261354" id="a1485305070475">
+        <label for="a1485305070475"><p>REQUEST</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485305073331" name="261354" id="a1485305073331">
+        <label for="a1485305073331"><p>request</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    GET
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="changing-the-http-method">Changing The HTTP Method</h2>
+<p>So the default HTTP method for a Fetch request is the <code>GET</code> method. We can choose a different HTTP method by passing a <code>method</code> property in the configuration object:</p>
+<pre><code class="js language-js">fetch(`https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}`, {
+    method: 'POST'
+});</code></pre>
+<p>This will send the request with the <code>POST</code> HTTP header.</p>
+<p>Fetch's specification does not limit what HTTP methods can be used, although it does recommend that all methods are written in uppercase for consistency with the HTTP Verbs specification.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Handle The Response.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Write the Fetch Request')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

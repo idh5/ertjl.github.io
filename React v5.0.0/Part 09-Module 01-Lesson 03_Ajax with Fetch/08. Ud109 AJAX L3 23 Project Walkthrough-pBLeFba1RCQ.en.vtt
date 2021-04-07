@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.924
+Up at the top, we have all of the set-up code,
+
+00:00:02.924 --> 00:00:06.119
+and here's where we kick off the first fetch request.
+
+00:00:06.120 --> 00:00:09.824
+We make a request to unsplash's API for an image search,
+
+00:00:09.824 --> 00:00:11.879
+and we pass along the required headers,
+
+00:00:11.880 --> 00:00:13.815
+convert the response to JSON,
+
+00:00:13.814 --> 00:00:18.300
+and then pass the actual JSON data off to the addImage function.
+
+00:00:18.300 --> 00:00:20.234
+If there's a problem with the request,
+
+00:00:20.234 --> 00:00:22.800
+then this line will receive the error and call
+
+00:00:22.800 --> 00:00:27.855
+the requestError function with the error and that it was the image request that failed.
+
+00:00:27.855 --> 00:00:30.144
+This makes a request for the New York Times articles and
+
+00:00:30.144 --> 00:00:33.089
+it's very similar to the fetch request for unsplash.
+
+00:00:33.090 --> 00:00:36.315
+It sends the request to the New York Times API and it converts
+
+00:00:36.314 --> 00:00:40.664
+the response to JSON and passes the JSON data to the addArticles function.
+
+00:00:40.664 --> 00:00:42.750
+If there's a problem with this fetch request,
+
+00:00:42.750 --> 00:00:45.972
+the catch method will also call the requestError function,
+
+00:00:45.972 --> 00:00:49.259
+passing it the error and that it was the articles requests that failed.
+
+00:00:49.259 --> 00:00:51.594
+We looked at the addImage function earlier,
+
+00:00:51.594 --> 00:00:54.585
+so let's get down to the addArticles function.
+
+00:00:54.585 --> 00:00:56.655
+This code will loop over all of the articles,
+
+00:00:56.655 --> 00:00:59.160
+adding them to an unordered list.
+
+00:00:59.159 --> 00:01:00.509
+If there aren't any articles,
+
+00:01:00.509 --> 00:01:02.909
+then it displays this error message.
+
+00:01:02.909 --> 00:01:05.000
+And that's basically all there is to our app.
+

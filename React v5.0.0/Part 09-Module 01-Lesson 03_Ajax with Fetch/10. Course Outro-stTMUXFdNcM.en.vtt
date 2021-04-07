@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.490
+Thanks for joining me as we progress through the different ways to make AJAX requests.
+
+00:00:04.490 --> 00:00:08.879
+You now have three tools up your sleeve whenever you need to make async requests.
+
+00:00:08.880 --> 00:00:13.515
+You can make requests using the tried and true but somewhat cumbersome xhr way,
+
+00:00:13.515 --> 00:00:18.570
+you use the jQuery library to smooth out making async requests using its API,
+
+00:00:18.570 --> 00:00:23.504
+and then you use the Fetch API to make promise-based asynchronous requests.
+
+00:00:23.504 --> 00:00:27.809
+Using these tools, you can now make dynamic requests from your Javascript
+
+00:00:27.809 --> 00:00:32.465
+that don't force Apache refresh and provide an overall better experience for your users.
+
+00:00:32.465 --> 00:00:36.810
+Now, before you go start making async requests in all of your apps,
+
+00:00:36.810 --> 00:00:39.330
+would it be bad if we had a little taste test?
+

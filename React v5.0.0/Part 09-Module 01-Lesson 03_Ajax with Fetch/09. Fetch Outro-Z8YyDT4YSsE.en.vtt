@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.359
+We just looked at making requests using the fetch API.
+
+00:00:03.359 --> 00:00:05.219
+Fetch is awesome because...
+
+00:00:05.219 --> 00:00:09.239
+It's done. Wow! Myrin that looks amazing. Thank you so much!
+
+00:00:09.240 --> 00:00:10.990
+No problem. I hope your mom likes it.
+
+00:00:10.990 --> 00:00:12.189
+I'm sure she will,
+
+00:00:12.189 --> 00:00:14.549
+thanks. But if she doesn't?
+
+00:00:14.550 --> 00:00:17.675
+More for me.
+
+00:00:17.675 --> 00:00:20.380
+So, let's talk about asynchronous requests.
+
+00:00:20.379 --> 00:00:23.160
+The new fetch API is awesome in so many ways.
+
+00:00:23.160 --> 00:00:26.039
+You can make a complicated request involving custom headers and
+
+00:00:26.039 --> 00:00:30.149
+caching or a simple request using just the URL to the resource.
+
+00:00:30.149 --> 00:00:33.134
+There are also new headers, requests and response interfaces.
+
+00:00:33.134 --> 00:00:34.625
+On top of this,
+
+00:00:34.625 --> 00:00:35.914
+but just promise base,
+
+00:00:35.914 --> 00:00:39.835
+so it naturally helps you create easy to write asynchronous calls in your code.
+
+00:00:39.835 --> 00:00:43.375
+In the past, making asynchronous calls has been somewhat tedious,
+
+00:00:43.375 --> 00:00:45.554
+but thankfully with the new fetch API,
+
+00:00:45.554 --> 00:00:47.369
+things have gotten a whole lot easier.
+

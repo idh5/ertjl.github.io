@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.605
+Thanks for coming back.
+
+00:00:01.605 --> 00:00:03.330
+So we have a couple of cakes already.
+
+00:00:03.330 --> 00:00:06.079
+But you know, can you ever have too many cakes?
+
+00:00:06.078 --> 00:00:08.535
+That was a rhetorical question, the answer is obviously no.
+
+00:00:08.535 --> 00:00:10.394
+So in light of this delicious fact,
+
+00:00:10.394 --> 00:00:12.009
+let's make another cake.
+
+00:00:12.009 --> 00:00:15.029
+But we've learned from lesson one that if I make the cake,
+
+00:00:15.029 --> 00:00:16.605
+it'll be downright ugly.
+
+00:00:16.605 --> 00:00:18.629
+If I let a professional make it,
+
+00:00:18.629 --> 00:00:22.320
+then it'll look amazing, but there'll be no love or personality in it.
+
+00:00:22.320 --> 00:00:24.300
+This next cake needs the love and care from
+
+00:00:24.300 --> 00:00:29.460
+the first cake and the quality of the second cake.
+
+00:00:29.460 --> 00:00:31.650
+Oh, well, hi Miriam.
+
+00:00:31.649 --> 00:00:32.201
+Hi there.
+
+00:00:32.201 --> 00:00:34.945
+Can you tell us a little bit about what you do here in Udacity.
+
+00:00:34.945 --> 00:00:37.079
+Yeah, I work on our mentorship programs to help
+
+00:00:37.079 --> 00:00:39.509
+support student learning and improve their experience.
+
+00:00:39.509 --> 00:00:40.854
+That's really amazing, Miriam.
+
+00:00:40.854 --> 00:00:42.459
+You do so much for the student community,
+
+00:00:42.460 --> 00:00:43.905
+and I know they really appreciate it.
+
+00:00:43.905 --> 00:00:46.679
+But I also know that you have some other hobbies as well.
+
+00:00:46.679 --> 00:00:50.323
+Yeah, let's see, among other things I bake a lot for the office.
+
+00:00:50.323 --> 00:00:51.960
+And it's awesome. I mean, really,
+
+00:00:51.960 --> 00:00:54.390
+everything she makes disappears instantly.
+
+00:00:54.390 --> 00:00:55.980
+Thank you so much.
+
+00:00:55.979 --> 00:00:57.479
+So, I was wondering,
+
+00:00:57.479 --> 00:00:58.949
+my mom's birthday is coming up.
+
+00:00:58.950 --> 00:01:00.800
+Would you mind making a cake for her?
+
+00:01:00.799 --> 00:01:02.299
+Oh my gosh. I would be honored.
+
+00:01:02.299 --> 00:01:04.075
+That's awesome. Thanks so much, Miriam.
+
+00:01:04.075 --> 00:01:05.260
+She will love it.
+
+00:01:05.260 --> 00:01:07.855
+I hope so. I'll go get baking.
+
+00:01:07.855 --> 00:01:11.460
+Asking Miriam to bake a cake for me is just like
+
+00:01:11.459 --> 00:01:14.269
+the new technology we'll be looking at in this lesson.
+
+00:01:14.269 --> 00:01:15.548
+I'm not doing the work,
+
+00:01:15.549 --> 00:01:17.100
+I just make the request,
+
+00:01:17.099 --> 00:01:19.454
+and I don't have to load some professional library like
+
+00:01:19.454 --> 00:01:22.829
+jQuery because this new tool is provided right in the browser.
+
+00:01:22.829 --> 00:01:25.125
+So, what is this life-changing tech?
+
+00:01:25.125 --> 00:01:27.219
+Drum roll please.
+
+00:01:27.219 --> 00:01:30.650
+I give you the Fetch API.
+
+00:01:30.650 --> 00:01:33.034
+So, yeah, the name isn't all that impressive-sounding,
+
+00:01:33.034 --> 00:01:35.660
+but Fetch really is an amazing tool that will change how you
+
+00:01:35.659 --> 00:01:38.609
+write asynchronous requests. Let's see how it works.
+

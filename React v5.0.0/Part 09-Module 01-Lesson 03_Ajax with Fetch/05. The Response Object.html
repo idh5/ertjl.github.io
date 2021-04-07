@@ -1,0 +1,265 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Response Object</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Ajax with Fetch</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Ajax call with the Fetch API.html">01. Ajax call with the Fetch API</a>
+    </li>
+    <li class="">
+      <a href="02. What is Fetch.html">02. What is Fetch</a>
+    </li>
+    <li class="">
+      <a href="03. Write the Fetch Request.html">03. Write the Fetch Request</a>
+    </li>
+    <li class="">
+      <a href="04. Handle The Response.html">04. Handle The Response</a>
+    </li>
+    <li class="">
+      <a href="05. The Response Object.html">05. The Response Object</a>
+    </li>
+    <li class="">
+      <a href="06. ES6 Arrow Function.html">06. ES6 Arrow Function</a>
+    </li>
+    <li class="">
+      <a href="07. Display Content &amp; Handling Errors.html">07. Display Content &amp; Handling Errors</a>
+    </li>
+    <li class="">
+      <a href="08. Project Wrap-up.html">08. Project Wrap-up</a>
+    </li>
+    <li class="">
+      <a href="09. Fetch Outro.html">09. Fetch Outro</a>
+    </li>
+    <li class="">
+      <a href="10. Course Outro.html">10. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. The Response Object</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-response-object">The Response Object</h2>
+<p>See how the response that's returned is of the <code>Response</code> type? This <code>Response</code> object is new with the Fetch API and is what's returned when a Fetch request resolves.</p>
+<p>Ok, so that's great and all, but did you notice anything weird about the response object? It didn't have any of the data that we searched for! That's because a response object has information about the response itself, it doesn't have the data…yet. To actually get the data, we need to get the "body" of the response.</p>
+<p>Since the Unsplash API we're using will return JSON to us, we just need to call <code>.json()</code> on the response variable.</p>
+<pre><code class="js language-js">fetch(`https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}`, {
+    headers: {
+        Authorization: 'Client-ID abc123'
+    }
+}).then(function(response) {
+    return response.json();
+});</code></pre>
+<p>The <code>.json()</code> method on a Response object returns a Promise, so we need to chain on <em>another</em> <code>.then()</code> to actually get and start using the returned data. This time, let's call <code>addImage</code> to pass it the returned data:</p>
+<pre><code class="js language-js">fetch(`https://api.unsplash.com/search/photos?page=1&amp;query=${searchedForText}`, {
+    headers: {
+        Authorization: 'Client-ID abc123'
+    }
+}).then(function(response) {
+    return response.json();
+}).then(addImage);
+
+function addImage(data) {
+    debugger;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There are a number of methods on a Response object. Each one will let the code handle different response types. </p>
+<p>For example, the <code>.json()</code> method that we've looked at will take the response and convert it to from JSON. What happens if we requested an image, instead?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Other Response Methods</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following methods should be used if you wanted to fetch an image? If you get stuck, check out:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Making_fetch_requests" rel="noopener noreferrer" target="_blank">Making fetch requests</a></li>
+<li><a href="https://davidwalsh.name/fetch" rel="noopener noreferrer" target="_blank">https://davidwalsh.name/fetch</a></li>
+</ul></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1485305508037" name="261365" id="a1485305508037">
+      <label for="a1485305508037"><p><code>.arrayBuffer()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485305550822" name="261365" id="a1485305550822">
+      <label for="a1485305550822"><p><code>.blob()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485305551340" name="261365" id="a1485305551340">
+      <label for="a1485305551340"><p><code>.formData()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485305551805" name="261365" id="a1485305551805">
+      <label for="a1485305551805"><p><code>.json()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1485305552396" name="261365" id="a1485305552396">
+      <label for="a1485305552396"><p><code>.text()</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`.blob()`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. ES6 Arrow Function.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. The Response Object')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
