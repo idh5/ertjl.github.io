@@ -1,0 +1,30 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.169
+Nesta aula, aprendemos
+a adicionar o React
+
+00:00:03.203 --> 00:00:07.540
+a um aplicativo Redux,
+passando os props da Redux Store.
+
+00:00:07.574 --> 00:00:10.377
+Por enquanto, os dados
+no aplicativo são locais.
+
+00:00:10.410 --> 00:00:12.379
+Isto não é muito realista.
+
+00:00:12.412 --> 00:00:14.914
+Na próxima aula, veremos
+como o Redux lida
+
+00:00:14.948 --> 00:00:16.216
+com dados assíncronos,
+
+00:00:16.249 --> 00:00:19.252
+movendo os dados locais
+para uma API externa.
+

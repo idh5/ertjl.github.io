@@ -1,0 +1,423 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>External Data</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Asynchronous Redux</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. External Data.html">02. External Data</a>
+    </li>
+    <li class="">
+      <a href="03. Optimistic Updates.html">03. Optimistic Updates</a>
+    </li>
+    <li class="">
+      <a href="04. Thunk.html">04. Thunk</a>
+    </li>
+    <li class="">
+      <a href="05. Leveraging Thunks in our App.html">05. Leveraging Thunks in our App</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. External Data</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We're going to use a database to interact with our Todos application. We're simulating the database to keep that aspect of the project less complex. This is the HTML script tag you need to add the database to your application which we'll use in the following video:</p>
+<pre><code class="html language-html">&lt;script src="https://tylermcginnis.com/goals-todos-api/index.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Using A Remote API</p></h3>
+  <video controls>
+  <source src="02. Using A Remote API-diArZ09Mw1U.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Using A Remote API-diArZ09Mw1U.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Using A Remote API-diArZ09Mw1U.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/ac11f181a90e77a21478e59c258d720a658ec869" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Working with a new <a href="https://tylermcginnis.com/goals-todos-api/index.js" rel="noopener noreferrer" target="_blank">API</a> can be a bit tricky. Make sure to check off each of the following.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="f4b63b6b-e2cb-4527-85d5-d6f1ca48bba2--0">
+        <label for="f4b63b6b-e2cb-4527-85d5-d6f1ca48bba2--0"><p>I have linked to the API in my <code>index.html</code> file.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="f4b63b6b-e2cb-4527-85d5-d6f1ca48bba2--1">
+        <label for="f4b63b6b-e2cb-4527-85d5-d6f1ca48bba2--1"><p>I have checked out what methods the API provides.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="f4b63b6b-e2cb-4527-85d5-d6f1ca48bba2--2">
+        <label for="f4b63b6b-e2cb-4527-85d5-d6f1ca48bba2--2"><p>I have examined the API to see what each method should be called with/what they return.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great work, keep going!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Which Method?</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Take a look at the <a href="https://tylermcginnis.com/goals-todos-api/index.js" rel="noopener noreferrer" target="_blank">API</a>. Which method will get all Goals?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>How long will it run?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>From the <a href="https://tylermcginnis.com/goals-todos-api/index.js" rel="noopener noreferrer" target="_blank">API</a>, how long will the <code>saveTodo</code> method run before stopping itself?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522106184280" name="571820" id="a1522106184280">
+        <label for="a1522106184280"><p>1 second</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522106199680" name="571820" id="a1522106199680">
+        <label for="a1522106199680"><p>0.7 seconds</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522106200773" name="571820" id="a1522106200773">
+        <label for="a1522106200773"><p>0.5 seconds</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522106205988" name="571820" id="a1522106205988">
+        <label for="a1522106205988"><p>0.3 seconds</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    0.3 seconds
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="🔨task">🔨Task</h2>
+<p>Add the following behavior to the project:</p>
+<ul>
+<li>When the app loads, <code>console.log</code> all of the todos and all of the goals that reside in our fake database.</li>
+</ul>
+<h4 id="solution-code">Solution Code</h4>
+<div class="react-quiz-solution">
+Once you've tried your hand at tackling the task above, hover your mouse here for a possible solution. 
+<style>
+.react-quiz-solution .react-quiz-code-snippet { display: none;}
+.react-quiz-solution:hover .react-quiz-code-snippet { display: block;}
+</style>
+<pre class="react-quiz-code-snippet">
+class App extends React.Component {
+      componentDidMount () {
+        const { store } = this.props
+
+        Promise.all([
+          API.fetchTodos(),
+          API.fetchGoals()
+        ]).then(([ todos, goals ]) => {
+          console.log('Todos', todos)
+          console.log('Goals', goals)
+        })
+        ...
+}
+</pre>
+</div>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="promise-based-api">Promise-Based API</h2>
+<p>The methods in the provided API are all Promise-based. Let's take a look at the <code>.fetchTodos()</code> method:</p>
+<pre><code class="js language-js">API.fetchTodos = function () {
+  return new Promise((res, rej) =&gt; {
+    setTimeout(function () {
+      res(todos);
+    }, 2000);
+  });
+};</code></pre>
+<p>See how we're creating and returning a new <code>Promise()</code> object?</p>
+<p>In the task above, you could've just fetched all of our todos and then all of our Goals, but that's serial and is just making the user wait an unnecessarily long amount of time. Since the API is Promise-based, we can use <code>Promise.all()</code> to wait until all Promises have resolved before displaying the content to the user.</p>
+<p>Promises are asynchronous, and this lesson is all about working with asynchronous data and asynchronous requests. If you're feeling a little unsure about Promises, check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" rel="noopener noreferrer" target="_blank">the Promise documentation on MDN</a> or check out our <a href="https://www.udacity.com/course/javascript-promises--ud898" rel="noopener noreferrer" target="_blank">JavaScript Promises course</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Handling Initial Data</p></h3>
+  <video controls>
+  <source src="02. Handling Initial Data-94ipRgIS9CY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Handling Initial Data-94ipRgIS9CY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Handling Initial Data-94ipRgIS9CY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/98d9b5468262eb4ea786cb55c3d68ed9de78af09" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Flash Of No Data</p></h3>
+  <video controls>
+  <source src="02. Flash Of No Data-KS0xPETRzRA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Flash Of No Data-KS0xPETRzRA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Flash Of No Data-KS0xPETRzRA.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Implementing a Loading Indicator</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>At this point, when we refresh our app, only the UI seems to load. There is a noticeable delay before any of the data (i.e., todos and goals) actually appears on the screen. To ensure a smooth experience for users, it would be great if we can have a loading indicator on the screen as content is being fetched.</p>
+<p>How would you implement this feature? Should this be tracked in the state? Do we need to make a new component? What about our reducers -- should they require any new logic? Please write your thoughts below.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>💫Remember that the <code>render()</code>  has to be a pure function and it runs before <code>componentDidMount()</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Loading States With Redux</p></h3>
+  <video controls>
+  <source src="02. Loading States With Redux-w5fQmGBKn1g.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Loading States With Redux-w5fQmGBKn1g.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Loading States With Redux-w5fQmGBKn1g.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/6bb7f0d521986a316b9aa45cac4f2fae886c4bfc" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>In this section, we looked at how to work with an external API. We added a new action (<code>RECEIVE_DATA</code>), created a new action creator, and built a new reducer…all to handle the different states our app can be in while getting our remote data:</p>
+<ul>
+<li>before the app has the data</li>
+<li>while the app is fetching the data</li>
+<li>after the data has been received</li>
+</ul>
+<p>In the next section, we'll look at how to optimistically update the UI based on the API actions that are performed.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Optimistic Updates.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. External Data')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

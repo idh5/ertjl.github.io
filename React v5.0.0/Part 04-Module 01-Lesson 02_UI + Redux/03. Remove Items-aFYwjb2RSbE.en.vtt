@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.349
+Now that we can add new Todo items to our list as well as toggle them,
+
+00:00:04.349 --> 00:00:08.713
+and we can also add new goals to our goals list.
+
+00:00:08.714 --> 00:00:15.230
+The next functionality we need to add is being able to remove any one of these items.
+
+00:00:15.230 --> 00:00:17.320
+So back in our code here,
+
+00:00:17.320 --> 00:00:21.399
+right above our AddTodoToDOM function,
+
+00:00:21.399 --> 00:00:26.064
+we're going to create a little helper function here called createRemoveButton.
+
+00:00:26.065 --> 00:00:30.760
+And what it's going to do is it's going to take in an onClick callback.
+
+00:00:30.760 --> 00:00:33.325
+It's then going to create
+
+00:00:33.325 --> 00:00:39.160
+a brand new button by using create element passing in the string button.
+
+00:00:39.159 --> 00:00:45.544
+We also want to say that this buttons in our HTML,
+
+00:00:45.545 --> 00:00:49.020
+it's just going to be a capitalist X,
+
+00:00:49.020 --> 00:00:52.140
+and then we want to say whenever this button is clicked on,
+
+00:00:52.140 --> 00:00:55.770
+so we will call addEventListener parsing in the string click.
+
+00:00:55.770 --> 00:00:57.980
+Whenever the button is clicked on,
+
+00:00:57.979 --> 00:01:01.109
+we want to invoke the onclick function that
+
+00:01:01.109 --> 00:01:04.620
+was first parsed in one we called createRemoveButton.
+
+00:01:04.620 --> 00:01:09.105
+And then from there we want to just say returnRemoveButton.
+
+00:01:09.105 --> 00:01:13.740
+So now inside of addTodoToDOM right here,
+
+00:01:13.739 --> 00:01:16.649
+let's go ahead and create a new button.
+
+00:01:16.650 --> 00:01:19.530
+So we will say removeButton equals.
+
+00:01:19.530 --> 00:01:22.590
+We want to invoke createRemoveButton.
+
+00:01:22.590 --> 00:01:24.588
+And now we want to pass it to
+
+00:01:24.587 --> 00:01:27.674
+the function which is going to be called when this button is clicked.
+
+00:01:27.674 --> 00:01:29.099
+And if you remember,
+
+00:01:29.099 --> 00:01:33.685
+in order for us to remove an item from the state of our store,
+
+00:01:33.686 --> 00:01:40.965
+what we want to call is this action creator right here.
+
+00:01:40.965 --> 00:01:45.960
+So RemoveTodoAction parsing in the ID of the Todo item.
+
+00:01:45.959 --> 00:01:49.500
+So we will say is store.dispatch,
+
+00:01:49.500 --> 00:01:55.484
+and we want to invoke RemoveTodoAction parsing in the ID of the Todo item,
+
+00:01:55.484 --> 00:02:00.212
+which we can get from calling todo.id.
+
+00:02:00.212 --> 00:02:04.824
+And now, all we need to do is we can come in here and say after you
+
+00:02:04.825 --> 00:02:10.284
+append the text to the node go ahead and also append this remove button.
+
+00:02:10.284 --> 00:02:12.939
+So now if we look at the UI here,
+
+00:02:12.939 --> 00:02:16.224
+whenever we add a new Todo item,
+
+00:02:16.224 --> 00:02:18.444
+we have a button here,
+
+00:02:18.444 --> 00:02:19.629
+and when we click on it,
+
+00:02:19.629 --> 00:02:22.164
+that item gets removed from the state
+
+00:02:22.164 --> 00:02:25.884
+of our store which means it also gets removed from the UI.
+
+00:02:25.884 --> 00:02:30.549
+So let's go ahead and now do the exact same thing inside of addGoalToDOM.
+
+00:02:30.550 --> 00:02:36.100
+So we can also remove goal items from the state of our store.
+
+00:02:36.099 --> 00:02:38.049
+So, just as we did before let's create
+
+00:02:38.050 --> 00:02:43.180
+a another remove button variable here, by invoking createRemoveButton.
+
+00:02:43.180 --> 00:02:46.210
+And when this button is clicked on,
+
+00:02:46.210 --> 00:02:51.310
+what we want to dispatch is our removeGoalAction parsing it the ID of this goal,
+
+00:02:51.310 --> 00:02:53.844
+which we can get from goal.id.
+
+00:02:53.844 --> 00:02:57.444
+And then now we also want to append that onto our node,
+
+00:02:57.444 --> 00:03:01.584
+so we can call appendChild parsing in a remove button.
+
+00:03:01.585 --> 00:03:04.150
+So just to make sure that this works,
+
+00:03:04.150 --> 00:03:07.300
+we can say Learn Redux.
+
+00:03:07.300 --> 00:03:09.894
+Let's also give it one more. Say run a marathon.
+
+00:03:09.894 --> 00:03:13.330
+And then now we can come in here and remove
+
+00:03:13.330 --> 00:03:17.365
+one which removes it from the state of our store,
+
+00:03:17.365 --> 00:03:19.615
+which means it also removes it from the UI.
+
+00:03:19.615 --> 00:03:20.980
+So, now last thing,
+
+00:03:20.979 --> 00:03:22.104
+just a small thing,
+
+00:03:22.104 --> 00:03:26.454
+I'm going to come, and delete all of these dispatches now.
+
+00:03:26.455 --> 00:03:28.574
+Because we don't need to keep them around.
+
+00:03:28.574 --> 00:03:31.240
+Because what we've done is we've taken
+
+00:03:31.240 --> 00:03:34.825
+all those dispatches and hooked them up to our actual UI.
+
+00:03:34.824 --> 00:03:39.519
+So now, in order to update the state of our store,
+
+00:03:39.520 --> 00:03:43.580
+we can do that by doing it through our UI.
+

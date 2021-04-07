@@ -1,0 +1,312 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.203 --> 00:00:03.307
+Assim como fizemos
+na IU JavaScript Vanilla,
+
+00:00:03.349 --> 00:00:06.938
+queremos tornar o componente Todos
+responsável por obter
+
+00:00:06.980 --> 00:00:08.587
+o input do usuário
+
+00:00:08.629 --> 00:00:11.979
+e adicioná-lo
+como nova propriedade
+
+00:00:12.021 --> 00:00:14.220
+ao estado da Store Redux.
+
+00:00:14.262 --> 00:00:17.747
+Vamos até o componente Todos
+
+00:00:17.789 --> 00:00:21.835
+para alterar a IU um pouco.
+Renderizaremos um cabeçalho
+
+00:00:21.877 --> 00:00:23.676
+que diz "Todo List"
+
+00:00:23.718 --> 00:00:27.219
+e renderizaremos
+um campo input.
+
+00:00:27.261 --> 00:00:29.095
+Aqui será type='text'
+
+00:00:29.137 --> 00:00:31.584
+e o placeholder
+será Add Todo.
+
+00:00:31.626 --> 00:00:37.239
+Isto será um componente
+descontrolado,
+
+00:00:37.281 --> 00:00:41.573
+ou seja, em vez de adicionar
+o valor deste campo input
+
+00:00:41.615 --> 00:00:43.830
+no estado do componente,
+
+00:00:43.872 --> 00:00:45.711
+adicionaremos
+uma referência,
+
+00:00:45.753 --> 00:00:48.961
+e a colocaremos
+
+00:00:49.664 --> 00:00:51.935
+na instância do componente.
+
+00:00:51.977 --> 00:00:54.864
+Sempre que quisermos obter
+o valor do campo input,
+
+00:00:54.906 --> 00:00:59.681
+poderemos obtê-lo da instância,
+como veremos em um segundo.
+
+00:00:59.723 --> 00:01:04.306
+Também queremos renderizar
+um botão que diz "Add Todo".
+
+00:01:08.074 --> 00:01:09.920
+Quando o botão for clicado,
+
+00:01:09.962 --> 00:01:14.281
+nós invocaremos um método,
+que vamos criar agora,
+
+00:01:14.323 --> 00:01:16.184
+e que chamaremos
+de "addItem".
+
+00:01:16.226 --> 00:01:20.363
+O addItem
+
+00:01:20.405 --> 00:01:22.819
+receberá um evento,
+
+00:01:22.861 --> 00:01:25.970
+para o qual chamaremos
+preventDefault.
+
+00:01:26.596 --> 00:01:31.331
+E queremos o nome
+do novo textItem,
+
+00:01:31.373 --> 00:01:34.089
+que será o mesmo
+que no campo input.
+
+00:01:34.131 --> 00:01:38.227
+Podemos digitar
+"name = this.input.value",
+
+00:01:38.269 --> 00:01:43.522
+porque colocamos o input
+do this.input dentro da referência.
+
+00:01:43.564 --> 00:01:47.779
+Vamos reiniciar o campo input
+de forma que seja uma string vazia.
+
+00:01:47.821 --> 00:01:50.563
+Se você se lembra
+do que estamos fazendo,
+
+00:01:50.605 --> 00:01:54.539
+nós queremos adicionar
+um novo item à lista todo
+
+00:01:54.581 --> 00:01:57.843
+e, da IU JavaScript Vanilla,
+
+00:01:57.885 --> 00:02:01.226
+chamaremos addTodoAction,
+
+00:02:01.268 --> 00:02:04.344
+disparamos addTodoAction
+
+00:02:05.295 --> 00:02:07.886
+passando name,
+configurando complete como false
+
+00:02:07.928 --> 00:02:12.087
+e obtendo o ID
+de generateId.
+
+00:02:12.129 --> 00:02:16.543
+Vou copiar isto, pois faremos
+algo bem parecido
+
+00:02:16.585 --> 00:02:19.535
+dentro do componente Todos.
+
+00:02:19.577 --> 00:02:21.751
+Colarei isto aqui.
+
+00:02:24.432 --> 00:02:28.969
+Mas uma coisa que mudaremos
+é que, em vez de acessarmos a Store,
+
+00:02:29.011 --> 00:02:31.233
+pois estamos
+no mesmo arquivo,
+
+00:02:31.275 --> 00:02:33.456
+e, tecnicamente,
+ainda temos acesso a ela,
+
+00:02:33.498 --> 00:02:37.712
+nós acabaremos dividindo
+os diferentes componentes
+
+00:02:37.754 --> 00:02:39.368
+em módulos próprios,
+
+00:02:39.410 --> 00:02:42.841
+ou seja,
+acabaremos importando a Store
+
+00:02:42.883 --> 00:02:47.305
+ou a passando como propriedade
+para este componente.
+
+00:02:47.347 --> 00:02:50.553
+Nós escolheremos
+a segunda opção.
+
+00:02:50.595 --> 00:02:52.566
+Ao renderizarmos o App,
+
+00:02:52.608 --> 00:02:57.190
+passamos a Store
+como uma propriedade -
+
+00:02:57.232 --> 00:03:00.172
+e isto acabará tendo
+um arquivo próprio -,
+
+00:03:00.214 --> 00:03:04.698
+e importamos a Store
+de outro arquivo.
+
+00:03:04.740 --> 00:03:07.040
+Passaremos
+para o componente App,
+
+00:03:07.082 --> 00:03:10.821
+que passará como propriedade
+
+00:03:10.863 --> 00:03:13.806
+para o componente Todos.
+
+00:03:13.848 --> 00:03:18.591
+O componente Todos
+pegará isto e dirá
+
+00:03:18.633 --> 00:03:20.975
+"this.props.store.dispatch".
+
+00:03:21.017 --> 00:03:24.367
+Podemos invocar addTodoAction.
+
+00:03:24.409 --> 00:03:26.799
+Poderíamos ter chamado
+store.dispatch,
+
+00:03:26.841 --> 00:03:30.487
+porque, tecnicamente, ainda estamos
+no mesmo escopo da Store,
+
+00:03:30.529 --> 00:03:36.033
+então podemos acessá-la,
+pois estamos dentro do aplicativo,
+
+00:03:36.075 --> 00:03:39.768
+mas como isto acabará se tornando
+módulos distintos,
+
+00:03:40.777 --> 00:03:44.407
+passá-la como propriedade
+configurará melhor o código
+
+00:03:44.449 --> 00:03:46.838
+na hora de refatorar.
+
+00:03:46.880 --> 00:03:48.511
+Mas agora,
+
+00:03:48.553 --> 00:03:53.119
+quando adicionamos
+um novo item Todo
+
+00:03:53.161 --> 00:03:56.313
+ao aplicativo React,
+como "Passear com o cachorro",
+
+00:03:57.488 --> 00:03:58.887
+veremos, no console,
+
+00:03:58.929 --> 00:04:01.391
+a ação ADD_TODO.
+
+00:04:01.433 --> 00:04:03.943
+O que é interessante
+de se perceber
+
+00:04:03.985 --> 00:04:06.520
+é que, mesmo não configurando
+o componente List
+
+00:04:06.562 --> 00:04:08.911
+para renderizar
+o novo item todo,
+
+00:04:08.953 --> 00:04:11.203
+se observarmos
+o aplicativo Vanilla,
+
+00:04:11.245 --> 00:04:13.902
+que já está observando
+a mesma Store,
+
+00:04:13.944 --> 00:04:15.616
+o item estará aqui.
+
+00:04:15.658 --> 00:04:17.224
+O que é legal
+
+00:04:17.266 --> 00:04:20.735
+é que desassociamos completamente
+o estado da IU.
+
+00:04:20.777 --> 00:04:24.735
+Temos uma IU JavaScript aqui
+
+00:04:24.777 --> 00:04:27.416
+e uma IU React aqui,
+
+00:04:27.458 --> 00:04:29.895
+e, como fazem referência
+ao mesmo estado,
+
+00:04:29.937 --> 00:04:33.204
+poderemos adicionar
+um novo item aqui
+
+00:04:33.246 --> 00:04:35.390
+e isso atualizará a IU.
+
+00:04:35.432 --> 00:04:37.417
+Isso não é muito prático,
+
+00:04:37.459 --> 00:04:41.786
+mas mostra como dissociamos
+o estado da IU.
+

@@ -1,0 +1,212 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.229 --> 00:00:03.765
+Eu tenho um problema.
+Quero investir em Bitcoin,
+
+00:00:03.807 --> 00:00:08.542
+mas minha assessora financeira diz
+que essa é uma má ideia,
+
+00:00:08.584 --> 00:00:12.566
+tão ruim que insiste que eu adicione
+um recurso ao aplicativo
+
+00:00:12.608 --> 00:00:15.982
+para que, sempre que acrescentar
+um novo afazer ou uma nova meta,
+
+00:00:16.024 --> 00:00:19.039
+se a meta ou afazer
+contiver a palavra "Bitcoin",
+
+00:00:19.081 --> 00:00:22.175
+em vez de adicioná-lo
+à lista individual,
+
+00:00:22.217 --> 00:00:27.127
+ele dirá
+que isso é uma má ideia.
+
+00:00:27.169 --> 00:00:29.272
+Para fazer isso,
+
+00:00:30.273 --> 00:00:32.912
+nos ligamos ao momento
+
+00:00:32.954 --> 00:00:35.575
+após a ação
+ter sido disparada,
+
+00:00:35.617 --> 00:00:39.376
+mas antes de ela chegar à reducer
+e modificar o estado.
+
+00:00:39.418 --> 00:00:42.407
+E se viéssemos aqui,
+
+00:00:42.449 --> 00:00:45.175
+bem acima de onde criamos
+a Store?
+
+00:00:45.217 --> 00:00:49.329
+Vamos criar uma nova função aqui
+chamada "checkAndDispatch".
+
+00:00:50.536 --> 00:00:55.660
+Nós sequestraremos
+a função dispatch
+
+00:00:55.702 --> 00:00:58.908
+que estamos usando
+e usaremos checkAndDispatch.
+
+00:00:58.950 --> 00:01:04.060
+Ela pegará a Store e a ação
+
+00:01:04.102 --> 00:01:08.612
+e conferirá se a propriedade name
+contém a palavra Bitcoin.
+
+00:01:08.654 --> 00:01:12.017
+Se não houver,
+ela chamará store.dispatch
+
+00:01:12.059 --> 00:01:13.649
+passando a ação.
+
+00:01:13.691 --> 00:01:17.738
+Se houver, expedirá o alerta
+e não fará mais nada.
+
+00:01:17.780 --> 00:01:19.322
+Então, aqui,
+
+00:01:19.995 --> 00:01:22.889
+teremos uma instrução if
+
+00:01:22.931 --> 00:01:24.738
+e diremos "if...
+
+00:01:26.610 --> 00:01:29.087
+action.type === ADD_TODO"
+
+00:01:30.358 --> 00:01:32.263
+e...
+
+00:01:32.305 --> 00:01:36.639
+"action.todo.name.
+toLowerCase()
+
+00:01:37.895 --> 00:01:41.911
+.includes('bitcoin')"
+
+00:01:43.895 --> 00:01:47.342
+retornaremos alert
+
+00:01:47.384 --> 00:01:49.822
+dizendo: "Não. Má ideia."
+
+00:01:49.864 --> 00:01:53.406
+Se action.type for ADD_TODO,
+
+00:01:53.448 --> 00:01:58.247
+e se o novo afazer -
+que terá todo.name em minúsculo -
+
+00:01:58.289 --> 00:02:00.142
+incluir a palavra "bitcoin",
+
+00:02:00.184 --> 00:02:03.558
+diremos: "Não. Má ideia."
+
+00:02:03.600 --> 00:02:06.198
+Queremos fazer
+algo parecido,
+
+00:02:06.240 --> 00:02:08.687
+mas em vez de usarmos
+o ADD_TODO,
+
+00:02:08.729 --> 00:02:10.481
+usaremos ADD_GOAL.
+
+00:02:11.227 --> 00:02:15.258
+E, em vez de action.todo.name,
+usaremos action.goal.name.
+
+00:02:16.305 --> 00:02:20.017
+Se nenhum destes dois casos
+
+00:02:21.184 --> 00:02:22.527
+retornarem um alerta,
+
+00:02:22.569 --> 00:02:24.112
+então
+
+00:02:24.154 --> 00:02:27.846
+isso significa que o novo afazer
+ou a nova meta
+
+00:02:27.888 --> 00:02:29.582
+não contém
+a palavra bitcoin,
+
+00:02:29.624 --> 00:02:31.759
+então chamaremos
+store.dispatch
+
+00:02:32.375 --> 00:02:35.543
+passando a ação,
+como normalmente faríamos.
+
+00:02:35.585 --> 00:02:37.750
+Como temos a função
+checkAndDispatch,
+
+00:02:37.792 --> 00:02:41.447
+usaremos isso em vez
+da dispatch de costume.
+
+00:02:41.489 --> 00:02:44.399
+Assim, faremos
+estas conferências.
+
+00:02:44.441 --> 00:02:49.407
+Sempre que chamarmos
+store.dispatch,
+
+00:02:49.449 --> 00:02:51.679
+substituiremos isto
+
+00:02:52.704 --> 00:02:57.126
+chamando o checkAndDispatch,
+
+00:02:57.168 --> 00:03:00.566
+invocando e passando
+a Store como primeiro argumento
+
+00:03:00.608 --> 00:03:04.511
+e passando a ação
+como segundo argumento.
+
+00:03:07.832 --> 00:03:10.551
+Se observarmos o aplicativo,
+
+00:03:10.593 --> 00:03:15.080
+ainda podemos adicionar itens
+como "Passear com o cachorro",
+
+00:03:15.122 --> 00:03:20.431
+mas se tentarmos adicionar algo
+que contenha a palavra Bitcoin,
+
+00:03:20.473 --> 00:03:23.263
+veremos "Não. Má ideia."
+
+00:03:23.305 --> 00:03:26.000
+e o item não será adicionado
+à lista.
+

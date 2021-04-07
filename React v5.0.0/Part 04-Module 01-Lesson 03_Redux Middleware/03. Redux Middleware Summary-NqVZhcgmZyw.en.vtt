@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+In this lesson, we've learned about how we can use
+
+00:00:02.669 --> 00:00:06.854
+Redux's Middleware to hook into the time between when an action is dispatched,
+
+00:00:06.855 --> 00:00:08.595
+and when a reducer runs.
+
+00:00:08.595 --> 00:00:13.570
+In the next lesson, we'll learn how we can integrate Redux into a React application.
+

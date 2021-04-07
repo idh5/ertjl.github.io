@@ -1,0 +1,267 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.536
+Agora que temos os dados iniciais
+do aplicativo,
+
+00:00:03.570 --> 00:00:06.373
+que estão vindo
+da API falsa aqui,
+
+00:00:06.406 --> 00:00:10.310
+nós também queremos que,
+quando deletarmos um item,
+
+00:00:10.343 --> 00:00:13.113
+não atualizemos apenas
+a Redux Store,
+
+00:00:13.146 --> 00:00:16.349
+mas também atualizemos
+a base de dados.
+
+00:00:16.383 --> 00:00:22.222
+Vamos para o componente todos
+aqui.
+
+00:00:22.622 --> 00:00:25.358
+E agora, como eu mencionei,
+
+00:00:25.392 --> 00:00:28.661
+quando o método removeItem
+for usado,
+
+00:00:28.695 --> 00:00:30.930
+em vez de apenas atualizar
+a Store,
+
+00:00:30.964 --> 00:00:33.199
+também precisamos atualizar
+a API.
+
+00:00:33.233 --> 00:00:35.234
+Um jeito de abordar isto
+
+00:00:35.871 --> 00:00:40.106
+é usar a API.deleteTodo,
+
+00:00:40.140 --> 00:00:43.777
+passando para ela a todo.id.
+
+00:00:43.810 --> 00:00:46.479
+E isto vai nos retornar
+uma promessa,
+
+00:00:46.513 --> 00:00:48.948
+que, quando é resolvida,
+
+00:00:48.982 --> 00:00:54.154
+nos permite usar this.props
+.store.dispatch(removeTodoAction),
+
+00:00:54.187 --> 00:00:55.488
+como fizemos antes.
+
+00:00:55.522 --> 00:00:57.991
+Agora, em vez de usar
+a dispatch,
+
+00:00:58.024 --> 00:01:00.660
+nós deletamos o item
+da base de dados.
+
+00:01:00.694 --> 00:01:02.062
+E usamos a dispatch
+
+00:01:02.095 --> 00:01:05.398
+quando recebermos a confirmação
+de que o item foi deletado.
+
+00:01:05.432 --> 00:01:07.434
+Se você olhar para cá,
+
+00:01:07.467 --> 00:01:10.904
+verá que recebemos
+nossos dados iniciais,
+
+00:01:10.937 --> 00:01:13.907
+e eu posso deletar um item.
+
+00:01:13.940 --> 00:01:19.279
+Note que existe
+um pequeno delay
+
+00:01:19.312 --> 00:01:21.548
+entre o momento
+em que clico em delete
+
+00:01:21.581 --> 00:01:24.517
+e o momento
+em que ele é removido da IU.
+
+00:01:24.551 --> 00:01:26.986
+Eu clico em delete,
+só depois o item é removido.
+
+00:01:27.020 --> 00:01:29.489
+Isto funciona
+relativamente bem,
+
+00:01:29.522 --> 00:01:32.592
+mas seria legal se o usuário
+recebesse feedback instantâneo
+
+00:01:32.625 --> 00:01:34.094
+quando removesse um item.
+
+00:01:34.127 --> 00:01:38.164
+Então usaremos uma técnica chamada
+"atualização otimizada".
+
+00:01:38.198 --> 00:01:43.603
+Basicamente, não queremos esperar
+uma confirmação
+
+00:01:43.636 --> 00:01:45.505
+de que o item foi deletado
+da base de dados
+
+00:01:45.538 --> 00:01:47.307
+antes de usarmos a dispatch.
+
+00:01:47.340 --> 00:01:49.275
+Queremos fazer
+isto imediatamente.
+
+00:01:49.309 --> 00:01:52.245
+Então, primeiro usamos
+a dispatch
+
+00:01:52.278 --> 00:01:54.481
+antes de fazermos
+a solicitação de API.
+
+00:01:54.514 --> 00:01:57.650
+Mas, se há um erro,
+
+00:01:57.684 --> 00:02:00.353
+esta função .catch
+vai ser executada,
+
+00:02:00.387 --> 00:02:03.111
+e usaremos this.props.store.
+
+00:02:03.144 --> 00:02:07.627
+dispatch(addTodoAction(todo)).
+
+00:02:07.660 --> 00:02:10.930
+Basicamente,
+nós removemos o item.
+
+00:02:10.964 --> 00:02:12.232
+Se acontecer um problema,
+
+00:02:12.265 --> 00:02:14.200
+nós adicionamos
+o item novamente.
+
+00:02:14.234 --> 00:02:17.476
+Também podemos alertar:
+
+00:02:18.304 --> 00:02:22.409
+"Um erro ocorreu.
+Tente de novo."
+
+00:02:22.442 --> 00:02:24.978
+Agora, ele vai ficar...
+
+00:02:25.011 --> 00:02:29.416
+Vamos ver se conseguimos
+resolver algum destes delays.
+
+00:02:29.449 --> 00:02:32.285
+"Passear com o cachorro",
+que foi bem-sucedido.
+
+00:02:32.318 --> 00:02:35.188
+"Lavar o carro", bem-sucedido. 
+"Ir para a academia".
+
+00:02:35.221 --> 00:02:37.290
+Parece que tivemos um erro
+em "Ir para a academia",
+
+00:02:37.323 --> 00:02:38.625
+então recebemos este pop-up.
+
+00:02:38.658 --> 00:02:40.026
+Quando clico em OK,
+
+00:02:40.060 --> 00:02:44.898
+note que adicionamos o item
+à nossa Todo List.
+
+00:02:44.931 --> 00:02:47.100
+Temos o melhor
+dos dois mundos aqui,
+
+00:02:47.133 --> 00:02:48.835
+porque ainda atualizamos
+a base de dados,
+
+00:02:48.868 --> 00:02:51.071
+mas o usuário recebe
+feedback instantâneo
+
+00:02:51.104 --> 00:02:53.540
+quando clicam em delete.
+
+00:02:53.573 --> 00:02:57.377
+Vamos fazer o mesmo
+para o componente goals.
+
+00:02:57.410 --> 00:02:59.279
+Dentro de removeItem,
+
+00:02:59.312 --> 00:03:03.683
+queremos remover o item
+da Redux Store.
+
+00:03:03.717 --> 00:03:08.355
+Então podemos usar deleteGoal
+na nossa API,
+
+00:03:08.388 --> 00:03:10.490
+passando a goal.id para ela.
+
+00:03:10.523 --> 00:03:12.325
+Se existe um erro,
+
+00:03:12.359 --> 00:03:18.198
+usaremos this.props.store.dispatch,
+addGoalAction,
+
+00:03:18.231 --> 00:03:19.899
+passando o goal,
+
+00:03:19.933 --> 00:03:25.472
+e depois alertamos:
+"Um erro ocorreu. Tente de novo."
+
+00:03:25.505 --> 00:03:30.043
+Agora, quando removemos um item
+da Todo List ou de Goals,
+
+00:03:30.076 --> 00:03:32.746
+não só o usuário recebe
+feedback instantâneo sobre isto,
+
+00:03:32.779 --> 00:03:35.348
+mas também atualizamos
+nossa base de dados falsa
+
+00:03:35.382 --> 00:03:37.417
+com esta informação.
+

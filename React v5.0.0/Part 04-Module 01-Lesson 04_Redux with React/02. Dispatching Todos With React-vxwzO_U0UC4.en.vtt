@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.299
+So, just as we did up here with our Vanilla JavaScript UI,
+
+00:00:03.299 --> 00:00:08.625
+we want to make our todos component responsible for getting some input from the user,
+
+00:00:08.625 --> 00:00:14.160
+and then adding that input as a new property on the state of our react store.
+
+00:00:14.160 --> 00:00:16.350
+So, what we'll do is let's head over to
+
+00:00:16.350 --> 00:00:20.220
+our todos component and let's change up the UI just a little bit.
+
+00:00:20.219 --> 00:00:23.504
+So, we'll render a header that says todo list.
+
+00:00:23.504 --> 00:00:26.730
+And then we want to render an input field.
+
+00:00:26.730 --> 00:00:28.914
+Type will be text.
+
+00:00:28.914 --> 00:00:31.535
+We'll have a placeholder of add todo,
+
+00:00:31.535 --> 00:00:33.395
+and then what we're going to do,
+
+00:00:33.395 --> 00:00:37.850
+is this is going to be an uncontrolled component meaning,
+
+00:00:37.850 --> 00:00:42.844
+instead of sticking the value of this input field on our component state,
+
+00:00:42.844 --> 00:00:45.379
+what we're going to do is we will add a ref.
+
+00:00:45.380 --> 00:00:51.739
+We will then stick this ref on this component instance.
+
+00:00:51.738 --> 00:00:54.949
+So now, whenever we want to grab the value of the input field,
+
+00:00:54.950 --> 00:00:57.290
+we can just grab it from the instance,
+
+00:00:57.289 --> 00:00:59.493
+as we will see here in a second.
+
+00:00:59.493 --> 00:01:04.980
+And then we also want to render a button that says add todo.
+
+00:01:07.159 --> 00:01:09.795
+And then when this button is clicked,
+
+00:01:09.795 --> 00:01:14.234
+we will go ahead and invoke a method that we're about to create right now.
+
+00:01:14.234 --> 00:01:16.004
+We will call it add item.
+
+00:01:16.004 --> 00:01:19.994
+So now, what add item is going to do,
+
+00:01:19.995 --> 00:01:22.695
+is it will receive an event,
+
+00:01:22.694 --> 00:01:26.134
+for which we need to call prevent default on.
+
+00:01:26.135 --> 00:01:31.270
+And then, we want to get the name of the new text item,
+
+00:01:31.269 --> 00:01:33.984
+which is going to be the same obviously as the input field.
+
+00:01:33.984 --> 00:01:35.094
+So, we can say name,
+
+00:01:35.094 --> 00:01:38.620
+it's going to equal this.input.value because
+
+00:01:38.620 --> 00:01:43.150
+we stuck the input on this.input inside of our ref.
+
+00:01:43.150 --> 00:01:47.545
+And then now, we want to reset the input field back to an empty string.
+
+00:01:47.545 --> 00:01:48.939
+And if you'll remember,
+
+00:01:48.939 --> 00:01:54.355
+what we're doing is we want to add a new item to our to do list.
+
+00:01:54.355 --> 00:01:57.295
+And from our Vanilla JavaScript UI,
+
+00:01:57.295 --> 00:02:01.210
+what we call is the add todo action.
+
+00:02:01.209 --> 00:02:04.765
+So, we are going to dispatch add todo action,
+
+00:02:04.765 --> 00:02:06.674
+parsing in the name,
+
+00:02:06.674 --> 00:02:11.865
+setting complete to false and then having the ID come from generate ID.
+
+00:02:11.865 --> 00:02:15.390
+So, I'm going to copy this because we're going to do something very
+
+00:02:15.389 --> 00:02:19.109
+similar inside of our todos component.
+
+00:02:19.110 --> 00:02:22.300
+So, I'll paste this into here.
+
+00:02:23.550 --> 00:02:27.625
+But one thing we are going to change up is instead of just
+
+00:02:27.625 --> 00:02:31.233
+accessing the store because we're in the same file here,
+
+00:02:31.233 --> 00:02:33.909
+and we still have access to a technically, eventually,
+
+00:02:33.909 --> 00:02:36.549
+what we're going to do is we're going to be breaking down all
+
+00:02:36.550 --> 00:02:39.399
+of these different components into their own modules,
+
+00:02:39.399 --> 00:02:42.775
+which means we are going to either want to import the store
+
+00:02:42.775 --> 00:02:47.110
+or we're going to want to parse the store down as props to this component.
+
+00:02:47.110 --> 00:02:50.110
+So, what we'll do is we will choose the latter.
+
+00:02:50.110 --> 00:02:52.450
+So, when we render our app,
+
+00:02:52.449 --> 00:02:57.159
+what I want to do here is let's go ahead and parse this store down as props.
+
+00:02:57.159 --> 00:02:59.859
+So eventually, this will be in its own file.
+
+00:02:59.860 --> 00:03:04.615
+And what we'll need to do is we will import store from another file.
+
+00:03:04.615 --> 00:03:06.939
+So, we'll parse it down to our app component.
+
+00:03:06.939 --> 00:03:13.555
+Our app component will then get it and parse it as a prop to our todos component.
+
+00:03:13.555 --> 00:03:20.920
+And then our todos component can get it and then say this.props.store.dispatch.
+
+00:03:20.919 --> 00:03:24.129
+And then we can invoke the add todo action creator.
+
+00:03:24.129 --> 00:03:28.074
+So again, we could have just called store.dispatch because technically,
+
+00:03:28.074 --> 00:03:30.459
+we are still in the same scope as store.
+
+00:03:30.460 --> 00:03:36.060
+So, we can still access that because it is somewhere inside of our app right here.
+
+00:03:36.060 --> 00:03:40.265
+But because we're eventually going to breaking these into separate modules,
+
+00:03:40.264 --> 00:03:43.369
+parsing it in as a prop will just set
+
+00:03:43.370 --> 00:03:46.609
+our future code up a little bit better when we start refactoring.
+
+00:03:46.609 --> 00:03:50.480
+But now what should happen is when we
+
+00:03:50.479 --> 00:03:54.439
+come over here and add a new todo item from our React app,
+
+00:03:54.439 --> 00:03:56.675
+let's say walk the dog,
+
+00:03:56.675 --> 00:04:01.385
+what we should see in the console is we get the add todo action here.
+
+00:04:01.384 --> 00:04:03.919
+But what's interesting about this is you'll notice,
+
+00:04:03.919 --> 00:04:08.774
+even though we haven't set up the list component yet to render the new todo item,
+
+00:04:08.775 --> 00:04:13.885
+if you look at our Vanilla JavaScript app which is already listening to the same store,
+
+00:04:13.884 --> 00:04:15.549
+we get that item up here.
+
+00:04:15.550 --> 00:04:20.754
+So, what's cool about this is we've completely decoupled our state from our UI,
+
+00:04:20.754 --> 00:04:24.639
+meaning we have a JavaScript UI up here.
+
+00:04:24.639 --> 00:04:27.384
+And we have a React UI down here.
+
+00:04:27.384 --> 00:04:29.920
+And because they're referencing the same state,
+
+00:04:29.920 --> 00:04:33.134
+we can add a new item down here,
+
+00:04:33.134 --> 00:04:35.305
+and that will update the UI down here.
+
+00:04:35.305 --> 00:04:38.259
+So again, not super practical but it's cool because it
+
+00:04:38.259 --> 00:04:42.349
+shows how we are really decoupling our state from our UI.
+

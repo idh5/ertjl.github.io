@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.190 --> 00:00:02.228
+O objetivo aqui
+
+00:00:02.270 --> 00:00:07.276
+é exibir tanto a lista de afazeres
+quanto a lista de metas
+
+00:00:07.318 --> 00:00:11.661
+e queremos dar ao usuário
+a opção de adicionar itens às listas
+
+00:00:11.703 --> 00:00:13.738
+por intermédio da IU.
+
+00:00:13.780 --> 00:00:18.649
+Basicamente, o código da biblioteca
+gerenciará o estado do aplicativo,
+
+00:00:18.691 --> 00:00:21.474
+e a DOM ou a View,
+o que vemos,
+
+00:00:21.516 --> 00:00:24.234
+será uma representação
+do estado.
+
+00:00:24.276 --> 00:00:25.999
+Mas para isso
+
+00:00:26.041 --> 00:00:29.048
+precisamos adicionar
+uma IU ao aplicativo,
+
+00:00:29.090 --> 00:00:31.248
+para que, no próximo vídeo,
+
+00:00:31.290 --> 00:00:34.768
+possamos ligar essa IU
+ao código da biblioteca
+
+00:00:34.810 --> 00:00:37.392
+a fim de obtermos
+o estado do aplicativo.
+
+00:00:38.106 --> 00:00:42.416
+Primeiro, teremos
+dois divs aqui.
+
+00:00:42.458 --> 00:00:45.554
+O primeiro representará
+a lista de afazeres,
+
+00:00:45.596 --> 00:00:48.259
+e o segundo
+será a lista de metas.
+
+00:00:49.067 --> 00:00:54.178
+Vamos atribuir a isto
+um cabeçalho igual a Todos List.
+
+00:00:55.747 --> 00:00:58.682
+Aqui dentro,
+queremos um campo input.
+
+00:00:58.724 --> 00:01:02.866
+Chamaremos o id de "todo"
+e o tipo de "text".
+
+00:01:02.908 --> 00:01:04.835
+O placeholder
+será "Add Todo",
+
+00:01:04.877 --> 00:01:07.738
+pois o usuário
+poderá adicionar itens
+
+00:01:07.780 --> 00:01:10.075
+à lista de afazeres.
+
+00:01:10.117 --> 00:01:13.922
+E precisamos de um botão
+que possibilite o envio
+
+00:01:13.964 --> 00:01:17.007
+do novo item,
+então o id será "todoBtn",
+
+00:01:17.049 --> 00:01:20.854
+e aqui dentro diremos
+"Add Todo".
+
+00:01:20.896 --> 00:01:24.865
+Por fim,
+queremos criar uma lista
+
+00:01:24.907 --> 00:01:28.292
+na qual poderemos
+adicionar itens
+
+00:01:28.334 --> 00:01:32.795
+para cada item todo
+dentro da lista de afazeres.
+
+00:01:34.196 --> 00:01:38.804
+Podemos fazer isso
+adicionando o id "todos".
+
+00:01:38.846 --> 00:01:41.259
+A lista de metas
+será bem parecida,
+
+00:01:41.301 --> 00:01:43.812
+então vou copiar
+e colar isto.
+
+00:01:44.756 --> 00:01:47.164
+Chamaremos isto de "Goals".
+
+00:01:47.206 --> 00:01:51.317
+Chamaremos o id do input de "goal",
+em vez de "todo".
+
+00:01:51.359 --> 00:01:53.564
+Aqui diremos "Add Goal".
+
+00:01:53.606 --> 00:01:56.383
+Isto será "goalBtn".
+
+00:01:57.199 --> 00:01:59.045
+Aqui será "Add Goal".
+
+00:01:59.087 --> 00:02:01.789
+Por fim,
+teremos uma lista de metas
+
+00:02:01.831 --> 00:02:03.398
+e não de afazeres.
+
+00:02:03.440 --> 00:02:07.675
+Se observarmos o aplicativo,
+temos esta IU,
+
+00:02:07.717 --> 00:02:09.844
+e, a seguir,
+
+00:02:09.886 --> 00:02:12.996
+queremos permitir que o usuário -
+a partir da IU -
+
+00:02:13.038 --> 00:02:17.493
+possa adicionar itens
+ao estado da Store.
+

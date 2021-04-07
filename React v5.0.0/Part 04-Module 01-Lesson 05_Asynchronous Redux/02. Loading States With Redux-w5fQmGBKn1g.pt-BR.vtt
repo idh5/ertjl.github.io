@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.137
+Agora nós criaremos
+uma nova reducer responsável
+
+00:00:04.170 --> 00:00:07.073
+pelo estado de carregamento
+do nosso aplicativo.
+
+00:00:07.107 --> 00:00:10.343
+Então vamos
+para o código Redux.
+
+00:00:10.377 --> 00:00:13.646
+E embaixo da goal reducer,
+
+00:00:13.680 --> 00:00:17.517
+vamos colocar uma nova reducer
+que chamaremos de "loading".
+
+00:00:18.284 --> 00:00:21.888
+Ajustaremos o default state
+para true,
+
+00:00:21.921 --> 00:00:25.025
+e ele também receberá
+uma ação.
+
+00:00:25.058 --> 00:00:28.395
+E como sempre fazemos
+com as reducers,
+
+00:00:28.428 --> 00:00:32.198
+vamos usar
+o switch(action.type).
+
+00:00:32.232 --> 00:00:36.736
+E também temos
+um tipo de ação aqui
+
+00:00:36.770 --> 00:00:39.339
+que queremos analisar
+para receber os dados da ação.
+
+00:00:39.372 --> 00:00:42.909
+Então vamos dizer
+"se case é RECEIVE_DATA,
+
+00:00:42.942 --> 00:00:45.078
+então vamos retornar false
+
+00:00:45.111 --> 00:00:49.449
+ou atualizar o estado de loading
+da Store para false".
+
+00:00:49.482 --> 00:00:53.119
+E como default,
+
+00:00:53.153 --> 00:00:56.656
+queremos retornar
+apenas o estado inicial.
+
+00:00:56.690 --> 00:00:59.926
+Agora, para adicionar
+esta nova reducer à Store,
+
+00:00:59.959 --> 00:01:04.664
+precisamos passá-la aqui
+como uma propriedade
+
+00:01:04.698 --> 00:01:06.566
+para combinar reducers.
+
+00:01:06.599 --> 00:01:08.935
+Escreveremos loading.
+
+00:01:08.968 --> 00:01:11.971
+Isto nos permite que,
+
+00:01:12.005 --> 00:01:16.509
+dentro do componente
+do aplicativo,
+
+00:01:16.543 --> 00:01:19.713
+não recebamos mais
+apenas todos e goals,
+
+00:01:19.746 --> 00:01:22.749
+mas também loading.
+
+00:01:22.782 --> 00:01:27.921
+Podemos escrever
+if (loading === true),
+
+00:01:27.954 --> 00:01:32.859
+renderize h3.
+
+00:01:32.892 --> 00:01:35.628
+Vamos escrever loading,
+e depois vamos fechá-lo.
+
+00:01:35.662 --> 00:01:39.799
+Agora, quando o aplicativo
+está carregando,
+
+00:01:39.833 --> 00:01:42.002
+nós recebemos o estado
+de carregamento.
+
+00:01:42.035 --> 00:01:46.339
+Mas quando termina o carregamento,
+agora recebemos a IU atualizada.
+

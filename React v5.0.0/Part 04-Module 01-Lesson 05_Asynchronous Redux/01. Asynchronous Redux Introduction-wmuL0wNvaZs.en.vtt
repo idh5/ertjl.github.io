@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.339
+At this point, though basic,
+
+00:00:02.339 --> 00:00:04.214
+our app is coming together nicely.
+
+00:00:04.214 --> 00:00:06.764
+We can add and remove different todos and goals,
+
+00:00:06.764 --> 00:00:09.300
+and that data is living inside of Redux.
+
+00:00:09.300 --> 00:00:10.964
+However, at this point,
+
+00:00:10.964 --> 00:00:13.769
+all of our data lives locally within the app itself.
+
+00:00:13.769 --> 00:00:15.539
+That isn't really realistic.
+
+00:00:15.539 --> 00:00:18.269
+In the real-world, that data would likely exist in
+
+00:00:18.269 --> 00:00:21.449
+a database and you'd interact with it through an API.
+
+00:00:21.449 --> 00:00:23.564
+So that's what we're going to do in this lesson.
+
+00:00:23.565 --> 00:00:26.205
+We'll move all of our data to an external API,
+
+00:00:26.204 --> 00:00:30.189
+then we'll see how Redux changes once our data becomes asynchronous.
+

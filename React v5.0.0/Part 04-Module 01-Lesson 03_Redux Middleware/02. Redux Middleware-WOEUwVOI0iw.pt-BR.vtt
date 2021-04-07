@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.412 --> 00:00:03.866
+No aplicativo Redux padrão,
+quando chamamos store.dispatch,
+
+00:00:03.908 --> 00:00:05.354
+a reducer é executada.
+
+00:00:05.396 --> 00:00:08.881
+A função checkAndDispatch
+executará um código de verificação
+
+00:00:08.923 --> 00:00:10.497
+antes da execução.
+
+00:00:10.539 --> 00:00:14.674
+Executamos checkAndDispatch
+e, se a verificação passar,
+
+00:00:14.716 --> 00:00:17.561
+ela executará store.dispatch,
+que chamará a reducer.
+
+00:00:17.603 --> 00:00:21.136
+Para essa mudança,
+precisaremos alterar o aplicativo.
+
+00:00:21.178 --> 00:00:24.777
+Não seria bom deixar a chamada
+store.dispatch no mesmo lugar
+
+00:00:24.819 --> 00:00:29.052
+e executar um código entre
+store.dispatch e a reducer?
+
+00:00:29.094 --> 00:00:32.402
+Seria mesmo,
+e isso se chama "Middleware".
+
+00:00:32.444 --> 00:00:35.634
+Vejamos como substituir
+a função checkAndDispatch
+
+00:00:35.676 --> 00:00:37.503
+pelo middleware Redux nativo.
+

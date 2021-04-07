@@ -1,0 +1,416 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React as our UI</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Redux with React</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. React as our UI.html">02. React as our UI</a>
+    </li>
+    <li class="">
+      <a href="03. Lesson Summary.html">03. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. React as our UI</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this lesson, we're going to move away from our application being plain HTML and convert it to being powered by React. To do that, we'll need to add a number of libraries:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/react" rel="noopener noreferrer" target="_blank">react</a></li>
+<li><a href="https://www.npmjs.com/package/react-dom" rel="noopener noreferrer" target="_blank">react-dom</a></li>
+<li><a href="https://www.npmjs.com/package/babel" rel="noopener noreferrer" target="_blank">babel</a></li>
+</ul>
+<p>Here are the packages that we'll be adding in the next video:</p>
+<pre><code class="html language-html">&lt;script src="https://unpkg.com/react@16.3.0-alpha.1/umd/react.development.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/react-dom@16.3.0-alpha.1/umd/react-dom.development.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Adding In React</p></h3>
+  <video controls>
+  <source src="02. Adding In React-UGxbnapRJnQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Adding In React-UGxbnapRJnQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Adding In React-UGxbnapRJnQ.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/97fcd0ad442fe9787c00dad9c8b53fd8e07b98a2" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>If you haven't been following along, now's a good time to start since things are getting a bit more complicated by adding React to our Redux application. Make sure to check off each of the following!</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="cb5a8db9-f9a4-409d-b019-4e9934f58017--0">
+        <label for="cb5a8db9-f9a4-409d-b019-4e9934f58017--0"><p>I have linked to the <a href="https://www.npmjs.com/package/react" rel="noopener noreferrer" target="_blank">react</a> package in my <code>index.html</code> file.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="cb5a8db9-f9a4-409d-b019-4e9934f58017--1">
+        <label for="cb5a8db9-f9a4-409d-b019-4e9934f58017--1"><p>I have linked to the <a href="https://www.npmjs.com/package/react-dom" rel="noopener noreferrer" target="_blank">react-dom</a> in my <code>index.html</code> file.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="cb5a8db9-f9a4-409d-b019-4e9934f58017--2">
+        <label for="cb5a8db9-f9a4-409d-b019-4e9934f58017--2"><p>I have linked to the <a href="https://www.npmjs.com/package/babel" rel="noopener noreferrer" target="_blank">babel</a> in my <code>index.html</code> file.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Thanks!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The changes we've just implemented should look pretty familiar - they were just converting parts of our app from HTML to being powered by React Components. </p>
+<h2 id="combining-react-and-redux">Combining React and Redux</h2>
+<p>Alrighty, so you've learned React. You've built Redux and used it in a regular HTML application. But now we've started converting that HTML to a React application. In the following video we're going to start connecting the React Components to the Redux store.</p>
+<p>I want you to pay attention to a few things in the next screencast:</p>
+<ul>
+<li>where the <code>store.dispatch()</code> code goes in a React component</li>
+<li>how a React component is passed the Redux store as a prop</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Dispatching Todos With React</p></h3>
+  <video controls>
+  <source src="02. Dispatching Todos With React-vxwzO_U0UC4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Dispatching Todos With React-vxwzO_U0UC4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Dispatching Todos With React-vxwzO_U0UC4.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/6b61c0a6e557603c12a8ef8d6062e9d688df11eb" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In order to save time, we used an uncontrolled component for our input field.</p>
+<h2 id="ref"><code>ref</code></h2>
+<blockquote>
+  <p><a href="https://reactjs.org/docs/refs-and-the-dom.html#callback-refs" rel="noopener noreferrer" target="_blank">Refs provide a way to access DOM nodes or React elements created in the render method.</a></p>
+</blockquote>
+<h2 id="when-to-use-refs">When to Use Refs</h2>
+<p>The <a href="https://reactjs.org/docs/refs-and-the-dom.html#callback-refs" rel="noopener noreferrer" target="_blank">docs</a> outline a few good use cases for <code>ref</code>s:</p>
+<blockquote>
+  <ul>
+  <li>Managing focus, text selection, or media playback.</li>
+  <li>Triggering imperative animations.</li>
+  <li>Integrating with third-party DOM libraries.</li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let's take a look at a similar example:</p>
+<pre><code class="js language-js">class Color extends React.Component {
+  alertTextInput = e =&gt; {
+    e.preventDefault();
+    alert(this.colorElement.value);
+  };
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;input
+          type="text"
+          placeholder="Add Input"
+          ref={(inputElement) =&gt; this.colorElement = inputElement}
+        /&gt;
+
+        &lt;button onClick={this.alertTextInput}&gt;Alert Input&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}</code></pre>
+<p>In the line <code>ref={(inputElement) =&gt; this.colorElement = inputElement}</code>, <code>inputElement</code> is a reference to the <code>input</code> DOM element. We are storing a reference to the <code>input</code> DOM element in the <code>colorElement</code> instance property of the <code>Color</code> class.</p>
+<p>Please note:</p>
+<blockquote>
+  <p><a href="https://reactjs.org/docs/refs-and-the-dom.html#callback-refs" rel="noopener noreferrer" target="_blank">React will call the ref callback with the DOM element when the component mounts, and call it with <code>null</code> when it unmounts. Refs are guaranteed to be up-to-date before <code>componentDidMount</code> or <code>componentDidUpdate</code> fires.</a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Dispatching Goals With React</p></h3>
+  <video controls>
+  <source src="02. Dispatching Goals With React-0Z6YGs9hbMQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Dispatching Goals With React-0Z6YGs9hbMQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Dispatching Goals With React-0Z6YGs9hbMQ.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/494c9a91e01472ddc87935777e84d82e046010c9" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Force Load App</p></h3>
+  <video controls>
+  <source src="02. Force Load App-G8pqzASO4ws.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Force Load App-G8pqzASO4ws.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Force Load App-G8pqzASO4ws.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/14bb2cd7b0c247e9429c075cff411b1cbb08a478" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="componentdidmount"><code>componentDidMount()</code></h4>
+<blockquote>
+  <p><a href="https://reactjs.org/docs/react-component.html#componentdidmount" rel="noopener noreferrer" target="_blank"><code>componentDidMount()</code> is invoked immediately after a component is mounted (inserted into the tree)…If you need to load data from a remote endpoint, this is a good place to instantiate the network request.</a></p>
+</blockquote>
+<h4 id="forceupdate"><code>forceUpdate()</code></h4>
+<blockquote>
+  <p><a href="https://reactjs.org/docs/react-component.html#forceupdate" rel="noopener noreferrer" target="_blank">By default, when your component’s state or props change, your component will re-render. If your <code>render()</code> method depends on some other data, you can tell React that the component needs re-rendering by calling <code>forceUpdate()</code>.</a></p>
+</blockquote>
+<blockquote>
+  <p><a href="https://reactjs.org/docs/react-component.html#forceupdate" rel="noopener noreferrer" target="_blank">Calling <code>forceUpdate()</code> will cause <code>render()</code> to be called on the component, skipping <code>shouldComponentUpdate()</code>. This will trigger the normal lifecycle methods for child components, including the <code>shouldComponentUpdate()</code> method of each child. React will still only update the DOM if the markup changes.</a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Lists With React And Redux</p></h3>
+  <video controls>
+  <source src="02. Lists With React And Redux-BtBRCH8PyRI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Lists With React And Redux-BtBRCH8PyRI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Lists With React And Redux-BtBRCH8PyRI.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/c7d050135ca6bf5ce73a79da51b198e5a90a0cfc" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Toggling UI With React</p></h3>
+  <video controls>
+  <source src="02. Toggling UI With React-XCWV20iFvBU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Toggling UI With React-XCWV20iFvBU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Toggling UI With React-XCWV20iFvBU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/d3762be0264ef0395c332a75ba75558135967f1e" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>In this section, we converted our plain HTML application to one using React Components. We didn't implement any new features. Instead, we just improved the code's organization by breaking out separate parts into reusable chunks.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. React as our UI')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

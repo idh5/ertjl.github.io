@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.640
+At this point, our app is working fine.
+
+00:00:02.640 --> 00:00:07.199
+We just updated it to work with asynchronous data coming from an external API.
+
+00:00:07.200 --> 00:00:10.275
+However, the way the code is organized right now,
+
+00:00:10.275 --> 00:00:14.609
+we've mixed all of our data fetching logic with our component UI logic.
+
+00:00:14.609 --> 00:00:18.300
+Right now, our component that should just be focused on how
+
+00:00:18.300 --> 00:00:22.214
+the UI looks is also responsible for fetching data.
+
+00:00:22.214 --> 00:00:24.914
+It would be nice if we could keep those separate.
+
+00:00:24.914 --> 00:00:27.719
+Instead of calling our API and then passing
+
+00:00:27.719 --> 00:00:30.674
+that data to our action creator like we're doing now,
+
+00:00:30.675 --> 00:00:35.549
+what if we move the data fetching logic from the component to our action creator?
+
+00:00:35.549 --> 00:00:38.354
+By calling our API in an action creator,
+
+00:00:38.354 --> 00:00:40.529
+we make the action creator responsible for
+
+00:00:40.530 --> 00:00:43.484
+fetching the data it needs to create the actual action.
+
+00:00:43.484 --> 00:00:45.884
+Moving the data fetching code here,
+
+00:00:45.884 --> 00:00:50.399
+we'll build a cleaner separation between our UI logic and our data fetching logic.
+
+00:00:50.399 --> 00:00:52.369
+Let's see what this actually looks like.
+

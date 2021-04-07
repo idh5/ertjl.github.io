@@ -1,0 +1,75 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.571
+Como fizemos
+com o método removeItem,
+
+00:00:04.604 --> 00:00:07.273
+também queremos
+otimisticamente permitir
+
+00:00:07.307 --> 00:00:10.176
+que o usuário alterne
+um item todo.
+
+00:00:10.210 --> 00:00:13.446
+Nós manteremos
+esta linha aqui.
+
+00:00:13.480 --> 00:00:16.383
+Nós instantaneamente disparamos
+toggleTodoAction.
+
+00:00:16.416 --> 00:00:20.571
+Depois disso,
+usaremos o método API
+
+00:00:20.605 --> 00:00:25.425
+saveTodoToggle,
+passando a id para ele.
+
+00:00:25.458 --> 00:00:28.828
+E, se acontecer um erro,
+
+00:00:28.862 --> 00:00:34.000
+vamos usar this.props.store.dispatch
+(toggleTodoAction).
+
+00:00:34.034 --> 00:00:37.904
+Basicamente queremos refazer
+ou desfazer o toggle event
+
+00:00:37.937 --> 00:00:41.274
+que ocorreu,
+passando a id novamente.
+
+00:00:41.307 --> 00:00:46.713
+E, como sempre, diremos:
+"Um erro ocorreu. Tente de novo."
+
+00:00:46.746 --> 00:00:51.518
+Agora, o que deve acontecer
+se atualizarmos o aplicativo
+
+00:00:51.551 --> 00:00:54.087
+e alternamos um item todo?
+
+00:00:54.120 --> 00:00:57.691
+Esta solicitação vai falhar.
+
+00:00:57.724 --> 00:01:01.461
+E quando falhar...
+Aí vai, recebemos um erro.
+
+00:01:01.494 --> 00:01:02.796
+Quando falhar,
+
+00:01:02.829 --> 00:01:06.366
+vamos revertê-los
+ao seu estado anterior,
+
+00:01:06.399 --> 00:01:07.767
+e aqui vamos nós.
+

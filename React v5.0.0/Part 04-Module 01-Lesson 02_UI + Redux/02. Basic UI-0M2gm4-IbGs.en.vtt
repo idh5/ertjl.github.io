@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.350
+So, now what the eventual goal here,
+
+00:00:02.350 --> 00:00:05.655
+is we want to show both our Todo list,
+
+00:00:05.655 --> 00:00:07.285
+as well as our goals list.
+
+00:00:07.285 --> 00:00:13.570
+We want to give the user an option to add new items to both lists via the UI right now.
+
+00:00:13.570 --> 00:00:18.734
+So basically, our library code down here is going to manage the state of our application.
+
+00:00:18.734 --> 00:00:20.460
+And the DOM or the view,
+
+00:00:20.460 --> 00:00:24.164
+what we see, is just going to be a representation of that state.
+
+00:00:24.164 --> 00:00:26.024
+But in order to do that what we need to do,
+
+00:00:26.024 --> 00:00:29.070
+is we need to add some actual UI to our app,
+
+00:00:29.070 --> 00:00:31.260
+so that then in the next video,
+
+00:00:31.260 --> 00:00:33.554
+we could hook that UI up to
+
+00:00:33.554 --> 00:00:38.215
+our library code in order to get the state of our application.
+
+00:00:38.215 --> 00:00:42.420
+So first what we'll do, is we will have two different divs here.
+
+00:00:42.420 --> 00:00:45.505
+The first one we'll represent will be our Todo list,
+
+00:00:45.505 --> 00:00:48.435
+and the second one will be our goals list.
+
+00:00:48.435 --> 00:00:54.750
+So let's give this a header of Todo list.
+
+00:00:54.840 --> 00:00:58.555
+And then inside of here, what we want is an input field.
+
+00:00:58.554 --> 00:01:04.900
+We'll give it an idea Todo and a type of text with a placeholder of add Todo,
+
+00:01:04.900 --> 00:01:09.790
+because we want the user to be able to add new Todo items to their Todo list.
+
+00:01:09.790 --> 00:01:15.125
+And then, we need a button so they can be able to submit the new Todo item.
+
+00:01:15.125 --> 00:01:17.060
+So we give it an idea of Todo item,
+
+00:01:17.060 --> 00:01:20.909
+and then inside of this we will just say add Todo.
+
+00:01:20.909 --> 00:01:24.685
+And then finally what we want to create is an unordered list,
+
+00:01:24.685 --> 00:01:27.784
+that we can add list items to,
+
+00:01:27.784 --> 00:01:33.129
+for each Todo item inside of our Todos list.
+
+00:01:33.280 --> 00:01:36.890
+So we can do that by just having this right here,
+
+00:01:36.890 --> 00:01:38.621
+we'll give it an idea Todos.
+
+00:01:38.621 --> 00:01:41.295
+And then our goals list is going to be very similar,
+
+00:01:41.295 --> 00:01:44.000
+so I'm just going to copy and paste this.
+
+00:01:44.000 --> 00:01:46.844
+We'll call this goals,
+
+00:01:46.844 --> 00:01:50.659
+and then our input will have an ID of goal, rather than Todo,
+
+00:01:50.659 --> 00:01:53.405
+and then here we will say add goal,
+
+00:01:53.405 --> 00:01:57.280
+and then this will be go button.
+
+00:01:57.280 --> 00:01:58.620
+This will be add goal,
+
+00:01:58.620 --> 00:02:03.370
+then finally we have our unordered list of goals, rather than Todos.
+
+00:02:03.370 --> 00:02:05.505
+So now if we look at our app,
+
+00:02:05.504 --> 00:02:07.604
+you'll notice that we have this UI,
+
+00:02:07.605 --> 00:02:12.360
+and what we're going to do next is we want to make it so a user from
+
+00:02:12.360 --> 00:02:18.330
+our UI can now add items to the state of our store.
+

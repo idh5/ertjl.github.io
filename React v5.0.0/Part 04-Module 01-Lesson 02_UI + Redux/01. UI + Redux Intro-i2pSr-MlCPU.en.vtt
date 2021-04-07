@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.635
+In the previous lesson,
+
+00:00:01.635 --> 00:00:04.200
+we learned how to improve the predictability of the state in
+
+00:00:04.200 --> 00:00:07.875
+our application by building our own state management library.
+
+00:00:07.875 --> 00:00:12.719
+In this lesson, we'll take that state management library and add some UI to it.
+
+00:00:12.720 --> 00:00:15.179
+This will allow us to take a closer look at how
+
+00:00:15.179 --> 00:00:19.070
+our custom library can manage the state of an actual application.
+

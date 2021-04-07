@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.253 --> 00:00:02.127
+Até aqui está tudo bem,
+
+00:00:02.169 --> 00:00:04.317
+mas só quero adicionar
+mais um recurso.
+
+00:00:04.359 --> 00:00:08.863
+Precisamos conseguir
+alterar itens todo,
+
+00:00:08.905 --> 00:00:11.622
+pois, de volta
+à reducer todos,
+
+00:00:11.664 --> 00:00:13.696
+sempre que o item TOOGLE_TODO
+
+00:00:13.738 --> 00:00:16.248
+ou o tipo toggleTodoAction
+for disparado,
+
+00:00:16.290 --> 00:00:20.599
+mudaremos a propriedade do todo
+para o contrário do que ele for.
+
+00:00:20.641 --> 00:00:23.441
+Então poderemos
+clicar no todo
+
+00:00:23.483 --> 00:00:28.367
+e mudá-lo para finalizado
+ou não finalizado.
+
+00:00:28.409 --> 00:00:34.104
+Vamos retornar
+à função addTodoToDOM.
+
+00:00:34.146 --> 00:00:37.696
+Nós também queremos mudar
+o estilo dele
+
+00:00:37.738 --> 00:00:39.896
+a partir
+da propriedade complete.
+
+00:00:39.938 --> 00:00:43.269
+Podemos dizer
+"node.style.textDecoration".
+
+00:00:44.693 --> 00:00:47.892
+Se todo.complete
+for verdadeiro,
+
+00:00:47.934 --> 00:00:50.498
+então queremos que ele seja
+igual a line-through,
+
+00:00:50.540 --> 00:00:53.307
+caso contrário,
+ele será none.
+
+00:00:53.349 --> 00:00:56.676
+Isso altera o estilo,
+mas também queremos adicionar
+
+00:00:56.718 --> 00:00:59.181
+um EventListener
+para que possa ser clicado
+
+00:00:59.223 --> 00:01:00.605
+para ser alterado.
+
+00:01:00.647 --> 00:01:04.516
+Diremos
+"node.addEventListener"
+
+00:01:04.558 --> 00:01:06.607
+quando isto for clicado.
+
+00:01:07.839 --> 00:01:11.556
+Agora queremos alterar
+o estado da Store,
+
+00:01:11.598 --> 00:01:14.103
+especificamente o estado
+da propriedade complete
+
+00:01:14.145 --> 00:01:15.431
+do item todo.
+
+00:01:15.473 --> 00:01:16.691
+Como fazemos isso?
+
+00:01:16.733 --> 00:01:20.053
+Precisamos disparar uma ação
+
+00:01:21.230 --> 00:01:23.588
+chamando store.dispatch.
+
+00:01:23.630 --> 00:01:27.406
+E queremos invocar
+o toggleTodoAction creator,
+
+00:01:27.448 --> 00:01:31.567
+que pegará o id
+do item todo.
+
+00:01:31.609 --> 00:01:34.499
+De volta ao aplicativo,
+
+00:01:36.082 --> 00:01:41.040
+diremos "passear com o cachorro"
+e "ler um livro".
+
+00:01:41.082 --> 00:01:43.520
+Ao clicarmos
+em qualquer um deles,
+
+00:01:43.562 --> 00:01:48.520
+poderemos alterar o estado
+do item todo,
+
+00:01:48.562 --> 00:01:51.456
+porque configuramos
+o EventListener,
+
+00:01:51.498 --> 00:01:54.593
+que diz que sempre que o item
+for clicado
+
+00:01:54.635 --> 00:01:58.042
+o toggleTodoAction
+será disparado.
+

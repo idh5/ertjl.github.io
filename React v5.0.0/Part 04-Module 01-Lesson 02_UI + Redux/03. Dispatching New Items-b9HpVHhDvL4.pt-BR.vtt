@@ -1,0 +1,347 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.831
+Agora que temos
+uma IU simples,
+
+00:00:02.873 --> 00:00:08.072
+possibilitaremos a adição
+de afazeres e metas
+
+00:00:08.114 --> 00:00:10.174
+a partir da IU.
+
+00:00:10.216 --> 00:00:12.072
+A primeira coisa a ser feita
+
+00:00:12.114 --> 00:00:16.687
+será anular
+estas invocações de disparo.
+
+00:00:16.729 --> 00:00:20.137
+Assim, a única forma
+de atualizar o estado da Store
+
+00:00:20.179 --> 00:00:23.065
+será pela IU,
+como eu acabei de dizer.
+
+00:00:23.107 --> 00:00:26.233
+Mas usaremos isto
+como referência posteriormente
+
+00:00:26.275 --> 00:00:29.458
+quando começarmos a disparar
+da IU.
+
+00:00:29.500 --> 00:00:32.921
+Primeiro, criamos
+duas funções
+
+00:00:32.963 --> 00:00:35.713
+que estão ligadas
+a estes dois botões,
+
+00:00:35.755 --> 00:00:39.003
+o de Add Todo
+e o de Add Goal.
+
+00:00:39.045 --> 00:00:42.362
+Nós chamaremos estas funções -
+de forma apropriada -,
+
+00:00:42.404 --> 00:00:44.730
+de "addTodo"
+
+00:00:44.772 --> 00:00:48.567
+e criaremos uma função
+addGoal.
+
+00:00:48.609 --> 00:00:50.294
+Vamos começar pela addTodo.
+
+00:00:50.336 --> 00:00:54.172
+O primeiro passo
+é obter o valor
+
+00:00:54.214 --> 00:00:56.611
+deste campo input.
+
+00:00:56.653 --> 00:00:58.317
+Você deve se lembrar
+
+00:00:58.981 --> 00:01:03.421
+que nós atribuímos um id
+igual a "todo" a este input.
+
+00:01:03.463 --> 00:01:06.540
+Então,
+a primeira coisa a fazer
+
+00:01:06.582 --> 00:01:08.124
+é obter o input
+
+00:01:08.166 --> 00:01:12.452
+dizendo
+"document.getElementById".
+
+00:01:13.765 --> 00:01:18.244
+Depois obteremos o nome
+ou o valor do campo input
+
+00:01:18.286 --> 00:01:19.900
+fazendo input.value.
+
+00:01:19.942 --> 00:01:24.468
+Agora reiniciaremos o valor de input
+tornando-o uma string vazia.
+
+00:01:24.510 --> 00:01:27.916
+Agora que temos o nome
+do novo item todo,
+
+00:01:27.958 --> 00:01:30.981
+a próxima tarefa
+será disparar uma ação.
+
+00:01:31.023 --> 00:01:35.268
+Para adicionar um novo todo
+à Store,
+
+00:01:35.310 --> 00:01:39.852
+nós disparamos uma ação
+como esta.
+
+00:01:39.894 --> 00:01:42.460
+Invocamos o addTodoAction
+creator
+
+00:01:42.502 --> 00:01:45.820
+passando o item todo.
+
+00:01:45.862 --> 00:01:48.677
+O que faremos aqui embaixo
+
+00:01:48.719 --> 00:01:52.900
+é algo parecido,
+pois diremos "store.dispatch"
+
+00:01:52.942 --> 00:01:56.226
+e queremos invocar
+
+00:01:56.897 --> 00:01:58.449
+addTodoAction,
+
+00:01:58.491 --> 00:02:02.120
+e o item todo
+terá três coisas:
+
+00:02:02.162 --> 00:02:07.042
+um nome, que está aqui,
+que é o valor no campo input,
+
+00:02:07.084 --> 00:02:10.010
+uma propriedade completa,
+que terá "false" como padrão,
+
+00:02:10.052 --> 00:02:13.603
+e um id. Para o id,
+
+00:02:13.645 --> 00:02:18.163
+voltamos na parte de cima
+do código JavaScript
+
+00:02:19.563 --> 00:02:23.201
+e colamos esta função helper
+chamada "generateId".
+
+00:02:23.243 --> 00:02:26.017
+Em vez de codificar o id,
+podemos chamar esta função,
+
+00:02:26.059 --> 00:02:29.553
+que gerará um id único.
+
+00:02:29.595 --> 00:02:35.394
+Agora o id resultará
+da chamada de generateId.
+
+00:02:35.436 --> 00:02:38.553
+Dentro da função addGoal,
+
+00:02:38.595 --> 00:02:40.448
+faremos algo parecido.
+
+00:02:40.490 --> 00:02:43.673
+Pegaremos o campo input,
+
+00:02:43.715 --> 00:02:46.097
+mas, desta vez,
+
+00:02:46.139 --> 00:02:50.001
+buscaremos
+document.getElementById('goal'),
+
+00:02:50.043 --> 00:02:53.370
+e obteremos o nome da meta
+realizando input.value.
+
+00:02:53.412 --> 00:02:58.261
+Queremos reiniciar o valor input
+para que ele seja uma string vazia.
+
+00:02:58.303 --> 00:03:01.178
+Agora, para adicionar
+uma nova meta ao estado,
+
+00:03:01.220 --> 00:03:02.802
+precisamos disparar...
+
+00:03:02.844 --> 00:03:08.674
+o addGoalAction,
+como fizemos aqui.
+
+00:03:08.716 --> 00:03:12.003
+Então nós diremos:
+
+00:03:12.045 --> 00:03:13.589
+"store.dispatch
+
+00:03:15.173 --> 00:03:17.932
+addGoalAction"
+passando a meta,
+
+00:03:17.974 --> 00:03:19.404
+que terá um id.
+
+00:03:19.446 --> 00:03:22.548
+Reutilizaremos a função generateId,
+que foi criada,
+
+00:03:22.590 --> 00:03:24.876
+e também passaremos o nome.
+
+00:03:24.918 --> 00:03:28.162
+Agora que temos
+a função addTodo
+
+00:03:28.204 --> 00:03:29.683
+e a função addGoal,
+
+00:03:29.725 --> 00:03:33.179
+precisaremos conectá-las
+aos botões.
+
+00:03:33.221 --> 00:03:36.677
+Assim, quando os botões
+forem clicados,
+
+00:03:36.719 --> 00:03:38.342
+essas funções
+serão invocadas.
+
+00:03:38.384 --> 00:03:40.930
+Fazemos isso associando
+
+00:03:40.972 --> 00:03:44.850
+document.getElementById
+('todoBtn').
+
+00:03:44.892 --> 00:03:47.978
+Pois, aqui em cima,
+
+00:03:48.020 --> 00:03:52.692
+o id deste botão é "todoBtn",
+e o deste é "goalBtn".
+
+00:03:52.734 --> 00:03:57.554
+Voltando aqui embaixo,
+pegamos o botão
+
+00:03:57.596 --> 00:04:01.229
+e podemos chamar
+addEventListener.
+
+00:04:02.341 --> 00:04:05.298
+Quando o botão for clicado,
+queremos invocar
+
+00:04:05.340 --> 00:04:09.773
+a função addTodo
+que está aqui.
+
+00:04:09.815 --> 00:04:13.851
+Faremos o mesmo,
+mas para as funções addGoal.
+
+00:04:13.893 --> 00:04:18.330
+Diremos "document.getElementById
+('goalBtn')".
+
+00:04:18.372 --> 00:04:20.388
+Quando ele for clicado,
+
+00:04:23.620 --> 00:04:27.771
+queremos invocar
+a função addGoal.
+
+00:04:28.411 --> 00:04:33.371
+Agora, se retornamos ao aplicativo
+e pedirmos para recarregar,
+
+00:04:33.988 --> 00:04:36.714
+poderemos adicionar
+um novo item todo,
+
+00:04:36.756 --> 00:04:38.398
+como
+"passear com o cachorro".
+
+00:04:38.440 --> 00:04:41.005
+Ao clicarmos em Add Todo,
+veremos no console
+
+00:04:41.047 --> 00:04:44.925
+que obtemos
+este console.log.
+
+00:04:44.967 --> 00:04:49.989
+Se você esqueceu, isso acontece
+por conta desta linha.
+
+00:04:50.031 --> 00:04:54.005
+Dissemos que sempre que
+a Store fosse alterada,
+
+00:04:54.047 --> 00:04:57.428
+invocaríamos esta função,
+que faria o log do novo estado.
+
+00:04:57.470 --> 00:05:00.181
+Agora nosso estado
+está assim.
+
+00:05:00.223 --> 00:05:02.277
+Temos o item todo
+
+00:05:02.319 --> 00:05:04.837
+e também podemos adicionar
+uma nova meta.
+
+00:05:04.879 --> 00:05:06.845
+Diremos: "aprender Redux."
+
+00:05:06.887 --> 00:05:10.332
+Agora temos um afazer
+e uma meta.
+
+00:05:10.374 --> 00:05:13.902
+Ambos os itens novos
+foram gerados da IU
+
+00:05:13.944 --> 00:05:17.334
+e não foram apenas disparados
+dentro do console.
+

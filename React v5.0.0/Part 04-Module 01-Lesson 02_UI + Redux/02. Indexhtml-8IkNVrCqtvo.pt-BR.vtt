@@ -1,0 +1,99 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.170 --> 00:00:03.769
+No momento, tudo está
+em um único arquivo JavaScript,
+
+00:00:03.811 --> 00:00:08.872
+mas queremos adicionar
+uma IU ao aplicativo.
+
+00:00:08.914 --> 00:00:10.823
+Para isso,
+
+00:00:10.865 --> 00:00:13.480
+criamos um novo arquivo
+
+00:00:13.522 --> 00:00:15.288
+chamado "index.html",
+
+00:00:15.330 --> 00:00:18.530
+que fornecerá
+o esqueleto básico.
+
+00:00:21.145 --> 00:00:24.506
+Agora daremos o título de...
+
+00:00:25.442 --> 00:00:29.439
+"Udacity Todos Goals".
+
+00:00:29.481 --> 00:00:32.192
+Dentro do corpo
+
+00:00:32.234 --> 00:00:34.573
+colocaremos uma tag script
+
+00:00:34.615 --> 00:00:38.479
+do tipo text/javascript.
+
+00:00:39.319 --> 00:00:41.741
+Como você pode supor,
+
+00:00:41.783 --> 00:00:46.591
+nós pegaremos
+todo o JavaScript
+
+00:00:46.633 --> 00:00:50.319
+do arquivo index.html
+ou index.js,
+
+00:00:50.361 --> 00:00:55.168
+e colaremos dentro
+da tag script.
+
+00:00:55.210 --> 00:00:57.959
+Faremos à moda antiga
+com a tag script.
+
+00:00:58.001 --> 00:01:00.776
+Vou recuar tudo isto.
+
+00:01:01.961 --> 00:01:06.169
+Agora, se abrirmos o aplicativo
+no navegador,
+
+00:01:06.873 --> 00:01:11.143
+não haverá nada na View,
+pois não adicionamos nada.
+
+00:01:11.185 --> 00:01:12.976
+Mas, se observamos
+no console,
+
+00:01:13.018 --> 00:01:15.735
+todos os console.logs
+estarão aqui.
+
+00:01:15.777 --> 00:01:18.543
+Outra coisa que quero
+mostrar neste vídeo
+
+00:01:18.585 --> 00:01:21.512
+é que, agora que movemos
+todo o JavaScript,
+
+00:01:21.554 --> 00:01:24.791
+deletaremos
+o arquivo index.js,
+
+00:01:24.833 --> 00:01:27.341
+porque toda a lógica estará
+
+00:01:27.383 --> 00:01:30.845
+no arquivo index.html,
+
+00:01:30.887 --> 00:01:33.181
+dentro desta tag script.
+

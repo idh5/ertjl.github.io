@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.500
+So I have this issue,
+
+00:00:01.500 --> 00:00:03.894
+I keep wanting to invest in Bitcoin,
+
+00:00:03.894 --> 00:00:08.594
+but my financial adviser keeps insisting that that is a bad idea.
+
+00:00:08.595 --> 00:00:11.970
+In fact it's so bad that she wants us to add a new feature
+
+00:00:11.970 --> 00:00:15.660
+to our app that whenever we add a new todo item or a new goal,
+
+00:00:15.660 --> 00:00:19.054
+if that goal or todo item contains the word Bitcoin,
+
+00:00:19.054 --> 00:00:22.214
+then instead of adding it to the individual list,
+
+00:00:22.214 --> 00:00:27.015
+what she wants us to do is just alert that that is a bad idea.
+
+00:00:27.015 --> 00:00:29.785
+So in order to do that, what we'll do,
+
+00:00:29.785 --> 00:00:35.554
+we kind of want to hook into the moment after an action is dispatched,
+
+00:00:35.554 --> 00:00:39.274
+but before it ever hits our reducer and modifies the state.
+
+00:00:39.274 --> 00:00:42.049
+So what if we came in here?
+
+00:00:42.049 --> 00:00:44.629
+So right above one we create our store.
+
+00:00:44.630 --> 00:00:47.179
+Let's create a new function here,
+
+00:00:47.179 --> 00:00:49.909
+we will call it checkAndDispatch.
+
+00:00:49.909 --> 00:00:53.779
+So what we're going to do is we're kind of going to hijack
+
+00:00:53.780 --> 00:00:58.880
+the actual dispatch function that we've been using and instead use checkAndDispatch.
+
+00:00:58.880 --> 00:01:03.080
+So checkAndDispatch will take in the store as well as
+
+00:01:03.079 --> 00:01:05.620
+the action and then it's going to check
+
+00:01:05.620 --> 00:01:08.594
+the name property on the action contains the word Bitcoin.
+
+00:01:08.594 --> 00:01:10.590
+If it doesn't, then it's just going to call
+
+00:01:10.590 --> 00:01:13.799
+store.dispatch as it normally would passing in the action,
+
+00:01:13.799 --> 00:01:17.879
+and if it does, then we want to alert that warning and not do anything.
+
+00:01:17.879 --> 00:01:23.039
+So what we'll do here, is let's have an if statement here,
+
+00:01:23.040 --> 00:01:29.565
+and we will say if action.type equals ADD_TODO
+
+00:01:29.564 --> 00:01:38.233
+and action.todo.name.toLowercase
+
+00:01:38.233 --> 00:01:42.640
+that includes the word Bitcoin,
+
+00:01:43.049 --> 00:01:48.625
+then what we want to do is just return alert and we will say, "Nope.
+
+00:01:48.625 --> 00:01:53.500
+That's a bad idea." So what we're doing here is obviously if the action type is ADD_TODO,
+
+00:01:53.500 --> 00:01:57.359
+and the new todo item which is going to be todo.name,
+
+00:01:57.359 --> 00:02:00.144
+we lowercase that and if that includes the word Bitcoin,
+
+00:02:00.144 --> 00:02:02.454
+then we want to say, "Nope.
+
+00:02:02.454 --> 00:02:04.959
+That's a bad idea." And then we also want to do
+
+00:02:04.959 --> 00:02:08.604
+a similar thing but instead of four ADD_TODO,
+
+00:02:08.604 --> 00:02:13.209
+we will do ADD_GOAL instead of action.todo.name,
+
+00:02:13.210 --> 00:02:16.366
+we want to do action.goal.name.
+
+00:02:16.366 --> 00:02:22.618
+And so if none of these two cases return an alert,
+
+00:02:22.617 --> 00:02:24.442
+then what we want to do,
+
+00:02:24.442 --> 00:02:29.680
+that means that the new todo item or the new goal does not contain the word Bitcoin,
+
+00:02:29.680 --> 00:02:35.155
+so we just want to call store.dispatch passing in the action as we normally would.
+
+00:02:35.155 --> 00:02:37.780
+So now we have our checkAndDispatch function,
+
+00:02:37.780 --> 00:02:40.180
+let's go ahead and use this instead of
+
+00:02:40.180 --> 00:02:44.245
+the regular dispatch so that we can have these checks in place.
+
+00:02:44.245 --> 00:02:49.090
+So it will do is anytime that we are calling store.dispatch,
+
+00:02:49.090 --> 00:02:58.110
+we want to replace that instead with calling checkAndDispatch invoking it,
+
+00:02:58.110 --> 00:03:01.050
+passing in the store as the first argument and then
+
+00:03:01.050 --> 00:03:05.320
+passing in the action as the second argument.
+
+00:03:06.949 --> 00:03:10.364
+So now if we look at our app,
+
+00:03:10.365 --> 00:03:14.805
+you'll notice here that we can still add normal items like walk the dog,
+
+00:03:14.805 --> 00:03:20.430
+but if we try to add anything that contains the word Bitcoin,
+
+00:03:20.430 --> 00:03:23.385
+what's going to happen as we get nope that's a bad idea?
+
+00:03:23.384 --> 00:03:26.469
+And that item is not added to our list.
+

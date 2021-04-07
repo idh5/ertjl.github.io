@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.139
+The only other place where we are mixing our data fetching logic in with
+
+00:00:04.139 --> 00:00:07.125
+our component UI logic is inside of
+
+00:00:07.125 --> 00:00:11.219
+our main App component when we fetch our initial data.
+
+00:00:11.220 --> 00:00:13.020
+So, just as we've done in the past,
+
+00:00:13.019 --> 00:00:15.855
+we want to move this up to it's own action creator.
+
+00:00:15.855 --> 00:00:19.435
+So, what we'll do is instead of having all this logic here,
+
+00:00:19.434 --> 00:00:28.719
+let's make any other action creator that we will eventually call handleInitialData,
+
+00:00:28.719 --> 00:00:32.149
+and then I'm going to copy all of this.
+
+00:00:32.340 --> 00:00:37.825
+And then up where our action creators are,
+
+00:00:37.825 --> 00:00:44.420
+let's make a brand new one here that we will call handleInitialData.
+
+00:00:44.640 --> 00:00:47.980
+And at this point, you've seen it plenty of times we return
+
+00:00:47.979 --> 00:00:51.458
+a function that gets passed dispatch,
+
+00:00:51.459 --> 00:00:57.290
+and now we can move all of that logic into here.
+
+00:00:57.859 --> 00:01:00.914
+And instead of calling store dot dispatch,
+
+00:01:00.914 --> 00:01:03.479
+we just simply call dispatch.
+
+00:01:03.479 --> 00:01:05.909
+And to check that this is still working,
+
+00:01:05.909 --> 00:01:07.950
+let's head back over to our App.
+
+00:01:07.950 --> 00:01:10.380
+So, we get loading, and then after about two seconds,
+
+00:01:10.379 --> 00:01:12.119
+we will get our initial data.
+
+00:01:12.120 --> 00:01:16.905
+So, now what we've done is we have successfully moved all of
+
+00:01:16.905 --> 00:01:24.469
+the data fetching logic from our components into our action creators.
+

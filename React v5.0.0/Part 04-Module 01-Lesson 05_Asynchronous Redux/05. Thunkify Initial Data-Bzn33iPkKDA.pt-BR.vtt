@@ -1,0 +1,99 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.171 --> 00:00:02.410
+O outro único lugar
+onde misturaremos
+
+00:00:02.452 --> 00:00:05.770
+a lógica de busca de dados
+com a lógica da IU componente
+
+00:00:05.812 --> 00:00:08.737
+é dentro do componente App
+principal,
+
+00:00:08.779 --> 00:00:11.282
+quando buscarmos
+os dados iniciais.
+
+00:00:11.324 --> 00:00:13.073
+Assim como fizemos
+anteriormente,
+
+00:00:13.115 --> 00:00:15.977
+queremos mover isto
+para o criador de ação.
+
+00:00:16.019 --> 00:00:19.378
+Portanto, em vez de mantermos
+a lógica aqui,
+
+00:00:19.420 --> 00:00:21.235
+faremos outro
+criador de ação,
+
+00:00:22.051 --> 00:00:24.027
+que vamos chamar de
+
+00:00:25.299 --> 00:00:29.234
+"handleInitialData".
+
+00:00:29.276 --> 00:00:31.572
+E copiaremos tudo isto.
+
+00:00:33.186 --> 00:00:36.995
+Lá onde estão
+os criadores de ação,
+
+00:00:38.516 --> 00:00:40.355
+faremos um novo,
+
+00:00:41.444 --> 00:00:43.810
+que chamaremos
+de "handleInitialData".
+
+00:00:45.490 --> 00:00:48.763
+Já vimos muitas vezes
+o retorno de uma função
+
+00:00:48.805 --> 00:00:50.994
+para qual
+é passada dispatch.
+
+00:00:52.186 --> 00:00:56.641
+Agora podemos mover
+toda a lógica para cá.
+
+00:00:58.675 --> 00:01:00.945
+Em vez de chamarmos
+store.dispatch,
+
+00:01:00.987 --> 00:01:03.514
+basta chamarmos dispatch.
+
+00:01:03.556 --> 00:01:05.946
+Para conferir
+que isto ainda está funcionando,
+
+00:01:05.988 --> 00:01:08.290
+retornamos ao aplicativo.
+
+00:01:08.332 --> 00:01:10.377
+Carregamos,
+e, em dois segundos,
+
+00:01:10.419 --> 00:01:12.339
+obteremos os dados iniciais.
+
+00:01:12.381 --> 00:01:16.258
+Nós conseguimos mover
+
+00:01:16.300 --> 00:01:21.097
+toda a lógica de busca de dados
+dos componentes
+
+00:01:21.139 --> 00:01:24.000
+para os criadores de ação.
+

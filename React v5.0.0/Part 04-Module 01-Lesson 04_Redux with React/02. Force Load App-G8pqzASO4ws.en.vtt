@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.750
+If you remember back when we build up our Vanilla JavaScript app what we
+
+00:00:03.750 --> 00:00:08.265
+did was we called stored.subscribe to be notified whenever the store changed,
+
+00:00:08.265 --> 00:00:09.570
+and whenever it did change,
+
+00:00:09.570 --> 00:00:12.884
+what we did was we got the new goals, and the new todos.
+
+00:00:12.884 --> 00:00:15.015
+And then for each of those items,
+
+00:00:15.015 --> 00:00:17.070
+we added them to the DOM,
+
+00:00:17.070 --> 00:00:22.170
+and by invoking our addGoalToDOM function or addToDoToDom function as well.
+
+00:00:22.170 --> 00:00:26.625
+But with React, you don't really have to do any of the Dom stuff
+
+00:00:26.625 --> 00:00:28.740
+because React is really handling all of that
+
+00:00:28.739 --> 00:00:31.379
+for us behind the scenes that's one of the big benefits of React.
+
+00:00:31.379 --> 00:00:36.524
+But we still want to subscribe to the store inside of our React component,
+
+00:00:36.524 --> 00:00:39.795
+but instead of again adding items to the DOM,
+
+00:00:39.795 --> 00:00:42.420
+we want to just re-render our components.
+
+00:00:42.420 --> 00:00:47.594
+So what we'll do is let's add a componentDidMount lifecycle method here.
+
+00:00:47.594 --> 00:00:51.899
+And we can grab the store which is going to be coming from this.props.
+
+00:00:51.899 --> 00:00:57.674
+And then now, we'll call stored.subscribe,
+
+00:00:57.674 --> 00:01:01.829
+and what do we want to do whenever the store changes?
+
+00:01:01.829 --> 00:01:05.549
+Well what we want to do is we want to cause a re-render because
+
+00:01:05.549 --> 00:01:09.239
+then what's going to happen is we can inside of our render method,
+
+00:01:09.239 --> 00:01:15.419
+we can come down here and grab you store coming from this.props.
+
+00:01:15.420 --> 00:01:18.780
+We can grab the todos as well as the goals,
+
+00:01:18.780 --> 00:01:22.560
+which are coming from storeup.getState,
+
+00:01:22.560 --> 00:01:25.500
+and then what we can do is we can pass each of those down as
+
+00:01:25.500 --> 00:01:29.069
+a prop to their specific component.
+
+00:01:29.069 --> 00:01:34.289
+And then now, whenever the store changes by causing a re-render,
+
+00:01:34.290 --> 00:01:36.105
+we will really get these states,
+
+00:01:36.105 --> 00:01:39.689
+rerender these components with that new state, and then eventually,
+
+00:01:39.689 --> 00:01:41.519
+what these components will do is they will render
+
+00:01:41.519 --> 00:01:45.239
+a list containing all of the todos as well as all of the goals.
+
+00:01:45.239 --> 00:01:48.524
+We'll typically whenever you want to cause a re-render in React,
+
+00:01:48.525 --> 00:01:52.094
+what you do is you call setState because that's the whole point is setState.
+
+00:01:52.094 --> 00:01:56.054
+You tell React at the state of your application changes then we'll update the UI,
+
+00:01:56.055 --> 00:01:59.640
+but we don't really have any state inside of this component and
+
+00:01:59.640 --> 00:02:03.314
+it doesn't make sense to add any just to cause a re-render.
+
+00:02:03.314 --> 00:02:07.125
+So what we can do, and this is a rarely used feature in React because
+
+00:02:07.125 --> 00:02:11.245
+typically it's an anti-pattern but for our specific use case,
+
+00:02:11.245 --> 00:02:12.655
+it's exactly what we need.
+
+00:02:12.655 --> 00:02:15.189
+So we can call this.forceUpdates.
+
+00:02:15.189 --> 00:02:18.414
+So every component instance has a forceUpdate method on it,
+
+00:02:18.414 --> 00:02:22.914
+and when you invoke it, it's going to cause a re-render of that specific component.
+
+00:02:22.914 --> 00:02:25.824
+And then because of the way React works,
+
+00:02:25.824 --> 00:02:30.639
+all of our child components will re-render as well getting us the updated UI.
+

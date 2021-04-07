@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.705
+As of right now, everything is in a single JavaScript file.
+
+00:00:03.705 --> 00:00:08.759
+But now what we want to do, is we want to start adding some UI to our application.
+
+00:00:08.759 --> 00:00:10.619
+So in order to do that, what we'll do,
+
+00:00:10.619 --> 00:00:15.091
+is let's make a new file here called index.html.
+
+00:00:15.092 --> 00:00:18.609
+This will just have the basic skeleton.
+
+00:00:20.190 --> 00:00:24.440
+So now, we'll give this a title of let's just say,
+
+00:00:24.440 --> 00:00:29.310
+let's say Udacity Todos Goals.
+
+00:00:29.309 --> 00:00:32.299
+And now what we're going to do, is inside of our body,
+
+00:00:32.299 --> 00:00:39.457
+let's have a script tag here with a type of text/javascript.
+
+00:00:39.457 --> 00:00:43.359
+And then as you can probably guess, what we're going to do,
+
+00:00:43.359 --> 00:00:50.200
+is we're going to take all of our JavaScript in our index.html or index.gs file,
+
+00:00:50.200 --> 00:00:55.155
+and we are going to just paste it inside of our script tag here.
+
+00:00:55.155 --> 00:00:57.640
+So we're going old school with the script tags.
+
+00:00:57.640 --> 00:01:01.310
+I'm just going to indent all of this.
+
+00:01:01.310 --> 00:01:06.445
+And then now, if we open up this app in the browser,
+
+00:01:06.444 --> 00:01:11.119
+you'll notice here we don't have anything on the view because we haven't added anything.
+
+00:01:11.120 --> 00:01:12.969
+But if we look inside of our Console,
+
+00:01:12.969 --> 00:01:15.609
+we're still getting all of our console.logs here.
+
+00:01:15.609 --> 00:01:18.504
+So now, the only other thing I want to do in this video,
+
+00:01:18.504 --> 00:01:21.594
+is now, we've moved over all of our JavaScript.
+
+00:01:21.594 --> 00:01:25.584
+Let's go ahead and delete now our index.gs file because again,
+
+00:01:25.584 --> 00:01:30.789
+all of that logic is living inside of our index.html file,
+
+00:01:30.790 --> 00:01:33.620
+inside of this script tag.
+

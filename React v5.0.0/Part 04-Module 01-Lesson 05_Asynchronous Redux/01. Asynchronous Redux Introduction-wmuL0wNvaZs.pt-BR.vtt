@@ -1,0 +1,51 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.302
+No momento, embora básico,
+
+00:00:02.335 --> 00:00:04.170
+o aplicativo está funcionando
+muito bem.
+
+00:00:04.204 --> 00:00:06.706
+Podemos adicionar e remover
+afazeres e metas,
+
+00:00:06.740 --> 00:00:09.242
+e estes dados estão vivendo
+dentro do Redux.
+
+00:00:09.275 --> 00:00:10.910
+Contudo, no momento,
+
+00:00:10.944 --> 00:00:13.613
+todos os dados vivem localmente
+dentro do próprio aplicativo.
+
+00:00:13.646 --> 00:00:15.482
+Isto não é realista.
+
+00:00:15.515 --> 00:00:19.085
+No mundo real, os dados existiriam
+numa base de dados,
+
+00:00:19.119 --> 00:00:21.388
+e você interagiria com eles
+através de uma API.
+
+00:00:21.421 --> 00:00:23.523
+É isto que faremos nesta aula.
+
+00:00:23.556 --> 00:00:26.159
+Moveremos todos os nossos dados
+para uma API externa,
+
+00:00:26.192 --> 00:00:28.028
+e veremos como o Redux muda
+
+00:00:28.061 --> 00:00:30.163
+quando os dados ficam
+assíncronos.
+

@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.544
+So now that we have our checker middleware admittedly it is a little bit contrived,
+
+00:00:04.544 --> 00:00:09.195
+but it does show a good use case for how we would go about building a custom middleware.
+
+00:00:09.195 --> 00:00:10.470
+So what we're going to do in this video,
+
+00:00:10.470 --> 00:00:14.010
+is we're going to look at a more real-world example and
+
+00:00:14.009 --> 00:00:18.144
+then we're going to see how we can add multiple middleware to our Redux store.
+
+00:00:18.144 --> 00:00:21.359
+So, what we're going to do is create a new middleware here,
+
+00:00:21.359 --> 00:00:24.570
+we'll call it logger and it's going to follow
+
+00:00:24.570 --> 00:00:28.289
+as all middleware do this exact same pattern where it is
+
+00:00:28.289 --> 00:00:31.679
+past the store which returns a function pass next
+
+00:00:31.679 --> 00:00:35.551
+which returns a function pass an action.
+
+00:00:35.551 --> 00:00:39.859
+So the goal of logger is to it's kind of like a development middleware.
+
+00:00:39.859 --> 00:00:42.829
+Inside of our console whenever an action is dispatched,
+
+00:00:42.829 --> 00:00:45.500
+we want to see what that action is as well as
+
+00:00:45.500 --> 00:00:48.840
+what is the new state once the action was dispatched.
+
+00:00:48.840 --> 00:00:51.745
+So, what we can do is call console.group,
+
+00:00:51.744 --> 00:00:55.199
+and the title of this group is going to be action.type.
+
+00:00:55.200 --> 00:01:00.500
+So what console.group is going to group everything between that first
+
+00:01:00.500 --> 00:01:06.359
+console.group invocation and this console.groupEnd() invocation And then,
+
+00:01:06.359 --> 00:01:15.060
+what we want to do inside of here is first lets console.log('The action,
+
+00:01:15.060 --> 00:01:18.355
+so we can do just by doing comma, action').
+
+00:01:18.355 --> 00:01:22.810
+And then what we can do is we can invoke next passing at the action.
+
+00:01:22.810 --> 00:01:25.390
+And again, next is going to be dispatch.
+
+00:01:25.390 --> 00:01:29.305
+It's as if we are dispatching the action here which will then
+
+00:01:29.305 --> 00:01:34.875
+allow us to come in here and say the new state is,
+
+00:01:34.875 --> 00:01:39.349
+we can call store.getState, and then finally we just want to
+
+00:01:39.349 --> 00:01:44.114
+return the result we got by invoking next.
+
+00:01:44.114 --> 00:01:46.769
+And now we have this logger middleware,
+
+00:01:46.769 --> 00:01:51.019
+we want to make sure that we inform our Redux store about it.
+
+00:01:51.019 --> 00:01:55.104
+So, we can do that by coming in here,
+
+00:01:55.105 --> 00:02:01.790
+and all we need to do is pass in logger as the second argument to apply middleware.
+
+00:02:01.790 --> 00:02:04.535
+So now whenever we dispatch an action,
+
+00:02:04.534 --> 00:02:06.704
+before it ever hits the reducer,
+
+00:02:06.704 --> 00:02:08.625
+our checker middleware is going to run,
+
+00:02:08.625 --> 00:02:14.659
+and then our logger middleware will run and then it will hit the reducer.
+
+00:02:14.659 --> 00:02:19.724
+So, we can see this in action now by adding a new todo item so we'll say
+
+00:02:19.724 --> 00:02:25.534
+"Walk the dog" and you'll notice in the console over here what we got was this group.
+
+00:02:25.534 --> 00:02:28.939
+We have the action which was dispatched, the ADD_TODO action,
+
+00:02:28.939 --> 00:02:34.120
+and then we have the new state once the action was dispatched.
+
+00:02:34.120 --> 00:02:41.250
+So we now have a new Todo item in Arch do slice of our state of Walk the dog.
+

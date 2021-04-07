@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.145 --> 00:00:04.296
+Agora que podemos retornar funções
+dos criadores de ação,
+
+00:00:04.338 --> 00:00:07.544
+vamos usar o thunk
+no componente Goals.
+
+00:00:07.586 --> 00:00:11.256
+Moveremos esta lógica
+de busca de dados
+
+00:00:11.298 --> 00:00:15.896
+e esta lógica de busca de dados
+para os criadores de ação.
+
+00:00:15.938 --> 00:00:17.705
+Então, aqui...
+
+00:00:18.977 --> 00:00:21.809
+nós queremos ter
+a possibilidade de chamar
+
+00:00:22.904 --> 00:00:24.927
+this.props.store.dispatch.
+
+00:00:24.969 --> 00:00:29.584
+Faremos um novo criador de ação
+chamado "handleAddGoal",
+
+00:00:29.626 --> 00:00:32.165
+que pegará...
+
+00:00:32.207 --> 00:00:34.272
+Precisamos fazer
+esta funcionalidade,
+
+00:00:34.314 --> 00:00:37.053
+adicionando uma meta
+e reiniciando o valor input
+
+00:00:37.095 --> 00:00:39.036
+para que ele seja
+uma string vazia.
+
+00:00:39.078 --> 00:00:42.596
+Como primeiro argumento,
+passaremos a meta,
+
+00:00:42.638 --> 00:00:45.508
+que será this.input.value.
+
+00:00:45.550 --> 00:00:48.877
+Como segundo argumento,
+queremos uma forma
+
+00:00:48.919 --> 00:00:52.093
+de reiniciar o valor input
+para que seja uma string vazia.
+
+00:00:52.135 --> 00:00:54.924
+Podemos passar uma callback
+
+00:00:54.966 --> 00:00:59.913
+digitando
+this.input.value = ' '.
+
+00:00:59.955 --> 00:01:03.090
+Assim, podemos realizar
+a mesma funcionalidade
+
+00:01:03.132 --> 00:01:06.418
+de dentro do handleAddGoal,
+
+00:01:06.460 --> 00:01:09.763
+mas para acessarmos
+a reinicialização do valor input,
+
+00:01:09.805 --> 00:01:12.098
+precisamos invocar
+o segundo argumento,
+
+00:01:12.140 --> 00:01:14.011
+que é a função callback.
+
+00:01:14.053 --> 00:01:16.396
+Agora vou copiar
+todo o código...
+
+00:01:17.684 --> 00:01:20.099
+seguir até
+os criadores de ação
+
+00:01:20.141 --> 00:01:24.698
+para criar
+o criador de ação handleAddGoal.
+
+00:01:25.443 --> 00:01:30.767
+Bem aqui, criaremos uma nova função
+chamada "handleAddGoal",
+
+00:01:32.215 --> 00:01:34.725
+que pegará duas coisas:
+
+00:01:34.767 --> 00:01:37.832
+o nome da meta
+e a função callback.
+
+00:01:38.479 --> 00:01:40.374
+Como existem coisas
+assíncronas,
+
+00:01:40.416 --> 00:01:44.223
+retornaremos uma função
+que passará dispatch.
+
+00:01:44.265 --> 00:01:48.101
+Agora vou colar a lógica
+que vimos antes,
+
+00:01:48.143 --> 00:01:52.886
+chamando-a de "API.saveGoal"
+passando name.
+
+00:01:54.678 --> 00:01:56.197
+Depois,
+
+00:01:56.239 --> 00:02:01.429
+chamaremos dispatch,
+disparando addGoalAction,
+
+00:02:01.471 --> 00:02:04.077
+passando a meta
+que obtemos da API,
+
+00:02:04.119 --> 00:02:06.756
+e, em vez de realizarmos
+this.input.value,
+
+00:02:06.798 --> 00:02:09.428
+podemos invocar
+a função callback,
+
+00:02:09.470 --> 00:02:11.572
+que foi passada
+como segundo argumento
+
+00:02:11.614 --> 00:02:15.189
+para o criador de ação
+handleAddGoal.
+
+00:02:15.231 --> 00:02:17.036
+Isso deve funcionar.
+
+00:02:17.078 --> 00:02:21.364
+O próximo passo
+em relação ao componente Goals,
+
+00:02:21.406 --> 00:02:26.225
+é mover toda a lógica
+para o criador de ação.
+
+00:02:26.267 --> 00:02:28.697
+Faremos algo parecido,
+
+00:02:28.739 --> 00:02:31.954
+no qual criaremos
+um criador de ação
+
+00:02:31.996 --> 00:02:35.939
+chamado "handleDeleteGoal",
+
+00:02:35.981 --> 00:02:37.778
+passando goal.
+
+00:02:37.820 --> 00:02:41.546
+Agora vou remover
+tudo isto e copiar.
+
+00:02:41.588 --> 00:02:45.770
+Aqui nos criadores de ação,
+
+00:02:45.812 --> 00:02:50.778
+faremos a função chamada
+"handleDeleteGoal",
+
+00:02:50.820 --> 00:02:52.994
+que pegará goal
+
+00:02:53.036 --> 00:02:55.738
+e retornará uma função
+
+00:02:55.780 --> 00:02:58.659
+para acessarmos dispatch.
+
+00:02:58.701 --> 00:03:02.194
+Agora colamos
+a funcionalidade abaixo,
+
+00:03:02.236 --> 00:03:05.169
+mas, em vez de chamarmos
+this.props.store,
+
+00:03:05.211 --> 00:03:07.242
+podemos invocar dispatch,
+
+00:03:07.284 --> 00:03:11.114
+e todo o resto
+parece muito bom.
+
+00:03:11.156 --> 00:03:13.306
+Agora podemos testar.
+
+00:03:13.348 --> 00:03:14.723
+Vamos recarregar.
+
+00:03:14.765 --> 00:03:18.915
+Dentro do componente Goals,
+poderemos adicionar uma meta.
+
+00:03:20.410 --> 00:03:21.553
+Parece bom.
+
+00:03:21.595 --> 00:03:25.217
+E também poderemos remover
+uma meta.
+

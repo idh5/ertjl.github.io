@@ -1,0 +1,26 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.213 --> 00:00:02.285
+Uma das coisas boas do Redux
+
+00:00:02.327 --> 00:00:05.276
+é que podemos integrá-lo
+em quase toda IU.
+
+00:00:05.318 --> 00:00:08.717
+Isso inclui aplicativos
+construídos com React, Vue, HTML
+
+00:00:08.759 --> 00:00:10.942
+e até mesmo
+com JavaScript Vanilla.
+
+00:00:10.984 --> 00:00:14.129
+Nesta aula, veremos como usar Redux
+em um aplicativo
+
+00:00:14.171 --> 00:00:16.146
+que usa o React para a IU.
+

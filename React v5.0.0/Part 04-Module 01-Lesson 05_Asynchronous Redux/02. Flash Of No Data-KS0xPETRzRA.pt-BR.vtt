@@ -1,0 +1,45 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.470
+No momento,
+quando atualizamos o aplicativo,
+
+00:00:03.503 --> 00:00:04.704
+recebemos esta IU.
+
+00:00:04.738 --> 00:00:08.074
+E, quando todos os dados carregarem,
+isto aqui entra em cena.
+
+00:00:08.108 --> 00:00:11.077
+É um pouco estranho,
+porque ele engana o usuário.
+
+00:00:11.111 --> 00:00:14.080
+Parece que não temos dados
+até os dados carregarem,
+
+00:00:14.114 --> 00:00:16.216
+e depois serem renderizados
+para a visualização.
+
+00:00:16.249 --> 00:00:18.251
+Então,
+o que precisamos fazer é,
+
+00:00:18.284 --> 00:00:19.953
+enquanto os dados
+estão carregando,
+
+00:00:19.986 --> 00:00:22.255
+queremos mostrar
+um indicador de carregamento.
+
+00:00:22.288 --> 00:00:23.590
+E quando terminar de carregar,
+
+00:00:23.623 --> 00:00:25.992
+recebemos esta IU completa.
+

@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.192 --> 00:00:03.606
+Nessa aula, vimos como usar
+o middleware Redux
+
+00:00:03.648 --> 00:00:06.780
+para agir no tempo
+entre o disparo da ação
+
+00:00:06.822 --> 00:00:08.618
+e a execução da reducer.
+
+00:00:08.660 --> 00:00:11.563
+Na próxima aula,
+veremos como integrar o Redux
+
+00:00:11.605 --> 00:00:13.112
+em um aplicativo React.
+

@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.142 --> 00:00:02.893
+Você deve estar ficando
+um pouco preocupado,
+
+00:00:02.935 --> 00:00:05.421
+pois o curso deveria ensinar
+sobre o Redux,
+
+00:00:05.463 --> 00:00:07.461
+mas nem começamos
+a falar sobre ele.
+
+00:00:07.503 --> 00:00:11.535
+A boa notícia é que criamos
+a nossa versão do Redux
+
+00:00:11.577 --> 00:00:14.165
+seguindo a API Redux.
+
+00:00:14.207 --> 00:00:16.418
+Assim como a biblioteca
+que construímos,
+
+00:00:16.460 --> 00:00:19.153
+o Redux é uma biblioteca
+de gerenciamento de estado,
+
+00:00:19.195 --> 00:00:21.677
+que tem uma Store,
+ações e reducers.
+
+00:00:21.719 --> 00:00:25.173
+Vamos substituir
+nossa implementação pelo Redux
+
+00:00:25.215 --> 00:00:27.125
+para vermos
+como eles são parecidos.
+

@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.156 --> 00:00:02.748
+No momento, nosso aplicativo
+está funcionando bem.
+
+00:00:02.790 --> 00:00:05.245
+Ele funciona
+com dados assíncronos
+
+00:00:05.287 --> 00:00:07.283
+vindos de uma API externa.
+
+00:00:07.325 --> 00:00:10.135
+Porém, da forma como o código
+está organizado,
+
+00:00:10.177 --> 00:00:14.881
+misturamos a lógica de busca
+de dados com a da IU componente.
+
+00:00:14.923 --> 00:00:16.656
+No momento, o componente
+
+00:00:16.698 --> 00:00:19.471
+que deveria se concentrar
+somente na aparência da IU,
+
+00:00:19.513 --> 00:00:22.298
+também é responsável
+pela busca de dados.
+
+00:00:22.340 --> 00:00:24.912
+Seria bom separar isso.
+
+00:00:24.954 --> 00:00:26.887
+E se, em vez
+de chamarmos a API
+
+00:00:26.929 --> 00:00:29.145
+e passarmos os dados
+para o criador de ação -
+
+00:00:29.187 --> 00:00:30.593
+como estamos fazendo -,
+
+00:00:30.635 --> 00:00:33.074
+movêssemos a lógica
+de busca de dados
+
+00:00:33.116 --> 00:00:35.657
+do componente
+para o criador de ação?
+
+00:00:35.699 --> 00:00:38.281
+Chamar a API
+no criador de ação
+
+00:00:38.323 --> 00:00:41.762
+o torna responsável pela busca
+dos dados de que necessita
+
+00:00:41.804 --> 00:00:43.554
+para criar a ação.
+
+00:00:43.596 --> 00:00:45.772
+Mudar
+o código de busca de dados
+
+00:00:45.814 --> 00:00:48.763
+construirá uma separação mais clara
+entre a lógica da IU
+
+00:00:48.805 --> 00:00:50.508
+e a da busca de dados.
+
+00:00:50.550 --> 00:00:51.918
+Vejamos como isso fica.
+

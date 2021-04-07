@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.254 --> 00:00:02.602
+Nessa aula, adicionamos a IU
+
+00:00:02.644 --> 00:00:04.701
+à biblioteca
+de gerenciamento de estado.
+
+00:00:04.743 --> 00:00:09.763
+A biblioteca que construímos
+era, na verdade, um Redux.
+
+00:00:09.805 --> 00:00:11.067
+Na próxima aula,
+
+00:00:11.109 --> 00:00:14.310
+nós conectaremos o ciclo de vida
+do Redux com o Middleware.
+

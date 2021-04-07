@@ -1,0 +1,280 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.179 --> 00:00:03.393
+Para adicionar o React
+ao aplicativo,
+
+00:00:03.435 --> 00:00:06.011
+assim como fizemos
+com o Redux,
+
+00:00:06.053 --> 00:00:08.056
+na parte de cima
+da seção do aplicativo
+
+00:00:08.098 --> 00:00:10.024
+adicionaremos
+alguns scripts.
+
+00:00:10.066 --> 00:00:15.633
+Temos um React 16.3,
+que é a versão mais recente.
+
+00:00:15.675 --> 00:00:18.009
+Também temos react-dom
+
+00:00:18.051 --> 00:00:20.705
+e precisamos incluir Babel
+
+00:00:20.747 --> 00:00:24.456
+para podermos
+compilar o código JSX
+
+00:00:24.498 --> 00:00:27.792
+em um JavaScript normal,
+que o navegador possa entender.
+
+00:00:27.834 --> 00:00:32.134
+Ao incluir isso na tag script,
+o Babel fará isso
+
+00:00:32.176 --> 00:00:34.278
+quando salvarmos
+o aplicativo.
+
+00:00:34.320 --> 00:00:38.274
+Vamos para a parte inferior
+do arquivo index.html
+
+00:00:38.316 --> 00:00:41.540
+para construirmos
+alguns componentes React.
+
+00:00:41.582 --> 00:00:46.045
+Eu criarei uma nova tag script
+type='text/babel',
+
+00:00:46.087 --> 00:00:50.341
+assim Babel saberá
+o código que precisará compilar.
+
+00:00:51.094 --> 00:00:56.180
+Se você estiver usando Sublime,
+altere o marcador de sintaxe
+
+00:00:56.222 --> 00:01:00.924
+de HTML
+para JavaScript Babel.
+
+00:01:00.966 --> 00:01:05.284
+Isto não será perfeito,
+pois temos um código HTML
+
+00:01:05.326 --> 00:01:07.196
+e estamos
+em um arquivo HTML
+
+00:01:07.238 --> 00:01:09.453
+com JavaScript e JSX.
+
+00:01:09.495 --> 00:01:12.261
+No resto deste curso,
+o marcador de sintaxe
+
+00:01:12.303 --> 00:01:16.540
+será um pouco falho,
+mas dará para trabalhar assim.
+
+00:01:16.582 --> 00:01:19.565
+Quando começarmos a separar
+por módulos,
+
+00:01:19.607 --> 00:01:21.203
+o que tipicamente acontece,
+
+00:01:21.245 --> 00:01:24.980
+essas questões
+desaparecerão magicamente.
+
+00:01:25.022 --> 00:01:26.788
+O primeiro passo
+
+00:01:26.830 --> 00:01:32.428
+é criar um novo componente,
+que chamaremos de "App".
+
+00:01:32.470 --> 00:01:35.556
+Ele estenderá
+React.Component.
+
+00:01:35.598 --> 00:01:40.261
+Podemos usar o React
+porque incluímos o script React,
+
+00:01:40.303 --> 00:01:44.232
+adicionando a propriedade global
+ao aplicativo chamada de "React".
+
+00:01:44.274 --> 00:01:47.489
+Como sempre,
+podemos ter um método render aqui.
+
+00:01:47.531 --> 00:01:50.321
+Por ora,
+vamos retornar um div.
+
+00:01:50.363 --> 00:01:52.641
+Aqui dentro
+digitaremos "APP".
+
+00:01:53.362 --> 00:01:55.811
+Como normalmente fazemos,
+
+00:01:55.853 --> 00:01:58.923
+chamaremos ReactDOM.render.
+
+00:01:58.965 --> 00:02:03.187
+Como primeiro argumento,
+criaremos o elemento app,
+
+00:02:03.229 --> 00:02:05.010
+e o segundo argumento
+
+00:02:05.052 --> 00:02:07.978
+informará
+onde ele deverá estar.
+
+00:02:08.020 --> 00:02:12.890
+Dentro da parte de cima
+do corpo,
+
+00:02:12.932 --> 00:02:16.462
+vamos adicionar
+na parte inferior
+
+00:02:16.504 --> 00:02:18.918
+uma quebra com hr.
+
+00:02:19.768 --> 00:02:22.542
+Agora teremos um div,
+
+00:02:22.584 --> 00:02:24.831
+que terá app como ID.
+
+00:02:24.873 --> 00:02:28.598
+Esse será o div
+que poderemos usar.
+
+00:02:28.640 --> 00:02:30.974
+Na parte inferior
+deste arquivo,
+
+00:02:31.016 --> 00:02:34.437
+diremos "ReactDOM.render"
+passando o elemento
+
+00:02:34.479 --> 00:02:39.934
+e "document.getElementById('app').
+
+00:02:39.976 --> 00:02:43.050
+Agora, se recarregarmos
+o aplicativo,
+
+00:02:44.083 --> 00:02:46.873
+aqui em cima teremos
+o aplicativo JavaScript
+
+00:02:46.915 --> 00:02:49.948
+e, aqui embaixo,
+o aplicativo React.
+
+00:02:49.990 --> 00:02:53.945
+Agora nós construiremos
+alguns esqueletos dos componentes
+
+00:02:53.987 --> 00:02:55.603
+que usaremos.
+
+00:02:55.645 --> 00:03:01.179
+Teremos um componente funcional
+sem estado chamado "List".
+
+00:03:01.221 --> 00:03:05.682
+Ele pegará um array
+e o mapeará criando
+
+00:03:05.724 --> 00:03:07.378
+alguns itens de lista.
+
+00:03:07.420 --> 00:03:08.955
+Por ora,
+
+00:03:08.997 --> 00:03:12.162
+retornaremos
+uma lista desordenada
+
+00:03:13.020 --> 00:03:16.354
+e um item de lista
+que diz "LIST".
+
+00:03:16.396 --> 00:03:20.884
+Também queremos criar
+um componente Todos,
+
+00:03:22.499 --> 00:03:25.517
+que estenderá
+o React.Component.
+
+00:03:25.559 --> 00:03:28.323
+Ele terá um método render.
+
+00:03:29.499 --> 00:03:32.267
+Por ora, retornamos um div,
+
+00:03:33.004 --> 00:03:36.075
+digitaremos "TODOS"
+e renderizaremos
+
+00:03:36.117 --> 00:03:38.427
+o componente List.
+
+00:03:38.469 --> 00:03:43.464
+Agora teremos o último componente,
+que será Goals.
+
+00:03:44.072 --> 00:03:46.750
+Digitaremos "GOALS"
+e também renderizaremos List.
+
+00:03:46.792 --> 00:03:50.933
+Dentro do componente App,
+renderizaremos Todos
+
+00:03:50.975 --> 00:03:53.784
+e também renderizaremos
+alguns Goals.
+
+00:03:55.545 --> 00:03:57.862
+Se observamos
+o aplicativo agora,
+
+00:03:57.904 --> 00:04:01.031
+ainda temos
+um aplicativo React básico,
+
+00:04:01.073 --> 00:04:02.876
+pois ainda não fizemos nada.
+
+00:04:02.918 --> 00:04:05.351
+Nós criamos
+os componentes básicos
+
+00:04:05.393 --> 00:04:07.245
+que possibilitarão
+
+00:04:07.287 --> 00:04:11.935
+adicionar funcionalidade
+ao aplicativo React.
+

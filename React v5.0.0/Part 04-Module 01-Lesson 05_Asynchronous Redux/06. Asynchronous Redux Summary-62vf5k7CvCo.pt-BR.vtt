@@ -1,0 +1,20 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.096 --> 00:00:02.862
+Nesta aula,
+vimos diferentes padrões
+
+00:00:02.904 --> 00:00:05.454
+para lidar com dados assíncronos
+no Redux.
+
+00:00:05.496 --> 00:00:08.814
+A seguir, observaremos
+o React e o Redux juntos
+
+00:00:08.856 --> 00:00:11.175
+para tentarmos melhorar
+o nosso aplicativo.
+

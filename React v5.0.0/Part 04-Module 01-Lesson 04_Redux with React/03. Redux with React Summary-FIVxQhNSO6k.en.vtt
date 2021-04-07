@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.329
+In this lesson, we learned about how we can add react to
+
+00:00:03.329 --> 00:00:07.580
+a Redux application by passing down the Redux Store as props.
+
+00:00:07.580 --> 00:00:10.425
+At this point, all of the data in our app is local.
+
+00:00:10.425 --> 00:00:12.420
+That isn't really realistic.
+
+00:00:12.419 --> 00:00:14.969
+In the next lesson, we'll take a look at how Redux handles
+
+00:00:14.970 --> 00:00:19.260
+asynchronous data by moving our local data to an external API.
+

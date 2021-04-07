@@ -1,0 +1,23 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.356 --> 00:00:04.244
+Nós já temos a Store,
+as ações e as reducers,
+
+00:00:04.286 --> 00:00:07.131
+que juntas formam a base
+do Redux.
+
+00:00:07.173 --> 00:00:10.524
+Nesta aula,
+veremos o middleware Redux,
+
+00:00:10.566 --> 00:00:13.275
+como ele permite acessar
+o ciclo de vida do Redux
+
+00:00:13.317 --> 00:00:14.791
+e por que isso é vantajoso.
+

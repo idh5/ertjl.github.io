@@ -1,0 +1,243 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.236
+A única funcionalidade
+que precisamos migrar
+
+00:00:03.269 --> 00:00:09.009
+para usar nossa API é adicionar
+um novo item todo e um novo goal.
+
+00:00:09.042 --> 00:00:14.080
+Dentro de addItem,
+vamos mover tudo isto para baixo,
+
+00:00:14.114 --> 00:00:18.952
+e vamos usar o método
+API.saveTodo.
+
+00:00:18.985 --> 00:00:22.489
+Precisamos passar para ele
+o valor do novo item todo
+
+00:00:22.522 --> 00:00:24.224
+ou o nome do novo item todo,
+
+00:00:24.257 --> 00:00:28.128
+que podemos obter
+usando this.input.value.
+
+00:00:28.161 --> 00:00:31.164
+E, quando esta função
+for resolvida,
+
+00:00:31.197 --> 00:00:34.367
+receberemos o novo item todo
+
+00:00:34.401 --> 00:00:37.103
+que podemos adicionar
+ao estado da Store.
+
+00:00:37.137 --> 00:00:41.207
+Aqui nós temos o código,
+
+00:00:41.241 --> 00:00:43.743
+então estamos gerando uma id
+no cliente,
+
+00:00:43.777 --> 00:00:45.612
+e a complete ficou configurada
+para false.
+
+00:00:45.645 --> 00:00:48.963
+Não faz total sentido gerar
+uma id
+
+00:00:48.997 --> 00:00:52.085
+no cliente, por razões óbvias.
+
+00:00:52.118 --> 00:00:57.157
+Então suponha que, quando usarmos
+saveTodo da nossa API,
+
+00:00:57.190 --> 00:00:59.359
+o que receberemos é
+o novo item todo,
+
+00:00:59.392 --> 00:01:01.661
+que vai parecer similar
+a este aqui.
+
+00:01:01.695 --> 00:01:05.832
+Isto significa
+que podemos usar
+
+00:01:05.866 --> 00:01:09.436
+this.props.store.dispatch
+
+00:01:09.469 --> 00:01:12.339
+com a addTodoAction.
+
+00:01:12.372 --> 00:01:15.542
+E o que passamos para ela é
+o novo item todo
+
+00:01:15.575 --> 00:01:17.877
+que estamos recebendo
+do servidor.
+
+00:01:17.911 --> 00:01:21.548
+E daí, podemos adicionar
+esta linha aqui,
+
+00:01:21.581 --> 00:01:24.117
+que vai resetar o campo input.
+
+00:01:24.150 --> 00:01:29.422
+E, por último,
+podemos adicionar um catch:
+
+00:01:29.456 --> 00:01:33.293
+"Desculpe por isto,
+houve um erro. Tente de novo."
+
+00:01:33.326 --> 00:01:37.597
+Note que não estamos fazendo
+atualização otimizada
+
+00:01:37.630 --> 00:01:39.232
+adicionando um item,
+
+00:01:39.265 --> 00:01:41.735
+e a única razão para isto
+está aqui.
+
+00:01:41.768 --> 00:01:44.971
+Porque a id está sendo gerada
+no servidor para nós,
+
+00:01:45.005 --> 00:01:47.540
+podíamos descobrir um jeito
+de adicioná-la de volta
+
+00:01:47.574 --> 00:01:49.976
+à nossa Redux Store
+se a solicitação falhar.
+
+00:01:50.010 --> 00:01:53.246
+Mas você já entendeu a ideia
+das atualizações otimizadas.
+
+00:01:53.279 --> 00:01:54.981
+Por enquanto,
+vamos salvar isto,
+
+00:01:55.015 --> 00:01:56.816
+e, quando a solicitação
+for bem-sucedida,
+
+00:01:56.850 --> 00:01:59.352
+vamos adicioná-la
+à Redux Store.
+
+00:01:59.386 --> 00:02:04.491
+Nós queremos fazer algo similar
+com o componente goals aqui.
+
+00:02:04.524 --> 00:02:05.959
+A mesma coisa.
+
+00:02:05.992 --> 00:02:11.631
+Vamos usar API.saveGoal
+e passar para ele o nome do goal,
+
+00:02:11.664 --> 00:02:14.501
+que recebemos
+de this.input.value.
+
+00:02:14.534 --> 00:02:15.835
+Quando o método for resolvido,
+
+00:02:15.869 --> 00:02:21.241
+a API vai nos retornar ou nos dar
+o novo goal que criou.
+
+00:02:21.274 --> 00:02:24.978
+Podemos usar
+this.props.store.dispatch,
+
+00:02:25.011 --> 00:02:28.848
+usando addGoalAction,
+passando para ela o novo goal,
+
+00:02:28.882 --> 00:02:34.287
+e daí, escrevemos this.input.value é
+igual a uma string vazia
+
+00:02:34.320 --> 00:02:36.356
+para resetar o campo input.
+
+00:02:36.389 --> 00:02:40.660
+E teremos um catch aqui
+para alertar:
+
+00:02:40.694 --> 00:02:44.497
+"Houve um erro, desculpe por isso.
+Tente de novo."
+
+00:02:44.531 --> 00:02:47.667
+Agora podemos deletar
+todo este código.
+
+00:02:47.701 --> 00:02:51.971
+Se voltarmos
+para o nosso aplicativo
+
+00:02:52.005 --> 00:02:54.007
+e carregarmos
+os dados iniciais,
+
+00:02:54.040 --> 00:02:55.975
+podemos adicionar
+um novo item aqui.
+
+00:02:56.009 --> 00:02:58.812
+"Passear com o cachorro" já foi,
+então o que posso fazer?
+
+00:02:58.845 --> 00:03:01.514
+Vamos usar "Ler um livro".
+
+00:03:01.548 --> 00:03:03.483
+Note que existe
+um pequeno delay,
+
+00:03:03.516 --> 00:03:06.586
+porque ele está fazendo
+uma solicitação assíncrona,
+
+00:03:06.619 --> 00:03:08.855
+e ela entrou
+na nossa lista Todo.
+
+00:03:08.888 --> 00:03:11.091
+E podemos adicionar
+um novo goal,
+
+00:03:11.124 --> 00:03:13.927
+digamos: "Correr a maratona".
+
+00:03:13.960 --> 00:03:18.398
+Este item foi adicionado
+à nossa base de dados,
+
+00:03:18.431 --> 00:03:21.668
+e quando recebemos a confirmação
+de que foi adicionado,
+
+00:03:21.701 --> 00:03:25.572
+nós o adicionamos
+para a nossa Redux Store também.
+

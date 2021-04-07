@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.174
+In a standard Redux app,
+
+00:00:02.174 --> 00:00:05.144
+when store.dispatch is called the reducer runs.
+
+00:00:05.144 --> 00:00:07.049
+With our checkAndDispatch function,
+
+00:00:07.049 --> 00:00:10.439
+we need to run some verification code before the reducer run.
+
+00:00:10.439 --> 00:00:12.509
+So we run checkAndDispatch first,
+
+00:00:12.509 --> 00:00:14.744
+and then if the verification passes,
+
+00:00:14.744 --> 00:00:17.429
+it runs store.dispatch which calls the reducer.
+
+00:00:17.429 --> 00:00:21.045
+For this change, we had to manually alter our app code works.
+
+00:00:21.045 --> 00:00:24.360
+Wouldn't it be nice if we could leave our store.dispatch calls where they
+
+00:00:24.359 --> 00:00:28.169
+were and run some code between store.dispatch and the reducer?
+
+00:00:28.170 --> 00:00:30.370
+Well, it turns out,
+
+00:00:30.370 --> 00:00:32.439
+it does, it's called Middleware.
+
+00:00:32.439 --> 00:00:34.359
+Let's take a look at how we can replace
+
+00:00:34.359 --> 00:00:37.950
+our checkAndDispatch function with native Redux Middleware.
+

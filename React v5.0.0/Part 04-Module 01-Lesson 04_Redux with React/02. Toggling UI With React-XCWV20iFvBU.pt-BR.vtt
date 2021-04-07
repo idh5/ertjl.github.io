@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.634
+A esta altura,
+a única diferença
+
+00:00:01.668 --> 00:00:04.204
+entre o aplicativo
+Vanilla JavaScript
+
+00:00:04.237 --> 00:00:08.308
+e o aplicativo React é
+que aqui podemos alternar um todo,
+
+00:00:08.341 --> 00:00:11.878
+mas ainda não adicionamos
+esta função no React.
+
+00:00:11.911 --> 00:00:13.680
+Vamos fazer isto agora.
+
+00:00:13.713 --> 00:00:16.049
+Dentro do componente todos,
+
+00:00:16.082 --> 00:00:20.053
+vamos adicionar
+um novo método.
+
+00:00:20.086 --> 00:00:22.022
+Vamos chamá-lo de
+"toggleItem".
+
+00:00:22.055 --> 00:00:25.058
+Ele vai conter uma id
+
+00:00:25.091 --> 00:00:29.829
+e vai executar
+this.props.store.dispatch.
+
+00:00:29.863 --> 00:00:33.600
+Nós queremos disparar a ação
+toggleTodoAction.
+
+00:00:33.633 --> 00:00:35.101
+Vamos passar a id para ela.
+
+00:00:35.135 --> 00:00:40.006
+E agora, podemos adicioná-lo
+como um prop para List também.
+
+00:00:40.040 --> 00:00:44.210
+Então toggle será
+this.toggleItem.
+
+00:00:44.244 --> 00:00:46.546
+E agora,
+dentro do componente List,
+
+00:00:46.579 --> 00:00:51.985
+queremos adicionar
+um manipulador onClick
+
+00:00:52.018 --> 00:00:55.288
+para o elemento span.
+
+00:00:55.321 --> 00:00:57.357
+E isto vai ser
+um parâmetro opcional,
+
+00:00:57.390 --> 00:01:01.327
+porque vamos usá-lo apenas
+dentro do componente todos
+
+00:01:01.361 --> 00:01:02.696
+em vez do componente goals.
+
+00:01:02.729 --> 00:01:07.801
+Nós escreveremos
+se props.toggle é algo,
+
+00:01:07.834 --> 00:01:10.770
+nós vamos invocá-lo,
+
+00:01:10.804 --> 00:01:14.441
+passando a id para ele.
+
+00:01:14.474 --> 00:01:18.821
+E vamos atualizar o estilo
+
+00:01:18.854 --> 00:01:20.714
+deste elemento span
+específico.
+
+00:01:20.747 --> 00:01:23.850
+Vamos escrever textDecoration,
+
+00:01:23.883 --> 00:01:26.786
+e isto é bem similar ao que fizemos
+no aplicativo Vanilla JavaScript.
+
+00:01:26.820 --> 00:01:31.758
+A textDecoration vai ser
+se item.complete é true,
+
+00:01:31.791 --> 00:01:34.361
+então será line-through.
+
+00:01:34.394 --> 00:01:37.197
+Se não for, será none.
+
+00:01:37.230 --> 00:01:41.167
+Vamos dar uma olhada
+no aplicativo.
+
+00:01:41.201 --> 00:01:43.269
+Nós podemos escrever
+"Passear com o cachorro",
+
+00:01:43.303 --> 00:01:48.708
+e ter a capacidade de clicar nela
+para alterná-la.
+
+00:01:48.742 --> 00:01:50.844
+A última coisa que farei...
+
+00:01:50.877 --> 00:01:54.581
+Nós não vamos mais usar
+o aplicativo Vanilla JavaScript,
+
+00:01:54.614 --> 00:01:56.994
+então podemos deletar
+todo o código
+
+00:01:56.995 --> 00:02:00.620
+relacionado a ele.
+
+00:02:00.653 --> 00:02:04.657
+Como todo este código aqui
+e o store.subscribe.
+
+00:02:04.691 --> 00:02:06.926
+Podemos deletar tudo isto,
+
+00:02:06.960 --> 00:02:09.629
+e, no topo do aplicativo,
+
+00:02:09.662 --> 00:02:13.733
+podemos deletar
+este código de IU aqui.
+
+00:02:13.767 --> 00:02:18.705
+Agora só temos um único div
+com uma id de app
+
+00:02:18.738 --> 00:02:22.342
+em que nós vamos montar
+nosso aplicativo React.
+

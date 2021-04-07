@@ -1,0 +1,265 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.669
+So now that we can add new todo items as well as new goals to the state of our store,
+
+00:00:05.669 --> 00:00:10.589
+the next thing we want to do is actually show each of those items on the UI themselves,
+
+00:00:10.589 --> 00:00:13.669
+rather than just in the console here.
+
+00:00:13.669 --> 00:00:16.905
+So back inside of our index.html file,
+
+00:00:16.905 --> 00:00:22.560
+head down to the bottom here where we have our DOM code.
+
+00:00:22.559 --> 00:00:24.449
+I'm just going to put it a little node in for that.
+
+00:00:24.449 --> 00:00:28.119
+And now what we want to do is we want to make two new functions.
+
+00:00:28.120 --> 00:00:35.789
+What we will call them is add todo to DOM.
+
+00:00:35.789 --> 00:00:41.155
+And the second one is going to be, addGoal to DOM.
+
+00:00:41.155 --> 00:00:45.160
+What these are going to be responsible for is they are
+
+00:00:45.159 --> 00:00:48.714
+going to take in a specific todo item or a specific goal,
+
+00:00:48.715 --> 00:00:50.440
+and then just as they imply,
+
+00:00:50.439 --> 00:00:53.649
+they are going to add that individual item to
+
+00:00:53.649 --> 00:00:58.030
+the DOM itself so that they will show up in the UI.
+
+00:00:58.030 --> 00:01:01.660
+So first let's do add todo to DOM.
+
+00:01:01.659 --> 00:01:04.689
+As I just mentioned, this is going to take in a to do item.
+
+00:01:04.689 --> 00:01:08.090
+And then if you're not familiar with DOM scripting,
+
+00:01:08.090 --> 00:01:11.420
+doing stuff like ElementById or addEventListener.
+
+00:01:11.420 --> 00:01:14.484
+This might be a little bit new to you but know that again,
+
+00:01:14.484 --> 00:01:17.500
+all we're doing here is we're taking a todo item and then adding it
+
+00:01:17.500 --> 00:01:20.790
+to this list item up here.
+
+00:01:20.790 --> 00:01:21.980
+And then when we do our goals,
+
+00:01:21.980 --> 00:01:25.055
+we will take each individual goal and then we'll just create
+
+00:01:25.055 --> 00:01:30.620
+a new list item and add that element to our enrolled list up here.
+
+00:01:30.620 --> 00:01:32.100
+So instead of add todo to DOM,
+
+00:01:32.099 --> 00:01:34.829
+the first thing we want to do is let's create a brand new
+
+00:01:34.829 --> 00:01:38.060
+Node by using document.createElement.
+
+00:01:38.060 --> 00:01:40.540
+As I mentioned, this is going to be a list item.
+
+00:01:40.540 --> 00:01:45.750
+Then let's create a new text node by saying document.createTextNode,
+
+00:01:45.750 --> 00:01:48.900
+and we're going to pass in
+
+00:01:48.900 --> 00:01:52.455
+the name of this text node which is just going to be the name on the todo item.
+
+00:01:52.454 --> 00:01:59.179
+From there what we want to do is we want to grab our node and append to it our text node,
+
+00:01:59.180 --> 00:02:07.160
+and then we can grab our node list by saying document.getElementById,
+
+00:02:07.159 --> 00:02:08.704
+we'll pass in todos.
+
+00:02:08.705 --> 00:02:10.430
+And then from there,
+
+00:02:10.430 --> 00:02:13.395
+we went to append onto it our node.
+
+00:02:13.395 --> 00:02:18.844
+So now let's do something similar for our addGoal to DOM function.
+
+00:02:18.844 --> 00:02:21.180
+So this is going to take in a goal.
+
+00:02:21.180 --> 00:02:27.170
+And then first what we want to do is create our node using document.createElement,
+
+00:02:27.169 --> 00:02:32.059
+we want to create a new list item from there just as we did before,
+
+00:02:32.060 --> 00:02:37.625
+let's create a new text node using document.createTextNode,
+
+00:02:37.625 --> 00:02:42.215
+passing in the name of the text node which is going to be called that name.
+
+00:02:42.215 --> 00:02:46.805
+Now we want to grab our node and append to it our text node,
+
+00:02:46.805 --> 00:02:52.115
+and then from there just as we did in add todo to DOM, we want to say,
+
+00:02:52.115 --> 00:02:57.409
+document.getElementById, we want to grab our goals and ordered list,
+
+00:02:57.409 --> 00:03:00.125
+and then append to it the node.
+
+00:03:00.125 --> 00:03:03.259
+So now that we have these two functions which are
+
+00:03:03.259 --> 00:03:06.949
+going to help us in adding new items to the DOM,
+
+00:03:06.949 --> 00:03:10.625
+the next thing we want to do is actually invoke these functions for
+
+00:03:10.625 --> 00:03:15.784
+each todo item or for each goal that lives inside of our store.
+
+00:03:15.784 --> 00:03:18.889
+So let's head up to where we called store.subscribe.
+
+00:03:18.889 --> 00:03:24.694
+And now instead of console.log in what the new state is,
+
+00:03:24.694 --> 00:03:27.984
+let's go ahead and actually add those items to the DOM.
+
+00:03:27.985 --> 00:03:30.140
+So we'll grab the goals as well as
+
+00:03:30.139 --> 00:03:35.169
+the todos from our state which we can get by calling store.getState.
+
+00:03:35.169 --> 00:03:40.000
+And now we want to for each item inside of goals,
+
+00:03:40.000 --> 00:03:43.219
+we want to call addGoal to DOM,
+
+00:03:43.219 --> 00:03:46.465
+and for each item inside of todos,
+
+00:03:46.465 --> 00:03:54.240
+we want to add or we want to invoke the add todo to DOM function.
+
+00:03:54.240 --> 00:03:56.330
+So now what should happen,
+
+00:03:56.330 --> 00:03:58.480
+is if we refresh our app,
+
+00:03:58.479 --> 00:04:04.969
+let's add a new to do item here called, Walk the dog.
+
+00:04:04.969 --> 00:04:09.905
+Now you'll notice it shows up right here and we can add a new goal.
+
+00:04:09.905 --> 00:04:12.495
+Let's say, Learn Redux,
+
+00:04:12.495 --> 00:04:15.730
+and now we get Learn Redux down here but you'll also
+
+00:04:15.729 --> 00:04:18.349
+notice that we have walk the dog here twice.
+
+00:04:18.350 --> 00:04:24.439
+Now the reason for that is because if you remember when we are subscribing to our store,
+
+00:04:24.439 --> 00:04:27.235
+we're just saying whenever the store changes,
+
+00:04:27.235 --> 00:04:31.745
+go ahead and run this line as well as this line.
+
+00:04:31.745 --> 00:04:37.399
+So we added a new todo item to our state which went and ran this function,
+
+00:04:37.399 --> 00:04:41.614
+and populated the todo item inside of the DOM itself.
+
+00:04:41.615 --> 00:04:44.030
+And then when we added a new goal,
+
+00:04:44.029 --> 00:04:47.375
+we added that goal to the DOM but we also again went
+
+00:04:47.375 --> 00:04:50.870
+and added the new or the previous todo items to the DOM as well.
+
+00:04:50.870 --> 00:04:53.615
+So we can fix that just by saying,
+
+00:04:53.615 --> 00:04:59.504
+we want to reset both an ordered list every time the subscribe function is invoked.
+
+00:04:59.504 --> 00:05:03.425
+So we can just say innerHTML equals an empty string.
+
+00:05:03.425 --> 00:05:05.629
+So, any time the store changes,
+
+00:05:05.629 --> 00:05:07.850
+we want to reset all of our goals,
+
+00:05:07.850 --> 00:05:10.980
+as well as all of our todos in the DOM,
+
+00:05:10.980 --> 00:05:13.520
+and then we want to map over all of the goals and
+
+00:05:13.519 --> 00:05:16.305
+all the todos adding each of those to the DOM.
+
+00:05:16.305 --> 00:05:19.459
+So again, our DOM is really just a representation of
+
+00:05:19.459 --> 00:05:23.259
+the state inside of our store and not the other way around.
+
+00:05:23.259 --> 00:05:28.759
+So now what should happen is we say, walk the dog,
+
+00:05:28.759 --> 00:05:34.014
+Learn Redux, and each time we add a new item,
+
+00:05:34.014 --> 00:05:38.699
+the DOMs are cleared and then we get all those items put back into the DOM.
+

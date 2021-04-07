@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.469
+As of right now, all of the data inside of our app is client-side only.
+
+00:00:05.469 --> 00:00:06.929
+Typically in the real world,
+
+00:00:06.929 --> 00:00:08.609
+what would happen is,
+
+00:00:08.609 --> 00:00:10.889
+you would be interacting with a server and then
+
+00:00:10.890 --> 00:00:13.394
+that server would go and interact with a database.
+
+00:00:13.394 --> 00:00:16.710
+So, whenever you saved a new todo item or a new goal,
+
+00:00:16.710 --> 00:00:18.810
+you would need to tell this server about that,
+
+00:00:18.809 --> 00:00:20.729
+which would then tell the database about that.
+
+00:00:20.730 --> 00:00:23.214
+But right now, because we don't have a server,
+
+00:00:23.214 --> 00:00:25.975
+everything that we're doing is just client-side.
+
+00:00:25.975 --> 00:00:27.870
+And when we refresh our application,
+
+00:00:27.870 --> 00:00:29.800
+all of those things go away.
+
+00:00:29.800 --> 00:00:31.980
+So what we're going to do is,
+
+00:00:31.980 --> 00:00:35.195
+inside our head, again,
+
+00:00:35.195 --> 00:00:41.490
+we're going to include a new script which just references this index.js file here.
+
+00:00:41.490 --> 00:00:46.704
+So, tylermcginnis.com/goals-todos-api/index.js.
+
+00:00:46.704 --> 00:00:48.979
+And what this is going to do,
+
+00:00:48.979 --> 00:00:52.395
+and we can actually look at this file here, is,
+
+00:00:52.396 --> 00:00:56.939
+It's going to add a property to the window object called API.
+
+00:00:56.939 --> 00:01:00.390
+And then anytime that we want to interact with this data,
+
+00:01:00.390 --> 00:01:02.890
+that again is just living in our fake database,
+
+00:01:02.890 --> 00:01:04.450
+we need to call one of these methods.
+
+00:01:04.450 --> 00:01:06.984
+So, for example, in order to fetch our goals,
+
+00:01:06.984 --> 00:01:09.150
+we will call API.fetchGoals.
+
+00:01:09.150 --> 00:01:12.859
+That's going to return us a promise that after two seconds,
+
+00:01:12.859 --> 00:01:15.075
+we'll resolve with the goals.
+
+00:01:15.075 --> 00:01:18.280
+And another thing that we're going to do, for example, here,
+
+00:01:18.280 --> 00:01:20.349
+whenever we save a new todo item,
+
+00:01:20.349 --> 00:01:25.684
+the use case that we need to handle is if that request fails.
+
+00:01:25.685 --> 00:01:27.519
+So, again, because we don't really want to go through
+
+00:01:27.519 --> 00:01:30.369
+the hassle of setting up a database and setting up a server,
+
+00:01:30.370 --> 00:01:31.930
+what we're going to do is,
+
+00:01:31.930 --> 00:01:34.468
+by including the script in our app,
+
+00:01:34.468 --> 00:01:41.189
+we now have access to all of these different methods.
+
+00:01:41.189 --> 00:01:44.579
+And so, what that will allow us to do is it will allow us to see how
+
+00:01:44.579 --> 00:01:49.129
+Redux works when our data is coming in asynchronously.
+

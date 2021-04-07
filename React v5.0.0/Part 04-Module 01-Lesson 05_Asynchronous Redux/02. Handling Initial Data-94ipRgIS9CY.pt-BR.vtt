@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.203
+Agora precisamos contar
+
+00:00:03.236 --> 00:00:05.805
+para a Redux Store
+sobre estes dados.
+
+00:00:05.839 --> 00:00:08.675
+No momento,
+não temos nenhuma ação
+
+00:00:08.708 --> 00:00:11.044
+que lide com a adição
+de múltiplos todos
+
+00:00:11.077 --> 00:00:12.645
+assim como de múltiplos goals.
+
+00:00:12.679 --> 00:00:17.217
+Se voltarmos
+às nossas criadoras de ação aqui,
+
+00:00:17.250 --> 00:00:20.220
+temos um item addGoal
+
+00:00:20.253 --> 00:00:25.825
+e uma criadora
+de ação addTodoAction.
+
+00:00:25.859 --> 00:00:29.596
+Então nós poderíamos fazer o loop
+de todos os goals e as ações.
+
+00:00:29.629 --> 00:00:32.832
+Mas depois vamos disparar
+várias ações.
+
+00:00:32.866 --> 00:00:37.971
+Em vez disso, e se nós fizermos
+uma nova criadora de ações?
+
+00:00:38.004 --> 00:00:41.941
+Vamos chamá-la
+de "receiveDataAction".
+
+00:00:41.975 --> 00:00:46.913
+Ela vai conter todos e goals.
+
+00:00:46.946 --> 00:00:52.519
+E a ação será
+do tipo RECEIVE_DATA,
+
+00:00:52.552 --> 00:00:53.987
+e logo vamos escrevê-la.
+
+00:00:54.020 --> 00:00:59.426
+Depois nós passaremos a todos
+assim como a goals.
+
+00:01:00.226 --> 00:01:04.230
+Vamos garantir que digitamos
+RECEIVE_DATA do jeito certo.
+
+00:01:04.264 --> 00:01:08.668
+E agora, vamos adicionar
+uma nova constante,
+
+00:01:08.702 --> 00:01:11.171
+chamada "RECEIVE_DATA".
+
+00:01:12.939 --> 00:01:16.910
+A pergunta é: "Como mudar
+o estado da Store
+
+00:01:16.943 --> 00:01:19.446
+com base na ação específica?"
+
+00:01:19.479 --> 00:01:24.484
+No que diz respeito à parte todos
+do estado,
+
+00:01:24.517 --> 00:01:29.189
+queremos que sempre que
+a ação RECEIVE_DATA for disparada,
+
+00:01:29.222 --> 00:01:34.060
+ela nos retorne action.todos,
+
+00:01:34.094 --> 00:01:35.462
+porque, a esta altura,
+
+00:01:35.495 --> 00:01:39.332
+o array todos vai ser
+um array vazio.
+
+00:01:39.366 --> 00:01:42.569
+E em vez de um array vazio,
+queremos retornar action.todos,
+
+00:01:42.602 --> 00:01:46.573
+que será como o todos default
+para o aplicativo.
+
+00:01:46.606 --> 00:01:50.176
+E queremos fazer algo similar
+com a goals.
+
+00:01:50.210 --> 00:01:53.713
+Então quando RECEIVE_DATA
+for disparada,
+
+00:01:53.747 --> 00:01:57.817
+nós queremos retornar
+action.goals.
+
+00:01:57.851 --> 00:02:00.920
+Isto mostra que é possível
+ter uma só ação
+
+00:02:00.954 --> 00:02:03.390
+que afeta múltiplas partes
+da sua Store.
+
+00:02:03.423 --> 00:02:07.727
+Porque,
+quando RECEIVE_DATA é disparada,
+
+00:02:07.761 --> 00:02:10.830
+não só estamos atualizando
+a parte todos do estado,
+
+00:02:10.864 --> 00:02:14.067
+como também estamos atualizando
+a parte goals do estado.
+
+00:02:14.100 --> 00:02:17.438
+Agora precisamos vir
+aqui embaixo
+
+00:02:17.439 --> 00:02:20.473
+no componente de aplicativo.
+
+00:02:20.507 --> 00:02:23.376
+Em vez de fazer o log deles,
+
+00:02:23.410 --> 00:02:27.681
+queremos usar a Store,
+que estamos obtendo da props,
+
+00:02:27.714 --> 00:02:29.315
+escrever .dispatch
+
+00:02:29.349 --> 00:02:34.538
+e disparar a criadora de ações
+RECEIVE_DATA
+
+00:02:34.568 --> 00:02:38.825
+que criamos, passando para ela
+a todos e a goals.
+
+00:02:38.858 --> 00:02:43.530
+O que aconteceria
+se apertássemos atualizar aqui?
+
+00:02:43.563 --> 00:02:45.465
+Você vai notar que,
+por dois segundos,
+
+00:02:45.498 --> 00:02:46.833
+não temos nada.
+
+00:02:46.866 --> 00:02:48.568
+Quando os dados carregam,
+
+00:02:48.601 --> 00:02:51.538
+recebemos toda
+a lista todo inicial,
+
+00:02:51.571 --> 00:02:54.107
+assim como os goals iniciais.
+

@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+So far this is looking pretty good.
+
+00:00:02.250 --> 00:00:04.259
+There's just one more feature I want to add.
+
+00:00:04.259 --> 00:00:08.820
+If you'll remember, we need the ability to toggle todo items.
+
+00:00:08.820 --> 00:00:11.580
+Because if you remember back to our todos reducer,
+
+00:00:11.580 --> 00:00:16.185
+whenever the toggle todo item or whenever the toggled todo action type is dispatched,
+
+00:00:16.184 --> 00:00:20.564
+we change the complete property on that todo to the opposite of whatever it is.
+
+00:00:20.565 --> 00:00:24.120
+So, we want the ability to click on me todo and to
+
+00:00:24.120 --> 00:00:28.270
+toggle it from being completed or not completed.
+
+00:00:28.269 --> 00:00:33.774
+So, what we can do is let's go back down to our addTodoToDom function.
+
+00:00:33.774 --> 00:00:36.789
+And now, what we also want to do is we want to change
+
+00:00:36.789 --> 00:00:39.759
+the style of it based on the complete property.
+
+00:00:39.759 --> 00:00:43.789
+So, we can say, node.style.textDecoration,
+
+00:00:43.859 --> 00:00:47.844
+and if todo.complete is true,
+
+00:00:47.844 --> 00:00:50.289
+then we want this to be line-through.
+
+00:00:50.289 --> 00:00:53.214
+And if not, then we just want it to be none.
+
+00:00:53.215 --> 00:00:54.970
+So, that will change the style of it,
+
+00:00:54.969 --> 00:00:56.710
+but we also want to add
+
+00:00:56.710 --> 00:01:00.355
+an event listener to it so it can be clicked on to actually be toggled.
+
+00:01:00.354 --> 00:01:04.479
+So, we will say is node.addEventListener.
+
+00:01:04.480 --> 00:01:06.950
+When this is clicked,
+
+00:01:06.989 --> 00:01:10.780
+now what we want to do is actually change the state of
+
+00:01:10.780 --> 00:01:15.310
+our store specifically the state of the complete property on the todo item.
+
+00:01:15.310 --> 00:01:23.230
+Well, how do we do that? Well, we need to just dispatch an action calling store.dispatch,
+
+00:01:23.230 --> 00:01:26.380
+and we want to invoke the toggledTodoAction creator.
+
+00:01:26.379 --> 00:01:31.390
+And what does that take in? All it needs to take in is the ID of the todo item.
+
+00:01:31.390 --> 00:01:35.230
+So now, back inside of our application,
+
+00:01:35.230 --> 00:01:40.700
+let's say, "Walk the dog" as well as "Read a book."
+
+00:01:40.700 --> 00:01:43.415
+Now, when we click on any of these,
+
+00:01:43.415 --> 00:01:46.010
+you'll notice that we can toggle the state of
+
+00:01:46.010 --> 00:01:51.484
+the todo item because we set up this event listener right here,
+
+00:01:51.484 --> 00:01:54.635
+which says whenever the specific item is clicked on,
+
+00:01:54.635 --> 00:01:58.680
+go ahead and dispatch the toggle to do action.
+

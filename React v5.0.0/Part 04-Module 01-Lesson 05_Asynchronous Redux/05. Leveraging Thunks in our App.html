@@ -1,0 +1,289 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leveraging Thunks in our App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Asynchronous Redux</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. External Data.html">02. External Data</a>
+    </li>
+    <li class="">
+      <a href="03. Optimistic Updates.html">03. Optimistic Updates</a>
+    </li>
+    <li class="">
+      <a href="04. Thunk.html">04. Thunk</a>
+    </li>
+    <li class="">
+      <a href="05. Leveraging Thunks in our App.html">05. Leveraging Thunks in our App</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Leveraging Thunks in our App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Thunkify Goals</p></h3>
+  <video controls>
+  <source src="05. Thunkify Goals-WysYSogVCAo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Thunkify Goals-WysYSogVCAo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Thunkify Goals-WysYSogVCAo.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/f791da39440d43bcd3f24ed37fa078ecaf72cb97" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Thunkify Todos</p></h3>
+  <video controls>
+  <source src="05. Thunkify Todos-GAn1-rLDmYc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Thunkify Todos-GAn1-rLDmYc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Thunkify Todos-GAn1-rLDmYc.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/6fb6208f7f67dfe601a8efa9de44a10208863be9" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Thunkify Initial Data</p></h3>
+  <video controls>
+  <source src="05. Thunkify Initial Data-Bzn33iPkKDA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Thunkify Initial Data-Bzn33iPkKDA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Thunkify Initial Data-Bzn33iPkKDA.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/e40512f5cd22b35c6461fa334636aaa1eb9f27d2" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Converting to thunks improves the responsibilities of the code. Make sure to check off each of the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="926253bb-4f4b-4de2-a514-ce422ead6260--0">
+        <label for="926253bb-4f4b-4de2-a514-ce422ead6260--0"><p>I have converted my Goals to use thunks.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="926253bb-4f4b-4de2-a514-ce422ead6260--1">
+        <label for="926253bb-4f4b-4de2-a514-ce422ead6260--1"><p>I have converted my Todos to use thunks.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="926253bb-4f4b-4de2-a514-ce422ead6260--2">
+        <label for="926253bb-4f4b-4de2-a514-ce422ead6260--2"><p>I have converted the fetching of the initial data to use thunks.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="more-asynchronous-options">More Asynchronous Options</h2>
+<p>The most common requests I get for this course are around more advanced data-fetching topics with Redux. I've resisted because typically they bring in <em>a lot</em> of complexity, while the benefits aren't seen until your data-fetching needs become large enough. With that said, now that you have a solid foundation on Redux and specifically, asynchronous Redux, you'll be in a good position to read up on the different options to decide if any would work best for the type of application you're working on. I encourage to read up on both of the other (popular) options.</p>
+<ul>
+<li><a href="https://github.com/redux-utilities/redux-promise" rel="noopener noreferrer" target="_blank">Redux Promise</a> - FSA-compliant promise middleware for Redux.</li>
+<li><a href="https://github.com/redux-saga/redux-saga" rel="noopener noreferrer" target="_blank">Redux Saga</a> - An alternative side effect model for Redux apps</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>In this section, we used the thunk library that we installed in the previous section to make our code more singularly-focused and maintainable. We converted the:</p>
+<ul>
+<li>Goals code to use thunks</li>
+<li>Todos code to use </li>
+<li>initial data fetching to use thunks </li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Leveraging Thunks in our App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

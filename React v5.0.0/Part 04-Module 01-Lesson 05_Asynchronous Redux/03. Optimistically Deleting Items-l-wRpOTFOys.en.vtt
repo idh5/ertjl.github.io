@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.700
+So, now that we have the initial data from
+
+00:00:02.700 --> 00:00:06.435
+our application which is coming from our fake little API here,
+
+00:00:06.434 --> 00:00:10.370
+the next thing we want to do is when we actually delete an item,
+
+00:00:10.371 --> 00:00:13.089
+we don't just want to update our Redux store,
+
+00:00:13.089 --> 00:00:16.414
+but we also obviously want to update the database as well.
+
+00:00:16.414 --> 00:00:22.230
+So, what we'll do is let's head over to our todos component up here.
+
+00:00:22.629 --> 00:00:25.309
+And now, as I just mentioned,
+
+00:00:25.309 --> 00:00:28.714
+when the removeItem method is invoked,
+
+00:00:28.714 --> 00:00:30.984
+instead of just updating our store,
+
+00:00:30.984 --> 00:00:33.260
+we also need to update our API.
+
+00:00:33.259 --> 00:00:43.820
+So, one way to approach this is we can call API.deleteTodo passing it the todo's ID.
+
+00:00:43.820 --> 00:00:48.990
+And then that's going to return us a promise that when it resolves,
+
+00:00:48.990 --> 00:00:52.875
+you can call this.props.store.dispatch,
+
+00:00:52.875 --> 00:00:55.534
+removeTodoAction just like we did before.
+
+00:00:55.534 --> 00:00:58.054
+So now, instead of just calling dispatch,
+
+00:00:58.054 --> 00:01:00.725
+we delete the item from the database,
+
+00:01:00.725 --> 00:01:05.435
+and then we call dispatch once we get the confirmation that the item has been deleted.
+
+00:01:05.435 --> 00:01:08.015
+And now, if we look at this,
+
+00:01:08.015 --> 00:01:10.564
+so we get our initial data here,
+
+00:01:10.564 --> 00:01:13.944
+and I can come and delete an item.
+
+00:01:13.944 --> 00:01:17.109
+You'll notice here what's happening,
+
+00:01:17.109 --> 00:01:20.920
+is notice that there's a slight delay between the time that I click on
+
+00:01:20.920 --> 00:01:24.507
+delete and when it's actually removed from our UI.
+
+00:01:24.507 --> 00:01:27.040
+So, I click delete and then it's removed.
+
+00:01:27.040 --> 00:01:29.455
+That works relatively fine,
+
+00:01:29.454 --> 00:01:34.159
+but it would be nice if the user got instant feedback when they removed an item.
+
+00:01:34.159 --> 00:01:38.200
+So, what we're going to use is a little technique called optimistic updates.
+
+00:01:38.200 --> 00:01:42.534
+Basically, what we want to do is we don't want to wait until
+
+00:01:42.534 --> 00:01:44.649
+we get a confirmation that the item was deleted
+
+00:01:44.650 --> 00:01:47.370
+from the database before we call dispatch.
+
+00:01:47.370 --> 00:01:49.329
+We want to do that immediately.
+
+00:01:49.329 --> 00:01:54.534
+So what we do, is we first call dispatch before we even make the API request,
+
+00:01:54.534 --> 00:01:57.625
+but then, if there is an error,
+
+00:01:57.625 --> 00:02:00.420
+this.catch function is going to run,
+
+00:02:00.420 --> 00:02:07.665
+we then want to call this.props.stored.dispatch, addTodoAction, todo.
+
+00:02:07.665 --> 00:02:10.967
+So, basically, we remove the item.
+
+00:02:10.967 --> 00:02:12.275
+If there is an issue,
+
+00:02:12.275 --> 00:02:14.250
+we add the item back,
+
+00:02:14.250 --> 00:02:22.449
+and then we can also come in here and just alert 'An error occurred.
+
+00:02:22.449 --> 00:02:25.044
+Try again.' So now, what this is going to look like.
+
+00:02:25.044 --> 00:02:29.469
+Let's see if we can get one of these delay items to fill.
+
+00:02:29.469 --> 00:02:32.340
+So walk the dog, that's succeeded.
+
+00:02:32.340 --> 00:02:35.224
+Wash the car, that's succeeded. Go to the gym.
+
+00:02:35.224 --> 00:02:37.344
+So, it looks like we had an error on Go to the gym,
+
+00:02:37.344 --> 00:02:38.689
+so we get this little pop up.
+
+00:02:38.689 --> 00:02:40.074
+And now when I click okay,
+
+00:02:40.074 --> 00:02:44.944
+you'll notice that we now get that item added back to our todo list.
+
+00:02:44.944 --> 00:02:48.784
+So we get the best of both worlds here because we're still updating our database,
+
+00:02:48.784 --> 00:02:53.859
+but the user is getting instant feedback whenever they click on delete.
+
+00:02:53.860 --> 00:02:57.430
+So, let's do the exact same thing for our goals component.
+
+00:02:57.430 --> 00:02:59.335
+So, inside our remove item here,
+
+00:02:59.335 --> 00:03:03.730
+we want to remove the item from the Redux store.
+
+00:03:03.729 --> 00:03:10.548
+And then what we can do is we can call deleteGoal on our API, passing it goal.ID.
+
+00:03:10.548 --> 00:03:12.370
+And if there is an error,
+
+00:03:12.370 --> 00:03:16.705
+we want to call this.props.store.dispatch,
+
+00:03:16.705 --> 00:03:19.955
+addGoalAction, passing in the goal,
+
+00:03:19.955 --> 00:03:24.475
+and then we will alert 'An error occurred.
+
+00:03:24.474 --> 00:03:26.227
+Try again.' So, now,
+
+00:03:26.227 --> 00:03:30.099
+whenever we remove an item either from our todo list or our goals,
+
+00:03:30.099 --> 00:03:32.784
+not only does the user get instant feedback about that,
+
+00:03:32.784 --> 00:03:37.430
+but we're also updating our fake database with that information.
+

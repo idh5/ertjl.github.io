@@ -1,0 +1,280 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.935
+So, as of right now what we've done,
+
+00:00:01.935 --> 00:00:08.220
+is we've implemented throughout our application different invocations to our API.
+
+00:00:08.220 --> 00:00:12.585
+Now that worked fine because now not only is our data living locally,
+
+00:00:12.585 --> 00:00:16.695
+but it's also living and being modified in a database somewhere.
+
+00:00:16.695 --> 00:00:22.320
+But, the problem is once we started adding in all of this API code,
+
+00:00:22.320 --> 00:00:25.530
+all of our component logic got a little bit
+
+00:00:25.530 --> 00:00:28.679
+messy and in fact what we're doing here is now we're
+
+00:00:28.679 --> 00:00:36.655
+mixing our data fetching code with our API with our component UI code.
+
+00:00:36.655 --> 00:00:38.460
+Now that's not the worst thing in the world,
+
+00:00:38.460 --> 00:00:41.399
+but it would be nice to keep those two things separate.
+
+00:00:41.399 --> 00:00:44.759
+So, we would have, in one part of our application all of our data
+
+00:00:44.759 --> 00:00:48.714
+fetching logic and in our components all of our UI logic.
+
+00:00:48.715 --> 00:00:51.430
+If you remember back to what let's say
+
+00:00:51.429 --> 00:00:56.149
+our removeItem method looked like before we added in all of our API code,
+
+00:00:56.149 --> 00:00:58.372
+was it just looks like that.
+
+00:00:58.372 --> 00:01:02.390
+RemoveItem was invoked and then we dispatched the remove todo action.
+
+00:01:02.390 --> 00:01:05.612
+This code was pretty easy to reason about,
+
+00:01:05.612 --> 00:01:10.245
+removeItem was invoked and so we remove an item from our store.
+
+00:01:10.245 --> 00:01:15.905
+But now, we have a little bit more we have to handle because we are dealing with API.
+
+00:01:15.905 --> 00:01:21.700
+Well, what if there is a way to make our action creators a little more powerful?
+
+00:01:21.700 --> 00:01:24.859
+So, what if there's a way to encapsulate all of our API data
+
+00:01:24.859 --> 00:01:28.814
+fetching logic into the action creator itself.
+
+00:01:28.814 --> 00:01:32.554
+So, instead of invoking the removeTodoAction,
+
+00:01:32.555 --> 00:01:36.250
+what if we created a new action creator.
+
+00:01:36.250 --> 00:01:38.545
+So, we will call this.props.store.dispatch.
+
+00:01:38.545 --> 00:01:40.652
+We'll call this action creator,
+
+00:01:40.652 --> 00:01:43.814
+handleDeleteTodo passing it the todo.
+
+00:01:43.814 --> 00:01:47.454
+And then what if we take all of this logic,
+
+00:01:47.454 --> 00:01:52.109
+cut it, put it inside of this handleDeleteTodo action creator.
+
+00:01:52.109 --> 00:01:54.370
+And now our code is back to what it used to look
+
+00:01:54.370 --> 00:01:57.689
+like where we just dispatch a single action.
+
+00:01:57.689 --> 00:01:59.019
+So, that looks great,
+
+00:01:59.019 --> 00:02:01.205
+but now we need to figure out how to make this work.
+
+00:02:01.206 --> 00:02:03.085
+So, let's head up back to
+
+00:02:03.084 --> 00:02:11.834
+our action creators and let's make a brand new one here called handleDeleteTodo,
+
+00:02:11.835 --> 00:02:14.890
+which takes in a todo item.
+
+00:02:14.889 --> 00:02:17.959
+So, before what our action creators were doing,
+
+00:02:17.960 --> 00:02:20.215
+where they were just returning an object which
+
+00:02:20.215 --> 00:02:23.550
+described the specific event that is occurring.
+
+00:02:23.550 --> 00:02:29.766
+But, if you look at all the logic that this action creator has to do now,
+
+00:02:29.765 --> 00:02:31.899
+it has to dispatch.
+
+00:02:31.900 --> 00:02:35.935
+It has to make an API request and then it has to dispatch again if it needs to.
+
+00:02:35.935 --> 00:02:40.729
+So, we need a way first to get access to dispatch.
+
+00:02:40.729 --> 00:02:42.235
+What if there is a way
+
+00:02:42.235 --> 00:02:50.405
+here and we've seen this pattern before specifically in middleware.
+
+00:02:50.405 --> 00:02:56.939
+What if there was a way to instead of returning an object,
+
+00:02:56.939 --> 00:03:01.814
+we just return a function and this function can be pass dispatch.
+
+00:03:01.814 --> 00:03:08.189
+So, then we can get rid of this.props.store and just dispatch the specific action.
+
+00:03:08.189 --> 00:03:11.750
+This would be awesome because this would enable us to do what
+
+00:03:11.750 --> 00:03:15.914
+we're doing below where we just have to dispatch the single action,
+
+00:03:15.914 --> 00:03:17.900
+the single action creator,
+
+00:03:17.900 --> 00:03:21.635
+and then it handles all of this logic for us.
+
+00:03:21.634 --> 00:03:24.979
+Well what if we created a custom middleware in order
+
+00:03:24.979 --> 00:03:28.250
+to support this kind of functionality?
+
+00:03:28.250 --> 00:03:31.520
+So, what we would have to do is whenever an action is dispatched,
+
+00:03:31.520 --> 00:03:34.145
+if that action is a function,
+
+00:03:34.145 --> 00:03:37.925
+then we invoke it passing it dispatch and if it's not,
+
+00:03:37.925 --> 00:03:40.405
+then we just dispatch as we normally would.
+
+00:03:40.405 --> 00:03:44.864
+So, inside or down here in our middleware,
+
+00:03:44.864 --> 00:03:46.890
+what I'm talking about is something like this.
+
+00:03:46.889 --> 00:03:49.964
+We'll call this a thunk because technically that's what it is.
+
+00:03:49.965 --> 00:03:52.780
+So, we have our weird little pattern here,
+
+00:03:52.780 --> 00:03:55.314
+which takes in a store,
+
+00:03:55.314 --> 00:03:58.514
+next as well as the action.
+
+00:03:58.514 --> 00:04:02.219
+Then inside of here, we will say,
+
+00:04:02.219 --> 00:04:07.900
+if the action equals a function,
+
+00:04:07.900 --> 00:04:11.939
+which it will when we
+
+00:04:11.939 --> 00:04:16.435
+do something like this or instead of returning an object as the action,
+
+00:04:16.435 --> 00:04:20.230
+we return a function as the action.
+
+00:04:20.230 --> 00:04:23.310
+So, when the action is a function,
+
+00:04:23.310 --> 00:04:30.269
+then what we want to do is invoke that action passing it store.dispatch and if it's not,
+
+00:04:30.269 --> 00:04:33.959
+then we just want to invoke next passing it the action.
+
+00:04:33.959 --> 00:04:36.990
+So, now that we have this new middleware,
+
+00:04:36.990 --> 00:04:38.970
+we need to inform Redux about it.
+
+00:04:38.970 --> 00:04:43.205
+So we can just come in here and add it as the first middleware in our chain.
+
+00:04:43.204 --> 00:04:51.879
+And then now what should happen is when we remove a todo item,
+
+00:04:51.879 --> 00:04:57.480
+we will dispatch handleDeleteTodo and that will encapsulate all of this functionality
+
+00:04:57.480 --> 00:05:04.080
+inside of it so we're no longer mixing our data fetching logic with our UI logic.
+
+00:05:04.079 --> 00:05:08.019
+So, if we hit "Refresh" and then we delete a todo item,
+
+00:05:08.019 --> 00:05:09.849
+everything is working normally.
+
+00:05:09.850 --> 00:05:13.285
+But again, instead of that logic being inside of our component,
+
+00:05:13.285 --> 00:05:16.480
+it's now tucked away inside of an action creator.
+
+00:05:16.480 --> 00:05:19.420
+And in fact this pattern is so common it's actually
+
+00:05:19.420 --> 00:05:23.740
+a library that we can include here in our script tag.
+
+00:05:23.740 --> 00:05:25.156
+So, it's called the Redux thunk.
+
+00:05:25.156 --> 00:05:29.408
+So, now what we can do is instead of using our own thunk middleware,
+
+00:05:29.408 --> 00:05:31.697
+we can go ahead and delete this.
+
+00:05:31.697 --> 00:05:34.279
+And as the first argument instead of our own thunk,
+
+00:05:34.279 --> 00:05:43.402
+we can just say ReduxThunk.default because we included the ReduxThunk script.
+
+00:05:43.403 --> 00:05:45.975
+And then now everything will work the exact same,
+
+00:05:45.975 --> 00:05:49.055
+but instead of having our own thunk,
+
+00:05:49.055 --> 00:05:53.540
+we are including the official Redux thunk package.
+

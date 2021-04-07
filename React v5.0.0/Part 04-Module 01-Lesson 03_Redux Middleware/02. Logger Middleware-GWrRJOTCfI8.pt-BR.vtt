@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.195 --> 00:00:04.555
+Agora que temos o middleware
+checker, tudo ficou um pouco falso,
+
+00:00:04.597 --> 00:00:09.211
+mas isso mostra um caso de uso
+da construção de um middleware.
+
+00:00:09.253 --> 00:00:13.763
+Neste vídeo,
+veremos um exemplo mais real
+
+00:00:13.805 --> 00:00:16.301
+e como podemos adicionar
+vários middlewares
+
+00:00:16.343 --> 00:00:18.052
+à Store Redux.
+
+00:00:18.094 --> 00:00:23.042
+Nós criaremos um middleware aqui
+e o chamaremos de "logger".
+
+00:00:23.084 --> 00:00:27.808
+Ele seguirá, como todo middleware,
+o mesmo padrão,
+
+00:00:27.850 --> 00:00:29.534
+no qual é passado a Store,
+
+00:00:29.576 --> 00:00:31.854
+que retornará uma função,
+que passará next,
+
+00:00:31.896 --> 00:00:34.799
+que retornará uma função,
+que passará uma ação.
+
+00:00:35.754 --> 00:00:40.130
+O objetivo do logger é ser
+um middleware de desenvolvimento.
+
+00:00:40.172 --> 00:00:42.802
+No console, sempre que uma ação
+for disparada,
+
+00:00:42.844 --> 00:00:44.954
+queremos ver qual é a ação
+
+00:00:44.996 --> 00:00:48.938
+e qual é o novo estado
+depois que a ação foi disparada.
+
+00:00:48.980 --> 00:00:52.002
+Podemos chamar
+console.group.
+
+00:00:52.044 --> 00:00:55.307
+O título do grupo
+será "action.type".
+
+00:00:55.349 --> 00:00:58.618
+O console.group agrupará
+
+00:00:58.660 --> 00:01:01.963
+tudo entre a primeira invocação
+do console.group
+
+00:01:02.005 --> 00:01:05.115
+e a invocação
+deste console.groupEnd().
+
+00:01:05.988 --> 00:01:08.122
+Aqui dentro,
+
+00:01:08.164 --> 00:01:11.123
+vamos fazer console.log...
+
+00:01:14.060 --> 00:01:15.539
+com a ação,
+
+00:01:15.581 --> 00:01:18.811
+que pode ser feito
+dizendo ", action".
+
+00:01:18.853 --> 00:01:22.730
+Podemos invocar next
+passando a ação.
+
+00:01:22.772 --> 00:01:25.362
+Next será dispatch.
+
+00:01:25.404 --> 00:01:28.617
+É como se estivéssemos disparando
+a ação aqui,
+
+00:01:28.659 --> 00:01:32.274
+que nos permitiria dizer
+
+00:01:32.316 --> 00:01:34.755
+"O novo estado é:".
+
+00:01:35.548 --> 00:01:37.826
+Chamamos store.getState
+
+00:01:37.868 --> 00:01:41.666
+e queremos retornar
+o resultado obtido
+
+00:01:41.708 --> 00:01:44.450
+ao invocar next.
+
+00:01:44.492 --> 00:01:46.915
+Agora que temos
+este middleware logger,
+
+00:01:46.957 --> 00:01:51.154
+queremos garantir que informamos
+a Store Redux sobre ele.
+
+00:01:51.196 --> 00:01:55.057
+Fazemos isso vindo até aqui
+
+00:01:55.099 --> 00:01:59.206
+e passando logger
+como segundo argumento
+
+00:01:59.248 --> 00:02:01.051
+do applyMiddleware.
+
+00:02:01.668 --> 00:02:04.643
+Agora, sempre que dispararmos
+uma ação,
+
+00:02:04.685 --> 00:02:08.898
+antes de ela alcançar a reducer,
+o middleware checker executará,
+
+00:02:08.940 --> 00:02:11.241
+o middleware logger executará
+
+00:02:11.283 --> 00:02:14.627
+para então
+chegar à reducer.
+
+00:02:14.669 --> 00:02:16.739
+Podemos ver isso em ação
+
+00:02:16.781 --> 00:02:19.378
+ao adicionarmos
+uma nova tarefa.
+
+00:02:19.420 --> 00:02:23.245
+Digitamos "Passear com o cachorro".
+Perceba que, no console,
+
+00:02:23.287 --> 00:02:25.703
+obtemos este grupo,
+
+00:02:25.745 --> 00:02:27.933
+no qual temos a ação,
+que foi disparada,
+
+00:02:27.975 --> 00:02:29.205
+a ação ADD_TODO,
+
+00:02:29.247 --> 00:02:31.215
+e temos o novo estado
+
+00:02:32.239 --> 00:02:34.285
+depois que a ação
+foi disparada.
+
+00:02:34.327 --> 00:02:38.608
+Agora temos o novo item todo,
+na parte todo do estado:
+
+00:02:38.650 --> 00:02:40.878
+"Passear com o cachorro".
+

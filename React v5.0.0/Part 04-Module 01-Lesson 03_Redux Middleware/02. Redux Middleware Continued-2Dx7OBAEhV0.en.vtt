@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.790
+So, instead of using checkAndDispatch here,
+
+00:00:02.790 --> 00:00:08.384
+what we want to do is actually create a real Redux middleware and use that instead.
+
+00:00:08.384 --> 00:00:12.625
+So, the way we can do that is by creating a function,
+
+00:00:12.625 --> 00:00:14.855
+we'll go ahead and call this checker.
+
+00:00:14.855 --> 00:00:17.370
+Now, this pattern is going to seem a little bit
+
+00:00:17.370 --> 00:00:20.545
+weird and even when you get used to it unfortunately,
+
+00:00:20.545 --> 00:00:22.360
+it's still going to be weird but stick with me here.
+
+00:00:22.359 --> 00:00:26.879
+So, when we add this checker middleware to our Redux store,
+
+00:00:26.879 --> 00:00:32.129
+what's going to happen is it's going to be parsed the store as the first argument.
+
+00:00:32.130 --> 00:00:37.330
+And then what we need to do is we return another function.
+
+00:00:37.490 --> 00:00:42.130
+This function is going to be parsed next,
+
+00:00:42.130 --> 00:00:45.219
+next is going to be the next middleware in line if we
+
+00:00:45.219 --> 00:00:48.444
+have more than one middleware or it's going to be dispatch,
+
+00:00:48.444 --> 00:00:50.870
+which is similar to what we're doing right here.
+
+00:00:50.869 --> 00:00:52.643
+And then from there,
+
+00:00:52.643 --> 00:00:54.984
+we want to return another function,
+
+00:00:54.984 --> 00:00:57.579
+which is going to be parsed the action.
+
+00:00:57.579 --> 00:01:02.254
+Now, this seems probably super unnecessary and that's reasonable.
+
+00:01:02.255 --> 00:01:06.215
+The creators of Redux themselves have mentioned that this might have been a mistake,
+
+00:01:06.215 --> 00:01:08.703
+this occuring pattern is what it's called.
+
+00:01:08.703 --> 00:01:10.674
+But to avoid breaking changes,
+
+00:01:10.674 --> 00:01:12.884
+they've just kept it as it is.
+
+00:01:12.885 --> 00:01:17.164
+But it's important to know that we have our main function that returns a function,
+
+00:01:17.164 --> 00:01:18.340
+that returns another function,
+
+00:01:18.340 --> 00:01:20.210
+and then down here in this section,
+
+00:01:20.209 --> 00:01:22.059
+we now have access to store,
+
+00:01:22.060 --> 00:01:24.820
+next as well as the action itself.
+
+00:01:24.819 --> 00:01:29.679
+So, now what we can do is let's grab all of this.
+
+00:01:29.680 --> 00:01:32.205
+We can delete check and dispatch.
+
+00:01:32.204 --> 00:01:34.539
+We will just space in right here.
+
+00:01:34.540 --> 00:01:37.720
+Then let me fix the indention real quick.
+
+00:01:37.719 --> 00:01:41.230
+So now, everything is almost exactly the same,
+
+00:01:41.230 --> 00:01:43.265
+because we still have the action.
+
+00:01:43.265 --> 00:01:46.170
+But instead of calling store.dispatch,
+
+00:01:46.170 --> 00:01:49.275
+what we want to do is we want to call next.
+
+00:01:49.275 --> 00:01:52.314
+Again, next is going to be if we have more than one middleware,
+
+00:01:52.313 --> 00:01:55.859
+next is either going to be the next middleware in line or it's going to
+
+00:01:55.859 --> 00:02:00.224
+be the dispatch function just as we had earlier.
+
+00:02:00.224 --> 00:02:01.989
+So, now what we can do,
+
+00:02:01.989 --> 00:02:04.939
+is let's go everywhere where we were calling
+
+00:02:04.939 --> 00:02:09.435
+checkAndDispatch parsing in the store and we can change all of these
+
+00:02:09.435 --> 00:02:18.270
+now to be store.dispatch parsing in our action creator as we had before.
+
+00:02:18.270 --> 00:02:24.954
+And then now in order to tell Redux about our middleware,
+
+00:02:24.954 --> 00:02:30.175
+what we need to do is as the second argument to createStore.
+
+00:02:30.175 --> 00:02:32.925
+And this is going to look kind of weird because we have a bunch of
+
+00:02:32.925 --> 00:02:38.450
+function invocations inside of other function invocations.
+
+00:02:38.449 --> 00:02:42.584
+But right here as the second argument to createStore,
+
+00:02:42.584 --> 00:02:45.979
+what we want to pass it is an invocation of
+
+00:02:45.979 --> 00:02:51.369
+Redux.applyMiddleware and then we just pass in our middleware,
+
+00:02:51.370 --> 00:02:55.694
+which is our checker function right here.
+
+00:02:55.694 --> 00:02:57.680
+So, again what we've done is we've converted
+
+00:02:57.680 --> 00:03:01.500
+our check and dispatch function to be an actual Redux middleware.
+
+00:03:01.500 --> 00:03:05.014
+We've included that or we've told our store about that middleware by
+
+00:03:05.014 --> 00:03:11.154
+passing an invocation of applied middleware as the second argument to createStore.
+
+00:03:11.155 --> 00:03:14.390
+And now if we look at our application,
+
+00:03:14.389 --> 00:03:17.719
+the functionality should be the exact same,
+
+00:03:17.719 --> 00:03:20.689
+where we can add normal to do items and we can also come in here and
+
+00:03:20.689 --> 00:03:24.250
+say "Invest in Bitcoin".
+
+00:03:24.250 --> 00:03:26.229
+What we should get is an alert saying that's
+
+00:03:26.229 --> 00:03:30.125
+a bad idea and then we don't go ahead and add that to the list.
+
+00:03:30.125 --> 00:03:32.379
+So, now the last thing I want to change has
+
+00:03:32.379 --> 00:03:35.049
+to do with how we're building out our middleware function.
+
+00:03:35.050 --> 00:03:38.050
+We're still going to return a function which returns a function.
+
+00:03:38.050 --> 00:03:40.750
+But you'll notice here if we use ES6,
+
+00:03:40.750 --> 00:03:43.490
+this is going to look a lot cleaner.
+
+00:03:43.490 --> 00:03:47.110
+So, what we can do is we have our checker function.
+
+00:03:47.110 --> 00:03:49.010
+This is parsed the store.
+
+00:03:49.009 --> 00:03:53.229
+That then returns a function which is parsed
+
+00:03:53.229 --> 00:03:57.900
+next which returns another function which is parsed the action.
+
+00:03:57.901 --> 00:04:02.597
+And then what we can do is copy all of
+
+00:04:02.597 --> 00:04:10.956
+this and replace the body of our middleware here.
+
+00:04:10.955 --> 00:04:15.669
+So, now instead of having a return and a return and a return,
+
+00:04:15.669 --> 00:04:19.654
+technically it's still the exact same thing but by using arrow functions,
+
+00:04:19.654 --> 00:04:22.609
+it looks a lot better.
+

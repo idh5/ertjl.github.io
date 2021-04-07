@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.169
+At this point, you may be getting a little concerned.
+
+00:00:03.169 --> 00:00:05.468
+This course is supposed to teach you Redux,
+
+00:00:05.469 --> 00:00:07.350
+but we haven't even mentioned it yet.
+
+00:00:07.349 --> 00:00:08.687
+Here's the good news,
+
+00:00:08.688 --> 00:00:14.449
+we've essentially created our own version of Redux that follows the Redux API exactly.
+
+00:00:14.449 --> 00:00:16.679
+Just like the library we built ourselves,
+
+00:00:16.679 --> 00:00:21.699
+Redux has a state management library that has a store, actions, and reducers.
+
+00:00:21.699 --> 00:00:25.184
+Let's go ahead and replace our own implementation with the real Redux,
+
+00:00:25.184 --> 00:00:27.439
+so you can see just how similar they are.
+

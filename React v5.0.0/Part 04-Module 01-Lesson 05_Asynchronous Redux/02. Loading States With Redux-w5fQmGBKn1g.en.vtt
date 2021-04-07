@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.600
+So what we'll do, is let's make a new reducer which is
+
+00:00:03.600 --> 00:00:07.109
+in charge of the loading state for our app.
+
+00:00:07.110 --> 00:00:10.380
+So, let's head up here to our Redux code.
+
+00:00:10.380 --> 00:00:13.695
+And right under our goals reducer,
+
+00:00:13.695 --> 00:00:17.530
+let's have a brand new reducer that we will call loading.
+
+00:00:18.289 --> 00:00:25.079
+We will set the default state to true and then it will also receive an action.
+
+00:00:25.079 --> 00:00:28.439
+And then just as we always do with our reducers,
+
+00:00:28.440 --> 00:00:32.265
+we want to switch on action.type.
+
+00:00:32.265 --> 00:00:36.030
+And we already have an
+
+00:00:36.030 --> 00:00:39.405
+action.type here that we want to listen for us to receive data action type.
+
+00:00:39.405 --> 00:00:42.975
+So we'll say, if the case is receive data,
+
+00:00:42.975 --> 00:00:45.929
+then what we're going to do is just return false or update
+
+00:00:45.929 --> 00:00:49.515
+the loading state of our store to false.
+
+00:00:49.515 --> 00:00:53.160
+And then as default,
+
+00:00:53.159 --> 00:00:56.699
+we always want to return just the initial state.
+
+00:00:56.700 --> 00:00:59.970
+So now, in order to add this brand new reducer to our store,
+
+00:00:59.969 --> 00:01:06.614
+what we need to do, is pass it in here as a property to combine reducers.
+
+00:01:06.614 --> 00:01:08.988
+So we will say, loading.
+
+00:01:08.989 --> 00:01:16.555
+And then now, what this is going to allow us to do is inside of our app component,
+
+00:01:16.555 --> 00:01:19.690
+we're no longer just receiving todos and goals,
+
+00:01:19.689 --> 00:01:22.795
+but we should also be receiving, is loading.
+
+00:01:22.795 --> 00:01:24.640
+So then, we can say,
+
+00:01:24.640 --> 00:01:27.969
+if loading equals true,
+
+00:01:27.969 --> 00:01:32.905
+then go ahead and just render h3.
+
+00:01:32.905 --> 00:01:35.695
+And we will say loading, and then we'll close it.
+
+00:01:35.694 --> 00:01:38.349
+So now, what our UI will look like,
+
+00:01:38.349 --> 00:01:41.140
+is as our app is loading, we just get the state.
+
+00:01:41.140 --> 00:01:43.180
+This is loading, but when it's finished loading,
+
+00:01:43.180 --> 00:01:46.370
+we now get our updated UI.
+

@@ -1,0 +1,227 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.155 --> 00:00:04.336
+Agora que podemos adicionar
+itens todo à lista e alterá-los,
+
+00:00:04.378 --> 00:00:08.761
+além de adicionar metas
+à lista de metas,
+
+00:00:08.803 --> 00:00:10.602
+a próxima funcionalidade
+necessária
+
+00:00:10.644 --> 00:00:14.882
+será a de remover
+qualquer um desses itens.
+
+00:00:15.714 --> 00:00:17.243
+De volta ao código,
+
+00:00:17.285 --> 00:00:21.434
+logo acima
+da função AddTodoToDOM,
+
+00:00:21.476 --> 00:00:26.217
+criaremos uma função helper
+chamada "createRemoveButton".
+
+00:00:26.259 --> 00:00:30.857
+Ela pegará
+uma callback onClick
+
+00:00:30.899 --> 00:00:35.441
+e criará um novo botão
+
+00:00:35.483 --> 00:00:38.870
+usando o createElement
+passando a string button.
+
+00:00:39.766 --> 00:00:45.110
+Também queremos dizer
+que estes botões, no HTML,
+
+00:00:46.231 --> 00:00:49.165
+terão um X em caixa-alta.
+
+00:00:49.207 --> 00:00:52.230
+Sempre que o botão
+for clicado...
+
+00:00:52.272 --> 00:00:55.857
+Chamamos addEventListener
+passando a string click.
+
+00:00:55.899 --> 00:00:57.858
+Sempre que o botão
+for clicado,
+
+00:00:57.900 --> 00:01:03.208
+invocaremos a função onClick,
+que foi passada quando chamamos
+
+00:01:03.250 --> 00:01:04.625
+createRemoveButton.
+
+00:01:04.667 --> 00:01:09.217
+Então diremos
+"return removeBtn".
+
+00:01:09.259 --> 00:01:12.772
+Agora,
+dentro de addTodoToDOM,
+
+00:01:12.814 --> 00:01:16.707
+criaremos um novo botão.
+
+00:01:16.749 --> 00:01:19.285
+Diremos "removeBtn = ".
+
+00:01:20.221 --> 00:01:22.904
+Queremos invocar
+createRemoveButton.
+
+00:01:22.946 --> 00:01:26.191
+Agora passaremos a função
+que será chamada
+
+00:01:26.233 --> 00:01:27.879
+quando o botão for clicado.
+
+00:01:27.921 --> 00:01:33.551
+Para removermos um item
+do estado da Store,
+
+00:01:33.593 --> 00:01:37.351
+precisamos chamar...
+
+00:01:38.167 --> 00:01:40.965
+este criador de ação.
+
+00:01:41.007 --> 00:01:46.158
+Usamos removeTodoAction
+passando o id do item todo.
+
+00:01:46.200 --> 00:01:50.940
+Diremos "store.dispatch"
+e queremos invocar
+
+00:01:50.982 --> 00:01:55.493
+removeTodoAction passando o id
+do item todo,
+
+00:01:55.535 --> 00:01:58.214
+que obtemos
+chamando todo.id.
+
+00:02:00.046 --> 00:02:03.382
+Agora precisamos
+vir aqui e dizer:
+
+00:02:04.038 --> 00:02:06.314
+"Após anexar o texto ao nó,
+
+00:02:06.356 --> 00:02:10.315
+anexe este removeBtn."
+
+00:02:10.357 --> 00:02:12.906
+Se observarmos a IU,
+
+00:02:12.948 --> 00:02:15.660
+sempre que adicionarmos
+um novo item todo,
+
+00:02:16.988 --> 00:02:19.658
+teremos um botão que,
+ao ser clicado,
+
+00:02:19.700 --> 00:02:23.336
+remove o item do estado
+da Store,
+
+00:02:23.378 --> 00:02:25.954
+então ele também será removido
+da IU.
+
+00:02:25.996 --> 00:02:30.978
+Vamos fazer o mesmo
+dentro do addGoalToDOM,
+
+00:02:31.020 --> 00:02:33.700
+para podermos remover metas
+
+00:02:33.742 --> 00:02:36.218
+do estado da Store.
+
+00:02:36.260 --> 00:02:37.687
+Assim como antes,
+
+00:02:37.729 --> 00:02:42.990
+criamos uma variável removeBtn
+invocando createRemoveButton.
+
+00:02:43.823 --> 00:02:46.135
+Quando o botão for clicado,
+
+00:02:46.177 --> 00:02:51.328
+dispararemos o removeGoalAction
+passando o id da meta,
+
+00:02:51.370 --> 00:02:53.521
+que obtemos do goal.id.
+
+00:02:54.210 --> 00:02:57.528
+Também queremos anexar isso
+ao nó.
+
+00:02:57.570 --> 00:03:01.640
+Chamamos appendChild
+passando removeBtn.
+
+00:03:01.682 --> 00:03:03.777
+Para garantir que funciona,
+
+00:03:04.896 --> 00:03:07.257
+podemos dizer
+"aprender Redux".
+
+00:03:07.299 --> 00:03:10.833
+Mais uma. "Correr a maratona".
+
+00:03:10.875 --> 00:03:13.977
+Agora podemos apagar uma,
+
+00:03:14.649 --> 00:03:17.336
+removendo o estado da Store
+
+00:03:17.378 --> 00:03:19.560
+e da IU.
+
+00:03:19.602 --> 00:03:21.815
+Por fim, só uma coisinha.
+
+00:03:21.857 --> 00:03:26.598
+Agora eu apagarei
+todos estes disparos,
+
+00:03:26.640 --> 00:03:28.492
+pois eles não precisam
+estar aqui,
+
+00:03:28.534 --> 00:03:32.133
+porque pegamos
+esses disparos
+
+00:03:32.175 --> 00:03:34.889
+e os conectamos à IU.
+
+00:03:34.931 --> 00:03:39.538
+Então, para atualizar
+o estado da Store,
+
+00:03:39.580 --> 00:03:42.849
+fazemos isso na IU.
+

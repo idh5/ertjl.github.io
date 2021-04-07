@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.240
+At this point, we have our store, our actions,
+
+00:00:03.240 --> 00:00:07.095
+and our reducers, which together make up the foundation of Redux.
+
+00:00:07.094 --> 00:00:10.890
+In this lesson, we're going to take a look at Redux Middleware and
+
+00:00:10.890 --> 00:00:15.040
+how it allows us to hook into the Redux lifecycle and why that's beneficial.
+

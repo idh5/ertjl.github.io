@@ -1,0 +1,370 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.195 --> 00:00:03.697
+Agora que podemos adicionar
+afazeres e metas
+
+00:00:03.739 --> 00:00:05.705
+ao estado da Store,
+
+00:00:05.747 --> 00:00:10.498
+o próximo passo será
+exibir os itens na IU
+
+00:00:10.540 --> 00:00:13.593
+e não apenas no console.
+
+00:00:13.635 --> 00:00:16.880
+De volta
+ao arquivo index.html,
+
+00:00:16.922 --> 00:00:22.616
+vá até a parte debaixo,
+onde está o código DOM.
+
+00:00:22.658 --> 00:00:24.648
+Eu adicionarei
+um nó para isso.
+
+00:00:24.690 --> 00:00:27.904
+Agora queremos criar
+duas novas funções.
+
+00:00:27.946 --> 00:00:29.865
+Nós as chamaremos...
+
+00:00:31.370 --> 00:00:35.120
+de "addTodoToDOM",
+
+00:00:36.681 --> 00:00:40.930
+e a segunda será
+"addGoalToDOM".
+
+00:00:41.681 --> 00:00:44.494
+Elas serão responsáveis
+
+00:00:44.536 --> 00:00:48.855
+por pegar um afazer
+ou uma meta
+
+00:00:48.897 --> 00:00:50.958
+e, como o próprio nome diz,
+
+00:00:51.000 --> 00:00:55.000
+adicionar o item à DOM
+
+00:00:55.042 --> 00:00:57.783
+para que ele apareça na IU.
+
+00:00:58.439 --> 00:01:01.789
+Primeiro, faremos
+o AddTodoToDOM.
+
+00:01:01.831 --> 00:01:04.845
+Como já foi dito,
+isso pegará um item todo.
+
+00:01:04.887 --> 00:01:08.206
+Se você não estiver familiarizado
+com o script DOM,
+
+00:01:08.248 --> 00:01:11.655
+em criar coisas como getElementById
+ou addEventListener,
+
+00:01:11.697 --> 00:01:13.598
+isso poderá ser novo,
+
+00:01:13.640 --> 00:01:16.686
+mas só estamos pegando
+um item todo
+
+00:01:16.728 --> 00:01:20.893
+e o adicionando
+a este item de lista.
+
+00:01:20.935 --> 00:01:23.895
+Com as metas,
+pegamos cada meta,
+
+00:01:23.937 --> 00:01:26.276
+criamos
+um novo item de lista
+
+00:01:26.318 --> 00:01:29.527
+e adicionamos
+o elemento à lista.
+
+00:01:31.023 --> 00:01:35.669
+Em vez de AddTodoToDOM,
+primeiro criaremos um novo nó
+
+00:01:35.711 --> 00:01:38.053
+usando
+document.createElement.
+
+00:01:38.095 --> 00:01:40.997
+Como foi dito, isso será
+um item de lista.
+
+00:01:41.039 --> 00:01:46.182
+Agora criamos um TextNode
+dizendo "document.createTextNode".
+
+00:01:47.543 --> 00:01:52.541
+Passaremos o nome desse TextNode,
+que será o mesmo do item todo.
+
+00:01:52.583 --> 00:01:57.329
+Agora pegamos o nó
+e anexamos
+
+00:01:57.371 --> 00:01:59.520
+o TextNode nele
+
+00:01:59.562 --> 00:02:03.908
+e poderemos pegar a lista
+dizendo:
+
+00:02:03.950 --> 00:02:09.516
+"document.getElementById"
+passando "todos".
+
+00:02:09.558 --> 00:02:13.665
+E queremos anexar a ela
+o nosso nó.
+
+00:02:13.707 --> 00:02:18.889
+Agora faremos algo parecido
+com a função addGoalToDOM.
+
+00:02:18.931 --> 00:02:21.585
+Isso pegará uma meta.
+
+00:02:21.627 --> 00:02:26.747
+Primeiro, criamos o nó
+usando document.createElement.
+
+00:02:27.938 --> 00:02:30.490
+Queremos criar
+um novo item de lista.
+
+00:02:30.532 --> 00:02:34.602
+Agora, assim como já fizemos,
+vamos criar um novo TextNode
+
+00:02:34.644 --> 00:02:37.818
+usando
+document.createTextNode
+
+00:02:37.860 --> 00:02:42.257
+e passando o nome do TextNode,
+que será chamado de ".name".
+
+00:02:42.299 --> 00:02:47.154
+Agora pegaremos o nó
+e anexaremos o TextNode a ele.
+
+00:02:47.196 --> 00:02:50.793
+Assim como fizemos
+no addTodoToDOM,
+
+00:02:50.835 --> 00:02:54.026
+diremos
+"document.getElementById",
+
+00:02:54.068 --> 00:02:57.455
+obteremos a lista
+de metas
+
+00:02:57.497 --> 00:03:00.151
+e anexaremos o nó a ela.
+
+00:03:00.193 --> 00:03:02.833
+Agora que temos
+estas duas funções,
+
+00:03:02.875 --> 00:03:06.886
+que nos ajudarão
+a adicionar novos itens à DOM,
+
+00:03:06.928 --> 00:03:10.167
+o próximo passo será invocar
+essas funções
+
+00:03:10.209 --> 00:03:12.574
+para cada item todo
+ou para cada meta
+
+00:03:12.616 --> 00:03:15.950
+que residir dentro da Store.
+
+00:03:15.992 --> 00:03:19.153
+Seguimos para o que chamamos
+de "store.subscribe".
+
+00:03:20.328 --> 00:03:24.847
+Agora, em vez de usar console.log
+para o novo estado,
+
+00:03:24.889 --> 00:03:28.022
+vamos adicionar
+os itens à DOM.
+
+00:03:28.064 --> 00:03:32.156
+Pegamos as metas
+e os afazeres do estado,
+
+00:03:32.198 --> 00:03:35.267
+que obtemos
+chamando store.getState,
+
+00:03:35.309 --> 00:03:37.411
+e queremos,
+
+00:03:37.453 --> 00:03:40.083
+para cada item
+dentro de goals,
+
+00:03:40.125 --> 00:03:43.347
+chamar addGoalToDOM.
+
+00:03:43.389 --> 00:03:47.923
+E, para cada item
+dentro do todos,
+
+00:03:47.965 --> 00:03:50.493
+adicionaremos ou invocaremos
+
+00:03:51.523 --> 00:03:54.307
+a função addTodoToDOM.
+
+00:03:54.349 --> 00:03:56.691
+Agora,
+
+00:03:56.733 --> 00:03:58.539
+se recarregarmos
+o aplicativo,
+
+00:03:58.581 --> 00:04:02.315
+adicionaremos
+um novo item todo chamado
+
+00:04:03.219 --> 00:04:04.875
+"passear com o cachorro".
+
+00:04:05.666 --> 00:04:08.210
+Perceba
+que ele aparece aqui.
+
+00:04:08.252 --> 00:04:10.210
+E podemos adicionar
+uma nova meta,
+
+00:04:10.252 --> 00:04:12.130
+como "aprender Redux".
+
+00:04:13.347 --> 00:04:15.042
+Ela está aqui,
+
+00:04:15.084 --> 00:04:18.458
+mas perceba que "passear
+com o cachorro" aparece duas vezes.
+
+00:04:18.500 --> 00:04:21.220
+Isso porque -
+se você se lembra -
+
+00:04:21.262 --> 00:04:24.860
+quando nos inscrevemos
+para a Store,
+
+00:04:24.902 --> 00:04:27.459
+dissemos que sempre
+que Store fosse alterada
+
+00:04:27.501 --> 00:04:31.796
+esta linha e esta linha
+deveriam ser executadas.
+
+00:04:31.838 --> 00:04:35.348
+Nós adicionamos
+um novo item todo ao estado,
+
+00:04:35.390 --> 00:04:37.580
+que executou esta função
+
+00:04:37.622 --> 00:04:41.546
+e inseriu o item todo
+dentro da DOM.
+
+00:04:41.588 --> 00:04:44.099
+E, ao adicionarmos
+a nova meta,
+
+00:04:44.141 --> 00:04:45.776
+ela foi adicionada à DOM,
+
+00:04:45.818 --> 00:04:50.913
+mas também adicionamos
+o item anterior à DOM.
+
+00:04:50.955 --> 00:04:52.337
+Podemos consertar isso
+
+00:04:52.379 --> 00:04:55.842
+dizendo que desejamos
+reconfigurar
+
+00:04:55.884 --> 00:04:57.065
+as duas listas
+
+00:04:57.107 --> 00:04:59.538
+sempre que a função subscribe
+for invocada.
+
+00:04:59.580 --> 00:05:03.621
+Então podemos dizer
+"innerHTML = ' '".
+
+00:05:03.663 --> 00:05:05.708
+Sempre que a Store
+for alterada,
+
+00:05:05.750 --> 00:05:10.662
+queremos reiniciar
+as metas e os afazeres na DOM,
+
+00:05:11.334 --> 00:05:14.325
+queremos mapear
+as metas e os afazeres
+
+00:05:14.367 --> 00:05:16.197
+e adicioná-los à DOM.
+
+00:05:16.239 --> 00:05:21.269
+A DOM é uma representação
+do estado dentro da Store
+
+00:05:21.311 --> 00:05:23.278
+e não o contrário.
+
+00:05:23.320 --> 00:05:25.833
+Agora diremos
+
+00:05:27.736 --> 00:05:29.197
+"passear com o cachorro"
+
+00:05:30.086 --> 00:05:31.797
+e "aprender Redux".
+
+00:05:31.839 --> 00:05:34.083
+E, sempre que adicionarmos
+um novo item,
+
+00:05:34.125 --> 00:05:38.053
+a DOM será limpa e os itens
+serão recolocados nela.
+

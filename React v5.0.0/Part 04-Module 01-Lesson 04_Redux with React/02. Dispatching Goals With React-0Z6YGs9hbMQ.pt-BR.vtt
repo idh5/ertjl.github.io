@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.197 --> 00:00:03.498
+Agora que podemos disparar
+novos itens do componente Todos,
+
+00:00:03.540 --> 00:00:08.081
+queremos fazer algo parecido
+com o componente Goals.
+
+00:00:08.123 --> 00:00:12.520
+Primeiro, ajustamos a IU
+do componente Goals.
+
+00:00:12.562 --> 00:00:15.336
+Adicionaremos um cabeçalho
+para "Goals".
+
+00:00:15.378 --> 00:00:17.840
+Vamos renderizar
+um campo input
+
+00:00:17.882 --> 00:00:21.545
+que será type='text'
+e terá Add Goal como placeholder.
+
+00:00:21.587 --> 00:00:24.369
+Este será
+um componente descontrolado.
+
+00:00:24.411 --> 00:00:28.968
+Pegaremos uma referência
+ao campo input
+
+00:00:29.010 --> 00:00:31.544
+e colocaremos
+na instância do componente.
+
+00:00:31.586 --> 00:00:34.120
+Assim obteremos o valor disto
+mais à frente.
+
+00:00:34.162 --> 00:00:37.266
+Agora precisaremos
+renderizar um botão.
+
+00:00:40.194 --> 00:00:42.273
+O botão dirá "Add Goal".
+
+00:00:42.906 --> 00:00:44.448
+Ao ser clicado,
+
+00:00:44.490 --> 00:00:49.664
+queremos executar ou invocar
+o método addItem,
+
+00:00:49.706 --> 00:00:51.937
+que estamos prestes a criar.
+
+00:00:51.979 --> 00:00:55.721
+Aqui em cima, o addItem...
+
+00:00:55.763 --> 00:00:58.250
+chamará preventDefault.
+
+00:01:01.834 --> 00:01:05.209
+Depois precisamos pegar
+o nome da nova meta,
+
+00:01:05.251 --> 00:01:07.857
+que obtemos
+realizando this.input.value.
+
+00:01:07.899 --> 00:01:11.400
+Isso graças a esta linha.
+
+00:01:11.442 --> 00:01:15.032
+Reiniciamos o campo input
+para que seja uma string vazia.
+
+00:01:15.074 --> 00:01:19.425
+Agora disparamos addGoalAction
+
+00:01:19.467 --> 00:01:21.696
+passando a meta
+ao criador de ação.
+
+00:01:21.738 --> 00:01:24.178
+Assim como fizemos
+com o Todos,
+
+00:01:24.220 --> 00:01:26.793
+precisamos
+obter acesso à Store.
+
+00:01:26.835 --> 00:01:31.161
+Passamos isso como propriedade
+para o componente Goals.
+
+00:01:31.203 --> 00:01:34.064
+Agora, dentro do Goals,
+
+00:01:34.106 --> 00:01:37.424
+chamaremos
+this.props.store.dispatch
+
+00:01:37.466 --> 00:01:40.216
+invocando addGoalAction,
+
+00:01:40.258 --> 00:01:44.608
+passando a meta, que tem ID
+gerado no generateId,
+
+00:01:44.650 --> 00:01:49.090
+e name,
+que vem do campo input.
+
+00:01:49.132 --> 00:01:52.696
+Se observarmos isso
+dentro do aplicativo,
+
+00:01:52.738 --> 00:01:55.194
+poderemos adicionar
+um novo afazer...
+
+00:01:58.033 --> 00:02:01.426
+e também poderemos adicionar
+uma nova meta.
+
+00:02:02.434 --> 00:02:04.384
+Vemos a nova meta
+
+00:02:04.426 --> 00:02:09.522
+dentro da IU JavaScript Vanilla
+porque estes dois aplicativos,
+
+00:02:09.564 --> 00:02:11.896
+o Vanilla e o React,
+
+00:02:11.938 --> 00:02:14.922
+compartilham
+a mesma Store Redux.
+

@@ -1,0 +1,203 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.935
+Você deve se lembrar
+de que, quando construímos
+
+00:00:01.968 --> 00:00:03.436
+o aplicativo
+Vanilla JavaScript,
+
+00:00:03.470 --> 00:00:06.072
+nós usamos a store.subscribe
+
+00:00:06.106 --> 00:00:08.208
+para nos notificar
+quando a Store fosse modificada.
+
+00:00:08.241 --> 00:00:09.509
+E, quando ela muda,
+
+00:00:09.542 --> 00:00:12.846
+nós recebemos os novos goals
+e novos todos.
+
+00:00:12.879 --> 00:00:17.017
+E adicionamos cada um destes itens
+para a DOM,
+
+00:00:17.050 --> 00:00:22.122
+usando a função addGoalToDOM
+ou a função addTodoToDOM também.
+
+00:00:22.155 --> 00:00:26.559
+Mas com o React,
+não é preciso fazer nada com a DOM,
+
+00:00:26.593 --> 00:00:29.662
+porque o React lida com tudo isto
+para nós, dos bastidores.
+
+00:00:29.696 --> 00:00:31.464
+Este é
+um dos grandes benefícios do React.
+
+00:00:31.498 --> 00:00:34.034
+Ainda queremos fazer o subscribe
+
+00:00:34.067 --> 00:00:36.469
+para a Store dentro
+do nosso componente do React,
+
+00:00:36.503 --> 00:00:39.739
+mas, em vez de adicionar itens
+à DOM,
+
+00:00:39.773 --> 00:00:42.375
+só queremos renderizar novamente
+os nossos componentes.
+
+00:00:42.409 --> 00:00:45.178
+Então vamos adicionar
+o método de ciclo de vida
+
+00:00:45.211 --> 00:00:47.547
+do componentDidMount.
+
+00:00:47.580 --> 00:00:51.851
+E podemos usar a Store
+que vai vir do this.props.
+
+00:00:51.885 --> 00:00:57.624
+Agora, usamos
+a store.subscribe.
+
+00:00:57.657 --> 00:01:01.795
+E o que fazemos
+quando a Store muda?
+
+00:01:01.828 --> 00:01:05.231
+Nós queremos causar
+uma nova renderização
+
+00:01:05.265 --> 00:01:09.202
+porque, dentro
+do método de renderização,
+
+00:01:09.235 --> 00:01:11.550
+podemos descer até aqui
+
+00:01:13.275 --> 00:01:15.375
+e pegar a Store
+vinda de this.props.
+
+00:01:15.408 --> 00:01:18.745
+Podemos pegar a todos
+assim como a goals,
+
+00:01:18.778 --> 00:01:22.515
+que estão vindo
+da store.getState,
+
+00:01:22.549 --> 00:01:26.119
+e podemos passar cada uma delas
+como um prop
+
+00:01:26.152 --> 00:01:29.022
+para
+seus componentes específicos.
+
+00:01:29.055 --> 00:01:32.058
+E agora,
+sempre que a Store mudar,
+
+00:01:32.092 --> 00:01:34.227
+ao causar
+uma nova renderização,
+
+00:01:34.260 --> 00:01:36.062
+receberemos este estado,
+
+00:01:36.096 --> 00:01:38.531
+renderizaremos os componentes
+com este novo estado
+
+00:01:38.565 --> 00:01:39.666
+e, finalmente,
+
+00:01:39.699 --> 00:01:45.205
+estes componentes renderizarão
+uma lista contendo todos e goals.
+
+00:01:45.238 --> 00:01:48.475
+Sempre que você quiser causar
+uma nova renderização no React,
+
+00:01:48.508 --> 00:01:50.143
+você usa o setState,
+
+00:01:50.176 --> 00:01:52.045
+porque é isto
+que o setState faz.
+
+00:01:52.078 --> 00:01:54.581
+Você diz ao React
+que o estado do seu aplicativo muda,
+
+00:01:54.614 --> 00:01:56.016
+então atualizamos a IU.
+
+00:01:56.049 --> 00:01:59.452
+Mas não temos nenhum estado dentro
+deste componente,
+
+00:01:59.486 --> 00:02:01.021
+e não faz sentido adicionar um
+
+00:02:01.054 --> 00:02:03.256
+só para causar
+uma nova renderização.
+
+00:02:03.289 --> 00:02:04.324
+O que podemos fazer,
+
+00:02:04.357 --> 00:02:06.826
+e este é um dispositivo
+raramente utilizado no React,
+
+00:02:06.860 --> 00:02:08.461
+porque tipicamente é
+antipadrão,
+
+00:02:08.495 --> 00:02:12.599
+mas, para o nosso caso específico,
+é exatamente do que precisamos.
+
+00:02:12.632 --> 00:02:15.135
+Então usamos
+o this.forceUpdate.
+
+00:02:15.168 --> 00:02:18.371
+Então cada componente tem
+um método forceUpdate nele,
+
+00:02:18.405 --> 00:02:19.439
+e, quando o usarmos,
+
+00:02:19.472 --> 00:02:22.876
+ele vai causar uma nova renderização
+daquele componente específico.
+
+00:02:22.909 --> 00:02:25.779
+E, por causa do jeito
+que o React funciona,
+
+00:02:25.812 --> 00:02:28.548
+os elementos filhos também farão
+uma nova renderização,
+
+00:02:28.581 --> 00:02:30.617
+nos dando a IU atualizada.
+

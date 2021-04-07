@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.944
+Now the only other functionality that we need to migrate to use
+
+00:00:03.944 --> 00:00:09.044
+our API is adding a new todo item as well as adding a new goal.
+
+00:00:09.044 --> 00:00:12.539
+So inside of add item what we can do is,
+
+00:00:12.539 --> 00:00:14.129
+let's move all of this down,
+
+00:00:14.130 --> 00:00:18.990
+and the method we want to call on our API is going to be API.saveTodo.
+
+00:00:18.989 --> 00:00:23.039
+What we need to pass it is the value of the new todo item or the name of
+
+00:00:23.039 --> 00:00:28.184
+the new todo item which we can get by calling this.input.value.
+
+00:00:28.184 --> 00:00:31.229
+And then, when this function resolves,
+
+00:00:31.230 --> 00:00:37.159
+we're going to get the new todo item that we can add to the state of our store.
+
+00:00:37.159 --> 00:00:41.250
+So right now what we're doing is we have this code down here,
+
+00:00:41.250 --> 00:00:42.630
+so on the client,
+
+00:00:42.630 --> 00:00:45.660
+we are generating an id and we have complete set to false.
+
+00:00:45.659 --> 00:00:52.125
+It doesn't make a whole lot of sense to generate id's on the client for obvious reasons.
+
+00:00:52.125 --> 00:00:53.939
+So what we'll do is,
+
+00:00:53.939 --> 00:00:57.210
+assume that when we invoke saveTodo from our API,
+
+00:00:57.210 --> 00:01:01.649
+what we get back is the brand new todo item that will look similar to this right here.
+
+00:01:01.649 --> 00:01:06.254
+So what that means we can do is then we can call
+
+00:01:06.254 --> 00:01:12.405
+this.props.store.dispatch with our addTodoAction here.
+
+00:01:12.405 --> 00:01:14.820
+And what we pass this is going to be
+
+00:01:14.819 --> 00:01:17.939
+the new todo item that we're getting back from the server.
+
+00:01:17.939 --> 00:01:19.519
+And then from there,
+
+00:01:19.519 --> 00:01:24.164
+we can add in this line right here which is going to reset the input field.
+
+00:01:24.165 --> 00:01:29.460
+And then last, we can add a catch here just to say,
+
+00:01:29.459 --> 00:01:33.329
+"Sorry about that, there was an error. Try again."
+
+00:01:33.329 --> 00:01:36.000
+So notice that we are not doing
+
+00:01:36.000 --> 00:01:41.775
+optimistic updates with adding an item and the only reason for that is this right here,
+
+00:01:41.775 --> 00:01:45.060
+because the id is being generated on the server for us,
+
+00:01:45.060 --> 00:01:50.025
+so we could figure out a way to add it back to our redux store if the request fell,
+
+00:01:50.025 --> 00:01:52.245
+but I think at this point you already get the idea of
+
+00:01:52.245 --> 00:01:56.882
+optimistic updates so for now we will just save this and when the request succeeds,
+
+00:01:56.882 --> 00:01:59.415
+we'll go ahead and add it to our redux store.
+
+00:01:59.415 --> 00:02:04.530
+And we want to do something very similar for our goals component here.
+
+00:02:04.530 --> 00:02:08.556
+So same thing we will call API.saveGoal,
+
+00:02:08.556 --> 00:02:14.770
+this time passing it the name of the goal which we get from this.input.value.
+
+00:02:14.770 --> 00:02:16.045
+When that resolves the,
+
+00:02:16.044 --> 00:02:21.280
+API is going to return us or give us the brand new goal that it created.
+
+00:02:21.280 --> 00:02:25.030
+We can then call this.props.store.dispatch
+
+00:02:25.030 --> 00:02:28.914
+invoking the add goal action passing in the new goal,
+
+00:02:28.914 --> 00:02:34.810
+and then from there we just say this.input.value equals an empty string to reset
+
+00:02:34.810 --> 00:02:40.725
+the input filled and then we'll have a catch here to alert,
+
+00:02:40.725 --> 00:02:43.330
+"There was an error, sorry about that.
+
+00:02:43.330 --> 00:02:47.709
+Go ahead and try again." So now we can delete all of this code.
+
+00:02:47.709 --> 00:02:52.030
+And now if we head back over to our app,
+
+00:02:52.030 --> 00:02:54.055
+we load our initial data,
+
+00:02:54.055 --> 00:02:56.020
+we can add a new item here,
+
+00:02:56.020 --> 00:02:58.850
+walk the dog was already taken so what can I do?
+
+00:02:58.849 --> 00:03:01.569
+Let's do, read a book.
+
+00:03:01.569 --> 00:03:04.239
+Now, you'll notice there's a slight delay because it is
+
+00:03:04.240 --> 00:03:06.625
+making an asynchronous request there,
+
+00:03:06.625 --> 00:03:08.889
+and then we get that in our to do list.
+
+00:03:08.889 --> 00:03:11.141
+And then we can add a new goal,
+
+00:03:11.141 --> 00:03:13.939
+say, run a marathon.
+
+00:03:14.430 --> 00:03:18.520
+And now that item was added to our database and
+
+00:03:18.520 --> 00:03:21.734
+when we got a confirmation that it was actually added,
+
+00:03:21.734 --> 00:03:25.580
+we went ahead and added it to our redux store as well.
+

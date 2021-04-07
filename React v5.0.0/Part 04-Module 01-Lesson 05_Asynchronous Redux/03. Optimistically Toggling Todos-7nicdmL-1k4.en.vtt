@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.620
+Now, just as we did with our removeItem method here,
+
+00:00:04.620 --> 00:00:10.230
+we also want to optimistically allow the user to toggle a todo item.
+
+00:00:10.230 --> 00:00:13.500
+So, what we'll do is, we'll keep this line here.
+
+00:00:13.500 --> 00:00:16.425
+So, we instantly dispatch toggleTodoAction.
+
+00:00:16.425 --> 00:00:23.115
+After that, the API method we want to invoke is going to be saveTodoToggle,
+
+00:00:23.114 --> 00:00:25.469
+parsing it the id.
+
+00:00:25.469 --> 00:00:28.875
+And then, if there is an error,
+
+00:00:28.875 --> 00:00:34.064
+we want to go ahead and call this.props.store.dispatch toggledTodoAction.
+
+00:00:34.064 --> 00:00:37.009
+So we basically want to redo or undo
+
+00:00:37.009 --> 00:00:41.314
+the toggle event that occurred parsing in the id again.
+
+00:00:41.314 --> 00:00:43.849
+And then as always, let's just say,
+
+00:00:43.850 --> 00:00:46.760
+"An error occurred. Try again."
+
+00:00:46.759 --> 00:00:54.138
+So now, what should happen if we refresh our app and we toggle a todo item?
+
+00:00:54.139 --> 00:00:57.755
+Eventually, this request will fail.
+
+00:00:57.755 --> 00:00:59.330
+And when it does,
+
+00:00:59.329 --> 00:01:01.504
+so there it goes, we get an error.
+
+00:01:01.505 --> 00:01:07.780
+When it does, it's going to revert back to its previous state, and there we go.
+

@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.484
+In this lesson, we looked at adding UI to our state management library.
+
+00:00:04.484 --> 00:00:09.824
+As it turns out, the state management library we built was really just Redux all along.
+
+00:00:09.824 --> 00:00:11.160
+In the next lesson,
+
+00:00:11.160 --> 00:00:14.419
+we'll learn how to hook into the Redux lifecycle with Middleware.
+

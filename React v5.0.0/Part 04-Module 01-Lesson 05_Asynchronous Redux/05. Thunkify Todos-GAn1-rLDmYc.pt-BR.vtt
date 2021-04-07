@@ -1,0 +1,208 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.019 --> 00:00:02.186
+Assim como fizemos
+com o componente Goals,
+
+00:00:02.228 --> 00:00:05.571
+vamos aplicar o thunk
+ao componente Todos.
+
+00:00:05.613 --> 00:00:11.119
+Nós já fizemos um criador de ação
+assíncrono handleDeleteTodo,
+
+00:00:11.161 --> 00:00:12.966
+então só temos
+
+00:00:13.008 --> 00:00:17.518
+a lógica do addItem
+e do toggleItem.
+
+00:00:17.560 --> 00:00:22.073
+E isso será igual ao que fizemos
+com o componente Goals.
+
+00:00:22.115 --> 00:00:26.544
+Nós acabaremos fazendo
+um novo criador de ação
+
+00:00:26.586 --> 00:00:29.561
+chamado "handleAddTodo"
+
+00:00:29.603 --> 00:00:31.277
+e passaremos duas coisas:
+
+00:00:31.319 --> 00:00:35.803
+o nome do novo afazer,
+que obtemos de this.input.value,
+
+00:00:35.845 --> 00:00:38.973
+e uma função callback,
+que, quando invocada,
+
+00:00:39.015 --> 00:00:43.540
+reiniciará o valor input
+para uma string vazia.
+
+00:00:43.582 --> 00:00:46.884
+Agora copiaremos
+esta lógica
+
+00:00:46.926 --> 00:00:49.366
+para dentro
+
+00:00:50.382 --> 00:00:52.581
+de onde estão
+os criadores de ação.
+
+00:00:52.623 --> 00:00:54.325
+Vamos criar um novo.
+
+00:00:55.398 --> 00:00:58.109
+Vamos fazer isso acima
+do handleDeleteTodo.
+
+00:00:59.127 --> 00:01:02.749
+Ele foi chamado
+pelo handleAddTodo
+
+00:01:02.791 --> 00:01:04.564
+e pegou duas coisas:
+
+00:01:04.606 --> 00:01:09.334
+o nome do item todo
+e a callback.
+
+00:01:09.376 --> 00:01:11.892
+Como sempre, queremos
+retornar uma função
+
+00:01:11.934 --> 00:01:14.756
+que será passada
+como dispatch.
+
+00:01:14.798 --> 00:01:16.957
+Agora colamos a lógica
+
+00:01:16.999 --> 00:01:20.572
+para invocar saveTodo
+passando name
+
+00:01:20.614 --> 00:01:23.477
+e, em vez de chamarmos
+this.props.store,
+
+00:01:23.519 --> 00:01:24.997
+já temos acesso à dispatch,
+
+00:01:25.039 --> 00:01:30.775
+pois isso foi passado
+para a função que retornamos.
+
+00:01:30.817 --> 00:01:33.188
+Agora, para reiniciar
+o valor input,
+
+00:01:33.230 --> 00:01:37.525
+invocamos a função callback.
+Parece ótimo.
+
+00:01:37.567 --> 00:01:39.915
+Agora faremos o mesmo,
+
+00:01:39.957 --> 00:01:44.170
+mas para alternar um item.
+
+00:01:44.212 --> 00:01:49.892
+Faremos um novo criador de ação,
+que encapsula toda esta lógica.
+
+00:01:49.934 --> 00:01:51.844
+Vamos chamá-lo
+
+00:01:52.548 --> 00:01:53.924
+de "handleToggle”
+
+00:01:53.966 --> 00:01:55.932
+passando a id.
+
+00:01:56.589 --> 00:01:59.323
+Agora copiamos tudo isto,
+
+00:01:59.365 --> 00:02:02.099
+voltamos para onde...
+
+00:02:02.141 --> 00:02:04.116
+os criadores de ação estão
+
+00:02:04.823 --> 00:02:08.327
+e colocamos o criador de ação
+chamado "handleToggle",
+
+00:02:10.285 --> 00:02:12.462
+para o qual passaremos uma id
+
+00:02:12.504 --> 00:02:17.518
+e que precisa retornar uma função,
+para a qual passaremos dispatch.
+
+00:02:17.560 --> 00:02:21.847
+Agora colamos tudo isso
+e nos livramos do this.props.store.
+
+00:02:23.054 --> 00:02:24.846
+Prontinho.
+
+00:02:24.888 --> 00:02:27.838
+Vejamos se isto
+também está funcionando.
+
+00:02:27.880 --> 00:02:30.598
+Agora,
+dentro do componente Todo,
+
+00:02:30.640 --> 00:02:34.029
+ainda podemos alternar
+
+00:02:34.071 --> 00:02:36.509
+e, às vezes,
+obtemos um erro,
+
+00:02:36.551 --> 00:02:39.294
+mas, na maioria das vezes,
+isso funciona.
+
+00:02:39.336 --> 00:02:41.896
+Também podemos adicionar
+um novo item.
+
+00:02:41.938 --> 00:02:44.504
+Vamos adicionar
+"Ler um livro".
+
+00:02:44.546 --> 00:02:47.840
+Prontinho.
+Nós conseguimos remover
+
+00:02:47.882 --> 00:02:53.519
+toda a lógica assíncrona,
+toda a lógica de busca de dados
+
+00:02:53.561 --> 00:02:55.495
+do componente
+
+00:02:55.537 --> 00:02:59.175
+e a colocamos
+nos próprios criadores de ação,
+
+00:02:59.217 --> 00:03:01.583
+que, além de lidarem
+com o disparo das ações,
+
+00:03:01.625 --> 00:03:05.705
+sempre que desejarmos
+nos comunicar, lidarão com a API.
+

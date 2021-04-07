@@ -1,0 +1,30 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.194 --> 00:00:01.745
+Na aula anterior,
+
+00:00:01.754 --> 00:00:05.147
+melhoramos a previsibilidade
+do estado no aplicativo
+
+00:00:05.156 --> 00:00:07.962
+construindo uma biblioteca
+de gerenciamento de estado.
+
+00:00:08.004 --> 00:00:12.377
+Nesta aula, adicionaremos uma IU
+a essa biblioteca.
+
+00:00:12.419 --> 00:00:14.665
+Isso nos permitirá
+observar melhor
+
+00:00:14.707 --> 00:00:17.441
+como a biblioteca personalizada
+gerencia o estado
+
+00:00:17.483 --> 00:00:18.618
+de um aplicativo.
+

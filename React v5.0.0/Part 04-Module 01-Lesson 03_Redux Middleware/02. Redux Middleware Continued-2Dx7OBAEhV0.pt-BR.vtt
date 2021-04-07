@@ -1,0 +1,290 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:02.753
+Em vez de usarmos
+checkAndDispatch,
+
+00:00:02.795 --> 00:00:06.620
+queremos criar
+um middleware Redux
+
+00:00:06.662 --> 00:00:08.505
+para usá-lo no lugar.
+
+00:00:08.547 --> 00:00:12.115
+Podemos fazer isso
+criando uma função,
+
+00:00:12.722 --> 00:00:14.866
+que chamaremos de "checker".
+
+00:00:14.908 --> 00:00:18.130
+Esse padrão parecerá
+um pouco estranho,
+
+00:00:18.172 --> 00:00:20.317
+e mesmo depois
+de se acostumar com ele,
+
+00:00:20.359 --> 00:00:22.540
+ele continuará estranho,
+mas funciona.
+
+00:00:22.582 --> 00:00:25.899
+Quando adicionarmos
+este middleware checker
+
+00:00:25.941 --> 00:00:27.942
+à Store Redux,
+
+00:00:27.984 --> 00:00:31.902
+ele passará a Store
+como primeiro argumento
+
+00:00:31.944 --> 00:00:36.719
+e precisaremos retornar
+outra função,
+
+00:00:38.376 --> 00:00:41.965
+que passará next,
+
+00:00:42.007 --> 00:00:45.022
+que será
+o próximo middleware,
+
+00:00:45.064 --> 00:00:46.713
+se houver outro,
+
+00:00:46.755 --> 00:00:48.584
+ou será dispatch,
+
+00:00:48.626 --> 00:00:51.136
+que é parecido
+com o que fizemos aqui.
+
+00:00:51.178 --> 00:00:54.769
+Daqui,
+queremos retornar outra função,
+
+00:00:55.371 --> 00:00:57.488
+que passará a ação.
+
+00:00:57.530 --> 00:01:02.159
+Isto parece muito desnecessário,
+e com razão.
+
+00:01:02.201 --> 00:01:06.248
+Os criadores do Redux disseram
+que isto pode ter sido um erro,
+
+00:01:06.290 --> 00:01:08.674
+este "padrão recorrente",
+que é como chamamos,
+
+00:01:08.716 --> 00:01:10.816
+mas para evitar alterações,
+
+00:01:10.858 --> 00:01:12.920
+eles mantiveram assim.
+
+00:01:12.962 --> 00:01:17.116
+Temos uma função principal,
+que retorna uma função,
+
+00:01:17.158 --> 00:01:20.159
+que retorna outra função.
+E aqui, nesta seção,
+
+00:01:20.201 --> 00:01:22.106
+temos o acesso à Store
+
+00:01:22.148 --> 00:01:24.757
+ao lado da ação.
+
+00:01:24.799 --> 00:01:29.168
+Nós podemos pegar tudo isso...
+
+00:01:30.312 --> 00:01:32.334
+podemos remover
+checkAndDispatch,
+
+00:01:32.376 --> 00:01:34.717
+podemos colar aqui -
+
+00:01:34.759 --> 00:01:37.679
+vou consertar o recuo -
+
+00:01:37.721 --> 00:01:41.214
+e agora tudo estará
+quase igual,
+
+00:01:41.256 --> 00:01:43.710
+pois ainda temos a ação.
+
+00:01:43.752 --> 00:01:46.173
+Mas, em vez
+de chamarmos store.dispatch,
+
+00:01:46.215 --> 00:01:49.342
+queremos chamar next,
+
+00:01:49.384 --> 00:01:52.206
+que, caso haja
+mais de um middleware,
+
+00:01:52.248 --> 00:01:54.868
+será o próximo middleware
+
+00:01:54.910 --> 00:02:00.084
+ou a função dispatch,
+assim como estava antes.
+
+00:02:00.126 --> 00:02:01.885
+Agora,
+
+00:02:02.494 --> 00:02:06.052
+vamos em todos os lugares
+que chamam checkAndDispatch
+
+00:02:06.094 --> 00:02:08.084
+passando a Store
+
+00:02:08.126 --> 00:02:10.643
+e mudando
+
+00:02:10.685 --> 00:02:13.122
+para store.dispatch.
+
+00:02:14.387 --> 00:02:18.771
+Passando o criador de ação,
+como estava antes.
+
+00:02:18.813 --> 00:02:24.166
+Agora, para informar ao Redux
+sobre o middleware,
+
+00:02:24.845 --> 00:02:26.724
+nós precisaremos...
+
+00:02:26.766 --> 00:02:30.223
+Como segundo argumento
+da createStore -
+
+00:02:30.265 --> 00:02:34.367
+e isso soará estranho,
+pois há várias invocações de funções
+
+00:02:34.409 --> 00:02:38.477
+dentro de outras
+invocações de funções -
+
+00:02:38.519 --> 00:02:42.351
+mas, como segundo argumento
+da createStore,
+
+00:02:42.393 --> 00:02:44.335
+queremos passar
+
+00:02:44.377 --> 00:02:48.399
+uma invocação
+do Redux.applyMiddleware
+
+00:02:49.511 --> 00:02:54.520
+passando o middleware,
+que é a função checker daqui.
+
+00:02:55.577 --> 00:02:59.176
+Nós convertemos
+a função checkAndDispatch
+
+00:02:59.218 --> 00:03:01.295
+em um middleware Redux
+
+00:03:01.337 --> 00:03:04.791
+e informamos à Store
+sobre o middleware
+
+00:03:04.833 --> 00:03:08.647
+passando uma invocação
+do applyMiddleware
+
+00:03:08.689 --> 00:03:11.039
+como segundo argumento
+da createStore.
+
+00:03:11.081 --> 00:03:13.913
+Se observarmos
+no aplicativo,
+
+00:03:15.160 --> 00:03:17.650
+a funcionalidade
+deve ser exatamente a mesma,
+
+00:03:17.692 --> 00:03:21.876
+podemos adicionar itens todo
+e também podemos dizer
+
+00:03:22.740 --> 00:03:24.251
+"Investir em Bitcoin".
+
+00:03:24.293 --> 00:03:27.098
+Recebemos um alerta
+dizendo que é má ideia
+
+00:03:27.140 --> 00:03:30.107
+e não conseguimos
+adicionar isso à lista.
+
+00:03:30.149 --> 00:03:32.131
+A última alteração
+
+00:03:32.173 --> 00:03:34.986
+tem a ver com a construção
+da função middleware.
+
+00:03:35.028 --> 00:03:38.083
+Ainda retornaremos uma função,
+que retornará uma função,
+
+00:03:38.125 --> 00:03:40.778
+mas se usarmos ES6,
+
+00:03:40.820 --> 00:03:43.498
+isso ficará bem mais limpo.
+
+00:03:43.540 --> 00:03:46.939
+Temos a função checker
+
+00:03:46.981 --> 00:03:49.227
+que passa a Store
+
+00:03:49.269 --> 00:03:52.459
+e que retorna uma função,
+
+00:03:52.501 --> 00:03:55.978
+que será passada
+e retornará outra função,
+
+00:03:56.020 --> 00:03:58.043
+que passará a ação.
+
+00:03:58.085 --> 00:04:03.380
+Podemos copiar tudo isto...
+
+00:04:07.019 --> 00:04:10.035
+e substituir o corpo
+deste middleware.
+
+00:04:11.818 --> 00:04:16.036
+Em vez de haver um retorno,
+outro retorno e outro retorno,
+
+00:04:16.078 --> 00:04:19.827
+tecnicamente continuará igual.
+Mas, ao usar funções lambdas,
+
+00:04:19.869 --> 00:04:21.995
+ele ficará bem melhor.
+

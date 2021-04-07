@@ -1,0 +1,143 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.034
+No momento,
+
+00:00:01.067 --> 00:00:05.405
+todos os dados dentro do aplicativo
+estão apenas do lado do cliente.
+
+00:00:05.438 --> 00:00:10.643
+Normalmente, no mundo real,
+você interagiria com um servidor,
+
+00:00:10.677 --> 00:00:13.346
+e o servidor interagiria
+com a base de dados.
+
+00:00:13.380 --> 00:00:16.649
+Então sempre que você salvasse
+um novo item todo ou novo goal,
+
+00:00:16.683 --> 00:00:18.752
+você precisaria dizer isto
+para este servidor,
+
+00:00:18.785 --> 00:00:20.687
+que contaria à base de dados
+sobre isto.
+
+00:00:20.720 --> 00:00:23.156
+Mas agora,
+por não termos servidor,
+
+00:00:23.189 --> 00:00:25.992
+tudo que estamos fazendo está
+só do lado do cliente.
+
+00:00:26.026 --> 00:00:27.827
+E quando atualizamos
+o aplicativo,
+
+00:00:27.861 --> 00:00:29.763
+todas estas coisas
+desaparecem.
+
+00:00:29.796 --> 00:00:31.931
+O que vamos fazer é,
+
+00:00:31.965 --> 00:00:35.135
+dentro do nosso head,
+novamente,
+
+00:00:35.168 --> 00:00:37.637
+vamos incluir um novo script,
+
+00:00:37.671 --> 00:00:41.441
+que vai referenciar
+este arquivo index.js.
+
+00:00:41.474 --> 00:00:46.646
+Então, tylermcginnis.com/
+goals-todos-api/index.js.
+
+00:00:46.680 --> 00:00:48.915
+E o que isto vai fazer é -,
+
+00:00:48.948 --> 00:00:52.352
+e nós podemos olhar
+este arquivo aqui -,
+
+00:00:52.385 --> 00:00:56.890
+ele vai adicionar uma propriedade
+chamada API ao objeto window.
+
+00:00:56.923 --> 00:01:00.427
+E, sempre que quisermos interagir
+com estes dados,
+
+00:01:00.460 --> 00:01:02.829
+que só vivem
+na nossa base de dados falsa,
+
+00:01:02.862 --> 00:01:04.431
+vamos precisar usar
+um destes métodos.
+
+00:01:04.464 --> 00:01:06.933
+Então, por exemplo,
+para buscar nossos goals,
+
+00:01:06.966 --> 00:01:09.102
+usaremos API.fetchGoals.
+
+00:01:09.135 --> 00:01:11.237
+Isto nos devolverá
+uma promessa,
+
+00:01:11.271 --> 00:01:15.008
+que, após dois segundos,
+vai nos mostrar os goals.
+
+00:01:15.041 --> 00:01:18.345
+Outra coisa que faremos...
+Por exemplo, aqui,
+
+00:01:18.378 --> 00:01:20.313
+sempre que salvamos
+um novo item todo,
+
+00:01:20.347 --> 00:01:22.282
+o problema
+com o qual precisamos lidar
+
+00:01:22.315 --> 00:01:25.618
+é se a solicitação falha.
+
+00:01:25.652 --> 00:01:28.021
+Para não passar pelo incômodo
+
+00:01:28.054 --> 00:01:30.323
+de configurar uma base de dados
+e um servidor,
+
+00:01:30.357 --> 00:01:34.427
+nós vamos incluir o script
+no aplicativo,
+
+00:01:34.461 --> 00:01:36.863
+para termos acesso
+
+00:01:39.172 --> 00:01:41.134
+a todos os métodos diferentes.
+
+00:01:41.167 --> 00:01:45.572
+Isto nos permitirá ver
+como o Redux funciona
+
+00:01:45.605 --> 00:01:49.109
+quando nossos dados vêm
+de forma assíncrona.
+

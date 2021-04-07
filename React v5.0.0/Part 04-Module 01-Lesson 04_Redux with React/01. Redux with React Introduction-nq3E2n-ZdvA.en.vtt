@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.325
+One of the great things about Redux is that we can integrate it into just about any UI.
+
+00:00:05.325 --> 00:00:07.380
+This includes apps built with React,
+
+00:00:07.379 --> 00:00:10.814
+Vue, HTML or even vanilla JavaScript.
+
+00:00:10.814 --> 00:00:13.109
+In this lesson, we'll look at how we could hook
+
+00:00:13.109 --> 00:00:16.600
+Redux up to an app that uses React for its UI.
+

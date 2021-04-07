@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.450
+Now that we can dispatch new items from our Todos component,
+
+00:00:03.450 --> 00:00:07.995
+we also want to be able to do something similar from our goals component.
+
+00:00:07.995 --> 00:00:12.405
+So, first, let's go ahead and adjust the UI of our goals component.
+
+00:00:12.404 --> 00:00:15.089
+So we'll add a header here. Let's say is goals.
+
+00:00:15.089 --> 00:00:19.140
+We then want to render an input field with a type of text,
+
+00:00:19.140 --> 00:00:21.495
+a placeholder of add goal,
+
+00:00:21.495 --> 00:00:24.525
+and then again this is going to be an uncontrolled component.
+
+00:00:24.524 --> 00:00:29.327
+So, we will grab a reference to the input field,
+
+00:00:29.327 --> 00:00:31.509
+and then we will stick it on our component instance.
+
+00:00:31.510 --> 00:00:34.149
+So we can grab the value of it a little bit later on.
+
+00:00:34.149 --> 00:00:38.000
+And then now what we need to do is render a button.
+
+00:00:39.329 --> 00:00:42.475
+This button will say, "Add Goal."
+
+00:00:42.475 --> 00:00:44.425
+And when it is clicked,
+
+00:00:44.424 --> 00:00:51.804
+we want to run or we want to invoke the addItem method that we are about to create.
+
+00:00:51.804 --> 00:00:55.344
+So, up here, what addItem is going to do,
+
+00:00:55.344 --> 00:00:59.030
+is first it will call preventDefault.
+
+00:01:00.950 --> 00:01:05.189
+Then what we need to do is grab the name of the new goal,
+
+00:01:05.189 --> 00:01:07.784
+which we can get by doing this.input.value,
+
+00:01:07.784 --> 00:01:11.114
+again, because of this line right here.
+
+00:01:11.114 --> 00:01:15.030
+We then want to reset that input field to an empty string.
+
+00:01:15.030 --> 00:01:18.210
+And then now what we want to do is we want to dispatch
+
+00:01:18.209 --> 00:01:21.832
+the addGoalAction passing that action creator the goal.
+
+00:01:21.832 --> 00:01:24.376
+But just as we did with Todos,
+
+00:01:24.376 --> 00:01:26.714
+we need to get access to this store.
+
+00:01:26.715 --> 00:01:30.853
+So we will pass that down as a prop to our goals component.
+
+00:01:30.853 --> 00:01:34.349
+And then now inside of goals what we can do is,
+
+00:01:34.349 --> 00:01:40.174
+we will call this.props.store.dispatch invoking the addGoalAction.
+
+00:01:40.174 --> 00:01:44.659
+Passing is the goal that has an ID coming from generateId,
+
+00:01:44.659 --> 00:01:49.219
+as well as the name coming from the input field.
+
+00:01:49.219 --> 00:01:52.579
+So now if we look at this inside of our application,
+
+00:01:52.579 --> 00:01:55.920
+we should be able to add a new Todo item,
+
+00:01:57.120 --> 00:02:02.560
+and we also should be able to add a new goal.
+
+00:02:02.560 --> 00:02:06.040
+And again, we see that new goal up here inside of our vanilla
+
+00:02:06.040 --> 00:02:10.870
+JavaScript UI because these two apps are vanilla JavaScript app,
+
+00:02:10.870 --> 00:02:11.935
+as well as our React app,
+
+00:02:11.935 --> 00:02:15.800
+are both sharing the exact same Redux store.
+

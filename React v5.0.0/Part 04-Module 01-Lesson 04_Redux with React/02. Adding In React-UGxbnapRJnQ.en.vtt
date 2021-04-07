@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.230
+In order to add React to our application, we'll need to,
+
+00:00:04.230 --> 00:00:06.000
+just as we did with Redux,
+
+00:00:06.000 --> 00:00:08.147
+come into the head section of our app,
+
+00:00:08.147 --> 00:00:09.855
+and add a few different scripts.
+
+00:00:09.855 --> 00:00:13.800
+So, what we have here is React using 16.3,
+
+00:00:13.800 --> 00:00:15.740
+which is the newest version.
+
+00:00:15.740 --> 00:00:17.850
+We also have react-dom,
+
+00:00:17.850 --> 00:00:20.829
+and then we also need to include Babel,
+
+00:00:20.829 --> 00:00:22.830
+so that we can transpile or compile
+
+00:00:22.829 --> 00:00:27.787
+our GSX code in to normal JavaScript that the browser can understand.
+
+00:00:27.788 --> 00:00:29.879
+And by including it as a script tag,
+
+00:00:29.879 --> 00:00:34.344
+then Babel is just going to do that on the fly as we save our app.
+
+00:00:34.344 --> 00:00:38.259
+Now, let's head to the bottom of our index.HTML file.
+
+00:00:38.259 --> 00:00:40.583
+And we will start building out some React components.
+
+00:00:40.584 --> 00:00:45.960
+What I'm going to do is create a new script tag here with a type of text/babel,
+
+00:00:45.960 --> 00:00:50.679
+so Babel will know which code it needs to compile.
+
+00:00:50.679 --> 00:00:52.689
+Then what I'm also going to do is,
+
+00:00:52.689 --> 00:00:53.717
+if you're using sublime,
+
+00:00:53.718 --> 00:01:00.845
+you can go ahead and change your syntax highlighter to be from HTML to Babel JavaScript.
+
+00:01:00.844 --> 00:01:05.385
+And this isn't going to be perfect because we have HTML code,
+
+00:01:05.385 --> 00:01:07.043
+because we're in an HTML file,
+
+00:01:07.043 --> 00:01:09.500
+we have JavaScript, and we also have GSX.
+
+00:01:09.500 --> 00:01:10.983
+So, throughout the rest of this course,
+
+00:01:10.983 --> 00:01:13.569
+this syntax highlighting is going to be a little bit off.
+
+00:01:13.569 --> 00:01:14.997
+It'll be good enough to work with,
+
+00:01:14.998 --> 00:01:16.625
+but it won't be perfect.
+
+00:01:16.625 --> 00:01:20.870
+But know that once we start breaking these out into separate modules like we normally do,
+
+00:01:20.870 --> 00:01:24.915
+then all of those issues will just go away magically.
+
+00:01:24.915 --> 00:01:27.859
+So, the very first thing we want to do is let's make
+
+00:01:27.859 --> 00:01:32.484
+a new component here. We will call it app.
+
+00:01:32.484 --> 00:01:35.415
+It's going to extend React.Component.
+
+00:01:35.415 --> 00:01:39.010
+And the reason that we can use React again is because when we included the React script,
+
+00:01:39.010 --> 00:01:43.505
+that added a global property on our app called React.
+
+00:01:43.504 --> 00:01:47.039
+So, as always, we can have a render method here.
+
+00:01:47.040 --> 00:01:49.910
+And for now, let's just return a div,
+
+00:01:49.909 --> 00:01:52.849
+and inside of here, let's say app.
+
+00:01:52.849 --> 00:01:55.819
+And then now, just as we normally do as well,
+
+00:01:55.819 --> 00:01:58.519
+we want to call ReactDOM.render.
+
+00:01:58.519 --> 00:02:00.390
+As its first argument,
+
+00:02:00.390 --> 00:02:03.150
+we want to create our app element,
+
+00:02:03.150 --> 00:02:04.460
+and then the second argument,
+
+00:02:04.459 --> 00:02:07.864
+what we want to do is we want to tell it where it needs to mount to.
+
+00:02:07.864 --> 00:02:13.769
+So, inside at the top of our body right here, let's go ahead,
+
+00:02:13.770 --> 00:02:16.117
+and at the very bottom here,
+
+00:02:16.116 --> 00:02:19.924
+we'll add a little break with an hr,
+
+00:02:19.925 --> 00:02:22.340
+and then what we will do is let's have a div.
+
+00:02:22.340 --> 00:02:24.469
+We'll give it an id of app,
+
+00:02:24.469 --> 00:02:28.530
+and this is the divs that we can mount to.
+
+00:02:28.530 --> 00:02:30.860
+So now, at the bottom of this file,
+
+00:02:30.860 --> 00:02:33.620
+we can say, ReactDom.render pass it.
+
+00:02:33.620 --> 00:02:39.724
+The element, and then we can say document.getElementbyID app.
+
+00:02:39.724 --> 00:02:42.019
+So now, if we refresh our app,
+
+00:02:42.020 --> 00:02:46.820
+what we should see is up here we have our normal Javascript app,
+
+00:02:46.819 --> 00:02:48.219
+and then down here,
+
+00:02:48.219 --> 00:02:49.960
+we have our React app.
+
+00:02:49.960 --> 00:02:52.030
+So, for now, what we're going to do is let us just build out some of
+
+00:02:52.030 --> 00:02:55.784
+the skeletons of the components that we will be using.
+
+00:02:55.784 --> 00:03:01.335
+So, we're going to have a state list functional component called list.
+
+00:03:01.335 --> 00:03:04.180
+Eventually, what it's going to do is it's going to take an array
+
+00:03:04.180 --> 00:03:07.260
+and then it's going to map over that creating a few list items.
+
+00:03:07.259 --> 00:03:14.239
+But for now, we will just return an unordered list and then a list item
+
+00:03:14.240 --> 00:03:22.585
+that just says lists and then we also want to create a todos component,
+
+00:03:22.585 --> 00:03:25.775
+which is going to extend the React.Component.
+
+00:03:25.775 --> 00:03:29.504
+It will have a render method here.
+
+00:03:29.504 --> 00:03:31.409
+And for now, we can just return a div,
+
+00:03:31.409 --> 00:03:37.935
+we'll set todos and then we will render state list component.
+
+00:03:37.935 --> 00:03:40.979
+And then we are going to have our last component here,
+
+00:03:40.979 --> 00:03:43.599
+which is going to be a goals component
+
+00:03:43.599 --> 00:03:46.799
+and we will just say Goals and then render the list as well.
+
+00:03:46.800 --> 00:03:48.805
+So now, inside of our app component,
+
+00:03:48.805 --> 00:03:54.310
+lets render Todos, then we'll also render some Goals.
+
+00:03:54.729 --> 00:03:57.759
+So, if we look at our app now,
+
+00:03:57.759 --> 00:03:59.194
+we should still have
+
+00:03:59.194 --> 00:04:02.784
+a pretty basic React app because we're not really doing anything yet.
+
+00:04:02.784 --> 00:04:04.389
+But now, what we've done is we've created
+
+00:04:04.389 --> 00:04:06.250
+the basic components that we're going to be building
+
+00:04:06.250 --> 00:04:12.340
+out in order to add functionality specifically to our React application.
+
