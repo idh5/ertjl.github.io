@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:04.071
+Esta é a URL que preciso usar
+no site decodificador.
+
+00:00:04.137 --> 00:00:06.073
+Agora preciso definir
+o valor da chave
+
+00:00:06.106 --> 00:00:08.041
+como o cookie da sessão
+de identificação.
+
+00:00:08.075 --> 00:00:11.078
+Todos os cookies
+vão para "document.cookie".
+
+00:00:11.111 --> 00:00:13.080
+Então quebro no sinal de igual
+
+00:00:13.146 --> 00:00:15.182
+e obtenho o valor do cookie.
+
+00:00:15.215 --> 00:00:16.717
+Este código é meio ingênuo
+
+00:00:16.750 --> 00:00:20.020
+e presume que o cookie da sessão
+de identificação é o primeiro,
+
+00:00:20.053 --> 00:00:21.989
+o que é verdade, neste caso.
+
+00:00:22.022 --> 00:00:23.257
+Esta versão é mais robusta
+
+00:00:23.290 --> 00:00:25.392
+e antes procura
+pela sessão de identificação.
+
+00:00:25.459 --> 00:00:28.228
+Este é o Javascript
+que usarei.
+
+00:00:28.295 --> 00:00:30.330
+Esta é a URL completa.
+
+00:00:30.364 --> 00:00:33.534
+Já que este formulário é vulnerável
+ao scripting entre sites,
+
+00:00:33.567 --> 00:00:37.371
+preciso envolver isto aqui
+em script tags.
+
+00:00:37.404 --> 00:00:40.707
+Se eu enviar este valor,
+obtenho a passphrase.
+
+00:00:40.741 --> 00:00:44.244
+Como estamos falando de segurança,
+procure a passphrase no Google.
+
+00:00:44.311 --> 00:00:47.181
+Isso lida com outra vulnerabilidade
+da segurança.
+

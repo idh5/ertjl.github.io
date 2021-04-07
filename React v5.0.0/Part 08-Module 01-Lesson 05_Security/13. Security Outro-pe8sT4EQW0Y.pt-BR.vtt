@@ -1,0 +1,51 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:02.334
+Seguraça
+não é um assunto fácil,
+
+00:00:02.367 --> 00:00:04.167
+e os assuntos que abordamos
+nesta aula
+
+00:00:04.200 --> 00:00:07.467
+não são 100% consertáveis
+apenas no front end.
+
+00:00:07.501 --> 00:00:09.100
+O seu back end, seja qual for,
+
+00:00:09.133 --> 00:00:11.067
+também precisa
+implementar validação
+
+00:00:11.100 --> 00:00:14.567
+para ficar seguro contra CSRF
+e ataques de scripting entre sites.
+
+00:00:15.067 --> 00:00:18.000
+Você aprendeu aqui a identificar
+potenciais vulnerabilidades
+
+00:00:18.033 --> 00:00:20.634
+e a verificar se é possível
+explorá-las.
+
+00:00:20.667 --> 00:00:23.400
+Sempre que adicionar
+um campo de input no seu aplicativo,
+
+00:00:23.434 --> 00:00:27.100
+precisa pensar imediatamente
+em scripting entre sites e CSRF,
+
+00:00:27.133 --> 00:00:30.167
+e se são riscos em potencial
+que precisam ser reduzidos.
+
+00:00:30.200 --> 00:00:33.000
+Será um grande favor
+a si mesmo e a seus usuários.
+

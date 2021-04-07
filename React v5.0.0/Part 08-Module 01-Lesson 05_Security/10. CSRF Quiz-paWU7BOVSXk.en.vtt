@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.280
+Do you remember that fictional bank we talked
+
+00:00:02.280 --> 00:00:04.650
+about with the exploitable money transfer form.
+
+00:00:04.650 --> 00:00:08.685
+Well, it's real and we want you to exploit its weakness.
+
+00:00:08.685 --> 00:00:11.935
+The server for this project has two endpoints a banks
+
+00:00:11.935 --> 00:00:15.795
+website and an evil URL where you'll be able to place your code.
+
+00:00:15.795 --> 00:00:19.795
+The bank's URL gives us the log in page for the bank's website.
+
+00:00:19.795 --> 00:00:23.660
+The password is super secret password and it's listed in the instructions.
+
+00:00:23.660 --> 00:00:26.820
+Here's the bank's beautifully designed balance page.
+
+00:00:26.820 --> 00:00:28.100
+My sister is coming to town,
+
+00:00:28.100 --> 00:00:29.995
+so she'll need some spending money.
+
+00:00:29.995 --> 00:00:35.250
+What you need to do is send the Umbrella Corporation 666 units,
+
+00:00:35.250 --> 00:00:37.370
+but you can't just do it here on this site.
+
+00:00:37.370 --> 00:00:39.535
+The other URL is the evil site.
+
+00:00:39.535 --> 00:00:42.780
+This site hosts anything you put in the evil directory,
+
+00:00:42.780 --> 00:00:47.370
+so you need to create a website that will send a CRF request to the bank.
+
+00:00:47.370 --> 00:00:49.785
+This quiz will take a number of steps to complete,
+
+00:00:49.785 --> 00:00:52.530
+but you're hocking a fake bank, so it's awesome.
+
+00:00:52.530 --> 00:00:54.760
+You need to sign into the bank's website that
+
+00:00:54.760 --> 00:00:57.885
+that evil website will have access to your logging cookie.
+
+00:00:57.885 --> 00:01:02.820
+Then create a website in the evil folder that will send a post request to this URL.
+
+00:01:02.820 --> 00:01:09.280
+The posted data needs to set the recipient to umbrella core and the amount to 666.
+
+00:01:09.280 --> 00:01:11.565
+To send along the cookie data in effect request,
+
+00:01:11.565 --> 00:01:14.630
+the credentials flag needs to be set to include.
+
+00:01:14.630 --> 00:01:18.055
+If you do everything correctly the server will give you a token.
+
+00:01:18.055 --> 00:01:20.710
+Now that's the server not the browser's console,
+
+00:01:20.710 --> 00:01:21.915
+so check the terminal,
+
+00:01:21.915 --> 00:01:23.880
+then enter that token here.
+
+00:01:23.880 --> 00:01:25.885
+This exercise is larger than most.
+
+00:01:25.885 --> 00:01:29.870
+Just take it step by step and make sure fetch request is accurate.
+
+00:01:29.870 --> 00:01:34.000
+Check in the instruction notes for helping constructing a post request with fetch.
+

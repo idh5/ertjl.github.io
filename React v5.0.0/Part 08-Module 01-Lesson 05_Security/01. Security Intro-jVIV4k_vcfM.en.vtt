@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.940
+Thanks for coming back. Now, you might be asking yourself,
+
+00:00:02.940 --> 00:00:05.120
+why are we talking about security again?
+
+00:00:05.120 --> 00:00:07.840
+I mean, we've already talked about TLS and its use in HTTPS.
+
+00:00:07.840 --> 00:00:11.160
+HTTPS covers many angles of attack for things
+
+00:00:11.160 --> 00:00:14.965
+like eavesdropping on your traffic or just impersonating the web server as a whole.
+
+00:00:14.965 --> 00:00:17.730
+However, the most secure front door in the world will not
+
+00:00:17.730 --> 00:00:20.740
+be worth anything if there's a letter to the first floor window.
+
+00:00:20.740 --> 00:00:22.425
+The letter, being your web app.
+
+00:00:22.425 --> 00:00:25.425
+HTTP contains some very subtle security risk.
+
+00:00:25.425 --> 00:00:29.760
+On top of that, the history and backwards compatibility of the HTTP protocol
+
+00:00:29.760 --> 00:00:31.890
+carries a lot of baggage from a time where
+
+00:00:31.890 --> 00:00:35.045
+security wasn't as big of a topic as it is now.
+
+00:00:35.045 --> 00:00:37.830
+In this lesson, we are going to learn how certain design choices
+
+00:00:37.830 --> 00:00:40.590
+could have allowed an attacker to steal sensitive data and how you,
+
+00:00:40.590 --> 00:00:43.470
+as a web developer, can protect a web app against such attacks.
+

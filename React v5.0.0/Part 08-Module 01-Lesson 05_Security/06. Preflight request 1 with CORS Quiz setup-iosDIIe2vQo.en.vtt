@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+The next couple of exercises will give you some hands on
+
+00:00:03.180 --> 00:00:06.325
+experience with a few different HTTP requests.
+
+00:00:06.325 --> 00:00:09.355
+You need to determine if the request is preflighted or not.
+
+00:00:09.355 --> 00:00:10.845
+And if it is preflighted,
+
+00:00:10.845 --> 00:00:12.926
+which line causes it to be preflighted?
+
+00:00:12.926 --> 00:00:18.298
+So launch the server and then reconstruct this request in the fetch tool.
+
+00:00:18.298 --> 00:00:21.655
+Use Dev tools to see that some requests are executed right away,
+
+00:00:21.655 --> 00:00:24.030
+while others send a preflight request.
+
+00:00:24.030 --> 00:00:27.545
+You'll know it's been preflighted if it uses the "Options" method.
+
+00:00:27.545 --> 00:00:29.830
+Play around with the requests until you figure out
+
+00:00:29.830 --> 00:00:32.950
+what makes the browser preflight the request.
+
+00:00:32.950 --> 00:00:37.855
+If the method "GET" line causes the request to be preflighted, then check here.
+
+00:00:37.855 --> 00:00:41.000
+If the request isn't provided at all, then check here.
+

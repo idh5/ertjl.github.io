@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.870
+Since this request is identical to the request I want to send,
+
+00:00:03.870 --> 00:00:07.161
+I'm not going to change anything.
+
+00:00:07.161 --> 00:00:09.601
+I need to see which method is used,
+
+00:00:09.601 --> 00:00:13.885
+so I'll turn off some of these other distracting columns and turn on the method column.
+
+00:00:13.885 --> 00:00:16.690
+This GET request was sent successfully
+
+00:00:16.690 --> 00:00:19.163
+and since there isn't an options request listed here,
+
+00:00:19.163 --> 00:00:21.280
+this request was not preflighted.
+
+00:00:21.280 --> 00:00:23.000
+So this is the correct answer.
+

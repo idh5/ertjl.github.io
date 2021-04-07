@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.955
+The server for this project has two endpoints,
+
+00:00:02.955 --> 00:00:06.240
+a badwebsite URL and a decoder URL.
+
+00:00:06.240 --> 00:00:10.920
+The badwebsite page has a form that is vulnerable to cross-site scripting.
+
+00:00:10.920 --> 00:00:13.290
+You need to exploit this vulnerability by
+
+00:00:13.290 --> 00:00:16.395
+sending this site's cookie to the decoder website.
+
+00:00:16.395 --> 00:00:17.970
+To complete this quiz,
+
+00:00:17.970 --> 00:00:20.740
+create a fetch request using this URL,
+
+00:00:20.740 --> 00:00:23.550
+but you need to use JavaScript to set
+
+00:00:23.550 --> 00:00:27.570
+the key to the value of the badwebsite's SESSION_ID cookie.
+
+00:00:27.570 --> 00:00:29.370
+If you did everything correctly,
+
+00:00:29.370 --> 00:00:31.210
+the server will give you a passphrase.
+
+00:00:31.210 --> 00:00:34.980
+And that's the server, not the browser's console, so check the terminal.
+
+00:00:34.980 --> 00:00:36.470
+Enter that passphrase here.
+

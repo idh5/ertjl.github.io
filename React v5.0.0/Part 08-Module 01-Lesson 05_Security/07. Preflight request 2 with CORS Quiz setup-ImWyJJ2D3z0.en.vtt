@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.450
+Running this request shows the OPTIONS method.
+
+00:00:03.450 --> 00:00:04.815
+So, I know it's been preflighted,
+
+00:00:04.815 --> 00:00:05.940
+but I don't know if it's because it's
+
+00:00:05.940 --> 00:00:10.020
+the "POST" request or if it's from the "X-Forwarded-For" header.
+
+00:00:10.020 --> 00:00:11.760
+If I delete this header,
+
+00:00:11.760 --> 00:00:13.125
+and rerun the request,
+
+00:00:13.125 --> 00:00:16.193
+it doesn't use the options header.
+
+00:00:16.193 --> 00:00:20.330
+So I know that the X-Forwarded-For header caused the request to be preflighted.
+

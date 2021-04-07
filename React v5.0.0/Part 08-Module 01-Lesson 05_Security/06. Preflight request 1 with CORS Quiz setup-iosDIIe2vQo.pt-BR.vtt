@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.534 --> 00:00:04.037
+Os próximos exercícios
+serão uma experiência prática
+
+00:00:04.071 --> 00:00:06.473
+com algumas solicitações
+de HTTP diferentes.
+
+00:00:06.507 --> 00:00:09.576
+Você precisará determinar
+se a solicitação é preflight ou não.
+
+00:00:09.643 --> 00:00:13.514
+Se for, qual linha
+é responsável por isso?
+
+00:00:13.547 --> 00:00:17.618
+Inicialize o servidor e recrie esta
+solicitação na ferramenta fetch.
+
+00:00:18.285 --> 00:00:21.688
+Use o Dev Tools para ver
+que algumas são logo excecutadas,
+
+00:00:21.722 --> 00:00:24.224
+enquanto outras enviam
+uma solicitação preflight.
+
+00:00:24.258 --> 00:00:27.995
+Você saberá que foi feito preflight
+se for usado o método OPTIONS.
+
+00:00:28.028 --> 00:00:29.162
+Brinque com as solicitações
+
+00:00:29.196 --> 00:00:32.032
+até descobrir o que faz o
+navegador usar o preflight.
+
+00:00:33.066 --> 00:00:37.004
+Se a linha "metrod: GET"
+for a causa,
+
+00:00:37.037 --> 00:00:38.205
+assinale aqui.
+
+00:00:38.238 --> 00:00:40.040
+Se não houver preflight,
+
+00:00:40.073 --> 00:00:41.108
+assinale aqui.
+

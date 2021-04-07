@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.925
+Here's the URL that I need to hit on the decoder site.
+
+00:00:03.925 --> 00:00:07.570
+Now I need to set the keys value to the session ID cookie.
+
+00:00:07.570 --> 00:00:10.535
+Document.cookie gets all of the cookies.
+
+00:00:10.535 --> 00:00:15.240
+Then I'll split on the equal sign and I'll get the cookies value.
+
+00:00:15.240 --> 00:00:19.740
+This code is rather naive and assumes that the session ID cookie is the very first one,
+
+00:00:19.740 --> 00:00:21.580
+which it is in this case.
+
+00:00:21.580 --> 00:00:25.420
+Here's a more robust version that first searches for a session ID.
+
+00:00:25.420 --> 00:00:27.800
+So this is the javascript I'll use.
+
+00:00:27.800 --> 00:00:30.300
+So this is the full URL.
+
+00:00:30.300 --> 00:00:33.555
+Since this form is vulnerable to cross-site scripting,
+
+00:00:33.555 --> 00:00:37.340
+I just need to wrap this in script tags.
+
+00:00:37.340 --> 00:00:40.455
+Sending this value gives me the passphrase.
+
+00:00:40.455 --> 00:00:42.045
+Since we're talking about security,
+
+00:00:42.045 --> 00:00:44.325
+you should search Google for this passphrase.
+
+00:00:44.325 --> 00:00:46.200
+It deals with another security vulnerability.
+

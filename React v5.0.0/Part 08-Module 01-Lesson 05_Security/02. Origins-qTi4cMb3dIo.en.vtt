@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.980
+As a general rule of thumb,
+
+00:00:01.980 --> 00:00:06.564
+JavaScript is not allowed to access the data of any other origin than its own.
+
+00:00:06.564 --> 00:00:09.645
+An origin is made up of three parts: the data scheme,
+
+00:00:09.645 --> 00:00:11.475
+the host name, and the port.
+
+00:00:11.475 --> 00:00:13.330
+For the page you're on right now,
+
+00:00:13.330 --> 00:00:14.910
+the scheme is HTTPS,
+
+00:00:14.910 --> 00:00:18.255
+the Host name is www.udacity.com,
+
+00:00:18.255 --> 00:00:20.580
+and the port is 443.
+
+00:00:20.580 --> 00:00:22.770
+If you change any of these parts,
+
+00:00:22.770 --> 00:00:26.250
+you are on a different origin and different rules will apply.
+
+00:00:26.250 --> 00:00:28.560
+Apart from the mixed content problems we talked about,
+
+00:00:28.560 --> 00:00:33.790
+earlier this is another reason to not mix HTTP and HTTPS URLs.
+
+00:00:33.790 --> 00:00:38.885
+But what are these rules that apply once you are working across multiple origins?
+
+00:00:38.885 --> 00:00:43.145
+First of all, you can't make fetch requests to other origins.
+
+00:00:43.145 --> 00:00:44.925
+Actually, under certain criteria,
+
+00:00:44.925 --> 00:00:48.090
+you can, but then you can't read the answer.
+
+00:00:48.090 --> 00:00:50.520
+Secondly, you cannot inspect eye frames or
+
+00:00:50.520 --> 00:00:54.040
+windows with JavaScript if they are from another origin.
+
+00:00:54.040 --> 00:00:56.970
+These rules make a lot of sense if you think about it.
+
+00:00:56.970 --> 00:01:00.680
+Let's assume I was allowed to make fetch requests to other origins.
+
+00:01:00.680 --> 00:01:03.590
+I could just set up a website that makes fetch requests to
+
+00:01:03.590 --> 00:01:06.635
+Facebook.com and steal all your Facebook messages,
+
+00:01:06.635 --> 00:01:09.080
+or even worse, I could make fetch request to
+
+00:01:09.080 --> 00:01:13.185
+udacity.com and make you drop out of all of your Udacity classes.
+
+00:01:13.185 --> 00:01:14.980
+No, we don't want that.
+
+00:01:14.980 --> 00:01:18.380
+This restriction or rule is called the same origin policy.
+

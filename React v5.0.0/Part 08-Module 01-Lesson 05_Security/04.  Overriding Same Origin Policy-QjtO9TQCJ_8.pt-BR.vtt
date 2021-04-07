@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.250 --> 00:00:03.083
+Às vezes, você quer permitir
+que acessem seus recursos,
+
+00:00:03.125 --> 00:00:05.458
+mesmo que sejam
+de outra origem.
+
+00:00:05.500 --> 00:00:07.417
+Isso é relevante
+para provedores de API,
+
+00:00:07.458 --> 00:00:10.042
+que querem que outros sites
+possam usar seus serviços,
+
+00:00:10.083 --> 00:00:12.583
+mas são impedidos
+pela política de mesma origem.
+
+00:00:12.625 --> 00:00:16.750
+Hoje em dia, podemos facilmente
+alcançar isso com headers de HTTP
+
+00:00:16.792 --> 00:00:18.667
+chamados "Cross Origin
+Resource Sharing",
+
+00:00:18.708 --> 00:00:20.458
+ou CORS, abreviando.
+
+00:00:20.500 --> 00:00:24.417
+Essa é a solução mais poderosa
+para o problema da mesma origem,
+
+00:00:24.458 --> 00:00:27.250
+mas, até alguns anos atrás,
+o suporte dos navegadores ao CORS
+
+00:00:27.292 --> 00:00:30.333
+deixava a desejar,
+então as pessoas criavam técnicas
+
+00:00:30.375 --> 00:00:33.208
+para contornar o problema
+da política de mesma origem.
+
+00:00:33.583 --> 00:00:36.250
+Uma das técnicas mais antigas
+é o JSONP,
+
+00:00:36.292 --> 00:00:38.083
+que é JSON com padding.
+
+00:00:38.125 --> 00:00:39.417
+Em vez de só retornar dados,
+
+00:00:39.458 --> 00:00:42.375
+JSONP retorna scripts
+contendo os dados,
+
+00:00:42.417 --> 00:00:45.250
+se aproveitando do fato
+de que scripts de outras origens
+
+00:00:45.292 --> 00:00:49.125
+serão executados e compartilharão
+tal ambiente com seus scripts.
+
+00:00:49.583 --> 00:00:51.000
+Em APIs baseadas em JSONP,
+
+00:00:51.042 --> 00:00:54.333
+você deve incluir o nome da função
+como um parâmetro de query.
+
+00:00:54.375 --> 00:00:58.250
+O servidor retornará um novo script
+chamando a função que você nomeu.
+
+00:00:59.167 --> 00:01:00.792
+Vejamos um exemplo ficcional.
+
+00:01:01.042 --> 00:01:03.917
+Digamos que estamos criando
+um aplicativo em yourcourselist.com
+
+00:01:03.958 --> 00:01:07.708
+listando todos os cursos da Udacity
+em que o usuário se inscreveu.
+
+00:01:07.750 --> 00:01:10.292
+A abordagem ingênua
+seria fazer uma solicitação fetch
+
+00:01:10.333 --> 00:01:11.708
+para a API da udacity.com
+
+00:01:11.750 --> 00:01:15.458
+e usar os dados que retornassem
+para gerar uma lista para o usuário.
+
+00:01:15.500 --> 00:01:18.083
+Porém, isso não daria certo
+devido à segurança,
+
+00:01:18.125 --> 00:01:21.292
+já que seu host
+é diferente do da Udacity.
+
+00:01:21.333 --> 00:01:24.375
+Como seria essa API
+se tivesse suporte a JSONP?
+
+00:01:24.417 --> 00:01:28.583
+Adicione uma função de nome à URL e
+a inclua com uma etiqueta de script.
+
+00:01:28.625 --> 00:01:31.125
+O servidor juntará todos os dados
+que precisa retornar
+
+00:01:31.167 --> 00:01:35.458
+numa função com o mesmo nome
+que foi dado via o parâmetro query.
+
+00:01:35.500 --> 00:01:38.833
+Você precisa definir a função,
+porque, quando a resposta retornar,
+
+00:01:38.875 --> 00:01:42.333
+a função "call" será executada
+e você terá acesso aos dados
+
+00:01:42.375 --> 00:01:44.417
+através dos parâmetros
+daquela função.
+

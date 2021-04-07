@@ -1,0 +1,141 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:04.671
+Lembra-se do banco fictício
+com o formulário hackeável?
+
+00:00:04.705 --> 00:00:06.240
+Então, ele existe.
+
+00:00:06.273 --> 00:00:08.575
+E queremos que você
+se aproveite da falha dele.
+
+00:00:08.609 --> 00:00:11.245
+O servidor desse projeto
+tem dois endpoints,
+
+00:00:11.278 --> 00:00:13.580
+o site de um banco
+e uma URL do mal,
+
+00:00:13.614 --> 00:00:16.116
+onde você poderá
+inserir seu código.
+
+00:00:16.149 --> 00:00:19.653
+A URL do banco tem uma página
+de login para o site do banco.
+
+00:00:19.686 --> 00:00:22.122
+A senha é
+"super secret password".
+
+00:00:22.155 --> 00:00:24.057
+Ela está nas anotações.
+
+00:00:24.091 --> 00:00:26.660
+Esta é a belíssima página
+de saldo do banco.
+
+00:00:26.693 --> 00:00:30.063
+Minha irmã vem me visitar,
+então vai precisar de grana.
+
+00:00:30.097 --> 00:00:33.133
+Você vai enviar
+para a Umbrella Corporation
+
+00:00:33.167 --> 00:00:35.068
+666 unidades.
+
+00:00:35.102 --> 00:00:37.271
+Mas isso não é possível
+neste site.
+
+00:00:37.304 --> 00:00:39.373
+A outra URL é o site do mal.
+
+00:00:39.406 --> 00:00:43.010
+Este site hospeda tudo
+no diretório do mal.
+
+00:00:43.043 --> 00:00:47.314
+Então você precisa criar um site que
+envie a solicitação CRF ao banco.
+
+00:00:47.347 --> 00:00:49.783
+Este teste tem várias etapas,
+
+00:00:50.017 --> 00:00:52.352
+mas você vai hackear um banco fake,
+então é incrível.
+
+00:00:52.386 --> 00:00:54.321
+Você precisa logar
+no site do banco
+
+00:00:54.354 --> 00:00:57.691
+para que o site do mal
+tenha acesso ao seu cookie.
+
+00:00:57.724 --> 00:01:00.127
+Depois crie um site
+na pasta do mal
+
+00:01:00.160 --> 00:01:03.063
+que vai enviar uma solicitação POST
+para essa URL.
+
+00:01:03.096 --> 00:01:06.567
+O POST to DATA deve ser
+direcionado para Umbrella Corp,
+
+00:01:06.600 --> 00:01:09.136
+e o valor,
+determinado para 666.
+
+00:01:09.169 --> 00:01:11.505
+Para enviar os dados
+numa solicitação FETCH
+
+00:01:11.538 --> 00:01:14.575
+a opção de credenciais
+devem estar marcadas como "incluir".
+
+00:01:14.608 --> 00:01:16.243
+Se você fizer tudo certo,
+
+00:01:16.276 --> 00:01:18.178
+o servidor vai te dar um token.
+
+00:01:18.212 --> 00:01:20.581
+Será o servidor,
+não o console do navegador,
+
+00:01:20.614 --> 00:01:22.049
+então verifique o terminal.
+
+00:01:22.082 --> 00:01:23.717
+Em seguida,
+insira a token aqui.
+
+00:01:23.750 --> 00:01:25.686
+Este exercício é um dos maiores.
+
+00:01:25.719 --> 00:01:26.987
+Faça-o aos poucos
+
+00:01:27.020 --> 00:01:29.690
+e certifique-se de que
+a solicitação FETCH está correta.
+
+00:01:29.723 --> 00:01:34.027
+Veja nas anotações como criar
+uma solicitação POST com FETCH.
+
+00:01:34.061 --> 00:01:35.062
+Boa sorte!
+

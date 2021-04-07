@@ -1,0 +1,113 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.236
+Surma te mostrou
+algumas regras.
+
+00:00:02.269 --> 00:00:05.205
+Porém, se são regras,
+há exceções.
+
+00:00:05.239 --> 00:00:06.740
+Como você sabe,
+
+00:00:06.773 --> 00:00:08.575
+podemos incluir
+folhas de estilo,
+
+00:00:08.609 --> 00:00:10.477
+imagens, vídeos, iframes
+
+00:00:10.511 --> 00:00:12.579
+e até mesmo scripts
+de outras origens,
+
+00:00:12.613 --> 00:00:16.049
+além de poder enviar
+formdata para outras origens.
+
+00:00:16.083 --> 00:00:19.553
+O usuário final não saberá dizer
+que uma imagem veio de um servidor
+
+00:00:19.586 --> 00:00:22.122
+e que outra foi carregada
+do Instagram.
+
+00:00:22.155 --> 00:00:24.691
+Porém, para desenvolvedores,
+há uma diferença.
+
+00:00:24.725 --> 00:00:26.593
+Não se pode interagir
+com uma etiqueta
+
+00:00:26.627 --> 00:00:28.695
+que mostra uma imagem
+de outra origem
+
+00:00:28.729 --> 00:00:32.099
+da mesma forma como se poderia
+interagir com uma de mesma origem.
+
+00:00:32.132 --> 00:00:34.768
+Por exemplo, não se pode inspecionar
+os pixels da imagem
+
+00:00:35.002 --> 00:00:36.336
+de dentro do elemento da tela.
+
+00:00:36.370 --> 00:00:38.305
+O mesmo vale
+para a etiqueta de um script
+
+00:00:38.338 --> 00:00:41.008
+que contenha um recurso
+de script de outra origem.
+
+00:00:41.041 --> 00:00:43.410
+O conteúdo aparecerá em branco
+
+00:00:43.443 --> 00:00:45.512
+ou, no caso de APIs
+mais modernas,
+
+00:00:45.546 --> 00:00:47.247
+será mostrado explicitamente
+o erro.
+
+00:00:47.281 --> 00:00:49.149
+Com uma etiqueta
+de mesma origem,
+
+00:00:49.183 --> 00:00:51.518
+tenho acesso ao conteúdo dela,
+
+00:00:51.552 --> 00:00:55.055
+mas não posso acessar o conteúdo
+dos scripts de outras origens.
+
+00:00:55.088 --> 00:00:56.523
+É importante lembrar
+
+00:00:56.557 --> 00:00:58.992
+que o navegador do usuário
+é que reforça
+
+00:00:59.026 --> 00:01:01.061
+a política de mesma origem.
+
+00:01:01.094 --> 00:01:04.998
+Não é o servidor, mas sim o cliente
+que não permite as solicitações.
+
+00:01:05.032 --> 00:01:07.601
+Veremos a importância disso
+quando tentarmos contornar
+
+00:01:07.634 --> 00:01:11.071
+as restrições dessa política
+no próximo vídeo.
+

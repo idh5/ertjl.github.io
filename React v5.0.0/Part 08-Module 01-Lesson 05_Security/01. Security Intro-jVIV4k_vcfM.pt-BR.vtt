@@ -1,0 +1,66 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.375 --> 00:00:01.542
+Obrigado por retornar.
+
+00:00:01.583 --> 00:00:05.000
+Talvez você esteja se perguntando:
+por que falar de segurança de novo?
+
+00:00:05.042 --> 00:00:08.542
+Já falamos sobre os usos de TLS
+e sobre HTTPS.
+
+00:00:08.583 --> 00:00:11.000
+HTTPS cobre muitas frentes
+de ataque,
+
+00:00:11.042 --> 00:00:14.667
+como bisbilhotar o tráfego
+ou se passar um servidor.
+
+00:00:14.708 --> 00:00:17.167
+Porém, a porta de entrada
+mais segura do mundo
+
+00:00:17.208 --> 00:00:20.500
+não servirá para nada se houver
+uma escada que dê na janela.
+
+00:00:20.542 --> 00:00:22.458
+A escada seria
+um aplicativo web.
+
+00:00:22.500 --> 00:00:25.250
+HTTP apresenta alguns riscos
+de segurança muito sutis.
+
+00:00:25.292 --> 00:00:26.333
+Além disso,
+
+00:00:26.375 --> 00:00:29.500
+a história e a retrocompatibilidade
+do protocolo HTTP
+
+00:00:29.542 --> 00:00:31.458
+carrega muita bagagem
+de uma época
+
+00:00:31.500 --> 00:00:35.125
+em que segurança não era algo
+tão importante quanto é hoje em dia.
+
+00:00:35.167 --> 00:00:37.375
+Nesta lição, aprenderemos
+como certas escolhas
+
+00:00:37.417 --> 00:00:39.750
+podem permitir que um hacker
+roube dados sigilosos
+
+00:00:39.792 --> 00:00:43.292
+e como você, desenvolvedor, pode
+proteger um aplicativo de ataques.
+

@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.700
+Sometimes, you want to allow other people to access
+
+00:00:02.700 --> 00:00:05.665
+your resources even if they are from another origin.
+
+00:00:05.665 --> 00:00:08.850
+This is mostly relevant for API providers who want other sites to be
+
+00:00:08.850 --> 00:00:12.870
+able to use the service but the same origin policy prevents this.
+
+00:00:12.870 --> 00:00:16.110
+Nowadays, you can easily achieve the sharing of resources with a set of
+
+00:00:16.110 --> 00:00:20.675
+AGP address called Cross Origin Resource Sharing or CORS for short.
+
+00:00:20.675 --> 00:00:24.648
+This is the most powerful engineering solution to the single origin problem.
+
+00:00:24.648 --> 00:00:26.070
+But up until a few years ago,
+
+00:00:26.070 --> 00:00:29.460
+the browser support for CORS was rather lacking and people had to come up with
+
+00:00:29.460 --> 00:00:33.780
+their own techniques to work around the single origin policy in the meantime.
+
+00:00:33.780 --> 00:00:37.860
+One of the oldest techniques is called JSONP, JSON with padding.
+
+00:00:37.860 --> 00:00:39.617
+Instead of simply returning data,
+
+00:00:39.617 --> 00:00:42.575
+JSONP returns a script containing the data.
+
+00:00:42.575 --> 00:00:45.690
+This exploits the fact that the scripts from other origins will
+
+00:00:45.690 --> 00:00:49.750
+execute and share the execution environment with your own scripts.
+
+00:00:49.750 --> 00:00:54.376
+JSONP-based APIs expect to include the function name as a query parameter.
+
+00:00:54.376 --> 00:00:58.625
+The server will return a new script calling the function that you named.
+
+00:00:58.625 --> 00:01:00.910
+Let's look at a fictional example.
+
+00:01:00.910 --> 00:01:04.080
+Let's say we are building an app at yourcourselist.com that
+
+00:01:04.080 --> 00:01:07.755
+wants to list all the Udacity courses the user is enrolled in.
+
+00:01:07.755 --> 00:01:10.860
+The naive approach would be to make a fetch request to API
+
+00:01:10.860 --> 00:01:15.135
+udacity.com and use the return data to generate a list for the user.
+
+00:01:15.135 --> 00:01:17.140
+However, this will fail with
+
+00:01:17.140 --> 00:01:21.315
+the security exception as your host differs from Udacity's host.
+
+00:01:21.315 --> 00:01:24.575
+How would this API look if it supports JSONP?
+
+00:01:24.575 --> 00:01:28.545
+Add a function name to the URL and include it with a script tag.
+
+00:01:28.545 --> 00:01:31.345
+The server will wrap all the data means to return in
+
+00:01:31.345 --> 00:01:35.640
+a function call with the same name as given via the query parameter.
+
+00:01:35.640 --> 00:01:38.985
+You need to define this function because when the responses return,
+
+00:01:38.985 --> 00:01:41.520
+the function call is executed and you now have
+
+00:01:41.520 --> 00:01:45.000
+access to the data to the parameter of that function.
+

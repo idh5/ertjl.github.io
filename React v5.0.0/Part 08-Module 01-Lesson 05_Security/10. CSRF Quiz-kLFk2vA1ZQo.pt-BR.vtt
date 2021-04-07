@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:01.502
+Fiz login no banco,
+
+00:00:01.535 --> 00:00:04.471
+então o cookie está
+no meu navegador.
+
+00:00:04.505 --> 00:00:07.541
+Com o DevTools,
+consigo ver cookie aqui.
+
+00:00:07.574 --> 00:00:11.345
+Agora tenho que criar um site
+para enviar a solicitação falsa.
+
+00:00:11.378 --> 00:00:13.113
+Se alguém se deparar
+com o meu site,
+
+00:00:13.146 --> 00:00:16.016
+quero que pense
+que vai jogar um jogo.
+
+00:00:16.049 --> 00:00:19.052
+Ao clicar aqui, quero que uma
+solicitação seja enviada
+
+00:00:19.086 --> 00:00:21.188
+para a URL de
+transferência do banco.
+
+00:00:21.221 --> 00:00:25.092
+A URL de transferência
+está esperando uma solicitação POST.
+
+00:00:25.125 --> 00:00:30.664
+O corpo da solicitação
+deve conter o remetente e o valor.
+
+00:00:30.697 --> 00:00:32.466
+Como se trata
+de uma solicitação POST,
+
+00:00:32.499 --> 00:00:36.236
+o header "Content-Type"
+deve ser o seguinte...
+
+00:00:36.270 --> 00:00:38.138
+Este código enviará
+uma solicitação,
+
+00:00:38.172 --> 00:00:41.575
+mas o site do banco
+verifica um cookie específico.
+
+00:00:41.608 --> 00:00:45.646
+As credenciais incluem cookies
+específicas para esse domínio.
+
+00:00:45.679 --> 00:00:47.648
+Se o usuário já estiver logado
+no banco,
+
+00:00:47.681 --> 00:00:49.683
+o navegador possui login cookies
+
+00:00:49.716 --> 00:00:53.487
+e os inclui automaticamente
+no envio da solicitação.
+
+00:00:53.520 --> 00:00:55.222
+E quando alguém clicar
+num botão,
+
+00:00:55.255 --> 00:00:58.592
+vou trocar o texto
+para essa mensagem encorajadora.
+
+00:00:58.625 --> 00:00:59.760
+Vamos testar!
+
+00:00:59.993 --> 00:01:03.063
+Clicar no texto muda a mensagem.
+Algo deu certo!
+
+00:01:03.096 --> 00:01:06.400
+No DevTools, posso ver
+que a solicitação foi enviada.
+
+00:01:06.433 --> 00:01:10.037
+E aqui está o cookie
+na outra aba.
+
+00:01:10.070 --> 00:01:12.739
+Ao atualizar página,
+vejo uma nova entrada.
+
+00:01:12.773 --> 00:01:14.141
+Funcionou!
+
+00:01:14.174 --> 00:01:16.643
+Este é o código
+da resposta do teste.
+
+00:01:16.677 --> 00:01:19.213
+Este exercício foi difícil,
+então bom trabalho!
+

@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:02.202
+Assim como nos outros
+exercícios,
+
+00:00:02.236 --> 00:00:05.105
+você precisa decidir se houve
+preflight nas solicitações ou não.
+
+00:00:05.138 --> 00:00:09.076
+Se houve, que linha ou linhas
+causaram isso?
+
+00:00:09.109 --> 00:00:14.047
+Se a linha "method: PUT" causa isso,
+assinale aqui.
+
+00:00:14.081 --> 00:00:18.051
+Se o header "Accept" é que causa,
+assinale aqui.
+
+00:00:18.085 --> 00:00:20.487
+Se não houve preflight algum,
+assinale aqui.
+

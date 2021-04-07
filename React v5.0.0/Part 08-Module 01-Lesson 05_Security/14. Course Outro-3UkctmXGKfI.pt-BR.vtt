@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:02.503
+Assim terminamos este curso.
+
+00:00:02.536 --> 00:00:06.073
+Fazer um servidor e um cliente
+se comunicarem não é tão difícil,
+
+00:00:06.106 --> 00:00:08.542
+mas fazer isso de forma correta,
+eficiente e segura
+
+00:00:08.575 --> 00:00:11.144
+é uma tarefa bem mais complexa
+do que parece.
+
+00:00:11.411 --> 00:00:13.614
+Falamos sobre muitos assuntos
+neste curso.
+
+00:00:13.647 --> 00:00:16.016
+Vimos o ciclo
+de solicitação e resposta,
+
+00:00:16.049 --> 00:00:18.385
+em que o navegador e o servidor
+se conectam.
+
+00:00:18.418 --> 00:00:20.420
+Estudamos então HTTP:
+verbos,
+
+00:00:20.454 --> 00:00:23.323
+headers, REST
+e problemas de desempenho.
+
+00:00:23.357 --> 00:00:25.092
+A terceira lição foi sobre HTTPS
+
+00:00:25.125 --> 00:00:26.760
+TLS e criptografia.
+
+00:00:27.027 --> 00:00:29.129
+Na última aula, vimos HTTP/2
+
+00:00:29.162 --> 00:00:32.566
+e todas as vantagens que isso traz
+ao ecossistema da web.
+
+00:00:32.599 --> 00:00:35.002
+Nesta aula, vimos
+precauções de segurança
+
+00:00:35.035 --> 00:00:38.138
+com a política de mesma origem,
+como burlar essa política
+
+00:00:38.172 --> 00:00:41.775
+e algumas vulnerabilidades como CSRF
+e scripting entre sites.
+
+00:00:42.009 --> 00:00:43.277
+Vimos muitas técnicas,
+
+00:00:43.310 --> 00:00:45.746
+mas o que é importante lembrar
+de tudo isso
+
+00:00:45.779 --> 00:00:47.181
+é manter seu usuário seguro.
+
+00:00:47.548 --> 00:00:50.350
+Obrigado por participar
+desta jornada.
+
+00:00:50.384 --> 00:00:52.052
+-Até mais!
+-Tchau!
+

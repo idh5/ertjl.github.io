@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.220
+Simon just gave you some rules.
+
+00:00:02.220 --> 00:00:05.145
+But if there are rules, then there are exceptions to those rules.
+
+00:00:05.145 --> 00:00:06.715
+As you're very well aware of,
+
+00:00:06.715 --> 00:00:09.840
+we are allowed to include stylesheets, images, videos,
+
+00:00:09.840 --> 00:00:15.810
+iframes, and even scripts from other origins as well as send form data to other origins.
+
+00:00:15.810 --> 00:00:19.560
+The end user won't be able to tell that one image is loaded from our server,
+
+00:00:19.560 --> 00:00:22.020
+while another is loaded from Instagram.
+
+00:00:22.020 --> 00:00:24.630
+However, for web developers there is a difference.
+
+00:00:24.630 --> 00:00:27.150
+You can't interact with an image tag that is showing
+
+00:00:27.150 --> 00:00:31.860
+a cross origin image in the same way you could with an image from the same origin.
+
+00:00:31.860 --> 00:00:36.385
+For example, you can't inspect the pixels of the image from inside the canvas element.
+
+00:00:36.385 --> 00:00:40.690
+The same goes for a script tag that includes a cross origin script resource.
+
+00:00:40.690 --> 00:00:43.380
+The contents will either just silently appear empty,
+
+00:00:43.380 --> 00:00:45.350
+or in case of more modern APIs,
+
+00:00:45.350 --> 00:00:47.085
+it will explicitly throw an error.
+
+00:00:47.085 --> 00:00:49.040
+For the same origin script tag,
+
+00:00:49.040 --> 00:00:51.195
+I have access to its contents.
+
+00:00:51.195 --> 00:00:55.225
+But I can't access the other origin script contents.
+
+00:00:55.225 --> 00:00:57.750
+It's important to keep in mind that the user's browser
+
+00:00:57.750 --> 00:01:00.960
+is the one who enforces the same origin policy.
+
+00:01:00.960 --> 00:01:04.755
+It's not the server but the client that will not let you send off requests.
+
+00:01:04.755 --> 00:01:06.460
+We'll see why this is important,
+
+00:01:06.460 --> 00:01:11.000
+as we look into getting around same origin policy restrictions in the next video.
+

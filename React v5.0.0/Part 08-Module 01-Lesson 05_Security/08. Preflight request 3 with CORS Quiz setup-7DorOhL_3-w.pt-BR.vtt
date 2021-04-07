@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:01.502
+Envia esta solicitação
+
+00:00:01.535 --> 00:00:03.270
+mostra o método OPTIONS,
+
+00:00:03.303 --> 00:00:04.671
+então houve preflight.
+
+00:00:04.705 --> 00:00:07.140
+Se eu deletar o header
+e enviar a solicitação de novo,
+
+00:00:07.174 --> 00:00:10.477
+continua havendo preflight.
+
+00:00:10.511 --> 00:00:13.046
+Se eu colocar o header de volta
+e mudar o método
+
+00:00:13.080 --> 00:00:16.116
+para algo que eu sei
+que não causa preflight, como GET,
+
+00:00:17.284 --> 00:00:19.987
+então o header OPTIONS
+não é utilizado.
+
+00:00:20.020 --> 00:00:22.389
+Então o header "Accept"
+não causa preflight,
+
+00:00:22.422 --> 00:00:24.758
+mas o método PUT causa.
+

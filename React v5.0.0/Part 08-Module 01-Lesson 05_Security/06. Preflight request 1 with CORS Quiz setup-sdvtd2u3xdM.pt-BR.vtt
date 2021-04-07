@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.534 --> 00:00:04.004
+Já que esta solicitação é idêntica
+à que eu quero enviar,
+
+00:00:04.037 --> 00:00:05.506
+não mudarei nada.
+
+00:00:07.307 --> 00:00:09.576
+Preciso ver que método
+é utilizado,
+
+00:00:09.610 --> 00:00:11.712
+então vou ocultar
+algumas destas colunas
+
+00:00:11.745 --> 00:00:14.147
+e vou exibir
+a coluna de métodos.
+
+00:00:14.381 --> 00:00:16.650
+Esta solicitação GET foi enviada
+com sucesso.
+
+00:00:16.683 --> 00:00:19.152
+Como não há uma solicitação OPTIONS
+listada aqui,
+
+00:00:19.186 --> 00:00:21.355
+não foi feito preflight
+nessa solicitação.
+
+00:00:21.688 --> 00:00:23.156
+Então esta
+é a resposta correta.
+

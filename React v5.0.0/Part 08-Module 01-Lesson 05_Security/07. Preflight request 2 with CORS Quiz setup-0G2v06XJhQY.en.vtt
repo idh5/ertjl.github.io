@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+Just like the previous quiz,
+
+00:00:02.040 --> 00:00:04.965
+you need to determine if the request is pre-flighted or not.
+
+00:00:04.965 --> 00:00:09.715
+And if it is pre-flighted, which line or lines causes it to be pre-flighted.
+
+00:00:09.715 --> 00:00:14.780
+If the method POST line causes this request be pre-flighted, then check here.
+
+00:00:14.780 --> 00:00:18.450
+If the X-Forwarded-For line is the culprit, then check here.
+
+00:00:18.450 --> 00:00:21.120
+If the request isn't pre-flighted at all, then check here.
+

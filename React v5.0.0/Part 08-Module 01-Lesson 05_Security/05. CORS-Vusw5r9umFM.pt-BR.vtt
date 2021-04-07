@@ -1,0 +1,128 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.917 --> 00:00:03.417
+CORS foi adotado
+por provedores de API
+
+00:00:03.458 --> 00:00:06.375
+como a principal maneira
+de compartilhar recursos.
+
+00:00:06.417 --> 00:00:08.792
+Seus headers permitem
+solicitações de outras origens
+
+00:00:08.833 --> 00:00:12.875
+sem precisar do JavaScript, apesar
+de necessitar do código de servidor.
+
+00:00:12.917 --> 00:00:16.042
+Os headers do CORS permitem
+que os usuários especifiquem origens
+
+00:00:16.083 --> 00:00:18.333
+que têm permissão
+para acessar seus recursos.
+
+00:00:18.375 --> 00:00:20.917
+Se o header de uma solicitação
+estiver na lista,
+
+00:00:20.958 --> 00:00:23.917
+ele poderá inspecionar a resposta
+e utilizar os dados.
+
+00:00:23.958 --> 00:00:25.292
+Problema resolvido!
+
+00:00:25.333 --> 00:00:27.042
+Porém, se olhar com atenção,
+
+00:00:27.083 --> 00:00:30.583
+perceberá que, quando o servidor
+enviar os headers de volta,
+
+00:00:30.625 --> 00:00:33.042
+a solicitação
+já terá sido executada.
+
+00:00:33.083 --> 00:00:35.667
+Isso é um problema
+no caso de operações destrutivas,
+
+00:00:35.708 --> 00:00:38.833
+porque já é tarde demais
+para ignorar a solicitação.
+
+00:00:38.875 --> 00:00:41.292
+É aí que entram
+as solicitações preflight.
+
+00:00:41.333 --> 00:00:43.792
+Esse tipo de solicitação
+utiliza o método OPTIONS
+
+00:00:43.833 --> 00:00:46.792
+e permite que o navegador sinalize
+quando quer apenas verificar
+
+00:00:46.833 --> 00:00:48.667
+o que é permitido
+e o que não é.
+
+00:00:48.708 --> 00:00:51.583
+O servidor não deve executar
+nenhum tipo de lógica de negócio,
+
+00:00:51.625 --> 00:00:54.792
+apenas retornar headers similares
+aos da solicitação de header.
+
+00:00:54.833 --> 00:00:57.625
+Porém, nem todas em as solicitações
+será usado o preflight.
+
+00:00:57.667 --> 00:00:59.958
+Em solicitações feitas devido
+a etiquetas de imagem
+
+00:01:00.000 --> 00:01:02.042
+ou formas, não será.
+
+00:01:02.083 --> 00:01:04.958
+Qualquer solicitação GET
+será enviada direto,
+
+00:01:05.000 --> 00:01:08.833
+você só não conseguirá ler
+a resposta, se o CORS não permitir.
+
+00:01:08.875 --> 00:01:12.292
+Detalhes sobre quando solicitações
+preflight são enviadas com CORS
+
+00:01:12.333 --> 00:01:13.792
+são complexos e numerosos,
+
+00:01:13.833 --> 00:01:16.833
+então deixei um link sobre isso
+nas anotações do instrutor.
+
+00:01:17.958 --> 00:01:21.542
+Agora conhecemos algumas formas
+de burlar restrições da origem única
+
+00:01:21.583 --> 00:01:24.417
+e, se você um dia se envolver
+na publicação de um API,
+
+00:01:24.458 --> 00:01:27.458
+eu o encorajo a pensar no CORS
+desde o início
+
+00:01:27.500 --> 00:01:29.125
+até habilitá-lo
+em seu servidor.
+

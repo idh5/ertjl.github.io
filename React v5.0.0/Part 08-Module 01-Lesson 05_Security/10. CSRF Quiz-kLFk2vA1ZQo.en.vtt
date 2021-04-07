@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.662
+I've logged into the bank,
+
+00:00:01.662 --> 00:00:04.370
+so the login cookie is set in my browser.
+
+00:00:04.370 --> 00:00:05.680
+Opening up dev tools,
+
+00:00:05.680 --> 00:00:07.475
+I can see the cookie here.
+
+00:00:07.475 --> 00:00:11.430
+Now I need to create a website that will send the forged request.
+
+00:00:11.430 --> 00:00:13.185
+If someone stumbles upon my site,
+
+00:00:13.185 --> 00:00:15.942
+I want them to think they're going to play a game.
+
+00:00:15.942 --> 00:00:17.340
+When they click this button.
+
+00:00:17.340 --> 00:00:20.985
+I want to request to be sent off to the banks transfer URL.
+
+00:00:20.985 --> 00:00:24.765
+The transfer URL is expecting a POST request.
+
+00:00:24.765 --> 00:00:26.760
+The body of the request needs to be
+
+00:00:26.760 --> 00:00:30.400
+the recipient and the amount of money being transferred.
+
+00:00:30.400 --> 00:00:32.430
+Since this is a POST request,
+
+00:00:32.430 --> 00:00:36.270
+the content type header has to be set to this value.
+
+00:00:36.270 --> 00:00:37.950
+Now this code will send a request,
+
+00:00:37.950 --> 00:00:41.400
+but the bank's website checks for a specific cookie.
+
+00:00:41.400 --> 00:00:45.225
+Credentials include, "Sends along cookies for this domain."
+
+00:00:45.225 --> 00:00:47.895
+If the user is already logged into the bank,
+
+00:00:47.895 --> 00:00:49.980
+then the browser has a login cookie and
+
+00:00:49.980 --> 00:00:53.580
+automatically includes it when the request is sent.
+
+00:00:53.580 --> 00:00:55.365
+Lastly, when someone clicks on a button,
+
+00:00:55.365 --> 00:00:57.855
+I'll change the button text to this encouraging message.
+
+00:00:57.855 --> 00:01:00.570
+All right, let's try it out. Clicking the button
+
+00:01:00.570 --> 00:01:03.015
+changes the text, so something has happened.
+
+00:01:03.015 --> 00:01:06.365
+In dev tools, I can see the request that just got sent.
+
+00:01:06.365 --> 00:01:09.555
+And here's the cookie that got set in the other tab.
+
+00:01:09.555 --> 00:01:11.455
+Refreshing the bank site,
+
+00:01:11.455 --> 00:01:13.925
+I see this new entry, it's worked.
+
+00:01:13.925 --> 00:01:16.770
+And here's the code that the quiz is looking for.
+
+00:01:16.770 --> 00:01:19.040
+This was an involved exercise, so great job!
+

@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.417 --> 00:00:01.875
+Como regra geral,
+
+00:00:01.917 --> 00:00:06.542
+o JavaScript não pode acessar dados
+de origens que não sejam a dele.
+
+00:00:06.583 --> 00:00:08.667
+A origem é composta
+de três partes:
+
+00:00:08.708 --> 00:00:11.500
+o esquema de dados, o nome
+do host e a porta.
+
+00:00:11.542 --> 00:00:13.167
+Na página em que você está,
+
+00:00:13.208 --> 00:00:14.833
+o esquema é "https://",
+
+00:00:14.875 --> 00:00:18.167
+o nome do host é
+"www.udacity.com"
+
+00:00:18.208 --> 00:00:20.542
+e a porta é ":443".
+
+00:00:20.583 --> 00:00:22.750
+Se você modificar
+alguma dessas partes,
+
+00:00:22.792 --> 00:00:26.125
+estará numa origem diferente,
+e outras regras se aplicarão.
+
+00:00:26.167 --> 00:00:29.083
+Fora os problemas de conteúdo misto
+que mencionamos antes,
+
+00:00:29.125 --> 00:00:33.708
+esse é outro motivo
+para não misturar HTTP e HTTPS.
+
+00:00:34.250 --> 00:00:36.458
+Quais são as regras
+que se aplicam
+
+00:00:36.500 --> 00:00:39.083
+quando trabalharmos
+em origens diversas?
+
+00:00:39.125 --> 00:00:43.000
+Primeiro: não se pode fazer
+solicitações fetch a outras origens.
+
+00:00:43.208 --> 00:00:45.667
+Na verdade, isso é possível
+em algumas condições,
+
+00:00:45.708 --> 00:00:47.958
+mas você não conseguirá
+ler a resposta.
+
+00:00:48.000 --> 00:00:51.708
+Segundo: não se pode inspecionar
+iframes ou janelas com JavaScript
+
+00:00:51.750 --> 00:00:54.500
+se forem de outra origem.
+
+00:00:54.542 --> 00:00:56.958
+Essas regras fazem muito sentido
+se parar para pensar.
+
+00:00:57.000 --> 00:01:00.833
+Se eu tivesse permissão para fazer
+solicitações fetch a outras origens,
+
+00:01:00.875 --> 00:01:04.500
+eu poderia criar um site que faz
+solicitações fetch para o Facebook
+
+00:01:04.542 --> 00:01:06.625
+e roubar todas
+as suas mensagens.
+
+00:01:06.667 --> 00:01:09.917
+Ou ainda pior, eu poderia
+fazer isso com a Udacity
+
+00:01:09.958 --> 00:01:13.042
+e fazer você sair
+de todos os seus cursos.
+
+00:01:13.083 --> 00:01:14.792
+Nós não queremos isso.
+
+00:01:14.833 --> 00:01:18.292
+Essa restrição, ou regra, é chamada
+de política de mesma origem.
+
