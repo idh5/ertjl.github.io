@@ -1,0 +1,239 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lesson Summary</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Lifecycle Events</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. componentDidMount Lifecycle Event.html">02. componentDidMount Lifecycle Event</a>
+    </li>
+    <li class="">
+      <a href="03. Lesson Summary.html">03. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Lesson Summary</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>To recap, lifecycle events are special methods that React provides that allow us to hook into different points in a component's life to run some code. Now, there are a number of different lifecycle events. They will run at different points, but we can break them down into three distinct categories:</p>
+<h3 id="adding-to-the-dom">Adding to the DOM</h3>
+<p>The following lifecycle events will be called in order when a component is being added to the DOM:</p>
+<ol>
+<li><code>constructor()</code></li>
+</ol>
+<ul>
+<li><code>getDerivedStateFromProps()</code></li>
+<li><code>render()</code></li>
+<li><code>componentDidMount()</code></li>
+</ul>
+<blockquote>
+  <p>⚠️componentWillMount() has been deprecated. ⚠️</p>
+  <p>As of React 16.3, <code>componentWillMount()</code> has been replaced with <code>UNSAFE_componentWillMount()</code>. Only <code>UNSAFE_componentWillMount()</code> will work starting with React 17.0. <code>UNSAFE_componentWillMount()</code> is now considered to be a legacy method and should not be used in new code.</p>
+</blockquote>
+<h3 id="re-rendering">Re-rendering</h3>
+<p>The following lifecycle events will be called in order when a component is re-rendered to the DOM:</p>
+<ol>
+<li><code>getDerivedStateFromProps()</code></li>
+</ol>
+<ul>
+<li><code>shouldComponentUpdate()</code></li>
+<li><code>render()</code></li>
+<li><code>getSnapshotBeforeUpdate()</code><a href="https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate" rel="noopener noreferrer" target="_blank">(specific use cases)</a></li>
+<li><code>componentDidUpdate()</code></li>
+</ul>
+<blockquote>
+  <p>⚠️<code>componentWillReceiveProps()</code> and <code>componentWillUpdate()</code> have been deprecated. ⚠️</p>
+  <p>As of React 16.3, they have been replaced with <code>UNSAFE_componentWillUpdate()</code> and <code>UNSAFE_componentWillReceiveProps()</code>. Only <code>UNSAFE_componentWillUpdate()</code> and <code>UNSAFE_componentWillReceiveProps()</code> will work starting with React 17.0. <code>UNSAFE_componentWillUpdate()</code> and <code>UNSAFE_componentWillReceiveProps()</code> are now considered to be  legacy methods and should not be used in new code.</p>
+</blockquote>
+<h3 id="removing-from-the-dom">Removing from the DOM</h3>
+<p>This lifecycle event is called when a component is being removed from the DOM:</p>
+<ul>
+<li><code>componentWillUnmount()</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount" rel="noopener noreferrer" target="_blank"><code>componentDidMount()</code></a> from the React Docs</li>
+<li><a href="https://facebook.github.io/react/docs/react-component.html#componentwillunmount" rel="noopener noreferrer" target="_blank"><code>componentWillUnmount()</code></a> from the React Docs</li>
+<li><a href="https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle" rel="noopener noreferrer" target="_blank">Component Lifecycles</a> from the React Docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="lesson-challenge">Lesson Challenge</h3>
+<p>Answer the following questions and share your answers with your classmates. </p>
+<p>1) Describe what the code in the <code>App.js</code> file in the workspace below will render on the screen and explain why.</p>
+<p>2) Describe a React anti-pattern that's used in the code. </p>
+<p>3) Modify the Normal3 Component in order to keep it from re-rendering.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Lesson Summary')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.225
+If you want to make an Ajax request in React,
+
+00:00:03.225 --> 00:00:05.970
+use the componentDidMount lifecycle event.
+
+00:00:05.969 --> 00:00:08.244
+Let's walk through how this works.
+
+00:00:08.244 --> 00:00:10.454
+Once our component is added to the view,
+
+00:00:10.455 --> 00:00:12.644
+componentDidMount will be invoked,
+
+00:00:12.644 --> 00:00:15.839
+componentDidMount will initiate our Ajax request,
+
+00:00:15.839 --> 00:00:18.795
+once the request has finished and we have the response,
+
+00:00:18.795 --> 00:00:21.120
+setState is called which updates the state of
+
+00:00:21.120 --> 00:00:24.230
+our component with our newly requested data.
+
+00:00:24.230 --> 00:00:27.370
+This will tick off a re-render and update the UI.
+

@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:04.433
+Agora podemos navegar
+até a rota /create,
+
+00:00:04.467 --> 00:00:06.900
+mas o componente
+que estamos renderizando,
+
+00:00:06.933 --> 00:00:09.433
+que é nosso componente
+CreateContact,
+
+00:00:09.467 --> 00:00:11.867
+ainda não está fazendo nada.
+
+00:00:11.900 --> 00:00:15.267
+Vamos torná-lo
+um pouco mais interessante.
+
+00:00:15.300 --> 00:00:19.933
+Primeiro,
+vamos importar o Link,
+
+00:00:19.967 --> 00:00:23.733
+pois queremos configurar
+o botão de retorno.
+
+00:00:24.367 --> 00:00:29.667
+Obtemos o Link de react-router-dom,
+e, dentro da IU -
+
+00:00:29.700 --> 00:00:31.500
+vamos remover isso -,
+
+00:00:31.533 --> 00:00:34.333
+a primeira coisa que renderizaremos
+é um Link,
+
+00:00:34.367 --> 00:00:36.967
+que terá className igual a...
+
+00:00:37.700 --> 00:00:41.633
+close-create-contact.
+
+00:00:43.500 --> 00:00:47.133
+Vou fechar a barra lateral
+para termos mais espaço.
+
+00:00:48.733 --> 00:00:50.767
+A próxima propriedade
+que passaremos
+
+00:00:50.800 --> 00:00:55.967
+é para onde desejamos ir,
+que será nossa rota principal.
+
+00:00:56.767 --> 00:00:58.633
+Digitaremos "Close".
+
+00:01:00.367 --> 00:01:05.200
+Ao salvarmos,
+veremos um botão de seta,
+
+00:01:05.233 --> 00:01:09.300
+e agora podemos navegar
+entre as diferentes rotas.
+
+00:01:09.333 --> 00:01:11.567
+A próxima coisa...
+
+00:01:11.600 --> 00:01:15.767
+O objetivo do create é possibilitar
+a criação de um novo contato
+
+00:01:15.800 --> 00:01:18.433
+e, além disso,
+
+00:01:18.467 --> 00:01:22.100
+possibilitar que o usuário possa
+carregar a imagem dele.
+
+00:01:22.133 --> 00:01:25.867
+Temos este componente
+ImageInput,
+
+00:01:25.900 --> 00:01:28.867
+que foi fornecido
+logo no início,
+
+00:01:28.900 --> 00:01:32.767
+então nós renderizaremos
+
+00:01:34.267 --> 00:01:39.533
+dando o className
+igual a create-contact-avatar-input.
+
+00:01:39.567 --> 00:01:41.567
+Ficou longo, mas funcionará.
+
+00:01:41.600 --> 00:01:45.100
+Name será avatarURL
+
+00:01:45.133 --> 00:01:49.433
+e maxHeight será 64.
+
+00:01:50.900 --> 00:01:54.767
+Precisamos envolver isto
+dentro de um componente form,
+
+00:01:54.800 --> 00:01:58.867
+porque esse é o objetivo
+desta rota /create.
+
+00:01:59.967 --> 00:02:02.800
+E este form terá className
+
+00:02:02.833 --> 00:02:06.833
+igual a create-contact-form.
+
+00:02:09.567 --> 00:02:14.100
+Perceba que temos
+o input de uma pequena imagem.
+
+00:02:14.133 --> 00:02:17.067
+A próxima informação
+obtida do usuário
+
+00:02:17.100 --> 00:02:19.467
+será o nome
+e o endereço do Twitter.
+
+00:02:19.500 --> 00:02:21.667
+Logo abaixo
+do input da imagem,
+
+00:02:21.700 --> 00:02:23.400
+vamos renderizar um div
+
+00:02:23.433 --> 00:02:27.300
+com className
+igual a create-contact-details.
+
+00:02:28.133 --> 00:02:32.600
+Aqui dentro teremos
+dois inputs diferentes,
+
+00:02:32.633 --> 00:02:33.867
+o primeiro...
+
+00:02:34.200 --> 00:02:39.300
+Ambos serão type="text",
+name será name,
+
+00:02:39.333 --> 00:02:42.767
+e o placeholder será igual a name,
+no primeiro.
+
+00:02:42.800 --> 00:02:45.933
+O segundo também será
+type="text",
+
+00:02:45.967 --> 00:02:48.100
+name será handle
+
+00:02:48.133 --> 00:02:52.033
+e o placeholder será handle.
+
+00:02:52.067 --> 00:02:56.100
+A última coisa do form
+será button,
+
+00:02:56.133 --> 00:02:59.267
+que podemos adicionar aqui.
+
+00:02:59.300 --> 00:03:04.700
+Ele dirá "Add Contact".
+
+00:03:04.733 --> 00:03:07.367
+Isso parece muito bom.
+
+00:03:08.633 --> 00:03:11.400
+O que precisamos fazer,
+e faremos no próximo vídeo,
+
+00:03:11.433 --> 00:03:16.067
+é, ao preenchermos o formulário,
+obter as informações,
+
+00:03:16.100 --> 00:03:17.867
+salvá-las no banco de dados,
+
+00:03:17.900 --> 00:03:21.167
+fazer uma solicitação de API
+para isso
+
+00:03:21.767 --> 00:03:23.833
+e atualizar o estado local.
+

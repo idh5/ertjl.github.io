@@ -1,0 +1,84 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:04.004
+Quando usamos o JavaScript
+no navegador para renderizar a IU,
+
+00:00:04.037 --> 00:00:07.140
+às vezes chamamos isso
+de "aplicativo de página única".
+
+00:00:07.173 --> 00:00:08.942
+Mas o que isso quer dizer?
+
+00:00:08.976 --> 00:00:10.911
+Um site comum funciona assim:
+
+00:00:10.944 --> 00:00:12.846
+quando o usuário
+visita o site,
+
+00:00:12.880 --> 00:00:15.916
+o navegador solicita uma página
+ao servidor do site,
+
+00:00:15.949 --> 00:00:19.219
+o servidor gera o HTML
+e envia.
+
+00:00:19.253 --> 00:00:20.587
+Quando o usuário navega,
+
+00:00:20.621 --> 00:00:23.156
+o navegador solicita
+uma nova página ao servidor,
+
+00:00:23.190 --> 00:00:25.959
+o servidor envia o novo HTML
+para o navegador,
+
+00:00:25.993 --> 00:00:28.095
+e o usuário vê a nova página.
+
+00:00:28.128 --> 00:00:31.698
+Toda vez que o usuário navega,
+esse ciclo se repete.
+
+00:00:31.732 --> 00:00:34.468
+Quando as pessoas dizem
+"aplicativo de página única",
+
+00:00:34.501 --> 00:00:37.171
+não querem dizer
+que há só uma tela no aplicativo,
+
+00:00:37.204 --> 00:00:41.008
+e sim que o navegador não busca
+por novas páginas no servidor.
+
+00:00:41.041 --> 00:00:45.012
+Em vez disso, o JavaScript lida
+com a transição entre as páginas.
+
+00:00:45.045 --> 00:00:48.382
+Então só há uma página inicial
+enviada do servidor.
+
+00:00:48.415 --> 00:00:51.051
+É por isso que se chama
+aplicativo de página única.
+
+00:00:51.084 --> 00:00:54.221
+O React Router é uma ferramenta
+que nos permite usar o React
+
+00:00:54.254 --> 00:00:56.390
+para criar
+um aplicativo de página única.
+
+00:00:56.423 --> 00:00:59.693
+Vamos usá-lo para adicionar rotas
+ao aplicativo.
+

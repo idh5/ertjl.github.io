@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.120
+The link component from React Router is critical.
+
+00:00:03.120 --> 00:00:06.060
+It's the way that the user navigates through your app.
+
+00:00:06.059 --> 00:00:07.814
+When the user clicks a link,
+
+00:00:07.815 --> 00:00:11.625
+it talks to the BrowserRouter and tells it to update the URL.
+
+00:00:11.625 --> 00:00:13.335
+It's also accessible.
+
+00:00:13.335 --> 00:00:16.905
+If you use the keyboard to navigate an app, it'll still work.
+
+00:00:16.905 --> 00:00:19.920
+Or maybe you want to right-click and open a new window.
+
+00:00:19.920 --> 00:00:21.315
+That's going to still work, too.
+
+00:00:21.315 --> 00:00:24.830
+These components do what users expect a link on the web to do.
+

@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.095
+It's time for you to put your newfound skills to the test,
+
+00:00:03.095 --> 00:00:04.862
+and build the My Reads app.
+
+00:00:04.862 --> 00:00:07.660
+You'll use React to build the application.
+
+00:00:07.660 --> 00:00:09.309
+If you remember from the beginning
+
+00:00:09.310 --> 00:00:12.500
+the My Reads app let's you keep track of all of your books.
+
+00:00:12.500 --> 00:00:14.480
+This app will require you to manage state,
+
+00:00:14.480 --> 00:00:17.149
+build components, and leverage React router.
+
+00:00:17.149 --> 00:00:19.039
+The important part of constructing the app,
+
+00:00:19.039 --> 00:00:20.940
+is building all of the React side of it.
+
+00:00:20.940 --> 00:00:23.780
+We'll be providing you with some basic styling and icons,
+
+00:00:23.780 --> 00:00:25.829
+since we want it to look halfway decent.
+
+00:00:25.829 --> 00:00:28.448
+We're not grading any of the visuals or anything like that.
+
+00:00:28.448 --> 00:00:30.039
+But enough listening to me.
+
+00:00:30.039 --> 00:00:32.000
+Time to get started with the project
+

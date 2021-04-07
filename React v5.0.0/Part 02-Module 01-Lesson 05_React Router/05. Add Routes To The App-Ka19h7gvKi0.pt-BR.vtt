@@ -1,0 +1,250 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.433
+A terceira e última coisa
+a fazer no aplicativo
+
+00:00:03.467 --> 00:00:07.767
+é colocar o React Router
+para gerenciar o URL e a IU.
+
+00:00:07.800 --> 00:00:10.733
+Vamos voltar ao arquivo App.js
+
+00:00:10.767 --> 00:00:14.500
+e importar algo
+chamado "Route",
+
+00:00:14.533 --> 00:00:18.067
+que virá do react-router-dom.
+
+00:00:18.100 --> 00:00:20.067
+Agora vamos descer
+
+00:00:20.100 --> 00:00:23.000
+para esta parte do código.
+
+00:00:23.033 --> 00:00:28.133
+Em vez disso,
+nós renderizaremos um Route,
+
+00:00:28.167 --> 00:00:33.300
+sendo que path será /,
+e a propriedade, render,
+
+00:00:33.333 --> 00:00:36.600
+que pegará uma função.
+
+00:00:36.633 --> 00:00:41.433
+Agora vamos mover
+o componente ListContacts para cá,
+
+00:00:41.467 --> 00:00:43.067
+para a função render.
+
+00:00:43.100 --> 00:00:46.000
+Agora temos Route path='/'
+
+00:00:46.033 --> 00:00:49.267
+e é aqui que desejamos
+que o Route renderize,
+
+00:00:49.300 --> 00:00:51.967
+quando este path corresponder
+ao URL.
+
+00:00:52.000 --> 00:00:55.167
+Vamos fazer o mesmo
+para CreateContact.
+
+00:00:55.200 --> 00:00:59.333
+Temos um Route e digitaremos "path",
+que será igual a /create,
+
+00:00:59.367 --> 00:01:02.567
+e não precisamos usar render aqui,
+podemos usar component,
+
+00:01:02.600 --> 00:01:06.300
+e passar
+o componente CreateContact.
+
+00:01:06.333 --> 00:01:10.767
+Esta é outra opção na qual dizemos:
+"Renderize este componente
+
+00:01:10.800 --> 00:01:13.900
+quando path for igual
+a /create.
+
+00:01:13.933 --> 00:01:17.033
+Aqui em cima,
+passamos o ListContacts
+
+00:01:17.067 --> 00:01:19.167
+com algumas propriedades
+personalizadas.
+
+00:01:19.200 --> 00:01:23.367
+Usaremos a propriedade render
+do React Router ou de Route
+
+00:01:23.400 --> 00:01:26.100
+para informar que,
+como nós criamos este elemento,
+
+00:01:26.133 --> 00:01:29.500
+nós iremos passar
+as propriedades específicas.
+
+00:01:29.533 --> 00:01:32.533
+Mas, aqui embaixo,
+como não precisamos passar
+
+00:01:32.567 --> 00:01:35.900
+nenhuma propriedade
+ao componente CreateContact,
+
+00:01:35.933 --> 00:01:39.400
+podemos dizer:
+"Este é o componente. Renderize-o.
+
+00:01:39.433 --> 00:01:42.200
+Crie esse elemento sozinho,
+React Router",
+
+00:01:42.233 --> 00:01:44.600
+pois não precisamos
+passar nada.
+
+00:01:44.633 --> 00:01:47.867
+Antes de eu clicar
+para salvar,
+
+00:01:47.900 --> 00:01:51.167
+pense qual Route,
+
+00:01:51.200 --> 00:01:54.033
+ou especificamente
+qual componente será renderizado,
+
+00:01:54.067 --> 00:01:57.500
+o ListContacts
+ou o CreateContact?
+
+00:01:57.533 --> 00:02:00.100
+Estamos no path /create,
+
+00:02:00.133 --> 00:02:02.233
+então se eu salvar...
+
+00:02:02.267 --> 00:02:07.667
+Que estranho!
+Ainda obtemos os dois componentes.
+
+00:02:07.700 --> 00:02:10.700
+Obtemos o ListContacts aqui
+
+00:02:10.733 --> 00:02:14.067
+e o CreateContact aqui.
+
+00:02:14.100 --> 00:02:17.300
+A razão para isso é porque,
+tecnicamente,
+
+00:02:17.333 --> 00:02:19.567
+ambos os paths correspondem.
+
+00:02:19.600 --> 00:02:22.167
+O /create corresponde
+completamente,
+
+00:02:22.200 --> 00:02:25.467
+mas o / corresponde
+parcialmente.
+
+00:02:25.500 --> 00:02:27.500
+Para consertar isso
+
+00:02:27.533 --> 00:02:31.867
+podemos dizer
+que só queremos que corresponda
+
+00:02:31.900 --> 00:02:34.067
+e renderize o ListContacts
+
+00:02:34.100 --> 00:02:38.067
+quando / corresponder
+exatamente.
+
+00:02:38.100 --> 00:02:43.167
+Ao salvarmos isso, só veremos
+o componente CreateContact,
+
+00:02:43.200 --> 00:02:46.900
+porque o /create
+não corresponde mais a /,
+
+00:02:46.933 --> 00:02:50.900
+pois só corresponderá exatamente
+e não parcialmente.
+
+00:02:50.933 --> 00:02:52.567
+Podemos testar isso
+
+00:02:52.600 --> 00:02:55.500
+indo para localhost:3000.
+Ao fazer isso,
+
+00:02:55.533 --> 00:02:59.900
+o componente ListContacts
+será renderizado,
+
+00:02:59.933 --> 00:03:02.733
+porque o path corresponde
+exatamente.
+
+00:03:02.767 --> 00:03:05.000
+Ao clicarmos
+no componente Link,
+
+00:03:05.033 --> 00:03:08.400
+perceba que, no canto inferior
+esquerdo, vamos para /create,
+
+00:03:08.433 --> 00:03:09.633
+e, ao fazer isso,
+
+00:03:09.667 --> 00:03:11.800
+este componente
+não será renderizado,
+
+00:03:11.833 --> 00:03:15.067
+pois não estamos em /
+ou na tela principal,
+
+00:03:15.100 --> 00:03:17.500
+mas em /create,
+
+00:03:17.533 --> 00:03:20.433
+então obtemos
+o componente CreateContact.
+
+00:03:20.467 --> 00:03:24.767
+Agora que o React Router
+está gerenciando as telas,
+
+00:03:24.800 --> 00:03:27.667
+podemos remover
+a propriedade screen
+
+00:03:27.700 --> 00:03:31.733
+e nos livrar
+da propriedade onNavigate,
+
+00:03:31.767 --> 00:03:35.467
+que estamos passando
+ao componente ListContacts.
+

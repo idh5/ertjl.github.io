@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+Now that React router is installed,
+
+00:00:02.160 --> 00:00:05.115
+we can use all of the different components that it comes with.
+
+00:00:05.115 --> 00:00:08.699
+So, inside of our main index.css file here,
+
+00:00:08.699 --> 00:00:14.054
+let's go ahead and import BrowserRouter from react-router-dom,
+
+00:00:14.054 --> 00:00:19.394
+don't forget the dashed.com and don't forget the curly braces around BrowserRouter.
+
+00:00:19.394 --> 00:00:24.059
+Now, all we need to do is take our main app component,
+
+00:00:24.059 --> 00:00:28.125
+and wrap it around our BrowserRouter.
+
+00:00:28.125 --> 00:00:29.800
+What this will allow us to do,
+
+00:00:29.800 --> 00:00:31.760
+is it will allow us to use
+
+00:00:31.760 --> 00:00:35.658
+the other components that React router dom comes with inside of our app,
+
+00:00:35.658 --> 00:00:38.013
+and it'll also listen to the URL.
+
+00:00:38.014 --> 00:00:40.585
+So, whenever the URL changes,
+
+00:00:40.585 --> 00:00:43.024
+the routing components will be notified of that.
+
+00:00:43.024 --> 00:00:45.469
+So, that's it for this file go ahead and save it,
+
+00:00:45.469 --> 00:00:47.810
+and then we'll continue on in the next video.
+

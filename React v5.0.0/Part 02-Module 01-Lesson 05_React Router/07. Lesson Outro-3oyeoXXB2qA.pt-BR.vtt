@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:02.236
+Legal!
+O aplicativo tem uma nova tela,
+
+00:00:02.269 --> 00:00:03.904
+e, como usamos o React Router,
+
+00:00:03.937 --> 00:00:06.340
+as expectativas dos usuários
+foram cumpridas.
+
+00:00:06.373 --> 00:00:09.877
+Ao clicarem no link,
+o Router vai para a nova tela,
+
+00:00:09.910 --> 00:00:11.645
+e o URL é atualizado.
+
+00:00:11.678 --> 00:00:14.147
+Eles clicam no botão de retorno
+para voltar
+
+00:00:14.181 --> 00:00:17.718
+e no de avanço para avançar.
+Eles podem atualizar a página,
+
+00:00:17.751 --> 00:00:19.753
+clicar para abrir
+uma aba nova,
+
+00:00:19.786 --> 00:00:21.822
+e podem até compartilhar
+o URL.
+
+00:00:21.855 --> 00:00:25.058
+É assim que a internet funciona,
+e não queremos mudar isso.
+

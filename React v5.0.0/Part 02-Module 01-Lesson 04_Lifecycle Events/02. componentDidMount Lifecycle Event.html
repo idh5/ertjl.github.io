@@ -1,0 +1,442 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>componentDidMount Lifecycle Event</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Lifecycle Events</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. componentDidMount Lifecycle Event.html">02. componentDidMount Lifecycle Event</a>
+    </li>
+    <li class="">
+      <a href="03. Lesson Summary.html">03. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. componentDidMount Lifecycle Event</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Use ComponentDidMount</p></h3>
+  <video controls>
+  <source src="02. Use ComponentDidMount-vS81IukLbvg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Use ComponentDidMount-vS81IukLbvg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Use ComponentDidMount-vS81IukLbvg.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-componentdidmount-works">How <code>componentDidMount()</code> Works</h2>
+<p>If you remember from the previous section, <code>componentDidMount()</code> is the lifecycle hook that is run right after the component is added to the DOM and should be used if you're fetching remote data or doing an Ajax request. Here's what the React docs have to say about it:</p>
+<blockquote>
+  <p><code>componentDidMount()</code> is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request. Setting state in this method will trigger a re-rendering.</p>
+</blockquote>
+<p>Let's take a look at an example User component:</p>
+<pre><code class="js language-js">import React, { Component } from 'react';
+import fetchUser from '../utils/UserAPI';
+
+class User extends Component {
+ constructor(props) {
+   super(props);
+
+   this.state = {
+     name: '',
+     age: ''
+   };
+ }
+
+ componentDidMount() {
+   fetchUser().then((user) =&gt; this.setState({
+     name: user.name,
+     age: user.age
+   }));
+ }
+
+ render() {
+   return (
+     &lt;div&gt;
+       &lt;p&gt;Name: {this.state.name}&lt;/p&gt;
+       &lt;p&gt;Age: {this.state.age}&lt;/p&gt;
+     &lt;/div&gt;
+   );
+   }
+}
+
+export default User;</code></pre>
+<p>You'll notice that this component has a <code>componentDidMount()</code> lifecycle event. This component seems pretty straightforward, but let's walk through the order of how it works:</p>
+<ol>
+<li>The <code>render()</code> method is called which updates the page with a <code>&lt;div&gt;</code> that has one paragraph for the name and one paragraph for the age. What's important to realize is that <code>this.state.name</code> and <code>this.state.age</code> are empty strings (at first), so the name and age <em>don't actually display</em></li>
+</ol>
+<ul>
+<li>Once the component has been mounted, the <code>componentDidMount()</code> lifecycle event occurs<ul>
+<li>The <code>fetchUser</code> request from the <code>UserAPI</code> is run which sends a request to the user database</li>
+<li>When the data is returned, <code>setState()</code> is called and updates the <code>name</code> and <code>age</code> properties</li></ul></li>
+<li>Since the state has changed, <code>render()</code> gets called again. This re-renders the page, but now <code>this.state.name</code> and <code>this.state.age</code> have values</li>
+</ul>
+<p>Let's use <code>componentDidMount()</code> to fetch real users from a server in our Contacts app!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-required-api-file-⚠️">⚠️ Required API File ⚠️</h2>
+  <p>At the beginning of the program, we gave you the option to clone our starter project or to start from scratch using <a href="https://github.com/facebookincubator/create-react-app" rel="noopener noreferrer" target="_blank">create-react-app</a>. If you used create-react-app to build your project, then you'll need <a href="https://github.com/udacity/reactnd-contacts-complete/blob/master/src/utils/ContactsAPI.js" rel="noopener noreferrer" target="_blank">the ContactsAPI file</a> for the following video.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Use API To Fetch Remote Contacts</p></h3>
+  <video controls>
+  <source src="02. Use API To Fetch Remote Contacts-P34OXhOl_vk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Use API To Fetch Remote Contacts-P34OXhOl_vk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Use API To Fetch Remote Contacts-P34OXhOl_vk.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/30cd6500005c77fd61163eb896e26a90ee1f5c3f" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Where are Ajax requests made?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>In which lifecycle method should you make Ajax/API requests?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522196886222" name="573061" id="a1522196886222">
+        <label for="a1522196886222"><p>componentDidMount</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522196887750" name="573061" id="a1522196887750">
+        <label for="a1522196887750"><p>componentWillUnmount</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522196888310" name="573061" id="a1522196888310">
+        <label for="a1522196888310"><p>render</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522196888724" name="573061" id="a1522196888724">
+        <label for="a1522196888724"><p>shouldComponentUpdate</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    componentDidMount
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Requests in <code>render()</code>?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Why shouldn't you make Ajax requests in the render method? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522196918657" name="573062" id="a1522196918657">
+      <label for="a1522196918657"><p><code>render()</code> method shouldn't be concerned with much more than just returning UI</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522196919783" name="573062" id="a1522196919783">
+      <label for="a1522196919783"><p><code>render()</code> doesn't support normal JavaScript</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522196920271" name="573062" id="a1522196920271">
+      <label for="a1522196920271"><p>You don't have complete control over when the <code>render()</code> method will be invoked</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522196920671" name="573062" id="a1522196920671">
+      <label for="a1522196920671"><p>You can't invoke functions inside of the <code>render()</code> method</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`render()` method shouldn't be concerned with much more than just returning UI</li>
+      <li>You don't have complete control over when the `render()` method will be invoked</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="155d66ad-e28e-4ee7-8692-38f5c051e984--0">
+        <label for="155d66ad-e28e-4ee7-8692-38f5c051e984--0"><p>I have set <code>this.state.contacts</code> to an empty array in <code>App.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="155d66ad-e28e-4ee7-8692-38f5c051e984--1">
+        <label for="155d66ad-e28e-4ee7-8692-38f5c051e984--1"><p>I have imported the <code>ContactsAPI.js</code> file in <code>App.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="155d66ad-e28e-4ee7-8692-38f5c051e984--2">
+        <label for="155d66ad-e28e-4ee7-8692-38f5c051e984--2"><p>I have added the <code>componentDidMount</code> lifecycle event to <code>App.js</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Awesome work! Using <code>componentDidMount</code> is actually pretty easy, isn't it?</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="remove-contacts">Remove Contacts</h2>
+<p>With what we have so far, we're fetching all users from the Contacts API and adding them to <code>this.state.contacts</code>. Pretty good so far. What's missing, though, is the removing feature. Currently, when we remove a contact, it gets removed from <code>this.state.contacts</code>, but it still exists in the backend database. </p>
+<p>Let's use the Contacts API's <code>remove()</code> method to update the backend.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Remove Contacts</p></h3>
+  <video controls>
+  <source src="02. Remove Contacts-hVQR6shyMAE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Remove Contacts-hVQR6shyMAE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Remove Contacts-hVQR6shyMAE.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/c85cb59d936eb78c7aef7136d2a617eb5fbbd6ad" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="lost-all-your-contacts">Lost All Your Contacts?</h2>
+</blockquote>
+<blockquote>
+  <p>Now that we're syncing our contacts back to the server, any delete commands will remove all of them. Since we aren't able to add new ones yet, you'll be kinda stuck if you delete all of them.</p>
+</blockquote>
+<blockquote>
+  <p>To get the default list of contacts back, just restart your <em>backend</em> server. That's the backend server, <em>not</em> the Contacts app, itself.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="59ab3c75-4a5c-4816-be7f-4030d794735b--0">
+        <label for="59ab3c75-4a5c-4816-be7f-4030d794735b--0"><p>My code makes a call to the Contacts API's <code>.remove()</code> method from inside <code>removeContact()</code> in <code>App.js</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great work following along here!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="componentdidmount-recap"><code>componentDidMount()</code> Recap</h2>
+<p><code>componentDidMount()</code> is one of a number of lifecycle events that React offers. <code>componentDidMount()</code> gets called after the component is "mounted" (which means after it is rendered). If you need to dynamically fetch data or run an Ajax request, you should do it in <code>componentDidMount()</code>.</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount" rel="noopener noreferrer" target="_blank"><code>componentDidMount()</code></a> from the React Docs</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. componentDidMount Lifecycle Event')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

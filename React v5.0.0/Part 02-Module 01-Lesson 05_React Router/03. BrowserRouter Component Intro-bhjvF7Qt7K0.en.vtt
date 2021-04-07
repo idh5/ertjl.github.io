@@ -1,0 +1,13 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.710
+The first component we're going to look at from React router is called Browser Router.
+
+00:00:04.710 --> 00:00:07.439
+It's going to listen for changes in the URL,
+
+00:00:07.440 --> 00:00:11.500
+and then make sure the correct screen shows up whenever the URL changes.
+

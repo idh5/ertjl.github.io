@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:02.133
+Com o React Router instalado,
+
+00:00:02.167 --> 00:00:05.267
+podemos usar os componentes
+que vêm com ele.
+
+00:00:05.300 --> 00:00:08.700
+Dentro do arquivo index.js
+
+00:00:08.733 --> 00:00:14.067
+vamos importar o BrowserRouter
+do react-router-dom,
+
+00:00:14.100 --> 00:00:19.400
+não se esqueça do -dom e das chaves
+antes e depois do BrowserRouter.
+
+00:00:19.433 --> 00:00:24.133
+Agora pegamos
+o componente App principal
+
+00:00:24.167 --> 00:00:28.133
+e o envolvemos
+no BrowserRouter.
+
+00:00:28.167 --> 00:00:34.067
+Isso permitirá usar os demais
+componentes do React Router
+
+00:00:34.100 --> 00:00:35.600
+no nosso aplicativo
+
+00:00:35.633 --> 00:00:37.967
+e também observará o URL,
+
+00:00:38.000 --> 00:00:40.733
+assim, sempre que o URL mudar,
+
+00:00:40.766 --> 00:00:43.167
+os componentes serão
+notificados disso.
+
+00:00:43.200 --> 00:00:45.433
+O arquivo está pronto.
+Basta salvar.
+
+00:00:45.467 --> 00:00:47.367
+Continuaremos
+no próximo vídeo.
+

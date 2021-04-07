@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.169
+Se você quiser fazer
+uma solicitação Ajax no React,
+
+00:00:03.203 --> 00:00:05.905
+use o evento de ciclo de vida
+do componentDidMount.
+
+00:00:05.939 --> 00:00:07.977
+Vamos ver como isso funciona.
+
+00:00:08.011 --> 00:00:10.410
+Quando o componente
+é adicionado à visualização,
+
+00:00:10.443 --> 00:00:15.782
+o componentDidMount será chamado
+e iniciará a solicitação Ajax.
+
+00:00:15.815 --> 00:00:18.752
+Quando finalizarmos a solicitação
+e obtivermos uma resposta,
+
+00:00:18.785 --> 00:00:21.890
+o setState é chamado,
+atualizando o estado do componente
+
+00:00:21.924 --> 00:00:24.057
+com os novos dados
+que solicitamos.
+
+00:00:24.090 --> 00:00:27.360
+Isso iniciará uma nova renderização
+e atualizará a IU.
+

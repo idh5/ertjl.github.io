@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.390
+Getting started on a project is often the hardest part.
+
+00:00:03.390 --> 00:00:06.480
+The easiest way to get started is to develop a plan.
+
+00:00:06.480 --> 00:00:10.545
+First, outline the steps you'll need to take to accomplish the project.
+
+00:00:10.545 --> 00:00:14.520
+It's often helpful to draw out what you want your application to look like.
+
+00:00:14.520 --> 00:00:18.760
+Then, think about the general architecture you want your app to have.
+
+00:00:18.760 --> 00:00:21.510
+For example, where do I put the state?
+
+00:00:21.510 --> 00:00:24.570
+Which components will need access to the state?
+
+00:00:24.570 --> 00:00:27.440
+If you spend some time planning your app upfront,
+
+00:00:27.440 --> 00:00:31.165
+I guarantee you that you'll save yourself a lot of debugging time later on.
+
+00:00:31.165 --> 00:00:33.840
+Then, develop the app piece by piece.
+
+00:00:33.840 --> 00:00:35.794
+Get each piece working in isolation,
+
+00:00:35.794 --> 00:00:37.715
+and then connect the pieces together.
+
+00:00:37.715 --> 00:00:40.055
+Test your app at every step along the way.
+
+00:00:40.055 --> 00:00:42.365
+Finally, before submitting your project,
+
+00:00:42.365 --> 00:00:44.180
+be sure to compare your app against
+
+00:00:44.180 --> 00:00:47.395
+the project rubric to make sure it meets all of the specifications.
+
+00:00:47.395 --> 00:00:49.215
+Also, try to break it,
+
+00:00:49.215 --> 00:00:50.560
+try to squish those bugs,
+
+00:00:50.560 --> 00:00:54.950
+and then test all the required functionality again to make sure your app still works,
+
+00:00:54.950 --> 00:00:58.200
+and then it still meets all of the specifications.
+

@@ -1,0 +1,309 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dynamically Render Pages</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React Router</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. React Router Intro.html">01. React Router Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Dynamically Render Pages.html">02. Dynamically Render Pages</a>
+    </li>
+    <li class="">
+      <a href="03. The BrowserRouter Component.html">03. The BrowserRouter Component</a>
+    </li>
+    <li class="">
+      <a href="04. The Link Component.html">04. The Link Component</a>
+    </li>
+    <li class="">
+      <a href="05. The Route Component.html">05. The Route Component</a>
+    </li>
+    <li class="">
+      <a href="06. Finishing The Contact Form.html">06. Finishing The Contact Form</a>
+    </li>
+    <li class="">
+      <a href="07. React Router Outro.html">07. React Router Outro</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Dynamically Render Pages</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>As the app currently functions, there's no way to add new contacts! That's a shame because I really need to add Richard to my list of contacts. So let's create a form that'll let us create new contacts and save them to the server.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Where To Add the Contact Form?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>We're about to create a form that will create new contacts. Where should the code for the form UI go?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1522219151932" name="573081" id="a1522219151932">
+        <label for="a1522219151932"><p>in <code>App.js</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522219153700" name="573081" id="a1522219153700">
+        <label for="a1522219153700"><p>in <code>ListContacts.js</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522219154543" name="573081" id="a1522219154543">
+        <label for="a1522219154543"><p>in <code>index.js</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1522219155189" name="573081" id="a1522219155189">
+        <label for="a1522219155189"><p>in a new component</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    in a new component
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We don't want the form to display all of the time, so we'll start out by having the form show up only if a setting is enabled. We'll store this setting in <code>this.state</code>. Doing it this way will give us an idea of how React Router functions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>StateBased Content Rendering</p></h3>
+  <video controls>
+  <source src="02. StateBased Content Rendering-I4wTc_ulrME.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. StateBased Content Rendering-I4wTc_ulrME.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. StateBased Content Rendering-I4wTc_ulrME.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/e4a527dbd7a5e1d3fca2a92251556024d834258a" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We packed quite a bit of important changes in this little video! We created the CreateContact component that'll be in charge of the form to create new contacts. In staying with the general React theme of favoring composition, we created this as a standalone component and used composition by adding it to the <code>render()</code> method in the <code>App</code> component.</p>
+<p>In an attempt to do an <em>extremely</em> simple recreation of how React Router works, we added a <code>screen</code> property to <code>this.state</code>, and used this property to control what content should display on the screen. If <code>this.state.screen</code> is <code>list</code> then we'll show the list of all existing contacts. If <code>this.state.screen</code> is <code>create</code> then we'll show the CreateContact component.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="short-circuit-evaluation-syntax">Short-circuit Evaluation Syntax</h2>
+<p>In this video and when we created the Now showing section from earlier, we used a somewhat odd looking syntax:</p>
+<pre><code class="js language-js">{this.state.screen === 'list' &amp;&amp; (
+  &lt;ListContacts
+  contacts={this.state.contacts}
+  onDeleteContact={this.removeContact}
+  /&gt;
+)};</code></pre>
+<p>and</p>
+<pre><code class="js language-js">{this.state.screen === 'create' &amp;&amp; (
+  &lt;CreateContact /&gt;
+)}</code></pre>
+<p>This can be a little confusing with both the JSX code for a component and the code to run an expression. But this is really just the logical expression <code>&amp;&amp;</code>:</p>
+<pre><code class="js language-js">expression &amp;&amp; expression</code></pre>
+<p>What we're using here is a JavaScript technique called <strong>short-circuit evaluation</strong>. If the first expression evaluates to <code>true</code>, then the second expression is run. However, if the first expression evaluates to <code>false</code>, then the second expression is skipped. We're using this as a guard to first verify the value of <code>this.state.screen</code> before displaying the correct component.</p>
+<p>For a deeper dive into this, check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Short-circuit_evaluation" rel="noopener noreferrer" target="_blank">the short-circuit evaluation info on MDN</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="add-a-button">Add A Button</h2>
+<p>Right now we have to manually change the state to get the app to display the different screens. We want the user to be able to control that in the app itself, so let's add a button!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Adding The Back Button</p></h3>
+  <video controls>
+  <source src="02. Adding The Back Button-AX-ZpaliAYc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Adding The Back Button-AX-ZpaliAYc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Adding The Back Button-AX-ZpaliAYc.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/93ff543181f0558ee5be9aab8eef771c47269451" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="dynamic-routing-recap">Dynamic Routing Recap</h2>
+<p>In the code we added in this section, we tried our attempt at using state to control what content displays to the user. We saw things break down, though, when we used the back button. </p>
+<p>Now, let's switch over to using React Router to manage our app's screens.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. The BrowserRouter Component.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Dynamically Render Pages')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

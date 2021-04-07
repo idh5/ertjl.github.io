@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.232
+Another method that we have inside of our API file is this remove method right here.
+
+00:00:06.232 --> 00:00:09.765
+What we want to do is whenever we remove a contact,
+
+00:00:09.765 --> 00:00:11.960
+instead of just updating our local state,
+
+00:00:11.960 --> 00:00:14.850
+what we also want to do is update our API.
+
+00:00:14.849 --> 00:00:17.204
+All we need to do is,
+
+00:00:17.204 --> 00:00:21.535
+when removeContact is invoked along with calling setState,
+
+00:00:21.536 --> 00:00:23.714
+we also want to invoke that remove method.
+
+00:00:23.714 --> 00:00:25.710
+So what we'll do is,
+
+00:00:25.710 --> 00:00:29.499
+we have already imported everything from our ContactsAPI,
+
+00:00:29.498 --> 00:00:33.240
+the only thing we need to do now is once we call setState,
+
+00:00:33.240 --> 00:00:38.070
+we can call ContactsAPI.remove and then just pass it.
+
+00:00:38.070 --> 00:00:43.329
+The contact is being passed to removeContact when it is invoked.
+

@@ -1,0 +1,279 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Finishing The Contact Form</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React Router</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. React Router Intro.html">01. React Router Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Dynamically Render Pages.html">02. Dynamically Render Pages</a>
+    </li>
+    <li class="">
+      <a href="03. The BrowserRouter Component.html">03. The BrowserRouter Component</a>
+    </li>
+    <li class="">
+      <a href="04. The Link Component.html">04. The Link Component</a>
+    </li>
+    <li class="">
+      <a href="05. The Route Component.html">05. The Route Component</a>
+    </li>
+    <li class="">
+      <a href="06. Finishing The Contact Form.html">06. Finishing The Contact Form</a>
+    </li>
+    <li class="">
+      <a href="07. React Router Outro.html">07. React Router Outro</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Finishing The Contact Form</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="create-the-contact-form">Create The Contact Form</h2>
+<p>Right now, the page to create contacts is empty! Let's build out a form on that page so we start adding our own custom contacts.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-required-file-⚠️">⚠️ Required File ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>At the beginning of the program, we gave you the option to clone our starter project or to start from scratch using <a href="https://github.com/facebookincubator/create-react-app" rel="noopener noreferrer" target="_blank">create-react-app</a>. If you haven't added it yet, you'll need <a href="https://github.com/udacity/reactnd-contacts-complete/blob/master/src/ImageInput.js" rel="noopener noreferrer" target="_blank">the ImageInput.js file</a> for the following video.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The ImageInput component is a custom <code>&lt;input&gt;</code> that dynamically reads and resizes image files before submitting them to the server as data URLs. It also shows a preview of the image. We chose to give this component to you rather than build it ourselves because it contains features related to files and images on the web that aren't crucial to your education in this context. If you're curious, feel free to dive into the code, but know it's not a requirement.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Build Out The Contact Form</p></h3>
+  <video controls>
+  <source src="06. Build Out The Contact Form-p3v2dgrqJsg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Build Out The Contact Form-p3v2dgrqJsg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Build Out The Contact Form-p3v2dgrqJsg.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/4b1693fa9b8268af8f1eb190d0bae66bf850ffb4" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="serialize-the-form-data">Serialize The Form Data</h2>
+<p>At this point, our form will serialize the values from user input (i.e., the <code>name</code> and <code>email</code>), adding them as a query string to the URL. We can add some additional functionality by having our app serialize these form fields on its own. After all, we want the app to ultimately handle creating the contact and saving it to the state. </p>
+<p>To accomplish this, we'll use the <a href="https://www.npmjs.com/package/form-serialize" rel="noopener noreferrer" target="_blank">form-serialize</a> package to output this information as a regular JavaScript object for the app to use.</p>
+<pre><code class="bash language-bash">npm install --save form-serialize</code></pre>
+<p>Let's see it all in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Handle Submission Of The Contact Form</p></h3>
+  <video controls>
+  <source src="06. Handle Submission Of The Contact Form-aAhaXlQ2G6I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Handle Submission Of The Contact Form-aAhaXlQ2G6I.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Handle Submission Of The Contact Form-aAhaXlQ2G6I.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/69c8b52ff523071db4ed9c5edb07aa34445d1570" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="update-server-with-new-contact">Update Server With New Contact</h2>
+<p>We have our contact form. We're serializing our data and passing it up to the parent component. All we need to do to have a fully functional app is to save the contact to the server.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add New Contact To State</p></h3>
+  <video controls>
+  <source src="06. Add New Contact To State-24lu6iVQHro.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Add New Contact To State-24lu6iVQHro.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Add New Contact To State-24lu6iVQHro.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/f876f2d17b338e57ec80e8f67abbb3efa83bff2a" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. React Router Outro.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Finishing The Contact Form')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

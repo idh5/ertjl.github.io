@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:03.033
+Agora que temos um BrowserRouter
+observando
+
+00:00:03.067 --> 00:00:06.567
+a barra de endereço
+envolvida no componente App,
+
+00:00:06.600 --> 00:00:12.233
+vamos atualizar o link
+do componente ListContacts.
+
+00:00:12.267 --> 00:00:17.567
+Temos este link para uma nova página
+quando criamos um novo contato.
+
+00:00:17.600 --> 00:00:21.133
+Primeiro vamos importar
+o componente Link
+
+00:00:21.167 --> 00:00:23.900
+do react-router-dom.
+
+00:00:23.933 --> 00:00:28.400
+Agora, aqui embaixo, em vez
+de renderizarmos a tag anchor,
+
+00:00:28.433 --> 00:00:30.500
+vamos renderizar
+o componente Link,
+
+00:00:30.533 --> 00:00:34.200
+que continuará renderizando
+uma tag anchor.
+
+00:00:34.233 --> 00:00:39.267
+Não precisaremos de href,
+mas de uma propriedade to,
+
+00:00:39.300 --> 00:00:41.467
+que será um URL real,
+
+00:00:41.500 --> 00:00:43.900
+então digitamos "/create".
+
+00:00:43.933 --> 00:00:48.667
+O React Router fará o trabalho,
+então podemos remover isto.
+
+00:00:48.700 --> 00:00:51.067
+Vamos salvar o arquivo.
+
+00:00:51.100 --> 00:00:54.267
+Ao clicarmos neste link,
+
+00:00:54.300 --> 00:00:57.033
+somos levados para /create.
+
+00:00:57.067 --> 00:00:58.152
+Nada mais funciona
+
+00:00:58.185 --> 00:01:01.767
+porque ainda não fizemos
+todo o necessário para que funcione,
+
+00:01:01.800 --> 00:01:05.133
+mas temos um BrowserRouter
+e o Link.
+
+00:01:05.167 --> 00:01:08.367
+Ao clicarmos nele,
+ele atualiza o URL do navegador.
+
+00:01:08.400 --> 00:01:13.500
+Por fim, como removemos onNavigate
+do componente Link,
+
+00:01:13.533 --> 00:01:16.267
+nós também podemos
+deletar daqui,
+
+00:01:16.300 --> 00:01:17.900
+assim não o desestruturamos.
+

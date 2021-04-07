@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:03.036
+O componente Link
+do React Router é importante.
+
+00:00:03.070 --> 00:00:06.206
+É a forma como o usuário navega
+pelo aplicativo.
+
+00:00:06.240 --> 00:00:09.409
+Quando ele clica em um link,
+ele conversa com o BrowserRouter
+
+00:00:09.443 --> 00:00:11.578
+e pede que ele atualize o URL.
+
+00:00:11.612 --> 00:00:13.247
+Ele também é acessível.
+
+00:00:13.280 --> 00:00:15.883
+Ao usar o teclado
+para navegar em um aplicativo,
+
+00:00:15.916 --> 00:00:17.050
+ele ainda funcionará.
+
+00:00:17.084 --> 00:00:19.987
+Você pode abrir uma janela
+clicando com o botão direito.
+
+00:00:20.020 --> 00:00:21.388
+Isso também funcionará.
+
+00:00:21.421 --> 00:00:24.558
+Esses componentes fazem o que
+se espera de um link da internet.
+

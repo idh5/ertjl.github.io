@@ -1,0 +1,387 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyReads: A Book Tracking App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>MyReads: A Book Tracking App</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Approaching a Project.html">01. Approaching a Project</a>
+    </li>
+    <li class="">
+      <a href="02. Project Overview.html">02. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Project Instructions &amp; Rubric.html">03. Project Instructions &amp; Rubric</a>
+    </li>
+    <li class="">
+      <a href="04. Above and Beyond.html">04. Above and Beyond</a>
+    </li>
+    <li class="">
+      <a href="05. Your Project Workspace.html">05. Your Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="06. Step by Step Guide - React Apps.html">06. Step by Step Guide - React Apps</a>
+    </li>
+    <li class="">
+      <a href="07. MyReads Project Workspace.html">07. MyReads Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - MyReads A Book Tracking App.html">Project Description - MyReads: A Book Tracking App</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - MyReads A Book Tracking App.html">Project Rubric - MyReads: A Book Tracking App</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">MyReads: A Book Tracking App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Application Setup</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Is the application easy to install and start?</p>
+        </td>
+        <td>
+          <p>The application was created with create-react-app and requires only <code>npm install</code> and <code>npm start</code> to get it installed and launched.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does the application include README with clear installation and launch instructions?</p>
+        </td>
+        <td>
+          <p>An updated README that describes the project and has instructions for installing and launching the project is included.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Main Page</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Does the main page show three categories (or “bookshelves”) for books (currently reading, want to read, and read)?</p>
+        </td>
+        <td>
+          <p>The main page shows 3 shelves for books. Each book is shown on the correct shelf, along with its title and all of its authors. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does the main page allow users to move books between shelves?</p>
+        </td>
+        <td>
+          <p>The main page shows a control that allows users to move books between shelves. The control should be tied to each book instance. The functionality of moving a book to a different shelf works correctly.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does information persist between page refreshes?</p>
+        </td>
+        <td>
+          <p>When the browser is refreshed, the same information is displayed on the page.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Search Page</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Does the search page have a search input that lets users search for books?</p>
+        </td>
+        <td>
+          <p>1) The search page has a search input field. </p>
+<p>2) The search page behaves correctly:<br />
+  a) As the user types into the search field, books that match the query are displayed on the page, along with their titles and authors. You can use throttle/debounce but are not required to do so.<br />
+  b) Search results are not shown when all of the text is deleted out of the search input box.<br />
+  c) Invalid queries are handled and prior search results are not shown.<br />
+  d) The search works correctly when a book does not have a thumbnail or an author. (To test this, try searching for "poetry" and "biography"). (It's fine to filter out books with missing thumbnails.)<br />
+  e) The user is able to search for multiple words, such as “artificial intelligence.”</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Do the search results allow a user to categorize a book as “currently reading”, “want to read”, or “read”?</p>
+        </td>
+        <td>
+          <p>Search results on the search page allow the user to select “currently reading”, “want to read”, or “read” to place the book in a certain shelf. </p>
+<p>If a book is assigned to a shelf on the main page and that book appears on the search page, the correct shelf should be selected on the search page. If that book's shelf is changed on the search page, that change should be reflected on the main page as well. The option "None" should be selected if a book has not been assigned to a shelf.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Do selections made on the search page show up on the main page?</p>
+        </td>
+        <td>
+          <p>When an item is categorized on the search page and the user navigates to the main page, it appears on that shelf in the main page.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Routing</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Does the main page link to the search page?</p>
+        </td>
+        <td>
+          <p>The main page contains a link to the search page. When the link is clicked, the search page is displayed and the URL in the browser’s address bar is /search.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does the search page link back to the main page?</p>
+        </td>
+        <td>
+          <p>The search page contains a link to the main page. When the link is clicked, the main page is displayed and the URL in the browser’s address bar is /.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Code Functionality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Does the project code handle state management appropriately?</p>
+        </td>
+        <td>
+          <p>Component state is passed down from parent components to child components. The state variable is not modified directly - setState() function is used correctly. </p>
+<p>Books have the same state on both the search page and the main application page: If a book is on a bookshelf, that is reflected in both locations.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Does the code run without errors? Is the code free of warnings that resulted from not following the best practices listed in the documentation, such as using <code>key</code> for list items? Is the code formatted properly?</p>
+        </td>
+        <td>
+          <p>The code runs without errors. There are no warnings that resulted from not following the best practices listed in the documentation, such as using <code>key</code> for list items. All code is functional and formatted properly.  </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('MyReads: A Book Tracking App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.600
+De que serve um aplicativo
+de contatos
+
+00:00:02.633 --> 00:00:04.600
+se não podemos criar
+novos contatos?
+
+00:00:04.633 --> 00:00:06.767
+Vamos adicionar
+uma nova tela,
+
+00:00:06.800 --> 00:00:09.767
+que permitirá
+adicionar pessoas à lista.
+
+00:00:09.800 --> 00:00:13.300
+A primeira coisa
+será criar um novo arquivo.
+
+00:00:13.333 --> 00:00:16.100
+Vamos chamá-lo
+de "CreateContact.js".
+
+00:00:16.133 --> 00:00:19.767
+Precisamos importar o React
+e o componente.
+
+00:00:19.800 --> 00:00:21.867
+Vamos definir a classe
+do componente
+
+00:00:21.900 --> 00:00:27.033
+digitando
+"CreateContact extends Component".
+
+00:00:27.067 --> 00:00:32.200
+Este será um método render simples.
+Vamos colocar um div.
+
+00:00:32.233 --> 00:00:34.333
+Digitaremos "Create Contact".
+
+00:00:34.367 --> 00:00:39.000
+Isso precisará ser exportado
+com o exportador padrão.
+
+00:00:39.033 --> 00:00:44.667
+Agora, dentro do arquivo App,
+importamos isso.
+
+00:00:44.700 --> 00:00:47.533
+Importamos o CreateContact
+
+00:00:47.567 --> 00:00:50.600
+do módulo
+que acabamos de criar.
+
+00:00:50.633 --> 00:00:53.667
+Vamos renderizar para garantir
+que está tudo certo.
+
+00:00:53.700 --> 00:00:56.067
+Aqui podemos digitar
+"CreateContact".
+
+00:00:56.100 --> 00:00:58.533
+Perceba que ele está aqui.
+
+00:00:58.567 --> 00:01:03.200
+A intenção não é exibir
+todos os componentes do aplicativo,
+
+00:01:03.233 --> 00:01:07.500
+mas exibir diferentes componentes
+a partir do URL atual.
+
+00:01:07.533 --> 00:01:10.300
+Mas, antes de partirmos
+para o React Router,
+
+00:01:10.333 --> 00:01:13.833
+vamos implementar
+alguns desses passos.
+
+00:01:13.867 --> 00:01:16.367
+Já sabemos como usar
+o estado dos componentes,
+
+00:01:16.400 --> 00:01:18.733
+então vamos usá-lo primeiro
+
+00:01:18.767 --> 00:01:22.167
+para decidirmos
+qual componente devemos renderizar.
+
+00:01:22.200 --> 00:01:27.467
+Vamos até state
+e adicionamos uma nova propriedade,
+
+00:01:27.500 --> 00:01:29.267
+vamos chamá-la de "screen".
+
+00:01:29.300 --> 00:01:32.300
+O padrão será "create".
+
+00:01:32.333 --> 00:01:37.233
+Isso nos permitirá,
+dentro do método render,
+
+00:01:37.267 --> 00:01:43.167
+dizer que se this.state.screen
+
+00:01:43.200 --> 00:01:44.733
+for igual a list,
+
+00:01:44.766 --> 00:01:49.400
+então exiba o componente
+ListContact.
+
+00:01:49.433 --> 00:01:51.900
+Faremos o mesmo
+para CreateContact.
+
+00:01:51.933 --> 00:01:57.167
+Diremos que se this.state.screen
+for igual a create,
+
+00:01:57.200 --> 00:02:01.767
+então exiba o componente
+CreateContact.
+
+00:02:01.800 --> 00:02:04.767
+Agora obtemos o componente
+CreateContact
+
+00:02:04.800 --> 00:02:08.200
+e podemos alterar isto
+manualmente para list,
+
+00:02:08.233 --> 00:02:10.567
+assim obteremos o componente
+list.
+
+00:02:10.600 --> 00:02:14.367
+Vamos voltar isto para create.
+
+00:02:14.400 --> 00:02:16.867
+No próximo vídeo,
+iremos mais além.
+

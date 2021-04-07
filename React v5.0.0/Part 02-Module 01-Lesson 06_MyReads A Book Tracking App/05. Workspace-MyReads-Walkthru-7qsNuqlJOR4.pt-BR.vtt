@@ -1,0 +1,167 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:04.771
+À esquerda, temos o Filepicker,
+onde todos os arquivos ficarão.
+
+00:00:04.805 --> 00:00:07.508
+Podemos adicionar arquivos
+ao clicar aqui.
+
+00:00:07.541 --> 00:00:11.078
+Podemos criar pastas
+clicando neste botão aqui.
+
+00:00:11.111 --> 00:00:13.881
+Damos um nome e criamos.
+
+00:00:14.781 --> 00:00:17.918
+Temos os arquivos,
+podemos abri-los
+
+00:00:17.985 --> 00:00:20.888
+e podemos fechá-los.
+
+00:00:20.921 --> 00:00:22.856
+Para carregar arquivos
+ou diretórios,
+
+00:00:22.890 --> 00:00:26.960
+basta arrastá-los para cá
+ou clicar aqui,
+
+00:00:26.994 --> 00:00:29.162
+e a janela será aberta.
+
+00:00:29.730 --> 00:00:32.032
+Para abrir um novo terminal,
+vamos até aqui.
+
+00:00:32.065 --> 00:00:35.102
+Se for o primeiro,
+basta clicar em "New Terminal".
+
+00:00:35.135 --> 00:00:37.371
+Para abrir mais janelas
+
+00:00:37.404 --> 00:00:40.674
+basta clicar
+no sinal de mais.
+
+00:00:40.707 --> 00:00:42.876
+Você verá
+novas janelas de terminal.
+
+00:00:42.910 --> 00:00:45.679
+Podemos fechar todas.
+
+00:00:45.712 --> 00:00:50.450
+No terminal, podemos instalar
+qualquer dependência ou pacote.
+
+00:00:50.483 --> 00:00:54.755
+Isso começa
+em home/workspace,
+
+00:00:54.788 --> 00:00:58.192
+que é o mesmo local daqui,
+home/workspace.
+
+00:00:58.225 --> 00:01:02.095
+Se listarmos esses arquivos,
+
+00:01:02.129 --> 00:01:04.464
+são os que estamos
+vendo aqui.
+
+00:01:04.498 --> 00:01:06.366
+Quando adicionamos
+novos arquivos,
+
+00:01:06.400 --> 00:01:10.404
+ele vai para home/workspace,
+que é onde o terminal iniciou.
+
+00:01:10.437 --> 00:01:13.640
+Ao desenvolver seu projeto,
+se quiser vê-lo no navegador,
+
+00:01:13.674 --> 00:01:16.243
+basta clicar
+em "Open Preview Tab".
+
+00:01:16.276 --> 00:01:17.578
+Vamos fazer isso.
+
+00:01:18.312 --> 00:01:22.950
+Esta é a URL do projeto.
+A sua será diferente.
+
+00:01:22.983 --> 00:01:26.119
+O projeto não está rodando
+em nenhum servidor,
+
+00:01:26.153 --> 00:01:29.022
+então não vemos nada.
+
+00:01:29.056 --> 00:01:32.726
+Precisamos rodar um servidor
+ou criar um aplicativo React
+
+00:01:32.759 --> 00:01:34.428
+para ver algo rodando.
+
+00:01:34.461 --> 00:01:36.363
+Vejamos como fazer isso.
+
+00:01:40.033 --> 00:01:43.604
+Após instalar tudo,
+posso iniciar o servidor.
+
+00:01:47.341 --> 00:01:50.611
+O projeto está rodando,
+mas não abre o "localhost".
+
+00:01:50.644 --> 00:01:52.913
+Clicamos
+em "Open Preview Tab".
+
+00:01:54.248 --> 00:01:55.749
+Aqui está nosso projeto.
+
+00:01:57.351 --> 00:02:00.754
+Após terminar,
+clique em "Submit Project".
+
+00:02:00.787 --> 00:02:02.589
+Isso vai enviá-lo
+para a revisão.
+
+00:02:02.623 --> 00:02:04.958
+A última coisa
+é este botão de menu.
+
+00:02:04.992 --> 00:02:07.261
+Se algo estiver estranho,
+
+00:02:07.294 --> 00:02:09.530
+clique
+em "Refresh Workspace"
+
+00:02:09.563 --> 00:02:13.433
+e tudo será recarregado
+com seus dados.
+
+00:02:13.467 --> 00:02:16.803
+Se quiser começar do zero
+e apagar tudo,
+
+00:02:16.837 --> 00:02:18.872
+clique em "Reset Data",
+
+00:02:18.906 --> 00:02:21.375
+isso apagará tudo
+e reiniciará o programa.
+

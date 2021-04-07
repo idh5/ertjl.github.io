@@ -1,0 +1,319 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The BrowserRouter Component</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React Router</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. React Router Intro.html">01. React Router Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Dynamically Render Pages.html">02. Dynamically Render Pages</a>
+    </li>
+    <li class="">
+      <a href="03. The BrowserRouter Component.html">03. The BrowserRouter Component</a>
+    </li>
+    <li class="">
+      <a href="04. The Link Component.html">04. The Link Component</a>
+    </li>
+    <li class="">
+      <a href="05. The Route Component.html">05. The Route Component</a>
+    </li>
+    <li class="">
+      <a href="06. Finishing The Contact Form.html">06. Finishing The Contact Form</a>
+    </li>
+    <li class="">
+      <a href="07. React Router Outro.html">07. React Router Outro</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. The BrowserRouter Component</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>As we've just seen, when the user presses the 'back' button in the browser, they will probably have to refresh the page to see the proper content at that location. This isn't the best experience for our user! When we update location, we can update the app as well using JavaScript. This is where React Router comes in. </p>
+<h2 id="install-react-router">Install React Router</h2>
+<p>To use React Router in our app, we need to install <a href="https://www.npmjs.com/package/react-router-dom" rel="noopener noreferrer" target="_blank">react-router-dom</a>.</p>
+<pre><code class="bash language-bash">npm install --save react-router-dom</code></pre>
+<p>Let's see it in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Install React Router</p></h3>
+  <video controls>
+  <source src="03. Install React Router-qvy-_Pu9QNU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Install React Router-qvy-_Pu9QNU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Install React Router-qvy-_Pu9QNU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/fbd0cea0839d018209a19d468fc1661da9f9033a" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="browserrouter">BrowserRouter</h2>
+<p>The first component we'll look at is BrowserRouter.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>BrowserRouter Component Intro</p></h3>
+  <video controls>
+  <source src="03. BrowserRouter Component Intro-bhjvF7Qt7K0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. BrowserRouter Component Intro-bhjvF7Qt7K0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. BrowserRouter Component Intro-bhjvF7Qt7K0.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add BrowserRouter</p></h3>
+  <video controls>
+  <source src="03. Add BrowserRouter-uIYOoQKwKfU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Add BrowserRouter-uIYOoQKwKfU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Add BrowserRouter-uIYOoQKwKfU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/d1b067febbfc467563742fc3b52b6a34486ebde5" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>What's nice about React Router is that everything is just a component. This makes using it nice, but it also makes diving into the code more convenient as well. Let's take a look at what exactly BrowserRouter is doing under the hood.</p>
+<p>Here is the code straight from the React Router repository.</p>
+<pre><code class="js language-js">class BrowserRouter extends React.Component {
+  static propTypes = {
+    basename: PropTypes.string,
+    forceRefresh: PropTypes.bool,
+    getUserConfirmation: PropTypes.func,
+    keyLength: PropTypes.number,
+    children: PropTypes.node
+  }
+
+  history = createHistory(this.props)
+
+  render() {
+    return &lt;Router history={this.history} children={this.props.children} /&gt;
+  }
+}</code></pre>
+<p>When you use <code>BrowserRouter</code>, what you're really doing is rendering a <code>Router</code> component and passing it a <code>history</code> prop. Wait, what is <code>history</code>? <code>history</code> comes from the <a href="https://github.com/ReactTraining/history" rel="noopener noreferrer" target="_blank">history</a> library (also built by React Training). The whole purpose of this library is it abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions.</p>
+<p>So in a nutshell, when you use <code>BrowserRouter</code>, you're creating a <code>history</code> object which will listen to changes in the URL and make sure your app is made aware of those changes.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Let's make sure you've performed the necessary steps. Check off each of the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="a3d11819-f0d1-42d7-8d38-a2aceb3b5325--0">
+        <label for="a3d11819-f0d1-42d7-8d38-a2aceb3b5325--0"><p>I have installed the <code>react-router-dom</code> package</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a3d11819-f0d1-42d7-8d38-a2aceb3b5325--1">
+        <label for="a3d11819-f0d1-42d7-8d38-a2aceb3b5325--1"><p>I have imported <code>BrowserRouter</code> in <code>src/index.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a3d11819-f0d1-42d7-8d38-a2aceb3b5325--2">
+        <label for="a3d11819-f0d1-42d7-8d38-a2aceb3b5325--2"><p>I am now rendering <code>&lt;BrowserRouter&gt;&lt;App /&gt;&lt;/BrowserRouter&gt;</code> in <code>src/index.js</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="browserrouter-component-recap"><code>BrowserRouter</code> Component Recap</h2>
+<p>In summary, for React Router to work properly, you need to wrap your whole app in a <code>BrowserRouter</code> component. Also, <code>BrowserRouter</code> wraps the history library which makes it possible for your app to be made aware of changes in the URL. </p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://github.com/reacttraining/history" rel="noopener noreferrer" target="_blank">history</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. The Link Component.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. The BrowserRouter Component')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

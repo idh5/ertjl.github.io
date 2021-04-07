@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.424
+Now, before we can use React router in our application,
+
+00:00:04.424 --> 00:00:08.070
+we need to actually go ahead and install it from the MPM registry.
+
+00:00:08.070 --> 00:00:13.425
+So, what we can do is go and run Yarn add React-router-dom.
+
+00:00:13.425 --> 00:00:17.655
+Now, don't forget the dom with React router it can run in a few different environments.
+
+00:00:17.655 --> 00:00:19.380
+For example, React router native,
+
+00:00:19.379 --> 00:00:21.509
+but because we are dealing with the dom,
+
+00:00:21.510 --> 00:00:22.740
+because we're dealing with the web,
+
+00:00:22.739 --> 00:00:27.070
+we need to run Yarn add React-router-dom.
+

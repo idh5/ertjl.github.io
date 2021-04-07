@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:03.100
+Aqui,
+dentro do componente CreateContact,
+
+00:00:03.133 --> 00:00:05.433
+o que acontece
+quando enviamos o formulário?
+
+00:00:05.467 --> 00:00:08.267
+Vamos colocar Tyler McGinnis,
+
+00:00:08.300 --> 00:00:11.233
+tylermcginnis e enviar.
+
+00:00:11.267 --> 00:00:14.867
+A página recarrega.
+Veja o que ocorre no URL.
+
+00:00:14.900 --> 00:00:17.200
+Temos um parâmetro de consulta
+agora,
+
+00:00:17.233 --> 00:00:20.900
+com o URL do avatar,
+o nome e o endereço.
+
+00:00:20.933 --> 00:00:23.833
+Os formulários funcionam
+no navegador
+
+00:00:23.867 --> 00:00:27.900
+pegando os nomes destes inputs
+
+00:00:27.933 --> 00:00:31.867
+e serializando os valores
+dentro deles no URL.
+
+00:00:31.900 --> 00:00:35.033
+Queremos fazer a mesma coisa,
+mas com o JavaScript.
+
+00:00:35.067 --> 00:00:38.867
+Vamos serializar o formulário
+e avisar ao aplicativo
+
+00:00:38.900 --> 00:00:41.667
+que queremos criar um contato.
+
+00:00:41.700 --> 00:00:44.467
+O aplicativo salvará o contato
+
+00:00:44.500 --> 00:00:46.300
+e o adicionará ao estado.
+
+00:00:46.333 --> 00:00:50.167
+A função deste formulário
+é simplesmente obter as informações.
+
+00:00:50.200 --> 00:00:54.267
+Em vez de o navegador
+dominar o formulário,
+
+00:00:54.300 --> 00:00:56.000
+vamos controlá-lo nós mesmos.
+
+00:00:56.033 --> 00:01:01.800
+Vamos adicionar uma nova propriedade
+ao form chamada "onSubmit",
+
+00:01:01.833 --> 00:01:06.000
+que será invocada
+quando button for clicado.
+
+00:01:06.033 --> 00:01:09.900
+Aqui dirá para chamar
+o método handleSubmit,
+
+00:01:09.933 --> 00:01:11.500
+que acabamos de criar.
+
+00:01:11.533 --> 00:01:14.900
+Dentro do handleSubmit,
+a primeira coisa a ser feita
+
+00:01:14.933 --> 00:01:19.400
+é informar ao navegador
+preventDefault,
+
+00:01:19.433 --> 00:01:23.867
+e assim ele impedirá que aconteça
+o que acabamos de ver,
+
+00:01:23.900 --> 00:01:26.600
+que é colocar tudo isto
+no URL.
+
+00:01:26.633 --> 00:01:29.133
+Vamos deletar isto.
+
+00:01:29.167 --> 00:01:34.133
+Agora vemos tudo em ação.
+Inserimos um nome e um endereço.
+
+00:01:34.167 --> 00:01:37.367
+Agora, quando clicamos
+em Add Contact, nada acontece.
+
+00:01:37.400 --> 00:01:42.767
+Perceba que não estamos exibindo
+os parâmetros de consulta no URL.
+
+00:01:42.800 --> 00:01:46.267
+Agora, em vez de o navegador
+serializar o formulário
+
+00:01:46.300 --> 00:01:49.100
+e jogá-lo no URL,
+nós faremos isso
+
+00:01:49.133 --> 00:01:51.233
+e salvaremos em um objeto.
+
+00:01:51.267 --> 00:01:55.667
+Podemos importar
+serializeForm,
+
+00:01:55.700 --> 00:02:00.000
+que virá
+do pacote form-serialize.
+
+00:02:00.033 --> 00:02:03.100
+Agora, dentro do handleSubmit,
+
+00:02:03.133 --> 00:02:06.633
+vamos criar uma nova variável
+chamada "values".
+
+00:02:06.667 --> 00:02:10.967
+Queremos invocar o serializeForm
+passando nosso formulário,
+
+00:02:11.000 --> 00:02:13.900
+que virá do e.target,
+
+00:02:13.933 --> 00:02:19.500
+e também digitaremos "hash: true",
+para obtermos o objeto.
+
+00:02:19.533 --> 00:02:24.500
+Agora vamos dar uma olhada
+em como isso ficou
+
+00:02:24.533 --> 00:02:26.600
+usando console.log.
+
+00:02:26.633 --> 00:02:29.333
+Vamos abrir o console...
+Tudo parece bem.
+
+00:02:29.367 --> 00:02:34.733
+Agora vamos inserir um nome,
+um endereço
+
+00:02:34.767 --> 00:02:38.600
+e queremos adicionar
+um novo avatar.
+
+00:02:38.633 --> 00:02:42.833
+Ao clicarmos em Add Contact,
+vemos que temos um objeto,
+
+00:02:42.867 --> 00:02:44.933
+que representa
+os dados do formulário.
+
+00:02:44.967 --> 00:02:46.267
+Nesse momento,
+
+00:02:46.300 --> 00:02:49.467
+em vez de registrar os valores
+no console,
+
+00:02:49.500 --> 00:02:52.133
+queremos invocar uma função,
+
+00:02:52.167 --> 00:02:55.267
+que será passada como propriedade
+para CreateContact
+
+00:02:55.300 --> 00:02:57.233
+com os valores específicos.
+
+00:02:57.267 --> 00:03:00.900
+O que acabará acontecendo -
+e isso estará no próximo vídeo -
+
+00:03:00.933 --> 00:03:06.500
+é que passaremos a propriedade
+chamada "onCreateContact"
+
+00:03:06.533 --> 00:03:07.967
+e, ao fazermos isso,
+
+00:03:08.000 --> 00:03:11.867
+esta função esperará receber
+todos os valores.
+
+00:03:11.900 --> 00:03:16.833
+Podemos digitar:
+"this.props.onCreateContact"
+
+00:03:16.867 --> 00:03:19.200
+passando todas as values.
+
+00:03:19.233 --> 00:03:22.633
+Neste momento,
+o CreateContact estará pronto.
+
+00:03:22.667 --> 00:03:26.733
+Ele obterá todos os dados
+do formulário
+
+00:03:26.767 --> 00:03:28.767
+e,
+quando o formulário for enviado,
+
+00:03:28.800 --> 00:03:32.200
+ele chamará o que estiver
+no onCreateContact,
+
+00:03:32.233 --> 00:03:36.900
+que decidirá o que faremos
+com o formulário.
+

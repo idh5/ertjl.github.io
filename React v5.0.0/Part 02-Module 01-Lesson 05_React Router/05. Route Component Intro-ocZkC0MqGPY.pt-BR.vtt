@@ -1,0 +1,47 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:02.903
+O último componente
+de que precisaremos é o Route.
+
+00:00:02.936 --> 00:00:06.206
+Ele pega um caminho
+que combina com o URL ou não.
+
+00:00:06.240 --> 00:00:08.342
+Se o caminho combinar
+com o URL,
+
+00:00:08.375 --> 00:00:10.310
+ele renderizará a IU,
+
+00:00:10.344 --> 00:00:13.213
+mas não renderizará nada
+se não combinar.
+
+00:00:13.247 --> 00:00:16.483
+Assim como o código que confere
+o estado do componente
+
+00:00:16.517 --> 00:00:18.785
+a fim de decidir
+qual tela renderizar,
+
+00:00:18.819 --> 00:00:20.888
+o Route fará o mesmo
+tipo de coisa,
+
+00:00:20.921 --> 00:00:23.123
+mas, em vez de conferir
+o estado do componente,
+
+00:00:23.156 --> 00:00:26.193
+ele confere o URL.
+O que isso significa?
+
+00:00:26.226 --> 00:00:28.262
+Que o botão de retorno
+funcionará.
+

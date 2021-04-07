@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+So, at this point inside of our CreateContact component,
+
+00:00:03.180 --> 00:00:05.235
+what happens when we submit this form?
+
+00:00:05.235 --> 00:00:08.204
+So, let's come in here and we'll put Tyler McGinnis,
+
+00:00:08.204 --> 00:00:10.980
+and tylermcginnis, and we submit this.
+
+00:00:10.980 --> 00:00:12.509
+The page reloads.
+
+00:00:12.509 --> 00:00:17.024
+You'll notice what happens in the URL is we have this query parameter now,
+
+00:00:17.024 --> 00:00:20.744
+avatarURL, which is nothing than the name and the handle.
+
+00:00:20.745 --> 00:00:23.865
+So, the way that forms work in browsers natively,
+
+00:00:23.864 --> 00:00:26.699
+is they'll grab the names of
+
+00:00:26.699 --> 00:00:31.530
+these input fields and serialize the values inside of them into the URL.
+
+00:00:31.530 --> 00:00:35.039
+So, we want to do the same thing but with JavaScript instead.
+
+00:00:35.039 --> 00:00:39.754
+So, we're going to serialize the form and then call up to the app and say, "Hey!
+
+00:00:39.755 --> 00:00:41.615
+We want to create this contact",
+
+00:00:41.615 --> 00:00:46.130
+and then the app is going to handle saving the contact and adding it to our state.
+
+00:00:46.130 --> 00:00:49.730
+So, this form's job is to simply call up with that information.
+
+00:00:49.729 --> 00:00:54.069
+So, instead of having the browser take over this form when it gets submitted,
+
+00:00:54.070 --> 00:00:55.920
+let's control that ourselves.
+
+00:00:55.920 --> 00:01:01.460
+So, what we'll do is let's add a new prop up here on our form called onSubmit.
+
+00:01:01.460 --> 00:01:05.790
+So, this will be invoked when this button is clicked.
+
+00:01:05.790 --> 00:01:08.060
+So, then what we will say is let's call
+
+00:01:08.060 --> 00:01:11.359
+the handleSubmit method that we can create right now.
+
+00:01:11.359 --> 00:01:12.920
+So, inside of handleSubmit,
+
+00:01:12.920 --> 00:01:19.409
+the very first thing we want to do is we want to tell the browser to prevent default,
+
+00:01:19.409 --> 00:01:23.810
+which is going to prevent it from doing the thing which we just barely saw,
+
+00:01:23.810 --> 00:01:26.525
+which is putting all of this in the URL.
+
+00:01:26.525 --> 00:01:28.810
+So, let's go ahead and delete this,
+
+00:01:28.810 --> 00:01:30.674
+and then we can see this in action.
+
+00:01:30.674 --> 00:01:32.355
+So, we will enter a name,
+
+00:01:32.355 --> 00:01:34.005
+as well as a handle.
+
+00:01:34.004 --> 00:01:37.489
+Then, now when we click at contact nothing is happening,
+
+00:01:37.489 --> 00:01:42.714
+but you'll notice that we're not throwing all of those query params inside of the URL.
+
+00:01:42.715 --> 00:01:47.689
+So, now instead of having the browser serialize our form and throw it in the URL,
+
+00:01:47.689 --> 00:01:50.870
+we want to do that ourselves and save it into an object.
+
+00:01:50.870 --> 00:01:55.525
+So, what we can do is we can import serializeForm,
+
+00:01:55.525 --> 00:01:59.880
+which is going to come from the form-serialize package.
+
+00:01:59.879 --> 00:02:02.140
+Then, now inside of handleSubmit,
+
+00:02:02.140 --> 00:02:06.530
+what we can do is let's make a brand new variable called values,
+
+00:02:06.530 --> 00:02:10.979
+and then we want to invoke serializeForm passing it, our form,
+
+00:02:10.979 --> 00:02:13.824
+which is going to be coming from event.target,
+
+00:02:13.824 --> 00:02:17.659
+then we also want to say hash is going to be true,
+
+00:02:17.659 --> 00:02:19.460
+so we will get back that object.
+
+00:02:19.460 --> 00:02:22.805
+Now, what we can do is let's go ahead and take a look
+
+00:02:22.805 --> 00:02:26.375
+at what this looks like by console.logging it.
+
+00:02:26.375 --> 00:02:29.284
+So, let's open up our console, everything looks good.
+
+00:02:29.284 --> 00:02:32.555
+Then, now what will do is we will enter in a name,
+
+00:02:32.555 --> 00:02:34.670
+we will enter in a handle,
+
+00:02:34.669 --> 00:02:38.549
+and then we want to add a brand new avatar.
+
+00:02:38.550 --> 00:02:40.450
+Now, when we click at contact,
+
+00:02:40.449 --> 00:02:44.780
+you'll see here that we now have an object which represents our form data.
+
+00:02:44.780 --> 00:02:46.250
+So now at this point,
+
+00:02:46.250 --> 00:02:49.430
+instead of just logging the values to the console,
+
+00:02:49.430 --> 00:02:53.090
+what we want to do is we actually want to invoke a function that's going to be passed
+
+00:02:53.090 --> 00:02:57.164
+as a prop to CreateContact with the specific values.
+
+00:02:57.164 --> 00:03:01.159
+So, eventually, what's going to happen and eventually it's going to be in the next video,
+
+00:03:01.159 --> 00:03:06.444
+is we are going to pass a prop called onCreateContact.
+
+00:03:06.444 --> 00:03:07.870
+When we do that,
+
+00:03:07.870 --> 00:03:11.795
+this function is going to expect to receive all of the values.
+
+00:03:11.794 --> 00:03:19.179
+So, what we can do is we can say this.props.OnCreateContact passing it all of the values.
+
+00:03:19.180 --> 00:03:20.670
+Then now at this point,
+
+00:03:20.669 --> 00:03:22.724
+CreateContact is all finished.
+
+00:03:22.724 --> 00:03:26.750
+What it's responsible for is getting all of the form data,
+
+00:03:26.750 --> 00:03:32.375
+and then once the form is submitted it's just going to call whatever onCreateContact is.
+
+00:03:32.375 --> 00:03:34.550
+OnCreate contact is eventually going to
+
+00:03:34.550 --> 00:03:37.340
+decide what we'll get to actually do with the form.
+

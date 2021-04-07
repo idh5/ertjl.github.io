@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.536
+Outro método que temos
+dentro do arquivo API
+
+00:00:03.570 --> 00:00:06.172
+é este método remove bem aqui.
+
+00:00:06.206 --> 00:00:09.843
+O que queremos fazer é,
+sempre que removermos um contato,
+
+00:00:09.876 --> 00:00:11.911
+em vez de só atualizar
+o estado local,
+
+00:00:11.945 --> 00:00:14.814
+também queremos atualizar
+nosso API.
+
+00:00:14.848 --> 00:00:17.150
+O que precisamos fazer é,
+
+00:00:17.183 --> 00:00:21.488
+quando o removeContact
+é chamado com o setState,
+
+00:00:21.521 --> 00:00:23.656
+também queremos chamar
+esse método remove.
+
+00:00:23.690 --> 00:00:25.658
+Então nós vamos...
+
+00:00:25.692 --> 00:00:29.462
+Nós já importamos tudo
+do ContactsAPI.
+
+00:00:29.496 --> 00:00:33.199
+Agora, depois de usar
+o setState,
+
+00:00:33.233 --> 00:00:38.004
+podemos usar o ContactsAPI.remove
+e depois passá-lo.
+
+00:00:38.038 --> 00:00:41.361
+O contato está sendo passado
+para o removeContact
+
+00:00:41.395 --> 00:00:43.210
+quando é chamado.
+

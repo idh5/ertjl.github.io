@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.100 --> 00:00:03.333
+Nós já temos o componente
+CreateContact,
+
+00:00:03.367 --> 00:00:06.067
+que é responsável por obter
+os dados do formulário -
+
+00:00:06.100 --> 00:00:09.667
+especificamente, o nome,
+o endereço e o avatar do usuário -
+
+00:00:09.700 --> 00:00:14.667
+e chamar o que estiver
+em props.onCreateContacts
+
+00:00:14.700 --> 00:00:18.067
+passando os dados, as values.
+
+00:00:18.100 --> 00:00:22.933
+Precisamos garantir
+que passamos o CreateContact
+
+00:00:22.967 --> 00:00:24.900
+e a propriedade
+onCreateContact
+
+00:00:24.933 --> 00:00:27.767
+e, dentro de onCreateContact,
+
+00:00:27.800 --> 00:00:31.400
+precisamos garantir
+a criação do contato com a API
+
+00:00:31.433 --> 00:00:33.933
+e a atualização
+do estado atual.
+
+00:00:33.967 --> 00:00:39.667
+Vamos até o arquivo App.js -
+vou abrir mais espaço aqui -
+
+00:00:39.700 --> 00:00:43.233
+para criar um novo método
+
+00:00:43.267 --> 00:00:45.967
+chamado "createContact".
+
+00:00:46.000 --> 00:00:49.700
+Lembre-se de que,
+na nossa API,
+
+00:00:49.733 --> 00:00:53.133
+o último método -
+que não usamos ainda -
+
+00:00:53.167 --> 00:00:56.600
+será o método create.
+
+00:00:56.633 --> 00:01:00.000
+Precisamos passar
+o novo contato.
+
+00:01:00.033 --> 00:01:03.800
+Uma vez invocado o createContact,
+isso será passado.
+
+00:01:03.833 --> 00:01:05.933
+Então passamos contact,
+
+00:01:05.967 --> 00:01:10.200
+que nos retornará uma promessa
+
+00:01:10.233 --> 00:01:12.767
+e,
+quando a promessa se resolver,
+
+00:01:12.800 --> 00:01:16.400
+fornecerá
+um novo formato de contato.
+
+00:01:16.433 --> 00:01:22.033
+Ao obtermos o contato de volta,
+queremos chamar setState
+
+00:01:22.067 --> 00:01:25.267
+e adicioná-lo
+ao array contacts.
+
+00:01:25.300 --> 00:01:30.567
+Se estivermos atualizando
+o estado atual a partir do antigo -
+
+00:01:30.600 --> 00:01:32.100
+que é o que fazemos aqui -
+
+00:01:32.133 --> 00:01:37.367
+receberemos o estado antigo -
+que chamamos de currentState -,
+
+00:01:37.400 --> 00:01:42.533
+e poderemos digitar
+"currentState.contact.concat",
+
+00:01:42.567 --> 00:01:46.067
+o que desejamos concatenar
+para currentState
+
+00:01:46.100 --> 00:01:50.567
+e para contact.
+
+00:01:50.600 --> 00:01:53.067
+Este método está pronto.
+
+00:01:53.100 --> 00:01:56.167
+Precisamos passá-lo
+como propriedade
+
+00:01:56.200 --> 00:01:58.967
+ao componente CreateContact.
+
+00:01:59.000 --> 00:02:00.700
+Mas como fazemos isso
+
+00:02:00.733 --> 00:02:04.067
+se o React Router é responsável
+pela renderização do componente?
+
+00:02:04.100 --> 00:02:07.567
+Pois é isso que estamos passando
+como propriedade ao componente.
+
+00:02:07.600 --> 00:02:09.933
+Assim como fizemos
+aqui em cima,
+
+00:02:09.966 --> 00:02:12.467
+em vez de usarmos component,
+
+00:02:12.500 --> 00:02:15.200
+podemos usar render.
+
+00:02:15.233 --> 00:02:19.167
+Isso nos tornará responsáveis
+pela criação do elemento.
+
+00:02:19.200 --> 00:02:24.633
+Agora, queremos renderizar
+o CreateContact como antes,
+
+00:02:24.667 --> 00:02:28.400
+mas agora queremos dizer
+
+00:02:28.433 --> 00:02:33.100
+que a propriedade onCreateContact
+será uma função
+
+00:02:33.133 --> 00:02:37.100
+e, quando ela for invocada,
+
+00:02:37.133 --> 00:02:42.533
+chamaremos o this.createContact
+que acabamos de criar aqui.
+
+00:02:43.167 --> 00:02:46.933
+Também queremos passar o contact,
+que obtemos
+
+00:02:46.967 --> 00:02:50.167
+quando a propriedade
+onCreateContact foi invocada.
+
+00:02:50.200 --> 00:02:54.333
+Por que eu criei
+uma função lambda nova
+
+00:02:54.367 --> 00:03:00.000
+em vez de passar createContact
+diretamente para onCreateContact?
+
+00:03:00.033 --> 00:03:03.533
+Fiz isso porque,
+uma vez enviado o formulário,
+
+00:03:03.567 --> 00:03:07.667
+nós queremos retornar
+para a tela principal.
+
+00:03:07.700 --> 00:03:09.133
+Com o React Router,
+
+00:03:09.167 --> 00:03:14.133
+uma das propriedades fornecerá
+algo que chamamos de "history",
+
+00:03:14.167 --> 00:03:18.733
+e, na propriedade history,
+há um método chamado ".push".
+
+00:03:18.767 --> 00:03:21.700
+Ele se parece com isto.
+
+00:03:21.733 --> 00:03:24.867
+Vejamos o fluxo aqui.
+
+00:03:24.900 --> 00:03:28.900
+Quando onCreateContact
+é invocado -
+
+00:03:28.933 --> 00:03:32.467
+e isso acontecerá quando
+adicionarmos um novo contato -
+
+00:03:32.500 --> 00:03:37.033
+chamamos this.createContact
+passando contact,
+
+00:03:37.067 --> 00:03:42.200
+que invocará esta função,
+executando esta lógica,
+
+00:03:42.233 --> 00:03:46.167
+e nós chamaremos history.push,
+
+00:03:46.200 --> 00:03:49.533
+que nos redirecionará
+ou nos roteará
+
+00:03:49.567 --> 00:03:51.833
+para a rota principal,
+
+00:03:51.867 --> 00:03:55.900
+que nos dará a IU
+do ListContacts.
+
+00:03:55.933 --> 00:03:58.800
+Vejamos
+se isso está funcionando.
+
+00:03:58.833 --> 00:04:02.800
+Inserimos um novo nome,
+um endereço
+
+00:04:02.833 --> 00:04:05.833
+e um avatar.
+
+00:04:05.867 --> 00:04:08.667
+Agora,
+quando adicionamos um novo contato,
+
+00:04:08.700 --> 00:04:12.333
+obtemos o mesmo erro
+do vídeo anterior,
+
+00:04:12.367 --> 00:04:14.633
+que é o único erro
+do curso todo.
+
+00:04:14.667 --> 00:04:18.800
+Aqui em cima,
+em vez de "currentState.contact" -
+
+00:04:18.833 --> 00:04:22.700
+não acredito que errei de novo -,
+será ".contacts".
+
+00:04:22.733 --> 00:04:25.400
+Deve estar no plural,
+pois é como está aqui.
+
+00:04:25.433 --> 00:04:27.400
+Vamos tentar.
+
+00:04:27.433 --> 00:04:30.067
+Vamos deletar o Tyler.
+
+00:04:30.100 --> 00:04:32.667
+Agora vamos me adicionar
+novamente.
+
+00:04:32.700 --> 00:04:36.800
+Digitaremos "Tyler McGinnis",
+mas pode digitar o que quiser.
+
+00:04:36.833 --> 00:04:38.867
+Adicionamos um novo avatar.
+
+00:04:38.900 --> 00:04:41.167
+Ao clicarmos em Add Contact,
+
+00:04:41.200 --> 00:04:45.400
+perceba que temos o novo contato
+na lista de contatos
+
+00:04:45.433 --> 00:04:48.100
+e que fomos redirecionados
+para a View principal.
+

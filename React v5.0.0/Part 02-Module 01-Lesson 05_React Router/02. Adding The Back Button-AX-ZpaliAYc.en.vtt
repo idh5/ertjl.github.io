@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.660
+So, instead of just hard coding and changing directly the state of the screen here,
+
+00:00:06.660 --> 00:00:09.810
+what we want to do is we want the user to be able to make that change.
+
+00:00:09.810 --> 00:00:14.250
+So, let's add a button up here by our Search Contacts field,
+
+00:00:14.250 --> 00:00:16.350
+and we'll add a click handler lap that will
+
+00:00:16.350 --> 00:00:18.929
+change the state which will then change the screen.
+
+00:00:18.929 --> 00:00:22.530
+So this will happen inside of the List Contacts component.
+
+00:00:22.530 --> 00:00:26.700
+So, where we will put it is right below the input right here.
+
+00:00:26.699 --> 00:00:32.369
+So, let's just have an anchor tag and we'll just do that for now.
+
+00:00:32.369 --> 00:00:34.934
+When, we click on,
+
+00:00:34.935 --> 00:00:37.200
+we'll just have an empty function here for
+
+00:00:37.200 --> 00:00:39.785
+now because we're not quite sure what we want to do yet.
+
+00:00:39.784 --> 00:00:42.859
+We'll also give this a class name of add
+
+00:00:42.859 --> 00:00:47.644
+contact and then the text for this anchor tag we'll just say add contact.
+
+00:00:47.645 --> 00:00:52.190
+Then now what we should see when we say this is we get this nice little button up here,
+
+00:00:52.189 --> 00:00:54.875
+but the button doesn't actually do anything yet.
+
+00:00:54.875 --> 00:00:58.145
+What we wanted to do is we wanted to change the state of
+
+00:00:58.145 --> 00:01:03.020
+our App component but the problem that we're now going to run into is the state for app,
+
+00:01:03.020 --> 00:01:04.939
+specifically the screen property,
+
+00:01:04.939 --> 00:01:10.084
+is owned by the App component and we are inside of our ListContacts component.
+
+00:01:10.084 --> 00:01:14.029
+So, just as we did here with removeContact,
+
+00:01:14.030 --> 00:01:17.644
+what we want to do is we want to pass a property
+
+00:01:17.644 --> 00:01:21.459
+or a prop down to ListContacts and when it is clicked,
+
+00:01:21.459 --> 00:01:25.939
+that method will toggle or change the specific screen.
+
+00:01:25.939 --> 00:01:30.694
+So, what we'll do is let's pass a new prop to ListContacts.
+
+00:01:30.694 --> 00:01:34.369
+We'll call it onNavigate and then we will just go ahead and
+
+00:01:34.370 --> 00:01:38.704
+pass it an inline function here using an arrow function.
+
+00:01:38.704 --> 00:01:42.334
+When this function is clicked we can call setState
+
+00:01:42.334 --> 00:01:46.669
+and what is clicked we want the screen to be changed to create.
+
+00:01:46.670 --> 00:01:50.060
+So, let's save this file first and then now we are
+
+00:01:50.060 --> 00:01:54.379
+passing this function onNavigate in as a prop to ListContacts.
+
+00:01:54.379 --> 00:01:56.239
+So inside of ListContacts,
+
+00:01:56.239 --> 00:02:00.515
+what we can do is now instead of just returning this blank function,
+
+00:02:00.515 --> 00:02:06.719
+we can call onNavigate and we can make sure that we restructure it up here.
+
+00:02:06.719 --> 00:02:10.655
+So now what's happening is when we click on the button
+
+00:02:10.655 --> 00:02:14.930
+you'll notice we now get the CreateContacts screen because what we did
+
+00:02:14.930 --> 00:02:19.849
+was we said when we create this element pass it a function called
+
+00:02:19.849 --> 00:02:24.789
+onNavigate and when that function is invoked we will set the screen to be create.
+
+00:02:24.789 --> 00:02:30.769
+Down here we said if screen is list go ahead and show ListContacts and if it's not,
+
+00:02:30.770 --> 00:02:33.439
+if it is create then go ahead and show CreateContact.
+
+00:02:33.439 --> 00:02:37.659
+So, when we click on our anchor tag here,
+
+00:02:37.659 --> 00:02:40.484
+this onClick function will be invoked,
+
+00:02:40.485 --> 00:02:43.290
+which will then invoke onNavigate which will
+
+00:02:43.289 --> 00:02:46.199
+then change the state so we see the new screen.
+
+00:02:46.199 --> 00:02:49.744
+But now what should happen if we click the back button?
+
+00:02:49.745 --> 00:02:53.655
+Well, not that. So let's talk about it.
+
+00:02:53.655 --> 00:02:56.990
+Now, you've probably used an app on the web that broke
+
+00:02:56.990 --> 00:03:00.920
+the back button the same way that we just broke the back button in our contacts app.
+
+00:03:00.919 --> 00:03:04.429
+It's no good because this is an essential feature of the web.
+
+00:03:04.430 --> 00:03:08.629
+When a user clicks the back button they expect to see the previous screen.
+
+00:03:08.629 --> 00:03:12.349
+It gets really tricky to do this with component's state all on our own.
+
+00:03:12.349 --> 00:03:14.764
+That's why React Router exists.
+
+00:03:14.764 --> 00:03:18.189
+So, that you can keep your UI and your URL in sync.
+
+00:03:18.189 --> 00:03:23.579
+It keeps all of the users expectations around links screens and the URL intact.
+

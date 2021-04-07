@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.365
+So, at this point, we are able to navigate to our slash create route,
+
+00:00:04.365 --> 00:00:06.870
+but the component that we are rendering there,
+
+00:00:06.870 --> 00:00:09.435
+which is our CreateContact component,
+
+00:00:09.435 --> 00:00:11.700
+isn't actually doing anything yet.
+
+00:00:11.699 --> 00:00:15.179
+So, let's go ahead and make it a little more interesting.
+
+00:00:15.179 --> 00:00:17.100
+So, what we want to do first,
+
+00:00:17.100 --> 00:00:19.710
+is let's go ahead and import Link,
+
+00:00:19.710 --> 00:00:23.969
+because the first thing we want to do is set up a back button.
+
+00:00:23.969 --> 00:00:27.029
+So, we will grab Link from react-router-dom,
+
+00:00:27.030 --> 00:00:31.200
+and then inside of our UI here, let's delete that,
+
+00:00:31.199 --> 00:00:34.200
+and the first thing we want to render is a link,
+
+00:00:34.200 --> 00:00:42.400
+we'll give it a className of close-create-contact.
+
+00:00:42.770 --> 00:00:47.630
+I'm going to close our sidebar here just to give us a little bit more room.
+
+00:00:47.810 --> 00:00:50.625
+The next prop we want to pass it,
+
+00:00:50.625 --> 00:00:53.054
+is where we want to actually go,
+
+00:00:53.054 --> 00:00:56.159
+which is just going to be our home route,
+
+00:00:56.159 --> 00:00:59.349
+and then we will say close.
+
+00:00:59.509 --> 00:01:01.804
+Then now if we save this,
+
+00:01:01.804 --> 00:01:04.885
+what we should have is a little error button here,
+
+00:01:04.885 --> 00:01:09.185
+and now we can navigate between both of these different routes.
+
+00:01:09.185 --> 00:01:12.460
+So, now the next thing we want to do, is if you remember,
+
+00:01:12.459 --> 00:01:15.714
+the whole point of create is to be able to create a new contact,
+
+00:01:15.715 --> 00:01:22.034
+and part of that is having the user be able to upload their image.
+
+00:01:22.034 --> 00:01:25.829
+So, we have this image input component,
+
+00:01:25.829 --> 00:01:28.734
+that was given to you when you first started out.
+
+00:01:28.734 --> 00:01:30.370
+So, what we want to do now,
+
+00:01:30.370 --> 00:01:33.380
+is let's go ahead and render that.
+
+00:01:33.379 --> 00:01:39.039
+We'll give this a class name of create-contact-avatar,
+
+00:01:39.040 --> 00:01:41.200
+inputs a little long, but it'll work.
+
+00:01:41.200 --> 00:01:45.010
+We'll give it a name of avatar URL,
+
+00:01:45.010 --> 00:01:50.120
+and then let's say maxHeight is going to be 64,
+
+00:01:50.120 --> 00:01:54.640
+and let's not forget to wrap this inside of a form component
+
+00:01:54.640 --> 00:01:59.230
+because that's the whole point of the slash create route,
+
+00:01:59.230 --> 00:02:02.620
+and we'll also give this form a class name,
+
+00:02:02.620 --> 00:02:07.520
+we will say it's going to be create-contact form.
+
+00:02:08.699 --> 00:02:13.924
+Then, now you'll notice we have our little ImageInput here,
+
+00:02:13.925 --> 00:02:17.810
+and the next information that we want to get from the user is their name,
+
+00:02:17.810 --> 00:02:19.295
+and their twitter handle.
+
+00:02:19.294 --> 00:02:21.619
+So, right below our image input,
+
+00:02:21.620 --> 00:02:27.534
+let's render a div with a class name of create-contact-details,
+
+00:02:27.534 --> 00:02:29.984
+and then inside of here,
+
+00:02:29.985 --> 00:02:32.445
+what we'll have is two different inputs.
+
+00:02:32.444 --> 00:02:37.495
+The first one, or really both of them will have a type of text,
+
+00:02:37.495 --> 00:02:40.664
+name will be name, and then placeholder,
+
+00:02:40.664 --> 00:02:42.699
+will be Name on this first one,
+
+00:02:42.699 --> 00:02:45.859
+and the second one will also have a type of text.
+
+00:02:45.860 --> 00:02:47.959
+Name is going to be handle,
+
+00:02:47.959 --> 00:02:51.759
+and place holder will just be Handle.
+
+00:02:51.759 --> 00:02:56.179
+Now the last thing our form needs is a nice little button,
+
+00:02:56.180 --> 00:02:59.194
+which we can just come in and add right here,
+
+00:02:59.194 --> 00:03:04.180
+and what it will say is Add Contact.
+
+00:03:04.180 --> 00:03:08.010
+So now, this looks pretty good.
+
+00:03:08.009 --> 00:03:11.479
+What we need to do now and we'll do this in the next video,
+
+00:03:11.479 --> 00:03:13.189
+is when we fill out this form,
+
+00:03:13.189 --> 00:03:15.669
+we now need to take that information,
+
+00:03:15.669 --> 00:03:17.849
+save it to our fake database,
+
+00:03:17.849 --> 00:03:20.949
+or make an API request for that,
+
+00:03:20.949 --> 00:03:24.289
+and then also update our local state.
+

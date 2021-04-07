@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.774
+The final component we need is called the route.
+
+00:00:02.774 --> 00:00:06.224
+Route takes a path that will match the URL, or not.
+
+00:00:06.224 --> 00:00:08.324
+If the path matches the URL,
+
+00:00:08.324 --> 00:00:10.320
+then the route will render some UI.
+
+00:00:10.320 --> 00:00:12.960
+But it won't render anything if it doesn't match.
+
+00:00:12.960 --> 00:00:15.450
+What is like the code that we had that was checking
+
+00:00:15.449 --> 00:00:18.829
+our component's state to decide which screen we wanted to render,
+
+00:00:18.829 --> 00:00:20.779
+route will do that same sort of thing.
+
+00:00:20.780 --> 00:00:23.195
+But instead of checking component's state,
+
+00:00:23.195 --> 00:00:24.859
+it will check the URL.
+
+00:00:24.859 --> 00:00:28.719
+What does that mean? It means that the back button's still going to work.
+

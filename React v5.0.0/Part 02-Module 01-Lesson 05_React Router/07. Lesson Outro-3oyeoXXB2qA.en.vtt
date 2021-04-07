@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.094
+Cool. Our app has a new screen and since we're using React Router,
+
+00:00:04.094 --> 00:00:06.359
+all of our user's expectations are met.
+
+00:00:06.360 --> 00:00:08.070
+When they click on our new link,
+
+00:00:08.070 --> 00:00:11.804
+the router transitions the new screen and the URL updates.
+
+00:00:11.804 --> 00:00:14.279
+They can then click the back button to go back,
+
+00:00:14.279 --> 00:00:16.259
+and the forward button to go forward.
+
+00:00:16.260 --> 00:00:17.775
+They can refresh the page,
+
+00:00:17.774 --> 00:00:19.948
+right-click a link to open in a new tab,
+
+00:00:19.949 --> 00:00:21.765
+or share this URL with a friend.
+
+00:00:21.765 --> 00:00:23.205
+This is how the web works,
+
+00:00:23.204 --> 00:00:25.169
+and we don't want to break it.
+

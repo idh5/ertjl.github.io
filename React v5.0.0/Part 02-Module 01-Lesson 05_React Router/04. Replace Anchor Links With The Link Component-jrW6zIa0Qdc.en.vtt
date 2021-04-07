@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.240
+So, now that we have a browser router listening to
+
+00:00:03.240 --> 00:00:06.435
+the address bar wrapped around the main app component,
+
+00:00:06.434 --> 00:00:12.119
+let's go and update our link on the ListContacts or in the ListContacts component.
+
+00:00:12.119 --> 00:00:17.219
+So, if you remember we have this link over here to a new page when we create a contact.
+
+00:00:17.219 --> 00:00:23.849
+So, first let's go ahead and import the link component from react-router-dom.
+
+00:00:23.850 --> 00:00:28.350
+Now, down here, instead of rendering an anchor tag,
+
+00:00:28.350 --> 00:00:30.960
+let's render our link component and
+
+00:00:30.960 --> 00:00:34.140
+a link component will actually render an anchor tag still.
+
+00:00:34.140 --> 00:00:36.195
+We don't need an href,
+
+00:00:36.195 --> 00:00:41.329
+instead what we're going to give it is a to prop which is going to be a real URL.
+
+00:00:41.329 --> 00:00:43.854
+So we will say slash Create,
+
+00:00:43.854 --> 00:00:48.625
+react router is going to do the work for us onClick so we can delete this right here,
+
+00:00:48.625 --> 00:00:51.134
+and now, let's save this file.
+
+00:00:51.134 --> 00:00:54.170
+Now notice when we click on this link,
+
+00:00:54.170 --> 00:00:56.870
+we get taken to slash create,
+
+00:00:56.869 --> 00:00:59.509
+nothing else works yet because we haven't done everything
+
+00:00:59.509 --> 00:01:01.909
+we need to in order to get to work,
+
+00:01:01.909 --> 00:01:06.319
+but we now have a browser router and we have our link and when we click on it,
+
+00:01:06.319 --> 00:01:08.269
+it updates the browser's URL.
+
+00:01:08.269 --> 00:01:12.170
+Now the last thing because we deleted are on navigate prompt.
+
+00:01:12.170 --> 00:01:13.549
+From our link component,
+
+00:01:13.549 --> 00:01:18.129
+we can come up here and delete it from here as well so we no longer destructure.
+

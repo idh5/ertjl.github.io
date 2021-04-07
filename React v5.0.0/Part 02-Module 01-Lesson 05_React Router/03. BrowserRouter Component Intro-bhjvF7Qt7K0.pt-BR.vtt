@@ -1,0 +1,18 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.003
+O primeiro componente
+que vamos ver do React Router
+
+00:00:03.036 --> 00:00:04.771
+é o BrowserRouter.
+
+00:00:04.805 --> 00:00:07.241
+Ele observa as mudanças no URL
+
+00:00:07.274 --> 00:00:11.044
+e faz a tela certa aparecer
+quando o URL muda.
+

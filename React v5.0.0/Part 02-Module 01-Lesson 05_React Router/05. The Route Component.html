@@ -1,0 +1,304 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Route Component</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React Router</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. React Router Intro.html">01. React Router Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Dynamically Render Pages.html">02. Dynamically Render Pages</a>
+    </li>
+    <li class="">
+      <a href="03. The BrowserRouter Component.html">03. The BrowserRouter Component</a>
+    </li>
+    <li class="">
+      <a href="04. The Link Component.html">04. The Link Component</a>
+    </li>
+    <li class="">
+      <a href="05. The Route Component.html">05. The Route Component</a>
+    </li>
+    <li class="">
+      <a href="06. Finishing The Contact Form.html">06. Finishing The Contact Form</a>
+    </li>
+    <li class="">
+      <a href="07. React Router Outro.html">07. React Router Outro</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. The Route Component</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Route Component Intro</p></h3>
+  <video controls>
+  <source src="05. Route Component Intro-ocZkC0MqGPY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Route Component Intro-ocZkC0MqGPY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Route Component Intro-ocZkC0MqGPY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add Routes To The App</p></h3>
+  <video controls>
+  <source src="05. Add Routes To The App-Ka19h7gvKi0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Add Routes To The App-Ka19h7gvKi0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Add Routes To The App-Ka19h7gvKi0.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-contacts-app/commit/66dcafce787f673b80622f808ca2dc4236aef0b0" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Which Route matches?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>If the browser loads the URL <code>/houses/green</code>, which of the following Routes will match?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522219815467" name="573113" id="a1522219815467">
+      <label for="a1522219815467"><p><code>&lt;Route path="/houses" component={Houses} /&gt;</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522219844092" name="573113" id="a1522219844092">
+      <label for="a1522219844092"><p><code>&lt;Route exact path="/houses" component={Houses} /&gt;</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522219844703" name="573113" id="a1522219844703">
+      <label for="a1522219844703"><p><code>&lt;Route path="/houses/green" component={Houses} /&gt;</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522219845291" name="573113" id="a1522219845291">
+      <label for="a1522219845291"><p><code>&lt;Route exact path="/houses/green" component={Houses} /&gt;</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522219846303" name="573113" id="a1522219846303">
+      <label for="a1522219846303"><p><code>&lt;Route path="/" component={Houses} /&gt;</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`<Route path="/houses" component={Houses} />`</li>
+      <li>`<Route path="/houses/green" component={Houses} />`</li>
+      <li>`<Route exact path="/houses/green" component={Houses} />`</li>
+      <li>`<Route path="/" component={Houses} />`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>We're almost there! Let's quickly make sure we're both on the same page. Make sure to check off each of the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--0">
+        <label for="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--0"><p>I have imported <code>Route</code> in <code>src/App.js</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--1">
+        <label for="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--1"><p>I have replaced the <code>this.state.screen === 'list'</code> code with a <code>Route</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--2">
+        <label for="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--2"><p>I have added an <code>exact</code> prop to the root <code>Route</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--3">
+        <label for="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--3"><p>I have replaced the <code>this.state.screen === create'</code> code with a <code>Route</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--4">
+        <label for="2cc1ee41-9c6c-4cf6-b475-99f40475aa80--4"><p>I have removed the <code>onNavigate</code> function from <code>ListContacts</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Excellent!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="route-component-recap">Route Component Recap</h2>
+<p>The main takeaway from this section is that with a <code>Route</code> component if you want to be able to pass props to a specific component that the router is going to render, you'll need to use <code>Route</code>’s <code>render</code> prop. As you saw, <code>render</code> puts you in charge of rendering the component which in turn allows you to pass any props to the rendered component as you'd like.</p>
+<p>In summary, the <code>Route</code> component is a critical piece of building an application with React Router because it's the component which is going to decide which components are rendered based on the current URL path.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Finishing The Contact Form.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. The Route Component')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

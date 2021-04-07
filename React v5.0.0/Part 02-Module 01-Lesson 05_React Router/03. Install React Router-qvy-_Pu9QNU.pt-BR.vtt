@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:04.367
+Antes de usarmos o React Router
+no nosso aplicativo,
+
+00:00:04.400 --> 00:00:08.333
+precisamos instalá-lo
+do registro npm.
+
+00:00:08.367 --> 00:00:13.433
+Executamos yarn add
+react-router-dom.
+
+00:00:13.467 --> 00:00:17.567
+Não esqueça o -dom. O React Router
+funciona em vários ambientes,
+
+00:00:17.600 --> 00:00:21.500
+como o React Router Native,
+mas, como estamos lidando com o DOM,
+
+00:00:21.533 --> 00:00:24.167
+pois lidamos com a internet,
+precisamos executar
+
+00:00:24.200 --> 00:00:26.433
+yarn add react-router-dom.
+

@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.871
+Até agora fizemos o hard code
+do nosso array contacts
+
+00:00:04.904 --> 00:00:07.440
+no estado do componente
+do nosso aplicativo.
+
+00:00:07.474 --> 00:00:09.409
+Isto foi ótimo
+para aprender propósitos,
+
+00:00:09.442 --> 00:00:10.844
+mas não é realista.
+
+00:00:10.877 --> 00:00:13.480
+Esses contatos provavelmente
+vivem dentro
+
+00:00:13.513 --> 00:00:15.015
+de um banco de dados
+em algum lugar,
+
+00:00:15.048 --> 00:00:17.917
+e, para consegui-los,
+precisa fazer uma solicitação API .
+
+00:00:17.951 --> 00:00:20.153
+É isto que faremos
+neste vídeo.
+
+00:00:20.186 --> 00:00:21.554
+Se você se lembra,
+
+00:00:21.588 --> 00:00:24.357
+um dos arquivos
+que foi dado a você
+
+00:00:24.391 --> 00:00:26.426
+foi o contactsAPI.
+
+00:00:26.459 --> 00:00:29.295
+E um dos métodos
+que estamos exportando deste arquivo
+
+00:00:29.329 --> 00:00:31.398
+é o getALL,
+
+00:00:31.431 --> 00:00:35.669
+que vai fazer uma fetch request
+ao nosso contactsAPI
+
+00:00:35.702 --> 00:00:37.337
+e vai devolver uma promessa.
+
+00:00:37.370 --> 00:00:39.139
+E quando essa promessa
+for resolvida,
+
+00:00:39.172 --> 00:00:41.074
+teremos todos os contatos.
+
+00:00:41.107 --> 00:00:42.942
+Então o que faremos primeiro
+
+00:00:42.976 --> 00:00:48.648
+é importar tudo daquele módulo
+como contactsAPI,
+
+00:00:48.682 --> 00:00:53.420
+e isto vai vir
+do utils/ContactsAPI,
+
+00:00:53.453 --> 00:00:59.659
+e depois vamos nos livrar de todo
+nosso estado padrão.
+
+00:00:59.693 --> 00:01:02.195
+Adicionaremos um método
+de ciclo de vida
+
+00:01:02.228 --> 00:01:03.863
+chamado componentDidMount.
+
+00:01:03.897 --> 00:01:05.432
+Então,
+quando ele terminar de montar,
+
+00:01:05.465 --> 00:01:10.670
+nós chamaremos
+o ContactsAPI.getAll,
+
+00:01:10.704 --> 00:01:14.174
+e isto vai nos dar uma promessa,
+que quando for resolvida,
+
+00:01:14.207 --> 00:01:18.745
+passará a função aos contatos
+a função que enviamos.
+
+00:01:18.778 --> 00:01:20.313
+E quando tivermos os contatos,
+
+00:01:20.347 --> 00:01:21.848
+para atualizar nosso estado,
+
+00:01:21.881 --> 00:01:24.851
+como já vimos algumas vezes,
+
+00:01:24.884 --> 00:01:27.053
+o que precisamos fazer
+é chamar o.setState,
+
+00:01:27.087 --> 00:01:30.924
+retornando um objeto
+com contatos novos.
+
+00:01:30.957 --> 00:01:33.059
+Agora,
+quando nosso aplicativo recarrega,
+
+00:01:33.093 --> 00:01:37.263
+em vez de todos estes contatos
+vivendo e sendo originados
+
+00:01:37.297 --> 00:01:38.965
+do estado
+do nosso componente local,
+
+00:01:38.998 --> 00:01:43.503
+nós trazemos estes contatos
+de um servidor remoto.
+
+00:01:43.536 --> 00:01:45.405
+E quando recebermos
+a resposta,
+
+00:01:45.438 --> 00:01:46.940
+nós atualizamos
+nosso estado local,
+
+00:01:46.973 --> 00:01:48.808
+o que vai atualizar a IU.
+

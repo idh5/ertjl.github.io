@@ -1,0 +1,54 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.434 --> 00:00:03.100
+É hora de testar
+suas novas habilidades
+
+00:00:03.133 --> 00:00:04.734
+e criar o aplicativo My Reads.
+
+00:00:04.767 --> 00:00:07.434
+Você usará o React
+para fazer o aplicativo.
+
+00:00:07.467 --> 00:00:09.434
+Se você se lembra do início,
+
+00:00:09.467 --> 00:00:12.167
+o aplicativo My Reads serve
+para rastrear seus livros.
+
+00:00:12.200 --> 00:00:14.534
+Ele exigirá
+que você gerencie estado,
+
+00:00:14.567 --> 00:00:16.968
+crie componentes
+e potencialize o React router.
+
+00:00:17.000 --> 00:00:18.934
+O importante
+de fazer o aplicativo
+
+00:00:18.968 --> 00:00:20.868
+é a construção
+da parte do React.
+
+00:00:20.901 --> 00:00:23.834
+Vamos fornecer
+estilos e ícones básicos,
+
+00:00:23.868 --> 00:00:25.701
+pois queremos
+que fique bonitinho.
+
+00:00:25.734 --> 00:00:28.434
+Não vamos avaliar
+a parte visual.
+
+00:00:28.467 --> 00:00:31.367
+Mas chega de falação.
+Vamos ao projeto.
+

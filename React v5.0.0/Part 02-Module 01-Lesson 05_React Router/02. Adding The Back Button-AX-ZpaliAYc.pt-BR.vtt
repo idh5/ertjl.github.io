@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:03.737
+Em vez de codificarmos
+e alterarmos
+
+00:00:03.770 --> 00:00:06.540
+diretamente o estado da tela,
+
+00:00:06.573 --> 00:00:10.310
+queremos que o usuário possa
+fazer as alterações.
+
+00:00:10.344 --> 00:00:14.147
+Vamos adicionar um botão
+perto da busca de contatos
+
+00:00:14.181 --> 00:00:17.117
+e um manipulador de cliques,
+que mudará o estado
+
+00:00:17.150 --> 00:00:19.086
+e mudará a tela.
+
+00:00:19.119 --> 00:00:22.990
+Isso acontecerá no componente
+ListContacts.
+
+00:00:23.023 --> 00:00:26.894
+Nós o colocaremos
+logo abaixo do input.
+
+00:00:26.927 --> 00:00:29.596
+Vamos adicionar
+uma tag anchor.
+
+00:00:29.630 --> 00:00:32.566
+Só faremos isso agora.
+
+00:00:32.599 --> 00:00:37.404
+Quando clicarmos,
+teremos uma função vazia,
+
+00:00:37.437 --> 00:00:40.007
+pois ainda não sabemos bem
+o que fazer.
+
+00:00:40.040 --> 00:00:43.977
+Isto terá className
+igual a "add-contact",
+
+00:00:44.011 --> 00:00:47.681
+e o texto da tag anchor
+dirá "Add Contact".
+
+00:00:47.714 --> 00:00:52.186
+Nós veremos este belo botão
+aqui em cima,
+
+00:00:52.219 --> 00:00:55.022
+mas ele não faz nada ainda.
+
+00:00:55.055 --> 00:00:59.560
+Queremos alterar o estado
+do componente App,
+
+00:00:59.593 --> 00:01:02.963
+mas o problema é
+que o estado de App,
+
+00:01:02.996 --> 00:01:04.898
+especificamente
+a propriedade screen,
+
+00:01:04.932 --> 00:01:06.967
+pertence ao componente App,
+
+00:01:07.000 --> 00:01:10.270
+e estamos dentro do componente
+ListContacts.
+
+00:01:10.304 --> 00:01:14.074
+Assim como fizemos aqui
+com o removeContacts,
+
+00:01:14.107 --> 00:01:19.847
+queremos passar uma propriedade
+para o ListContacts,
+
+00:01:19.880 --> 00:01:21.648
+assim, quando for clicado,
+
+00:01:21.682 --> 00:01:26.086
+o método mudará a tela.
+
+00:01:26.119 --> 00:01:30.757
+Então devemos passar uma nova
+propriedade para ListContacts,
+
+00:01:30.791 --> 00:01:32.893
+que chamaremos de "onNavigate"
+
+00:01:32.926 --> 00:01:38.665
+e passar uma função inline
+usando uma função lambda.
+
+00:01:38.699 --> 00:01:42.503
+Quando essa função for clicada,
+chamamos setState,
+
+00:01:42.536 --> 00:01:46.807
+pois queremos que a tela seja
+alterada para create.
+
+00:01:46.840 --> 00:01:49.142
+Vamos salvar o arquivo.
+
+00:01:49.176 --> 00:01:52.246
+Agora estamos passando a função
+onNavigate
+
+00:01:52.279 --> 00:01:54.481
+como propriedade
+do ListContacts.
+
+00:01:54.515 --> 00:01:57.518
+Dentro do ListContacts,
+
+00:01:57.551 --> 00:02:00.521
+em vez de apenas retornar
+a função em branco,
+
+00:02:00.554 --> 00:02:03.090
+podemos chamar onNavigate
+
+00:02:03.123 --> 00:02:06.960
+garantindo que está estruturado
+aqui em cima.
+
+00:02:06.994 --> 00:02:10.797
+Agora, ao clicarmos no botão,
+
+00:02:10.831 --> 00:02:13.867
+vemos a tela CreateContact,
+
+00:02:13.901 --> 00:02:17.971
+porque dissemos que,
+na criação deste elemento,
+
+00:02:18.005 --> 00:02:20.841
+ele deveria passar uma função
+chamada "onNavigate",
+
+00:02:20.874 --> 00:02:24.912
+e, quando a função fosse invocada,
+a tela seria create.
+
+00:02:24.945 --> 00:02:28.115
+Aqui embaixo,
+dissemos que se a tela fosse list,
+
+00:02:28.148 --> 00:02:31.518
+ele exibiria o ListContacts,
+caso contrário, se fosse create,
+
+00:02:31.552 --> 00:02:33.554
+ele exibiria CreateContact.
+
+00:02:33.587 --> 00:02:37.658
+Assim,
+ao clicarmos na tag anchor,
+
+00:02:37.691 --> 00:02:40.460
+a função onClick será
+invocada,
+
+00:02:40.494 --> 00:02:44.264
+invocando onNavigate,
+que mudará o estado,
+
+00:02:44.298 --> 00:02:46.400
+e veremos a nova tela.
+
+00:02:46.433 --> 00:02:49.937
+Mas o que aconteceria
+se clicássemos no botão de retorno?
+
+00:02:49.970 --> 00:02:53.407
+Isso não.
+Vamos falar sobre isso.
+
+00:02:54.274 --> 00:02:56.410
+Você já deve ter usado
+um aplicativo
+
+00:02:56.443 --> 00:03:01.048
+que mostrou o mesmo erro
+ao clicar no botão de retorno.
+
+00:03:01.081 --> 00:03:04.518
+Isso não é bom, pois esse é
+um recurso essencial da internet.
+
+00:03:04.551 --> 00:03:06.486
+Quando o usuário clica
+para retornar,
+
+00:03:06.520 --> 00:03:08.856
+ele espera ver
+a tela anterior,
+
+00:03:08.889 --> 00:03:12.392
+mas é difícil fazer isso
+somente com o estado do componente.
+
+00:03:12.426 --> 00:03:14.795
+É para isso
+que o React Router existe,
+
+00:03:14.828 --> 00:03:18.198
+para mantermos a IU
+e o URL em sincronia.
+
+00:03:18.232 --> 00:03:21.468
+Ele mantém as expectativas
+do usuário sobre os links, as telas
+
+00:03:21.502 --> 00:03:23.136
+e os URLs intactas.
+
