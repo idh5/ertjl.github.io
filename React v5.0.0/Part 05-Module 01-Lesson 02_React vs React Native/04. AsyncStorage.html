@@ -1,0 +1,299 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AsyncStorage</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React vs React Native</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Web vs Native.html">02. Web vs Native</a>
+    </li>
+    <li class="">
+      <a href="03. Common React Native Components.html">03. Common React Native Components</a>
+    </li>
+    <li class="">
+      <a href="04. AsyncStorage.html">04. AsyncStorage</a>
+    </li>
+    <li class="">
+      <a href="05. Redux and React Native.html">05. Redux and React Native</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. AsyncStorage</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="local-storage">Local Storage</h2>
+<p>In order to persist data in a web application, we'd normally store the data in some sort of database. This prevents app data from being lost between page refreshes. Using <code>localStorage</code>, we can achieve a similar effect for the user by storing this data <em>directly in their browser</em>. Best of all -- data stored in <code>localStorage</code> has no expiration date. This means that even if a session ends (e.g. the browser tab is closed), data will not be lost!</p>
+<p>Feel free to check out <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" rel="noopener noreferrer" target="_blank">Window.localStorage</a> on MDN for an overview.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="example-saving-to-localstorage">Example: Saving to <code>localStorage</code></h2>
+<p>Let's say we're building a simple React and Redux application that lets users create and manage a list of tasks. Basic functionality allows users to add items to their task list, remove items, and mark items as completed. </p>
+<p>Assuming much of this data is kept in the application's store, how would we go about persisting this data? One way would be to save to <code>localStorage</code> each time that state is updated. That is, the store's state will be saved with each <em>dispatch</em>:</p>
+<pre><code class="js language-js">// store.js
+
+import { createStore } from 'redux';
+import Reducer from '../reducers/reducer';
+
+const configureStore = () =&gt; {
+  const store = createStore(Reducer);
+
+  store.subscribe(() =&gt; {
+    localStorage.state = JSON.stringify(store.getState());
+  });
+
+  return store;
+};
+
+export default configureStore;</code></pre>
+<p>After the store is created, we call <code>store.subscribe()</code> and pass in a callback function. The callback effectively saves a JSON string of the store's state into <code>localStorage</code>. As a result, by subscribing to the store right after it is created, we can save data related to all of the user's tasks right into their browser!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Local Storage with React Native</p></h3>
+  <video controls>
+  <source src="04. Local Storage with React Native-uO2dR3LPOs0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Local Storage with React Native-uO2dR3LPOs0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Local Storage with React Native-uO2dR3LPOs0.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Local Storage with React Native-uO2dR3LPOs0.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The React Native documentation on <a href="https://facebook.github.io/react-native/docs/asyncstorage.html" rel="noopener noreferrer" target="_blank">AsyncStorage</a> mentions: </p>
+<blockquote>
+  <p>AsyncStorage is a simple, unencrypted, asynchronous, persistent, key-value storage system that is global to the app. It should be used instead of LocalStorage.</p>
+</blockquote>
+<p>In the next video, we'll see just how we can implement it into our app!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>API</p></h3>
+  <video controls>
+  <source src="04. API-243xzJEz7xo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. API-243xzJEz7xo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. API-243xzJEz7xo.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. API-243xzJEz7xo.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/78a78135ab80b78e8585f428052e76573fc8996e" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>How are things looking?</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="12f5664a-1879-409f-b6fa-4fe620ada5e0--0">
+        <label for="12f5664a-1879-409f-b6fa-4fe620ada5e0--0"><p>I have created the <code>api.js</code> util file</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="12f5664a-1879-409f-b6fa-4fe620ada5e0--1">
+        <label for="12f5664a-1879-409f-b6fa-4fe620ada5e0--1"><p>I have updated the <code>submit()</code> and <code>reset()</code> methods in <code>AddEntry</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Native's version of <code>localStorage</code> is <code>AsyncStorage</code>. Conveniently, since <code>AsyncStorage</code> is just an abstraction over iOS and Android equivalents, there's no need to consider the different environments.</p>
+<p>We took a close look at these 3 methods available on <code>AsyncStorage</code>:</p>
+<ul>
+<li><code>setItem</code></li>
+<li><code>mergeItem</code></li>
+<li><code>getItem</code></li>
+</ul>
+<p>Feel free to visit the <a href="https://facebook.github.io/react-native/docs/asyncstorage.html#methods" rel="noopener noreferrer" target="_blank">documentation</a> for a complete list.</p>
+<p>In the next section, we'll incorporate Redux to help manage application state!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Redux and React Native.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. AsyncStorage')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

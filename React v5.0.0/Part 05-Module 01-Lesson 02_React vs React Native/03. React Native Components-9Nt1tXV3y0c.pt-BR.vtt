@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:02.267
+Quando você desenvolve
+para Web,
+
+00:00:02.300 --> 00:00:07.000
+tem pronto acesso a todo elemento
+na especificação HTML.
+
+00:00:07.033 --> 00:00:09.834
+Isso inclui elementos
+como "div" e "span".
+
+00:00:09.867 --> 00:00:12.367
+No React Native, é parecido,
+
+00:00:12.400 --> 00:00:15.901
+só que, em vez de usar elementos
+providos pelas especificações HTML,
+
+00:00:15.934 --> 00:00:19.467
+você usa componentes
+providos pelo React Native.
+
+00:00:19.501 --> 00:00:21.801
+Componentes
+como "View" e "Text".
+
+00:00:21.834 --> 00:00:22.868
+Nesta lição,
+
+00:00:22.901 --> 00:00:25.767
+trataremos de componentes comuns
+do React Native
+
+00:00:25.801 --> 00:00:27.501
+com que você pode
+se deparar.
+
+00:00:27.534 --> 00:00:30.434
+Alguns deles serão usados
+no nosso projeto UdaciFitness,
+
+00:00:30.467 --> 00:00:33.434
+outros, não.
+Mas é bom dominar todos eles.
+

@@ -1,0 +1,309 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.367 --> 00:00:04.733
+Retomando a função
+que criamos no último vídeo,
+
+00:00:04.766 --> 00:00:07.233
+esta aqui,
+"getMetricMetaInfo",
+
+00:00:07.266 --> 00:00:10.633
+há dois tipos de entrada
+que iremos usar:
+
+00:00:10.667 --> 00:00:14.333
+o stepper,
+composto de dois botões -
+
+00:00:14.367 --> 00:00:17.767
+um de incremento
+e outro de decremento -
+
+00:00:17.800 --> 00:00:20.000
+e o slider,
+
+00:00:20.033 --> 00:00:22.900
+que é um controle deslizante
+que vai de 1 a "x".
+
+00:00:22.933 --> 00:00:27.700
+No caso do sono, de 1 a 24.
+No caso da alimentação, de 1 a 10.
+
+00:00:27.733 --> 00:00:30.333
+Nestes dois tipos
+de entrada,
+
+00:00:30.366 --> 00:00:34.967
+precisaremos de três métodos
+dentro da nossa classe
+
+00:00:35.000 --> 00:00:38.600
+para modificar as entradas.
+
+00:00:38.633 --> 00:00:42.833
+"State" consistirá
+em cinco coisas diferentes.
+
+00:00:42.867 --> 00:00:47.167
+Corrida, ciclismo... Uma medição
+para cada coisa monitorada,
+
+00:00:47.200 --> 00:00:52.367
+e todas começando em 0.
+O objetivo do componente
+
+00:00:52.400 --> 00:00:55.333
+é captar dados diários
+quanto ao triatlo,
+
+00:00:55.367 --> 00:00:58.800
+quanto ao sono
+e quanto à alimentação.
+
+00:00:58.833 --> 00:01:00.233
+Quando eles vão preencher,
+
+00:01:00.267 --> 00:01:04.300
+as medições que queremos monitorar
+são estas cinco.
+
+00:01:04.333 --> 00:01:09.133
+Primeiro, vamos criar
+um método de incremento
+
+00:01:09.166 --> 00:01:13.433
+que servirá para as medições
+de corrida, ciclismo e natação.
+
+00:01:13.467 --> 00:01:16.800
+Ao invocarmos isto,
+passaremos a medição como argumento.
+
+00:01:16.833 --> 00:01:21.667
+Temos de auferir o máximo "Max"
+a que a medição chegaria
+
+00:01:21.700 --> 00:01:24.867
+e em incrementos de quanto
+o valor mudaria.
+
+00:01:24.900 --> 00:01:29.967
+Para tanto, usaremos
+a função "getMetricMetaInfo",
+
+00:01:30.000 --> 00:01:32.067
+incluindo
+a medição desejada.
+
+00:01:32.100 --> 00:01:35.267
+Depois,
+chamaremos "setState()",
+
+00:01:35.300 --> 00:01:38.667
+atualizando o estado "state"
+do nosso componente local.
+
+00:01:38.700 --> 00:01:41.333
+Ao chamar "setState()"
+e passar uma função,
+
+00:01:41.366 --> 00:01:44.733
+o que se obtém
+é o estado atual.
+
+00:01:44.766 --> 00:01:49.367
+Depois, estabeleceremos
+que a quantidade "count" será...
+
+00:01:49.400 --> 00:01:53.333
+qual for a propriedade específica
+das medições.
+
+00:01:53.366 --> 00:01:56.900
+Se for ciclismo,
+"count" será "0",
+
+00:01:56.933 --> 00:02:00.967
+pois o "state" de "bike"
+é igual a 0.
+
+00:02:01.000 --> 00:02:05.433
+Depois, definiremos que o aumento
+corresponde ao valor do incremento,
+
+00:02:05.466 --> 00:02:07.633
+informação que obtemos
+desta função.
+
+00:02:07.666 --> 00:02:10.733
+Agora precisamos retornar
+um novo objeto,
+
+00:02:10.766 --> 00:02:15.767
+e o objeto retornado de "setState()"
+será fundido com o atual "state".
+
+00:02:15.800 --> 00:02:21.100
+Ou seja, mantenha
+as propriedades prévias de "state",
+
+00:02:21.133 --> 00:02:25.667
+mas, seja qual for a medição,
+queremos atualizá-la
+
+00:02:25.700 --> 00:02:27.333
+e queremos que,
+
+00:02:27.367 --> 00:02:31.233
+se "count" for maior
+do que o valor de "Max",
+
+00:02:31.267 --> 00:02:34.900
+a medição equivalha
+ao valor de "Max".
+
+00:02:34.933 --> 00:02:38.967
+Senão,
+que permaneça "count".
+
+00:02:39.000 --> 00:02:41.733
+Novamente,
+estamos atualizando "states".
+
+00:02:41.767 --> 00:02:44.100
+Todas as propriedades "state"
+são mantidas,
+
+00:02:44.133 --> 00:02:48.967
+mas uma medição será atualizada,
+e, se superar "count" ou "Max",
+
+00:02:49.000 --> 00:02:51.867
+não queremos que extrapole
+o valor de "Max". Senão...
+
+00:02:51.900 --> 00:02:53.933
+este passará a ser
+o valor de "count".
+
+00:02:53.966 --> 00:02:57.400
+Precisamos fazer a mesma coisa,
+mas agora para diminuir.
+
+00:02:57.433 --> 00:03:00.567
+Vou copiar e colar tudo.
+
+00:03:00.600 --> 00:03:02.933
+Chamaremos de "decrement".
+
+00:03:02.967 --> 00:03:05.633
+E agora...
+
+00:03:05.667 --> 00:03:07.533
+prescindimos de "Max"
+e do decremento,
+
+00:03:07.566 --> 00:03:09.800
+pois estaremos subtraindo.
+
+00:03:09.833 --> 00:03:13.800
+Vou copiar isto
+e deletar ambos.
+
+00:03:13.833 --> 00:03:15.100
+Vou chamar "setState()".
+
+00:03:15.133 --> 00:03:17.867
+É preciso obter "count"
+como fizemos aqui em cima.
+
+00:03:17.900 --> 00:03:21.133
+Mas nosso "count",
+em vez de sofrer um incremento,
+
+00:03:21.167 --> 00:03:24.700
+sofre um decremento.
+
+00:03:24.733 --> 00:03:27.167
+Agora,
+como fizemos ali embaixo,
+
+00:03:27.200 --> 00:03:29.900
+diremos
+que queremos retornar tudo.
+
+00:03:29.933 --> 00:03:31.500
+Queremos manter o "state",
+
+00:03:31.533 --> 00:03:34.533
+mas, esta medição em específico,
+será...
+
+00:03:34.567 --> 00:03:38.033
+Diremos que,
+se "count" for menor do que 0,
+
+00:03:38.066 --> 00:03:40.000
+queremos que ele seja 0.
+
+00:03:40.033 --> 00:03:43.733
+Senão queremos que seja
+igual ao valor de "count".
+
+00:03:43.767 --> 00:03:46.667
+É muito parecido
+com o que fizemos aqui em cima,
+
+00:03:46.700 --> 00:03:50.433
+só que agora a preocupação
+é não passar de 0.
+
+00:03:50.933 --> 00:03:53.533
+Por último,
+
+00:03:53.567 --> 00:03:57.233
+incremento e decremento
+funcionam para três das medições,
+
+00:03:57.266 --> 00:04:01.100
+mas usaremos um slider
+para sono e alimentação.
+
+00:04:01.133 --> 00:04:04.900
+Vamos criar
+o método "slide",
+
+00:04:04.933 --> 00:04:09.433
+que considerará a medição dada
+e o novo valor.
+
+00:04:09.466 --> 00:04:12.667
+Depois,
+chamaremos "setState()".
+
+00:04:12.700 --> 00:04:16.000
+Aí, retornaremos um objeto.
+
+00:04:16.033 --> 00:04:19.900
+E diremos que a nova medição
+agora terá um valor
+
+00:04:19.933 --> 00:04:24.200
+equivalente ao do segundo argumento
+que foi passado.
+
+00:04:24.233 --> 00:04:25.967
+Parece tudo certo.
+
+00:04:26.000 --> 00:04:28.867
+Tem uma vírgula sobrando aqui,
+na linha 24.
+
+00:04:28.900 --> 00:04:32.433
+Você deve até ter percebido.
+Acho que é isso.
+

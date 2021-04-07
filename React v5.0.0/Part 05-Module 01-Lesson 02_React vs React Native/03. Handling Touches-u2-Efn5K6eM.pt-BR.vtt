@@ -1,0 +1,261 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.433 --> 00:00:02.500
+A principal forma
+que o usuário interage
+
+00:00:02.533 --> 00:00:05.100
+com um aplicativo nativo
+é através do toque.
+
+00:00:05.133 --> 00:00:07.867
+Queremos ter certeza
+de que temos os botões
+
+00:00:07.900 --> 00:00:11.733
+e os componentes certos para lidar
+com qualquer tipo de toque,
+
+00:00:11.767 --> 00:00:15.000
+especificamente para responder
+quando clicamos em botões.
+
+00:00:15.033 --> 00:00:19.067
+O React Native nos dá
+quatro componentes.
+
+00:00:19.100 --> 00:00:21.533
+TouchableHighlight,
+TouchableNativeFeedback,
+
+00:00:21.567 --> 00:00:24.267
+TouchableOpacity
+e TouchableWithoutFeedback,
+
+00:00:24.300 --> 00:00:28.200
+para responder
+a esses cliques.
+
+00:00:28.233 --> 00:00:30.067
+Vamos falar de cada um deles.
+
+00:00:30.100 --> 00:00:33.500
+Primeiro, vamos começar
+com TouchableHighlight.
+
+00:00:33.533 --> 00:00:35.500
+O que
+o TouchableHighlight faz
+
+00:00:35.533 --> 00:00:40.500
+é basicamente transformar
+a cor principal em outra
+
+00:00:40.533 --> 00:00:41.800
+quando clicamos nele.
+
+00:00:41.833 --> 00:00:45.367
+Aqui embaixo também temos
+alguns estilos, o container,
+
+00:00:45.400 --> 00:00:47.933
+um botão normal
+e um botão de texto.
+
+00:00:47.967 --> 00:00:53.467
+Adicionamos aqui os estilos do botão
+a este componente.
+
+00:00:53.500 --> 00:00:55.367
+E aqui podemos fazer
+o seguinte.
+
+00:00:55.400 --> 00:00:59.867
+Em onPress,
+rodamos um método handlePress.
+
+00:00:59.900 --> 00:01:05.100
+E, por último,
+especificamos uma cor base,
+
+00:01:05.133 --> 00:01:09.200
+que será a cor na qual
+o fundo do botão se transforma.
+
+00:01:09.233 --> 00:01:14.300
+Aqui colocamos #d4271B,
+
+00:01:14.333 --> 00:01:16.367
+um vermelho escuro,
+
+00:01:16.400 --> 00:01:20.167
+porque o nosso botão normal
+é dessa cor.
+
+00:01:20.200 --> 00:01:25.367
+Aqui dentro passamos
+o que quisermos que o botão mostre,
+
+00:01:25.400 --> 00:01:27.067
+por exemplo,
+Touchable Highlight,
+
+00:01:27.100 --> 00:01:31.200
+e daremos a ele
+um estilo styles.btnText.
+
+00:01:31.233 --> 00:01:34.833
+Se olharmos para o nosso aplicativo,
+veremos que temos este botão.
+
+00:01:34.867 --> 00:01:38.767
+E quando clicamos nele,
+vemos que ele fica um pouco escuro,
+
+00:01:38.800 --> 00:01:44.467
+porque passamos
+da cor do fundo
+
+00:01:44.500 --> 00:01:46.233
+para esta cor base.
+
+00:01:46.267 --> 00:01:48.433
+Podemos ver isso
+no iOS também.
+
+00:01:48.667 --> 00:01:54.367
+Este é o TouchableHighlight.
+O próximo é o TouchableOpacity.
+
+00:01:54.400 --> 00:01:58.100
+Gosto muito do TouchableOpacity,
+acho que é meu favorito.
+
+00:01:58.133 --> 00:02:02.433
+Podemos tirar essa cor base daqui
+para não nos preocuparmos com isso.
+
+00:02:02.467 --> 00:02:06.000
+O que acontece agora é que,
+ao clicarmos nele,
+
+00:02:06.033 --> 00:02:10.333
+a opacidade do botão muda.
+
+00:02:10.367 --> 00:02:13.600
+Assim, o fundo se sobrepõe.
+
+00:02:13.633 --> 00:02:18.667
+Ou seja, o TouchableOpacity
+apenas muda a opacidade do botão
+
+00:02:18.700 --> 00:02:21.233
+para que o fundo
+se sobreponha um pouco.
+
+00:02:21.267 --> 00:02:22.300
+Em seguida,
+
+00:02:22.333 --> 00:02:26.767
+o TouchableWithoutFeedback
+praticamente não muda o botão
+
+00:02:26.800 --> 00:02:28.033
+quando clicamos nele.
+
+00:02:28.067 --> 00:02:31.667
+A diferença dele é que ele
+não funciona com texto,
+
+00:02:31.700 --> 00:02:36.567
+então precisamos criar uma view
+só para ele.
+
+00:02:36.600 --> 00:02:40.433
+Pegamos o estilo
+do TouchableWithoutFeedback
+
+00:02:40.467 --> 00:02:41.833
+e colocamos na view.
+
+00:02:41.867 --> 00:02:44.200
+O que acontece é o seguinte.
+
+00:02:44.233 --> 00:02:47.633
+Veja que, quando eu clico nele,
+como estou fazendo agora,
+
+00:02:47.667 --> 00:02:50.833
+nada acontece porque não estamos
+recebendo nenhum feedback.
+
+00:02:50.867 --> 00:02:53.867
+Este não deve ser muito usado
+porque este tipo de aplicativo
+
+00:02:53.900 --> 00:02:56.267
+trabalha praticamente
+dando feedback ao usuário.
+
+00:02:56.300 --> 00:02:58.567
+Mas, em alguns casos,
+ele pode ser útil.
+
+00:02:58.600 --> 00:03:04.033
+E o último do qual falaremos é
+o TouchableNativeFeedback.
+
+00:03:04.067 --> 00:03:07.900
+Este aqui não funciona no iOS,
+só funciona no Android.
+
+00:03:07.933 --> 00:03:13.633
+Ele dá ao botão um efeito cascata,
+que é nativo da plataforma Android.
+
+00:03:13.667 --> 00:03:17.074
+Então podemos adicionar aqui
+
+00:03:17.354 --> 00:03:20.500
+uma propriedade de fundo.
+
+00:03:20.533 --> 00:03:23.964
+Escrevemos
+que background é igual a...
+
+00:03:23.997 --> 00:03:29.033
+e colocamos TouchableNativeFeedback.
+SelectableBackground.
+
+00:03:29.067 --> 00:03:31.133
+Outra coisa em relação a ele
+
+00:03:31.167 --> 00:03:34.333
+é que também não funciona
+com texto como seu filho,
+
+00:03:34.367 --> 00:03:36.433
+então precisamos
+de uma view também.
+
+00:03:36.467 --> 00:03:37.900
+Agora,
+se olharmos para isto,
+
+00:03:37.933 --> 00:03:42.700
+vemos que no iOS dá erro,
+porque isso não funciona nele.
+
+00:03:42.733 --> 00:03:44.400
+Mas, no Android...
+
+00:03:44.667 --> 00:03:48.100
+Vamos tirar este "Hello"
+para vermos melhor.
+
+00:03:48.867 --> 00:03:53.033
+Veja que, quando clico nele,
+temos esse efeito cascata bem legal.
+

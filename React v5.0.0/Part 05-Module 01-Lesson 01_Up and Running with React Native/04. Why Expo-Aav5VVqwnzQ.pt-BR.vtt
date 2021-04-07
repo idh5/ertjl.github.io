@@ -1,0 +1,89 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:01.567
+Ao longo deste curso,
+
+00:00:01.600 --> 00:00:05.100
+dependeremos muito
+de um serviço chamado Expo.
+
+00:00:05.133 --> 00:00:09.567
+O Expo torna mais fácil
+tudo que tem a ver com React Native.
+
+00:00:09.600 --> 00:00:13.434
+A ideia do Expo é jamais ter
+que tocar em código nativo,
+
+00:00:13.467 --> 00:00:16.167
+seja Swift,
+Objective-C ou Java,
+
+00:00:16.200 --> 00:00:18.200
+ao criar
+um app React Native.
+
+00:00:18.233 --> 00:00:21.567
+Como Desenvolvedor JavaScript,
+eu acho uma ótima missão.
+
+00:00:21.600 --> 00:00:24.100
+Quando precisamos lidar
+com a API nativa,
+
+00:00:24.133 --> 00:00:26.701
+como com câmera
+ou geolocalização,
+
+00:00:26.734 --> 00:00:29.868
+em vez de ter que lidar
+com o Xcode ou o Android Studio,
+
+00:00:29.901 --> 00:00:32.767
+o que, acredite,
+daria uma grande dor de cabeça,
+
+00:00:32.800 --> 00:00:36.767
+podemos usar a API em JS do Expo
+para conseguir o mesmo resultado.
+
+00:00:36.800 --> 00:00:40.001
+Não consigo expressar
+o quão influente e valioso
+
+00:00:40.034 --> 00:00:43.234
+o Expo tem sido
+na comunidade React Native.
+
+00:00:43.267 --> 00:00:46.667
+Qual é a relação
+entre a equipe React Native
+
+00:00:46.700 --> 00:00:48.501
+e a equipe Expo?
+
+00:00:48.534 --> 00:00:50.701
+Bem,
+elas são muito próximas.
+
+00:00:50.734 --> 00:00:53.234
+Muitos dos principais colaboradores
+do React Native
+
+00:00:53.267 --> 00:00:54.968
+trabalham no Expo.
+
+00:00:55.001 --> 00:00:58.200
+Alguns são ex-funcionários
+do Facebook.
+
+00:00:58.233 --> 00:01:02.400
+De fato, o Create React Native App
+foi criado pela equipe do Expo
+
+00:01:02.433 --> 00:01:06.267
+e é, hoje, a maneira oficial
+de se programar com React Native.
+

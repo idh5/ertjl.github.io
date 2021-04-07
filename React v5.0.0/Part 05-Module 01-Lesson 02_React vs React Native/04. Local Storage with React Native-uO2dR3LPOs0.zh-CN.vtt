@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: zh-CN
+
+00:00:00.000 --> 00:00:04.599
+在 React Native 中 LocalStorage 叫做 AsyncStorage
+
+00:00:04.599 --> 00:00:08.339
+它和 LocalStorage 相似 但是异步形式
+
+00:00:08.339 --> 00:00:10.589
+AsyncStorage 的好处是
+
+00:00:10.589 --> 00:00:14.780
+它是 iOS 和 Android 对等项的 JavaScript 抽象形式
+
+00:00:14.779 --> 00:00:18.160
+在使用它时 不用担心不同的环境
+
+00:00:18.160 --> 00:00:24.009
+和 LocalStorage 相似 AsyncStorage 具有三个主要方法：
+
+00:00:24.010 --> 00:00:26.000
+设置项目、删除项目和清除所有项目
+

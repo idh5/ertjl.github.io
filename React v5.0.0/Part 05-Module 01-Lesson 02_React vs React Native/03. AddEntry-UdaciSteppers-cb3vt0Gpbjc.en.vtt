@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.419
+And now, just as we did with our sliders,
+
+00:00:03.419 --> 00:00:07.860
+let's go ahead and update our UdaciSteppers component.
+
+00:00:07.860 --> 00:00:12.935
+So, in UdaciSteppers, we're going to need a few different things.
+
+00:00:12.935 --> 00:00:14.100
+These are going to be buttons,
+
+00:00:14.099 --> 00:00:16.664
+so we will import TouchableOpacity,
+
+00:00:16.664 --> 00:00:21.655
+and then we are also going to want to grab some icon components.
+
+00:00:21.655 --> 00:00:25.393
+So we will grab FontAwesome as well as Entypo,
+
+00:00:25.393 --> 00:00:27.414
+I think that's how you pronounce that.
+
+00:00:27.414 --> 00:00:35.219
+And both of these again come with create React Native app under expo/vector-icons.
+
+00:00:35.219 --> 00:00:38.729
+And so, if you remember just like with UdaciSlider,
+
+00:00:38.729 --> 00:00:44.489
+we are giving UdaciSteppers value onIncrement onDecrement and everything else.
+
+00:00:44.490 --> 00:00:47.000
+So we can come up here and destructure it.
+
+00:00:47.000 --> 00:00:50.024
+We will say max, unit, and step,
+
+00:00:50.024 --> 00:00:54.929
+value onIncrement, as well as onDecrement.
+
+00:00:54.929 --> 00:00:59.984
+And then what we're going to do is instead of returning the text,
+
+00:00:59.984 --> 00:01:03.259
+we are going to return a few different things.
+
+00:01:03.259 --> 00:01:07.064
+The first one is going to be a Touchable component,
+
+00:01:07.064 --> 00:01:08.789
+and whenever we press it,
+
+00:01:08.790 --> 00:01:11.745
+we are going to run onDecrement.
+
+00:01:11.745 --> 00:01:16.135
+Inside of here, what we're going to have is an icon,
+
+00:01:16.135 --> 00:01:18.594
+the name is going to be, minus,
+
+00:01:18.594 --> 00:01:21.810
+we'll give it a size, let's say 30,
+
+00:01:21.810 --> 00:01:26.460
+and then we will give it a color of black so that we can see it right now.
+
+00:01:26.459 --> 00:01:31.250
+And then we also want another button here,
+
+00:01:31.250 --> 00:01:32.760
+but instead of decrementing,
+
+00:01:32.760 --> 00:01:36.090
+we want to increment and then instead of minus,
+
+00:01:36.090 --> 00:01:39.280
+what we want is plus.
+
+00:01:39.280 --> 00:01:45.150
+And then now, let's go ahead and wrap these in a view.
+
+00:01:45.150 --> 00:01:51.050
+So right now, what we've done is we have built both of our buttons.
+
+00:01:51.049 --> 00:01:52.649
+But just like with the slider,
+
+00:01:52.650 --> 00:01:55.469
+we also want this stuff over here,
+
+00:01:55.469 --> 00:01:58.715
+the specific value and the unit.
+
+00:01:58.715 --> 00:02:03.855
+So what we will do is add a bracket there and then what we will do down here,
+
+00:02:03.855 --> 00:02:10.245
+we will have a view with two different text components inside of it.
+
+00:02:10.245 --> 00:02:16.830
+The first one is going to be the value and the second one is going to be the unit.
+
+00:02:16.830 --> 00:02:19.225
+So now, what should happen if everything is working,
+
+00:02:19.224 --> 00:02:21.754
+and of course, it is not.
+
+00:02:21.754 --> 00:02:24.400
+Oh, it is, we just had to refresh.
+
+00:02:24.400 --> 00:02:27.435
+All right, so now what we have is we have our buttons,
+
+00:02:27.435 --> 00:02:33.000
+we can press these and they will go up and they will go down.
+

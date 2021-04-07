@@ -1,0 +1,348 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Redux and React Native</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React vs React Native</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Web vs Native.html">02. Web vs Native</a>
+    </li>
+    <li class="">
+      <a href="03. Common React Native Components.html">03. Common React Native Components</a>
+    </li>
+    <li class="">
+      <a href="04. AsyncStorage.html">04. AsyncStorage</a>
+    </li>
+    <li class="">
+      <a href="05. Redux and React Native.html">05. Redux and React Native</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Redux and React Native</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="redux-and-react-native">Redux and React Native</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Redux in React Native</p></h3>
+  <video controls>
+  <source src="05. Redux in React Native-byZUqYfW4e8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Redux in React Native-byZUqYfW4e8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Redux in React Native-byZUqYfW4e8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Redux in React Native-byZUqYfW4e8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="adding-redux">Adding Redux</h2>
+<p>Recall that Redux is a <em>predictable state container</em> for JavaScript applications. It is agnostic to any particular view library or framework, so not only can we use it with React, but we can integrate it into React Native applications, as well! </p>
+<p>With its lean size and minimal dependencies, Redux is a great tool for React Native projects. And best of all: since React Native is still fundamentally <em>just JavaScript</em>, Redux can be added into projects the same way that we're used to. Let's check it out -- first, with building out <strong>actions</strong>!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Actions</p></h3>
+  <video controls>
+  <source src="05. Actions-6g5KPHce0pQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Actions-6g5KPHce0pQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Actions-6g5KPHce0pQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Actions-6g5KPHce0pQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/3aa5927c69939de2a7e36784548d703058cde5eb" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reducers</p></h3>
+  <video controls>
+  <source src="05. Reducers-AexQfrHWGd8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Reducers-AexQfrHWGd8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Reducers-AexQfrHWGd8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Reducers-AexQfrHWGd8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/1bcb8b1094f41b648d41acbfcfc1cbe0aff99e15" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-forgot-redux💡">💡 Forgot Redux?💡</h2>
+  <p>If you need a refresher on the principles of Redux, feel free to check out the previous course again, <a href="https://classroom.udacity.com/nanodegrees/nd019/parts/7b1b9b53-cd0c-49c9-ae6d-7d03d020d672" rel="noopener noreferrer" target="_blank">React & Redux</a>! Since Redux is agnostic to any particular view library or framework, the same principles of Redux will apply to applications built with React Native as well.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>CreateStore</p></h3>
+  <video controls>
+  <source src="05. CreateStore-caJ0yapbikQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. CreateStore-caJ0yapbikQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. CreateStore-caJ0yapbikQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. CreateStore-caJ0yapbikQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/170f06a5b58a7539ae10d483c1407c4697361d34" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Connect-AddEntry</p></h3>
+  <video controls>
+  <source src="05. Connect-AddEntry-xLqJJJuyAE4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Connect-AddEntry-xLqJJJuyAE4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Connect-AddEntry-xLqJJJuyAE4.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Connect-AddEntry-xLqJJJuyAE4.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/a3e78fe08ac785e6ce372ed37bfb5bcfa19851e3" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>We've just incorporated redux to help manage our global state. Let's make sure we're on the same page!</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--0">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--0"><p>I have created the necessary actions</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--1">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--1"><p>I have created reducers</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--2">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--2"><p>I have created the store</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--3">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--3"><p>I have wrapped my app with the <code>Provider</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--4">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--4"><p>I have created the <code>getDailyReminderValue()</code> helper function</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--5">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--5"><p>I have updated the <code>reset()</code> method in <code>AddEntry</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--6">
+        <label for="294e1b15-cc2c-4dd5-ab89-e1364e57e34c--6"><p>I have connected <code>AddEntry</code> to the store context with <code>connect()</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Remember that React Native is fundamentally still <em>just JavaScript</em>. As such, adding Redux to help manage application state will involve the very same principles and processes as adding Redux to a web application.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Redux and React Native')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

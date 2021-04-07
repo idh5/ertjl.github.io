@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.835
+That's it for the very first lesson.
+
+00:00:02.835 --> 00:00:06.504
+Awesome job. Let's summarize what we've learned so far.
+
+00:00:06.504 --> 00:00:09.259
+React Native allows you to take the concepts you've learned from
+
+00:00:09.259 --> 00:00:13.399
+React and build native iOS and Android applications.
+
+00:00:13.400 --> 00:00:16.885
+Expo makes working with React Native a lot easier.
+
+00:00:16.885 --> 00:00:21.260
+Create React Native App is the official way to create a new React Native project,
+
+00:00:21.260 --> 00:00:25.040
+and now you should have a dev environment set up on your computer.
+
+00:00:25.039 --> 00:00:30.000
+In the next lesson, we'll see just how similar React is to React Native.
+

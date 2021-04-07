@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.720 --> 00:00:07.714
+React Native allows you to use react to build native iOS and Android applications.
+
+00:00:07.714 --> 00:00:10.596
+Sounds too good to be true. Well, it isn't.
+
+00:00:10.596 --> 00:00:12.660
+Companies like Walmart, Airbnb,
+
+00:00:12.660 --> 00:00:18.060
+and Tesla are all using React Native in some capacity on their mobile applications.
+
+00:00:18.059 --> 00:00:19.469
+In my opinion though,
+
+00:00:19.469 --> 00:00:22.729
+React Native is even more beneficial to smaller startups.
+
+00:00:22.730 --> 00:00:25.620
+Instead of having a web team, an iOS team,
+
+00:00:25.620 --> 00:00:28.083
+and an Android team, with React Native,
+
+00:00:28.082 --> 00:00:30.560
+you can just have a single UI team.
+
+00:00:30.560 --> 00:00:35.680
+This not only saves the organization a lot of money but also developer hours as well.
+
+00:00:35.680 --> 00:00:37.500
+Now, you may have heard the phrase,
+
+00:00:37.500 --> 00:00:39.780
+write once, run anywhere, before.
+
+00:00:39.780 --> 00:00:45.060
+The idea of this is that it would be nice if you could use a single code base on the web,
+
+00:00:45.060 --> 00:00:47.565
+on iOS, and on Android.
+
+00:00:47.564 --> 00:00:50.210
+In practice though, this is pretty difficult.
+
+00:00:50.210 --> 00:00:54.354
+This is because each of those platforms have such a unique experience.
+
+00:00:54.354 --> 00:00:56.939
+Unlike write once, run anywhere,
+
+00:00:56.939 --> 00:00:58.695
+React Native's motto is,
+
+00:00:58.695 --> 00:01:00.905
+learn once, write anywhere.
+
+00:01:00.905 --> 00:01:02.292
+Once you learn React,
+
+00:01:02.292 --> 00:01:06.614
+you should be able to take those same principles and not only build UI for the web,
+
+00:01:06.614 --> 00:01:09.859
+but also for native platforms like iOS and Android.
+
+00:01:09.859 --> 00:01:13.590
+So instead of sharing the same codebase amongst all the different platforms,
+
+00:01:13.590 --> 00:01:15.370
+we're sharing the same principles.
+
+00:01:15.370 --> 00:01:19.000
+Things like component composition and declarative UI.
+

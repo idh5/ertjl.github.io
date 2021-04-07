@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.250
+What I want to talk about in this video is how we can actually show
+
+00:00:03.250 --> 00:00:06.424
+an image to the view inside of react-native.
+
+00:00:06.424 --> 00:00:08.769
+Typically, there are two ways that you display
+
+00:00:08.769 --> 00:00:11.424
+an image or there are two different sources where you get the image.
+
+00:00:11.425 --> 00:00:14.339
+The first one is just with a local filer here.
+
+00:00:14.339 --> 00:00:16.464
+So this time I'm going to stop PNG.
+
+00:00:16.464 --> 00:00:21.429
+And the second way is if this file or this image was hosted on a server somewhere.
+
+00:00:21.429 --> 00:00:24.140
+So I'll show you how to implement both of those.
+
+00:00:24.140 --> 00:00:26.835
+Let's go ahead and do the first one first.
+
+00:00:26.835 --> 00:00:32.410
+This local file. What we need to do is grab the Image component,
+
+00:00:32.409 --> 00:00:34.434
+and now we render it just as we would
+
+00:00:34.435 --> 00:00:37.370
+any other component and it takes a few different props.
+
+00:00:37.369 --> 00:00:42.250
+I'm going to go ahead and give it a style prop of styles.img which is just down here.
+
+00:00:42.250 --> 00:00:46.435
+We give it a width and height of 100 and a border radius of 50.
+
+00:00:46.435 --> 00:00:49.120
+And then next, we actually need to give it the source.
+
+00:00:49.119 --> 00:00:52.780
+So what we do for local files is we use
+
+00:00:52.780 --> 00:00:57.575
+require and then just pass in the path to the specific file.
+
+00:00:57.575 --> 00:01:00.490
+So you notice here our App.JS File is in
+
+00:01:00.490 --> 00:01:04.454
+the same level or the same hierarchy as this image.
+
+00:01:04.454 --> 00:01:06.834
+So we can access the image or we can require it
+
+00:01:06.834 --> 00:01:10.159
+just by using.slash and then the name of the image.
+
+00:01:10.159 --> 00:01:12.009
+So now, if we look at our apps,
+
+00:01:12.010 --> 00:01:14.560
+you'll notice both of them have this image.
+
+00:01:14.560 --> 00:01:19.189
+And now, say we wanted to add an image from an external source,
+
+00:01:19.189 --> 00:01:20.670
+so an image that's hosted somewhere.
+
+00:01:20.670 --> 00:01:25.555
+What I'm going to do is just add a view to add some spacing real quick.
+
+00:01:25.555 --> 00:01:29.000
+And then now, in order to get the image that is hosted somewhere else,
+
+00:01:29.000 --> 00:01:30.629
+what we'll do the same thing.
+
+00:01:30.629 --> 00:01:32.375
+Let's add a style.
+
+00:01:32.375 --> 00:01:36.640
+But now, instead of passing in a require invocation here,
+
+00:01:36.640 --> 00:01:39.340
+what we're going to do is we'll pass in an object which has
+
+00:01:39.340 --> 00:01:42.159
+a URI property and then the value of
+
+00:01:42.159 --> 00:01:48.099
+this is going to be the specific URL where the image is being hosted at.
+
+00:01:48.099 --> 00:01:51.609
+Which in this case is on tylermcginnis.com So now,
+
+00:01:51.609 --> 00:01:53.644
+what will happen when our apps refresh,
+
+00:01:53.644 --> 00:01:56.254
+you'll notice that we get two different images.
+
+00:01:56.254 --> 00:02:02.000
+One is living locally inside of our app and the other is living on a server somewhere.
+

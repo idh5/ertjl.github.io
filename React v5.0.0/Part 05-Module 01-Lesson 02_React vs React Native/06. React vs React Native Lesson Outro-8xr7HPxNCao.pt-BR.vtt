@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.901 --> 00:00:03.637
+Parabéns por finalizar
+a lição número 2!
+
+00:00:03.670 --> 00:00:05.772
+Recapitulando,
+nós vimos a diferença
+
+00:00:05.805 --> 00:00:08.775
+entre desenvolver para Web
+e para mobile,
+
+00:00:08.808 --> 00:00:11.378
+e como é importante
+para o React Native
+
+00:00:11.411 --> 00:00:13.614
+manter a sensação
+de familiaridade.
+
+00:00:13.647 --> 00:00:16.817
+Nós aprendemos os componentes-chave
+do React Native.
+
+00:00:16.850 --> 00:00:21.555
+Depois, a usar "AsyncStorage"
+para salvar dados localmente.
+
+00:00:21.588 --> 00:00:25.659
+E, por fim, a adicionar o Redux
+a um aplicativo React Native.
+
+00:00:25.692 --> 00:00:28.862
+A seguir, cobriremos tudo
+que diz respeito a layout e estilo
+
+00:00:28.896 --> 00:00:30.163
+no React Native.
+

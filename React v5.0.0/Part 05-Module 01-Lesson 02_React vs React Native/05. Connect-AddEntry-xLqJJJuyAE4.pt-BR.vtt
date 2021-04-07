@@ -1,0 +1,455 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.600 --> 00:00:03.033
+Agora que temos nossas ações,
+nosso Reducer,
+
+00:00:03.067 --> 00:00:07.333
+e conectamos o Redux ao app
+usando "Provider" e "createStore",
+
+00:00:07.366 --> 00:00:10.900
+a próxima coisa a fazer
+é conectar
+
+00:00:10.933 --> 00:00:12.867
+nosso componente "addEntry"
+
+00:00:12.900 --> 00:00:16.300
+para podermos adicionar
+uma funcionalidade aqui,
+
+00:00:16.333 --> 00:00:18.200
+quando submetermos
+uma nova entrada,
+
+00:00:18.233 --> 00:00:21.133
+e outra funcionalidade aqui,
+
+00:00:21.166 --> 00:00:24.300
+quando resetarmos
+um dia qualquer.
+
+00:00:24.333 --> 00:00:28.033
+Temos de importar
+algumas coisas.
+
+00:00:28.067 --> 00:00:31.567
+Primeiro "Connect",
+de "react-redux".
+
+00:00:31.600 --> 00:00:36.833
+E também vamos importar
+nosso criador de ação "AddEntry",
+
+00:00:36.867 --> 00:00:40.633
+proveniente de "../actions".
+
+00:00:40.667 --> 00:00:45.500
+Agora, em vez de exportar
+o componente,
+
+00:00:45.533 --> 00:00:47.133
+o que faremos...
+
+00:00:47.166 --> 00:00:51.633
+é exportar a invocação
+de "connect".
+
+00:00:51.666 --> 00:00:55.500
+E, ao resultado disso,
+passaremos "AddEntry".
+
+00:00:55.533 --> 00:00:59.500
+Agora, "AddEntry"
+terá acesso a "Dispatch".
+
+00:00:59.533 --> 00:01:02.500
+Aqui dentro de submit,
+
+00:01:02.533 --> 00:01:04.133
+onde diz "update redux",
+
+00:01:04.166 --> 00:01:08.033
+entraremos
+"this.props.dispatch".
+
+00:01:08.067 --> 00:01:09.933
+E o que despacharemos
+
+00:01:09.967 --> 00:01:13.467
+é o que acabamos de importar,
+ou seja, "AddEntry".
+
+00:01:13.500 --> 00:01:16.667
+Se você for se lembrar,
+
+00:01:16.700 --> 00:01:18.733
+"AddEntry" aceita
+uma nova entrada.
+
+00:01:18.766 --> 00:01:21.467
+Bem aqui.
+Aceita uma nova entrada.
+
+00:01:21.500 --> 00:01:23.633
+Fatalmente,
+
+00:01:23.667 --> 00:01:27.233
+"Entry" será adicionada
+ao nosso "state".
+
+00:01:27.266 --> 00:01:31.333
+Formataremos assim.
+Temos a "key"...
+
+00:01:31.366 --> 00:01:34.800
+que é o valor de retorno
+de "timeToString",
+
+00:01:34.833 --> 00:01:38.533
+e o valor será "entry",
+o nosso estado,
+
+00:01:38.567 --> 00:01:41.300
+que contém
+todas estas propriedades.
+
+00:01:41.333 --> 00:01:43.033
+Agora,
+ao clicarmos em "submit",
+
+00:01:43.066 --> 00:01:47.900
+não estamos apenas resetando "state"
+e atualizando nosso banco de dados.
+
+00:01:47.933 --> 00:01:51.867
+Estamos também despachando
+nosso criador de ação "AddEntry",
+
+00:01:51.900 --> 00:01:56.133
+que salva a entrada específica
+à nossa memória Redux.
+
+00:01:56.633 --> 00:02:00.100
+Agora, podemos fazer
+algo parecido aqui embaixo.
+
+00:02:00.133 --> 00:02:05.133
+Esta função "reset"
+será executada
+
+00:02:05.167 --> 00:02:08.933
+no momento em que clicarmos
+no botão "Reset".
+
+00:02:08.966 --> 00:02:11.833
+Agora, como antes,
+
+00:02:11.867 --> 00:02:14.167
+diremos "this.props.dispatch".
+
+00:02:14.200 --> 00:02:17.700
+O que queremos despachar
+é "AddEntry".
+
+00:02:17.733 --> 00:02:20.067
+A "key" será a mesma.
+
+00:02:20.100 --> 00:02:23.900
+Mas agora, em vez de ser
+a entrada específica,
+
+00:02:23.933 --> 00:02:27.033
+resetaremos ao que era antes.
+
+00:02:27.066 --> 00:02:31.000
+Se olharmos nosso app,
+temos a mesma tela dos dois lados.
+
+00:02:31.033 --> 00:02:34.700
+Perceba que, no dia atual,
+30 de agosto,
+
+00:02:34.733 --> 00:02:37.800
+estamos lembrando o usuário
+de reportar os dados.
+
+00:02:37.833 --> 00:02:41.867
+E isto é diferente de,
+por exemplo, 2 de agosto,
+
+00:02:41.900 --> 00:02:44.967
+um dia sem registro
+de informações.
+
+00:02:45.000 --> 00:02:49.233
+Dentro da memória Redux,
+temos três valores diferentes.
+
+00:02:49.267 --> 00:02:51.100
+Temos este valor aqui,
+
+00:02:51.133 --> 00:02:53.500
+que é um objeto
+que contém propriedades
+
+00:02:53.533 --> 00:02:55.467
+como corrida, ciclismo
+e tudo mais.
+
+00:02:55.500 --> 00:02:59.433
+Os valores dessas propriedades
+são 30, 65, 5153...
+
+00:02:59.467 --> 00:03:03.200
+Sejam quais forem os valores
+das medições.
+
+00:03:03.233 --> 00:03:05.733
+Temos isto aqui,
+
+00:03:05.766 --> 00:03:08.600
+a "key" será
+2 de outubro de 2017,
+
+00:03:08.633 --> 00:03:10.867
+e o valor será nulo.
+
+00:03:10.900 --> 00:03:12.667
+E aqui...
+
+00:03:12.700 --> 00:03:15.433
+note que não reportamos
+nenhum dado, mas é hoje.
+
+00:03:15.466 --> 00:03:18.200
+Não queremos dizer
+"você não reportou nada".
+
+00:03:18.233 --> 00:03:20.667
+Queremos dizer
+"não se esqueça de reportar".
+
+00:03:20.700 --> 00:03:22.267
+O que faremos...
+
+00:03:22.300 --> 00:03:26.700
+é, dentro do arquivo helpers.js,
+
+00:03:26.733 --> 00:03:29.500
+criar uma função
+novinha em folha.
+
+00:03:29.533 --> 00:03:33.600
+Nós a chamaremos
+de "getDailyReminderValue".
+
+00:03:33.633 --> 00:03:35.967
+Essa função retornará
+um objeto
+
+00:03:36.000 --> 00:03:38.000
+que contenha
+a propriedade "day".
+
+00:03:38.033 --> 00:03:42.333
+E o valor será
+um emoji de aceno
+
+00:03:42.367 --> 00:03:47.133
+e a frase: "Não esqueça de adicionar
+as informações de hoje."
+
+00:03:47.167 --> 00:03:53.100
+Agora, sempre que quisermos resetar
+o valor de um dia específico,
+
+00:03:53.133 --> 00:03:56.533
+podemos chamar esta função
+e ter este objeto como retorno.
+
+00:03:56.567 --> 00:04:00.200
+Dentro de "AddEntry",
+vamos importar isto.
+
+00:04:00.233 --> 00:04:04.833
+Vem de "../utils/helpers.js".
+
+00:04:04.866 --> 00:04:06.567
+Já temos o "import" aqui em cima,
+
+00:04:06.600 --> 00:04:10.000
+então podemos adicionar
+"getDailyReminderValue" ali.
+
+00:04:10.033 --> 00:04:12.700
+Agora, o que queremos fazer,
+
+00:04:12.733 --> 00:04:16.433
+em vez de resetar isto
+para Entry,
+
+00:04:16.466 --> 00:04:18.300
+como estamos fazendo
+ao submeter,
+
+00:04:18.333 --> 00:04:23.300
+ao resetar, o que queremos
+é invocar "getDailyReminderValue".
+
+00:04:23.333 --> 00:04:26.400
+Assim,
+sempre que houver um "reset",
+
+00:04:26.433 --> 00:04:31.667
+queremos redefinir o valor
+desta propriedade no nosso "state"
+
+00:04:31.700 --> 00:04:34.700
+como valor-padrão
+de um dado dia,
+
+00:04:34.733 --> 00:04:38.600
+que dirá: "Não esqueça de adicionar
+as informações de hoje."
+
+00:04:38.633 --> 00:04:41.933
+Por último, lembre-se,
+
+00:04:41.966 --> 00:04:45.067
+esta seção aqui
+basicamente diz:
+
+00:04:45.100 --> 00:04:48.233
+"Se já adicionou
+as informações de hoje,
+
+00:04:48.266 --> 00:04:49.300
+mostrar esta tela
+
+00:04:49.333 --> 00:04:52.300
+em vez de permitir
+o repreenchimento."
+
+00:04:52.800 --> 00:04:57.100
+Então vamos criar uma função
+aqui embaixo
+
+00:04:57.133 --> 00:04:59.333
+chamada "mapStateToProps".
+
+00:04:59.367 --> 00:05:02.633
+Ela receberá "state".
+
+00:05:02.666 --> 00:05:06.633
+Podemos criar uma nova "key"
+com "timeToString",
+
+00:05:06.667 --> 00:05:11.767
+e, para sabermos se o usuário
+já informou os dados ou não,
+
+00:05:11.800 --> 00:05:18.000
+se "state[key]" existir
+
+00:05:18.033 --> 00:05:22.667
+e o tipo de "state[key].today"
+
+00:05:22.700 --> 00:05:24.800
+for indefinido,
+
+00:05:24.833 --> 00:05:27.767
+significa que os dados
+já foram fornecidos.
+
+00:05:27.800 --> 00:05:30.633
+Repetindo:
+se "state[key]" existir,
+
+00:05:30.666 --> 00:05:32.067
+ou seja, não for nulo,
+
+00:05:32.100 --> 00:05:36.533
+e "state[key].today"
+for indefinido...
+
+00:05:36.566 --> 00:05:39.233
+E o movido desta linha aqui
+
+00:05:39.266 --> 00:05:41.067
+é porque,
+retornando para cá,
+
+00:05:41.100 --> 00:05:44.400
+esta seção será um objeto
+com todas estas propriedades,
+
+00:05:44.433 --> 00:05:46.267
+esta seção será nula
+
+00:05:46.300 --> 00:05:49.500
+e esta seção terá
+uma propriedade "today",
+
+00:05:49.533 --> 00:05:52.100
+como estamos fazendo aqui.
+
+00:05:52.133 --> 00:05:56.933
+Ou seja: "se o valor
+de um dado dia na memória Redux
+
+00:05:56.966 --> 00:05:58.633
+tiver uma propriedade 'today',
+
+00:05:58.666 --> 00:06:01.867
+significa que os dados diários
+não foram informados,
+
+00:06:01.900 --> 00:06:05.767
+então 'this.props.alreadyLogged'
+será falso."
+
+00:06:05.800 --> 00:06:10.933
+Vou acertar esta formatação.
+Agora passaremos...
+
+00:06:10.966 --> 00:06:14.200
+"napStateToProps"
+à nossa função "connect".
+
+00:06:15.167 --> 00:06:16.367
+Um erro de digitação.
+
+00:06:16.400 --> 00:06:20.333
+Não queremos exportar "connect",
+e sim "default connect".
+
+00:06:20.366 --> 00:06:23.133
+Nosso aplicativo
+deve estar em execução.
+
+00:06:23.166 --> 00:06:27.667
+Vamos testar isto.
+Vamos submeter estes dados.
+
+00:06:27.700 --> 00:06:29.700
+Este para "4"...
+
+00:06:29.733 --> 00:06:33.367
+Submetido. Veja que recebemos
+esta tela porque...
+
+00:06:33.400 --> 00:06:35.900
+"alreadyLogged"
+foi passado ao componente
+
+00:06:35.933 --> 00:06:37.633
+como verdadeiro aqui.
+
+00:06:37.666 --> 00:06:41.800
+Devemos poder resetar aqui,
+o que nos devolve a esta tela.
+

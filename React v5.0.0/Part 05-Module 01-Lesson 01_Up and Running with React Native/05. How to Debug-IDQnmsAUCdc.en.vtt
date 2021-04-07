@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.330
+So here we have the basic app running
+
+00:00:03.330 --> 00:00:06.929
+from create React Native app on iOS as well as Android.
+
+00:00:06.929 --> 00:00:09.419
+And what I want to show you in this video is how to
+
+00:00:09.419 --> 00:00:12.150
+open up the developer menus and both of these,
+
+00:00:12.150 --> 00:00:15.242
+and also how to debug an application,
+
+00:00:15.242 --> 00:00:18.170
+so when the time comes you can easily do that.
+
+00:00:18.170 --> 00:00:21.720
+So, if you're using the iOS simulator over here,
+
+00:00:21.719 --> 00:00:27.089
+go ahead and select it and then hit command D and that will open up this menu right here.
+
+00:00:27.089 --> 00:00:28.914
+You'll notice that we have a few options.
+
+00:00:28.914 --> 00:00:31.754
+We can refresh, we can copy link,
+
+00:00:31.754 --> 00:00:33.854
+we can disable live view, all of these things.
+
+00:00:33.854 --> 00:00:39.049
+But what I'm interested in right now is this one right here called Debug Remote JS.
+
+00:00:39.049 --> 00:00:41.564
+If you go ahead and select that,
+
+00:00:41.564 --> 00:00:47.799
+what's going to happen is React Native is going to open up another window.
+
+00:00:47.799 --> 00:00:49.754
+So now in this window,
+
+00:00:49.755 --> 00:00:52.740
+if we open up the console just as we're used to,
+
+00:00:52.740 --> 00:00:54.745
+you'll see some stuff going on here.
+
+00:00:54.744 --> 00:00:56.769
+Right. We have some warnings.
+
+00:00:56.770 --> 00:01:00.630
+And now if I wanted to put a debugger in my apple,
+
+00:01:00.630 --> 00:01:05.055
+say we want to debug whenever this component mounts.
+
+00:01:05.055 --> 00:01:07.635
+All we need to do, just like we're used to,
+
+00:01:07.635 --> 00:01:10.469
+is we will throw in a debugger.
+
+00:01:10.469 --> 00:01:12.673
+So here I would say, cancel that log,
+
+00:01:12.673 --> 00:01:18.329
+let's say before, and then we will constitute a log after.
+
+00:01:18.329 --> 00:01:19.950
+So I hit save,
+
+00:01:19.950 --> 00:01:24.704
+that goes and refreshes my app because the live reload is on.
+
+00:01:24.704 --> 00:01:28.334
+And then you'll notice, if we go back over to our console,
+
+00:01:28.334 --> 00:01:33.094
+we are now in the console just as we are on the web.
+
+00:01:33.094 --> 00:01:37.370
+And so what I can do here is you'll see that we got before,
+
+00:01:37.370 --> 00:01:40.200
+then we go ahead and step through this again just like we're on the web.
+
+00:01:40.200 --> 00:01:42.329
+We get after, everything is the same.
+
+00:01:42.329 --> 00:01:47.129
+So what's great about react native is the same development experience you're used to
+
+00:01:47.129 --> 00:01:51.929
+on the web is the exact same with react native because we can log to the console,
+
+00:01:51.930 --> 00:01:53.350
+we can throw in a debugger.
+
+00:01:53.349 --> 00:01:55.134
+Everything is so familiar.
+
+00:01:55.135 --> 00:01:58.620
+And so to get the developer menu on android instead
+
+00:01:58.620 --> 00:02:01.859
+of hitting command D like we did in iOS on android,
+
+00:02:01.859 --> 00:02:05.810
+you hit command M and we get the same option right here.
+
+00:02:05.810 --> 00:02:07.644
+But I want to go back to iOS real quick.
+
+00:02:07.644 --> 00:02:10.079
+And I want to select one more option.
+
+00:02:10.080 --> 00:02:14.710
+You'll notice here that we have Toggle Element Inspector and this can be native.
+
+00:02:14.710 --> 00:02:18.300
+This is like kind of selecting elements on the web or I can click on any of
+
+00:02:18.300 --> 00:02:23.390
+these and I can get any style to apply to it as well as any padding margin.
+
+00:02:23.389 --> 00:02:26.804
+Basically the box model inspector that we have on the web,
+
+00:02:26.805 --> 00:02:30.270
+we can have this with react native and say,
+
+00:02:30.270 --> 00:02:33.330
+I wanted to click on one of these without inspecting it.
+
+00:02:33.330 --> 00:02:35.025
+All we have to do is select this box right
+
+00:02:35.025 --> 00:02:38.314
+here and then now when we click, it won't inspect.
+
+00:02:38.314 --> 00:02:42.775
+So we can toggle this on and off and to remove it again,
+
+00:02:42.775 --> 00:02:47.245
+all we do is hit command D and then click on toggle element inspector.
+
+00:02:47.245 --> 00:02:51.439
+So there's a bunch of stuff you can do here with the developer options here.
+
+00:02:51.439 --> 00:02:54.509
+The biggest ones you'll need are refreshing,
+
+00:02:54.509 --> 00:03:00.000
+toggle element inspector as well as starting and stopping the remote debugger.
+

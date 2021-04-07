@@ -1,0 +1,218 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.700 --> 00:00:03.067
+Aqui temos o app básico
+
+00:00:03.100 --> 00:00:06.767
+rodando do Create React Native App
+no iOS e também no Android.
+
+00:00:06.800 --> 00:00:08.533
+O que quero mostrar
+neste vídeo
+
+00:00:08.566 --> 00:00:12.033
+é como abrir os menus
+de desenvolvedor nos emuladores
+
+00:00:12.066 --> 00:00:14.867
+e a depurar um aplicativo
+
+00:00:14.900 --> 00:00:18.067
+para, quando precisar,
+você tirar de letra.
+
+00:00:18.100 --> 00:00:21.567
+Se você está usando
+o simulador de iOS,
+
+00:00:21.600 --> 00:00:24.967
+selecione-o
+e pressione Cmd+D.
+
+00:00:25.000 --> 00:00:26.933
+Isso abrirá este menu aqui.
+
+00:00:26.966 --> 00:00:28.667
+Perceba que temos
+algumas opções.
+
+00:00:28.700 --> 00:00:32.667
+Podemos atualizar, copiar link,
+desabilitar sincronização...
+
+00:00:32.700 --> 00:00:33.767
+Tudo isso.
+
+00:00:33.800 --> 00:00:38.833
+Mas o que me interessa agora
+é esta opção "Debug Remote JS".
+
+00:00:38.866 --> 00:00:41.833
+Se você selecionar isso...
+
+00:00:41.866 --> 00:00:47.533
+o React Native abre outra janela.
+
+00:00:47.566 --> 00:00:49.700
+Nesta janela,
+
+00:00:49.733 --> 00:00:52.633
+se abrirmos o console,
+como de costume,
+
+00:00:52.666 --> 00:00:56.767
+vemos algumas coisas aqui.
+Avisos...
+
+00:00:56.800 --> 00:01:00.367
+Se eu quisesse pôr
+um depurador no meu app...
+
+00:01:00.400 --> 00:01:02.400
+Digamos
+que eu quisesse depurar
+
+00:01:02.433 --> 00:01:04.933
+toda vez que este componente
+fosse montado.
+
+00:01:04.966 --> 00:01:07.633
+Só o que temos de fazer,
+como de costume,
+
+00:01:07.666 --> 00:01:10.267
+é adicionar "debugger".
+
+00:01:10.300 --> 00:01:14.733
+Aqui,
+fica "console.log('Before')".
+
+00:01:15.533 --> 00:01:18.233
+E "console.log('After')".
+
+00:01:18.266 --> 00:01:19.933
+Eu pressiono "save"
+
+00:01:19.966 --> 00:01:24.667
+e meu app é atualizado,
+porque a sincronização está ativa.
+
+00:01:24.700 --> 00:01:28.333
+Então, perceba que,
+voltando ao console...
+
+00:01:28.366 --> 00:01:33.033
+Estamos ao mesmo tempo
+no console e na Web.
+
+00:01:33.066 --> 00:01:37.233
+O que podemos fazer...
+Veja que consta "Before".
+
+00:01:37.266 --> 00:01:39.933
+Se avançarmos um passo,
+como na Web,
+
+00:01:39.966 --> 00:01:42.167
+em "After" está tudo igual.
+
+00:01:42.200 --> 00:01:44.667
+O legal do React Native
+
+00:01:44.700 --> 00:01:47.933
+é viver a mesma experiência
+a que você está acostumado na Web
+
+00:01:47.966 --> 00:01:49.833
+no React Native.
+
+00:01:49.866 --> 00:01:53.133
+Podemos registrar no console,
+adicionar um depurador...
+
+00:01:53.166 --> 00:01:55.233
+Tudo é muito familiar.
+
+00:01:55.266 --> 00:01:58.000
+Para abrir o menu de desenvolvedor
+no Android,
+
+00:01:58.033 --> 00:02:01.000
+em vez de Cmd+D,
+como no iOS,
+
+00:02:01.033 --> 00:02:05.667
+no Android é Cmd+M
+e aparece esta mesma janela.
+
+00:02:05.700 --> 00:02:07.533
+Mas quero voltar ao iOS
+rapidamente
+
+00:02:07.566 --> 00:02:09.733
+e selecionar outra opção.
+
+00:02:09.766 --> 00:02:13.233
+Perceba que temos aqui
+"Toggle Element Inspector".
+
+00:02:13.266 --> 00:02:16.700
+É conveniente como inspecionar
+elementos na Web.
+
+00:02:16.733 --> 00:02:18.933
+Eu posso clicar
+em qualquer coisa
+
+00:02:18.966 --> 00:02:23.133
+e verificar os estilos aplicados,
+padding, margens...
+
+00:02:23.166 --> 00:02:26.767
+Basicamente, aquele inspetor
+que temos na Web.
+
+00:02:26.800 --> 00:02:29.267
+Temos o mesmo
+com o React Native.
+
+00:02:29.300 --> 00:02:33.233
+Digamos que eu queira clicar
+em alguma coisa sem inspecionar.
+
+00:02:33.266 --> 00:02:35.600
+Basta selecionar
+esta caixa aqui.
+
+00:02:35.633 --> 00:02:38.333
+Agora, o clique
+não inspecionará.
+
+00:02:38.366 --> 00:02:41.233
+Podemos ativar e desativar.
+
+00:02:41.266 --> 00:02:44.433
+Para remover,
+basta usar Cmd+D
+
+00:02:44.466 --> 00:02:47.100
+e clicar
+em "Toggle Element Inspector".
+
+00:02:47.133 --> 00:02:51.200
+Tem várias opções aqui
+no menu do desenvolvedor.
+
+00:02:51.233 --> 00:02:54.567
+As mais úteis são atualizar,
+
+00:02:54.600 --> 00:02:55.967
+inspetor de elementos,
+
+00:02:56.000 --> 00:03:00.100
+e ativar e desativar
+o depurador remoto.
+

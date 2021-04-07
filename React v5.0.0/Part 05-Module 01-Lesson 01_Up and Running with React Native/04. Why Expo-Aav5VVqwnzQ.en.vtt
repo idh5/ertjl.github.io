@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.985
+Throughout this course, we'll be relying heavily on a service called Expo.
+
+00:00:04.985 --> 00:00:09.775
+Expo basically makes everything to do with React Native a whole lot easier.
+
+00:00:09.775 --> 00:00:13.460
+The whole idea of Expo is that you shouldn't need to ever touch native code,
+
+00:00:13.460 --> 00:00:16.265
+whether that's Swift, Objective-C or Java,
+
+00:00:16.265 --> 00:00:18.199
+when you're building a React Native app.
+
+00:00:18.199 --> 00:00:20.285
+As a JavaScript developer,
+
+00:00:20.285 --> 00:00:21.934
+I think that's a great mission.
+
+00:00:21.934 --> 00:00:24.379
+So whenever we have to deal with the native API,
+
+00:00:24.379 --> 00:00:26.644
+something like the camera or geolocation,
+
+00:00:26.644 --> 00:00:31.295
+instead of having to deal with Xcode or Android studio, which trust me,
+
+00:00:31.295 --> 00:00:32.825
+to be a huge pain,
+
+00:00:32.825 --> 00:00:37.380
+we can use Expo's JavaScript API to get the same results.
+
+00:00:37.380 --> 00:00:40.583
+I can't express just how influential and valuable Expo
+
+00:00:40.582 --> 00:00:43.274
+has been on the React Native community.
+
+00:00:43.274 --> 00:00:48.339
+Now, what's the relationship between the React Native team and the Expo Team?
+
+00:00:48.340 --> 00:00:51.150
+Well, they're really close.
+
+00:00:51.149 --> 00:00:54.299
+Most of the main contributors to React Native work full-time on
+
+00:00:54.299 --> 00:00:58.140
+Expo and some were even former Facebook employees.
+
+00:00:58.140 --> 00:01:01.500
+In fact, Create React Native app was built by
+
+00:01:01.500 --> 00:01:06.000
+the Expo Team and is now the official way to start building with React Native.
+

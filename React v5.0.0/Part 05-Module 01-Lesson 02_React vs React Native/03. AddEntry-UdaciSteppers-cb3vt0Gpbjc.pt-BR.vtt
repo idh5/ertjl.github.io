@@ -1,0 +1,147 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.533 --> 00:00:03.300
+Agora, assim como fizemos
+com os sliders,
+
+00:00:03.333 --> 00:00:07.733
+vamos atualizar
+o componente UdaciSteppers.
+
+00:00:07.767 --> 00:00:09.669
+No UdaciSteppers,
+
+00:00:09.702 --> 00:00:14.133
+vamos precisar de algumas coisas,
+como botões.
+
+00:00:14.167 --> 00:00:16.867
+Vamos, então, importar
+TouchableOpacity
+
+00:00:16.900 --> 00:00:21.667
+e vamos pegar
+alguns componentes de ícone.
+
+00:00:21.700 --> 00:00:27.300
+Vamos pegar FontAwesome e Entypo,
+acho que é assim que se fala.
+
+00:00:27.333 --> 00:00:32.000
+Os dois vêm
+no app Create React Native,
+
+00:00:32.033 --> 00:00:35.367
+em expo/vector-icons.
+
+00:00:35.400 --> 00:00:38.767
+Se você se lembra,
+assim como no UdaciSlider,
+
+00:00:38.800 --> 00:00:41.200
+daremos ao UdaciSteppers
+um value,
+
+00:00:41.233 --> 00:00:44.633
+onIncrement,
+onDecrement e todo o resto.
+
+00:00:44.667 --> 00:00:47.133
+Vamos desestruturá-lo aqui.
+
+00:00:47.167 --> 00:00:50.333
+Escrevemos max, unit e step,
+
+00:00:50.367 --> 00:00:55.133
+value, onIncrement,
+assim como onDecrement.
+
+00:00:55.167 --> 00:00:59.833
+Agora, em vez de retornar
+o texto,
+
+00:00:59.867 --> 00:01:03.133
+vamos retornar
+algumas outras coisas.
+
+00:01:03.167 --> 00:01:07.033
+A primeira será
+um componente Touchable,
+
+00:01:07.067 --> 00:01:11.733
+e sempre que o pressionarmos,
+vamos rodar o onDecrement.
+
+00:01:11.767 --> 00:01:16.100
+Aqui dentro teremos
+um ícone,
+
+00:01:16.133 --> 00:01:18.500
+o nome será "minus",
+
+00:01:18.700 --> 00:01:21.900
+o tamanho será 30,
+
+00:01:21.933 --> 00:01:26.733
+e a cor será preta
+para podermos ver agora.
+
+00:01:26.767 --> 00:01:31.333
+Também queremos
+um outro botão aqui,
+
+00:01:31.367 --> 00:01:35.133
+mas, em vez de diminuir,
+queremos que aumente.
+
+00:01:35.167 --> 00:01:38.867
+E, em vez de "minus",
+queremos "plus".
+
+00:01:39.267 --> 00:01:44.901
+Agora vamos colocar tudo
+em uma view.
+
+00:01:45.182 --> 00:01:50.936
+Acabamos de criar
+os dois botões.
+
+00:01:51.267 --> 00:01:55.467
+Mas, assim como com o slider,
+também queremos isso aqui,
+
+00:01:55.500 --> 00:01:58.933
+o valor específico
+e a unidade.
+
+00:01:58.967 --> 00:02:02.333
+Adicionamos um colchete ali
+
+00:02:02.367 --> 00:02:06.700
+e, em seguida,
+criamos uma view
+
+00:02:07.167 --> 00:02:09.867
+com dois componentes
+de texto.
+
+00:02:09.900 --> 00:02:12.881
+O primeiro será o valor,
+
+00:02:12.914 --> 00:02:16.867
+e o segundo será a unidade.
+
+00:02:16.900 --> 00:02:21.567
+Se tudo estiver funcionando,
+e é claro que não está...
+
+00:02:22.600 --> 00:02:27.700
+Está, só precisamos recarregar.
+Temos aqui os botões.
+
+00:02:27.733 --> 00:02:32.567
+Podemos pressioná-los,
+e os valores sobem ou descem.
+

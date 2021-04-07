@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.599
+React Native's version of LocalStorage is called AsyncStorage.
+
+00:00:04.599 --> 00:00:08.339
+It's similar to LocalStorage, except it's asynchronous.
+
+00:00:08.339 --> 00:00:10.589
+What's nice about AsyncStorage is it's
+
+00:00:10.589 --> 00:00:14.780
+a JavaScript abstraction over the iOS and Android equivalents.
+
+00:00:14.779 --> 00:00:18.160
+So when using it, you don't need to worry about the different environments.
+
+00:00:18.160 --> 00:00:24.009
+Similar to LocalStorage, AsyncStorage has three main methods: set item,
+
+00:00:24.010 --> 00:00:26.000
+remove item, and clear all.
+

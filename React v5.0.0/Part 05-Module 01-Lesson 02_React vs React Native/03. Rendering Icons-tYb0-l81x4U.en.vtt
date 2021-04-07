@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.294
+One thing that's great about Create React Native App,
+
+00:00:03.294 --> 00:00:06.540
+is it has built in support for icons.
+
+00:00:06.540 --> 00:00:09.570
+So what you can do is any icon that's found
+
+00:00:09.570 --> 00:00:12.660
+in any of these icon sets, whether it's fontawesome,
+
+00:00:12.660 --> 00:00:15.375
+ionicons, materialicons, any of these,
+
+00:00:15.375 --> 00:00:19.829
+we have access to those by default with create react native app.
+
+00:00:19.829 --> 00:00:23.239
+If you want to explore all of the icons you can use,
+
+00:00:23.239 --> 00:00:24.834
+you can head to this url.
+
+00:00:24.835 --> 00:00:27.775
+So say we wanted, I don't know if there's going to be,
+
+00:00:27.774 --> 00:00:29.519
+there is a pizza one. All right, perfect.
+
+00:00:29.519 --> 00:00:35.909
+So say we wanted to use this ionicon's pizza icon inside our application.
+
+00:00:35.909 --> 00:00:39.000
+How we would do that, is we would head over to our app and
+
+00:00:39.000 --> 00:00:42.134
+we would import and ionicons from,
+
+00:00:42.134 --> 00:00:51.140
+@expo/vector-icons and then now when we render this Ionicons component,
+
+00:00:51.140 --> 00:00:54.719
+the name we give it is going to be associated with
+
+00:00:54.719 --> 00:00:59.274
+the specific icon we want to use in the ionicons library.
+
+00:00:59.274 --> 00:01:04.799
+So what we can do is just copy ios-pizza and paste that in there.
+
+00:01:04.799 --> 00:01:07.125
+We also have a few other options.
+
+00:01:07.125 --> 00:01:09.795
+We can come in here and say what color we want it to be.
+
+00:01:09.795 --> 00:01:11.700
+Say we want it to be red.
+
+00:01:11.700 --> 00:01:14.010
+And now when our app refreshes,
+
+00:01:14.010 --> 00:01:18.290
+both on iOS and Android we get a little red pizza.
+
+00:01:18.290 --> 00:01:20.745
+And because that's a little small,
+
+00:01:20.745 --> 00:01:27.480
+what we can do is we can also specify a size and make it a little bit bigger.
+
+00:01:27.480 --> 00:01:31.380
+So again Create React Native App by default comes with
+
+00:01:31.379 --> 00:01:39.349
+@expo/vector-icons which then gives you access to all of these icon sets.
+

@@ -1,0 +1,104 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.434 --> 00:00:04.200
+React Native permite
+que você use o React
+
+00:00:04.233 --> 00:00:07.501
+para fazer aplicativos nativos
+para iOS e Android.
+
+00:00:07.534 --> 00:00:10.367
+Bom demais para ser verdade?
+Não é.
+
+00:00:10.400 --> 00:00:13.567
+Empresas como Walmart,
+Airbnb e Tesla
+
+00:00:13.600 --> 00:00:17.834
+estão usando React Native
+em alguma medida em seus apps.
+
+00:00:17.867 --> 00:00:19.501
+Na minha opinião,
+
+00:00:19.534 --> 00:00:22.667
+o React Native é ainda mais valioso
+para pequenas startups.
+
+00:00:22.700 --> 00:00:27.133
+Em vez de uma equipe Web,
+uma equipe iOS e uma Android,
+
+00:00:27.166 --> 00:00:30.501
+com o React Native,
+basta uma equipe de IU.
+
+00:00:30.534 --> 00:00:33.234
+Isso não só poupa dinheiro,
+
+00:00:33.267 --> 00:00:35.234
+como horas de programação.
+
+00:00:35.267 --> 00:00:37.434
+Já deve ter ouvido a frase:
+
+00:00:37.467 --> 00:00:39.868
+"Escreva uma vez,
+execute em qualquer ambiente."
+
+00:00:39.901 --> 00:00:41.200
+A ideia disso
+
+00:00:41.233 --> 00:00:44.100
+é que seria legal usar
+o mesmo código
+
+00:00:44.133 --> 00:00:47.300
+na Web, no iOS
+e no Android.
+
+00:00:47.333 --> 00:00:49.667
+Na prática, contudo,
+isso é bem difícil.
+
+00:00:49.700 --> 00:00:54.267
+Isso é porque cada plataforma
+tem suas peculiaridades.
+
+00:00:54.300 --> 00:00:56.901
+Em vez de "escreva uma vez",
+
+00:00:56.934 --> 00:01:00.701
+o lema do React Native é
+"aprenda uma vez".
+
+00:01:00.734 --> 00:01:02.300
+Ao aprender React,
+
+00:01:02.333 --> 00:01:04.434
+assuma os mesmos princípios
+
+00:01:04.467 --> 00:01:06.567
+e não desenvolva a IU
+apenas para a Web,
+
+00:01:06.600 --> 00:01:09.801
+mas também para iOS
+e Android.
+
+00:01:09.834 --> 00:01:13.434
+Em vez de compartilhar
+o mesmo código entre plataformas,
+
+00:01:13.467 --> 00:01:15.234
+compartilham-se
+os princípios:
+
+00:01:15.267 --> 00:01:18.367
+composição dos componentes
+e a IU declarativa.
+

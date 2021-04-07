@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.090 --> 00:00:03.790
+Congrats on finishing lesson number two.
+
+00:00:03.790 --> 00:00:06.429
+To recap, we learned about the differences between
+
+00:00:06.429 --> 00:00:09.594
+developing for the web and native experiences and,
+
+00:00:09.595 --> 00:00:13.440
+how important it is for React Native to keep the consistent feel.
+
+00:00:13.439 --> 00:00:17.003
+We work through all of the key React Native components,
+
+00:00:17.003 --> 00:00:21.646
+we followed that up with learning about how to use AsyncStorage to save data locally,
+
+00:00:21.646 --> 00:00:25.910
+and finally, we learned about adding Redux to a React Native app.
+
+00:00:25.910 --> 00:00:30.829
+Next up, we'll cover everything to do with layout and styling in React Native.
+

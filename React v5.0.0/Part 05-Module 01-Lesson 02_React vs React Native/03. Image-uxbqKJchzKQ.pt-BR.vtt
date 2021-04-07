@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:02.000
+Quero falar, neste vídeo,
+
+00:00:02.033 --> 00:00:06.267
+sobre como mostrar uma imagem
+na view dentro do React Native.
+
+00:00:06.300 --> 00:00:08.967
+Normalmente, há duas formas
+de exibir imagens.
+
+00:00:09.000 --> 00:00:11.267
+Ou melhor,
+duas fontes para elas.
+
+00:00:11.300 --> 00:00:16.233
+A primeira é com um arquivo local,
+neste caso, "tylermcginnis.png".
+
+00:00:16.266 --> 00:00:20.100
+E a segunda é hospedando
+este arquivo de imagem
+
+00:00:20.133 --> 00:00:21.367
+em um servidor qualquer.
+
+00:00:21.400 --> 00:00:23.933
+Vou ensiná-lo a implementar
+os dois modos.
+
+00:00:23.967 --> 00:00:26.767
+Começando pelo primeiro,
+
+00:00:26.800 --> 00:00:28.100
+este arquivo local.
+
+00:00:28.133 --> 00:00:32.500
+O que precisamos é importar
+o componente "Image"
+
+00:00:32.533 --> 00:00:35.133
+e renderizá-lo
+como qualquer outro,
+
+00:00:35.167 --> 00:00:37.167
+o que exige
+diversas propriedades.
+
+00:00:37.200 --> 00:00:39.233
+Vou dar a propriedade "style"
+
+00:00:39.266 --> 00:00:41.967
+de "styles.img",
+que está aqui embaixo.
+
+00:00:42.000 --> 00:00:46.300
+Damos "width" e "height" de 100
+e "border radius" de 50.
+
+00:00:46.333 --> 00:00:48.867
+Depois, informamos
+a fonte "source".
+
+00:00:48.900 --> 00:00:53.867
+Para arquivos locais,
+usamos "require"
+
+00:00:53.900 --> 00:00:57.367
+e passamos o caminho
+para o arquivo.
+
+00:00:57.400 --> 00:01:02.133
+Perceba que App.JS
+está no mesmo nível hierárquico
+
+00:01:02.167 --> 00:01:04.300
+desta imagem.
+
+00:01:04.333 --> 00:01:06.733
+Então podemos acessá-la
+ou requerê-la
+
+00:01:06.766 --> 00:01:10.000
+usando ".slash"
+e o nome da imagem.
+
+00:01:10.033 --> 00:01:11.967
+Agora, observando os apps,
+
+00:01:12.000 --> 00:01:14.567
+notamos que ambos têm
+esta imagem.
+
+00:01:14.600 --> 00:01:19.033
+Digamos que quiséssemos adicionar
+uma imagem de fonte externa,
+
+00:01:19.066 --> 00:01:20.400
+hospedada em outro local.
+
+00:01:20.433 --> 00:01:23.233
+Antes de mais nada,
+vou adicionar uma view
+
+00:01:23.266 --> 00:01:25.567
+para criar um espaçamento.
+
+00:01:25.600 --> 00:01:28.700
+E, para exibir a imagem
+hospedada em outro lugar,
+
+00:01:28.733 --> 00:01:32.233
+começamos da mesma forma,
+adicionando um "style",
+
+00:01:32.266 --> 00:01:36.333
+mas, depois, em vez de passar
+uma invocação "require" aqui,
+
+00:01:36.366 --> 00:01:41.033
+passaremos um objeto
+que contém uma propriedade URI.
+
+00:01:41.067 --> 00:01:44.067
+O valor de "uri" será...
+
+00:01:44.100 --> 00:01:48.000
+o URL específico
+de onde a imagem está hospedada,
+
+00:01:48.033 --> 00:01:50.967
+neste caso,
+"tylermcginnis.com".
+
+00:01:51.000 --> 00:01:56.167
+Agora, atualizando o aplicativo,
+veremos duas imagens:
+
+00:01:56.200 --> 00:01:58.733
+uma vive localmente,
+dentro do nosso app,
+
+00:01:58.766 --> 00:02:02.233
+e outra vive
+em um servidor qualquer.
+

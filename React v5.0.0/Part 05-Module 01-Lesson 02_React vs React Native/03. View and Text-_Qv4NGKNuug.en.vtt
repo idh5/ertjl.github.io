@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.794
+The two most fundamental components in React Native are View and Text.
+
+00:00:05.794 --> 00:00:10.370
+And we can see both of these in the sample app that Create React Native gives us.
+
+00:00:10.369 --> 00:00:13.969
+What's cool about View is It's going to map directly to
+
+00:00:13.970 --> 00:00:17.780
+the native equivalent on whatever platform React Native is running on.
+
+00:00:17.780 --> 00:00:21.150
+So on Android, it's going to map to android.view,
+
+00:00:21.150 --> 00:00:24.379
+and on iOS, it's going to map to ui.view.
+
+00:00:24.379 --> 00:00:29.224
+You can kind of think of View the same way you would think of div on the web.
+
+00:00:29.225 --> 00:00:31.865
+And one tricky thing that might take time to get used to,
+
+00:00:31.864 --> 00:00:33.530
+is typically on the web,
+
+00:00:33.530 --> 00:00:34.820
+you'll do something like this,
+
+00:00:34.820 --> 00:00:36.149
+where you have a paragraph,
+
+00:00:36.149 --> 00:00:37.729
+and you'll have some text inside of it,
+
+00:00:37.729 --> 00:00:39.730
+or sometimes, you'll even have a div,
+
+00:00:39.731 --> 00:00:42.039
+with some text inside of it.
+
+00:00:42.039 --> 00:00:43.490
+But with React Native,
+
+00:00:43.490 --> 00:00:46.625
+you need to make sure that when ever you have text,
+
+00:00:46.625 --> 00:00:50.789
+that you wrap that text inside of the text component.
+
+00:00:50.789 --> 00:00:52.295
+If you don't do that,
+
+00:00:52.295 --> 00:00:55.020
+what's going to happen when you try to run your app?
+
+00:00:55.020 --> 00:00:57.080
+As noticed, you'll get an error here saying,
+
+00:00:57.079 --> 00:00:58.814
+raw text, open up app.
+
+00:00:58.814 --> 00:01:00.195
+Start working on your app.
+
+00:01:00.195 --> 00:01:03.590
+Basically, it's saying this section right here,
+
+00:01:03.590 --> 00:01:07.000
+isn't wrapped inside of a text component.
+

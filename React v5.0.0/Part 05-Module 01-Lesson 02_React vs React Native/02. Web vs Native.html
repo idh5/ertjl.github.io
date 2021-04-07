@@ -1,0 +1,258 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web vs Native</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React vs React Native</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Web vs Native.html">02. Web vs Native</a>
+    </li>
+    <li class="">
+      <a href="03. Common React Native Components.html">03. Common React Native Components</a>
+    </li>
+    <li class="">
+      <a href="04. AsyncStorage.html">04. AsyncStorage</a>
+    </li>
+    <li class="">
+      <a href="05. Redux and React Native.html">05. Redux and React Native</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Web vs Native</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="web-vs-native">Web vs. Native</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Web vs Native</p></h3>
+  <video controls>
+  <source src="02. Web vs Native-R0Qf5a0Vxho.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Web vs Native-R0Qf5a0Vxho.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Web vs Native-R0Qf5a0Vxho.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Web vs Native-R0Qf5a0Vxho.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Native applications look and "feel" different because they are <em>fundamentally</em> different. Even though we're using the same React principles that you've learned throughout this program, keep in mind that this is no longer the web! While some of these distinctions are more apparent (e.g., the development process, access to native features, how users get updates, etc.), there are some key differences that we'll be taking a deep dive into during this course.</p>
+<p>For one, native apps often leverage <strong>animations</strong> to help create a great user experience. Animations such as button effects, screen transitions, and other visual feedback may be subtle, but they support continuity and guidance in the apps you build. They all function to dynamically <em>tell a story</em> about how your application works. Without animations, an application can feel like just a collection of static screens. For now, stay tuned; we'll be checking out animations in-depth during Lesson 5.</p>
+<p>Another key difference between native and web applications is in <strong>navigation</strong>. Recall that React Router's <code>Route</code> component allows us to map a URL to a specific UI component. In React Native, routers function as a <em>stack</em>; that is, individual screens are "pushed" and "popped" as needed. We'll look at routing more closely later in Lesson 4.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="android-vs-ios">Android vs. iOS</h2>
+<p>Not only are there fundamental differences between <em>native</em> apps and <em>web</em> apps, you'll also find differences between how native platforms (iOS and Android) <em>look and feel</em> as well. Perhaps the most apparent are the distinct design philosophies on each platform: Android apps utilize Google's <a href="https://material.io/guidelines/material-design/introduction.html" rel="noopener noreferrer" target="_blank">Material Design</a>, while iOS apps take advantage of Apple's <a href="https://developer.apple.com/ios/human-interface-guidelines/overview/themes/" rel="noopener noreferrer" target="_blank">Human Interface Design</a>. When designing mobile applications, it's important to your users that an iOS app <em>feels</em> like an iOS app, and an Android app <em>feels</em> like an Android app.</p>
+<p>Navigation <em>between</em> screens feels distinct between Android and iOS as well. Android devices have access to a <strong>navigation bar</strong> at the bottom of the screen, which allows users to go back to the previous screen (among other features). On iOS, the approach is different: there is no such universal navigation bar! When building the UI for an iOS application, it is important to include a back button (perhaps on a custom <a href="https://developer.apple.com/ios/human-interface-guidelines/bars/navigation-bars/" rel="noopener noreferrer" target="_blank">navigation bar</a>) to help guide users through your app.</p>
+<p>One more key difference between Android and iOS involves tab navigation. iOS apps include <a href="https://developer.apple.com/ios/human-interface-guidelines/bars/tab-bars/" rel="noopener noreferrer" target="_blank">tab bars</a> at the bottom of the app's screen, allowing for convenient access to different portions of the app. Likewise, Android apps include them as well; however tabs are distinctly located <a href="https://material.io/guidelines/components/tabs.html" rel="noopener noreferrer" target="_blank">at the top of the screen</a>. Both allow access to high-level content, and we'll explore React Native's <strong>TabNavigator</strong> in closer detail in Lesson 4.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about web applications or native applications? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505168727664" name="394641" id="a1505168727664">
+      <label for="a1505168727664"><p>Web applications tend to be characterized by more animations than in native applications</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168729845" name="394641" id="a1505168729845">
+      <label for="a1505168729845"><p>Tabs in native iOS applications are generally expected to be found at the bottom of the device screen</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168730294" name="394641" id="a1505168730294">
+      <label for="a1505168730294"><p>Each screen in a native application is actually just a URL mapped to a UI component</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505168730726" name="394641" id="a1505168730726">
+      <label for="a1505168730726"><p>Native iOS applications can leverage a universal "back" button </p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Tabs in native iOS applications are generally expected to be found at the bottom of the device screen</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>When developing your React Native projects, keep in mind that you're designing for a different experience than that of web applications. Mobile applications look and <em>feel</em> different due to fundamental differences, such as subtle animations that build a sense of continuity for your users. Differences exist between Android and iOS as well, especially in their design philosophies and navigation. We'll look at some fundamental components that make up React Natives apps in the next section!</p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.apple.com/ios/human-interface-guidelines/overview/interface-essentials/" rel="noopener noreferrer" target="_blank">iOS Interface Essentials</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Common React Native Components.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Web vs Native')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:04.033
+Agora que temos nossas ações
+e nossos Reducers,
+
+00:00:04.067 --> 00:00:07.833
+a próxima coisa a fazer
+é conectar o Redux
+
+00:00:07.866 --> 00:00:11.800
+ao nosso aplicativo
+usando "Provider" e "createStore".
+
+00:00:11.833 --> 00:00:15.633
+Para fazê-lo,
+temos que adicionar o Redux
+
+00:00:15.666 --> 00:00:18.233
+e o React Redux
+ao nosso aplicativo.
+
+00:00:18.266 --> 00:00:20.733
+Como faríamos na Web,
+
+00:00:20.766 --> 00:00:23.533
+diremos "yarn add
+
+00:00:23.566 --> 00:00:27.267
+redux react-redux".
+
+00:00:27.300 --> 00:00:31.067
+Depois que terminar,
+reinicie o aplicativo.
+
+00:00:31.100 --> 00:00:35.767
+E, dentro de App.js,
+
+00:00:35.800 --> 00:00:40.733
+vamos importar algumas coisas
+dos pacotes que instalamos.
+
+00:00:40.766 --> 00:00:44.900
+Precisamos de "createStore",
+proveniente do pacote "redux",
+
+00:00:44.933 --> 00:00:49.833
+e de "Provider",
+proveniente de "react-redux".
+
+00:00:49.866 --> 00:00:52.633
+Depois, vamos importar
+o nosso "Reducer",
+
+00:00:52.666 --> 00:00:56.733
+que provém
+da pasta "../reducers",
+
+00:00:56.767 --> 00:00:59.467
+criada no último vídeo.
+
+00:00:59.500 --> 00:01:02.267
+Agora, como faríamos na Web,
+
+00:01:02.300 --> 00:01:06.733
+para conectar o Redux
+ao aplicativo,
+
+00:01:06.766 --> 00:01:11.500
+embrulhamos tudo
+neste componente "Provider".
+
+00:01:11.533 --> 00:01:17.033
+Depois, precisamos passar
+uma memória a "Provider",
+
+00:01:17.067 --> 00:01:19.333
+coisa que podemos obter
+chamando "createStore"
+
+00:01:19.366 --> 00:01:22.600
+e passando
+nossa função "Reducer".
+

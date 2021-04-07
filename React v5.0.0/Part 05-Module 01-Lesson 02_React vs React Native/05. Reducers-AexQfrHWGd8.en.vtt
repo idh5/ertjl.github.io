@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.470
+Naturally, now that we have our action creators,
+
+00:00:03.470 --> 00:00:09.550
+the next thing we need to do is build out our Reducer to handle those actions.
+
+00:00:09.550 --> 00:00:13.510
+So let's go ahead and we will create a brand new folder called,
+
+00:00:13.509 --> 00:00:16.250
+Reducers and inside of here,
+
+00:00:16.250 --> 00:00:18.530
+we will have an index.js file.
+
+00:00:18.530 --> 00:00:21.080
+And then what we will do- the first thing is
+
+00:00:21.079 --> 00:00:23.914
+let's go ahead and import both of these constants.
+
+00:00:23.914 --> 00:00:26.674
+So we will import or receive entries,
+
+00:00:26.675 --> 00:00:29.324
+as well as, add entries.
+
+00:00:29.324 --> 00:00:32.719
+Both of these are coming from actions.
+
+00:00:32.719 --> 00:00:38.719
+And then now, we're just going to have a single entries reducer and it's going to
+
+00:00:38.719 --> 00:00:41.689
+take in a state which we will set the default state to
+
+00:00:41.689 --> 00:00:45.424
+be just an empty object and an action.
+
+00:00:45.424 --> 00:00:49.849
+And then now, as always we will have a switch statement here,
+
+00:00:49.850 --> 00:00:55.899
+switching on, action.type, and then we will have a few different cases.
+
+00:00:55.899 --> 00:00:58.969
+The first one is going to be the Receive Entries.
+
+00:00:58.969 --> 00:01:01.198
+The next one is going to be,
+
+00:01:01.198 --> 00:01:04.760
+Add Entry and the last one is just going to
+
+00:01:04.760 --> 00:01:09.670
+be our Default case which will just return the States.
+
+00:01:09.670 --> 00:01:12.850
+And before I forget, let's go ahead and export this.
+
+00:01:12.849 --> 00:01:17.574
+Alright, so now what we want to have happen is whenever the receive entries case matches,
+
+00:01:17.575 --> 00:01:20.493
+whenever action.type is receive entries what we want to do
+
+00:01:20.492 --> 00:01:23.359
+is we want State to be exactly the same
+
+00:01:23.359 --> 00:01:29.495
+as it is but we also want to merge action.entries on it.
+
+00:01:29.495 --> 00:01:31.050
+Because if you remember,
+
+00:01:31.049 --> 00:01:34.593
+action.entries is this right here.
+
+00:01:34.593 --> 00:01:35.840
+And what this is going to be,
+
+00:01:35.840 --> 00:01:38.990
+is it's going to be an object with each key
+
+00:01:38.989 --> 00:01:43.784
+representing a specific day and the value being the specific metrics for that day.
+
+00:01:43.784 --> 00:01:48.799
+So we just want to take that whole object and merge it on to the existing State,
+
+00:01:48.799 --> 00:01:51.679
+which when this runs is just going to be an empty object.
+
+00:01:51.680 --> 00:01:57.410
+And next, when add.entry matches what we want to do is,
+
+00:01:57.409 --> 00:02:02.329
+we want to say we want to return the exact same State but just as we did before,
+
+00:02:02.329 --> 00:02:05.929
+we want to go ahead and take action.entry which is the brand new entry
+
+00:02:05.930 --> 00:02:09.900
+for this specific day and just merge it onto the State.
+
+00:02:09.900 --> 00:02:13.969
+So really because we only have one Reducer here and that's all we're ever going to have,
+
+00:02:13.969 --> 00:02:17.270
+the State is just going to be one big object as
+
+00:02:17.270 --> 00:02:20.375
+it always is with each of the keys and that
+
+00:02:20.375 --> 00:02:23.479
+object representing a specific day and each of
+
+00:02:23.479 --> 00:02:26.924
+those values representing the specific metrics for that day.
+
+00:02:26.925 --> 00:02:29.900
+So that's why in both Recieve Entries, as well as,
+
+00:02:29.900 --> 00:02:34.295
+Add Entry we can just take whatever on the specific action and just merge it
+
+00:02:34.294 --> 00:02:39.000
+into the State because our State is really just one big object for days.
+

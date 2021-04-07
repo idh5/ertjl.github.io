@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.879
+When you're building a React Native app,
+
+00:00:01.879 --> 00:00:06.035
+sometimes it's hard to know what you can and cannot do.
+
+00:00:06.035 --> 00:00:08.539
+This is because it's pretty unusual to be writing
+
+00:00:08.539 --> 00:00:11.329
+JavaScript to build a native application.
+
+00:00:11.330 --> 00:00:12.679
+The good news is that,
+
+00:00:12.679 --> 00:00:17.059
+React Native itself is fundamentally, still just JavaScript.
+
+00:00:17.059 --> 00:00:20.750
+This means that, if you want to add a JavaScript library like Redux,
+
+00:00:20.750 --> 00:00:24.285
+you do it exactly the same as if you were developing for the Web.
+
+00:00:24.285 --> 00:00:26.839
+Now, this doesn't work for everything.
+
+00:00:26.839 --> 00:00:29.765
+For example, styling is a little bit different with React Native,
+
+00:00:29.765 --> 00:00:31.655
+but for JavaScript libraries,
+
+00:00:31.655 --> 00:00:35.189
+you'd add them the same way here as you do on the Web.
+

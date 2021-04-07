@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.833 --> 00:00:04.200
+Se pensarmos nos aplicativos nativos
+que mais usamos,
+
+00:00:04.233 --> 00:00:06.600
+a maioria será
+apenas listas.
+
+00:00:06.633 --> 00:00:08.733
+Spotify, Facebook,
+todos os mais populares,
+
+00:00:08.767 --> 00:00:12.767
+são apenas grandes listas de dados
+que mudam constantemente.
+
+00:00:12.967 --> 00:00:15.367
+Neste vídeo, vamos falar
+
+00:00:15.400 --> 00:00:19.833
+sobre como ter listas eficazes
+dentro do React Native.
+
+00:00:19.867 --> 00:00:22.933
+Aqui temos
+um arquivo reviews.js.
+
+00:00:22.967 --> 00:00:27.767
+É um array com vários itens
+dentro dele.
+
+00:00:27.800 --> 00:00:30.900
+Temos também a função getReviews,
+que são só exportações
+
+00:00:30.933 --> 00:00:33.300
+ou basicamente
+retornos deste array.
+
+00:00:33.333 --> 00:00:37.333
+Dentro do nosso aplicativo,
+importamos getReviews
+
+00:00:37.367 --> 00:00:41.167
+e temos este componente Review
+que aceita um nome,
+
+00:00:41.200 --> 00:00:43.767
+um texto e um avatar.
+
+00:00:43.800 --> 00:00:46.967
+Ele basicamente mostra
+essa informação para a view.
+
+00:00:47.000 --> 00:00:49.100
+Vamos passar
+pelas diferentes maneiras
+
+00:00:49.133 --> 00:00:53.133
+que podemos mostrar
+as atualizações no nosso aplicativo.
+
+00:00:53.167 --> 00:00:58.067
+A primeira, e a mais óbvia de todas,
+é fazer algo assim.
+
+00:00:58.100 --> 00:01:03.233
+Escrevemos aqui "reviews.map",
+como faríamos na web.
+
+00:01:03.267 --> 00:01:07.433
+Pegamos um nome,
+um texto e um avatar,
+
+00:01:07.466 --> 00:01:11.100
+e renderizamos
+o componente Review,
+
+00:01:11.133 --> 00:01:15.800
+passando uma chave,
+por exemplo, o nome.
+
+00:01:15.833 --> 00:01:21.300
+Então passamos o nome, o texto
+e também o avatar.
+
+00:01:21.500 --> 00:01:24.433
+Está funcionando,
+mais ou menos.
+
+00:01:24.467 --> 00:01:26.567
+Vamos dar uma olhada
+nos aplicativos.
+
+00:01:26.733 --> 00:01:29.367
+Veja que está
+tudo certo aqui,
+
+00:01:29.400 --> 00:01:34.067
+mas, se tentarmos rolar para baixo,
+não conseguiremos,
+
+00:01:34.100 --> 00:01:38.767
+porque a view está confinada
+à área da tela.
+
+00:01:38.800 --> 00:01:43.400
+Resolvemos isso facilmente,
+em vez de usar view,
+
+00:01:43.433 --> 00:01:46.100
+podemos embrulhar a lista
+
+00:01:46.133 --> 00:01:49.433
+dentro do componente
+da view de rolagem.
+
+00:01:49.467 --> 00:01:54.633
+Ou seja, tudo dentro disto
+será uma lista e poderá ser rolado.
+
+00:01:54.667 --> 00:01:58.733
+Dentro do aplicativo,
+veja que conseguimos rolar,
+
+00:01:58.767 --> 00:02:02.440
+mas o problema
+com o ScrollView
+
+00:02:02.473 --> 00:02:04.867
+é que ele não é muito eficaz.
+
+00:02:04.900 --> 00:02:09.233
+Estamos renderizando
+cada item desta lista,
+
+00:02:09.267 --> 00:02:12.000
+independentemente de o usuário
+ver ou não.
+
+00:02:12.033 --> 00:02:13.633
+Quando estamos
+no início da view,
+
+00:02:13.667 --> 00:02:16.033
+ainda estamos renderizando
+estes reviews aqui.
+
+00:02:16.067 --> 00:02:21.900
+Seria melhor e mais eficaz se,
+em vez de renderizar todos os itens,
+
+00:02:21.933 --> 00:02:25.933
+renderizasse só os itens
+que o usuário vê no momento.
+
+00:02:25.967 --> 00:02:31.200
+E é aí
+que o componente FlatList entra.
+
+00:02:31.233 --> 00:02:35.700
+Ele renderizará apenas os itens
+que o usuário vê no momento.
+
+00:02:35.733 --> 00:02:40.267
+Vamos mudar nossa view de rolagem
+para uma view normal.
+
+00:02:40.300 --> 00:02:46.067
+Dentro desta view,
+renderizamos o componente FlatList
+
+00:02:46.100 --> 00:02:48.733
+e passaremos
+duas coisas diferentes.
+
+00:02:48.767 --> 00:02:53.267
+Ele precisa de dados,
+que aqui seria reviews,
+
+00:02:53.300 --> 00:02:56.200
+precisa também de renderItem,
+
+00:02:56.233 --> 00:02:58.933
+que será responsável
+por renderizar os itens em si.
+
+00:02:58.967 --> 00:03:03.567
+Criaremos aqui
+um método renderItem,
+
+00:03:03.600 --> 00:03:09.567
+e então copio tudo isto
+e apago isso.
+
+00:03:09.600 --> 00:03:12.867
+Agora vamos criar
+o renderItem.
+
+00:03:12.900 --> 00:03:17.067
+O renderItem receberá
+um objeto
+
+00:03:17.100 --> 00:03:20.300
+com o item em si
+como o que queremos mapear.
+
+00:03:20.333 --> 00:03:25.100
+Cada item será
+um review específico.
+
+00:03:25.331 --> 00:03:31.205
+Então vamos renderizar
+um review
+
+00:03:31.238 --> 00:03:32.867
+passando o item.
+
+00:03:33.598 --> 00:03:37.554
+Tudo deve estar
+exatamente igual
+
+00:03:37.587 --> 00:03:40.000
+e continua rolando igual,
+
+00:03:40.033 --> 00:03:42.400
+mas, quando usamos
+o aplicativo em um telefone
+
+00:03:42.433 --> 00:03:44.333
+e rolamos
+esta lista enorme,
+
+00:03:44.367 --> 00:03:46.867
+vemos que há
+um ótimo ganho de performance,
+
+00:03:46.900 --> 00:03:48.733
+porque, novamente,
+com o FlatList,
+
+00:03:48.767 --> 00:03:51.533
+em vez de renderizar
+a lista inteira,
+
+00:03:51.567 --> 00:03:55.300
+apenas renderizamos os itens
+que o usuário vê no momento.
+

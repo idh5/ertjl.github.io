@@ -1,0 +1,242 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.800 --> 00:00:05.033
+Agora, se o usuário já tiver
+adicionado as informações do dia,
+
+00:00:05.067 --> 00:00:07.200
+precisamos que apareça
+a tela que diz:
+
+00:00:07.233 --> 00:00:09.500
+"Você já adicionou
+as informações de hoje."
+
+00:00:09.533 --> 00:00:12.633
+E damos a ele a opção
+de redefinir as informações.
+
+00:00:12.667 --> 00:00:16.200
+Este é o iOS,
+e este é o Android, à direita.
+
+00:00:16.233 --> 00:00:20.867
+A primeira coisa que faremos
+dentro de AddEntry
+
+00:00:20.900 --> 00:00:25.567
+será importar algumas coisas.
+
+00:00:25.600 --> 00:00:30.500
+Primeiro,
+vamos importar Ionicons,
+
+00:00:30.533 --> 00:00:33.633
+porque é o componente de ícone
+que usaremos.
+
+00:00:34.000 --> 00:00:36.002
+E aqui,
+
+00:00:36.035 --> 00:00:40.600
+dentro do método
+de renderização,
+
+00:00:40.633 --> 00:00:45.200
+vamos escrever
+"if.this.props.alreadyLogged".
+
+00:00:45.233 --> 00:00:48.133
+Vamos passar isso
+como propriedade,
+
+00:00:48.167 --> 00:00:52.500
+mas vamos já deixar aí
+para quando precisarmos.
+
+00:00:52.533 --> 00:00:58.500
+Se já adicionamos as informações,
+vamos retornar uma view,
+
+00:00:58.533 --> 00:01:04.333
+e, dentro desta view,
+vamos renderizar o ícone Ionicons.
+
+00:01:04.367 --> 00:01:08.167
+Escrevemos
+"ios-happy-outline",
+
+00:01:08.200 --> 00:01:11.700
+e o tamanho será 100.
+
+00:01:12.733 --> 00:01:17.033
+Embaixo disto,
+teremos um texto que diz:
+
+00:01:17.067 --> 00:01:20.600
+"Você já adicionou
+as informações de hoje."
+
+00:01:20.900 --> 00:01:24.619
+E agora vamos adicionar
+
+00:01:24.652 --> 00:01:27.233
+um botão reset,
+
+00:01:27.267 --> 00:01:29.933
+assim, quando apertarmos o botão,
+ele vai redefinir.
+
+00:01:29.967 --> 00:01:32.800
+Este será um componente
+bem comum.
+
+00:01:32.833 --> 00:01:36.133
+Veja que o botão está aqui,
+é só um botão de texto.
+
+00:01:36.167 --> 00:01:38.700
+Vamos então criar este botão,
+
+00:01:38.733 --> 00:01:42.400
+porque o usaremos
+em outros lugares do aplicativo.
+
+00:01:42.433 --> 00:01:45.200
+Vamos chamá-lo
+de "textbutton.js".
+
+00:01:45.233 --> 00:01:48.900
+Será um botão,
+e precisaremos de algumas coisas.
+
+00:01:48.933 --> 00:01:53.967
+Text e TouchableOpacity,
+ambos do React Native.
+
+00:01:54.000 --> 00:01:57.200
+Será um componente funcional
+sem estado
+
+00:01:57.233 --> 00:02:00.533
+e receberá algumas coisas:
+
+00:02:00.567 --> 00:02:04.533
+um filho e onPress.
+
+00:02:04.567 --> 00:02:08.300
+Vamos retornar
+TouchableOpacity onPress.
+
+00:02:08.333 --> 00:02:11.133
+É claro que vamos chamar
+o onPress que estamos passando.
+
+00:02:11.167 --> 00:02:14.133
+E então renderizamos o filho
+
+00:02:14.167 --> 00:02:18.000
+e o embrulhamos
+em um componente de texto.
+
+00:02:18.033 --> 00:02:23.100
+Dentro de AddEntry,
+vamos importar isso.
+
+00:02:23.133 --> 00:02:27.300
+E o que faremos em seguida
+está bem aqui.
+
+00:02:27.333 --> 00:02:31.567
+Vamos renderizar
+o botão de texto.
+
+00:02:31.600 --> 00:02:35.033
+Dentro dele,
+vamos escrever "Reset".
+
+00:02:35.067 --> 00:02:40.267
+E agora precisamos passar um método
+para ser rodado ao clicarmos nele.
+
+00:02:40.300 --> 00:02:45.933
+Vamos adicionar
+um método de redefinição aqui.
+
+00:02:45.967 --> 00:02:49.800
+Pegamos a chave
+do dia de hoje,
+
+00:02:49.833 --> 00:02:52.733
+que podemos conseguir
+chamando timeToString.
+
+00:02:52.767 --> 00:02:56.300
+E, então, assim como fizemos
+com o botão "Submit"...
+
+00:02:56.333 --> 00:03:01.300
+Faremos outras coisas depois,
+vamos fazer uma anotação.
+
+00:03:01.333 --> 00:03:03.700
+Queremos atualizar o Redux,
+
+00:03:03.733 --> 00:03:06.133
+queremos rotear para Home
+
+00:03:06.167 --> 00:03:08.833
+e queremos atualizar
+o bando de dados.
+
+00:03:08.867 --> 00:03:11.233
+Faremos tudo isso
+em outra aula.
+
+00:03:11.267 --> 00:03:16.933
+Mas agora temos
+o reset para passar
+
+00:03:17.167 --> 00:03:19.433
+para o componente
+de botão de texto.
+
+00:03:19.800 --> 00:03:22.667
+Já está bom.
+Para ver se está funcionando,
+
+00:03:22.700 --> 00:03:24.967
+em vez de dizer
+if this.props.alreadyLogged,
+
+00:03:25.000 --> 00:03:26.767
+vamos mudar para true.
+
+00:03:26.800 --> 00:03:30.200
+Parece que temos
+um erro de sintaxe na linha 90,
+
+00:03:30.367 --> 00:03:32.133
+isso tem que ser um igual.
+
+00:03:36.267 --> 00:03:41.200
+Parece que temos outro problema,
+um erro de digitação...
+
+00:03:41.233 --> 00:03:46.367
+"name ios-happy-outline",
+pronto.
+
+00:03:46.400 --> 00:03:48.767
+Temos a view.
+
+00:03:48.800 --> 00:03:53.067
+Apertando Reset, nada acontece,
+mas um dia vai acontecer.
+
+00:03:53.100 --> 00:03:58.167
+Vamos mudar isso logo
+para this.props.alreadyLogged.
+

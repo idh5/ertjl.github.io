@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.830
+Welcome to Udacity's React Native course.
+
+00:00:03.830 --> 00:00:06.660
+The goal of this course is to take you from React developer to
+
+00:00:06.660 --> 00:00:10.655
+native iOS and Android developer using React Native.
+
+00:00:10.654 --> 00:00:13.049
+The good news is that most of the knowledge you already
+
+00:00:13.050 --> 00:00:15.703
+have about React will come in handy when learning React Native.
+
+00:00:15.702 --> 00:00:20.475
+First, we'll take a high-level look at how React Native works.
+
+00:00:20.475 --> 00:00:22.140
+You know, the whole JavaScript building
+
+00:00:22.140 --> 00:00:24.890
+the inner views in the phone thing, it's really cool.
+
+00:00:24.890 --> 00:00:29.109
+Then we get your dev environment configured and look at how debugging works.
+
+00:00:29.109 --> 00:00:33.554
+Next, we'll get our hands dirty by learning and building with React Native components.
+
+00:00:33.554 --> 00:00:38.695
+Then we'll see how styling and layout work followed by a lesson on navigation.
+
+00:00:38.695 --> 00:00:42.380
+Finally, we'll move from working with React Native code to controlling
+
+00:00:42.380 --> 00:00:46.969
+OS-specific features on iOS and Android like geolocation and notifications.
+
+00:00:46.969 --> 00:00:50.000
+We've got a lot prepared for you, so let's get started.
+

@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.600 --> 00:00:04.500
+Em vez de usar
+a palavra UdaciSlider no slider,
+
+00:00:04.533 --> 00:00:08.133
+vamos criar
+o componente UdaciSlider,
+
+00:00:08.167 --> 00:00:11.000
+usando o componente de slider
+do React Native.
+
+00:00:11.033 --> 00:00:14.333
+Dentro do UdaciSlider,
+
+00:00:14.367 --> 00:00:17.596
+primeiro tiramos
+este Text daqui
+
+00:00:17.629 --> 00:00:20.833
+e vamos importar o slider.
+
+00:00:20.867 --> 00:00:23.200
+Se você se lembra,
+
+00:00:23.233 --> 00:00:26.433
+quando usamos o UdaciSlider,
+que está bem aqui,
+
+00:00:26.467 --> 00:00:30.667
+passamos um valor
+no onChange
+
+00:00:30.700 --> 00:00:33.067
+e em tudo o que vem
+
+00:00:33.100 --> 00:00:37.000
+do metaInfo information
+que está aqui.
+
+00:00:37.033 --> 00:00:40.433
+Vamos reestruturar
+tudo isto aqui.
+
+00:00:40.467 --> 00:00:45.100
+Temos max, unit, step,
+value e onChange.
+
+00:00:45.767 --> 00:00:50.300
+E agora vamos renderizar
+o componente de slider.
+
+00:00:50.333 --> 00:00:52.500
+Novamente,
+isto está vindo do React Native,
+
+00:00:52.533 --> 00:00:54.633
+é um componente
+que vem com ele,
+
+00:00:54.667 --> 00:00:58.782
+e passamos o step,
+
+00:00:58.815 --> 00:01:01.333
+assim como o value.
+
+00:01:01.366 --> 00:01:06.133
+Então damos
+um maximumValue,
+
+00:01:06.167 --> 00:01:08.833
+que chamaremos de "max".
+
+00:01:08.867 --> 00:01:13.100
+O minimumValue será 0.
+
+00:01:13.133 --> 00:01:15.967
+E, no onValueChange,
+
+00:01:16.000 --> 00:01:20.700
+é onde vamos passar
+o método onChange.
+
+00:01:20.733 --> 00:01:25.733
+E agora vamos renderizar
+algumas outras coisas,
+
+00:01:25.767 --> 00:01:30.367
+porque queremos mostrar
+o valor
+
+00:01:30.400 --> 00:01:34.033
+e também queremos mostrar
+a unidade.
+
+00:01:34.067 --> 00:01:37.500
+Novamente,
+o resultado final é este,
+
+00:01:37.533 --> 00:01:42.433
+o slider, assim como o valor
+e a unidade.
+
+00:01:42.467 --> 00:01:47.167
+Tudo isto aqui é
+o nosso componente UdaciSlider.
+
+00:01:47.200 --> 00:01:48.467
+Já está bom.
+
+00:01:48.500 --> 00:01:51.567
+Vamos salvar
+e dar uma olhada no aplicativo.
+
+00:01:51.600 --> 00:01:56.600
+Não tenho o Text aqui
+porque o apagamos.
+
+00:01:56.633 --> 00:01:58.767
+Agora está tudo certo.
+
+00:01:58.800 --> 00:02:01.800
+Veja que, quando deslizamos
+os slides,
+
+00:02:01.833 --> 00:02:02.933
+qualquer um deles,
+
+00:02:02.967 --> 00:02:05.667
+o valor muda aqui.
+
+00:02:06.200 --> 00:02:09.800
+E acontece a mesma coisa
+no nosso emulador do Android.
+

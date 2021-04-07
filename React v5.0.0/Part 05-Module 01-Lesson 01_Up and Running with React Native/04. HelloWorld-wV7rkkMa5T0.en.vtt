@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.735
+Once you have both of your simulator set up and you've installed Create React Native App,
+
+00:00:05.735 --> 00:00:09.040
+the next step we need to do is actually build our app.
+
+00:00:09.039 --> 00:00:11.059
+So what will do is head over to your terminal,
+
+00:00:11.060 --> 00:00:14.000
+and you can run Create React Native App.
+
+00:00:14.000 --> 00:00:15.935
+And then the name of your app,
+
+00:00:15.935 --> 00:00:19.460
+we will call our app that we're going to be building, UdaciFitness.
+
+00:00:19.460 --> 00:00:24.050
+This is very similar to create React app where we have create React app,
+
+00:00:24.050 --> 00:00:25.785
+or in this case Create React Native App,
+
+00:00:25.785 --> 00:00:29.405
+and then need name of our application that we're building.
+
+00:00:29.405 --> 00:00:33.274
+Once that is finished, you'll notice that we have some commands here that we can run.
+
+00:00:33.274 --> 00:00:36.494
+So what I'm going to do is just as it says here,
+
+00:00:36.494 --> 00:00:42.229
+I'm going to cd into our app and then I'm going to go ahead and open that up.
+
+00:00:42.229 --> 00:00:44.244
+So we have all of our code right here,
+
+00:00:44.244 --> 00:00:45.779
+and just to show you what this looks like.
+
+00:00:45.780 --> 00:00:47.984
+Let's go ahead. And using yarn,
+
+00:00:47.984 --> 00:00:51.509
+we will run yarn start to start our app.
+
+00:00:51.509 --> 00:00:54.604
+And as that's going, let me go ahead and show you what the code looks like.
+
+00:00:54.604 --> 00:00:57.604
+So you'll notice here that we have our main App.js file.
+
+00:00:57.604 --> 00:01:00.224
+And this, if you're familiar with React which you should be,
+
+00:01:00.225 --> 00:01:02.100
+it should look pretty familiar to you,
+
+00:01:02.100 --> 00:01:03.630
+we have this View component.
+
+00:01:03.630 --> 00:01:08.905
+Inside of here we have a few Text components that we have are text inside of.
+
+00:01:08.905 --> 00:01:13.079
+And then, the rest of this is really just configuration stuff.
+
+00:01:13.079 --> 00:01:15.989
+So now, you'll notice that when our app started,
+
+00:01:15.989 --> 00:01:17.754
+we have a few options here.
+
+00:01:17.754 --> 00:01:23.619
+If we press a, that will go ahead and run our app in the Android device emulator.
+
+00:01:23.620 --> 00:01:26.935
+Pressing q, will display the QR code which is just this right here.
+
+00:01:26.935 --> 00:01:28.814
+So if you have the Expo app on your phone,
+
+00:01:28.814 --> 00:01:30.539
+you can go ahead and scan this.
+
+00:01:30.540 --> 00:01:34.270
+And as long as your phone is hooked up to the same network as your computer,
+
+00:01:34.269 --> 00:01:37.769
+you'll see the app running on your local phone.
+
+00:01:37.769 --> 00:01:39.879
+We can press r to restart the packager,
+
+00:01:39.879 --> 00:01:42.342
+d to toggle development mode, or i,
+
+00:01:42.343 --> 00:01:44.965
+missed this, to open the iOS simulator.
+
+00:01:44.965 --> 00:01:46.320
+Let's go ahead and press i,
+
+00:01:46.319 --> 00:01:49.084
+it's going to start the iOS simulator.
+
+00:01:49.084 --> 00:01:50.769
+And now on my desktop,
+
+00:01:50.769 --> 00:01:55.959
+you'll notice that we have this iOS simulator here with our text right here.
+
+00:01:55.959 --> 00:01:58.474
+What's cool about this if I go and change this text,
+
+00:01:58.474 --> 00:02:00.649
+let's just say, opening up.
+
+00:02:00.650 --> 00:02:02.765
+You'll notice that we get live reloading here.
+
+00:02:02.765 --> 00:02:08.460
+Then now, I also want to run this on my Android simulator right here, using Genymotion.
+
+00:02:08.460 --> 00:02:11.409
+So inside the terminal I will hit a.
+
+00:02:11.409 --> 00:02:18.000
+And now we have the code running on our Android emulator over here as well.
+

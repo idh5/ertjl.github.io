@@ -1,0 +1,265 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.724
+Now that we have all of our methods as well as our state,
+
+00:00:05.724 --> 00:00:08.054
+what I want to do in this video is just build out
+
+00:00:08.054 --> 00:00:11.564
+the very minimal UI for both our slider,
+
+00:00:11.564 --> 00:00:12.804
+as well as our stepper.
+
+00:00:12.804 --> 00:00:16.884
+So what we'll do is let's create two more components.
+
+00:00:16.885 --> 00:00:20.550
+This one let's call it UdaciSlider.js,
+
+00:00:20.550 --> 00:00:26.365
+and then the second one we will call it UdaciSteppers.js.
+
+00:00:26.364 --> 00:00:29.859
+And then both of these are going to be pretty minimal for now, as I mentioned,
+
+00:00:29.859 --> 00:00:34.200
+so we'll just import react and then let's import view as well as text,
+
+00:00:34.200 --> 00:00:37.024
+which are both coming from react-native,
+
+00:00:37.024 --> 00:00:41.155
+and both of these are just going to be stateless functional components.
+
+00:00:41.155 --> 00:00:48.615
+We'll say UdaciSlider, and then what we want to return is just a view,
+
+00:00:48.615 --> 00:00:51.355
+and then we will stick some text inside of it,
+
+00:00:51.354 --> 00:00:55.577
+just with the name of the component.
+
+00:00:55.578 --> 00:00:57.825
+I'm just going to copy this and paste it
+
+00:00:57.825 --> 00:01:00.925
+into UdaciSteppers because it's going to be similar,
+
+00:01:00.924 --> 00:01:07.057
+and then we will just change the name of the component.
+
+00:01:07.057 --> 00:01:09.000
+And then now, inside of AddEntry,
+
+00:01:09.000 --> 00:01:11.325
+let's go ahead and import both of those.
+
+00:01:11.325 --> 00:01:14.010
+So we get UdaciSlider,
+
+00:01:14.010 --> 00:01:16.725
+and then we'll also grab UdaciSteppers,
+
+00:01:16.724 --> 00:01:21.899
+and then now what we want to do is we don't want to just render each of these.
+
+00:01:21.900 --> 00:01:26.370
+Instead, what we want to do is we want to get the metrics that we care about,
+
+00:01:26.370 --> 00:01:28.079
+which are those five metrics,
+
+00:01:28.079 --> 00:01:32.099
+and then what we want to do is we want to either display the slider or the stepper
+
+00:01:32.099 --> 00:01:36.641
+depending on the specific type that that metric cares about.
+
+00:01:36.641 --> 00:01:39.500
+So what we'll do is inside of our view here,
+
+00:01:39.500 --> 00:01:42.090
+let's do a few things first.
+
+00:01:42.090 --> 00:01:44.730
+Let's go ahead, and we will grab
+
+00:01:44.730 --> 00:01:50.575
+this meta information by just invoking getMetricMetaInfo that we've done before.
+
+00:01:50.575 --> 00:01:54.540
+Then now, what we need to do is,
+
+00:01:54.540 --> 00:01:58.973
+let's say, Object.keys pass it metaInfo.
+
+00:01:58.972 --> 00:02:01.769
+So this is going to return us an array,
+
+00:02:01.769 --> 00:02:05.549
+which has five properties on it: sleep,
+
+00:02:05.549 --> 00:02:07.994
+swim, bike, all those.
+
+00:02:07.995 --> 00:02:11.675
+And then what we want to do is we want to call.map.
+
+00:02:11.675 --> 00:02:14.364
+This is going to be the specific key,
+
+00:02:14.364 --> 00:02:15.969
+and then from here,
+
+00:02:15.969 --> 00:02:20.530
+what we want to do is let's go ahead and we will grab getIcon,
+
+00:02:20.530 --> 00:02:26.580
+type, and then everything else from that info[key].
+
+00:02:26.580 --> 00:02:29.025
+Again, what we did is we called getMetricMetaInfo.
+
+00:02:29.025 --> 00:02:31.240
+That returned us the whole object,
+
+00:02:31.240 --> 00:02:37.000
+which was this whole object right here and then we are mapping overall
+
+00:02:37.000 --> 00:02:42.840
+of its keys and then we are grabbing each of these properties from the specific key,
+
+00:02:42.840 --> 00:02:45.550
+and then we can also grab a value,
+
+00:02:45.550 --> 00:02:49.045
+which is going to be coming from this.state[key].
+
+00:02:49.044 --> 00:02:50.164
+In our example here,
+
+00:02:50.164 --> 00:02:53.728
+let's say the first time object.key.map runs,
+
+00:02:53.729 --> 00:02:56.943
+key is going to be set to, we'll say run,
+
+00:02:56.943 --> 00:03:02.680
+and so we use getIcon and type coming from metaInfo[run] and
+
+00:03:02.680 --> 00:03:08.599
+then we also grab the value which is [this.state[run] and then now,
+
+00:03:08.599 --> 00:03:10.629
+what we want to do is return the same UI.
+
+00:03:10.629 --> 00:03:15.219
+We will return, we will say view and because we are in map,
+
+00:03:15.219 --> 00:03:18.580
+we need to go ahead and make sure that we give this a key.
+
+00:03:18.580 --> 00:03:22.270
+Now, once you use getIcon.
+
+00:03:22.270 --> 00:03:25.240
+If I save this as it is right now,
+
+00:03:25.240 --> 00:03:28.625
+looks like we have an error on line 48.
+
+00:03:28.625 --> 00:03:33.314
+We're missing an equal sign. Let's refresh this.
+
+00:03:33.314 --> 00:03:35.359
+You'll notice on both of these now,
+
+00:03:35.360 --> 00:03:40.145
+we have each of the icons because we have getIcon right here.
+
+00:03:40.145 --> 00:03:45.942
+Now, what we want to do is we either want to show a slider or a steppers.
+
+00:03:45.942 --> 00:03:50.180
+What we will do as we will say if type equals slider,
+
+00:03:50.180 --> 00:03:53.395
+then what we want to do is we want to render
+
+00:03:53.395 --> 00:03:57.400
+our UdaciSlider and we want to pass it a few things.
+
+00:03:57.400 --> 00:04:00.515
+First, we will pass it the value that we're getting on line
+
+00:04:00.514 --> 00:04:06.109
+49 and then we will pass it an on change function.
+
+00:04:06.110 --> 00:04:07.475
+What this is going to do,
+
+00:04:07.474 --> 00:04:09.919
+it's going to receive a value and then we will
+
+00:04:09.919 --> 00:04:13.069
+just call the this.slide, which is this right here.
+
+00:04:13.069 --> 00:04:17.379
+Notice we need to pass it the metric and the value so we can pass it,
+
+00:04:17.379 --> 00:04:19.490
+the key and then the value,
+
+00:04:19.490 --> 00:04:24.785
+and then the last thing we need to pass it is everything else.
+
+00:04:24.785 --> 00:04:28.640
+Now, if it's not a type of slider,
+
+00:04:28.639 --> 00:04:34.375
+then what we want to do is we want to render our UdaciSteppers component.
+
+00:04:34.375 --> 00:04:37.730
+This is going to be similar. We're going to pass it a value.
+
+00:04:37.730 --> 00:04:41.055
+We are going to pass it on increments,
+
+00:04:41.055 --> 00:04:43.579
+which what this is going to do is it's going to call
+
+00:04:43.579 --> 00:04:46.789
+our increment function passing it the specific key or
+
+00:04:46.790 --> 00:04:50.569
+the specific metric and decrement is going to be
+
+00:04:50.569 --> 00:04:55.990
+the same thing so I'll just copy and paste this and we will change these out.
+
+00:04:55.990 --> 00:04:57.860
+This will be decrements.
+
+00:04:57.860 --> 00:05:00.850
+Then lastly, we just as before,
+
+00:05:00.850 --> 00:05:03.420
+want to pass it everything else.
+
+00:05:03.420 --> 00:05:05.985
+Now, that looks good. Let's see if we have any errors.
+
+00:05:05.985 --> 00:05:09.460
+We don't, so you'll notice here that for
+
+00:05:09.459 --> 00:05:14.805
+these top three metrics we are getting steppers and for the bottom two,
+
+00:05:14.805 --> 00:05:17.000
+we are getting the sliders.
+

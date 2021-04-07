@@ -1,0 +1,244 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What is React Native/Why does it exist?</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Up and Running with React Native</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Rating Your Career Confidence.html">01. Rating Your Career Confidence</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction.html">02. Introduction</a>
+    </li>
+    <li class="">
+      <a href="03. What is React NativeWhy does it exist.html">03. What is React Native/Why does it exist?</a>
+    </li>
+    <li class="">
+      <a href="04. Dev Environment Setup.html">04. Dev Environment Setup</a>
+    </li>
+    <li class="">
+      <a href="05. Using the Debugger.html">05. Using the Debugger</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. What is React Native/Why does it exist?</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>What is React Native?</p></h3>
+  <video controls>
+  <source src="03. What is React Native-ypo2B8DpmSc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. What is React Native-ypo2B8DpmSc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. What is React Native-ypo2B8DpmSc.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. What is React Native-ypo2B8DpmSc.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="react-native-under-the-hood">React Native under the Hood</h2>
+<p>When React was first introduced, a big selling point was the <a href="https://reactjs.org/docs/faq-internals.html" rel="noopener noreferrer" target="_blank">Virtual DOM</a>. The idea is pretty standard in most UI libraries now, but when it first came out, it was groundbreaking! We can look at what exactly the Virtual DOM is by breaking down the process of what happens when you call <code>setState()</code>. </p>
+<p>The first thing React does when <code>setState()</code> is called is merge the object passed to <code>setState()</code> into the current state of the component. This will kick off a process called <a href="https://reactjs.org/docs/reconciliation.html" rel="noopener noreferrer" target="_blank">reconciliation</a>. The end goal of reconciliation is to update the UI based on this new state in the most efficient way possible. To do this, React will construct a new tree of React elements (which you can think of as an object representation of your UI). Once it has this new tree, React will "diff" it against the previous element tree in order to figure out how the UI should change in response to the new state. By doing this, React will then know the exact changes which occurred, and by knowing exactly what changes occurred, it will able to minimize its footprint on the UI by only making updates where absolutely necessary. </p>
+<p>This process of creating an object representation of the DOM is the whole idea behind the "Virtual DOM". Now, what if instead of targeting and rendering to the DOM, we need to target and render to another platform -- say iOS or Android. Theoretically, the DOM is just an implementation detail. Besides the name itself (which, in my opinion, was more of a marketing ploy than anything), there's nothing that couples the idea of the Virtual DOM to the actual DOM. This is the exact idea behind React Native. Instead of rendering to the web's DOM, React Native renders to native iOS or Android views. This allows us to build native iOS and Android applications just by using React Native.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How does the <strong>learn once, write anywhere</strong> approach influence development?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505164557840" name="394613" id="a1505164557840">
+      <label for="a1505164557840"><p>Learning React allows us to use the same principles to develop for both web <em>and</em> native platforms</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505164571491" name="394613" id="a1505164571491">
+      <label for="a1505164571491"><p>React development more closely follows "write once, run anywhere," so we don't need to develop distinct apps for each platform</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505164572058" name="394613" id="a1505164572058">
+      <label for="a1505164572058"><p>React Native development shares exactly the same codebase as other React platforms</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505164572643" name="394613" id="a1505164572643">
+      <label for="a1505164572643"><p>The same set of engineers should be able to develop for whichever platform they choose without needing to learn fundamentally different technologies </p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Learning React allows us to use the same principles to develop for both web _and_ native platforms</li>
+      <li>The same set of engineers should be able to develop for whichever platform they choose without needing to learn fundamentally different technologies </li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Native's "learn once, write anywhere" approach allows us to use the same principles that we know to develop for both web <em>and</em> native platforms. After all, under the hood, many of the same principles of the Virtual DOM, reconciliation, and diffing algorithm apply whether it's a web application built with React or a mobile application built with React Native. </p>
+<h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://tadeuzagallo.com/blog/react-native-bridge/" rel="noopener noreferrer" target="_blank">Bridging in React Native</a></li>
+<li><a href="https://medium.com/dailyjs/12-common-questions-about-react-native-74fc9ba49b17" rel="noopener noreferrer" target="_blank">12 Common Questions from Working with React Native</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Dev Environment Setup.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. What is React Native/Why does it exist?')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

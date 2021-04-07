@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.840
+Now, as I mentioned before,
+
+00:00:01.840 --> 00:00:05.944
+when we hit submit instead of an AddEntry or reset,
+
+00:00:05.944 --> 00:00:09.890
+we're also going to want to update redux.
+
+00:00:09.890 --> 00:00:14.225
+But, in order for us to do that we actually need to add redux to our application.
+
+00:00:14.224 --> 00:00:16.149
+So then what we're going to do in this video,
+
+00:00:16.149 --> 00:00:19.059
+is before we add redux to our app,
+
+00:00:19.059 --> 00:00:21.334
+we are going to make a brand new folder,
+
+00:00:21.335 --> 00:00:24.400
+we'll call it actions and we will just define all of
+
+00:00:24.399 --> 00:00:29.054
+the actions that are going to occur that need to update our redux store.
+
+00:00:29.054 --> 00:00:30.190
+So instead of actions,
+
+00:00:30.190 --> 00:00:32.620
+we will have an index.js file.
+
+00:00:32.619 --> 00:00:34.119
+And if you think about our app again,
+
+00:00:34.119 --> 00:00:38.384
+this is the main screen and this is the add entry screen, what we're working on.
+
+00:00:38.384 --> 00:00:42.609
+There are really two type of actions that will go ahead and update our redux.
+
+00:00:42.609 --> 00:00:43.780
+For the very first one,
+
+00:00:43.780 --> 00:00:47.465
+is when we enter in a new entry for the day.
+
+00:00:47.465 --> 00:00:50.005
+And the second one is whenever we go and fetch
+
+00:00:50.005 --> 00:00:53.460
+entries from our database and we get those back.
+
+00:00:53.460 --> 00:00:55.689
+So with that said,
+
+00:00:55.689 --> 00:01:00.879
+we will have two different constants up here.
+
+00:01:00.880 --> 00:01:04.795
+The first one we will call it receive entries,
+
+00:01:04.795 --> 00:01:09.010
+and that's for whenever we go and we fetch entries,
+
+00:01:09.010 --> 00:01:13.630
+or we fetch all of the days from our calendar from our database and we get those back.
+
+00:01:13.629 --> 00:01:16.405
+And the second one is going to be
+
+00:01:16.405 --> 00:01:20.950
+AddEntry and that's for whenever we click on this button right here.
+
+00:01:20.950 --> 00:01:23.980
+So now what we want to do is let's create our action creator,
+
+00:01:23.980 --> 00:01:25.960
+so it's going to be two of them.
+
+00:01:25.959 --> 00:01:28.879
+The first one we will call it receive entries.
+
+00:01:28.879 --> 00:01:34.104
+It's going to receive all of the entries and then it's going to return
+
+00:01:34.105 --> 00:01:37.120
+an action which has a type
+
+00:01:37.120 --> 00:01:40.905
+of receive entries and it's just going to pass along the entries.
+
+00:01:40.905 --> 00:01:43.840
+And the second action creator we're going to make,
+
+00:01:43.840 --> 00:01:45.545
+we will call it AddEntry,
+
+00:01:45.545 --> 00:01:48.430
+it's going to as you probably guessed, receive an entry.
+
+00:01:48.430 --> 00:01:55.120
+And then it's going to return an action or just an object which has a type of AddEntry.
+
+00:01:55.120 --> 00:01:58.160
+And then it's going to pass along the entry as well.
+

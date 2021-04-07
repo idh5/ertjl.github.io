@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.333 --> 00:00:03.100
+Uma coisa ótima
+no Create React Native App
+
+00:00:03.133 --> 00:00:06.433
+é que ele já vem com suporte
+para ícones.
+
+00:00:06.466 --> 00:00:11.133
+Qualquer um
+destes pacotes de ícone,
+
+00:00:11.166 --> 00:00:15.267
+seja FontAwesome, Ionicons,
+Materialicons... Qualquer um.
+
+00:00:15.300 --> 00:00:19.967
+Temos acesso a eles, por padrão,
+no Create React Native App.
+
+00:00:20.000 --> 00:00:23.033
+Se quiser explorar
+todos os ícones disponíveis,
+
+00:00:23.066 --> 00:00:24.733
+visite este URL.
+
+00:00:24.766 --> 00:00:27.533
+Digamos que queiramos...
+Não sei se haverá algum.
+
+00:00:27.566 --> 00:00:29.333
+Tem de pizza, sim. Perfeito.
+
+00:00:29.367 --> 00:00:34.133
+Digamos que quiséssemos usar
+este ícone de pizza do Ionicons
+
+00:00:34.167 --> 00:00:36.067
+no nosso aplicativo.
+
+00:00:36.100 --> 00:00:38.567
+Para fazê-lo,
+iríamos até o aplicativo
+
+00:00:38.600 --> 00:00:42.033
+e importaríamos Ionicons
+
+00:00:42.066 --> 00:00:45.433
+de "@expo/vector-icons".
+
+00:00:45.967 --> 00:00:50.900
+Então, quando renderizarmos
+este componente Ionicons,
+
+00:00:51.400 --> 00:00:54.200
+o nome que dermos a ele
+será associado
+
+00:00:54.233 --> 00:00:59.033
+ao ícone da biblioteca Ionicons
+que queremos usar.
+
+00:00:59.067 --> 00:01:03.567
+Basta copiarmos "ios-pizza"
+
+00:01:03.600 --> 00:01:06.967
+e colarmos aqui.
+Também temos outras opções.
+
+00:01:07.000 --> 00:01:11.533
+Podemos especificar a cor.
+Digamos que queiramos vermelho.
+
+00:01:11.566 --> 00:01:13.967
+Agora,
+quando o aplicativo recarregar,
+
+00:01:14.000 --> 00:01:18.133
+tanto no iOS, quanto no Android,
+aparece uma pizza vermelha.
+
+00:01:18.166 --> 00:01:20.700
+Como ficou
+meio pequena demais,
+
+00:01:20.733 --> 00:01:24.200
+podemos especificar
+um tamanho...
+
+00:01:25.467 --> 00:01:27.400
+e deixá-la maior.
+
+00:01:27.433 --> 00:01:30.233
+O Create React Native App,
+portanto,
+
+00:01:30.267 --> 00:01:33.500
+vem com
+"@expo/vector-icons",
+
+00:01:33.533 --> 00:01:39.300
+o que nos dá acesso
+a todas estas coleções de ícones.
+

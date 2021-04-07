@@ -1,0 +1,27 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:01.501
+Nesta lição,
+
+00:00:01.534 --> 00:00:05.801
+veremos como Web, iOS e Android
+diferem uns dos outros
+
+00:00:05.834 --> 00:00:08.200
+tanto de uma perspectiva
+de IU,
+
+00:00:08.233 --> 00:00:10.901
+quanto de uma perspectiva
+de experiência do usuário.
+
+00:00:10.934 --> 00:00:13.367
+Veremos os componentes
+inclusos no React Native
+
+00:00:13.400 --> 00:00:17.567
+e, por fim, adicionaremos o Redux
+em um aplicativo React Native.
+

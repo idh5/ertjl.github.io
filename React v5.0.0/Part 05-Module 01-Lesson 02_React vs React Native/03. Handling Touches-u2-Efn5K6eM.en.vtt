@@ -1,0 +1,220 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.230
+The primary way that a user interacts with a native app is through touch.
+
+00:00:05.230 --> 00:00:08.109
+So we want to make sure that we have the proper buttons and
+
+00:00:08.109 --> 00:00:12.369
+the proper components to handle any touch events that we get specifically,
+
+00:00:12.369 --> 00:00:15.119
+to respond to things like button clicks.
+
+00:00:15.119 --> 00:00:19.155
+So, what react-native gives us is four different components.
+
+00:00:19.155 --> 00:00:21.464
+They are TouchableHighlight, TouchableNativeFeedback,
+
+00:00:21.464 --> 00:00:26.710
+TouchableOpacity and TouchableWithoutFeedback in order to respond to these presses,
+
+00:00:26.710 --> 00:00:28.310
+to these button presses.
+
+00:00:28.309 --> 00:00:29.949
+So what we'll do is walk through each of these.
+
+00:00:29.949 --> 00:00:33.414
+So first, let's start off with TouchableHighlight.
+
+00:00:33.414 --> 00:00:35.244
+What TouchableHighlight is going to do,
+
+00:00:35.244 --> 00:00:38.049
+is it's going to basically transform from
+
+00:00:38.049 --> 00:00:41.664
+its primary color to another color when you press on it.
+
+00:00:41.664 --> 00:00:45.174
+So what we'll do and we also down here have some styles our container,
+
+00:00:45.174 --> 00:00:47.784
+just a normal button and then the button text.
+
+00:00:47.784 --> 00:00:49.659
+So what we can do here is,
+
+00:00:49.659 --> 00:00:53.199
+we can add our button styles to this component.
+
+00:00:53.200 --> 00:00:55.240
+And then what we want to say is,
+
+00:00:55.240 --> 00:00:59.969
+on press go ahead and run the handle press method right here.
+
+00:00:59.969 --> 00:01:03.519
+And then lastly, what we want to do is we want to specify
+
+00:01:03.520 --> 00:01:06.219
+an underlay color which is going to be the color
+
+00:01:06.219 --> 00:01:09.329
+that the background of the button transforms to.
+
+00:01:09.329 --> 00:01:14.379
+So we'll just come in here and say #d4271B,
+
+00:01:14.379 --> 00:01:20.234
+which is just a dark red color because our normal button is this color.
+
+00:01:20.234 --> 00:01:21.879
+So now inside of here,
+
+00:01:21.879 --> 00:01:25.329
+we can pass it whatever we want the button to display.
+
+00:01:25.329 --> 00:01:31.509
+Let's just say TouchableHighlight and then we will give this a style of styles.btnText.
+
+00:01:31.510 --> 00:01:33.070
+So now if we look at our app,
+
+00:01:33.069 --> 00:01:34.799
+you'll notice that we have this button.
+
+00:01:34.799 --> 00:01:36.655
+And when we press on it,
+
+00:01:36.655 --> 00:01:40.060
+you'll notice it gets a little bit darker because what's happening,
+
+00:01:40.060 --> 00:01:46.150
+is we are going from our background color to this underlay color.
+
+00:01:46.150 --> 00:01:48.460
+So you can see this on iOS as well.
+
+00:01:48.459 --> 00:01:50.439
+So that is TouchableHighlight.
+
+00:01:50.439 --> 00:01:54.439
+The next one, let's talk about TouchableOpacity.
+
+00:01:54.439 --> 00:01:56.274
+I actually really like TouchableOpacity,
+
+00:01:56.275 --> 00:01:58.125
+it's probably my favorite.
+
+00:01:58.125 --> 00:01:59.290
+So what we can do is we can get rid of
+
+00:01:59.290 --> 00:02:02.550
+this underlay color here so we don't have to worry about that.
+
+00:02:02.549 --> 00:02:04.149
+And now what's going to happen,
+
+00:02:04.150 --> 00:02:05.875
+is when we press on this,
+
+00:02:05.875 --> 00:02:10.289
+you'll notice the opacity of the button is just going to change.
+
+00:02:10.289 --> 00:02:13.650
+So that way the background is going to shine through.
+
+00:02:13.650 --> 00:02:18.504
+So TouchableOpacity again just changes the opacity of the button,
+
+00:02:18.504 --> 00:02:21.069
+so that the background can shine through a little bit.
+
+00:02:21.069 --> 00:02:25.090
+Next, TouchableWithoutFeedback basically doesn't
+
+00:02:25.090 --> 00:02:27.985
+change the button at all when you click on it.
+
+00:02:27.985 --> 00:02:31.540
+And what's different about this one is it doesn't work with text,
+
+00:02:31.539 --> 00:02:36.530
+so you actually need to go ahead and have a view as the only child.
+
+00:02:36.530 --> 00:02:41.800
+And then we'll take our style from the TouchableWithoutFeedback and put it on the view,
+
+00:02:41.800 --> 00:02:44.685
+and then now what's going to happen is
+
+00:02:44.685 --> 00:02:47.590
+notice when I press this, so I'm pressing right now.
+
+00:02:47.590 --> 00:02:50.729
+Nothing is happening because we're getting no feedback.
+
+00:02:50.729 --> 00:02:53.199
+This one probably shouldn't be used too much because
+
+00:02:53.199 --> 00:02:55.944
+native is all about giving feedback to the user.
+
+00:02:55.944 --> 00:02:58.715
+But in some cases, it is helpful.
+
+00:02:58.715 --> 00:03:04.000
+And now the last one we're going to look at is TouchableNativeFeedback.
+
+00:03:04.000 --> 00:03:05.764
+This one isn't supported on iOS,
+
+00:03:05.764 --> 00:03:07.764
+it's only supported on Android.
+
+00:03:07.764 --> 00:03:10.914
+And what it does is it gives that button that ripple effect,
+
+00:03:10.914 --> 00:03:13.689
+which is native to the Android platform.
+
+00:03:13.689 --> 00:03:20.439
+So what we can say is we can come in here and add a background prop to this.
+
+00:03:20.439 --> 00:03:22.689
+We'll say background equals and then
+
+00:03:22.689 --> 00:03:28.814
+we will say touchablenativefeedback.selectablebackground.
+
+00:03:28.814 --> 00:03:31.044
+And one thing about TouchableNativeFeedback too,
+
+00:03:31.044 --> 00:03:34.312
+is it also doesn't work with text as its child,
+
+00:03:34.312 --> 00:03:36.274
+so you need to have you as well.
+
+00:03:36.275 --> 00:03:37.810
+So now, if we look at this,
+
+00:03:37.810 --> 00:03:42.520
+you'll notice that on iOS it's stirring an error because it's not supported,
+
+00:03:42.520 --> 00:03:48.245
+but on Android, you get rid of this hello so we can see this.
+
+00:03:48.245 --> 00:03:50.384
+You'll notice that when I click on it,
+
+00:03:50.384 --> 00:03:53.090
+we get that cool little ripple effect.
+

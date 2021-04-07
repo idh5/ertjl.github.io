@@ -1,0 +1,308 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.533 --> 00:00:05.133
+Se voltarmos ao UdaciFitness,
+monitorávamos cinco medições:
+
+00:00:05.166 --> 00:00:08.133
+corrida, ciclismo, natação,
+sono e alimentação.
+
+00:00:08.167 --> 00:00:12.000
+Agora, dentro
+do arquivo helpers.js,
+
+00:00:12.033 --> 00:00:13.633
+criaremos uma função
+
+00:00:13.667 --> 00:00:17.000
+que chamaremos
+de "getMetricMetaInfo".
+
+00:00:17.033 --> 00:00:22.600
+A função é criar um objeto
+que terá cinco propriedades
+
+00:00:22.633 --> 00:00:26.100
+correlacionadas às medições
+que estávamos monitorando.
+
+00:00:26.133 --> 00:00:29.600
+Teremos corrida, ciclismo,
+
+00:00:29.633 --> 00:00:33.900
+natação, sono e alimentação.
+
+00:00:33.933 --> 00:00:38.067
+Estes objetos conterão
+toda informação
+
+00:00:38.100 --> 00:00:42.000
+que for relevante
+para a construção da interface.
+
+00:00:42.033 --> 00:00:46.867
+Por exemplo, precisamos saber
+de coisas específicas sobre corrida.
+
+00:00:46.900 --> 00:00:49.033
+Precisamos saber
+o nome de exibição,
+
+00:00:49.066 --> 00:00:51.100
+que será "run".
+
+00:00:51.133 --> 00:00:54.433
+Quantas milhas se pode correr,
+no máximo, em um dia: "50".
+
+00:00:54.467 --> 00:00:58.300
+A unidade será "milha".
+
+00:00:58.333 --> 00:01:02.533
+O incremento, ou seja,
+o valor que aumenta
+
+00:01:02.567 --> 00:01:05.667
+ao clicar no botão de adição
+do formulário.
+
+00:01:05.700 --> 00:01:07.500
+Vou deixar como "1".
+
+00:01:07.533 --> 00:01:09.667
+Em tipo,
+deixaremos "steppers".
+
+00:01:09.700 --> 00:01:12.067
+Na interface do formulário,
+se você lembrar,
+
+00:01:12.100 --> 00:01:15.400
+havia os "steppers",
+botões de adição e subtração,
+
+00:01:15.433 --> 00:01:20.667
+e o controle deslizante,
+usado para sono e alimentação.
+
+00:01:21.267 --> 00:01:24.800
+No fim,
+adicionaremos "getIcon()".
+
+00:01:24.833 --> 00:01:30.100
+Sempre que invocarmos
+o método "getIcon()",
+
+00:01:30.133 --> 00:01:34.033
+queremos que ele retorne
+o ícone do item específico.
+
+00:01:34.067 --> 00:01:39.767
+Precisamos ir até o topo
+e importar algumas coisas.
+
+00:01:39.800 --> 00:01:43.133
+Temos de importar "React",
+pois usaremos JSX.
+
+00:01:43.167 --> 00:01:46.567
+E temos de importar "View",
+de "react-native".
+
+00:01:47.200 --> 00:01:51.900
+Depois,
+vamos importar alguns ícones
+
+00:01:51.933 --> 00:01:55.933
+de "@expo/vector-icons".
+
+00:01:55.967 --> 00:01:59.867
+Queremos três tipos:
+"FontAwesome",
+
+00:01:59.900 --> 00:02:03.600
+"MaterialIcons"
+e, por último,
+
+00:02:03.633 --> 00:02:06.267
+"MaterialCommunityIcons".
+
+00:02:06.300 --> 00:02:12.067
+E também importaremos "white"
+do nosso arquivo de cores.
+
+00:02:12.100 --> 00:02:17.700
+Agora, dentro de "getIcon",
+temos de retornar uma visualização.
+
+00:02:17.733 --> 00:02:20.567
+Mais tarde nós as estilizaremos,
+mas não agora.
+
+00:02:20.600 --> 00:02:24.533
+Aqui dentro,
+usaremos "MaterialIcons".
+
+00:02:24.566 --> 00:02:28.133
+O nome
+será "directions-run".
+
+00:02:28.166 --> 00:02:30.767
+A cor definitiva
+será o branco,
+
+00:02:30.800 --> 00:02:34.700
+mas, por enquanto, fica preto
+para conseguirmos enxergar.
+
+00:02:34.733 --> 00:02:38.767
+E o tamanho será "35".
+
+00:02:39.600 --> 00:02:44.167
+Agora precisamos fazer isto
+para cada uma das medições.
+
+00:02:44.200 --> 00:02:46.633
+Vou copiar, colar
+
+00:02:46.667 --> 00:02:50.000
+e depois modificar.
+
+00:02:50.033 --> 00:02:53.900
+O nome do ciclismo
+será "bike".
+
+00:02:53.933 --> 00:02:57.967
+Máximo: "100". Incremento: "1".
+"Steppers".
+
+00:02:58.000 --> 00:03:01.633
+E, em vez
+de "MaterialIcons",
+
+00:03:01.667 --> 00:03:05.467
+usaremos
+"MaterialCommunityIcons".
+
+00:03:05.500 --> 00:03:09.933
+O nome do ícone será "bike",
+e a cor será preta por enquanto.
+
+00:03:10.500 --> 00:03:13.900
+Na natação, será parecido.
+
+00:03:13.933 --> 00:03:17.367
+Máximo: "9.900",
+
+00:03:17.400 --> 00:03:21.667
+porque a unidade aqui
+será "metro".
+
+00:03:21.700 --> 00:03:23.133
+Incremento: "100".
+
+00:03:23.167 --> 00:03:29.000
+E, aqui embaixo, usaremos
+"MaterialCommunityIcons",
+
+00:03:29.033 --> 00:03:33.833
+mas chamaremos o ícone
+de "swim".
+
+00:03:34.433 --> 00:03:37.367
+E no fim temos o sono,
+
+00:03:37.400 --> 00:03:39.300
+que será parecido.
+
+00:03:39.333 --> 00:03:43.767
+Nome: "sleep".
+Máximo: "24", obviamente.
+
+00:03:43.800 --> 00:03:45.533
+Unidade: "hora".
+
+00:03:45.567 --> 00:03:48.433
+Em vez de "steppers",
+será um "slider".
+
+00:03:48.467 --> 00:03:52.067
+É agora
+que entra o "FontAwesome".
+
+00:03:52.567 --> 00:03:55.133
+O nome será "bed",
+
+00:03:55.167 --> 00:03:58.967
+ícone FontAwesome.
+
+00:03:59.000 --> 00:04:03.667
+E, por fim, temos alimentação.
+Nome de exibição: "eat".
+
+00:04:03.700 --> 00:04:07.733
+Máximo: "10",
+pois irá de 1 a 10.
+
+00:04:07.767 --> 00:04:12.433
+Unidade: "nota". "Slider".
+E, por fim,
+
+00:04:12.467 --> 00:04:16.067
+usaremos um ícone
+"MaterialCommunityIcons",
+
+00:04:16.100 --> 00:04:19.767
+que chamaremos de "food".
+Certo.
+
+00:04:19.800 --> 00:04:25.367
+O que temos agora
+é um objeto gigante aqui
+
+00:04:25.400 --> 00:04:27.333
+que chamaremos de "info".
+
+00:04:27.367 --> 00:04:31.167
+Quando eu invocar
+"getMetricInfo"
+
+00:04:31.200 --> 00:04:33.333
+sem passar um argumento,
+
+00:04:33.867 --> 00:04:36.733
+quero que o objeto todo
+seja retornado.
+
+00:04:36.766 --> 00:04:38.933
+Mas, se eu passar
+algum argumento,
+
+00:04:38.966 --> 00:04:42.733
+como alguma das medições,
+quero que ela seja retornada.
+
+00:04:42.767 --> 00:04:46.033
+Aqui embaixo, diremos:
+
+00:04:46.066 --> 00:04:48.888
+se a medição "metric"
+for indefinida,
+
+00:04:48.921 --> 00:04:51.267
+ou de tipo indefinido,
+
+00:04:51.833 --> 00:04:55.167
+quero que retorne
+apenas a informação do objeto.
+
+00:04:55.200 --> 00:04:56.800
+Senão...
+
+00:04:56.833 --> 00:05:01.433
+quero que retorne a informação
+sobre o item específico.
+

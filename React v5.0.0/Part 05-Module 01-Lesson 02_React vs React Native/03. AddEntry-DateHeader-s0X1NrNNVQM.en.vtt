@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.730
+These are the final versions of the two screens that we're building.
+
+00:00:03.730 --> 00:00:08.320
+This iOS, and this is android and currently, they look like this.
+
+00:00:08.320 --> 00:00:09.685
+What we're doing in this video,
+
+00:00:09.685 --> 00:00:13.030
+is you'll notice that we have this section right here, this date.
+
+00:00:13.029 --> 00:00:17.109
+And this we're going to use a few different times throughout our apps,
+
+00:00:17.109 --> 00:00:19.839
+we're actually just going to make a component out of it.
+
+00:00:19.839 --> 00:00:23.355
+So what we'll do is inside of our components folder,
+
+00:00:23.355 --> 00:00:27.010
+let's make a brand new file and we will call it date.js.
+
+00:00:27.010 --> 00:00:30.925
+We need a few different things,
+
+00:00:30.925 --> 00:00:35.475
+specifically react as well as the text component from react-native.
+
+00:00:35.475 --> 00:00:38.774
+This is going to be a stateless functional component.
+
+00:00:38.774 --> 00:00:42.549
+And what it's going to receive is not text,
+
+00:00:42.549 --> 00:00:44.274
+it's going to receive a date.
+
+00:00:44.274 --> 00:00:52.795
+And then what we're going to do is we will wrap this date inside of a text component.
+
+00:00:52.795 --> 00:00:55.840
+And this seems like pretty minimal right now and that's because it is.
+
+00:00:55.840 --> 00:00:58.780
+But eventually what we'll do is we will add styling to this,
+
+00:00:58.780 --> 00:01:01.245
+which we will get into in the next lesson.
+
+00:01:01.244 --> 00:01:05.980
+But before that, let's go ahead and inside of AddEntry,
+
+00:01:05.980 --> 00:01:09.685
+let's import our dateheader that we just barely made.
+
+00:01:09.685 --> 00:01:13.240
+And then now what we want to do is we want to render it right
+
+00:01:13.239 --> 00:01:17.129
+before we start mapping over all of our information.
+
+00:01:17.129 --> 00:01:18.459
+So what we'll say is dateheader,
+
+00:01:18.459 --> 00:01:23.379
+and if you remember what we need to pass it is a date.
+
+00:01:23.379 --> 00:01:27.519
+And what we can do here is we can create a new instance of
+
+00:01:27.519 --> 00:01:32.739
+date and then we can call tolocaleDatestring,
+
+00:01:32.739 --> 00:01:36.214
+which will make that into a formatted string.
+
+00:01:36.215 --> 00:01:42.000
+So now, when these refresh you'll notice that we have dates on both of these.
+

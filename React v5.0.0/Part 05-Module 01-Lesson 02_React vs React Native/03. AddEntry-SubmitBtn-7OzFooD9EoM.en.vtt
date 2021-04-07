@@ -1,0 +1,217 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.580
+Next, let's go ahead and build the component for both of our submit buttons down here.
+
+00:00:05.580 --> 00:00:07.830
+So what we can do is, first,
+
+00:00:07.830 --> 00:00:12.195
+let's go ahead and add a method to our AddEntry component,
+
+00:00:12.195 --> 00:00:15.030
+and we will call it submit.
+
+00:00:15.029 --> 00:00:17.170
+And what this is going to do is,
+
+00:00:17.170 --> 00:00:21.125
+first, it needs to grab the key for this specific day.
+
+00:00:21.125 --> 00:00:23.835
+And if you remember, inside of helpers,
+
+00:00:23.835 --> 00:00:27.089
+we have this function right here.
+
+00:00:27.089 --> 00:00:28.484
+Basically, what it's going to do,
+
+00:00:28.484 --> 00:00:33.435
+is it's going to return a date after it has formatted it,
+
+00:00:33.435 --> 00:00:37.469
+and we will use this formatted date for the key for the specific date.
+
+00:00:37.469 --> 00:00:38.969
+The reason we're doing this is because
+
+00:00:38.969 --> 00:00:41.144
+the calendar component that we're going to be using
+
+00:00:41.145 --> 00:00:45.655
+needs the dates formatted this way, so we'll just go with it.
+
+00:00:45.655 --> 00:00:49.289
+So what we'll do first is,
+
+00:00:49.289 --> 00:00:55.637
+let's go ahead and import that timeToString method that we just talked about.
+
+00:00:55.637 --> 00:00:58.304
+And then inside of submit,
+
+00:00:58.304 --> 00:00:59.369
+what we're going to do is,
+
+00:00:59.369 --> 00:01:01.515
+let's create a key variable,
+
+00:01:01.515 --> 00:01:07.135
+which is just going to be whatever is returned from invoking timeToString.
+
+00:01:07.135 --> 00:01:10.950
+Let's create an entry which is just going to be the start state.
+
+00:01:10.950 --> 00:01:16.754
+So it's going to grab everything from the state which are all of our metrics up here.
+
+00:01:16.754 --> 00:01:20.939
+Then there's a few different things we want to do in this function.
+
+00:01:20.939 --> 00:01:22.649
+Not all of them we will do right now,
+
+00:01:22.650 --> 00:01:25.290
+so I'll just create a note for ourselves.
+
+00:01:25.290 --> 00:01:28.555
+We want to eventually, we'll update Redux.
+
+00:01:28.555 --> 00:01:32.730
+We also want to navigate to home when we add in navigation.
+
+00:01:32.730 --> 00:01:38.040
+We want to save this information to our database, and then eventually,
+
+00:01:38.040 --> 00:01:41.310
+we are going to want to clear the local notifications so
+
+00:01:41.310 --> 00:01:45.424
+the user doesn't get a notification to submit their information for this day.
+
+00:01:45.424 --> 00:01:50.897
+But right now, what we can do is we want to go ahead and reset our states,
+
+00:01:50.897 --> 00:01:54.450
+and we will just reset all of these back to zero.
+
+00:01:54.450 --> 00:01:59.189
+So I'm actually just going to go ahead and copy this and paste it right there.
+
+00:01:59.189 --> 00:02:02.564
+And so now, whenever we run submit,
+
+00:02:02.564 --> 00:02:04.530
+right now, basically, what's going to happen is,
+
+00:02:04.530 --> 00:02:06.924
+we grab the key which we're not using yet,
+
+00:02:06.924 --> 00:02:10.219
+we also grab all these states which we're again not using,
+
+00:02:10.219 --> 00:02:12.710
+and then we just reset our local state.
+
+00:02:12.710 --> 00:02:14.040
+So now, what I want to do is,
+
+00:02:14.039 --> 00:02:16.139
+let's go ahead and up here,
+
+00:02:16.139 --> 00:02:19.699
+create our submit button.
+
+00:02:19.699 --> 00:02:23.024
+This is going to take in an onPress method.
+
+00:02:23.025 --> 00:02:24.539
+And then what we're going to do is,
+
+00:02:24.539 --> 00:02:28.169
+the UI for this is going to be a touchable component.
+
+00:02:28.169 --> 00:02:29.909
+There's a few different ones you can use.
+
+00:02:29.909 --> 00:02:31.599
+I like using TouchableOpacity,
+
+00:02:31.599 --> 00:02:34.379
+and then we'll also grab text.
+
+00:02:34.379 --> 00:02:37.514
+So we will say TouchableOpacity,
+
+00:02:37.514 --> 00:02:41.969
+and when this component is pressed,
+
+00:02:41.969 --> 00:02:44.975
+notice it's not onClick because we are in React Native,
+
+00:02:44.975 --> 00:02:48.259
+so that might be something that takes a little bit of time to get used to.
+
+00:02:48.259 --> 00:02:50.359
+We will say, whenever this component is pressed,
+
+00:02:50.360 --> 00:02:52.665
+run the onPress function that we're passing in.
+
+00:02:52.664 --> 00:02:54.674
+And then for now, the text,
+
+00:02:54.675 --> 00:02:57.719
+let's just say submit, and then now,
+
+00:02:57.719 --> 00:03:01.215
+what we can do is down here inside of
+
+00:03:01.215 --> 00:03:05.439
+our render method below this object that key section right here,
+
+00:03:05.439 --> 00:03:07.710
+let's go ahead and render our submit button.
+
+00:03:07.710 --> 00:03:15.145
+What we're going to pass it is our submit method that we created right here.
+
+00:03:15.145 --> 00:03:16.170
+So just to test this out,
+
+00:03:16.169 --> 00:03:19.169
+let's go ahead and change bike to 10.
+
+00:03:19.169 --> 00:03:21.089
+We'll change eat to five,
+
+00:03:21.090 --> 00:03:23.520
+and then inside of our render method,
+
+00:03:23.520 --> 00:03:27.344
+let's just go ahead and render, let's say,
+
+00:03:27.344 --> 00:03:31.840
+JSON.stringify sjo we can see the states.
+
+00:03:31.840 --> 00:03:35.670
+And then now, if everything's working correctly, it looks like it is.
+
+00:03:35.669 --> 00:03:39.074
+So here's our state. When we hit submit, what should happen?
+
+00:03:39.074 --> 00:03:42.674
+And just notice, it gets reset to zeros.
+
+00:03:42.675 --> 00:03:43.968
+So before we move on,
+
+00:03:43.967 --> 00:03:46.179
+let me go ahead and delete this stuff,
+
+00:03:46.180 --> 00:03:53.000
+and then we will change our states back to what it should be which is just all zeros.
+

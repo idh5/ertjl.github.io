@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.440
+So instead of having the word you UdaciSlider for our slider,
+
+00:00:04.440 --> 00:00:06.467
+Let's go ahead and build out
+
+00:00:06.467 --> 00:00:11.080
+our UdaciSlider component using react-native slider component.
+
+00:00:11.080 --> 00:00:14.140
+So inside of UdaciSlider,
+
+00:00:14.140 --> 00:00:17.533
+the very first thing we're going to do is we can get rid of text,
+
+00:00:17.533 --> 00:00:20.619
+and we are going to import slider.
+
+00:00:20.620 --> 00:00:23.062
+And then now, if you remember,
+
+00:00:23.062 --> 00:00:26.415
+when we use UdaciSlider, it's down here,
+
+00:00:26.414 --> 00:00:30.445
+what we're doing is we're passing it a value and onChange,
+
+00:00:30.445 --> 00:00:37.049
+and then everything else that is coming from our metaInfo information right here.
+
+00:00:37.049 --> 00:00:38.529
+So what we're going to do is,
+
+00:00:38.530 --> 00:00:40.329
+let's go ahead and restructure all of these.
+
+00:00:40.329 --> 00:00:42.189
+We'll have max, unit,
+
+00:00:42.189 --> 00:00:45.369
+step, value and then onChange.
+
+00:00:45.369 --> 00:00:47.979
+And then now, what we want to do is,
+
+00:00:47.979 --> 00:00:50.204
+let's render our slider component.
+
+00:00:50.204 --> 00:00:52.479
+Again, this is just coming from react-native.
+
+00:00:52.479 --> 00:00:54.579
+It is a built in component,
+
+00:00:54.579 --> 00:00:56.304
+and what we want to pass it,
+
+00:00:56.304 --> 00:01:01.225
+is step as well as the value.
+
+00:01:01.225 --> 00:01:03.097
+And then we will give it a,
+
+00:01:03.097 --> 00:01:08.379
+it's called maximumValue, which we call the max.
+
+00:01:08.379 --> 00:01:13.060
+The minimumValue, we'll just set to zero.
+
+00:01:13.060 --> 00:01:16.540
+And then, onValueChange, that's where we will
+
+00:01:16.540 --> 00:01:20.560
+pass our onChange method that we're passing in.
+
+00:01:20.560 --> 00:01:23.635
+And now, let's go ahead and also render
+
+00:01:23.635 --> 00:01:29.980
+a few other things because what we want to do is show the value,
+
+00:01:29.980 --> 00:01:33.880
+and then we also want to show the unit.
+
+00:01:33.879 --> 00:01:37.329
+So again, the end result of this is going to look like this,
+
+00:01:37.329 --> 00:01:42.394
+where we have our slider as well as our value and the unit.
+
+00:01:42.394 --> 00:01:47.049
+So this whole thing right here is our UdaciSlider component.
+
+00:01:47.049 --> 00:01:50.128
+And that looks good. Let's go ahead and save that,
+
+00:01:50.129 --> 00:01:51.655
+and we'll look at our Apps.
+
+00:01:51.655 --> 00:01:56.900
+I can't find text because we got rid of it for some reason.
+
+00:01:56.900 --> 00:01:58.685
+Now, we are good.
+
+00:01:58.685 --> 00:02:01.600
+So notice as we slide this,
+
+00:02:01.599 --> 00:02:02.939
+either one of these,
+
+00:02:02.939 --> 00:02:10.000
+the value is going up right here and same thing on our Android emulator.
+

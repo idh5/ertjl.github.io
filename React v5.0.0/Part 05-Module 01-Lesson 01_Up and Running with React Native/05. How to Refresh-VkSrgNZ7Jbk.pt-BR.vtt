@@ -1,0 +1,84 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:02.002
+Quando desenvolvemos
+para Web
+
+00:00:02.035 --> 00:00:04.938
+e algo está esquisito,
+é só atualizar a página.
+
+00:00:04.971 --> 00:00:08.475
+Normalmente, isso não é possível
+em desenvolvimento nativo,
+
+00:00:08.508 --> 00:00:10.978
+porque é preciso
+recompilar o código.
+
+00:00:11.011 --> 00:00:12.246
+Com o React Native,
+
+00:00:12.279 --> 00:00:15.682
+como você tem a mesma experiência
+de desenvolvimento que tem na Web,
+
+00:00:15.715 --> 00:00:18.552
+você pode recarregar
+o aplicativo se precisar.
+
+00:00:18.585 --> 00:00:22.022
+Com o simulador de iOS e Android,
+dê dois toques em R.
+
+00:00:22.055 --> 00:00:26.326
+Se estiver no telefone,
+agite-o e aperte "atualizar".
+
+00:00:26.359 --> 00:00:28.028
+Em um vídeo anterior,
+
+00:00:28.061 --> 00:00:30.697
+eu mostrei como abrir
+as ferramentas do desenvolvedor
+
+00:00:30.730 --> 00:00:32.799
+tanto no iOS
+quanto no Android.
+
+00:00:32.832 --> 00:00:37.738
+No iOS, era Cmd+D.
+No Android, era Cmd+M.
+
+00:00:37.771 --> 00:00:39.907
+Uma vez aberto o painel,
+
+00:00:39.940 --> 00:00:44.178
+você tem a opção
+de recarregar o aplicativo,
+
+00:00:44.211 --> 00:00:46.413
+mas também tem um atalho
+para isso,
+
+00:00:46.446 --> 00:00:49.583
+que eu prefiro,
+pois é mais rápido.
+
+00:00:49.616 --> 00:00:52.886
+No iOS, você pode
+pressionar Cmd+R,
+
+00:00:52.919 --> 00:00:56.423
+o que recarregará o aplicativo,
+como você está vendo.
+
+00:00:56.456 --> 00:00:58.392
+E, no Android,
+
+00:00:58.425 --> 00:01:03.330
+o toque duplo em "R"
+recarrega o aplicativo.
+

@@ -1,0 +1,893 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Common React Native Components</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>React vs React Native</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Web vs Native.html">02. Web vs Native</a>
+    </li>
+    <li class="">
+      <a href="03. Common React Native Components.html">03. Common React Native Components</a>
+    </li>
+    <li class="">
+      <a href="04. AsyncStorage.html">04. AsyncStorage</a>
+    </li>
+    <li class="">
+      <a href="05. Redux and React Native.html">05. Redux and React Native</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Common React Native Components</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="common-react-native-components">Common React Native Components</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>React Native Components</p></h3>
+  <video controls>
+  <source src="03. React Native Components-9Nt1tXV3y0c.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. React Native Components-9Nt1tXV3y0c.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. React Native Components-9Nt1tXV3y0c.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. React Native Components-9Nt1tXV3y0c.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>When writing HTML, we're used to using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags to define sections or to contain other elements on the page. In React Native, a similar principle applies, but this time we're using React Native's <code>&lt;View&gt;</code> component to build the application UI. Just like HTML's <code>&lt;div&gt;</code>, <code>&lt;View&gt;</code> components can accommodate several props (e.g. <code>style</code>), and can even be nested inside other <code>&lt;View&gt;</code> components!</p>
+<p><code>&lt;Text&gt;</code> works just how you'd expect, as well. Its main objective is to, by no surprise, render text in the application. Just like <code>&lt;View&gt;</code>, styling and nesting capabilities apply to <code>&lt;Text&gt;</code> components, as well.</p>
+<p>Let's see how they work!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>View and Text</p></h3>
+  <video controls>
+  <source src="03. View and Text-_Qv4NGKNuug.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. View and Text-_Qv4NGKNuug.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. View and Text-_Qv4NGKNuug.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. View and Text-_Qv4NGKNuug.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="in-class-project-overview">In-Class Project Overview</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>App Walkthrough</p></h3>
+  <video controls>
+  <source src="03. App Walkthrough-HZSi_XB3drA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. App Walkthrough-HZSi_XB3drA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. App Walkthrough-HZSi_XB3drA.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. App Walkthrough-HZSi_XB3drA.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="icons">Icons</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Rendering Icons</p></h3>
+  <video controls>
+  <source src="03. Rendering Icons-tYb0-l81x4U.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Rendering Icons-tYb0-l81x4U.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Rendering Icons-tYb0-l81x4U.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Rendering Icons-tYb0-l81x4U.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Right out of the box, <strong>Create React Native App</strong> offers support for thousands of vector icons to use in your applications. Feel free to bookmark and check out Expo's <a href="https://expo.github.io/vector-icons" rel="noopener noreferrer" target="_blank">vector icon directory</a> for a complete list. Whichever icon set you choose, just be sure that it fits the overall look and feel of your application (e.g., using platform-specific icons).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-GetMetricMetaInfo Part 1</p></h3>
+  <video controls>
+  <source src="03. AddEntry-GetMetricMetaInfo Part 1-sH4D8b7MotQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-GetMetricMetaInfo Part 1-sH4D8b7MotQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-GetMetricMetaInfo Part 1-sH4D8b7MotQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-GetMetricMetaInfo Part 1-sH4D8b7MotQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-GetMetricMetaInfo Part 2</p></h3>
+  <video controls>
+  <source src="03. AddEntry-GetMetricMetaInfo Part 2-WtAiZNpKpkM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-GetMetricMetaInfo Part 2-WtAiZNpKpkM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-GetMetricMetaInfo Part 2-WtAiZNpKpkM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-GetMetricMetaInfo Part 2-WtAiZNpKpkM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/c3b244a93a6fdd484cfd9306fc05e0c2095bdbe4" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in the previous two videos.</a></p>
+<blockquote>
+  <h2 id="⚠️--icons-not-rendering-⚠️">⚠️  Icons not Rendering? ⚠️</h2>
+  <p>In the commit above, the <code>color</code> property of the <code>MaterialIcons</code> component is set to <code>white</code>. This will make it seem as if no icons are appearing, since the background color is also white. Feel free to switch this value to <code>black</code> (as the above video demonstrates).</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Time for a check-in! Let's make sure we're on the same page before proceeding.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="64c729e6-8a67-48be-8584-f533163c8558--0">
+        <label for="64c729e6-8a67-48be-8584-f533163c8558--0"><p>I have created the <code>getMetricMetaInfo()</code> helper function</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="64c729e6-8a67-48be-8584-f533163c8558--1">
+        <label for="64c729e6-8a67-48be-8584-f533163c8558--1"><p>I have created a new <code>components</code> folder</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="64c729e6-8a67-48be-8584-f533163c8558--2">
+        <label for="64c729e6-8a67-48be-8584-f533163c8558--2"><p>I have created the <code>AddEntry</code> component</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-Methods</p></h3>
+  <video controls>
+  <source src="03. AddEntry-Methods-DrUMM2IzL9Q.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-Methods-DrUMM2IzL9Q.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-Methods-DrUMM2IzL9Q.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-Methods-DrUMM2IzL9Q.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/f710aa25881665feacf82b100643146b8d011446" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-Render</p></h3>
+  <video controls>
+  <source src="03. AddEntry-Render-xLh5C-hCuSE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-Render-xLh5C-hCuSE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-Render-xLh5C-hCuSE.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-Render-xLh5C-hCuSE.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/3aa3f69d21b8a96b4b9d99f67b655772a479095f" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-DateHeader</p></h3>
+  <video controls>
+  <source src="03. AddEntry-DateHeader-s0X1NrNNVQM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-DateHeader-s0X1NrNNVQM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-DateHeader-s0X1NrNNVQM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-DateHeader-s0X1NrNNVQM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/a7ab15bf3f46d1202d86a2c2fe06e458bd7faffd" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>How are things looking so far?</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="a347de01-4b16-46bd-a454-905b24a385a6--0">
+        <label for="a347de01-4b16-46bd-a454-905b24a385a6--0"><p>I have added local component state to <code>AddEntry</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a347de01-4b16-46bd-a454-905b24a385a6--1">
+        <label for="a347de01-4b16-46bd-a454-905b24a385a6--1"><p>I have created the <code>increment()</code>, <code>decrement</code>, and <code>slide()</code> methods in <code>AddEntry</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a347de01-4b16-46bd-a454-905b24a385a6--2">
+        <label for="a347de01-4b16-46bd-a454-905b24a385a6--2"><p>I have created the <code>UdaciSlider</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a347de01-4b16-46bd-a454-905b24a385a6--3">
+        <label for="a347de01-4b16-46bd-a454-905b24a385a6--3"><p>I have created the <code>UdaciSteppers</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a347de01-4b16-46bd-a454-905b24a385a6--4">
+        <label for="a347de01-4b16-46bd-a454-905b24a385a6--4"><p>I have created the <code>DateHeader</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="a347de01-4b16-46bd-a454-905b24a385a6--5">
+        <label for="a347de01-4b16-46bd-a454-905b24a385a6--5"><p>I have updated the <code>render()</code> method in <code>AddEntry</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="touchables">Touchables</h2>
+<p>Users mainly interact with web apps with <em>clicks</em>. In the world of mobile apps, however, several different <em>touch</em> gestures are used to navigate through the app: tapping a button, swiping to scroll through a list, and so on. </p>
+<p>React Native offers a number of components to handle "tapping gestures," or what is called <strong>Touchables</strong>. Let's take a look at them in detail in the following video:</p>
+<ul>
+<li><code>Button</code></li>
+<li><code>TouchableHighlight</code></li>
+<li><code>TouchableOpacity</code></li>
+<li><code>TouchableNativeFeedback</code></li>
+<li><code>TouchableWithoutFeedback</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Handling Touches</p></h3>
+  <video controls>
+  <source src="03. Handling Touches-u2-Efn5K6eM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Handling Touches-u2-Efn5K6eM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Handling Touches-u2-Efn5K6eM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Handling Touches-u2-Efn5K6eM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-SubmitBtn</p></h3>
+  <video controls>
+  <source src="03. AddEntry-SubmitBtn-7OzFooD9EoM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-SubmitBtn-7OzFooD9EoM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-SubmitBtn-7OzFooD9EoM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-SubmitBtn-7OzFooD9EoM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/fea2dbb62ef103ed0a44307dd7922bdfcab83ef2" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about handling touches in React Native apps? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505169141864" name="394644" id="a1505169141864">
+      <label for="a1505169141864"><p>Unlike Buttons, Touchables already include some basic default styling</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169209396" name="394644" id="a1505169209396">
+      <label for="a1505169209396"><p>Buttons look the same on iOS as they do on Android</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169209972" name="394644" id="a1505169209972">
+      <label for="a1505169209972"><p>Both Buttons and Touchables have access to an <code>onPress</code> prop</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169224540" name="394644" id="a1505169224540">
+      <label for="a1505169224540"><p>Touchables can be nested within Views, and Views can be nested within Touchables</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Both Buttons and Touchables have access to an `onPress` prop</li>
+      <li>Touchables can be nested within Views, and Views can be nested within Touchables</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Slider</p></h3>
+  <video controls>
+  <source src="03. Slider-eLrjkwYIB0g.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Slider-eLrjkwYIB0g.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Slider-eLrjkwYIB0g.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Slider-eLrjkwYIB0g.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-UdaciSlider</p></h3>
+  <video controls>
+  <source src="03. AddEntry-UdaciSlider-Mg8vSOPiQ7M.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-UdaciSlider-Mg8vSOPiQ7M.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-UdaciSlider-Mg8vSOPiQ7M.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-UdaciSlider-Mg8vSOPiQ7M.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/528c326cc0dfafcd74199c7be9cb00d971cc8a23" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-UdaciSteppers</p></h3>
+  <video controls>
+  <source src="03. AddEntry-UdaciSteppers-cb3vt0Gpbjc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-UdaciSteppers-cb3vt0Gpbjc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-UdaciSteppers-cb3vt0Gpbjc.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-UdaciSteppers-cb3vt0Gpbjc.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/f9b86f4b8fd5c2c2c89cfa32552b67f76a48fcf3" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>AddEntry-TextButton</p></h3>
+  <video controls>
+  <source src="03. AddEntry-TextButton-b-AXsdbqZyU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. AddEntry-TextButton-b-AXsdbqZyU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. AddEntry-TextButton-b-AXsdbqZyU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. AddEntry-TextButton-b-AXsdbqZyU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-UdaciFitness-complete/commit/a45a7c370228aaa333840544c508c7d8d9f7da31" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>We've just added lots of functionality to UdaciFitness. Let's check in!</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--0">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--0"><p>I have created the <code>submit()</code> method in <code>AddEntry</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--1">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--1"><p>I have created the <code>SubmitBtn()</code> component and rendered it in <code>AddEntry</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--2">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--2"><p>I have updated the <code>UdaciSlider</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--3">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--3"><p>I have updated the <code>UdaciStepper</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--4">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--4"><p>I have created the <code>TextButton</code> component</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--5">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--5"><p>I have created the <code>reset()</code> method in <code>AddEntry</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--6">
+        <label for="23bd3148-8ccf-4e6d-854d-4cf6a2ad76db--6"><p>I have updated the <code>render()</code> method in <code>AddEntry</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-pause-udacifitness💡">💡 Pause Udacifitness💡</h2>
+</blockquote>
+<blockquote>
+  <p>At this point, let's put the UdaciFitness project on hold for a bit and talk about some other common React Native components. <br />
+  For example, how would you handle lists in a mobile app? What about forms, or images? </p>
+</blockquote>
+<blockquote>
+  <p>Though these are not necessarily used in the in-class project, these components are still great to know as you develop React Native applications.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="lists">Lists</h2>
+<p>React Native comes with a few ways to render lists. You'll probably run into <code>ScrollView</code> and <code>FlatList</code> components most commonly, so let's take a look at both of these in detail!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ScrollView and FlatList</p></h3>
+  <video controls>
+  <source src="03. ScrollView and FlatList-6JgdIxDn8H4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. ScrollView and FlatList-6JgdIxDn8H4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. ScrollView and FlatList-6JgdIxDn8H4.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. ScrollView and FlatList-6JgdIxDn8H4.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-seeing-errors-with-scrollview-💡">💡 Seeing Errors with <code>ScrollView</code>? 💡</h2>
+</blockquote>
+<blockquote>
+  <p>If you're running into errors mentioning that <em><code>ScrollView</code> has no propType…</em>, we recommend reinstalling Create React Native App globally, as well as updating the Expo mobile application. If you still find issues, feel free to check out this <a href="https://github.com/facebook/react-native/issues/16090" rel="noopener noreferrer" target="_blank">GitHub issue</a> on the official React Native repo.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-sectionlist-💡">💡 <code>SectionList</code> 💡</h2>
+</blockquote>
+<blockquote>
+  <p>What if you wanted to add section headers to a list? <code>FlatList</code> doesn’t quite support these, but React Native offers another list component that renders these headers nicely. Feel free to check out <a href="https://facebook.github.io/react-native/docs/sectionlist.html" rel="noopener noreferrer" target="_blank">SectionList</a> in the React Native documentation for a closer look</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match each list type with their role:</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>renders on-screen items, but with headers</p></button>
+  <button class="btn btn-primary"><p>renders only items visible on screen</p></button>
+  <button class="btn btn-primary"><p>renders all child components at once</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>List Type</p>
+      </th>
+      <th>
+        <p>Role</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>ScrollView</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>FlatList</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>SectionList</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>List Type</p>
+        </th>
+        <th>
+          <p>Role</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>SectionList</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>renders on-screen items, but with headers</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>FlatList</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>renders only items visible on screen</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ScrollView</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>renders all child components at once</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="forms">Forms</h2>
+<p>Forms in React Native are just like the forms in React that you already know: the state of input form elements is controlled by the React component that renders that form. That is, form values are held in local component state, making state the "source of truth" for that form.</p>
+<p>React Native provides a few basic components to use in your application's forms. We'll take a look at each of these more closely in the following video:</p>
+<ul>
+<li><code>TextInput</code></li>
+<li><code>KeyboardAvoidingView</code></li>
+<li><code>Slider</code></li>
+<li><code>Switch</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Form Components</p></h3>
+  <video controls>
+  <source src="03. Form Components-WxdnpxrWZkI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Form Components-WxdnpxrWZkI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Form Components-WxdnpxrWZkI.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Form Components-WxdnpxrWZkI.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-oops-onchange-vs-onchangetext-⚠️">⚠️ Oops! (<code>onChange</code> vs. <code>onChangeText</code>) ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>In the above video, <code>App</code> renders a <code>TextInput</code> component with an <code>onChange</code> prop. With the way that the event handler, <code>handleTextChange()</code>, is implemented, the prop should be <code>onChangeText</code>. </p>
+</blockquote>
+<blockquote>
+  <p>While both methods are invoked on value change, <code>onChangeText</code> passes the actual value (text) as the argument. On the other hand, <code>onChange</code> passes the entire event object as an argument. Both are perfectly valid props, but the logic of your event handler will need to be tailored to the prop chosen. For more info, check out <a href="https://stackoverflow.com/questions/44416541/react-native-difference-between-onchange-vs-onchangetext-of-textinput" rel="noopener noreferrer" target="_blank">this post</a> on Stack Overflow.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>KeyboardAvoidingView</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505169696901" name="394650" id="a1505169696901">
+      <label for="a1505169696901"><p>Without <code>KeyboardAvoidingView</code>, the keyboard will "pop up," hiding text inputs</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169702991" name="394650" id="a1505169702991">
+      <label for="a1505169702991"><p><code>KeyboardAvoidingView</code> can wrap around <code>TextInput</code> components</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169703463" name="394650" id="a1505169703463">
+      <label for="a1505169703463"><p><code>KeyboardAvoidingView</code> should always be contained within a <code>View</code> component</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505169703854" name="394650" id="a1505169703854">
+      <label for="a1505169703854"><p>Padding can be adjusted via a prop on <code>KeyboardAvoidingView</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Without `KeyboardAvoidingView`, the keyboard will "pop up," hiding text inputs</li>
+      <li>`KeyboardAvoidingView` can wrap around `TextInput` components</li>
+      <li>Padding can be adjusted via a prop on `KeyboardAvoidingView`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Image</p></h3>
+  <video controls>
+  <source src="03. Image-uxbqKJchzKQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Image-uxbqKJchzKQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Image-uxbqKJchzKQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Image-uxbqKJchzKQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="other-components">Other Components</h2>
+<p>We've just seen some of the most important components built into React Native. These components will get you started with the essential functionalities in the apps that you build -- but the list of available components goes on! Feel free to review the React Native documentation for a <a href="https://facebook.github.io/react-native/docs/components-and-apis.html#components-and-apis" rel="noopener noreferrer" target="_blank">complete list</a>. For starters, we recommend checking out:</p>
+<ul>
+<li><a href="https://facebook.github.io/react-native/docs/activityindicator.html" rel="noopener noreferrer" target="_blank">ActivityIndicator</a></li>
+<li><a href="https://facebook.github.io/react-native/docs/picker.html" rel="noopener noreferrer" target="_blank">Picker</a></li>
+<li><a href="https://facebook.github.io/react-native/docs/webview.html" rel="noopener noreferrer" target="_blank">WebView</a></li>
+<li><a href="https://facebook.github.io/react-native/docs/modal.html" rel="noopener noreferrer" target="_blank">Modal</a></li>
+</ul>
+<p>Note that certain components are also platform-specific! Though you want to build cross-platform components with <em>composition</em>, reusing as much code as possible, it may make sense for certain elements to be different depending on your audience (i.e., iOS vs. Android).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>React Native provides a variety of built-in components for developing mobile applications. While some support basic functionality in an application (e.g., text, images, lists), others offer more specialized functionality (e.g., pulling to refresh, displaying a loading indicator). Feel free to check out <a href="https://facebook.github.io/react-native/docs/components-and-apis.html" rel="noopener noreferrer" target="_blank">Components and APIs</a> in the React Native documentation for an exhaustive list.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. AsyncStorage.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Common React Native Components')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

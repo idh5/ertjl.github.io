@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.004
+If you think about most of the native apps that you use,
+
+00:00:04.004 --> 00:00:06.150
+mostly all of them are really just lists.
+
+00:00:06.150 --> 00:00:08.730
+Spotify, Facebook, all of the most popular apps,
+
+00:00:08.730 --> 00:00:13.164
+are just these huge lists of data that are constantly changing.
+
+00:00:13.164 --> 00:00:15.660
+So, what we're going to do in this video is talk about how we
+
+00:00:15.660 --> 00:00:19.890
+can have performant lists inside of react-native.
+
+00:00:19.890 --> 00:00:22.894
+So, what I have here is this reviews.js file.
+
+00:00:22.894 --> 00:00:27.545
+It's just an array with a bunch of different items in it.
+
+00:00:27.545 --> 00:00:30.600
+And then, we have a getReviews function which just exports,
+
+00:00:30.600 --> 00:00:33.255
+or basically returns, that array.
+
+00:00:33.255 --> 00:00:34.830
+So, inside of our app,
+
+00:00:34.829 --> 00:00:37.384
+what we've done is we've imported getReviews,
+
+00:00:37.384 --> 00:00:41.265
+and then I have this review component here that accepts a name,
+
+00:00:41.265 --> 00:00:43.535
+some text, and an avatar,
+
+00:00:43.534 --> 00:00:46.824
+and then basically just displays that information to the View.
+
+00:00:46.825 --> 00:00:49.530
+So, what we're going to do is walk through the different ways that we can
+
+00:00:49.530 --> 00:00:53.145
+display all of these reviews in our app.
+
+00:00:53.145 --> 00:00:55.650
+So, the first way, and the most obvious way,
+
+00:00:55.649 --> 00:00:57.945
+is to do something like this.
+
+00:00:57.945 --> 00:00:59.700
+Where we come in here, and we say,
+
+00:00:59.700 --> 00:01:03.225
+we've used that map, just as we would do on the web.
+
+00:01:03.225 --> 00:01:05.234
+So, we get a name, a text,
+
+00:01:05.234 --> 00:01:08.010
+and an avatar, and then,
+
+00:01:08.010 --> 00:01:10.950
+we go ahead and just render our review component,
+
+00:01:10.950 --> 00:01:15.420
+passing it a key which is just going to be, let's say, the name,
+
+00:01:15.420 --> 00:01:17.385
+then we can pass it the name,
+
+00:01:17.385 --> 00:01:21.535
+text, and also the avatar.
+
+00:01:21.534 --> 00:01:24.319
+So, this works, kind of.
+
+00:01:24.319 --> 00:01:26.194
+Let's go ahead and look at our apps.
+
+00:01:26.194 --> 00:01:29.039
+So, you'll notice here everything looks fine,
+
+00:01:29.040 --> 00:01:31.500
+but if we go to scroll,
+
+00:01:31.500 --> 00:01:38.790
+you notice we can't scroll because the view is confined to the area on the screen.
+
+00:01:38.790 --> 00:01:40.635
+So, an easy fix we can do for this,
+
+00:01:40.635 --> 00:01:43.170
+is instead of using View,
+
+00:01:43.170 --> 00:01:49.460
+what we can do is we can wrap our list inside of this scroll view component.
+
+00:01:49.459 --> 00:01:51.539
+So, now what we're saying is everything inside of
+
+00:01:51.540 --> 00:01:54.675
+here is going to be a list and it should be able to scroll.
+
+00:01:54.674 --> 00:01:56.459
+So, now, inside of our app,
+
+00:01:56.459 --> 00:01:58.604
+notice here that we can scroll,
+
+00:01:58.605 --> 00:02:04.740
+but the problem with ScrollView is that it's not really that performant.
+
+00:02:04.739 --> 00:02:06.959
+What we're doing is we're rendering
+
+00:02:06.959 --> 00:02:12.034
+each item in this list regardless if the user can see it or not.
+
+00:02:12.034 --> 00:02:13.530
+So, when we're at the top of this view,
+
+00:02:13.530 --> 00:02:16.344
+we're still rendering all of these reviews down here.
+
+00:02:16.344 --> 00:02:18.705
+It would be nice and a little bit more performant,
+
+00:02:18.705 --> 00:02:21.990
+if instead of rendering all of the items we
+
+00:02:21.990 --> 00:02:25.875
+just go ahead and render the items that the user can currently see.
+
+00:02:25.875 --> 00:02:31.020
+And that is where this FlatList component is going to come into play.
+
+00:02:31.020 --> 00:02:32.100
+It's going to do exactly that,
+
+00:02:32.099 --> 00:02:35.784
+just render the items that the user can currently see.
+
+00:02:35.784 --> 00:02:40.259
+So, let's change our scroll view back to just a regular view,
+
+00:02:40.259 --> 00:02:42.000
+and then inside of our view,
+
+00:02:42.000 --> 00:02:45.884
+what we can do is we can render our FlatList component,
+
+00:02:45.884 --> 00:02:48.394
+and we're going to pass it two different things.
+
+00:02:48.395 --> 00:02:49.920
+It needs some data,
+
+00:02:49.919 --> 00:02:53.139
+which we have here as reviews,
+
+00:02:53.139 --> 00:02:54.914
+and it also needs
+
+00:02:54.914 --> 00:02:58.924
+renderItem which is going to be responsible for rendering the actual items.
+
+00:02:58.925 --> 00:03:03.510
+So, what we'll do here, is we will create a renderItem method,
+
+00:03:03.509 --> 00:03:09.774
+and then, I'm just going to copy all of this and delete that.
+
+00:03:09.775 --> 00:03:13.015
+So, now let's go ahead and create renderItem.
+
+00:03:13.014 --> 00:03:15.704
+So, what renderItem is going to receive,
+
+00:03:15.705 --> 00:03:20.335
+is an object with the actual item itself being the thing that we're mapping over.
+
+00:03:20.335 --> 00:03:25.170
+So, each item is going to be a specific review,
+
+00:03:25.169 --> 00:03:26.984
+and then what we want to do,
+
+00:03:26.985 --> 00:03:33.670
+is we want to go ahead and render a review passing in the item.
+
+00:03:33.669 --> 00:03:37.525
+So, now, what we'll see is everything should look the exact same,
+
+00:03:37.526 --> 00:03:39.885
+and it really scrolls the same,
+
+00:03:39.884 --> 00:03:41.639
+but when you're using this app on
+
+00:03:41.639 --> 00:03:44.444
+an actual phone and you're scrolling through this long list,
+
+00:03:44.444 --> 00:03:48.854
+you're going to notice a huge performance gain because again, with FlatList,
+
+00:03:48.854 --> 00:03:51.609
+instead of rendering the entire list,
+
+00:03:51.610 --> 00:03:55.090
+is we're just rendering the specific items that the user can currently see.
+

@@ -1,0 +1,173 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:02.733
+Quando seus simuladores
+estiverem ativados
+
+00:00:02.767 --> 00:00:05.900
+e o Create React Native App
+estiver instalado,
+
+00:00:05.933 --> 00:00:08.967
+o próximo passo é
+programar o aplicativo.
+
+00:00:09.000 --> 00:00:11.133
+Vamos para o terminal
+
+00:00:11.167 --> 00:00:13.900
+executar
+"Create React Native App"
+
+00:00:13.933 --> 00:00:15.833
+e o nome do aplicativo.
+
+00:00:15.867 --> 00:00:19.367
+Chamaremos o nosso app
+do curso de "UdaciFitness".
+
+00:00:19.400 --> 00:00:22.033
+É bem parecido
+com o Create React App,
+
+00:00:22.067 --> 00:00:25.733
+em que temos "Create React App",
+ou "Create React Native App",
+
+00:00:25.767 --> 00:00:28.833
+e o nome do aplicativo
+em que estamos trabalhando.
+
+00:00:29.467 --> 00:00:33.200
+Terminando isso, perceba
+que temos comandos a executar.
+
+00:00:33.233 --> 00:00:36.433
+O que eu vou fazer,
+como diz aqui,
+
+00:00:36.467 --> 00:00:39.233
+é entrar na pasta
+do aplicativo...
+
+00:00:39.267 --> 00:00:42.067
+e abri-lo
+
+00:00:42.100 --> 00:00:44.100
+para termos
+todo o código aqui.
+
+00:00:44.133 --> 00:00:47.733
+Apenas para mostrar a você,
+usando "yarn",
+
+00:00:47.767 --> 00:00:51.333
+vamos executar "yarn start"
+para iniciar o app.
+
+00:00:51.367 --> 00:00:54.433
+Enquanto isso, deixe-me mostrar
+como está o código.
+
+00:00:54.467 --> 00:00:57.667
+Veja que temos
+nosso arquivo principal, App.js.
+
+00:00:57.700 --> 00:01:00.167
+Se você tiver experiência
+com o React, e deve ter,
+
+00:01:00.200 --> 00:01:01.833
+verá que lembra muito.
+
+00:01:01.867 --> 00:01:03.567
+Temos o componente "View",
+
+00:01:03.600 --> 00:01:08.800
+alguns componentes "Text",
+que contêm textos,
+
+00:01:08.833 --> 00:01:12.733
+e o resto é
+basicamente configuração.
+
+00:01:12.767 --> 00:01:15.733
+Agora, note que,
+quando o app é inicializado,
+
+00:01:15.767 --> 00:01:17.600
+temos algumas opções.
+
+00:01:17.633 --> 00:01:23.633
+Pressionando A, o app é rodado
+no emulador de Android.
+
+00:01:23.667 --> 00:01:26.767
+Pressionando Q, aparece o QR code,
+que está aqui.
+
+00:01:26.800 --> 00:01:28.767
+Se você tiver o app
+do Expo no celular,
+
+00:01:28.800 --> 00:01:30.500
+é só escanear.
+
+00:01:30.533 --> 00:01:34.267
+Enquanto seu telefone estiver
+na mesma rede do computador,
+
+00:01:34.300 --> 00:01:37.567
+o app ficará rodando
+no seu telefone.
+
+00:01:37.600 --> 00:01:40.067
+Podemos apertar "R"
+para reiniciar o empacotador,
+
+00:01:40.100 --> 00:01:41.600
+"D" para o modo desenvolvedor
+
+00:01:41.633 --> 00:01:44.633
+ou "I" - sinto falta disso -,
+para abrir o simulador de iOS.
+
+00:01:44.667 --> 00:01:49.367
+Vamos pressionar "I"
+e inicializar o simulador iOS.
+
+00:01:49.400 --> 00:01:50.733
+E, no meu desktop,
+
+00:01:50.767 --> 00:01:55.767
+note que temos o simulador iOS
+com o nosso texto.
+
+00:01:55.800 --> 00:01:58.300
+O legal é que,
+se eu mudar o texto,
+
+00:01:58.333 --> 00:01:59.333
+vamos alterar aqui.
+
+00:02:00.433 --> 00:02:03.033
+Veja que é alterado
+automaticamente.
+
+00:02:03.067 --> 00:02:06.800
+E agora também quero rodar
+no meu simulador de Android
+
+00:02:06.833 --> 00:02:08.267
+usando Genymotion.
+
+00:02:08.300 --> 00:02:11.267
+Dentro do terminal,
+vou pressionar "A".
+
+00:02:12.733 --> 00:02:17.867
+E agora temos o código rodando
+no nosso emulador Android também.
+

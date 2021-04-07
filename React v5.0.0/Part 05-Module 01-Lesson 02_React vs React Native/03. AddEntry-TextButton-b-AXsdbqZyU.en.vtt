@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.049
+Now what we want to do is if the user has already logged their information for the day,
+
+00:00:05.049 --> 00:00:07.719
+what we want to do is make sure that we show this screen where we say,
+
+00:00:07.719 --> 00:00:09.234
+"You've already logged your information."
+
+00:00:09.234 --> 00:00:12.519
+And we give them the option to reset their information.
+
+00:00:12.519 --> 00:00:16.609
+This is iOS and this is Android over here on the right.
+
+00:00:16.609 --> 00:00:20.839
+So the very first thing we'll do is inside of add entry,
+
+00:00:20.839 --> 00:00:25.179
+let's go ahead and import a few things.
+
+00:00:25.179 --> 00:00:28.239
+First, let's make sure we
+
+00:00:28.239 --> 00:00:33.464
+import Ionicons because that's the icon component we'll be using.
+
+00:00:33.465 --> 00:00:41.070
+And then, what we will do is down here inside of our render method is,
+
+00:00:41.070 --> 00:00:47.984
+let's just say if.this.props.alreadyLogged and we will eventually pass in this as a prop.
+
+00:00:47.984 --> 00:00:52.379
+But we will set it up right now just so that when we do, it's all ready for us.
+
+00:00:52.380 --> 00:00:54.975
+So, if we've already logged our information,
+
+00:00:54.975 --> 00:00:59.939
+then what we want to return is a view inside of this view.
+
+00:00:59.939 --> 00:01:03.509
+Let's go ahead and render our Ionicons icon.
+
+00:01:03.509 --> 00:01:12.013
+Let's say, ios-happy-outline and then the size we will say 100.
+
+00:01:12.013 --> 00:01:17.055
+And then under this we will have a text that says,
+
+00:01:17.055 --> 00:01:20.775
+"You already logged your information for today."
+
+00:01:20.775 --> 00:01:27.155
+And then what we want to do is we want to have right here a reset button.
+
+00:01:27.155 --> 00:01:29.885
+So that way we can hit this button and it'll reset.
+
+00:01:29.885 --> 00:01:32.725
+This is going to be a pretty common component.
+
+00:01:32.724 --> 00:01:34.319
+You'll notice that this button is right here,
+
+00:01:34.319 --> 00:01:36.144
+it's just a text button.
+
+00:01:36.144 --> 00:01:38.909
+So what we'll do is we will actually create this because we're
+
+00:01:38.909 --> 00:01:42.364
+going to use this text button a few other places in our app.
+
+00:01:42.364 --> 00:01:45.149
+So let's just call it textbutton.js.
+
+00:01:45.150 --> 00:01:46.650
+It's going to be a button,
+
+00:01:46.650 --> 00:01:48.765
+so we'll need a few things,
+
+00:01:48.765 --> 00:01:53.855
+text as well as we'll use TouchableOpacity both coming from React Native.
+
+00:01:53.855 --> 00:01:56.969
+It is going to be a stateless functional component
+
+00:01:56.969 --> 00:02:00.629
+and it is going to receive a few different things.
+
+00:02:00.629 --> 00:02:04.569
+Children. And then onPress.
+
+00:02:04.569 --> 00:02:08.234
+We want to return TouchableOpacity onPress,
+
+00:02:08.235 --> 00:02:10.760
+we're obviously going to call onPress that we're passing in.
+
+00:02:10.759 --> 00:02:13.019
+And then what we'll do here is we will just render.
+
+00:02:13.020 --> 00:02:18.350
+"Children", wrapping it in a text component.
+
+00:02:18.349 --> 00:02:20.400
+So, now, inside of add entry,
+
+00:02:20.400 --> 00:02:26.265
+let's go ahead and import that and then now what we want to do is down here,
+
+00:02:26.264 --> 00:02:31.154
+right here, let's go ahead and render our text button.
+
+00:02:31.155 --> 00:02:36.824
+Inside of it, let's just go ahead and say reset and then now what we need to do,
+
+00:02:36.824 --> 00:02:40.254
+we need to pass it a method to run whenever it's clicked.
+
+00:02:40.254 --> 00:02:46.074
+So what we can do is let's go ahead and add a reset method here.
+
+00:02:46.074 --> 00:02:49.544
+We will grab the key for today,
+
+00:02:49.544 --> 00:02:52.649
+which again we can get by calling timeToString.
+
+00:02:52.650 --> 00:02:53.965
+And then again, what we're going to do,
+
+00:02:53.965 --> 00:02:56.340
+just like we're doing up here in submit,
+
+00:02:56.340 --> 00:02:58.240
+eventually, we'll do a few other things.
+
+00:02:58.240 --> 00:03:01.365
+Let's just make a note to ourselves,
+
+00:03:01.365 --> 00:03:03.870
+so we want to update Redux.
+
+00:03:03.870 --> 00:03:08.420
+We then want to route to home and we then want to update our database.
+
+00:03:08.419 --> 00:03:11.064
+So all of those we will do in a future lesson.
+
+00:03:11.064 --> 00:03:19.979
+But now we have reset that we can then pass to our text button component.
+
+00:03:19.979 --> 00:03:21.179
+So now this looks good,
+
+00:03:21.180 --> 00:03:22.650
+just to test this is working,
+
+00:03:22.650 --> 00:03:27.030
+instead of saying, if this.props.alreadyLogged let's just change this to true.
+
+00:03:27.030 --> 00:03:29.870
+Looks like we have a syntax error on line 90,
+
+00:03:29.870 --> 00:03:33.860
+that should be equals.
+
+00:03:34.430 --> 00:03:39.490
+And it looks like we are getting another issue where we probably have
+
+00:03:39.490 --> 00:03:46.240
+a typo name ios-happy-outline. There we go.
+
+00:03:46.240 --> 00:03:48.365
+Alright, so we have this view.
+
+00:03:48.365 --> 00:03:50.495
+Now when we hit reset nothing happens,
+
+00:03:50.495 --> 00:03:53.000
+but eventually it will happen.
+
+00:03:53.000 --> 00:03:58.189
+So let's just go ahead before we end and change this back to this.props.alreadyLogged.
+

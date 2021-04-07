@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.254
+When you're developing for the web,
+
+00:00:02.254 --> 00:00:07.205
+you automatically have access to every element in the HTML specification.
+
+00:00:07.205 --> 00:00:09.695
+This includes elements like div and span.
+
+00:00:09.695 --> 00:00:12.365
+In React Native, it is similar,
+
+00:00:12.365 --> 00:00:15.964
+except instead of using elements provided by the HTML spec,
+
+00:00:15.964 --> 00:00:19.448
+you'll use components provided by React Native.
+
+00:00:19.449 --> 00:00:21.945
+Components like view and text.
+
+00:00:21.945 --> 00:00:23.870
+In this lesson, we'll be covering some of
+
+00:00:23.870 --> 00:00:27.365
+the most common React Native components you might come across.
+
+00:00:27.364 --> 00:00:31.939
+Some of these we'll use in the Udacity fitness project, others we won't.
+
+00:00:31.940 --> 00:00:33.289
+But they're all good to know.
+

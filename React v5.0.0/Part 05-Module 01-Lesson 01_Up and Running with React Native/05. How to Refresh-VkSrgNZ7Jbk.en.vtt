@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.240
+When we're developing for the web and something is weird,
+
+00:00:03.240 --> 00:00:05.089
+you can just refresh.
+
+00:00:05.089 --> 00:00:07.469
+Typically, this isn't something you can do with
+
+00:00:07.469 --> 00:00:10.919
+Native development because you need to recompile your code.
+
+00:00:10.919 --> 00:00:13.080
+With React Native, because you get
+
+00:00:13.080 --> 00:00:15.835
+the same development experience you're used to on the web,
+
+00:00:15.835 --> 00:00:18.609
+you can also refresh your app if you need to.
+
+00:00:18.609 --> 00:00:20.754
+With the iOS and Android simulator,
+
+00:00:20.754 --> 00:00:22.349
+just double tap R,
+
+00:00:22.350 --> 00:00:23.875
+and if you're on your phone,
+
+00:00:23.875 --> 00:00:26.539
+just shake it, then press refresh.
+
+00:00:26.539 --> 00:00:28.289
+In a previous video,
+
+00:00:28.289 --> 00:00:32.729
+I showed you how to open up the developer tools on both iOS and Android.
+
+00:00:32.729 --> 00:00:36.059
+On iOS, it was command D, and on Android,
+
+00:00:36.060 --> 00:00:39.998
+it was command M. And once you open up the developer tools,
+
+00:00:39.997 --> 00:00:44.125
+you have the option to reload or to refresh your application,
+
+00:00:44.125 --> 00:00:46.710
+but there's actually a shortcut for doing this and
+
+00:00:46.710 --> 00:00:49.554
+I prefer the shortcut because it's a little bit quicker.
+
+00:00:49.554 --> 00:00:51.435
+On iOS, what you can do,
+
+00:00:51.435 --> 00:00:56.630
+is hit command R and that will go ahead and refresh the app, as you're seeing there.
+
+00:00:56.630 --> 00:00:58.455
+And on Android, what you can do,
+
+00:00:58.454 --> 00:01:03.000
+is double tap R and that will refresh the application on Android.
+

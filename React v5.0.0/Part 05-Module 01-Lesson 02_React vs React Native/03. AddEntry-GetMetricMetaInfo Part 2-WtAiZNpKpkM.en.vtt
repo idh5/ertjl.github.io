@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.870
+So now that we have our getMetricMetaInfo function all set up,
+
+00:00:04.870 --> 00:00:06.724
+let's go ahead and use it.
+
+00:00:06.724 --> 00:00:09.369
+This brings us to building our very first component.
+
+00:00:09.369 --> 00:00:13.344
+So let's go ahead and make a new folder here. We'll call it components.
+
+00:00:13.345 --> 00:00:14.815
+And inside of here,
+
+00:00:14.814 --> 00:00:17.954
+let's create an AddEntry.js file.
+
+00:00:17.954 --> 00:00:21.195
+And so we are going to import React from React.
+
+00:00:21.195 --> 00:00:23.399
+Let's also grab components,
+
+00:00:23.399 --> 00:00:26.384
+as we've seen just in normal react on the web.
+
+00:00:26.385 --> 00:00:27.600
+But now what we want to do,
+
+00:00:27.600 --> 00:00:28.740
+is let's go ahead and grab,
+
+00:00:28.739 --> 00:00:33.420
+View and Text from React Native and then let's go ahead
+
+00:00:33.420 --> 00:00:38.225
+and grab that getMetricMetaInfo function that we just barely built,
+
+00:00:38.225 --> 00:00:43.245
+that lives inside of utils/helpers and
+
+00:00:43.244 --> 00:00:48.794
+then now our very first to React Native component is going to be this AddEntry component,
+
+00:00:48.795 --> 00:00:51.880
+which is going to extend components.
+
+00:00:51.880 --> 00:00:56.175
+And for now, let's just go ahead and return a UI
+
+00:00:56.174 --> 00:01:00.869
+that has a view and then we will give it a text of AddEntry,
+
+00:01:00.869 --> 00:01:02.625
+just so we know that it's working.
+
+00:01:02.625 --> 00:01:04.939
+And then now inside of our app file,
+
+00:01:04.939 --> 00:01:06.390
+first let's go ahead and
+
+00:01:06.390 --> 00:01:09.905
+delete a lot of the stuff that we're not going to be using for right now.
+
+00:01:09.905 --> 00:01:11.849
+So let's delete all of this,
+
+00:01:11.849 --> 00:01:15.839
+as well as the style.
+
+00:01:15.840 --> 00:01:18.350
+And then we can delete both of these.
+
+00:01:18.349 --> 00:01:23.189
+And then to be controversial let's delete the semi colons.
+
+00:01:23.189 --> 00:01:26.039
+Alright, so now what I want to do real quick is let's import
+
+00:01:26.040 --> 00:01:29.915
+that AddEntry component that we just made.
+
+00:01:29.915 --> 00:01:37.065
+It's going to be coming from component/AddEntry and then now let's render it.
+
+00:01:37.064 --> 00:01:40.075
+So what we should see if everything's working correctly.
+
+00:01:40.075 --> 00:01:41.495
+Looks like we have a typo here.
+
+00:01:41.495 --> 00:01:44.670
+So, unexpected token 142 on helper's.
+
+00:01:44.670 --> 00:01:49.560
+So util/helpers 142, let's unminimize this,
+
+00:01:49.560 --> 00:01:54.090
+and down here I think what our issue is,
+
+00:01:54.090 --> 00:01:56.189
+is we have type here instead of typeof.
+
+00:01:56.189 --> 00:01:58.780
+Type obviously isn't a thing.
+
+00:01:58.780 --> 00:02:00.969
+So now go ahead and see if this works.
+
+00:02:00.969 --> 00:02:03.329
+Typically with iOS you have to refresh it.
+
+00:02:03.329 --> 00:02:05.174
+So you'll notice now up here,
+
+00:02:05.174 --> 00:02:07.489
+behind the status bar, we have this text.
+
+00:02:07.489 --> 00:02:11.144
+So the status bar is hiding are our AddEntry text but eventually we'll fix that.
+
+00:02:11.145 --> 00:02:12.719
+So it looks like our component is working.
+
+00:02:12.719 --> 00:02:15.254
+So let's go ahead and just test one more thing.
+
+00:02:15.254 --> 00:02:18.389
+What I want to do here is instead of having AddEntry,
+
+00:02:18.389 --> 00:02:19.974
+so we can delete text.
+
+00:02:19.974 --> 00:02:23.129
+Let's go ahead and show one of the icons from
+
+00:02:23.129 --> 00:02:27.430
+our getMetricMetaInfo function that we created earlier.
+
+00:02:27.430 --> 00:02:28.605
+So let's invoke this,
+
+00:02:28.604 --> 00:02:29.935
+let's pass it bike,
+
+00:02:29.935 --> 00:02:32.550
+just so it has the specific metric.
+
+00:02:32.550 --> 00:02:35.435
+And then we will say, I believe it was getIcon.
+
+00:02:35.435 --> 00:02:42.120
+Yes. So then we can say getIcon then now what we should see up here is we have the bike.
+

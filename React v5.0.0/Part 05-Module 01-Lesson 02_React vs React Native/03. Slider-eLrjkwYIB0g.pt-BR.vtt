@@ -1,0 +1,122 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:04.133
+No Native, o slider é um ótimo jeito
+do usuário selecionar
+
+00:00:04.167 --> 00:00:08.367
+entre uma quantidade
+alta e baixa.
+
+00:00:08.400 --> 00:00:14.067
+Sorte a nossa que o React Native
+já vem com um componente de slider.
+
+00:00:14.100 --> 00:00:17.800
+Vamos então adicionar
+um estado ao nosso componente.
+
+00:00:17.833 --> 00:00:21.067
+Escrevemos value igual a 0.
+
+00:00:21.100 --> 00:00:24.433
+Agora podemos renderizar
+o componente de slider
+
+00:00:24.467 --> 00:00:27.300
+e vamos passar
+algumas propriedades diferentes.
+
+00:00:27.333 --> 00:00:33.000
+A primeira será o valor,
+que virá de this.state.value.
+
+00:00:33.033 --> 00:00:36.967
+Em seguida, vamos dizer ao slider
+como atualizar o valor.
+
+00:00:37.000 --> 00:00:39.400
+Escrevemos onValueChange,
+
+00:00:39.433 --> 00:00:44.367
+e isto será uma função
+que vai receber o novo valor.
+
+00:00:44.400 --> 00:00:47.133
+Podemos chamar this.setState
+
+00:00:47.333 --> 00:00:51.100
+e depois atualizar esse novo valor.
+
+00:00:51.133 --> 00:00:53.633
+Salvamos isto...
+
+00:00:53.667 --> 00:00:58.800
+Vamos adicionar um texto
+aqui embaixo e escrever "Value",
+
+00:00:58.833 --> 00:01:02.567
+para vermos o valor atual
+nestes estados.
+
+00:01:02.967 --> 00:01:07.533
+No Android fica assim,
+e no iOS fica assim.
+
+00:01:07.567 --> 00:01:12.067
+No React Native temos componentes
+para ambas as plataformas,
+
+00:01:12.100 --> 00:01:16.433
+com a mesma cara, de acordo
+com a plataforma em que estão.
+
+00:01:16.467 --> 00:01:18.767
+E se nós quisermos adicionar
+
+00:01:18.800 --> 00:01:21.667
+um valor mínimo e máximo
+para o nosso slider?
+
+00:01:21.700 --> 00:01:24.333
+Podemos adicionar,
+como você deve ter adivinhado,
+
+00:01:24.366 --> 00:01:26.967
+um minimumValue.
+
+00:01:27.000 --> 00:01:30.000
+Digamos que,
+o mínimo seja -10,
+
+00:01:30.033 --> 00:01:33.967
+e que o valor máximo seja 10.
+
+00:01:34.000 --> 00:01:38.333
+Veja que, como começamos no 0,
+estamos no meio,
+
+00:01:38.367 --> 00:01:40.633
+mas podemos ir do -10 ao 10.
+
+00:01:40.667 --> 00:01:44.333
+A última coisa é, se não quisermos
+estes números decimais,
+
+00:01:44.367 --> 00:01:46.600
+podemos colocar
+números inteiros.
+
+00:01:46.633 --> 00:01:50.000
+Escrevemos step e 1.
+
+00:01:50.033 --> 00:01:52.500
+Agora, sempre que movermos
+o slider,
+
+00:01:53.267 --> 00:01:58.167
+ele vai ajustar o número de 1 em 1,
+independentemente da plataforma.
+

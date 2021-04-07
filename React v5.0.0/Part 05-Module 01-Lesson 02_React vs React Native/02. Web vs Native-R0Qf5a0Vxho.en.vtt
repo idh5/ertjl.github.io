@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.345
+From a technological standpoint,
+
+00:00:02.345 --> 00:00:04.860
+React Native does a great job of letting you take
+
+00:00:04.860 --> 00:00:08.324
+your experiences on the web to build native applications.
+
+00:00:08.324 --> 00:00:11.429
+What's critical to understand is that the experiences you're
+
+00:00:11.429 --> 00:00:15.509
+developing for on mobile are fundamentally different than on the web.
+
+00:00:15.509 --> 00:00:18.179
+Not only are native apps different than web apps,
+
+00:00:18.179 --> 00:00:21.509
+but iOS apps are different than Android apps.
+
+00:00:21.510 --> 00:00:26.295
+If you took an Android Style app and put it on iOS, it would just feel weird.
+
+00:00:26.295 --> 00:00:29.910
+In this lesson, we're going to cover the subtle differences you need to watch
+
+00:00:29.910 --> 00:00:33.259
+out for when building for the web, iOS and Android.
+
