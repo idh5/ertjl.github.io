@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.150
+Now, that we have set up our action creator for handling the initial data,
+
+00:00:05.150 --> 00:00:08.880
+we have created all of our different actions that need to be dispatched,
+
+00:00:08.880 --> 00:00:11.330
+and we've also set up our reducers,
+
+00:00:11.330 --> 00:00:13.365
+which will handle those dispatches.
+
+00:00:13.365 --> 00:00:15.940
+The next thing we need to do is actually invoke
+
+00:00:15.939 --> 00:00:19.059
+handleInitialData when our application loads.
+
+00:00:19.059 --> 00:00:23.004
+So, what we'll do is inside of our components folder,
+
+00:00:23.004 --> 00:00:24.919
+inside of app.JS here,
+
+00:00:24.920 --> 00:00:27.780
+what we want to do is import a few different things.
+
+00:00:27.780 --> 00:00:29.855
+We will grab connect,
+
+00:00:29.855 --> 00:00:32.750
+which is going to come from react-redux,
+
+00:00:32.750 --> 00:00:35.670
+and then we want to grab these function.
+
+00:00:35.670 --> 00:00:40.969
+I just barely talked about handleInitialData coming from action slash shared.
+
+00:00:40.969 --> 00:00:44.299
+Then, now what we want to do is,
+
+00:00:44.299 --> 00:00:47.709
+when this component mounts,
+
+00:00:47.710 --> 00:00:53.535
+we want to dispatch the invocation of our handleInitialData action creator.
+
+00:00:53.534 --> 00:00:55.909
+But in order to get access to dispatch,
+
+00:00:55.909 --> 00:01:00.939
+what we need to do is we need to connect our app component, so we can just connect it.
+
+00:01:00.939 --> 00:01:03.049
+Notice, we don't need anything from the state.
+
+00:01:03.049 --> 00:01:06.944
+So, we just leave the first invocation blank.
+
+00:01:06.944 --> 00:01:09.509
+Then now, inside of componentDidMount,
+
+00:01:09.510 --> 00:01:12.945
+what we can do is call this.props.dispatch,
+
+00:01:12.944 --> 00:01:17.219
+and we can invoke our handleInitialData action creator.
+
+00:01:17.219 --> 00:01:20.385
+So, now if we don't have a typo anywhere,
+
+00:01:20.385 --> 00:01:22.340
+what we should see if we refresh
+
+00:01:22.340 --> 00:01:27.620
+our application is the UI is still the same because we haven't changed that,
+
+00:01:27.620 --> 00:01:31.300
+but now, you'll notice inside of our console because we set up our logger middleware,
+
+00:01:31.299 --> 00:01:34.340
+we are now seeing all of the actions that are dispatched.
+
+00:01:34.340 --> 00:01:39.259
+What the new state of our store looks like is we have our auth.user,
+
+00:01:39.259 --> 00:01:41.590
+we have all of the different tweets,
+
+00:01:41.590 --> 00:01:44.630
+and we also have all of the different users.
+
+00:01:44.629 --> 00:01:49.144
+So, now that we actually have the initial data we need to render our application,
+
+00:01:49.144 --> 00:01:53.489
+what we'll do in the next videos is we will start building out the main view in our app,
+
+00:01:53.489 --> 00:01:57.269
+which is going to be this dashboard view.
+

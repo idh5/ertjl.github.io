@@ -1,0 +1,511 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.233 --> 00:00:03.570
+A única View que falta
+em nosso aplicativo
+
+00:00:03.603 --> 00:00:06.973
+é a visualização do tuíte,
+quando você clicar em um tuíte.
+
+00:00:07.007 --> 00:00:08.942
+Note que temos
+o próprio tuíte.
+
+00:00:08.975 --> 00:00:11.945
+E nós podemos responder
+a este tuíte.
+
+00:00:11.978 --> 00:00:15.949
+Mas se clicarmos em um tuíte
+que tenha várias respostas,
+
+00:00:15.982 --> 00:00:18.818
+note que receberemos
+o próprio tuíte,
+
+00:00:18.852 --> 00:00:20.553
+a possibilidade de resposta
+
+00:00:20.587 --> 00:00:24.324
+e todas as respostas
+a este tuíte original.
+
+00:00:24.357 --> 00:00:26.626
+Podemos notar
+que React Router
+
+00:00:26.659 --> 00:00:30.030
+é o que vai renderizar
+este componente.
+
+00:00:30.063 --> 00:00:33.967
+E vamos entender a ideia do tuíte
+usando um parâmetro de URL aqui.
+
+00:00:34.132 --> 00:00:36.836
+Dentro da nossa pasta
+de componentes,
+
+00:00:36.870 --> 00:00:41.007
+vamos criar um componente
+chamado "TweetPage".
+
+00:00:41.767 --> 00:00:44.611
+Vamos importar os suspeitos
+de sempre:
+
+00:00:44.644 --> 00:00:46.880
+React e Component de react.
+
+00:00:51.818 --> 00:00:54.988
+Primeiro nós vamos renderizar
+um div.
+
+00:00:56.374 --> 00:00:59.292
+E podemos exportar isto.
+
+00:00:59.325 --> 00:01:01.561
+Primeiro vamos renderizar
+TWEET PAGE.
+
+00:01:01.594 --> 00:01:04.030
+Para garantir
+que está funcionando,
+
+00:01:04.064 --> 00:01:06.097
+como fizemos
+com os outros componentes,
+
+00:01:06.130 --> 00:01:08.802
+vamos ao nosso arquivo App.js
+
+00:01:08.835 --> 00:01:12.439
+e importar a TweetPage
+de TweetPage.
+
+00:01:12.472 --> 00:01:14.541
+Assim, em vez de renderizar
+NewTweet aqui,
+
+00:01:14.574 --> 00:01:16.776
+vamos renderizar
+o componente TweetPage.
+
+00:01:16.810 --> 00:01:18.244
+Como eu mencionei antes,
+
+00:01:18.278 --> 00:01:21.748
+quando o React Router renderiza
+seu componente,
+
+00:01:21.781 --> 00:01:25.452
+ele passa para o componente
+o parâmetro de URL específico,
+
+00:01:25.485 --> 00:01:28.288
+como match.params.id.
+
+00:01:28.321 --> 00:01:30.890
+Como ainda não estamos usando
+o React Router,
+
+00:01:30.924 --> 00:01:32.425
+vamos "falsificá-lo".
+
+00:01:32.459 --> 00:01:34.627
+Vamos dar a ele
+um match prop,
+
+00:01:34.661 --> 00:01:37.564
+que é um objeto que tem
+uma propriedade params,
+
+00:01:37.597 --> 00:01:38.665
+que tem uma id.
+
+00:01:38.698 --> 00:01:42.032
+Agora precisamos
+de uma das ids
+
+00:01:42.100 --> 00:01:45.205
+dos tuítes
+dentro do aplicativo.
+
+00:01:45.436 --> 00:01:47.572
+Vamos pegar uma destas.
+
+00:01:50.643 --> 00:01:52.812
+Podemos pegar esta aqui.
+
+00:01:56.516 --> 00:01:59.052
+A id vai ser passada
+aos componentes.
+
+00:01:59.085 --> 00:02:01.222
+Assim, ao adicionarmos
+o React Router,
+
+00:02:01.289 --> 00:02:03.020
+não precisaremos mudar nada,
+
+00:02:03.067 --> 00:02:06.593
+porque match.params.id
+já terá sido passado para nós.
+
+00:02:06.626 --> 00:02:10.263
+Dentro de TweetPage,
+precisamos descobrir
+
+00:02:10.296 --> 00:02:15.001
+de que dados da Store Redux
+esta página precisa.
+
+00:02:15.035 --> 00:02:17.070
+Vamos importar react-redux.
+
+00:02:17.796 --> 00:02:21.274
+Precisamos conectar
+aqui embaixo.
+
+00:02:21.307 --> 00:02:24.911
+Então o que iremos exportar
+deste arquivo, ou deste módulo,
+
+00:02:24.944 --> 00:02:26.846
+será o componente conectado.
+
+00:02:27.981 --> 00:02:29.816
+Então temos mapStateToProps.
+
+00:02:29.849 --> 00:02:32.428
+Agora nós vamos pegar
+
+00:02:32.462 --> 00:02:35.989
+authedUser, tweets e users.
+
+00:02:36.022 --> 00:02:39.059
+O segundo argumento
+para mapStateToProps
+
+00:02:39.092 --> 00:02:41.995
+será qualquer prop passado
+para o componente.
+
+00:02:42.028 --> 00:02:43.363
+Então podemos pegá-los.
+
+00:02:43.627 --> 00:02:48.568
+Precisamos pegar a ID do componente
+ou do tuíte que vamos renderizar.
+
+00:02:48.601 --> 00:02:53.740
+Podemos pegá-la
+de props.match.params.
+
+00:02:53.773 --> 00:02:56.009
+Por enquanto,
+ela está vindo de nós,
+
+00:02:56.042 --> 00:02:57.711
+mas quando adicionarmos
+o React Router,
+
+00:02:57.744 --> 00:02:59.446
+ela vai vir do React Router.
+
+00:02:59.479 --> 00:03:03.450
+Agora os dados que queremos passar
+para o componente:
+
+00:03:03.483 --> 00:03:05.218
+queremos a id,
+
+00:03:05.251 --> 00:03:07.887
+que será a id do tuíte
+que vamos renderizar.
+
+00:03:07.921 --> 00:03:10.857
+E qualquer informação
+sobre as replies,
+
+00:03:10.890 --> 00:03:13.993
+porque temos que mostrar,
+como eu disse antes,
+
+00:03:14.027 --> 00:03:17.297
+qualquer resposta
+para o tuíte aqui.
+
+00:03:17.330 --> 00:03:19.966
+Vamos escrever que,
+
+00:03:19.999 --> 00:03:24.971
+se não existe um tuíte
+com esta id,
+
+00:03:25.005 --> 00:03:27.340
+a resposta será
+um array vazio.
+
+00:03:27.374 --> 00:03:28.742
+Mas se existe,
+
+00:03:28.775 --> 00:03:32.645
+vamos escrever tweets[id],
+que será o tuíte individual.
+
+00:03:32.679 --> 00:03:37.252
+Ele vai ter uma propriedade reply,
+que é um array.
+
+00:03:37.286 --> 00:03:38.683
+Então podemos usar .sort
+
+00:03:38.684 --> 00:03:41.287
+porque queremos ordená-los
+cronologicamente.
+
+00:03:41.321 --> 00:03:43.089
+Então vamos escrever
+
+00:03:43.123 --> 00:03:48.795
+tweets[b].timestamp -
+tweets[a].timestamp.
+
+00:03:48.828 --> 00:03:51.631
+Agora se adicionarmos isto
+à connect,
+
+00:03:51.664 --> 00:03:56.636
+se escrevermos
+console.log (this.props),
+
+00:03:56.670 --> 00:03:58.571
+dentro
+do componente TweetPage,
+
+00:03:58.605 --> 00:04:02.242
+veremos que recebemos
+nossa IU normal.
+
+00:04:02.275 --> 00:04:05.345
+Mas o que logamos ao console
+está bem aqui.
+
+00:04:05.378 --> 00:04:08.281
+Estamos recebendo
+este match.params.id.
+
+00:04:08.314 --> 00:04:10.316
+Mas também
+estão sendo passadas
+
+00:04:10.350 --> 00:04:12.218
+a ID do tuíte
+que queremos renderizar
+
+00:04:12.252 --> 00:04:16.389
+e as respostas que ele contém.
+
+00:04:16.423 --> 00:04:21.161
+Isto permite que,
+dentro do método de renderização,
+
+00:04:21.194 --> 00:04:26.232
+peguemos a id e as replies vindas
+de this.props.
+
+00:04:26.266 --> 00:04:29.369
+Precisaremos dos componentes
+que queremos renderizar.
+
+00:04:29.402 --> 00:04:31.171
+Primeiro, vamos pegar o Tweet,
+
+00:04:31.204 --> 00:04:34.774
+que vai nos permitir passar
+a ID do tuíte,
+
+00:04:34.808 --> 00:04:37.077
+que já pegamos de replies.
+
+00:04:37.110 --> 00:04:39.079
+E NewTweet.
+
+00:04:41.581 --> 00:04:47.153
+Aqui, nós vamos renderizar Tweet,
+passando a id para ele.
+
+00:04:47.187 --> 00:04:50.090
+Se colocássemos um ponto aqui,
+
+00:04:50.123 --> 00:04:52.625
+nosso aplicativo
+ficaria assim.
+
+00:04:52.659 --> 00:04:53.660
+Muito bom.
+
+00:04:53.693 --> 00:04:58.231
+Mas também queremos responder
+a este tuíte
+
+00:04:58.264 --> 00:05:00.467
+e a qualquer uma
+das respostas.
+
+00:05:00.500 --> 00:05:05.238
+Então podemos adicionar
+um NewTweet aqui.
+
+00:05:05.271 --> 00:05:06.973
+E, se você se lembra,
+
+00:05:07.007 --> 00:05:09.943
+o modo que contamos
+para o nosso aplicativo
+
+00:05:09.976 --> 00:05:12.112
+que o usuário está respondendo
+a um tuíte
+
+00:05:12.145 --> 00:05:14.114
+e não criando
+um tuíte próprio,
+
+00:05:14.147 --> 00:05:16.182
+é com este prop id aqui.
+
+00:05:16.216 --> 00:05:18.385
+Se passarmos um prop id
+para um novo tuíte,
+
+00:05:18.418 --> 00:05:20.418
+estaremos respondendo
+ao tuíte,
+
+00:05:20.452 --> 00:05:23.623
+e o tuíte que estamos respondendo
+tem esta id.
+
+00:05:23.656 --> 00:05:26.426
+Depois vamos escrever que...
+
+00:05:28.528 --> 00:05:31.598
+se replies.length
+não for igual a zero,
+
+00:05:31.631 --> 00:05:37.203
+vamos escrever um header aqui,
+daremos a className center.
+
+00:05:37.237 --> 00:05:40.173
+Depois colocamos Replies.
+
+00:05:41.541 --> 00:05:45.111
+Vamos dar um loop
+nestas replies,
+
+00:05:47.480 --> 00:05:49.416
+usando replies.map.
+
+00:05:49.779 --> 00:05:53.853
+E para cada replyId
+dentro do nosso array replies,
+
+00:05:53.887 --> 00:05:57.323
+vamos criar um item list.
+
+00:05:58.058 --> 00:06:01.261
+Vamos dar uma key
+de o que quer que seja replyId.
+
+00:06:01.294 --> 00:06:03.797
+Vamos renderizar
+o componente Tweet,
+
+00:06:03.830 --> 00:06:06.933
+passando para ele a id,
+que será replyId.
+
+00:06:07.527 --> 00:06:10.970
+Ao olhar nossa View,
+
+00:06:11.004 --> 00:06:13.473
+se tudo estiver
+funcionando corretamente,
+
+00:06:13.506 --> 00:06:16.343
+você vai notar que temos
+o próprio tuíte,
+
+00:06:16.376 --> 00:06:20.580
+e este tuíte que possui
+esta ID.
+
+00:06:20.613 --> 00:06:23.983
+Podemos responder
+a este tuíte,
+
+00:06:24.017 --> 00:06:27.454
+assim como mostrar
+as outras respostas a este tuíte.
+
+00:06:27.487 --> 00:06:29.356
+O que acontece aqui,
+
+00:06:29.488 --> 00:06:32.759
+se tudo
+em que trabalhamos antes...
+
+00:06:35.028 --> 00:06:37.564
+Parece que temos um erro.
+É um erro fácil de consertar.
+
+00:06:37.597 --> 00:06:41.835
+Note que está escrito tweet.replyTo,
+mas deveria ser replyingTo.
+
+00:06:41.868 --> 00:06:45.939
+Isto vai estar
+dentro da reducer tweets.
+
+00:06:45.972 --> 00:06:48.141
+Bem aqui.
+
+00:06:48.603 --> 00:06:50.543
+Deveria ser replyingTo.
+
+00:06:50.577 --> 00:06:54.581
+Agora o que deve acontecer,
+se tudo mais estiver funcionando,
+
+00:06:54.614 --> 00:06:57.817
+é podermos responder
+a qualquer tuíte que quisermos.
+
+00:06:57.851 --> 00:07:01.855
+E note que aparece bem aqui
+dentro de replies.
+
+00:07:01.888 --> 00:07:03.723
+Agora que construímos
+
+00:07:03.757 --> 00:07:05.525
+todas as visualizações
+do aplicativo,
+
+00:07:05.558 --> 00:07:08.161
+o próximo passo é adicionar
+o React Router,
+
+00:07:08.194 --> 00:07:11.331
+para podermos mudar dinamicamente
+o componente que for renderizado
+
+00:07:11.364 --> 00:07:13.633
+com base no URL.
+

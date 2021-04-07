@@ -1,0 +1,441 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Tweet Component</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Real World Redux</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Walkthrough.html">02. Project Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="03. Planning Stage Steps 1&amp;2 - Break Down Views and Components.html">03. Planning Stage: Steps 1&amp;2 - Break Down Views and Components</a>
+    </li>
+    <li class="">
+      <a href="04. Planning Stage Step 3 - Determine Events In The App.html">04. Planning Stage: Step 3 - Determine Events In The App</a>
+    </li>
+    <li class="">
+      <a href="05. Planning Stage Step 4 - Data and the Store.html">05. Planning Stage: Step 4 - Data and the Store</a>
+    </li>
+    <li class="">
+      <a href="06. Actions.html">06. Actions</a>
+    </li>
+    <li class="">
+      <a href="07. Reducers &amp; Middleware.html">07. Reducers &amp; Middleware</a>
+    </li>
+    <li class="">
+      <a href="08. Initializing the App&#x27;s Data.html">08. Initializing the App&#x27;s Data</a>
+    </li>
+    <li class="">
+      <a href="09. Dashboard Component.html">09. Dashboard Component</a>
+    </li>
+    <li class="">
+      <a href="10. Tweet Component.html">10. Tweet Component</a>
+    </li>
+    <li class="">
+      <a href="11. Liking a Tweet.html">11. Liking a Tweet</a>
+    </li>
+    <li class="">
+      <a href="12. New Tweet Component.html">12. New Tweet Component</a>
+    </li>
+    <li class="">
+      <a href="13. Using React Router.html">13. Using React Router</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Summary.html">14. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="15. Course Summary.html">15. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. New Tweet Component</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L712 New Tweet UI V2</p></h3>
+  <video controls>
+  <source src="12. L712 New Tweet UI V2-aEAUnJhyqCw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. L712 New Tweet UI V2-aEAUnJhyqCw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. L712 New Tweet UI V2-aEAUnJhyqCw.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-chirper-app/commit/c53a69a8b09a0dcab378761f683781c49ead072d" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="adding-a-new-tweet">Adding a New Tweet</h2>
+<p>Let’s now work on the logic of adding a new tweet. Once the user submits a new tweet, it should show up in the list of all of tweets and be added to our database. Since this tweet will be used by more than one component, we know that we want to make sure the store is modified to reflect the updated list of tweets. Recording tweets in a database is an asynchronous operation, so we can use <a href="https://github.com/gaearon/redux-thunk" rel="noopener noreferrer" target="_blank">Redux Thunk</a> to issue the API request.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L715 New Tweet Logic  Actions V1</p></h3>
+  <video controls>
+  <source src="12. L715 New Tweet Logic  Actions V1-MyjJlyv2H0I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. L715 New Tweet Logic  Actions V1-MyjJlyv2H0I.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. L715 New Tweet Logic  Actions V1-MyjJlyv2H0I.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let’s quickly cover a common JavaScript bug at this point.</p>
+<p>Make sure that whenever an arrow function has curly braces, you’re using a <code>return</code> statement, if you want to return something. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Common Bug - ES6</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Given this array, <code>const nums = [1,2,3];</code> Which statements produce the following output <code>[3,3,3]</code> ? Select all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522358133063" name="578638" id="a1522358133063">
+      <label for="a1522358133063"><p><code>nums.map(num =&gt; nums.length);</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522358146670" name="578638" id="a1522358146670">
+      <label for="a1522358146670"><p><code>nums.map(num =&gt; { nums.length });</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522358147179" name="578638" id="a1522358147179">
+      <label for="a1522358147179"><p><code>nums.map(num =&gt; { return nums.length });</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`nums.map(num => nums.length);`</li>
+      <li>`nums.map(num => { return nums.length });`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We know that our store looks like this:</p>
+<pre><code class="js language-js">{
+  tweets: {
+    tweetId: { tweetId, authorId, timestamp, text, likes, replies, replyingTo}, 
+    tweetId: { tweetId, authorId, timestamp, text, likes, replies, replyingTo}
+  },
+  users: {
+    userId: {userId, userName, avatar, tweets array},
+    userId: {userId, userName, avatar, tweets array}
+  },
+  authedUser: userId
+}</code></pre>
+<p>Let’s start working on the New Tweet Reducer. How will we be modifying the state to reflect the new tweet?</p>
+<p>This is going to be a two-part process:</p>
+<ol>
+<li>the new tweet needs to be added to the list of tweets</li>
+</ol>
+<ul>
+<li>an already existing tweet needs to be modified if the new tweet is a response to another tweet</li>
+</ul>
+<p>In this reducer, we'll 1) concatenate the new tweet to the list of the already-existing tweets. Remember that the <a href="https://redux.js.org/recipes/using-object-spread-operator" rel="noopener noreferrer" target="_blank">object spread operator</a> offers us the most concise way of doing that; and 2) modify the <code>replies</code> property of the tweet the new tweet is replying to.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L736  New Tweet Logic  Reducer V1</p></h3>
+  <video controls>
+  <source src="12. L736  New Tweet Logic  Reducer V1-YdmgH1-U5jM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. L736  New Tweet Logic  Reducer V1-YdmgH1-U5jM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. L736  New Tweet Logic  Reducer V1-YdmgH1-U5jM.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L737  New Tweet Logic  Component V1</p></h3>
+  <video controls>
+  <source src="12. L737  New Tweet Logic  Component V1-hWGIn12dGOM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. L737  New Tweet Logic  Component V1-hWGIn12dGOM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. L737  New Tweet Logic  Component V1-hWGIn12dGOM.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-chirper-app/commit/993f1b903e62bbd9ba78afdf4e8d698b7a0b8c66" rel="noopener noreferrer" target="_blank">Here are the changes for adding the new tweet logic-handling code..</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In Step 2 of the Planning Stage, we determined that the New Tweet Component will show up inside of the App Component when the user goes to the <code>/new</code> page and that it will be inside of the Tweet Page Component when the user is on the <code>/tweet/:id</code> page. </p>
+<p>When the user is at the <code>/new</code> route, the new tweet will not be attached to another tweet. When the user is at the <code>tweet/:id</code> route, the new tweet will be attached to the already-displayed tweet. Notice that the route already contains the parent tweet’s <code>id</code>. We can just pass the <code>id</code> from the route to the New Tweet Component whenever we’re creating a reply tweet. </p>
+<p>What happens when someone clicks “Submit” to add a new tweet? The New Tweet Component will need to communicate with our store. We communicate with the store by dispatching actions. <code>dispatch</code> is a method on the store. That means that the New Tweet Component needs to be <code>connect()</code>ed to Redux. Once a component is connected to the store, it will have <code>dispatch</code> on its <code>props</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>When will the <code>mapStateToProps</code> function be called? Select all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522358259974" name="578644" id="a1522358259974">
+      <label for="a1522358259974"><p>Anytime the store is updated</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522358261868" name="578644" id="a1522358261868">
+      <label for="a1522358261868"><p>Whenever the component receives new props.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522358262408" name="578644" id="a1522358262408">
+      <label for="a1522358262408"><p>Neither option correctly describes when the <code>mapStateToProps</code> function will be called.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Anytime the store is updated</li>
+      <li>Whenever the component receives new props.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L714 Tweet Page V2</p></h3>
+  <video controls>
+  <source src="12. L714 Tweet Page V2-4g9l8T2MLt4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="12. L714 Tweet Page V2-4g9l8T2MLt4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="12. L714 Tweet Page V2-4g9l8T2MLt4.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-chirper-app/commit/171ed69e495cadab991aff900b9ad5e2f4005c20" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="lesson-challenge">Lesson Challenge</h3>
+<p>Suppose we replaced the <code>case ADD_TWEET:</code> portion of the code in the <code>reducers/tweets</code> file with the code below.</p>
+<ul>
+<li>Would the state change in the same way? Why or why not?</li>
+<li>Would the new tweet appear on the page? Why or why not?</li>
+</ul>
+<p>Run the code to check your answer.</p>
+<pre><code class="js language-js">...
+case ADD_TWEET :
+   const { tweet } = action
+
+   let replyingTo = {}
+   if (tweet.replyingTo !== null) {
+      const allReplies = state[tweet.replyingTo].replies.concat([tweet.id]);
+
+      return {
+      ...state,
+      [action.tweet.id]: action.tweet,
+      [action.tweet.replyingTo.replies]: allReplies
+      }
+   }
+
+   return {
+      ...state,
+      [action.tweet.id]: action.tweet,
+      ...replyingTo,
+   }
+...</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="further-learning">Further Learning</h4>
+<p>Carefully go over the <a href="https://redux.js.org/recipes/structuringreducers/immutableupdatepatterns" rel="noopener noreferrer" target="_blank">Immutable Update Patterns</a> and <a href="https://redux.js.org/basics/reducers#designing-the-state-shape" rel="noopener noreferrer" target="_blank">Designing the State Shape</a> pages in the Redux documentation.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Remember, that <a href="https://redux.js.org/recipes/structuringreducers/immutableupdatepatterns" rel="noopener noreferrer" target="_blank">doing a shallow copy of the top level is not sufficient - [nestedState objects] should be copied as well.</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Using React Router.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. New Tweet Component')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.149
+So let's go ahead and use this exact same pattern both for
+
+00:00:03.149 --> 00:00:06.464
+our Todos component as well as our Goals component.
+
+00:00:06.464 --> 00:00:11.030
+So up here, let's make a brand new component.
+
+00:00:11.029 --> 00:00:13.769
+We will call it ConnectedGoals and
+
+00:00:13.769 --> 00:00:16.679
+we're also going to render Context.Consumer again here.
+
+00:00:16.679 --> 00:00:19.155
+So this is going to grab all of the information
+
+00:00:19.155 --> 00:00:22.935
+that the Goals component needs from our store.
+
+00:00:22.934 --> 00:00:29.227
+So we will parse it a function that is going to be given the store,
+
+00:00:29.228 --> 00:00:30.600
+and then now if you look at
+
+00:00:30.600 --> 00:00:33.734
+the Goals component what information does it need from the store?
+
+00:00:33.734 --> 00:00:38.820
+Well, it needs dispatch and it also
+
+00:00:38.820 --> 00:00:44.670
+needs all of the goal items that it needs to render,
+
+00:00:44.670 --> 00:00:46.740
+it needs to parse to list.
+
+00:00:46.740 --> 00:00:54.255
+So what we can do is we can grab all of the goals by using store.getState,
+
+00:00:54.255 --> 00:00:58.515
+and then when we render our Goals component now,
+
+00:00:58.515 --> 00:01:03.210
+we can parse to it goals and then we can also parse to it
+
+00:01:03.210 --> 00:01:07.870
+dispatch by doing store.dispatch.
+
+00:01:07.870 --> 00:01:14.540
+So now this line right here is exactly what we were rendering before, but right here.
+
+00:01:14.540 --> 00:01:17.420
+But now what we can do is instead of rendering goals,
+
+00:01:17.420 --> 00:01:21.390
+we want to render our goals,
+
+00:01:21.390 --> 00:01:26.569
+we want to render our ConnectedGoals component and now we don't need to parse it
+
+00:01:26.569 --> 00:01:32.469
+anything because it's already grabbing everything that it needs to off of context.
+
+00:01:32.469 --> 00:01:33.620
+So what that will allow us to do,
+
+00:01:33.620 --> 00:01:36.620
+is we can come in here and delete this goals line and
+
+00:01:36.620 --> 00:01:40.320
+now the only other change we need to make to our Goals component is,
+
+00:01:40.319 --> 00:01:43.837
+you'll notice here that we are calling this.props.store.dispatch,
+
+00:01:43.837 --> 00:01:49.799
+but what we are parsing it is just dispatch as a prop rather than the whole store.
+
+00:01:49.799 --> 00:01:52.125
+So let's come in here and inside goals,
+
+00:01:52.125 --> 00:01:56.670
+we can get rid of.store because we're just parsing in dispatch.
+
+00:01:56.670 --> 00:02:01.469
+Then now let's do something similar for our Todos components.
+
+00:02:01.469 --> 00:02:04.560
+So we'll come right here and we will make a new class called ConnectedTodos.
+
+00:02:04.560 --> 00:02:13.469
+This is also going to use Context.Consumer to grab information from this store.
+
+00:02:13.469 --> 00:02:16.069
+So we will get past the store and then now what we
+
+00:02:16.069 --> 00:02:19.009
+want to do is grab the todos coming from
+
+00:02:19.009 --> 00:02:23.134
+Store.getState and then we want to render
+
+00:02:23.134 --> 00:02:28.009
+our todos parsing it the todos and also parsing it dispatch,
+
+00:02:28.009 --> 00:02:30.919
+which we can get from doing store.dispatch.
+
+00:02:30.919 --> 00:02:33.019
+And then now just as we did with goals inside of todos
+
+00:02:33.020 --> 00:02:36.870
+instead of doing this.props.store.dispatch,
+
+00:02:36.870 --> 00:02:41.900
+we can just do this.props.dispatch because we're parsing dispatch indirectly.
+
+00:02:41.900 --> 00:02:47.210
+We can update this one as well and everything else should work fine,
+
+00:02:47.210 --> 00:02:52.379
+because now we have this.props.todos coming in from context.
+
+00:02:52.530 --> 00:02:55.629
+So now inside of our app component,
+
+00:02:55.629 --> 00:02:59.159
+we can make one small adjustment here.
+
+00:02:59.159 --> 00:03:02.371
+So we no longer need to grab todos,
+
+00:03:02.371 --> 00:03:05.530
+because we are going to render our ConnectedTodos,
+
+00:03:05.530 --> 00:03:10.810
+which will automatically hook up to context and grab those.
+
+00:03:10.810 --> 00:03:13.539
+And now the only other change we need to make is
+
+00:03:13.539 --> 00:03:16.359
+we created our connected app component earlier,
+
+00:03:16.360 --> 00:03:18.840
+but we are still rendering our normal app components.
+
+00:03:18.840 --> 00:03:22.620
+So we don't want to do that, instead we want to render our connected app component.
+
+00:03:22.620 --> 00:03:27.756
+So now if we check that this is still working,
+
+00:03:27.756 --> 00:03:32.844
+you'll notice that we can still do all the functionality that we can do earlier,
+
+00:03:32.844 --> 00:03:35.905
+but now instead of parsing in the store as a prop,
+
+00:03:35.905 --> 00:03:41.599
+we are just using React's context API in order to avoid all of that prop plumbing.
+

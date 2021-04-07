@@ -1,0 +1,350 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tweet Component</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Real World Redux</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Walkthrough.html">02. Project Walkthrough</a>
+    </li>
+    <li class="">
+      <a href="03. Planning Stage Steps 1&amp;2 - Break Down Views and Components.html">03. Planning Stage: Steps 1&amp;2 - Break Down Views and Components</a>
+    </li>
+    <li class="">
+      <a href="04. Planning Stage Step 3 - Determine Events In The App.html">04. Planning Stage: Step 3 - Determine Events In The App</a>
+    </li>
+    <li class="">
+      <a href="05. Planning Stage Step 4 - Data and the Store.html">05. Planning Stage: Step 4 - Data and the Store</a>
+    </li>
+    <li class="">
+      <a href="06. Actions.html">06. Actions</a>
+    </li>
+    <li class="">
+      <a href="07. Reducers &amp; Middleware.html">07. Reducers &amp; Middleware</a>
+    </li>
+    <li class="">
+      <a href="08. Initializing the App&#x27;s Data.html">08. Initializing the App&#x27;s Data</a>
+    </li>
+    <li class="">
+      <a href="09. Dashboard Component.html">09. Dashboard Component</a>
+    </li>
+    <li class="">
+      <a href="10. Tweet Component.html">10. Tweet Component</a>
+    </li>
+    <li class="">
+      <a href="11. Liking a Tweet.html">11. Liking a Tweet</a>
+    </li>
+    <li class="">
+      <a href="12. New Tweet Component.html">12. New Tweet Component</a>
+    </li>
+    <li class="">
+      <a href="13. Using React Router.html">13. Using React Router</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Summary.html">14. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="15. Course Summary.html">15. Course Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Tweet Component</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="tweet-component">Tweet Component</h1>
+<p>In Step 4 of the Planning Stage, we saw that this component will need access to the following data:</p>
+<ul>
+<li><code>users</code></li>
+<li><code>tweets</code></li>
+<li><code>authedUser</code>. </li>
+</ul>
+<p>Let's connect this component to the store!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L710  Tweet State V1</p></h3>
+  <video controls>
+  <source src="10. L710  Tweet State V1-Q6sAKQaQTJ8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. L710  Tweet State V1-Q6sAKQaQTJ8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. L710  Tweet State V1-Q6sAKQaQTJ8.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Notice how we're passing an <code>id</code> prop along to the Tweet component:</p>
+<pre><code class="js language-js">&lt;Tweet id={id} /&gt;</code></pre>
+<p>Because we're doing this, the <code>mapStateToProps</code> function's second argument (<code>ownProps</code>) will be an object that has an <code>id</code> property with this value.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/untitled-diagram-21-4.png" alt="Arguments inside the &#x60;mapStateToProps&#x60; function" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Arguments inside the <code>mapStateToProps</code> function</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>So as of right now, this is what the <code>mapStateToProps</code> function looks like:</p>
+<pre><code class="js language-js">function mapStateToProps ({authedUser, users, tweets}, { id }) {
+  const tweet = tweets[id];
+
+  return {
+    authedUser,
+    tweet: formatTweet(tweet, users[tweet.author], authedUser)
+  };
+}</code></pre>
+<p>The important thing to notice here is that <code>mapStateToProps</code> accepts two arguments:</p>
+<ul>
+<li>the state of the store</li>
+<li>the props passed to the Tweet component</li>
+</ul>
+<p>We're destructuring both arguments. From the store, we're extracting:</p>
+<ul>
+<li>the <code>authedUser</code> data </li>
+<li>the users data</li>
+<li>the tweets data</li>
+</ul>
+<p>Then we're getting the <code>id</code> from the props passed to the Tweets Component. We need both of these pieces of data (coming from the store's state and coming from the component) so that we can determine which Tweet should be displayed by Tweet Component.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L733  Handling A Parent Tweet V1</p></h3>
+  <video controls>
+  <source src="10. L733  Handling A Parent Tweet V1-fNHUigCJpkY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. L733  Handling A Parent Tweet V1-fNHUigCJpkY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. L733  Handling A Parent Tweet V1-fNHUigCJpkY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>So this is what the final state of the Tweet Component's <code>mapStateToProps</code> function looks like:</p>
+<pre><code class="js language-js">function mapStateToProps ({authedUser, users, tweets}, { id }) {
+  const tweet = tweets[id];
+  const parentTweet = tweet ? tweets[tweet.replyingTo] : null;
+
+  return {
+    authedUser,
+    tweet: tweet
+      ? formatTweet(tweet, users[tweet.author], authedUser, parentTweet)
+      : null
+  };
+}</code></pre>
+<p>Now that we're getting all of the data we need from the store, we can actually build the UI for the Tweet Component. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L709 Tweet UI V2</p></h3>
+  <video controls>
+  <source src="10. L709 Tweet UI V2-es890SLMDqM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. L709 Tweet UI V2-es890SLMDqM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. L709 Tweet UI V2-es890SLMDqM.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-chirper-app/commit/6db39add5b99c8e4996896ff3454c0239de4d5cc" rel="noopener noreferrer" target="_blank">Here are the code changes for building out the Tweet Component.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L710 Loading V2</p></h3>
+  <video controls>
+  <source src="10. L710 Loading V2-FvmgIlJPjQ8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. L710 Loading V2-FvmgIlJPjQ8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. L710 Loading V2-FvmgIlJPjQ8.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-chirper-app/commit/1fdbaaa20d45fbb94dc461405f756f17815f20fd" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="further-research">Further Research</h4>
+<ul>
+<li><a href="https://itnext.io/the-perils-of-using-a-common-redux-anti-pattern-344d778e59da" rel="noopener noreferrer" target="_blank">The Perils of Using a Common Redux Anti-Patterns</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Liking a Tweet.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Tweet Component')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

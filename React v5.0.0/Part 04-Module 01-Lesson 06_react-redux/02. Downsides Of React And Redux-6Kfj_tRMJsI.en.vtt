@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.569
+As you've seen, Redux has no relation to react.
+
+00:00:03.569 --> 00:00:06.509
+React just like any other UI library,
+
+00:00:06.509 --> 00:00:09.900
+can leverage Redux for more predictable state management.
+
+00:00:09.900 --> 00:00:13.019
+Looking at our own implementation of react and Redux together,
+
+00:00:13.019 --> 00:00:15.990
+the real key is that we're passing down our store as a prop,
+
+00:00:15.990 --> 00:00:20.690
+and utilizing it to get state dispatch or subscribe whenever we need to.
+
+00:00:20.690 --> 00:00:23.880
+If you were tasked with building a library to extract some of
+
+00:00:23.879 --> 00:00:27.234
+the rough patches in our implementation between react and Redux,
+
+00:00:27.234 --> 00:00:29.085
+how might you do it?
+
+00:00:29.085 --> 00:00:31.125
+When we wrote the createStore function,
+
+00:00:31.125 --> 00:00:33.270
+our store is responsible for three things,
+
+00:00:33.270 --> 00:00:36.330
+getting state, updating state,
+
+00:00:36.329 --> 00:00:38.114
+and listening for changes.
+
+00:00:38.115 --> 00:00:40.980
+The whole goal of our abstraction should be making
+
+00:00:40.979 --> 00:00:44.519
+these three things work as seamlessly with react as possible.
+

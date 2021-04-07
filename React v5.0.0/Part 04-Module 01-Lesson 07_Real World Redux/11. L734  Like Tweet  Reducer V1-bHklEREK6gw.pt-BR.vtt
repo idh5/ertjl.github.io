@@ -1,0 +1,152 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.204 --> 00:00:03.100
+Em tweets,
+dentro de reducers,
+
+00:00:03.142 --> 00:00:05.788
+ou seja, reducer/tweets.js,
+
+00:00:05.830 --> 00:00:09.731
+vamos importar o tipo de ação
+TOGGLE_TWEET.
+
+00:00:09.773 --> 00:00:12.987
+Agora adicionaremos um novo caso
+à reducer.
+
+00:00:13.029 --> 00:00:15.482
+Se o caso for TOGGLE_TWEET,
+
+00:00:15.524 --> 00:00:17.562
+como alteraremos o formato
+
+00:00:17.604 --> 00:00:22.065
+da parte tweets do estado?
+
+00:00:22.107 --> 00:00:25.730
+Vejamos a versão final aqui.
+
+00:00:28.075 --> 00:00:31.570
+Cada tuíte tem propriedades
+específicas.
+
+00:00:31.612 --> 00:00:34.312
+Podemos rastrear
+os tipos de curtidas
+
+00:00:34.354 --> 00:00:37.234
+com este array likes.
+
+00:00:37.276 --> 00:00:41.130
+Se o usuário curte um tuíte
+pela primeira vez,
+
+00:00:41.172 --> 00:00:44.094
+a ID dele será colocada
+no array likes.
+
+00:00:44.136 --> 00:00:46.054
+E se ele deixar de curtir,
+
+00:00:46.096 --> 00:00:50.430
+removeremos o nome do usuário
+do array likes.
+
+00:00:50.472 --> 00:00:52.422
+Para isso,
+
+00:00:52.464 --> 00:00:56.121
+espalhamos os tuítes antigos
+no estado,
+
+00:00:56.163 --> 00:00:58.969
+pois não queremos mudar
+o estado diretamente.
+
+00:00:59.011 --> 00:01:01.001
+Então retornaremos
+um novo objeto
+
+00:01:01.043 --> 00:01:04.312
+e espalharemos
+os tuítes anteriores nele.
+
+00:01:04.354 --> 00:01:06.299
+Mas o que desejamos
+
+00:01:06.341 --> 00:01:09.515
+é o tuíte com a ID
+
+00:01:10.515 --> 00:01:13.258
+do que estamos passando
+para action.id,
+
+00:01:13.300 --> 00:01:15.306
+que precisará ser
+um novo objeto.
+
+00:01:15.348 --> 00:01:18.994
+Depois pegaremos
+as propriedades do objeto
+
+00:01:19.036 --> 00:01:21.977
+e as espalharemos
+neste novo objeto.
+
+00:01:22.019 --> 00:01:25.339
+Mas queremos
+que este array likes
+
+00:01:25.381 --> 00:01:29.323
+remova o nome do usuário
+ou o adicione
+
+00:01:29.365 --> 00:01:31.514
+a partir da curtida.
+
+00:01:31.556 --> 00:01:34.254
+Podemos dizer que se...
+
+00:01:35.503 --> 00:01:37.528
+action.hasLiked
+for verdadeiro,
+
+00:01:37.570 --> 00:01:39.712
+ou seja, se ele já curtiu,
+
+00:01:39.754 --> 00:01:41.896
+então usaremos um filtro.
+
+00:01:41.938 --> 00:01:45.849
+Digitaremos
+state[action.id].likes.filter.
+
+00:01:47.280 --> 00:01:52.457
+Agora diremos que onde a uid
+não for igual
+
+00:01:53.168 --> 00:01:55.864
+a action.authedUser...
+
+00:01:55.906 --> 00:02:00.247
+isto filtrará
+o usuário autenticado,
+
+00:02:00.289 --> 00:02:03.589
+se ele já curtiu o tuíte.
+Caso contrário,
+
+00:02:04.229 --> 00:02:08.476
+faremos o mesmo,
+mas em vez de usarmos ".filter",
+
+00:02:08.518 --> 00:02:13.177
+usaremos ".concat" para adicionar
+o nome do usuário
+
+00:02:13.219 --> 00:02:15.440
+ao array likes.
+

@@ -1,0 +1,190 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.144
+So, let's head over to our tweets reducer and import this action type.
+
+00:00:05.144 --> 00:00:07.679
+So, we will first grab a tweet,
+
+00:00:07.679 --> 00:00:10.339
+and then now, we can add that as a case here.
+
+00:00:10.339 --> 00:00:13.490
+So, when the ADD_TWEET action is dispatched,
+
+00:00:13.490 --> 00:00:15.410
+how do we want to update state?
+
+00:00:15.410 --> 00:00:19.990
+Well, first, what we'll do is let's grab the tweets off of the action.
+
+00:00:19.989 --> 00:00:22.909
+Now, let's look at our final states so we can figure out what
+
+00:00:22.910 --> 00:00:26.085
+we need to do when the ADD_TWEET action is dispatched.
+
+00:00:26.085 --> 00:00:29.420
+So, this is what our state looks like where we have authedUser,
+
+00:00:29.420 --> 00:00:31.885
+loadingBar, tweets, and then the users down below.
+
+00:00:31.885 --> 00:00:34.030
+So, what we need to do, and this is the obvious one,
+
+00:00:34.030 --> 00:00:38.670
+is we need to take the new tweet and add it as a property on our tweets array.
+
+00:00:38.670 --> 00:00:41.329
+But the other thing that we need to do is,
+
+00:00:41.329 --> 00:00:44.070
+you'll notice if you actually look at a tweet here,
+
+00:00:44.070 --> 00:00:47.480
+each tweet has a replies array that are
+
+00:00:47.479 --> 00:00:51.484
+all of the tweet IDs that have replied to these specific tweet.
+
+00:00:51.484 --> 00:00:56.079
+So, for example, if we are replying to a tweet with this ID right here,
+
+00:00:56.079 --> 00:00:59.390
+what we want to do is take the ID of the new tweet that we
+
+00:00:59.390 --> 00:01:03.530
+created and add it to this replies array right here.
+
+00:01:03.530 --> 00:01:05.750
+So, what we can do is,
+
+00:01:05.750 --> 00:01:07.454
+let's return an object,
+
+00:01:07.454 --> 00:01:11.120
+you want to spread all of the previous tweets onto it.
+
+00:01:11.120 --> 00:01:14.570
+As I mentioned, the obvious thing we need to do is we need to
+
+00:01:14.569 --> 00:01:18.779
+say action.tweet.id is going to be action.tweet,
+
+00:01:18.780 --> 00:01:22.575
+so we are adding our new tweet to our tweet state.
+
+00:01:22.575 --> 00:01:24.469
+But the other thing we need to do is go
+
+00:01:24.469 --> 00:01:29.189
+to the array property if we are replying to a tweet,
+
+00:01:29.189 --> 00:01:31.509
+and then add the tweet ID there as well.
+
+00:01:31.510 --> 00:01:36.070
+So, what we can do is,
+
+00:01:36.069 --> 00:01:40.084
+let's say, we have an object here called replyingTo,
+
+00:01:40.084 --> 00:01:42.614
+just going to be an empty object.
+
+00:01:42.614 --> 00:01:45.284
+Then, we will have an if statement and we can say,
+
+00:01:45.284 --> 00:01:49.625
+if tweet.replyingTo does not equal null,
+
+00:01:49.625 --> 00:01:51.689
+not equal to null,
+
+00:01:51.689 --> 00:01:55.399
+then what we wanted to say is replyingTo is going to be
+
+00:01:55.400 --> 00:02:02.250
+an object that has a key of whatever the tweet we are replyingTo is,
+
+00:02:02.250 --> 00:02:06.989
+and then the objects for this tweet is going to be everything than it
+
+00:02:06.989 --> 00:02:11.340
+was before, so state[tweet.replyingTo].
+
+00:02:11.340 --> 00:02:13.250
+But what we want to modify again is
+
+00:02:13.250 --> 00:02:16.759
+the replies property of this specific slice of our state,
+
+00:02:16.759 --> 00:02:20.419
+and then we will say, state[tweet.replyTo],
+
+00:02:20.419 --> 00:02:24.739
+which is the ID of the tweet we are replying to,
+
+00:02:24.740 --> 00:02:27.740
+that has a replies property, which is an array,
+
+00:02:27.740 --> 00:02:30.939
+which we can concatenate onto it tweet.id.
+
+00:02:30.939 --> 00:02:32.859
+Now, we have this object.
+
+00:02:32.860 --> 00:02:39.270
+What we can do is we can also spread that across to our brand new tweet state.
+
+00:02:39.270 --> 00:02:41.925
+So, that was a lot, so let's walk through it one more time.
+
+00:02:41.925 --> 00:02:45.350
+What we need to do whenever we add a new tweet is take that tweet and add it
+
+00:02:45.349 --> 00:02:48.849
+to our tweets array or the tweets slice of our state,
+
+00:02:48.849 --> 00:02:50.539
+which technically isn't object.
+
+00:02:50.539 --> 00:02:52.539
+So, we do that with this line right here.
+
+00:02:52.539 --> 00:02:58.099
+But what we also want to do is if the brand new tweet isn't reply to another tweet,
+
+00:02:58.099 --> 00:03:00.090
+we want to grab that new tweets,
+
+00:03:00.090 --> 00:03:01.969
+so we'll use this one, for example.
+
+00:03:01.969 --> 00:03:05.884
+We want to spread all of the previous properties onto that new tweet.
+
+00:03:05.884 --> 00:03:11.889
+We want to concatenate onto the replies array the new reply that we just created,
+
+00:03:11.889 --> 00:03:18.134
+and then we want to spread this whole object onto our tweets array,
+
+00:03:18.134 --> 00:03:22.774
+so it will update this specific portion of our state.
+
+00:03:22.775 --> 00:03:25.659
+So, now that we have our action setup,
+
+00:03:25.659 --> 00:03:26.759
+as well as our reducer,
+
+00:03:26.759 --> 00:03:29.780
+the only other thing we need to do is actually
+
+00:03:29.780 --> 00:03:33.270
+dispatch the action creator when we submit the new tweet.
+

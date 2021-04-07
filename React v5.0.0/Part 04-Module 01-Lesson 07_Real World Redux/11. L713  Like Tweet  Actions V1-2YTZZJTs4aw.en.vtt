@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.569
+At this point we have the UI for our timeline here,
+
+00:00:03.569 --> 00:00:06.599
+but if you click on any of the hearts here too likely
+
+00:00:06.599 --> 00:00:09.629
+tweet nothing happens because we haven't set up that functionality yet.
+
+00:00:09.630 --> 00:00:11.690
+So let's go ahead and do that right now.
+
+00:00:11.689 --> 00:00:16.814
+So, what we'll do is if you remember in our api.js file we have
+
+00:00:16.815 --> 00:00:19.650
+this function right here that we want to invoke to save
+
+00:00:19.649 --> 00:00:22.699
+that specific like to our fake database.
+
+00:00:22.699 --> 00:00:27.619
+So, what we will do is inside of our tweets.js
+
+00:00:27.620 --> 00:00:32.969
+file for our actions let's go ahead and import that function,
+
+00:00:32.969 --> 00:00:37.820
+save like toggle which is going to come from util/api and then now
+
+00:00:37.820 --> 00:00:43.859
+what we want to do is we want to describe the specific event we will say Toggle Tweet.
+
+00:00:45.679 --> 00:00:49.225
+Now let's make our action curator here,
+
+00:00:49.225 --> 00:00:53.300
+this one will be called Toggle Tweets and what it
+
+00:00:53.299 --> 00:00:57.759
+will take in is an object that has an ID,
+
+00:00:57.759 --> 00:01:01.945
+not the user property as well as if the user has liked it or not,
+
+00:01:01.945 --> 00:01:05.569
+and then it will return an action or an object that has
+
+00:01:05.569 --> 00:01:09.125
+a property of type as the type property of Toggle Tweet.
+
+00:01:09.125 --> 00:01:13.560
+Then we will just pass along all of the arguments here.
+
+00:01:13.560 --> 00:01:17.090
+So, ID auth.user as well as has liked and then now
+
+00:01:17.090 --> 00:01:20.840
+what we want to do is we want to create our asynchronous action creator,
+
+00:01:20.840 --> 00:01:25.280
+which is going to be responsible for invoking our save like toggle function.
+
+00:01:25.280 --> 00:01:27.950
+So what we will do this is going to be the function that we will
+
+00:01:27.950 --> 00:01:31.380
+export we will call it Handle Toggle Tweet.
+
+00:01:31.379 --> 00:01:34.998
+It's going to take in some tweet information
+
+00:01:34.998 --> 00:01:38.390
+and then because we're going to do an Ajax request inside of here,
+
+00:01:38.390 --> 00:01:41.935
+we want to return a function so that we can dispatch whenever we would like.
+
+00:01:41.935 --> 00:01:45.430
+And then now the first thing we want to do is,
+
+00:01:45.430 --> 00:01:50.710
+let's toggle the tweet passing it the info to this info object is going to have an ID.
+
+00:01:50.709 --> 00:01:52.854
+Not the user as well as has liked
+
+00:01:52.855 --> 00:01:55.859
+and then so you notice we're using Optimistic updates here.
+
+00:01:55.859 --> 00:02:01.370
+So, then what we want to do is we want to invoke save like toggle passing it the info.
+
+00:02:01.370 --> 00:02:05.730
+Then if there is an error, what we want to do,
+
+00:02:05.730 --> 00:02:11.835
+let's go ahead and add a console.warn here saying Error in Handle Toggle Tweets.
+
+00:02:11.835 --> 00:02:14.094
+So we get the error to the console.
+
+00:02:14.094 --> 00:02:15.750
+Let's go ahead and dispatch first,
+
+00:02:15.750 --> 00:02:18.159
+so we'll dispatch Toggle Tweet one more
+
+00:02:18.159 --> 00:02:21.159
+time so it will just reset it back to what it was initially and
+
+00:02:21.159 --> 00:02:27.474
+then we will say there was an error liking the tweet, try again.
+
+00:02:27.474 --> 00:02:33.835
+All right, so now we have are action creator here which is responsible for dispatching,
+
+00:02:33.835 --> 00:02:38.094
+Toggle Tweet, as well as saving that information to our database.
+
+00:02:38.094 --> 00:02:42.289
+The next thing we need to do is actually build out our reducer,
+
+00:02:42.289 --> 00:02:45.169
+so we can decide how the state of our Redux store is going
+
+00:02:45.169 --> 00:02:49.129
+to change based on the toggle tweet action.
+

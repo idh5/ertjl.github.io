@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.285
+First we're going to use Create React app in order to
+
+00:00:03.285 --> 00:00:06.509
+install a brand new React application that we will
+
+00:00:06.509 --> 00:00:14.586
+call Udacity Goals Todos.
+
+00:00:14.586 --> 00:00:19.449
+Once that is finished we can go ahead and
+
+00:00:19.449 --> 00:00:24.804
+cd into our directory and now let's install a few of the packages we need.
+
+00:00:24.804 --> 00:00:27.460
+The first is going to be our goals todos
+
+00:00:27.460 --> 00:00:31.405
+API which is going to be a replacement for the script right here.
+
+00:00:31.405 --> 00:00:40.189
+And then we will also need Redux as well as React Redux and the redux thunk middleware.
+
+00:00:40.189 --> 00:00:42.640
+And so now once all of those are installed,
+
+00:00:42.640 --> 00:00:46.870
+you can go ahead and start your application by running yarn start.
+
+00:00:46.869 --> 00:00:51.519
+And so now what I have is our previous index.html file over on this side
+
+00:00:51.520 --> 00:00:55.030
+our brand new React application over on this side and what we will
+
+00:00:55.030 --> 00:00:58.840
+do is we will slowly start migrating all of this code to our React app,
+
+00:00:58.840 --> 00:01:00.850
+but before we do that let us go ahead and just
+
+00:01:00.850 --> 00:01:05.784
+reformat the structure of our create React app that he gave us.
+
+00:01:05.784 --> 00:01:09.789
+So we are going to first delete this logo because we don't need that,
+
+00:01:09.790 --> 00:01:14.005
+we can also delete the service worker because we won't be using that,
+
+00:01:14.004 --> 00:01:18.789
+and last we can delete our app.test.js,
+
+00:01:18.790 --> 00:01:25.049
+as well as our app.css file.
+
+00:01:25.049 --> 00:01:30.360
+So now let's go inside of app.js we can delete both of these,
+
+00:01:30.359 --> 00:01:32.640
+our logo as well as app.css.
+
+00:01:32.640 --> 00:01:37.349
+Let's restructure this a little bit so we will just have a &lt;div&gt; here,
+
+00:01:37.349 --> 00:01:41.129
+then we will say 'hello
+
+00:01:41.129 --> 00:01:47.789
+world' and then inside of our index.js file what we can do is delete our service worker.
+
+00:01:47.790 --> 00:01:50.940
+Delete a few different semi-colons and then what we can
+
+00:01:50.939 --> 00:01:54.090
+do is delete register service worker down here,
+
+00:01:54.090 --> 00:01:59.700
+and then the last change we want to make is let's make a components folder,
+
+00:01:59.700 --> 00:02:03.510
+let's move our app.js file
+
+00:02:03.510 --> 00:02:07.814
+into that components folder so it will be source slash components now,
+
+00:02:07.814 --> 00:02:13.349
+and then now inside of index.js app is going to come from./components/App.
+
+00:02:13.349 --> 00:02:18.939
+And then now if everything is working inside of our app we have 'Hello World.'
+

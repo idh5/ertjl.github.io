@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+Because we are using this syntax right here where we are
+
+00:00:03.180 --> 00:00:06.500
+returning a function from an action creator,
+
+00:00:06.500 --> 00:00:10.884
+we need to make sure that we hook up the redux-thunk middleware in order to support that.
+
+00:00:10.884 --> 00:00:15.254
+And while we are here we are also going to add in our logger middleware.
+
+00:00:15.255 --> 00:00:18.929
+So let's create a middleware folder and then inside of here we
+
+00:00:18.929 --> 00:00:22.469
+will have two different files first index.js which
+
+00:00:22.469 --> 00:00:25.710
+will export an invocation of apply middleware and then
+
+00:00:25.710 --> 00:00:30.285
+also our logger.js file so first let's do a logger.
+
+00:00:30.285 --> 00:00:33.119
+And again what we want logger to do as we do
+
+00:00:33.119 --> 00:00:37.969
+this weird middleware syntax here which takes in the store.
+
+00:00:38.740 --> 00:00:41.660
+Next as well as an action is we want
+
+00:00:41.659 --> 00:00:45.344
+logger to show us anytime that a new action is dispatched.
+
+00:00:45.344 --> 00:00:50.979
+As well as what the new state is going to be after it's dispatched.
+
+00:00:50.979 --> 00:00:55.189
+We will group these things together inside of the console and then we
+
+00:00:55.189 --> 00:00:59.820
+can log what the action is by just console logging action.
+
+00:00:59.820 --> 00:01:03.170
+We can then get a return value here from
+
+00:01:03.170 --> 00:01:06.530
+invoking next which is going to be dispatched passing at the action.
+
+00:01:06.530 --> 00:01:11.180
+So that will update the state which will allow us to then say
+
+00:01:11.180 --> 00:01:16.284
+the new state is we can get by calling store.getState
+
+00:01:16.284 --> 00:01:23.300
+and then finally we just want to return value here and we can't forget we want this to
+
+00:01:23.299 --> 00:01:30.394
+be the default export and now inside of index.js in our middleware folder.
+
+00:01:30.394 --> 00:01:35.854
+What we can do is we can import logger coming from logger.
+
+00:01:35.855 --> 00:01:41.840
+And now we want to make sure that we install the redux-thunk package
+
+00:01:41.840 --> 00:01:44.450
+so inside of your terminal you can go ahead and install
+
+00:01:44.450 --> 00:01:48.730
+that by saying yarn add redux-thunk.
+
+00:01:49.579 --> 00:01:54.140
+And then once that's finished go ahead and restart your app head back over to
+
+00:01:54.140 --> 00:01:58.165
+your index.js file inside of your middleware folder.
+
+00:01:58.165 --> 00:02:03.500
+We want to import the thunk middleware that we just barely
+
+00:02:03.500 --> 00:02:09.349
+installed and then finally we need to import apply middleware.
+
+00:02:09.349 --> 00:02:14.900
+From the redux package and an invocation of apply middleware is what's going to
+
+00:02:14.900 --> 00:02:20.599
+be our default export here so we can say thunk as well as logger.
+
+00:02:20.599 --> 00:02:24.799
+And then now inside of our index.js file,
+
+00:02:24.800 --> 00:02:29.210
+we need to make sure that our store is aware of our middleware so what we can
+
+00:02:29.210 --> 00:02:34.730
+do is imports middleware from dot-slash middleware and
+
+00:02:34.729 --> 00:02:37.669
+again what this is going to do is it's going to say okay go ahead
+
+00:02:37.669 --> 00:02:41.059
+and import the default export coming from the
+
+00:02:41.060 --> 00:02:44.509
+index.js file in the middleware folder which is
+
+00:02:44.509 --> 00:02:48.584
+going to be our applied middleware invocation right here.
+
+00:02:48.585 --> 00:02:52.520
+Now what we can do is as the second argument to create
+
+00:02:52.520 --> 00:02:56.570
+store we can pass our middleware and even though we won't see
+
+00:02:56.569 --> 00:03:00.439
+anything yet because we're not dispatching any actions that's what we will do in
+
+00:03:00.439 --> 00:03:03.079
+the next video is when our uploads we'll go ahead and
+
+00:03:03.080 --> 00:03:06.410
+fetch the initial data that our application needs.
+

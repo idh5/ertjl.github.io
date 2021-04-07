@@ -1,0 +1,328 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.569
+We have decided that we are going to abstract connecting
+
+00:00:03.569 --> 00:00:08.504
+our components to context by using this connect higher-order component.
+
+00:00:08.505 --> 00:00:12.510
+Now what we need to do is we actually need to go ahead and build it out.
+
+00:00:12.509 --> 00:00:17.925
+So, let's first start by creating a function called connect.
+
+00:00:17.925 --> 00:00:22.649
+And one of the very first things we know about connect is that it needs
+
+00:00:22.649 --> 00:00:27.164
+to return a function and when that return function is invoked,
+
+00:00:27.164 --> 00:00:30.339
+it's going to be passed the component that we need to render.
+
+00:00:30.339 --> 00:00:33.179
+So, we can come in here and return
+
+00:00:33.179 --> 00:00:39.308
+a function and this function is going to be passed a component.
+
+00:00:39.320 --> 00:00:46.020
+Another thing that we know about connect is that as it's first arguement,
+
+00:00:46.020 --> 00:00:50.550
+it's going to be past a function that one that function is invoked we need to pass at
+
+00:00:50.549 --> 00:00:55.515
+the state and that will return us the specific data that the component needs.
+
+00:00:55.515 --> 00:00:59.390
+So, we will call that mapStateToProps.
+
+00:00:59.390 --> 00:01:02.759
+So, now there are three things we need to keep in mind when building our connect.
+
+00:01:02.759 --> 00:01:06.780
+The first is that somewhere in our implementation we need to use store.subscribe,
+
+00:01:06.780 --> 00:01:08.549
+so we are aware,
+
+00:01:08.549 --> 00:01:11.024
+we are updated whenever the store actually changes.
+
+00:01:11.025 --> 00:01:12.960
+The second thing we need to do is,
+
+00:01:12.959 --> 00:01:16.154
+we need to figure out what state the component that we're going to be rendering needs,
+
+00:01:16.155 --> 00:01:19.927
+which we can use by invoking our mapStateToProps function.
+
+00:01:19.927 --> 00:01:21.689
+And the third thing we need to do is,
+
+00:01:21.689 --> 00:01:27.009
+we need to connect to context so that we can actually grab the store from context.
+
+00:01:27.010 --> 00:01:28.800
+So first let's figure out how we can connect to
+
+00:01:28.799 --> 00:01:31.289
+context and then we will figure out the rest.
+
+00:01:31.290 --> 00:01:32.940
+So what we can do here is,
+
+00:01:32.939 --> 00:01:36.239
+let's make a class inside of this component.
+
+00:01:36.239 --> 00:01:40.524
+What we're going to call this is, ConnectedComponent.
+
+00:01:40.524 --> 00:01:44.070
+This is going to extend React.Component and we've seen
+
+00:01:44.069 --> 00:01:48.194
+this pattern before whenever we connected our components earlier to context.
+
+00:01:48.194 --> 00:01:51.375
+We created a ConnectedComponent and then we rendered
+
+00:01:51.375 --> 00:01:55.780
+the individual component that needed the data from context.
+
+00:01:55.780 --> 00:01:57.480
+So what we can do is,
+
+00:01:57.480 --> 00:01:59.770
+we have a render method here.
+
+00:02:00.150 --> 00:02:05.440
+We now want to grab our store from context.
+
+00:02:05.439 --> 00:02:12.969
+We can use Context.Consumer and now we have access to our store.
+
+00:02:12.969 --> 00:02:15.609
+Because again, what we did in provider was we stuck
+
+00:02:15.610 --> 00:02:19.750
+our store on context using the value prop.
+
+00:02:19.750 --> 00:02:21.819
+And then now from here what we can do is,
+
+00:02:21.819 --> 00:02:25.109
+we can render another component passing it our store.
+
+00:02:25.110 --> 00:02:30.270
+So that's what we will do and we will call this component our receiver component.
+
+00:02:30.270 --> 00:02:32.275
+So, now let's make that component up here,
+
+00:02:32.275 --> 00:02:35.691
+so we'll say class receiver is going to extend
+
+00:02:35.691 --> 00:02:43.780
+React.Component and now what should our receiver component be responsible for?
+
+00:02:43.780 --> 00:02:45.879
+Well, first, it should go ahead and use
+
+00:02:45.879 --> 00:02:49.118
+subscribe in order to be aware of whenever the store changes.
+
+00:02:49.118 --> 00:02:50.680
+And then what we also want to do is,
+
+00:02:50.680 --> 00:02:53.349
+we need to figure out what data this component
+
+00:02:53.349 --> 00:02:56.724
+needs and then we need to render this component passing it that data.
+
+00:02:56.724 --> 00:03:00.905
+So first let's go and figure out how we can subscribe.
+
+00:03:00.905 --> 00:03:06.740
+So, we'll say Component.Mount and when this component mounts we want to grab subscribe.
+
+00:03:06.740 --> 00:03:09.740
+Which is going to come from this.props.store because that's what
+
+00:03:09.740 --> 00:03:13.175
+we're passing in down here.
+
+00:03:13.175 --> 00:03:15.455
+And then just as we did earlier,
+
+00:03:15.455 --> 00:03:19.520
+we can invoke subscribe.
+
+00:03:19.520 --> 00:03:26.269
+Passing it a function and now what do we want to do whenever the store changes?
+
+00:03:26.269 --> 00:03:30.650
+Well, we want to call the stop forceUpdate.
+
+00:03:30.650 --> 00:03:33.909
+And then now we want to make sure that when this component unmounts.
+
+00:03:33.909 --> 00:03:36.949
+So, we'll say componentWillUnmount.
+
+00:03:36.949 --> 00:03:39.857
+We want to call this.unsubscribe,
+
+00:03:39.858 --> 00:03:42.659
+which will unsubscribe this specific listener which
+
+00:03:42.659 --> 00:03:45.884
+will mean we are no longer going to call forceUpdate.
+
+00:03:45.884 --> 00:03:49.229
+So, we figured out the first problem of getting receiver and
+
+00:03:49.229 --> 00:03:52.829
+making it so it will listen to changes and re-render every time,
+
+00:03:52.830 --> 00:03:56.040
+but now we need to figure out what it's actually going to render.
+
+00:03:56.039 --> 00:04:01.754
+Well we know that we are going to render the component that's being passed in,
+
+00:04:01.754 --> 00:04:03.495
+which is this component right here.
+
+00:04:03.495 --> 00:04:05.700
+But what data do we need to give it?
+
+00:04:05.699 --> 00:04:09.524
+Well we can figure that out by invoking mapStateToProps
+
+00:04:09.525 --> 00:04:14.004
+which is going to be this function right here,
+
+00:04:14.004 --> 00:04:17.230
+passing it the state and then what that will give us is,
+
+00:04:17.230 --> 00:04:20.170
+an object back and each property on
+
+00:04:20.170 --> 00:04:23.515
+that object will represent the state that the component needs.
+
+00:04:23.514 --> 00:04:26.125
+So, what we will do is,
+
+00:04:26.125 --> 00:04:29.889
+in here let's use the structuring and we will grab dispatch as
+
+00:04:29.889 --> 00:04:34.240
+well as getState, coming from this.props.store.
+
+00:04:34.240 --> 00:04:39.579
+Then we can grab the state by invoking our getState method.
+
+00:04:39.579 --> 00:04:43.476
+And then now in order to figure out what state is needed,
+
+00:04:43.476 --> 00:04:48.339
+all we need to do is invoke mapStateToProps as I mentioned passing it the state.
+
+00:04:48.339 --> 00:04:52.389
+So now, stateNeeded will be an object with each item on
+
+00:04:52.389 --> 00:04:54.310
+that object or with each property on that object
+
+00:04:54.310 --> 00:04:56.875
+being a prompt that this component needs.
+
+00:04:56.875 --> 00:05:01.930
+So, what we can do is we can just spread stateNeeded onto it.
+
+00:05:01.930 --> 00:05:04.689
+And if you'll also remember what I mentioned when
+
+00:05:04.689 --> 00:05:08.454
+we built out our connected component was,
+
+00:05:08.454 --> 00:05:11.175
+we said whenever we connect a component,
+
+00:05:11.175 --> 00:05:14.199
+we'll also pass that component dispatch as
+
+00:05:14.199 --> 00:05:17.920
+a prop so that we can then dispatch inside of the component itself.
+
+00:05:17.920 --> 00:05:20.020
+So, what we will do as well is,
+
+00:05:20.019 --> 00:05:23.394
+we spread onto at the stateNeeded and then we can say dispatch,
+
+00:05:23.394 --> 00:05:29.147
+is just going to be dispatch which we're getting right here from our store.
+
+00:05:29.148 --> 00:05:32.350
+And now there's only one more very simple thing we need to do.
+
+00:05:32.350 --> 00:05:34.615
+Whenever we invoke connect,
+
+00:05:34.615 --> 00:05:36.985
+like we are doing right here,
+
+00:05:36.985 --> 00:05:39.310
+what we're expecting that to return us is
+
+00:05:39.310 --> 00:05:44.288
+a brand new component that React can then render like we're doing right here.
+
+00:05:44.288 --> 00:05:50.800
+So all we need to know now inside of Connect is what we want to return from
+
+00:05:50.800 --> 00:05:54.430
+it is our connectedComponent that is
+
+00:05:54.430 --> 00:05:58.930
+connecting to context and then rendering the receiver component.
+
+00:05:58.930 --> 00:06:01.504
+So now if we head back over to our app,
+
+00:06:01.504 --> 00:06:04.207
+everything should work exactly the same.
+
+00:06:04.208 --> 00:06:06.960
+But instead of putting our store on context
+
+00:06:06.959 --> 00:06:09.930
+and instead of grabbing that information from context ourselves,
+
+00:06:09.930 --> 00:06:14.115
+what we've done is we've created a little helper library here with
+
+00:06:14.115 --> 00:06:19.230
+our connect higher-order component as well as our provider component.
+
+00:06:19.230 --> 00:06:21.629
+And now whenever we want to put something on
+
+00:06:21.629 --> 00:06:24.779
+context or we want to grab something off of context,
+
+00:06:24.779 --> 00:06:26.728
+instead of doing that ourselves,
+
+00:06:26.728 --> 00:06:31.419
+we can use our nice little abstraction here to do that for us.
+

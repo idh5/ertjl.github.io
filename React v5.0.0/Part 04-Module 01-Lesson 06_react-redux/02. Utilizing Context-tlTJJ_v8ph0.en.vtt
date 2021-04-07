@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.330
+Let's quickly recap how our app is currently functioning.
+
+00:00:03.330 --> 00:00:07.395
+We have an app component that has todos and goals components inside of it.
+
+00:00:07.394 --> 00:00:10.289
+Both todos and goals need access to the store.
+
+00:00:10.289 --> 00:00:13.364
+So app needs to pass the store down as a prop.
+
+00:00:13.365 --> 00:00:15.008
+This is fine right now,
+
+00:00:15.007 --> 00:00:17.219
+but as our app grows it will become increasingly
+
+00:00:17.219 --> 00:00:20.009
+difficult to pass the store to any components that need it.
+
+00:00:20.010 --> 00:00:25.356
+Let's use the new Context API to make the store accessible to components that need it.
+
+00:00:25.356 --> 00:00:30.270
+So the first thing we'll do whenever we want to deal with Context is actually
+
+00:00:30.269 --> 00:00:35.954
+create a Context object here by using React.createContext.
+
+00:00:35.954 --> 00:00:41.759
+This Context objects will now have a provider property as well as a consumer property.
+
+00:00:41.759 --> 00:00:44.670
+So what we'll do first, is we want to set up our provider,
+
+00:00:44.670 --> 00:00:49.410
+and we're going to make our own little abstraction over Provider ourselves,
+
+00:00:49.409 --> 00:00:54.019
+just by creating our own Provider component.
+
+00:00:54.020 --> 00:00:58.500
+So what this will do is it render a
+
+00:00:58.500 --> 00:01:02.130
+Contexts.Provider component and then
+
+00:01:02.130 --> 00:01:05.310
+inside of it it's just going to render whatever its children are.
+
+00:01:05.310 --> 00:01:09.060
+And then what we want to be available on any Child components
+
+00:01:09.060 --> 00:01:12.719
+that use Context.Consumer is the store.
+
+00:01:12.719 --> 00:01:15.150
+So what we'll do is we'll pass our store
+
+00:01:15.150 --> 00:01:19.920
+to this provider component as a prop and then we will go ahead and stick
+
+00:01:19.920 --> 00:01:23.924
+it on value so that again any child components that use consumer
+
+00:01:23.924 --> 00:01:28.634
+can go ahead and consume our store without needing to pass it down as a prop.
+
+00:01:28.635 --> 00:01:30.570
+So now that we have our provider component,
+
+00:01:30.569 --> 00:01:32.659
+what we can do up here,
+
+00:01:32.659 --> 00:01:35.789
+is instead of rendering our app,
+
+00:01:35.790 --> 00:01:37.425
+we want to render our provider,
+
+00:01:37.424 --> 00:01:41.609
+we want to pass to it as a prop or store,
+
+00:01:41.609 --> 00:01:50.140
+and then what we want its children to be is just app component here.
+
+00:01:50.140 --> 00:01:52.659
+So now again what's going to happen is because we have wrapped
+
+00:01:52.659 --> 00:01:56.673
+our entire application and provider and provided it the store,
+
+00:01:56.673 --> 00:01:59.560
+now anytime in our child components that
+
+00:01:59.560 --> 00:02:03.534
+we use Context.Consumer will be able to grab the store.
+
+00:02:03.534 --> 00:02:07.030
+So now let's start implementing Context.Consumer.
+
+00:02:07.030 --> 00:02:10.210
+So the first area in which we want to be able to access
+
+00:02:10.210 --> 00:02:13.645
+the store from a component is our app component.
+
+00:02:13.645 --> 00:02:18.722
+But this one's a little tricky because you'll notice here when we use Context.Consumer,
+
+00:02:18.722 --> 00:02:20.680
+it has a declarative API so what you
+
+00:02:20.680 --> 00:02:25.510
+do is in order to get access to the store as you've seen,
+
+00:02:25.509 --> 00:02:27.715
+is you do Context.Consumer,
+
+00:02:27.715 --> 00:02:34.180
+then you'll get access to the store by passing it a child function like this,
+
+00:02:34.180 --> 00:02:37.098
+which it will be pass the store.
+
+00:02:37.098 --> 00:02:41.095
+But this doesn't help us inside of our app component because we need
+
+00:02:41.094 --> 00:02:45.865
+access to the store inside of componentDidMount and not just in our render method.
+
+00:02:45.865 --> 00:02:48.689
+So what will do in order to solve this problem,
+
+00:02:48.689 --> 00:02:52.689
+is we're going to use a pattern called a container component.
+
+00:02:52.689 --> 00:02:54.354
+A connected component could be a bit tricky,
+
+00:02:54.354 --> 00:02:56.149
+so let's look at what it's trying to solve.
+
+00:02:56.150 --> 00:03:00.045
+The connected part of connected components means that it's connected to the store.
+
+00:03:00.044 --> 00:03:03.209
+This component will be responsible for interacting with the store.
+
+00:03:03.210 --> 00:03:05.099
+This is in contrast to a plane or
+
+00:03:05.099 --> 00:03:08.655
+presentational component which is just responsible for rendering content.
+
+00:03:08.655 --> 00:03:11.685
+So presentational components are concerned with how things look,
+
+00:03:11.685 --> 00:03:14.248
+and container components are concerned with how things work.
+
+00:03:14.248 --> 00:03:17.805
+How this works is a container component is called in your code.
+
+00:03:17.805 --> 00:03:21.456
+This interacts with the store and gets any data that's needed.
+
+00:03:21.455 --> 00:03:25.139
+Then it passes that data as props to the presentational component.
+
+00:03:25.139 --> 00:03:27.029
+It's a little complicated first,
+
+00:03:27.030 --> 00:03:29.715
+but the benefit of this is the separation of concerns.
+
+00:03:29.715 --> 00:03:34.050
+Anything to do with the store or the data is done in the connected component,
+
+00:03:34.050 --> 00:03:37.860
+and anything that's rendered is in the presentational component.
+
+00:03:37.860 --> 00:03:43.135
+So what we'll do is down here let's make a brand new component.
+
+00:03:43.134 --> 00:03:45.209
+We'll call this one ConnectedApp.
+
+00:03:45.210 --> 00:03:48.465
+It's going to extend React.Component,
+
+00:03:48.465 --> 00:03:53.354
+and what it is going to render is context.consumer.
+
+00:03:53.354 --> 00:04:00.375
+Now, we can pass this a function as its child which will be given the store,
+
+00:04:00.375 --> 00:04:02.370
+and then now right here what we can do is,
+
+00:04:02.370 --> 00:04:04.425
+we can render anything we want.
+
+00:04:04.425 --> 00:04:10.630
+So we'll just go ahead and render the app component passing it the store as our props.
+
+00:04:10.629 --> 00:04:11.900
+So now inside of store,
+
+00:04:11.900 --> 00:04:14.390
+we don't have to change anything because we already
+
+00:04:14.389 --> 00:04:17.240
+have it here The store is coming in as a prop.
+
+00:04:17.240 --> 00:04:22.954
+But now instead of passing the app component the store from one we render it,
+
+00:04:22.954 --> 00:04:27.169
+what we're doing is we're using context and we have a connected app component
+
+00:04:27.170 --> 00:04:29.150
+here which is responsible for grabbing the store off
+
+00:04:29.149 --> 00:04:31.739
+a context and then passing it to our app
+

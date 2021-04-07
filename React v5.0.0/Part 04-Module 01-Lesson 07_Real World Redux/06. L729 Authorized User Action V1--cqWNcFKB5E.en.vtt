@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.050 --> 00:00:04.469
+And then now that we are receiving our users as well as our tweets,
+
+00:00:04.469 --> 00:00:08.070
+if you come and look at the final version of our app,
+
+00:00:08.070 --> 00:00:11.400
+the way that we are keeping track of the authenticated user,
+
+00:00:11.400 --> 00:00:15.000
+if you look at our state, is we just have this property right here.
+
+00:00:15.000 --> 00:00:19.899
+We're not going to implement actual authentication but as a way to mark it again,
+
+00:00:19.899 --> 00:00:24.049
+what we're going to do is we're going to stick the authed user on,
+
+00:00:24.050 --> 00:00:26.460
+the state of our Redux store so that way whenever we
+
+00:00:26.460 --> 00:00:28.830
+like a tweet or whenever we make a new tweet,
+
+00:00:28.829 --> 00:00:31.284
+we will know who the authenticated user is.
+
+00:00:31.285 --> 00:00:36.770
+This authed user can be anyone of these three options.
+
+00:00:36.770 --> 00:00:39.100
+If you look at our data, it can be Sarah Edo,
+
+00:00:39.100 --> 00:00:41.260
+me or Dan Abramov.
+
+00:00:41.259 --> 00:00:42.894
+You can pick whoever you want.
+
+00:00:42.895 --> 00:00:46.550
+But now, what we're going to do is we will come up here and create
+
+00:00:46.549 --> 00:00:50.140
+just a constants of the authed ID and then now,
+
+00:00:50.140 --> 00:00:52.524
+inside of here, what we want to do is dispatch,
+
+00:00:52.524 --> 00:00:56.109
+setting the authed ID as a property on our Redux store.
+
+00:00:56.109 --> 00:00:58.399
+Again, we're not going to set up the reducer in this video but
+
+00:00:58.399 --> 00:01:01.030
+it will be nice to have the action all finished.
+
+00:01:01.030 --> 00:01:08.219
+What we will do is let's create a set authed user action type up here,
+
+00:01:08.219 --> 00:01:13.939
+and then we want to export our set authed user action creator.
+
+00:01:13.939 --> 00:01:16.219
+This is going to take in the ID of
+
+00:01:16.219 --> 00:01:20.920
+the authenticated user and then we will say set authed user,
+
+00:01:20.920 --> 00:01:25.915
+pass along the ID and then now inside of shared dot JS,
+
+00:01:25.915 --> 00:01:35.450
+what we want to do is import that action creator from actions slash authed user.
+
+00:01:35.450 --> 00:01:40.155
+Then, down here, when we receive our users and we receive our tweets,
+
+00:01:40.155 --> 00:01:45.099
+what we also want to dispatch is set authed user passing in authed ID,
+
+00:01:45.099 --> 00:01:49.024
+which we have just hard coded again to avoid worrying about authentication.
+
+00:01:49.025 --> 00:01:54.070
+Now that we have all of our action creator setup and we are dispatching them,
+
+00:01:54.069 --> 00:01:56.799
+the next thing we need to do is actually set up the reducers to
+
+00:01:56.799 --> 00:02:00.619
+modify our state based on these actions.
+

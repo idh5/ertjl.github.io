@@ -1,0 +1,397 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.019
+Now that we have all of the data that we need in order to render our timeline,
+
+00:00:04.019 --> 00:00:05.910
+the next thing we need to do is actually build out
+
+00:00:05.910 --> 00:00:08.685
+the UI inside of our components to do that.
+
+00:00:08.685 --> 00:00:10.600
+So, back inside of our terminal,
+
+00:00:10.599 --> 00:00:15.414
+what we need to do is we are going to be using a few different icons here for this heart,
+
+00:00:15.414 --> 00:00:17.780
+as well as this reply icon.
+
+00:00:17.780 --> 00:00:24.660
+So, what we will do is we want to install a new package from MPM called react-icons.
+
+00:00:25.600 --> 00:00:29.535
+Once that's finished, go ahead and restart your application,
+
+00:00:29.535 --> 00:00:30.704
+and then head back over here.
+
+00:00:30.704 --> 00:00:32.449
+We now need to import them.
+
+00:00:32.450 --> 00:00:35.960
+So I'm just going to paste these. So, we're getting an ArrowBackOutline.
+
+00:00:35.960 --> 00:00:37.730
+We're also getting a HeartOutline,
+
+00:00:37.729 --> 00:00:39.750
+as well as a HeartFullOutline.
+
+00:00:39.750 --> 00:00:43.784
+So, technically, we have three different icons here: one for the reply,
+
+00:00:43.784 --> 00:00:46.119
+one for the heart that is filled in,
+
+00:00:46.119 --> 00:00:49.239
+and the other for the heart that is not filled in.
+
+00:00:49.240 --> 00:00:50.325
+So, now that we have those,
+
+00:00:50.325 --> 00:00:55.245
+let's go ahead and start building out the UI of our tweet component here.
+
+00:00:55.244 --> 00:01:00.155
+So, first let's destructure all of the different properties that we will need.
+
+00:01:00.155 --> 00:01:03.204
+We'll grab the name of the tweet's author,
+
+00:01:03.204 --> 00:01:04.694
+as well as their avatar,
+
+00:01:04.694 --> 00:01:07.149
+the timestamp of the tweet, the text,
+
+00:01:07.150 --> 00:01:08.815
+if the author has liked it,
+
+00:01:08.814 --> 00:01:10.920
+how many likes and replies it has,
+
+00:01:10.920 --> 00:01:12.629
+as well as its ID,
+
+00:01:12.629 --> 00:01:15.759
+and if it has a parent Tweet that it is replying to.
+
+00:01:15.760 --> 00:01:17.780
+All of those are going to come from tweet,
+
+00:01:17.780 --> 00:01:20.355
+which we have right here coming from props.
+
+00:01:20.355 --> 00:01:24.310
+Then, now the first thing we want to render is an image.
+
+00:01:24.310 --> 00:01:26.064
+We want to pass it our avatar.
+
+00:01:26.064 --> 00:01:30.569
+We'll give it an alt tag of avatar of,
+
+00:01:30.569 --> 00:01:36.779
+and then we will say name, and then last we want to give this a className of avatar.
+
+00:01:42.430 --> 00:01:47.360
+Now what we should see is we now have everybody's avatar.
+
+00:01:47.359 --> 00:01:54.004
+So, the next thing we want to render is this information right here.
+
+00:01:54.004 --> 00:01:57.920
+So what we will do is let's make another div here.
+
+00:01:57.920 --> 00:02:03.939
+We'll give this a className of tweet-info, and then inside of here,
+
+00:02:03.939 --> 00:02:07.274
+the first thing we want to render is the actual name,
+
+00:02:07.275 --> 00:02:08.895
+we'll wrap that in a span,
+
+00:02:08.895 --> 00:02:14.330
+then we want to render a div with the formatted date.
+
+00:02:14.330 --> 00:02:19.700
+So what we need to do is import that helper function,
+
+00:02:19.699 --> 00:02:22.964
+which is going to be located inside of our helper's file.
+
+00:02:22.965 --> 00:02:25.409
+So, now when we render this div,
+
+00:02:25.409 --> 00:02:31.254
+we can say formatDate and we can pass it the timestamp.
+
+00:02:31.254 --> 00:02:37.555
+Then, now what we want to do is if the user is replying to another tweet,
+
+00:02:37.555 --> 00:02:39.900
+we want to render this text right here,
+
+00:02:39.900 --> 00:02:42.985
+and If not, then we don't want to render anything.
+
+00:02:42.985 --> 00:02:46.790
+So, what we can do is we can say if parent is a thing,
+
+00:02:46.789 --> 00:02:50.530
+and it will be if, remember down here,
+
+00:02:50.780 --> 00:02:55.289
+tweets at tweet.replyingTo is a thing,
+
+00:02:55.289 --> 00:02:58.129
+which means if tweet.replyingTo is a thing,
+
+00:02:58.129 --> 00:03:02.085
+so if the individual tweet has a replyingTo property on it,
+
+00:03:02.085 --> 00:03:07.025
+then what we will do is render this button here,
+
+00:03:07.025 --> 00:03:14.030
+we'll give it a className of replying-to and then the text inside of here is going
+
+00:03:14.030 --> 00:03:21.659
+to be replying to at the parent tweet.the author.
+
+00:03:21.659 --> 00:03:24.449
+Then what we want to add here is let's just say
+
+00:03:24.449 --> 00:03:27.824
+when this function is clicked on, we'll get an event,
+
+00:03:27.824 --> 00:03:30.799
+and then we want to call a toParent method that we are going to
+
+00:03:30.800 --> 00:03:35.800
+build passing it the event as well as passing it the ID of the parent.
+
+00:03:35.800 --> 00:03:39.590
+So, now up here, let's just make a little place holder.
+
+00:03:39.590 --> 00:03:44.610
+So, what we want this tweet to do is first,
+
+00:03:44.699 --> 00:03:47.394
+it's going to call e.preventDefault
+
+00:03:47.395 --> 00:03:50.265
+and then eventually what we will add is functionality.
+
+00:03:50.264 --> 00:03:55.189
+So we'll say todo here, we want to redirect to the parent Tweet because again,
+
+00:03:55.189 --> 00:03:57.180
+in our final version of our app,
+
+00:03:57.180 --> 00:04:00.150
+when you click on this text right here,
+
+00:04:00.150 --> 00:04:05.900
+what we go to is the tweet for the main parent Tweet that we were applying to.
+
+00:04:05.900 --> 00:04:08.860
+Then the last thing we want to render here
+
+00:04:08.860 --> 00:04:16.968
+under our button but still inside of our tweet-info div is just the text.
+
+00:04:20.790 --> 00:04:23.680
+So, now if we look at our app,
+
+00:04:23.680 --> 00:04:25.384
+if we don't have any typos,
+
+00:04:25.384 --> 00:04:27.029
+we are getting there,
+
+00:04:27.029 --> 00:04:28.750
+closer to the UI that we want.
+
+00:04:28.750 --> 00:04:33.654
+Now the last thing we want to render is our Reply and Like buttons down here.
+
+00:04:33.654 --> 00:04:36.625
+So we can do that by rendering another div.
+
+00:04:36.625 --> 00:04:41.680
+We'll give this a className of three-icons.
+
+00:04:41.680 --> 00:04:43.555
+Then, inside of here,
+
+00:04:43.555 --> 00:04:48.639
+the first thing we want to render is our ArrowBackOutline.
+
+00:04:48.639 --> 00:04:52.449
+We'll give this a className of tweet-icon.
+
+00:04:53.879 --> 00:04:59.824
+Then we want to go ahead and show how many replies this tweet has.
+
+00:04:59.824 --> 00:05:06.024
+So we will say if replies does not equal zero,
+
+00:05:06.024 --> 00:05:09.514
+then what we want to do is go ahead and show this.
+
+00:05:09.514 --> 00:05:11.680
+So, if the tweet has zero replies,
+
+00:05:11.680 --> 00:05:13.459
+then we won't show how many has.
+
+00:05:13.459 --> 00:05:15.229
+So, for example, right here,
+
+00:05:15.230 --> 00:05:17.420
+you'll notice it has no reply. So we don't show anything.
+
+00:05:17.420 --> 00:05:21.004
+But this one, we will show the number two because that's how many replies it has.
+
+00:05:21.004 --> 00:05:23.040
+Then, now that we are showing the replies,
+
+00:05:23.040 --> 00:05:30.780
+the next thing we want to do is show the option to hearts or to like this specific tweet,
+
+00:05:30.779 --> 00:05:34.824
+a function here called handleLike.
+
+00:05:34.824 --> 00:05:37.849
+So, let's do that right now.
+
+00:05:37.850 --> 00:05:40.920
+We'll build out the functionality for it later.
+
+00:05:42.250 --> 00:05:45.310
+So, what handleLike is going to do, right now,
+
+00:05:45.310 --> 00:05:49.389
+is it will just take in an event and call preventDefault on that for now.
+
+00:05:49.389 --> 00:05:52.219
+Then what we will do later on is make it,
+
+00:05:52.220 --> 00:05:53.920
+so when you like the tweet,
+
+00:05:53.920 --> 00:05:56.580
+it saves that information in the state of our redirect store,
+
+00:05:56.579 --> 00:05:59.050
+as well as our database.
+
+00:05:59.050 --> 00:06:00.610
+So, now, inside this button,
+
+00:06:00.610 --> 00:06:05.410
+what we want to say is if hasLiked equals true,
+
+00:06:05.410 --> 00:06:12.005
+then the component we want to render is going to be our full heart outline.
+
+00:06:12.004 --> 00:06:14.605
+We will pass to it a color,
+
+00:06:14.605 --> 00:06:16.110
+which is the red color.
+
+00:06:16.110 --> 00:06:21.530
+So it's going to be e0245e.
+
+00:06:21.529 --> 00:06:22.949
+So, very specific there.
+
+00:06:22.949 --> 00:06:25.979
+Then we'll give this a className of tweet-icon.
+
+00:06:25.980 --> 00:06:29.775
+Then if the tweet hasn't been liked yet,
+
+00:06:29.774 --> 00:06:32.284
+then the component we want to render is
+
+00:06:32.285 --> 00:06:39.695
+our HeartOutline components and we'll also give this a className of tweet-icon.
+
+00:06:39.694 --> 00:06:43.579
+So we can't forget to add this right here, the closing quote.
+
+00:06:43.579 --> 00:06:44.844
+So that looks pretty good.
+
+00:06:44.845 --> 00:06:49.040
+Then the last thing we need to do is the same thing we did for our replies.
+
+00:06:49.040 --> 00:06:51.335
+So, we will have a span element here.
+
+00:06:51.334 --> 00:06:54.694
+If we'll say the likes do not equal zero,
+
+00:06:54.694 --> 00:06:58.319
+then we want to go ahead and show how many likes they have.
+
+00:06:58.319 --> 00:07:00.540
+So, with that now,
+
+00:07:00.540 --> 00:07:03.525
+what we should have is the full UI,
+
+00:07:03.524 --> 00:07:07.069
+as well as the placeholders for our helper methods
+
+00:07:07.069 --> 00:07:11.709
+that we're going to be building out in a video soon.
+
+00:07:12.370 --> 00:07:15.829
+So it looks like our CSS is a little bit messed up here.
+
+00:07:15.829 --> 00:07:17.634
+So let's go ahead and fix that.
+
+00:07:17.634 --> 00:07:23.649
+What we should have is this info down here,
+
+00:07:23.649 --> 00:07:28.304
+the information about the name and the text of the actual tweet.
+
+00:07:28.305 --> 00:07:36.204
+It should be in its own diva and then all of this information,
+
+00:07:36.204 --> 00:07:40.534
+the tweet-icons container, should also be inside of
+
+00:07:40.535 --> 00:07:45.439
+this tweet-info and then we need to close the tweet-info div by doing that.
+
+00:07:45.439 --> 00:07:50.509
+Now the only other change we need to make to our tweet component is,
+
+00:07:50.509 --> 00:07:54.550
+right here, we have an ID variable that we're grabbing from tweet that we aren't using.
+
+00:07:54.550 --> 00:07:59.845
+So we can get rid of that. Then, now what our UI should look like is this,
+
+00:07:59.845 --> 00:08:01.245
+where we have our avatar,
+
+00:08:01.245 --> 00:08:03.524
+all of the information about the tweet,
+
+00:08:03.524 --> 00:08:08.649
+as well as buttons to reply and too like the individual tweets.
+

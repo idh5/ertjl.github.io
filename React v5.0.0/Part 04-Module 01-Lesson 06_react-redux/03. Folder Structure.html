@@ -1,0 +1,579 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Folder Structure</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>react-redux</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Connect &amp; Provider.html">02. Connect &amp; Provider</a>
+    </li>
+    <li class="">
+      <a href="03. Folder Structure.html">03. Folder Structure</a>
+    </li>
+    <li class="">
+      <a href="04. Lesson Summary.html">04. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Folder Structure</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>React &amp; Redux L6 57  Folder Structure V2</p></h3>
+  <video controls>
+  <source src="03. React &amp; Redux L6 57  Folder Structure V2-4Ud2n_ceUZc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. React &amp; Redux L6 57  Folder Structure V2-4Ud2n_ceUZc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. React &amp; Redux L6 57  Folder Structure V2-4Ud2n_ceUZc.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Right now, all of our app's code is located in a single file. This isn't a very realistic way to build an app, though. Hopefully it hasn't been too frustrating scrolling up and down and up and down to find the right place to add your code! 😉</p>
+<p>To fix this, we're going to use Create React App to scaffold out a React app for us. If, for some reason, you don't have Create React App installed on your machine, you can install it by running the following in your Terminal:</p>
+<pre><code class="bash language-bash">npm install -g create-react-app</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L606 Create React App V2</p></h3>
+  <video controls>
+  <source src="03. L606 Create React App V2-QzBtsjxouyw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. L606 Create React App V2-QzBtsjxouyw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. L606 Create React App V2-QzBtsjxouyw.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/5c9b7e4b84d005de1139620f4d795bc5eacd95ca" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>We just installed a bunch of stuff! To verify you have everything you need to continue, make sure to check off each of the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="e186fca9-4fef-4aa9-b304-4c4dc91b6930--0">
+        <label for="e186fca9-4fef-4aa9-b304-4c4dc91b6930--0"><p>I've used Create React App to scaffold out a React application.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="e186fca9-4fef-4aa9-b304-4c4dc91b6930--1">
+        <label for="e186fca9-4fef-4aa9-b304-4c4dc91b6930--1"><p>I've installed the <code>goals-todos-api</code> package.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="e186fca9-4fef-4aa9-b304-4c4dc91b6930--2">
+        <label for="e186fca9-4fef-4aa9-b304-4c4dc91b6930--2"><p>I've installed the <code>redux</code> package.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="e186fca9-4fef-4aa9-b304-4c4dc91b6930--3">
+        <label for="e186fca9-4fef-4aa9-b304-4c4dc91b6930--3"><p>I've installed the <code>react-redux</code> package.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="e186fca9-4fef-4aa9-b304-4c4dc91b6930--4">
+        <label for="e186fca9-4fef-4aa9-b304-4c4dc91b6930--4"><p>I've installed the <code>redux-thunk</code> package.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic! Let's proceed.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L607 Actions V2</p></h3>
+  <video controls>
+  <source src="03. L607 Actions V2-JnBpKGOqqwc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. L607 Actions V2-JnBpKGOqqwc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. L607 Actions V2-JnBpKGOqqwc.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/371d896c07230ffb1b056233e605f8079c4e32f9" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Following along? Great! Make sure to check off each of the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="53ee9229-ccc5-472d-92c1-6947441bcef4--0">
+        <label for="53ee9229-ccc5-472d-92c1-6947441bcef4--0"><p>I've moved all of the Todos actions over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="53ee9229-ccc5-472d-92c1-6947441bcef4--1">
+        <label for="53ee9229-ccc5-472d-92c1-6947441bcef4--1"><p>I've moved all of the Goals actions over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="53ee9229-ccc5-472d-92c1-6947441bcef4--2">
+        <label for="53ee9229-ccc5-472d-92c1-6947441bcef4--2"><p>I've moved all of the shared actions content over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="53ee9229-ccc5-472d-92c1-6947441bcef4--3">
+        <label for="53ee9229-ccc5-472d-92c1-6947441bcef4--3"><p>The necessary functions and constants are being exported.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Thanks!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L608 Reducers V2</p></h3>
+  <video controls>
+  <source src="03. L608 Reducers V2-N-44Rn9B8QY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. L608 Reducers V2-N-44Rn9B8QY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. L608 Reducers V2-N-44Rn9B8QY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/4a89382786d9516a41415965a9172b9853d8998f" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="987a6478-0373-4590-b8ed-5019b14312ef--0">
+        <label for="987a6478-0373-4590-b8ed-5019b14312ef--0"><p>I've moved the Todos reducer over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="987a6478-0373-4590-b8ed-5019b14312ef--1">
+        <label for="987a6478-0373-4590-b8ed-5019b14312ef--1"><p>I've moved the Goals reducer over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="987a6478-0373-4590-b8ed-5019b14312ef--2">
+        <label for="987a6478-0373-4590-b8ed-5019b14312ef--2"><p>I've moved the Loading reducer over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="987a6478-0373-4590-b8ed-5019b14312ef--3">
+        <label for="987a6478-0373-4590-b8ed-5019b14312ef--3"><p>I've combined all reducers in <code>reducers/index.js</code>.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Thanks for following along!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L609 Middleware V2</p></h3>
+  <video controls>
+  <source src="03. L609 Middleware V2-sgRSJuKLB8g.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. L609 Middleware V2-sgRSJuKLB8g.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. L609 Middleware V2-sgRSJuKLB8g.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/6da37ad5d09edc5d06c00250d03b578ea4bdbcb7" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="6da2126a-1b95-489c-9ccf-46ffbf33fd7c--0">
+        <label for="6da2126a-1b95-489c-9ccf-46ffbf33fd7c--0"><p>I've moved the Checker middleware over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="6da2126a-1b95-489c-9ccf-46ffbf33fd7c--1">
+        <label for="6da2126a-1b95-489c-9ccf-46ffbf33fd7c--1"><p>I've moved the Logger middleware over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="6da2126a-1b95-489c-9ccf-46ffbf33fd7c--2">
+        <label for="6da2126a-1b95-489c-9ccf-46ffbf33fd7c--2"><p>I've passed <code>thunk</code>, <code>checker</code>, and <code>logger</code> to <code>applyMiddleware</code> in <code>middleware/index.js</code>.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Thanks!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L610 Components V2</p></h3>
+  <video controls>
+  <source src="03. L610 Components V2-zu_OuldiJw4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. L610 Components V2-zu_OuldiJw4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. L610 Components V2-zu_OuldiJw4.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/7a540c1ba3f6c0a3e0a249b76584c5c215a99604" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--0">
+        <label for="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--0"><p>I've moved the List component over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--1">
+        <label for="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--1"><p>I've moved the Todos component over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--2">
+        <label for="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--2"><p>I've moved the Goals component over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--3">
+        <label for="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--3"><p>Each component imports the necessary packages.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--4">
+        <label for="929c362a-1c29-4af3-9c0e-43a6cfe5ae8d--4"><p>I've updated the App component.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Thanks!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L611 The Store V2</p></h3>
+  <video controls>
+  <source src="03. L611 The Store V2-hC6WWIXVlSo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. L611 The Store V2-hC6WWIXVlSo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. L611 The Store V2-hC6WWIXVlSo.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/1177c07de724399ba9f8b1573c4c9711caa23daa" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="rails-style-organization">"Rails-style" Organization</h2>
+<p>To recap, we've organized the individual elements of our app with a "Rails-style" approach. That is, assets are grouped by "type" or "capability": any action will be found in the <em>Actions</em> folder, any reducer will be found in <em>Reducers</em>, and so on. In fact, the “real world” example from <a href="https://github.com/reactjs/redux/tree/master/examples/real-world" rel="noopener noreferrer" target="_blank">Redux on GitHub</a> structures the app this very way. Under this directory structure, if we wanted to import all actions into a component, we can get them all in a single import!</p>
+<pre><code class="text language-text">Frontend
+   - Components
+      - component1.js
+      - component2.js
+      - component3.js
+   - Actions
+      - action1.js
+      - action2.js
+   - Reducers
+      - reducer1.js
+   - Util
+   - Store</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Almost there! How are things looking?</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="ee390d03-3aee-49bb-862c-8ac4f67cb202--0">
+        <label for="ee390d03-3aee-49bb-862c-8ac4f67cb202--0"><p>I've moved the store over.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="ee390d03-3aee-49bb-862c-8ac4f67cb202--1">
+        <label for="ee390d03-3aee-49bb-862c-8ac4f67cb202--1"><p>I've provided the store to the app.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Fantastic!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="other-patterns">Other Patterns</h1>
+<p>Along with the "Rails style" of organizing your folder structure, you may find other approaches that developers use to build their directory more to your liking. An alternative way to structure the same application, then, is by feature:</p>
+<pre><code class="text language-text">├── dashboard
+│ ├── actions.js
+│ ├── index.js
+│ └── reducer.js
+└── nav
+ ├── actions.js
+ ├── index.js
+ └── reducer.js</code></pre>
+<p>This form of organization groups assets by their common feature or “concept.” That is, all assets related to a navigation component are all together in a single, modular folder. It’s a great way to visually express what the application is all about. However, if the app contains several hundred components, it can become more difficult to navigate through.</p>
+<p>What's more: you might even see that some developers prefer a <a href="https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be" rel="noopener noreferrer" target="_blank">"duck" style</a> approach, where Redux and state management files are completely separated from files that render UI.</p>
+<p>Ultimately, the choice is yours. Whichever way you choose to organize your directory structure, just be sure that it’s something that makes sense for your app, and it’s something you’re comfortable with!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>This section didn't accomplish anything with React or Redux. All we did here was improve the structure and organization of our app by moving each portion of the app to a specific folder structure. </p>
+<p>To say it one more time, there's no "right" way to build out the folder structure for you app. However, doing it this way is handy because we're using the structure provided by Create React App. Using this structure, it's easy to convert a plain React application over to one that includes Redux. Another benefit is that other React developers will already be comfortable with this file/folder organization.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Folder Structure')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

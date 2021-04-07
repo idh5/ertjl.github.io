@@ -1,0 +1,197 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.174 --> 00:00:04.581
+Agora, em vez de realizar o log
+do novo tuíte no console
+
+00:00:04.623 --> 00:00:06.813
+sempre que clicarmos
+em Submit,
+
+00:00:06.855 --> 00:00:09.301
+queremos atualizar
+o estado da Store Redux
+
+00:00:09.343 --> 00:00:10.686
+com o novo tuíte.
+
+00:00:10.728 --> 00:00:12.302
+A primeira coisa que faremos
+
+00:00:12.344 --> 00:00:15.815
+sempre que atualizarmos
+o estado da Store
+
+00:00:15.857 --> 00:00:18.167
+será construir
+algumas ações.
+
+00:00:18.209 --> 00:00:22.422
+Dentro da pasta actions,
+no arquivo Tweets.js,
+
+00:00:22.464 --> 00:00:26.346
+importaremos saveTweet
+
+00:00:26.388 --> 00:00:28.817
+e queremos exibir
+a barra de carregamento
+
+00:00:28.859 --> 00:00:31.785
+sempre que salvarmos ou adicionarmos
+um tuíte à Store.
+
+00:00:31.827 --> 00:00:34.705
+Vamos obter showLoading
+e hideLoading,
+
+00:00:34.747 --> 00:00:39.739
+que virão
+do pacote react-redux-loading.
+
+00:00:39.781 --> 00:00:43.442
+Agora, qual é o tipo
+do evento que ocorrerá
+
+00:00:43.484 --> 00:00:48.059
+quando adicionarmos um novo tuíte?
+Será o evento ADD_TWEET.
+
+00:00:48.101 --> 00:00:52.225
+Agora podemos fazer
+alguns criadores de ação.
+
+00:00:52.267 --> 00:00:55.935
+O primeiro será
+um criador de ação normal,
+
+00:00:55.977 --> 00:00:57.516
+que retornará uma ação.
+
+00:00:57.525 --> 00:00:59.745
+Ele se chamará "addTweet"
+
+00:00:59.787 --> 00:01:02.307
+e pegará um tweet.
+
+00:01:02.349 --> 00:01:05.433
+O tipo será ADD_TWEET,
+então ele adicionará
+
+00:01:05.475 --> 00:01:08.632
+o tuíte que está entrando
+à ação em si.
+
+00:01:08.674 --> 00:01:10.969
+Agora, vamos construir
+
+00:01:11.011 --> 00:01:15.768
+o criador de ação assíncrono,
+que exportaremos.
+
+00:01:15.810 --> 00:01:19.626
+Este obterá o texto do tuíte
+
+00:01:19.668 --> 00:01:24.452
+e o tuíte ao qual
+o novo tuíte está respondendo,
+
+00:01:24.494 --> 00:01:25.753
+se for o caso.
+
+00:01:25.795 --> 00:01:27.154
+Agora,
+
+00:01:27.196 --> 00:01:30.442
+como realizaremos
+coisas assíncronas,
+
+00:01:30.484 --> 00:01:34.033
+retornaremos uma função,
+que passará dispatch.
+
+00:01:34.075 --> 00:01:37.233
+O bom de também retornar
+uma função
+
+00:01:37.275 --> 00:01:39.017
+com o middleware Redux-thunk,
+
+00:01:39.059 --> 00:01:41.553
+é que também será passada
+uma função getState,
+
+00:01:41.595 --> 00:01:42.737
+que podemos invocar
+
+00:01:42.779 --> 00:01:44.624
+para obter o estado atual
+da Store.
+
+00:01:44.666 --> 00:01:46.076
+Então,
+
+00:01:46.118 --> 00:01:51.522
+podemos obter o authedUser do estado
+invocando getState.
+
+00:01:52.417 --> 00:01:56.593
+Antes da solicitação assíncrona,
+vamos exibir
+
+00:01:56.635 --> 00:01:58.056
+a barra de carregamento.
+
+00:01:58.098 --> 00:01:59.289
+Depois disso,
+
+00:01:59.331 --> 00:02:01.920
+poderemos chamar saveTweet
+
+00:02:01.962 --> 00:02:05.136
+passando o texto
+e também o autor,
+
+00:02:05.178 --> 00:02:07.273
+que será authedUser.
+
+00:02:07.315 --> 00:02:11.496
+Por fim, se o tuíte for uma resposta
+a outro tuíte,
+
+00:02:11.538 --> 00:02:13.477
+o que devemos fazer,
+
+00:02:13.519 --> 00:02:15.796
+uma vez que isto
+estiver resolvido,
+
+00:02:15.838 --> 00:02:17.677
+é passar o tuíte
+
+00:02:17.719 --> 00:02:23.110
+que vamos obter e disparar
+o criador de ação addTweet
+
+00:02:23.152 --> 00:02:24.733
+passando tweet.
+
+00:02:25.341 --> 00:02:26.877
+Depois disso,
+
+00:02:26.919 --> 00:02:31.941
+podemos disparar o criador de ação
+hideLoading.
+
+00:02:31.983 --> 00:02:35.661
+Agora que configuramos a ação,
+o próximo passo será descobrir
+
+00:02:35.703 --> 00:02:37.651
+como atualizar o estado
+
+00:02:37.693 --> 00:02:40.100
+a partir da ação específica.
+

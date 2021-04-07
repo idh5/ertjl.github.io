@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.870 --> 00:00:04.371
+Agora que estamos recebendo
+users e tweets,
+
+00:00:04.404 --> 00:00:07.607
+se você olhar a versão final
+do nosso aplicativo,
+
+00:00:07.640 --> 00:00:11.444
+verá que estamos rastreando
+o usuário autenticado
+
+00:00:11.478 --> 00:00:14.981
+através desta propriedade
+aqui no nosso estado.
+
+00:00:15.015 --> 00:00:17.584
+Então não vamos implementar
+a autenticação.
+
+00:00:17.617 --> 00:00:20.053
+Para simular isso novamente,
+
+00:00:20.086 --> 00:00:25.658
+vamos colocar o authedUser dentro
+do estado da nossa Store Redux.
+
+00:00:25.692 --> 00:00:28.762
+Assim, quando curtirmos um tuíte
+ou criarmos um novo tuíte,
+
+00:00:28.795 --> 00:00:31.264
+saberemos quem são
+os usuários autenticados.
+
+00:00:31.297 --> 00:00:36.703
+Então o authedUser pode ser
+qualquer uma destas opções.
+
+00:00:36.736 --> 00:00:37.737
+Se olhar nos dados,
+
+00:00:37.771 --> 00:00:40.974
+pode ser sarah_edo,
+eu ou dan_abramov.
+
+00:00:41.007 --> 00:00:42.976
+Você pode escolher
+quem quiser.
+
+00:00:43.009 --> 00:00:48.876
+Agora vamos criar
+uma constante de AUTHED_ID.
+
+00:00:49.652 --> 00:00:52.585
+Aqui dentro,
+queremos disparar,
+
+00:00:52.619 --> 00:00:53.820
+configurando AUTHED_ID
+
+00:00:53.853 --> 00:00:56.289
+como uma propriedade
+na nossa Store Redux.
+
+00:00:56.322 --> 00:00:58.258
+Não vamos configurar a reducer
+neste vídeo,
+
+00:00:58.291 --> 00:01:00.959
+mas será legal finalizar
+toda a ação.
+
+00:01:00.992 --> 00:01:02.844
+Agora nós vamos...
+
+00:01:02.877 --> 00:01:07.834
+criar uma ação
+SET_AUTHED_USER.
+
+00:01:07.867 --> 00:01:10.950
+Depois, vamos exportar
+
+00:01:10.983 --> 00:01:14.040
+o criador de ação
+setAuthedUser.
+
+00:01:14.074 --> 00:01:17.410
+Ele vai conter a id
+do usuário autenticado.
+
+00:01:17.444 --> 00:01:21.948
+Vamos escrever SET_AUTHED_USER,
+passando a id.
+
+00:01:21.981 --> 00:01:25.885
+E, dentro de shared.js,
+
+00:01:25.919 --> 00:01:31.147
+vamos importar
+o criador de ação
+
+00:01:31.181 --> 00:01:34.894
+de actions/authedUser.
+
+00:01:34.928 --> 00:01:39.933
+Aqui embaixo,
+quando recebemos users e tweets,
+
+00:01:39.966 --> 00:01:43.703
+também vamos disparar
+setAuthedUser,
+
+00:01:43.737 --> 00:01:46.840
+passando para ela a AUTHED.ID,
+onde já fizemos o hard-coding
+
+00:01:46.873 --> 00:01:48.975
+para não nos preocuparmos
+com autenticação.
+
+00:01:49.009 --> 00:01:52.445
+Agora que os criadores de ação
+estão configurados,
+
+00:01:52.479 --> 00:01:53.947
+e os estamos disparando,
+
+00:01:53.980 --> 00:01:56.549
+o próximo passo é configurar
+as reducers
+
+00:01:56.583 --> 00:01:59.652
+para modificar nosso estado
+com base nestas ações.
+

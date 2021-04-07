@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.226 --> 00:00:03.697
+Como vimos,
+o Redux não tem relação com o React.
+
+00:00:03.739 --> 00:00:06.625
+O React, assim como
+qualquer biblioteca da IU,
+
+00:00:06.667 --> 00:00:09.897
+melhora a previsibilidade
+do gerenciamento de estado do Redux.
+
+00:00:09.939 --> 00:00:13.112
+Observando a nossa implementação
+do React e do Redux juntos,
+
+00:00:13.154 --> 00:00:15.984
+o segredo é que passamos a Store
+como uma propriedade,
+
+00:00:16.026 --> 00:00:18.825
+e utilizamos isso para que o estado
+dispare ou inscreva
+
+00:00:18.867 --> 00:00:20.369
+sempre que for preciso.
+
+00:00:20.411 --> 00:00:22.801
+Se fosse para construir
+uma biblioteca
+
+00:00:22.843 --> 00:00:25.537
+para extrair alguns problemas
+da implementação
+
+00:00:25.579 --> 00:00:27.137
+entre o React e o Redux,
+
+00:00:27.179 --> 00:00:29.110
+como você faria?
+
+00:00:29.152 --> 00:00:31.171
+Quando compomos
+a função createStore,
+
+00:00:31.213 --> 00:00:33.581
+nossa Store ficou responsável
+por três coisas:
+
+00:00:33.623 --> 00:00:36.310
+obter o estado,
+atualizar o estado
+
+00:00:36.352 --> 00:00:38.357
+e observar as mudanças.
+
+00:00:38.399 --> 00:00:41.798
+O objetivo da abstração
+é fazer com que isso
+
+00:00:41.840 --> 00:00:44.077
+funcione muito bem
+com o React.
+

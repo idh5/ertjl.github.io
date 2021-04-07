@@ -1,0 +1,23 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.536
+Nesta aula, aprendemos
+sobre a ligação react-redux
+
+00:00:03.570 --> 00:00:06.873
+e como ela deixa o trabalho
+com React e Redux mais coeso.
+
+00:00:06.906 --> 00:00:07.907
+A seguir,
+
+00:00:07.941 --> 00:00:10.643
+vamos nos afastar do aplicativo
+de afazeres e metas simples,
+
+00:00:10.677 --> 00:00:14.748
+e ver como construir um aplicativo
+do mundo real com React e Redux.
+

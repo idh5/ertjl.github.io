@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.770
+So now we have actions,
+
+00:00:01.770 --> 00:00:03.419
+our middleware as well as our reducers.
+
+00:00:03.419 --> 00:00:07.889
+Let's go ahead and migrate our components over to our new React app.
+
+00:00:07.889 --> 00:00:12.419
+So inside of our components folder we're going to create three new files.
+
+00:00:12.419 --> 00:00:21.000
+We'll have Goals.js, List.js for our list component, and then Todos.js.
+
+00:00:21.000 --> 00:00:23.684
+And so now, let's do our List component first.
+
+00:00:23.684 --> 00:00:29.144
+So, I'm just going to copy this and paste it over inside,
+
+00:00:29.144 --> 00:00:30.179
+not inside of Todos,
+
+00:00:30.179 --> 00:00:32.990
+but inside of our List.js file,
+
+00:00:32.990 --> 00:00:38.840
+and this is going to be the default export as we're used to with React components.
+
+00:00:38.840 --> 00:00:41.300
+And then, because we are using jsx in this module,
+
+00:00:41.299 --> 00:00:43.759
+we need to go ahead and import React.
+
+00:00:43.759 --> 00:00:47.519
+Next, let's move over our Todos Component.
+
+00:00:47.520 --> 00:00:51.109
+So, let's grab all of this both our Todos Component
+
+00:00:51.109 --> 00:00:55.159
+as well as our connect invocation to connect our Todos Component.
+
+00:00:55.159 --> 00:00:57.019
+So we'll paste that into here.
+
+00:00:57.020 --> 00:00:58.895
+And then, now you'll notice that we are using
+
+00:00:58.895 --> 00:01:02.390
+a few different action creators as well as connect that down here.
+
+00:01:02.390 --> 00:01:05.254
+So we need to go ahead and import everything we need.
+
+00:01:05.254 --> 00:01:08.609
+So first we will grab React from react,
+
+00:01:08.609 --> 00:01:12.554
+then we want to grab connect from react-redux.
+
+00:01:12.554 --> 00:01:17.189
+And then now, we want to grab all of the different action creators that we will be using,
+
+00:01:17.189 --> 00:01:21.855
+so we'll have handeAddTodo as well as handleDeleteTodo, and handleToggle.
+
+00:01:21.855 --> 00:01:26.159
+All of those are going to be coming from actions/todos.
+
+00:01:26.159 --> 00:01:30.390
+So now, instead of creating a ConnectedTodos variable here,
+
+00:01:30.390 --> 00:01:32.998
+what we can do is
+
+00:01:32.998 --> 00:01:38.189
+just default as just export as the default export the invocation of connect.
+
+00:01:38.189 --> 00:01:40.679
+So that way, whenever we import this Todos module,
+
+00:01:40.680 --> 00:01:44.175
+what we're going to get back is our ConnectedTodos Component,
+
+00:01:44.174 --> 00:01:48.944
+by using the connect function coming from react-redux.
+
+00:01:48.944 --> 00:01:51.765
+And now we forgot that inside of our Todos Component,
+
+00:01:51.765 --> 00:01:54.420
+when I say we, I mean I, we are also rendering List.
+
+00:01:54.420 --> 00:01:57.570
+So we need to go ahead and import List as well.
+
+00:01:57.569 --> 00:02:00.719
+And now, our Todos component is all finished.
+
+00:02:00.719 --> 00:02:05.325
+So now, the last one we want to move over is our Goals Component.
+
+00:02:05.325 --> 00:02:08.069
+So, let's go and grab that over here.
+
+00:02:08.069 --> 00:02:11.707
+We will also grab the ConnectedGoals Component,
+
+00:02:11.707 --> 00:02:13.169
+and then just as we did before,
+
+00:02:13.169 --> 00:02:17.959
+we need to go ahead and import a few different things. So we need React.
+
+00:02:17.960 --> 00:02:20.469
+We again need connect,
+
+00:02:20.469 --> 00:02:24.639
+because we want to export the connected components.
+
+00:02:24.639 --> 00:02:28.569
+And then finally, we need List,
+
+00:02:28.569 --> 00:02:31.388
+and now finally because we need some action creators here,
+
+00:02:31.388 --> 00:02:34.210
+handleAddGoal as well as handleDeleteGoal,
+
+00:02:34.210 --> 00:02:39.580
+which are both going to be coming from action/goals.
+
+00:02:39.580 --> 00:02:44.260
+So, now this looks good. The only other change we need to make is again,
+
+00:02:44.259 --> 00:02:50.629
+we want to export our connect invocation as the default export.
+
+00:02:50.759 --> 00:02:55.844
+And then now, inside of the app.js,
+
+00:02:55.844 --> 00:02:57.284
+we need to go ahead and update this.
+
+00:02:57.284 --> 00:03:00.259
+Let's bring this over as well.
+
+00:03:00.259 --> 00:03:07.439
+So we will grab our connected app as well as our normal app component.
+
+00:03:07.439 --> 00:03:13.379
+And then, we need to import a few different things here. We'll grab React.
+
+00:03:13.379 --> 00:03:19.329
+We want to import ConnectedTodos coming from our Todos module.
+
+00:03:20.150 --> 00:03:25.710
+We also want to grab ConnectedGoals coming from Goals.
+
+00:03:25.710 --> 00:03:31.000
+We want to grab connect coming from react-redux,
+
+00:03:31.000 --> 00:03:35.724
+and then the only action creator we need to grab is going to be handleInitialData,
+
+00:03:35.724 --> 00:03:40.569
+which is going to come from actions/shared.
+
+00:03:40.569 --> 00:03:44.079
+All right. So, now instead of doing this,
+
+00:03:44.080 --> 00:03:48.910
+what we want to do is say export default connect.
+
+00:03:48.909 --> 00:03:51.159
+And then now we're looking pretty good.
+
+00:03:51.159 --> 00:03:56.079
+The only other code that we need to bring over is everything to do
+
+00:03:56.080 --> 00:04:01.340
+with creating our store and adding that as a Provider when we call reactDOM.render.
+
+00:04:01.340 --> 00:04:04.080
+So, that's what we'll be doing in the next video.
+

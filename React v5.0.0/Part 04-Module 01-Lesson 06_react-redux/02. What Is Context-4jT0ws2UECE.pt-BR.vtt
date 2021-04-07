@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.176 --> 00:00:04.503
+Para melhorar a abstração
+do React e do Redux,
+
+00:00:04.545 --> 00:00:08.776
+nós usaremos
+a Context API do React.
+
+00:00:08.818 --> 00:00:11.528
+Se você já ouviu falar da Context,
+você deve saber
+
+00:00:11.570 --> 00:00:15.273
+que ela vem com um aviso dizendo
+que a API irá mudar,
+
+00:00:15.315 --> 00:00:16.656
+que não é para usá-la.
+
+00:00:16.698 --> 00:00:18.871
+Mas isso, felizmente,
+já é passado:
+
+00:00:18.913 --> 00:00:22.647
+o React acabou de lançar
+uma nova Context API
+
+00:00:22.689 --> 00:00:25.728
+junto com o React 16.3,
+que, no momento deste vídeo,
+
+00:00:25.770 --> 00:00:27.088
+é novo.
+
+00:00:27.130 --> 00:00:31.456
+Podemos usar a Context sabendo
+que ela não será alterada.
+
+00:00:31.498 --> 00:00:34.840
+Neste vídeo, veremos
+o que é a Context,
+
+00:00:34.882 --> 00:00:37.067
+e especificamente
+por que ela é importante
+
+00:00:37.109 --> 00:00:40.960
+para a abstração Redux e React,
+o que ela nos permite fazer,
+
+00:00:41.002 --> 00:00:43.662
+e veremos um exemplo.
+
+00:00:43.704 --> 00:00:46.957
+Perceba que temos
+três componentes diferentes:
+
+00:00:46.999 --> 00:00:48.613
+temos o componente App,
+
+00:00:48.655 --> 00:00:51.549
+que possui alguns dados,
+especificamente name,
+
+00:00:51.591 --> 00:00:53.815
+e renderizamos
+o componente Parent,
+
+00:00:53.857 --> 00:00:58.294
+que renderizará Child,
+que renderizará Grandchild,
+
+00:00:58.336 --> 00:01:00.557
+que renderizará
+
+00:01:00.599 --> 00:01:03.743
+o nome Grandchild e name:
+
+00:01:03.785 --> 00:01:06.810
+e a propriedade name
+que foi passada.
+
+00:01:06.852 --> 00:01:09.882
+A ideia
+deste exemplo falso
+
+00:01:09.924 --> 00:01:12.570
+é que desejamos
+obter o name
+
+00:01:12.612 --> 00:01:17.058
+até a função Grandchild,
+até o componente Grandchild.
+
+00:01:17.100 --> 00:01:19.282
+Tipicamente,
+
+00:01:19.324 --> 00:01:22.697
+nós atribuiríamos ao Parent
+uma propriedade name
+
+00:01:22.739 --> 00:01:24.898
+com o nome que for.
+
+00:01:24.940 --> 00:01:26.650
+Vamos até o Parent,
+
+00:01:26.692 --> 00:01:28.078
+recebemos a propriedade
+
+00:01:28.120 --> 00:01:31.320
+e a passamos
+para o componente Child.
+
+00:01:31.362 --> 00:01:35.372
+No Child, receberíamos isso
+e passaríamos
+
+00:01:36.245 --> 00:01:38.515
+para o componente
+Grandchild.
+
+00:01:38.557 --> 00:01:42.138
+Então obteríamos
+o nome aqui.
+
+00:01:42.180 --> 00:01:44.579
+Sei que o exemplo
+ficou um pouco falso,
+
+00:01:44.621 --> 00:01:46.236
+mas este é um caso de uso.
+
+00:01:46.278 --> 00:01:49.109
+Se você conhece o React,
+já deve ter visto isto antes.
+
+00:01:49.151 --> 00:01:51.997
+Temos os dados residindo
+em uma parte do aplicativo,
+
+00:01:52.039 --> 00:01:54.316
+e queremos fornecê-los
+para um Child.
+
+00:01:54.358 --> 00:01:55.590
+Mas, para acessar isso,
+
+00:01:55.632 --> 00:01:58.256
+precisaremos passar
+por outros componentes.
+
+00:01:58.298 --> 00:02:00.526
+Esse é o problema exato
+
+00:02:00.568 --> 00:02:02.758
+resolvido pela Context
+no React.
+
+00:02:02.800 --> 00:02:05.478
+Voltaremos
+para o que tínhamos no início,
+
+00:02:05.520 --> 00:02:07.294
+e agora, usando Context,
+
+00:02:07.336 --> 00:02:12.351
+eu fornecerei esta variável name
+para o Grandchild
+
+00:02:12.393 --> 00:02:16.152
+sem precisar ter que passar
+pelo componente Parent
+
+00:02:16.194 --> 00:02:18.128
+ou pelo Child.
+
+00:02:18.170 --> 00:02:20.871
+Este é o caso de uso
+da Context.
+
+00:02:20.913 --> 00:02:25.049
+É para isso que a Context existe,
+pois ela permite fornecer dados
+
+00:02:25.091 --> 00:02:26.528
+para um componente Child
+
+00:02:26.570 --> 00:02:28.960
+sem precisar passar
+
+00:02:29.002 --> 00:02:32.392
+pelos componentes
+acima do componente.
+

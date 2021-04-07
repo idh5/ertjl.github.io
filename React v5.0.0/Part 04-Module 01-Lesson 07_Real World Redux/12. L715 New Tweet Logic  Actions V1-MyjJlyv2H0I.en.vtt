@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.459
+So now, what we want to do is instead of just
+
+00:00:02.459 --> 00:00:06.189
+logging a new tweet to the console whenever we hit "Submit",
+
+00:00:06.190 --> 00:00:10.589
+what we want to do is actually update the state of our Redux store with that new tweet.
+
+00:00:10.589 --> 00:00:13.050
+So the first thing we do as we typically do
+
+00:00:13.050 --> 00:00:15.900
+whenever we are dealing with updating the state of our store,
+
+00:00:15.900 --> 00:00:17.910
+is we want to build a few different actions.
+
+00:00:17.910 --> 00:00:22.454
+So, inside of our Actions folder with our tweets.js file,
+
+00:00:22.454 --> 00:00:26.359
+we want to import, save tweet,
+
+00:00:26.359 --> 00:00:28.829
+and then we're also going to show our loading bar
+
+00:00:28.829 --> 00:00:31.729
+when we save any tweet or when we add the tweet to our store.
+
+00:00:31.730 --> 00:00:34.695
+So, let's grab showLoading as well as hideLoading,
+
+00:00:34.695 --> 00:00:39.445
+which are both going to be coming from our react-redux-loading package.
+
+00:00:39.445 --> 00:00:44.695
+Then now, what is the type of event that is going to occur when we add a new tweet?
+
+00:00:44.695 --> 00:00:47.725
+Well, it's going to be the ADD_TWEET events.
+
+00:00:47.725 --> 00:00:52.250
+Then now, what we can do is we can make a few different action creators.
+
+00:00:52.250 --> 00:00:56.039
+The first one is just going to be a normal action creator,
+
+00:00:56.039 --> 00:00:57.269
+which returns an action.
+
+00:00:57.270 --> 00:00:59.665
+So, this one will be called addTweet.
+
+00:00:59.664 --> 00:01:02.234
+It will take in a tweet.
+
+00:01:02.234 --> 00:01:04.730
+The type will be ADD_TWEET and then it will just
+
+00:01:04.730 --> 00:01:08.535
+add the tweet that is taking into the action itself.
+
+00:01:08.534 --> 00:01:14.329
+Then now, let's build out our asynchronous action creator,
+
+00:01:14.329 --> 00:01:15.500
+which we're going to export.
+
+00:01:15.500 --> 00:01:19.530
+So, this one is going to take in the text of the tweet,
+
+00:01:19.530 --> 00:01:25.385
+as well as the tweet that the new tweet is replying to if any.
+
+00:01:25.385 --> 00:01:27.135
+Then now, what we want to do,
+
+00:01:27.135 --> 00:01:30.460
+because we are going to be doing some asynchronous stuff,
+
+00:01:30.459 --> 00:01:34.239
+we want to return a function which is going to be past dispatch,
+
+00:01:34.239 --> 00:01:39.159
+and what's nice about returning a function to with our redux-thunk middleware is
+
+00:01:39.159 --> 00:01:41.709
+it's also going to be passed a getState function
+
+00:01:41.709 --> 00:01:44.515
+that we can invoke to get the current state of our store.
+
+00:01:44.515 --> 00:01:46.120
+So what we will do,
+
+00:01:46.120 --> 00:01:51.925
+is we can grab the authedUser off of our state by invoking getState.
+
+00:01:51.924 --> 00:01:55.000
+Now before we make our asynchronous request,
+
+00:01:55.000 --> 00:01:57.900
+we want to go ahead and show our loading bar.
+
+00:01:57.900 --> 00:02:01.760
+Then once we've done that, we can call saveTweet,
+
+00:02:01.760 --> 00:02:05.140
+passing it the text as well as the author,
+
+00:02:05.140 --> 00:02:07.320
+which will just be the authedUser.
+
+00:02:07.319 --> 00:02:11.254
+Then finally, if this tweet is a reply to another tweet,
+
+00:02:11.254 --> 00:02:15.639
+and then what we can do once this resolves,
+
+00:02:15.639 --> 00:02:19.359
+we're going to be passed the tweet itself that we can then take and
+
+00:02:19.360 --> 00:02:24.995
+dispatch our ad tweet action creator passing it the tweet.
+
+00:02:24.995 --> 00:02:26.870
+Then, once that one's done,
+
+00:02:26.870 --> 00:02:31.730
+we can go ahead and dispatch our hideLoading action creator.
+
+00:02:31.729 --> 00:02:33.959
+So now we have our action set up.
+
+00:02:33.960 --> 00:02:36.710
+The next step we need to take is figuring out how we're going to actually
+
+00:02:36.710 --> 00:02:40.530
+update the state based on the specific action.
+

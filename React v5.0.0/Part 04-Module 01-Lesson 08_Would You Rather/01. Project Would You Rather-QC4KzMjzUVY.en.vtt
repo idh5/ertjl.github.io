@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.320
+The app that you're going to be building is a variation on the Would You Rather game.
+
+00:00:04.320 --> 00:00:07.179
+The game itself provides the user with two choices,
+
+00:00:07.179 --> 00:00:10.394
+and the user has to decide if they'd rather choose option A,
+
+00:00:10.394 --> 00:00:12.480
+or rather choose option B.
+
+00:00:12.480 --> 00:00:15.464
+The game will keep track of the number of votes that each option gets,
+
+00:00:15.464 --> 00:00:18.734
+and displays how your vote compares with all votes over time.
+
+00:00:18.734 --> 00:00:23.062
+As you can tell, there are a lot of little pieces of state changing throughout this app.
+
+00:00:23.062 --> 00:00:25.410
+You need to manage the list of questions,
+
+00:00:25.410 --> 00:00:27.179
+which option the user picked,
+
+00:00:27.179 --> 00:00:30.304
+the total number of votes for each question, and more.
+
+00:00:30.304 --> 00:00:33.780
+So, you'll need to put your reading skills into practice here.
+
+00:00:33.780 --> 00:00:35.250
+Check in the following sections for
+
+00:00:35.250 --> 00:00:38.320
+the specific details on how the app needs to function.
+

@@ -1,0 +1,343 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.154 --> 00:00:03.201
+Agora que temos os dados iniciais
+para o aplicativo,
+
+00:00:03.243 --> 00:00:07.681
+o próximo passo será construir
+este componente Dashboard.
+
+00:00:07.723 --> 00:00:10.459
+Dentro da pasta components,
+
+00:00:10.501 --> 00:00:13.227
+vamos criar um novo arquivo
+chamado "Dashboard".
+
+00:00:14.203 --> 00:00:16.931
+Eu construirei o esqueleto disso
+rapidamente.
+
+00:00:29.403 --> 00:00:31.970
+Agora que temos
+o componente Dashboard,
+
+00:00:32.012 --> 00:00:34.377
+a próxima resposta a dar
+
+00:00:34.419 --> 00:00:37.206
+é de quais dados
+este componente precisa
+
+00:00:37.248 --> 00:00:39.945
+do estado da Store Redux.
+
+00:00:39.987 --> 00:00:42.743
+Este componente Dashboard
+
+00:00:42.785 --> 00:00:45.544
+renderizará os tuítes.
+
+00:00:45.586 --> 00:00:50.191
+Vamos criar uma função aqui
+
+00:00:50.233 --> 00:00:52.573
+chamada "mapStateToProps",
+
+00:00:52.615 --> 00:00:55.437
+que pegará
+o estado da Store,
+
+00:00:55.479 --> 00:00:58.990
+especificamente, os tuítes,
+
+00:00:59.032 --> 00:01:03.679
+e retornará um objeto
+
+00:01:03.721 --> 00:01:06.904
+com propriedade tweetIds.
+
+00:01:06.946 --> 00:01:10.847
+Diremos "Object.keys",
+
+00:01:10.889 --> 00:01:14.367
+assim pegaremos as diferentes IDs
+dos tuítes,
+
+00:01:14.409 --> 00:01:16.176
+e chamaremos .sort,
+
+00:01:16.218 --> 00:01:19.064
+para que elas apareçam
+de acordo com o rótulo de tempo.
+
+00:01:19.106 --> 00:01:22.833
+Então digitaremos
+tweets[b].timestamp
+
+00:01:22.875 --> 00:01:27.000
+- tweets[a].timestamp,
+
+00:01:27.042 --> 00:01:29.193
+pois estas são
+as keys daqui.
+
+00:01:29.235 --> 00:01:32.881
+Se importarmos connect...
+
+00:01:34.833 --> 00:01:36.665
+do react-redux,
+
+00:01:37.482 --> 00:01:43.048
+exportaremos isso passando
+mapStateToProps
+
+00:01:43.090 --> 00:01:47.817
+e invocaremos a segunda função,
+para a qual passamos Dashboard.
+
+00:01:47.859 --> 00:01:50.353
+Ao renderizarmos Dashboard -
+
+00:01:50.395 --> 00:01:55.953
+colocamos
+console.log(this.props) -,
+
+00:01:55.995 --> 00:02:00.577
+dentro do App.js, vamos importar
+o Dashboard para ver isso.
+
+00:02:00.619 --> 00:02:03.225
+O Dashboard
+virá de Dashboard
+
+00:02:03.267 --> 00:02:06.794
+e aqui, em vez de Starter Code,
+renderizaremos Dashboard.
+
+00:02:08.050 --> 00:02:12.201
+Se observarmos as propriedades,
+veremos...
+
+00:02:14.961 --> 00:02:18.657
+veremos que aqui,
+onde está sendo exibido,
+
+00:02:18.699 --> 00:02:23.657
+temos um método dispatch,
+pois o componente deverá conectar,
+
+00:02:23.699 --> 00:02:27.048
+e também temos
+vários tweetIds.
+
+00:02:27.090 --> 00:02:29.679
+No Dashboard,
+
+00:02:30.591 --> 00:02:32.751
+vamos começar renderizando
+a IU
+
+00:02:32.793 --> 00:02:35.647
+e, em vez de renderizarmos
+os tuítes,
+
+00:02:35.689 --> 00:02:37.742
+renderizaremos tweetID.
+
+00:02:37.784 --> 00:02:41.173
+No próximo vídeo,
+construiremos um componente Tweet,
+
+00:02:41.215 --> 00:02:44.149
+que será responsável
+por pegar um tweetId
+
+00:02:44.191 --> 00:02:46.141
+e construir esta IU.
+
+00:02:46.183 --> 00:02:47.656
+Então nós vamos,
+
+00:02:47.698 --> 00:02:50.906
+dentro do Dashboard,
+renderizar um h3
+
+00:02:50.948 --> 00:02:53.312
+cujo className será center,
+
+00:02:55.738 --> 00:02:57.752
+que dirá
+"Sua linha do tempo".
+
+00:02:59.112 --> 00:03:02.753
+Agora renderizamos
+a lista desordenada,
+
+00:03:03.841 --> 00:03:09.020
+cujo className será dashboard-list
+e, aqui dentro,
+
+00:03:09.062 --> 00:03:14.295
+podemos digitar
+this.props.tweetIds.map.
+
+00:03:17.687 --> 00:03:19.910
+Para cada item
+ou para cada ID,
+
+00:03:19.952 --> 00:03:22.229
+dentro do array tweetIds
+
+00:03:22.271 --> 00:03:25.205
+renderizaremos
+um item de lista
+
+00:03:25.247 --> 00:03:27.334
+passando uma chave.
+
+00:03:27.376 --> 00:03:30.815
+Como já foi dito, por ora,
+simplesmente diremos:
+
+00:03:30.857 --> 00:03:34.310
+"&lt;div&gt;TWEET ID: {id}".
+
+00:03:39.591 --> 00:03:41.254
+Agora,
+
+00:03:41.296 --> 00:03:43.764
+temos a linha do tempo
+
+00:03:43.806 --> 00:03:48.493
+e, quando os dados entrarem,
+receberemos os diferentes tweetIds.
+
+00:03:48.535 --> 00:03:50.349
+No próximo vídeo,
+
+00:03:50.391 --> 00:03:53.950
+construiremos o componente Tweet
+passando um tweetId,
+
+00:03:53.992 --> 00:03:58.198
+que nos dará algo
+parecido com isto.
+
+00:03:58.240 --> 00:04:03.269
+Antes disso,
+removerei o console.log.
+
+00:04:03.311 --> 00:04:04.973
+Dentro do arquivo App.js,
+
+00:04:05.015 --> 00:04:08.630
+só renderizaremos Dashboard
+quando os dados
+
+00:04:08.672 --> 00:04:12.502
+do InitialData, especificamente
+da invocação do handleInicialData,
+
+00:04:12.544 --> 00:04:15.695
+tiverem sido finalizados.
+Vamos aqui embaixo...
+
+00:04:17.590 --> 00:04:21.668
+para obter dados da Store.
+
+00:04:21.710 --> 00:04:24.107
+Queremos o authedUser.
+
+00:04:24.149 --> 00:04:28.251
+Os dados que passaremos
+para o componente
+
+00:04:28.293 --> 00:04:30.748
+terão propriedade loading,
+
+00:04:30.790 --> 00:04:32.155
+que será verdadeira
+
+00:04:32.197 --> 00:04:36.108
+se authedUser === null.
+
+00:04:36.150 --> 00:04:37.492
+Então, aqui,
+
+00:04:37.534 --> 00:04:39.971
+dizemos que se o authedUser
+for null,
+
+00:04:40.013 --> 00:04:42.579
+então queremos,
+
+00:04:42.621 --> 00:04:45.052
+em vez
+de renderizar Dashboard,
+
+00:04:47.037 --> 00:04:49.002
+renderizar null.
+
+00:04:49.044 --> 00:04:51.569
+E se não for null,
+
+00:04:52.883 --> 00:04:56.318
+então renderizaremos
+o componente Dashboard.
+
+00:04:56.360 --> 00:04:58.861
+O Dashboard
+acabará renderizando
+
+00:04:58.903 --> 00:05:01.701
+uma IU
+parecida com esta,
+
+00:05:01.743 --> 00:05:04.709
+mas não queremos nem tentar
+renderizar a IU
+
+00:05:04.751 --> 00:05:08.087
+até que o aplicativo
+carregue os dados iniciais,
+
+00:05:08.129 --> 00:05:12.209
+e isso acontecerá quando authedUser
+não for igual a null.
+
+00:05:12.251 --> 00:05:14.914
+Aqui, se loading for verdadeiro,
+renderizamos null.
+
+00:05:14.956 --> 00:05:17.885
+Caso contrário,
+renderizamos o componente Dashboard.
+
+00:05:17.927 --> 00:05:19.522
+Como já foi dito
+algumas vezes,
+
+00:05:19.564 --> 00:05:24.651
+agora que o painel
+tem os tweetIds
+
+00:05:24.693 --> 00:05:26.978
+que precisamos renderizar,
+no próximo vídeo,
+
+00:05:27.020 --> 00:05:31.505
+construiremos a IU
+para os tuítes individuais.
+
+00:05:31.547 --> 00:05:35.584
+Assim, em vez de mapearmos as IDs
+e exibirmos a ID,
+
+00:05:35.626 --> 00:05:38.900
+mapearemos as IDs
+e exibiremos o tuíte.
+

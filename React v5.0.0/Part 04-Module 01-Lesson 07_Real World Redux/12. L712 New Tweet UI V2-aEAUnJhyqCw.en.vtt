@@ -1,0 +1,307 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.490
+Now that we are able to like different tweets,
+
+00:00:02.490 --> 00:00:04.575
+the next functionality we want to add to
+
+00:00:04.575 --> 00:00:07.710
+our application is the ability to add a new tweet.
+
+00:00:07.710 --> 00:00:10.080
+So, what we'll do in this video is we will just build out
+
+00:00:10.080 --> 00:00:14.940
+the UI for being able to compose a new tweet and then in the next video,
+
+00:00:14.939 --> 00:00:19.769
+we will set up our actions and our reducers to handle composing a new tweet.
+
+00:00:19.769 --> 00:00:25.244
+So, what we'll do first is let's head over to our components and make a new file here.
+
+00:00:25.245 --> 00:00:32.789
+We will call it new tweet.js and then this will just be a normal component.
+
+00:00:39.100 --> 00:00:43.160
+So, here we just have the basic UI for this component for right now let's go
+
+00:00:43.159 --> 00:00:46.489
+ahead and just put new tweet and then inside of our app
+
+00:00:46.490 --> 00:00:50.060
+what we want to do first so we can see this as we build
+
+00:00:50.060 --> 00:00:53.900
+it out is let's import that and now instead of rendering dashboard,
+
+00:00:53.899 --> 00:00:56.250
+let's render our new tweet component.
+
+00:00:56.250 --> 00:01:00.030
+So, if this is working what we should see here.
+
+00:01:02.210 --> 00:01:05.594
+So we see our new tweet component here.
+
+00:01:05.594 --> 00:01:09.575
+And now what we want to do and again this is going to handle
+
+00:01:09.575 --> 00:01:13.549
+the UI for creating a new tweet, so,
+
+00:01:13.549 --> 00:01:18.590
+this is going to be a controlled component meaning react is going to be in control of
+
+00:01:18.590 --> 00:01:21.200
+the text of the input fields here and the reason for
+
+00:01:21.200 --> 00:01:25.490
+that is because you'll notice that when there is no text,
+
+00:01:25.489 --> 00:01:29.420
+this submit button right here is disabled but when we type in it,
+
+00:01:29.420 --> 00:01:32.290
+we change the UI and then we enable the 'Submit' button.
+
+00:01:32.290 --> 00:01:36.650
+So, whenever you are updating UI based on the current state of your component,
+
+00:01:36.650 --> 00:01:38.600
+you want to use a controlled component.
+
+00:01:38.599 --> 00:01:42.829
+So, text is going to start out as an empty string and then we will need
+
+00:01:42.829 --> 00:01:47.450
+a handle change method which is going to take in an event,
+
+00:01:47.450 --> 00:01:51.019
+it's then going to grab the specific value of the text
+
+00:01:51.019 --> 00:01:54.950
+filled by grabbing the target.value property on
+
+00:01:54.950 --> 00:02:04.670
+the event and then we can call setState and update the text of our local state.
+
+00:02:04.670 --> 00:02:08.000
+This is the first time in this project that we are
+
+00:02:08.000 --> 00:02:12.229
+using react component state over redux state and the reason we're doing
+
+00:02:12.229 --> 00:02:15.679
+that is because well it's just easier and putting
+
+00:02:15.680 --> 00:02:19.800
+this form state inside of redux wouldn't give us any benefits,
+
+00:02:19.800 --> 00:02:23.120
+in fact, it would actually just be more complicated to do that
+
+00:02:23.120 --> 00:02:27.495
+rather than putting things inside of the component state.
+
+00:02:27.495 --> 00:02:30.319
+If this state was going to be shared with
+
+00:02:30.319 --> 00:02:32.479
+a few different components or if we
+
+00:02:32.479 --> 00:02:35.109
+needed to pass the state down as prompts a few different layers,
+
+00:02:35.110 --> 00:02:38.390
+then we might think about using redux state but for now it
+
+00:02:38.389 --> 00:02:42.019
+doesn't make sense at all just because we have component state,
+
+00:02:42.020 --> 00:02:45.230
+we can use it, it's perfectly fine to use and we're not
+
+00:02:45.229 --> 00:02:48.679
+using this component state anywhere else inside of our application.
+
+00:02:48.680 --> 00:02:51.185
+So, now that we have handle change,
+
+00:02:51.185 --> 00:02:54.085
+let's make the last method we will make,
+
+00:02:54.085 --> 00:02:58.219
+call handleSubmit and for now all we are going to
+
+00:02:58.219 --> 00:03:05.224
+do is we will call event.preventDefault,
+
+00:03:05.224 --> 00:03:09.310
+we'll then grab the text from the state.
+
+00:03:09.310 --> 00:03:12.500
+Eventually, what we want to do is add tweet to
+
+00:03:12.500 --> 00:03:15.259
+the store and we'll
+
+00:03:15.259 --> 00:03:18.620
+console that log just so when we set this up we can make sure that it's working,
+
+00:03:18.620 --> 00:03:22.759
+and then once all this is finished,
+
+00:03:22.759 --> 00:03:25.159
+we want to go ahead and make sure that we reset
+
+00:03:25.159 --> 00:03:28.370
+the text field to just an empty string so that looks pretty good.
+
+00:03:28.370 --> 00:03:32.610
+So, now we have our two methods here as well as our component state.
+
+00:03:32.610 --> 00:03:34.700
+The next thing we want to do is actually build out
+
+00:03:34.699 --> 00:03:38.619
+the UI for this component and as a reminder,
+
+00:03:38.620 --> 00:03:42.170
+the UI that we're building is this right here so we will have
+
+00:03:42.169 --> 00:03:47.684
+a header as well as the text area and then the submit button.
+
+00:03:47.685 --> 00:03:50.069
+So, first let's have that header.
+
+00:03:50.069 --> 00:03:53.000
+So, we will say h3 we'll give this a class name of
+
+00:03:53.000 --> 00:03:58.500
+center and this is going to say compose new tweet,
+
+00:03:59.419 --> 00:04:03.834
+then below that we want to have our form.
+
+00:04:03.835 --> 00:04:12.560
+We will give this a class name of 'New Tweets' and then when this form is submitted,
+
+00:04:12.560 --> 00:04:17.405
+we want to invoke the handle submit method that we already created right here.
+
+00:04:17.404 --> 00:04:22.339
+And then now what this form needs is a text area.
+
+00:04:22.699 --> 00:04:25.759
+We will give this a few different props so
+
+00:04:25.759 --> 00:04:30.514
+the placeholder will be what's happening which is like Twitter does,
+
+00:04:30.514 --> 00:04:38.534
+the value is going to be text and we can go ahead and destructure that up here.
+
+00:04:38.535 --> 00:04:41.840
+That's going to come from the start state.
+
+00:04:42.620 --> 00:04:45.819
+When this input field changes,
+
+00:04:45.819 --> 00:04:49.279
+we want to run the handleChange method we created earlier which
+
+00:04:49.279 --> 00:04:53.384
+will be responsible for updating the state of our component.
+
+00:04:53.384 --> 00:04:56.454
+We'll give it a class name of
+
+00:04:56.454 --> 00:05:02.930
+text area and then we will also give it a max-length of 280.
+
+00:05:02.930 --> 00:05:06.889
+So, that looks pretty good. What we also want to do here is eventually
+
+00:05:06.889 --> 00:05:11.029
+when we get to the point where there are less than 100 characters left,
+
+00:05:11.029 --> 00:05:13.129
+what we want to see is this little section right
+
+00:05:13.129 --> 00:05:16.149
+here warning the user that they are running out of space.
+
+00:05:16.149 --> 00:05:18.554
+So, what we can do up here
+
+00:05:18.555 --> 00:05:25.009
+is make a variable called tweetLeft that is just going to be 280 minus
+
+00:05:25.009 --> 00:05:30.199
+the current text length and then now what we can say is if
+
+00:05:30.199 --> 00:05:36.500
+the tweet length is less than or equal to 100,
+
+00:05:36.500 --> 00:05:41.480
+then what we want to do is show this div here we will have a class name of
+
+00:05:41.480 --> 00:05:49.675
+tweet length and then we will just show how many characters they have left,
+
+00:05:49.675 --> 00:05:53.389
+and then finally what we want to do is render a button
+
+00:05:53.800 --> 00:05:59.905
+which will say 'Submit' and then on this button we want to have a few different props.
+
+00:05:59.904 --> 00:06:02.334
+We'll give it a class name of button,
+
+00:06:02.334 --> 00:06:05.724
+the type is obviously going to be Submit,
+
+00:06:05.725 --> 00:06:13.545
+and it will be disabled if text is equal to an empty string.
+
+00:06:13.545 --> 00:06:17.520
+So, this looks pretty good here.
+
+00:06:17.519 --> 00:06:19.859
+Let's go ahead and test this out.
+
+00:06:19.860 --> 00:06:23.620
+So, what we should see here is when we hit 'Submit',
+
+00:06:23.620 --> 00:06:27.860
+we don't add it to our story yet because we'll do that in the next video,
+
+00:06:27.860 --> 00:06:31.610
+but we do have the text right here and it looks like everything is working as far as
+
+00:06:31.610 --> 00:06:35.970
+getting the text from the component and being able to log it inside the console.
+
+00:06:35.970 --> 00:06:40.355
+Now the only other change I want to make is just a little note to ourself.
+
+00:06:40.355 --> 00:06:44.435
+When we submit our new tweet
+
+00:06:44.435 --> 00:06:48.865
+what we want to do is also redirect the user to the 'Home' view.
+
+00:06:48.865 --> 00:06:52.295
+So, right here what I'm going to do is just make myself a little comment,
+
+00:06:52.295 --> 00:06:56.620
+so that we can remember this later when we start adding in React Router.
+
+00:06:56.620 --> 00:07:05.709
+So, what we want to do is redirect to the home view if submitted.
+

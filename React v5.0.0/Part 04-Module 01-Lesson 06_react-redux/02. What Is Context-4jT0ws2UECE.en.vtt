@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.544
+In order to improve our abstraction over React and Redux,
+
+00:00:04.544 --> 00:00:06.150
+what we're going to use is,
+
+00:00:06.150 --> 00:00:08.730
+we're going to use React's Context API.
+
+00:00:08.730 --> 00:00:10.470
+Now, if you've heard of Context before,
+
+00:00:10.470 --> 00:00:12.795
+you might have heard that it comes with
+
+00:00:12.794 --> 00:00:16.484
+a warning saying the API is eventually going to change so don't use this.
+
+00:00:16.484 --> 00:00:19.004
+That luckily for us is old news.
+
+00:00:19.004 --> 00:00:24.539
+React just barely released a brand new Context API as of React 16.3,
+
+00:00:24.539 --> 00:00:27.000
+which as of this video is brand new.
+
+00:00:27.000 --> 00:00:31.408
+So we can go ahead and use Context confidently now knowing that it's not going to change.
+
+00:00:31.408 --> 00:00:33.089
+So, in this video, what we're going to do is,
+
+00:00:33.090 --> 00:00:35.910
+we're going to look at what Context is, why it's important,
+
+00:00:35.909 --> 00:00:39.659
+specifically why it's important for our Redux and React abstraction,
+
+00:00:39.659 --> 00:00:40.889
+what it allows us to do,
+
+00:00:40.890 --> 00:00:43.380
+and then we'll take a look at an example.
+
+00:00:43.380 --> 00:00:47.040
+So, you'll notice here what we have is a few different components.
+
+00:00:47.039 --> 00:00:48.554
+We have our App component.
+
+00:00:48.554 --> 00:00:50.130
+Our app has some data,
+
+00:00:50.130 --> 00:00:51.554
+and that's specifically a name,
+
+00:00:51.554 --> 00:00:53.894
+and then we render the Parent component.
+
+00:00:53.895 --> 00:00:56.355
+Parent then renders Child,
+
+00:00:56.354 --> 00:00:58.289
+Child then renders Grandchild,
+
+00:00:58.289 --> 00:01:03.778
+and then Grandchild then renders the name Grandchild as well as Name caller,
+
+00:01:03.779 --> 00:01:06.615
+and then whatever the name prop that was parsed to with this.
+
+00:01:06.614 --> 00:01:11.519
+So the whole idea of this kind of contrived example is that we want to get
+
+00:01:11.519 --> 00:01:17.024
+our name all the way down to our Grandchild function or our Grandchild component.
+
+00:01:17.025 --> 00:01:20.490
+So typically how we would have to do that is we would come in here
+
+00:01:20.489 --> 00:01:24.554
+and we'd give Parent a name prop of whatever our name is.
+
+00:01:24.555 --> 00:01:28.170
+We would then go to Parent and receive the name prop,
+
+00:01:28.170 --> 00:01:31.034
+and then parse it down to our Child component.
+
+00:01:31.034 --> 00:01:33.254
+In Child, we would also receive that,
+
+00:01:33.254 --> 00:01:38.308
+and then we'd parse that down to our Grandchild component.
+
+00:01:38.308 --> 00:01:41.759
+And then what we would get is a name right here.
+
+00:01:41.760 --> 00:01:44.670
+Now, I get that this example is a little bit contrived,
+
+00:01:44.670 --> 00:01:47.460
+but this is a use case and a problem that if you're familiar with React,
+
+00:01:47.459 --> 00:01:49.004
+you've probably seen this before.
+
+00:01:49.004 --> 00:01:51.959
+We have data living in one part of our application,
+
+00:01:51.959 --> 00:01:54.269
+we want to get it to some Child component,
+
+00:01:54.269 --> 00:01:55.500
+but in order to get it there,
+
+00:01:55.500 --> 00:01:57.974
+we have to parse it through a few other components.
+
+00:01:57.974 --> 00:02:02.729
+Well, this is the exact problem that Context in React solves.
+
+00:02:02.730 --> 00:02:05.295
+So, I'm going to go back to what we initially had.
+
+00:02:05.295 --> 00:02:07.394
+And now using Context,
+
+00:02:07.394 --> 00:02:12.180
+I'm going to get this name variable here all the way down to Grandchild
+
+00:02:12.180 --> 00:02:17.969
+without actually having to parse it through Parent and our Child component.
+
+00:02:17.969 --> 00:02:21.058
+So again, that's the whole use case of Context.
+
+00:02:21.058 --> 00:02:25.409
+That's why Context exists because it allows us to get data to
+
+00:02:25.409 --> 00:02:27.930
+our Child component without having to plum it
+
+00:02:27.930 --> 00:02:33.000
+through all of the other components above that component.
+

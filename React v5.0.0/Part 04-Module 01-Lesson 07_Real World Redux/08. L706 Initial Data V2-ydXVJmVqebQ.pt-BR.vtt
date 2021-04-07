@@ -1,0 +1,134 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.139 --> 00:00:03.433
+Agora que configuramos
+o criador de ação
+
+00:00:03.475 --> 00:00:05.273
+para lidar
+com os dados iniciais,
+
+00:00:05.315 --> 00:00:09.027
+criamos diferentes ações
+que precisam ser disparadas
+
+00:00:09.069 --> 00:00:11.292
+e configuramos as reducers
+
+00:00:11.334 --> 00:00:13.442
+que lidarão com os disparos,
+
+00:00:13.484 --> 00:00:17.218
+então precisaremos invocar
+handleInitialData
+
+00:00:17.260 --> 00:00:19.267
+quando o aplicativo
+for carregado.
+
+00:00:19.309 --> 00:00:23.035
+Dentro da pasta components
+
+00:00:23.077 --> 00:00:27.580
+e do App.js,
+importaremos algumas coisas.
+
+00:00:28.212 --> 00:00:30.099
+Pegaremos connect,
+
+00:00:30.141 --> 00:00:32.548
+que virá do react-redux,
+
+00:00:33.252 --> 00:00:36.825
+e pegaremos a função
+da qual acabei de falar,
+
+00:00:36.867 --> 00:00:38.387
+handleInitialData,
+
+00:00:38.429 --> 00:00:41.050
+que virá de action/shared.
+
+00:00:41.092 --> 00:00:43.076
+Agora,
+
+00:00:43.682 --> 00:00:46.836
+quando
+este componente subir,
+
+00:00:48.676 --> 00:00:53.619
+dispararemos a invocação do criador
+de ação handleInitialData.
+
+00:00:53.661 --> 00:00:55.962
+Para obtermos acesso
+à dispatch,
+
+00:00:56.004 --> 00:00:59.995
+precisamos conectar
+o componente App.
+
+00:01:00.037 --> 00:01:03.266
+Perceba que não precisamos de nada
+do estado,
+
+00:01:03.308 --> 00:01:06.946
+então deixaremos
+a primeira invocação em branco.
+
+00:01:06.988 --> 00:01:10.710
+Dentro de componentDidMount,
+
+00:01:10.752 --> 00:01:12.926
+chamaremos
+this.props.dispatch
+
+00:01:12.968 --> 00:01:17.221
+e invocaremos o criador de ação
+handleInitialData.
+
+00:01:17.263 --> 00:01:20.406
+Se não houver
+nenhum erro de digitação,
+
+00:01:20.448 --> 00:01:23.535
+ao recarregarmos
+o aplicativo,
+
+00:01:24.559 --> 00:01:27.638
+veremos que a IU continua a mesma,
+pois não mudamos isso.
+
+00:01:27.680 --> 00:01:31.382
+Mas, no console, devido
+à configuração do middleware logger,
+
+00:01:31.424 --> 00:01:34.278
+vemos as ações
+que foram disparadas.
+
+00:01:34.320 --> 00:01:37.382
+O novo estado da Store
+
+00:01:37.424 --> 00:01:39.406
+terá um authedUser,
+
+00:01:39.448 --> 00:01:41.702
+os tuítes
+
+00:01:41.744 --> 00:01:44.758
+e os usuários.
+
+00:01:44.800 --> 00:01:49.206
+Agora que temos os dados iniciais
+necessários para renderizar,
+
+00:01:49.248 --> 00:01:53.414
+no próximo vídeo, construiremos
+a View principal do aplicativo,
+
+00:01:53.456 --> 00:01:56.833
+que será este painel.
+

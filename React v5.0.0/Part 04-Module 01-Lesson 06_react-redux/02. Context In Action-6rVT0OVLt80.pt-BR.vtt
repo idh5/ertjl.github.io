@@ -1,0 +1,195 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.373 --> 00:00:02.220
+Para realizar isto,
+
+00:00:02.262 --> 00:00:04.758
+primeiro criaremos...
+
+00:00:06.005 --> 00:00:07.930
+uma variável
+chamada "Context",
+
+00:00:07.972 --> 00:00:12.288
+que será o resultado
+da invocação da React.createContext.
+
+00:00:12.330 --> 00:00:15.848
+Esta é uma nova API,
+então você pode não conhecer.
+
+00:00:15.890 --> 00:00:19.057
+Agora temos
+este objeto Context,
+
+00:00:19.099 --> 00:00:21.825
+que terá duas propriedades.
+
+00:00:21.867 --> 00:00:26.043
+Ele terá uma propriedade Provider
+e uma Consumer.
+
+00:00:26.085 --> 00:00:28.988
+Vamos voltar
+ao App principal.
+
+00:00:29.030 --> 00:00:34.124
+Vamos empacotar
+o componente Parent
+
+00:00:34.166 --> 00:00:37.948
+dentro de Context.Provider.
+
+00:00:39.733 --> 00:00:45.689
+Depois, passaremos
+ao componente Provider
+
+00:00:45.731 --> 00:00:47.387
+uma propriedade,
+
+00:00:48.491 --> 00:00:49.932
+um valor
+
+00:00:49.974 --> 00:00:51.250
+e daremos um nome.
+
+00:00:51.292 --> 00:00:52.868
+Então, aqui,
+
+00:00:53.571 --> 00:00:58.130
+nós empacotamos o elemento Parent
+dentro de Context.Provider
+
+00:00:58.172 --> 00:01:01.147
+passando value={name}.
+
+00:01:01.189 --> 00:01:05.067
+Agora, sempre que quisermos
+obter acesso
+
+00:01:05.109 --> 00:01:06.854
+a esta variável name,
+
+00:01:06.896 --> 00:01:09.573
+seja no componente Parent,
+no Child
+
+00:01:09.615 --> 00:01:11.844
+ou no Grandchild,
+
+00:01:11.886 --> 00:01:16.661
+nós só precisaremos empacotar
+a IU específica ou o JSX
+
+00:01:16.703 --> 00:01:20.085
+dentro de Context.Consumer.
+
+00:01:26.029 --> 00:01:31.149
+Isso usa uma propriedade render,
+então o Context.Consumer...
+
+00:01:32.782 --> 00:01:38.533
+invocará esta função,
+que passamos como um Child,
+
+00:01:38.575 --> 00:01:41.957
+e passará a ela
+o valor específico.
+
+00:01:41.999 --> 00:01:45.454
+Isso significa que receberemos
+o nome
+
+00:01:46.502 --> 00:01:50.076
+e poderemos renderizar isto
+normalmente.
+
+00:01:50.118 --> 00:01:51.852
+Perceba que,
+
+00:01:51.894 --> 00:01:55.500
+sem precisarmos passar
+name ao Parent -
+
+00:01:55.542 --> 00:01:59.325
+que passaria para o Child,
+que passaria para o Grandchild -,
+
+00:01:59.367 --> 00:02:02.124
+por estarmos usando
+Context React,
+
+00:02:02.166 --> 00:02:04.427
+em qualquer lugar
+que desejarmos usar
+
+00:02:04.469 --> 00:02:08.874
+ou quisermos acessar
+a variável name específica,
+
+00:02:08.916 --> 00:02:11.292
+usaremos Context.Consumer
+
+00:02:11.334 --> 00:02:13.154
+passando esta função.
+
+00:02:13.931 --> 00:02:15.924
+Os dois passos necessários
+
+00:02:15.966 --> 00:02:18.722
+serão, primeiro,
+renderizar Context.Provider,
+
+00:02:18.764 --> 00:02:23.223
+passando o valor
+que desejamos obter mais tarde
+
+00:02:23.265 --> 00:02:25.054
+nos componentes Child.
+
+00:02:25.096 --> 00:02:28.648
+E, sempre que quisermos obter
+esse valor - neste caso, name -,
+
+00:02:28.690 --> 00:02:31.167
+basta digitarmos
+Context.Consumer
+
+00:02:31.209 --> 00:02:32.918
+passando uma função,
+
+00:02:32.960 --> 00:02:38.085
+que o React invocará essa função
+atribuindo o valor a ela,
+
+00:02:38.127 --> 00:02:39.829
+que, neste caso, é name.
+
+00:02:39.871 --> 00:02:44.230
+Agora podemos renderizar
+a IU com esse nome.
+
+00:02:44.272 --> 00:02:47.293
+Agora que vimos
+como a Context funciona,
+
+00:02:47.335 --> 00:02:52.972
+vamos usá-la na abstração
+entre React e Redux
+
+00:02:53.014 --> 00:02:55.188
+para levar a Store Redux
+
+00:02:55.230 --> 00:02:57.952
+e os dados
+que os componentes precisam
+
+00:02:57.994 --> 00:02:59.473
+até os componentes
+
+00:02:59.515 --> 00:03:03.800
+sem precisarmos passar a Store
+até a árvore componente.
+

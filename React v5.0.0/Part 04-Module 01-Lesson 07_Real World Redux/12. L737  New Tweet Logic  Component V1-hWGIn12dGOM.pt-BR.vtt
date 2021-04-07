@@ -1,0 +1,198 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.127 --> 00:00:04.051
+Primeiro, precisamos ter acesso
+ao disparo
+
+00:00:04.093 --> 00:00:06.302
+para podermos conectar
+este componente.
+
+00:00:07.605 --> 00:00:10.245
+O criador de ação
+que desejamos invocar
+
+00:00:10.287 --> 00:00:12.136
+será handleAddTweet,
+
+00:00:12.815 --> 00:00:16.727
+que virá de actions/tweets.
+
+00:00:16.769 --> 00:00:21.935
+Agora, queremos exportar
+o componente Connected,
+
+00:00:21.977 --> 00:00:24.391
+que nos dará acesso
+ao disparo.
+
+00:00:24.433 --> 00:00:27.704
+Aqui dentro,
+
+00:00:27.746 --> 00:00:30.208
+em vez do console.log,
+
+00:00:30.250 --> 00:00:33.697
+queremos disparar o criador de ação
+handleAddTweet.
+
+00:00:33.739 --> 00:00:38.081
+Pegamos dispatch,
+que virá de this.props,
+
+00:00:38.123 --> 00:00:40.968
+então poderemos disparar
+handleAddTweet
+
+00:00:41.010 --> 00:00:45.287
+passando o texto do novo tuíte.
+Se você se lembra,
+
+00:00:45.329 --> 00:00:48.200
+o handleAddTweet obterá
+o texto do tuíte
+
+00:00:48.242 --> 00:00:53.639
+além da ID do tuíte
+ao qual estamos respondendo,
+
+00:00:53.681 --> 00:00:55.922
+caso estejamos respondendo
+a um tuíte novo.
+
+00:00:55.964 --> 00:00:58.920
+Agora precisamos descobrir
+como saber
+
+00:00:58.962 --> 00:01:01.240
+se o usuário está respondendo
+a um tuíte
+
+00:01:01.282 --> 00:01:03.168
+ou se está compondo
+um novo.
+
+00:01:03.210 --> 00:01:05.456
+Se observarmos
+o aplicativo finalizado,
+
+00:01:05.498 --> 00:01:08.120
+ao compormos um novo tuíte,
+
+00:01:08.162 --> 00:01:12.175
+esta será a View renderizada
+pelo React Router
+
+00:01:12.217 --> 00:01:14.400
+quando seguirmos para /new.
+
+00:01:14.442 --> 00:01:17.073
+Mas se clicarmos
+em um tuíte,
+
+00:01:17.809 --> 00:01:19.336
+seguiremos para esta página,
+
+00:01:19.378 --> 00:01:22.687
+que é a View renderizada
+pelo React Router.
+
+00:01:22.729 --> 00:01:25.815
+Perceba que o React Router
+não renderiza esta parte,
+
+00:01:25.857 --> 00:01:29.071
+nós precisaremos renderizar
+manualmente o componente Tweet.
+
+00:01:29.113 --> 00:01:32.792
+Ao fazermos isso,
+poderemos passar uma ID.
+
+00:01:32.834 --> 00:01:36.615
+Isso significa que, se passarmos
+ao “Compor novo tuíte” -
+
+00:01:36.657 --> 00:01:39.153
+ao componente com o qual
+estamos trabalhando -
+
+00:01:39.195 --> 00:01:41.855
+uma propriedade ID,
+é porque estamos respondendo
+
+00:01:41.897 --> 00:01:43.998
+a um novo tuíte.
+Caso contrário,
+
+00:01:44.040 --> 00:01:47.114
+não estaremos, pois o React Router
+renderizará toda a View,
+
+00:01:47.156 --> 00:01:49.596
+então estaremos criando
+um novo tuíte
+
+00:01:49.638 --> 00:01:52.028
+e não respondendo
+a um antigo.
+
+00:01:52.070 --> 00:01:56.100
+Isso nos permitirá,
+aqui dentro,
+
+00:01:56.142 --> 00:01:57.828
+obter a ID
+
+00:01:57.870 --> 00:02:02.908
+passando isso ao handleNewTweet,
+pois se this.props.id for algo,
+
+00:02:02.950 --> 00:02:05.924
+então estamos respondendo
+a um tuíte com essa ID.
+
+00:02:05.966 --> 00:02:09.236
+Caso contrário, estamos compondo
+um novo tuíte.
+
+00:02:09.278 --> 00:02:11.322
+Podemos testar
+para ver se funciona
+
+00:02:11.364 --> 00:02:13.394
+adicionando um novo tuíte.
+
+00:02:15.171 --> 00:02:17.826
+Não seremos redirecionados
+para a View principal,
+
+00:02:17.868 --> 00:02:20.402
+mas perceba que disparamos
+ADD_TWEET.
+
+00:02:20.444 --> 00:02:23.675
+Se observamos o novo estado,
+deveremos ver aqui
+
+00:02:23.717 --> 00:02:25.771
+o novo tuíte
+
+00:02:25.813 --> 00:02:29.315
+com o autor do usuário autenticado
+e a nova ID.
+
+00:02:29.357 --> 00:02:31.889
+Não há curtidas nem respostas,
+replyingTo é null,
+
+00:02:31.931 --> 00:02:35.169
+o texto diz "Este tuíte é novo",
+e o rótulo de tempo está bom.
+
+00:02:35.211 --> 00:02:36.918
+Parece que tudo
+está funcionando.
+

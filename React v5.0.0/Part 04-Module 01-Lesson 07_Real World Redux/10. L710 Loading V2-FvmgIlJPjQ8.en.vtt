@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.184
+At this point we have the UI for our timeline view or a dashboard view.
+
+00:00:05.184 --> 00:00:09.899
+I'll build out here, but now you'll notice one thing that we can change is when we
+
+00:00:09.900 --> 00:00:14.640
+refresh our app we don't get anything on the UI until all of our data is loaded.
+
+00:00:14.640 --> 00:00:16.560
+So what we'll do in this video is we're going to
+
+00:00:16.559 --> 00:00:20.844
+download a Redux specific loading bar that we can show up here,
+
+00:00:20.844 --> 00:00:24.689
+so while our app is loading we can show that and then
+
+00:00:24.690 --> 00:00:29.234
+the user will get all of this timeline once the data has finished loading.
+
+00:00:29.234 --> 00:00:34.125
+So inside of your terminal what you can do is go ahead and run yarn add
+
+00:00:34.125 --> 00:00:42.105
+react-redux-loading and then once that is finished,
+
+00:00:42.104 --> 00:00:45.109
+go ahead and restart your application and head over
+
+00:00:45.109 --> 00:00:50.450
+to your index.js file inside of your reducers.
+
+00:00:50.450 --> 00:00:53.990
+So, what we want to have happen here is we want to stick
+
+00:00:53.990 --> 00:00:58.984
+some information about the app's current loading state on the reducer store.
+
+00:00:58.984 --> 00:01:02.149
+So what the package that we just barely downloaded allows us to
+
+00:01:02.149 --> 00:01:07.224
+do is part of it is going to export
+
+00:01:07.224 --> 00:01:13.309
+a loading bar reducer and what that will allow us to
+
+00:01:13.310 --> 00:01:21.170
+do is add that reducer as part of the state inside of our Redux store.
+
+00:01:21.170 --> 00:01:27.865
+So now if we were to look at the state of our store we have everything we had before,
+
+00:01:27.864 --> 00:01:31.339
+but we also have this loading bar object right here too.
+
+00:01:31.340 --> 00:01:34.790
+So with that, there are two other parts to it,
+
+00:01:34.790 --> 00:01:36.680
+if we want to use this inside of
+
+00:01:36.680 --> 00:01:40.700
+our application we also need a few different action creators that,
+
+00:01:40.700 --> 00:01:45.140
+we can dispatch in order to change the loading bar state and we also
+
+00:01:45.140 --> 00:01:47.180
+need a component we can render which is
+
+00:01:47.180 --> 00:01:50.270
+responsible for showing the actual UI of the loading bar.
+
+00:01:50.269 --> 00:01:53.849
+Well, what's nice about this react-redux-loading
+
+00:01:53.849 --> 00:01:57.394
+package is it's going to provide us with both of those other things.
+
+00:01:57.394 --> 00:02:00.549
+So inside of shared.js here,
+
+00:02:00.549 --> 00:02:03.859
+what we want to do is we are going to import
+
+00:02:03.859 --> 00:02:08.314
+two different action creators from our react-redux-loading package.
+
+00:02:08.314 --> 00:02:11.060
+The first one is going to be called
+
+00:02:11.060 --> 00:02:15.664
+showLoading and the second is going to be called hideLoading.
+
+00:02:15.664 --> 00:02:20.554
+So what we want to do before we invoke our getInitialData function,
+
+00:02:20.555 --> 00:02:22.980
+we want to dispatch showLoading,
+
+00:02:22.979 --> 00:02:26.009
+so that will show the loading bar once we've set up that component,
+
+00:02:26.009 --> 00:02:29.810
+and then once we have all of the information
+
+00:02:29.810 --> 00:02:33.319
+back from getInitialData and we've updated our users,
+
+00:02:33.319 --> 00:02:38.569
+our tweets and we've set the authenticated user then we want to dispatch hideLoading.
+
+00:02:38.569 --> 00:02:42.759
+So, even though this is a package on npm,
+
+00:02:42.759 --> 00:02:44.120
+it's an open source library,
+
+00:02:44.120 --> 00:02:47.629
+we can still use their action creators that they give us in
+
+00:02:47.629 --> 00:02:51.625
+order to properly update the state of our Redux store.
+
+00:02:51.625 --> 00:02:55.759
+So now all we need to do is inside our app.js file,
+
+00:02:55.759 --> 00:03:00.739
+let's import the components it gives us so we'll grab a loading bar,
+
+00:03:00.740 --> 00:03:02.545
+notice it's going to be the default export,
+
+00:03:02.544 --> 00:03:07.009
+and then now what we need to do is right here,
+
+00:03:07.009 --> 00:03:11.239
+just render that loading bar inside of our render method.
+
+00:03:11.240 --> 00:03:13.670
+So now if we look at our application,
+
+00:03:13.669 --> 00:03:15.414
+notice now when it refreshes,
+
+00:03:15.414 --> 00:03:18.079
+we get that loading bar up here and then
+
+00:03:18.080 --> 00:03:21.690
+when all of our data is back we hide the loading bar.
+

@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.115
+So, inside of our tweets reducer here,
+
+00:00:03.115 --> 00:00:10.100
+so "reducers/tweets.js" Let's import the toggle tweet action type and then,
+
+00:00:10.099 --> 00:00:12.875
+now we want to add a new case here to our reducer.
+
+00:00:12.875 --> 00:00:15.449
+So, if the case is toggle tweet,
+
+00:00:15.449 --> 00:00:22.100
+how do we want to change the shape of the tweet slice of our state?
+
+00:00:22.100 --> 00:00:23.550
+So, if you remember,
+
+00:00:23.550 --> 00:00:26.539
+let's go ahead and look at the final version here,
+
+00:00:27.179 --> 00:00:31.454
+each tweet has these specific properties on it.
+
+00:00:31.454 --> 00:00:37.019
+The way that we're keeping track of who liked what is with this likes array right here.
+
+00:00:37.020 --> 00:00:40.975
+So, if the user is liking a tweet for the first time,
+
+00:00:40.975 --> 00:00:44.030
+we want to take their id and put it in this likes array.
+
+00:00:44.030 --> 00:00:46.015
+If they are unlocking a tweet,
+
+00:00:46.015 --> 00:00:50.335
+then we want to remove their username from this likes array.
+
+00:00:50.335 --> 00:00:52.965
+So, the way that we can do that, is first,
+
+00:00:52.965 --> 00:00:56.300
+we want to spread all of the previous tweets on the state.
+
+00:00:56.299 --> 00:00:58.919
+Because remember, we don't want to mutate this state directly.
+
+00:00:58.920 --> 00:01:00.825
+So, what we'll say is return a brand new object,
+
+00:01:00.825 --> 00:01:04.269
+spread all of the previous tweets on that object,
+
+00:01:04.269 --> 00:01:08.414
+but what we want to do is the tweet with the
+
+00:01:08.415 --> 00:01:15.215
+id of whatever we're passing into action id that needs to be a new object,
+
+00:01:15.215 --> 00:01:18.920
+and then we want to take all of the properties of that object,
+
+00:01:18.920 --> 00:01:21.875
+and spread them across onto this new object.
+
+00:01:21.875 --> 00:01:25.379
+But, what we want to do is list likes array,
+
+00:01:25.379 --> 00:01:27.409
+we want to either remove
+
+00:01:27.409 --> 00:01:31.359
+the username or add the username based on if they have already liked it.
+
+00:01:31.359 --> 00:01:33.209
+So, what we can do is we can say,
+
+00:01:33.209 --> 00:01:37.599
+if action.has liked equals true,
+
+00:01:37.599 --> 00:01:39.769
+meaning they have already liked it,
+
+00:01:39.769 --> 00:01:41.905
+then we want to come in here and use filter,
+
+00:01:41.905 --> 00:01:46.570
+so say, state at action.id.Iikes.filter.
+
+00:01:46.569 --> 00:01:55.479
+Now, we want to say where the uid does not equal action.authedUser.
+
+00:01:55.480 --> 00:01:57.260
+So, this will filter out
+
+00:01:57.260 --> 00:02:01.640
+the specific authenticated user if they have already like the tweet.
+
+00:02:01.640 --> 00:02:06.349
+If they haven't, what we want to do is the exact same thing,
+
+00:02:06.349 --> 00:02:10.400
+instead of using.filter, we want to use ".concat" to
+
+00:02:10.400 --> 00:02:16.069
+add the username of the authenticated user to the likes array.
+

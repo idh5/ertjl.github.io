@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.066 --> 00:00:04.337
+A primeira coisa que faremos
+é usar a função getInitialData
+
+00:00:04.371 --> 00:00:08.375
+para recebermos os dados iniciais
+de que nosso aplicativo precisa.
+
+00:00:08.408 --> 00:00:13.413
+Primeiro, nós vamos construir
+uma nova pasta de ações.
+
+00:00:13.446 --> 00:00:16.583
+Dentro dela,
+teremos alguns arquivos:
+
+00:00:16.616 --> 00:00:22.322
+authedUser.js,
+também teremos shared.js
+
+00:00:22.355 --> 00:00:24.724
+e tweets.js.
+
+00:00:24.758 --> 00:00:27.794
+Todas as ações relacionadas
+aos nossos tuítes.
+
+00:00:27.827 --> 00:00:32.899
+E também teremos um arquivo de ações
+para nossos usuários.
+
+00:00:32.932 --> 00:00:35.602
+Primeiro, dentro de shared,
+
+00:00:35.635 --> 00:00:39.841
+vamos importar getInitialData
+
+00:00:39.875 --> 00:00:43.176
+que vem de utils/api.
+
+00:00:44.586 --> 00:00:46.475
+Depois vamos exportar
+
+00:00:46.509 --> 00:00:50.984
+a função handleInitialData,
+
+00:00:51.017 --> 00:00:55.188
+e esta função vai usar
+o padrão Redux-thunk,
+
+00:00:55.622 --> 00:00:57.891
+porque queremos fazer
+uma solicitação assíncrona
+
+00:00:57.924 --> 00:00:59.459
+dentro desta função.
+
+00:00:59.492 --> 00:01:02.929
+Então o que faremos é usar
+getInitialData,
+
+00:01:02.962 --> 00:01:06.533
+e isto nos retornará
+uma promessa,
+
+00:01:07.476 --> 00:01:09.369
+que nos passará um objeto
+
+00:01:09.402 --> 00:01:12.472
+que tem a propriedade users
+e a propriedade tweets.
+
+00:01:12.505 --> 00:01:17.210
+Agora nós vamos pegar
+users e tweets
+
+00:01:17.243 --> 00:01:19.746
+e adicioná-los ao estado
+da Store Redux.
+
+00:01:19.779 --> 00:01:24.050
+Para fazer isto,
+precisamos disparar algumas ações.
+
+00:01:24.084 --> 00:01:27.287
+Primeiro vamos ao tweets.js,
+
+00:01:27.320 --> 00:01:30.557
+e vamos exportar
+uma nova variável
+
+00:01:30.590 --> 00:01:33.426
+que chamaremos
+de "RECEIVE_TWEETS".
+
+00:01:34.561 --> 00:01:37.163
+Esta vai ser a action type
+
+00:01:37.197 --> 00:01:40.967
+quando recebermos e dispararmos
+os tuítes para atualizar a Store.
+
+00:01:42.041 --> 00:01:46.906
+Depois vamos exportar a função
+receiveTweets,
+
+00:01:46.940 --> 00:01:51.678
+que vai nos retornar um objeto
+ou a ação do tipo RECEIVE_TWEETS,
+
+00:01:51.711 --> 00:01:54.647
+então vamos passar
+tweets aqui,
+
+00:01:54.681 --> 00:01:58.084
+como o primeiro argumento
+quando a função é chamada.
+
+00:01:58.118 --> 00:02:02.589
+Agora temos o criador de ação
+receiveTweets.
+
+00:02:02.622 --> 00:02:05.558
+Vamos fazer algo similar
+com users.
+
+00:02:05.592 --> 00:02:10.964
+A ação vai ocorrer
+quando recebermos os nossos users,
+
+00:02:10.997 --> 00:02:12.899
+vamos escrever RECEIVE_USERS.
+
+00:02:14.827 --> 00:02:18.672
+Depois vamos exportar
+o criador de ações receiveUsers.
+
+00:02:20.200 --> 00:02:22.342
+Com o type RECEIVE_USERS,
+
+00:02:22.375 --> 00:02:24.878
+e também passaremos os users.
+
+00:02:24.911 --> 00:02:28.148
+O que podemos fazer
+em shared.js,
+
+00:02:28.181 --> 00:02:32.886
+é importar
+os dois criadores de ação:
+
+00:02:32.919 --> 00:02:35.411
+vamos pegar receiveUsers,
+que vem de...
+
+00:02:38.260 --> 00:02:42.872
+action/users,
+e também receiveTweets,
+
+00:02:42.904 --> 00:02:46.332
+que vem de actions/tweets.
+
+00:02:46.366 --> 00:02:50.537
+Agora, na função
+que estamos passando para .then,
+
+00:02:50.570 --> 00:02:53.707
+podemos usar
+a dispatch(receiveUsers),
+
+00:02:54.103 --> 00:02:55.775
+passando users para ela.
+
+00:02:55.809 --> 00:03:00.380
+E também a dispatch(receiveTweets),
+passando tweets para ela.
+
+00:03:00.413 --> 00:03:03.316
+E embora não tenhamos ajustado
+nossas reducers
+
+00:03:03.350 --> 00:03:06.052
+para lidar
+com estas dispatches,
+
+00:03:06.086 --> 00:03:09.456
+faremos isto
+nos próximos vídeos.
+

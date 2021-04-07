@@ -1,0 +1,201 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.867
+Agora que movemos as ações
+do arquivo index.html
+
+00:00:03.900 --> 00:00:05.867
+para a pasta actions,
+
+00:00:05.900 --> 00:00:09.100
+o próximo passo será
+mover as reducers.
+
+00:00:09.133 --> 00:00:14.167
+Dentro desta pasta reducers,
+teremos quatro arquivos.
+
+00:00:14.200 --> 00:00:17.433
+Teremos o todos.js
+para todosReducer,
+
+00:00:18.100 --> 00:00:20.267
+o goals para goalsReducer,
+
+00:00:20.300 --> 00:00:24.867
+loadingReducer
+com o arquivo loading.js
+
+00:00:24.900 --> 00:00:28.500
+e o arquivo index.js,
+que usará
+
+00:00:28.533 --> 00:00:31.333
+combineReducers
+e exportará a invocação disso
+
+00:00:31.367 --> 00:00:34.967
+passando as reducers,
+que veremos em instantes.
+
+00:00:35.000 --> 00:00:38.300
+Primeiro, vamos mover
+
+00:00:38.333 --> 00:00:40.333
+a reducer Todos.
+
+00:00:41.800 --> 00:00:45.900
+Sempre que eu criar
+um novo arquivo reducers
+
+00:00:45.933 --> 00:00:48.467
+com exportação padrão,
+
+00:00:48.500 --> 00:00:52.067
+exportamos a todos
+ou a reducer específica.
+
+00:00:52.100 --> 00:00:54.367
+Agora,
+
+00:00:54.400 --> 00:00:57.767
+precisamos importar os diferentes
+tipos de ação que usamos
+
+00:00:57.800 --> 00:01:00.100
+da pasta actions.
+
+00:01:00.133 --> 00:01:06.067
+Pegamos ADD_TODO,
+REMOVE_TODO e TOGGLE_TODO,
+
+00:01:06.100 --> 00:01:09.700
+que virão de actions/todos.
+
+00:01:10.433 --> 00:01:13.767
+O arquivo parece bom.
+Temos todos os tipos de ação
+
+00:01:13.800 --> 00:01:16.500
+e estamos exportando
+como exportação padrão
+
+00:01:16.533 --> 00:01:17.933
+a reducer todos.
+
+00:01:17.967 --> 00:01:21.267
+Faremos o mesmo
+para goalsReducer.
+
+00:01:21.300 --> 00:01:23.167
+Nós copiamos ela daqui.
+
+00:01:27.733 --> 00:01:31.267
+Agora isto será
+export default.
+
+00:01:32.100 --> 00:01:35.233
+Os diferentes tipos de ação
+que precisamos importar
+
+00:01:35.267 --> 00:01:37.800
+serão ADD_GOAL
+e REMOVE_GOAL,
+
+00:01:37.833 --> 00:01:41.800
+que virão de actions/goals.
+
+00:01:43.167 --> 00:01:46.533
+Agora, a loadingReducer.
+
+00:01:47.167 --> 00:01:49.933
+Seguimos o mesmo padrão.
+
+00:01:49.967 --> 00:01:53.267
+Colamos aqui, e isto será
+export default.
+
+00:01:54.533 --> 00:01:59.000
+E o tipo de ação
+que precisamos é o RECEIVE_DATA,
+
+00:01:59.033 --> 00:02:01.900
+que vem de actions/shared.
+
+00:02:01.933 --> 00:02:04.500
+A última coisa
+que precisamos fazer
+
+00:02:04.533 --> 00:02:06.300
+é com o arquivo index.js.
+
+00:02:06.333 --> 00:02:10.067
+Quando criamos a Store,
+
+00:02:10.100 --> 00:02:12.967
+chamamos Redux.createStore
+
+00:02:13.000 --> 00:02:16.867
+e passamos uma invocação
+de combineMiddleware.
+
+00:02:16.900 --> 00:02:20.367
+Queremos
+que o arquivo index.js lide
+
+00:02:20.400 --> 00:02:22.133
+com essa invocação.
+
+00:02:22.166 --> 00:02:26.267
+Assim, quando importarmos
+o que foi exportado do index.js,
+
+00:02:26.300 --> 00:02:28.500
+nós obteremos a reducer
+
+00:02:28.533 --> 00:02:31.700
+e não precisaremos fazer isso
+no arquivo index.js principal
+
+00:02:31.733 --> 00:02:33.700
+quando criarmos a Store.
+
+00:02:33.733 --> 00:02:37.600
+Então nós importaremos
+combineReducers,
+
+00:02:37.633 --> 00:02:40.033
+que vêm do Redux,
+
+00:02:40.067 --> 00:02:42.567
+e queremos importar
+as diferentes reducers
+
+00:02:42.600 --> 00:02:45.133
+que acabamos de fazer:
+a todos,
+
+00:02:45.166 --> 00:02:46.933
+a loading
+
+00:02:48.267 --> 00:02:51.133
+e, por fim,
+a goalsReducer.
+
+00:02:52.133 --> 00:02:55.133
+E vamos exportar
+como exportação padrão
+
+00:02:55.167 --> 00:02:57.167
+a invocação
+da combineReducers,
+
+00:02:57.200 --> 00:02:58.900
+como fizemos aqui,
+
+00:02:58.933 --> 00:03:03.633
+passando três propriedades:
+todos, loading e goals.
+

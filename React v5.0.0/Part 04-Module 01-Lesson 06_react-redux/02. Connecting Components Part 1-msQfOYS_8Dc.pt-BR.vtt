@@ -1,0 +1,489 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.067 --> 00:00:03.233
+O objetivo do vídeo anterior
+era construir uma bela abstração
+
+00:00:03.267 --> 00:00:04.833
+entre o React e o Redux,
+
+00:00:04.867 --> 00:00:07.400
+para podermos usá-los juntos
+com mais eficiência.
+
+00:00:07.433 --> 00:00:10.433
+Fizemos isso construindo
+este componente Provider,
+
+00:00:10.467 --> 00:00:13.767
+que era responsável
+por adicionar a Store Redux
+
+00:00:13.800 --> 00:00:14.967
+na Context.
+
+00:00:15.000 --> 00:00:19.100
+Assim, qualquer componente Child
+a obteria de Context.
+
+00:00:19.133 --> 00:00:22.467
+Se analisarmos
+este código de biblioteca -
+
+00:00:22.500 --> 00:00:25.233
+e este seria um componente
+que baixaríamos do MPM -,
+
+00:00:25.267 --> 00:00:28.467
+só realizamos metade
+do que queríamos fazer.
+
+00:00:28.500 --> 00:00:31.967
+Estamos usando
+o Context.Provider
+
+00:00:32.000 --> 00:00:34.933
+para adicionar a Store
+à Context,
+
+00:00:34.967 --> 00:00:37.367
+mas se baixarmos isto
+do MPM,
+
+00:00:37.400 --> 00:00:41.900
+nós ainda precisaremos usar
+Context.Consumer
+
+00:00:41.933 --> 00:00:43.600
+para obtermos a Store.
+
+00:00:43.633 --> 00:00:45.200
+Nossa biblioteca
+
+00:00:45.233 --> 00:00:49.233
+pode ter melhorado
+a abstração entre React e Redux,
+
+00:00:49.267 --> 00:00:51.667
+mas ainda não está
+totalmente pronta.
+
+00:00:51.700 --> 00:00:53.733
+Precisaremos criar uma API
+
+00:00:53.767 --> 00:00:57.333
+para que o usuário
+obtenha as informações da Context
+
+00:00:57.367 --> 00:00:59.967
+sem precisar usar
+Context.Consumer.
+
+00:01:00.000 --> 00:01:03.000
+Assim como construímos
+uma bela abstração
+
+00:01:03.033 --> 00:01:05.667
+em Context.Provider
+usando o componente Provider,
+
+00:01:05.700 --> 00:01:08.833
+também construiremos
+uma abstração em Context.Consumer
+
+00:01:08.866 --> 00:01:11.833
+ao criar o que chamamos
+de "função connect".
+
+00:01:11.866 --> 00:01:16.333
+Neste vídeo, veremos o que
+a API da função connect fará,
+
+00:01:16.367 --> 00:01:19.933
+e, no próximo,
+nós a implementaremos.
+
+00:01:19.966 --> 00:01:24.400
+Sempre que usamos Context.Cosumer,
+fazemos duas coisas:
+
+00:01:24.433 --> 00:01:26.300
+renderizamos um componente
+
+00:01:26.333 --> 00:01:30.100
+e passamos qualquer dado da Store
+que for necessário.
+
+00:01:30.133 --> 00:01:33.300
+Ao construirmos a abstração
+em Context.Consumer,
+
+00:01:33.333 --> 00:01:35.967
+precisamos realizar
+estas duas coisas:
+
+00:01:36.000 --> 00:01:37.633
+renderizar
+qualquer componente
+
+00:01:37.667 --> 00:01:40.967
+e passar qualquer dado necessário
+da Store ao componente.
+
+00:01:41.000 --> 00:01:44.500
+E se a API
+fosse mais ou menos assim?
+
+00:01:44.533 --> 00:01:46.300
+Podemos ter...
+
+00:01:48.267 --> 00:01:51.300
+uma nova variável aqui,
+que chamaremos de "ConnectedApp",
+
+00:01:51.333 --> 00:01:54.300
+e agora invocaremos connect
+
+00:01:54.333 --> 00:01:57.833
+e ela retornará
+ConnectedApp.
+
+00:01:57.867 --> 00:02:01.933
+Vamos empacotar toda
+esta funcionalidade
+
+00:02:01.967 --> 00:02:05.467
+do Context.Consumer
+dentro da função connect.
+
+00:02:05.500 --> 00:02:08.400
+Agora precisamos
+informar à connect duas coisas:
+
+00:02:08.433 --> 00:02:11.033
+primeiro, qual componente
+ela precisa renderizar,
+
+00:02:11.066 --> 00:02:14.600
+e segundo, qualquer dado
+necessário da Store.
+
+00:02:14.633 --> 00:02:17.533
+Usaremos a mesma técnica
+de programação
+
+00:02:17.567 --> 00:02:20.033
+que vimos quando falamos
+sobre o middleware,
+
+00:02:20.067 --> 00:02:22.067
+para realizar isto.
+
+00:02:22.100 --> 00:02:23.733
+Então,
+
+00:02:23.767 --> 00:02:26.400
+quando invocamos connect,
+
+00:02:26.433 --> 00:02:28.733
+isso retornará
+uma nova função,
+
+00:02:28.767 --> 00:02:32.567
+que poderemos invocar com o segundo
+conjunto de parênteses.
+
+00:02:32.600 --> 00:02:35.433
+Isto parece estranho,
+
+00:02:35.467 --> 00:02:38.067
+mas, no primeiro conjunto
+de parênteses,
+
+00:02:38.100 --> 00:02:40.933
+passamos os dados
+que o componente precisa.
+
+00:02:40.967 --> 00:02:42.500
+E, no segundo conjunto,
+
+00:02:42.533 --> 00:02:45.367
+passamos o componente
+que será renderizado.
+
+00:02:45.400 --> 00:02:47.100
+No nosso exemplo,
+
+00:02:47.133 --> 00:02:49.367
+primeiro passamos
+o componente App,
+
+00:02:49.400 --> 00:02:52.300
+porque é isso que ConnectedApp
+precisa renderizar,
+
+00:02:52.333 --> 00:02:56.067
+e agora passamos uma função
+
+00:02:56.100 --> 00:02:58.433
+no primeiro conjunto
+de parênteses.
+
+00:02:58.467 --> 00:03:02.400
+Esta função passará
+a Store,
+
+00:03:02.433 --> 00:03:05.567
+e qualquer propriedade retornada
+neste objeto
+
+00:03:05.600 --> 00:03:08.833
+será passada como propriedade
+para o componente App.
+
+00:03:08.867 --> 00:03:10.933
+Se observarmos
+o componente App,
+
+00:03:10.966 --> 00:03:13.567
+a única propriedade necessária
+da Store
+
+00:03:13.600 --> 00:03:15.633
+é este componente loading.
+
+00:03:15.667 --> 00:03:20.633
+Então digitamos
+loading: store.loading.
+
+00:03:20.666 --> 00:03:23.467
+Isso nos permitirá,
+
+00:03:23.500 --> 00:03:25.467
+quando
+implementarmos connect,
+
+00:03:25.500 --> 00:03:28.767
+deletar
+o componente ConnectedApp,
+
+00:03:28.800 --> 00:03:30.800
+porque temos isto aqui.
+
+00:03:31.600 --> 00:03:35.367
+Dentro do App, receberemos
+uma propriedade chamada "loading".
+
+00:03:35.400 --> 00:03:38.933
+Então poderemos remover
+todo este código
+
+00:03:38.967 --> 00:03:42.933
+e simplesmente digitar
+this.props.loading.
+
+00:03:42.967 --> 00:03:47.700
+E, sempre que conectarmos
+um componente connect
+
+00:03:47.733 --> 00:03:49.767
+com um componente
+de ordem superior,
+
+00:03:49.800 --> 00:03:52.333
+também passaremos dispatch
+como propriedade.
+
+00:03:52.367 --> 00:03:54.233
+Em vez de passar
+toda a Store,
+
+00:03:54.266 --> 00:03:56.233
+ele passará dispatch.
+
+00:03:56.266 --> 00:03:58.533
+Podemos nos livrar
+de store.dispatch
+
+00:03:58.567 --> 00:04:02.700
+e ainda poderemos disparar
+o criador de ação handleInitialData.
+
+00:04:02.733 --> 00:04:04.433
+O legal disso
+
+00:04:04.467 --> 00:04:07.500
+é que o usuário não precisa
+se inscrever manualmente,
+
+00:04:07.533 --> 00:04:09.833
+porque podemos empacotar
+esta implementação
+
+00:04:09.866 --> 00:04:13.067
+dentro da implementação
+de connect
+
+00:04:13.100 --> 00:04:14.767
+depois que a construirmos.
+
+00:04:14.800 --> 00:04:17.667
+Agora que temos o componente
+ConnectedApp,
+
+00:04:17.700 --> 00:04:20.633
+que obtemos da função connect
+que será construída,
+
+00:04:20.667 --> 00:04:23.967
+faremos o mesmo
+para o componente ConnectedGoals
+
+00:04:24.000 --> 00:04:26.133
+e para o ConnectedTodos.
+
+00:04:26.167 --> 00:04:29.567
+Então podemos dizer
+
+00:04:29.600 --> 00:04:31.433
+"const ConnectedGoals"
+
+00:04:31.467 --> 00:04:34.167
+será igual à invocação
+da connect.
+
+00:04:34.200 --> 00:04:37.067
+Nós invocamos,
+isto retornará uma função,
+
+00:04:37.100 --> 00:04:39.833
+e nós passamos o componente
+que desejamos renderizar,
+
+00:04:39.867 --> 00:04:41.867
+que será o componente Goals.
+
+00:04:41.900 --> 00:04:44.167
+Se observarmos
+
+00:04:44.200 --> 00:04:46.967
+os dados
+de que Goals precisa,
+
+00:04:47.000 --> 00:04:50.233
+ele precisa da propriedade goals
+da Store.
+
+00:04:50.267 --> 00:04:53.000
+Digitaremos
+
+00:04:53.033 --> 00:04:57.100
+goals: store.goals.
+
+00:04:58.500 --> 00:05:01.367
+Isso substituirá isto,
+
+00:05:01.400 --> 00:05:03.633
+e o componente Goals
+ainda passará goals,
+
+00:05:03.666 --> 00:05:05.467
+porque é isso que retornamos
+
+00:05:05.500 --> 00:05:07.600
+desta função.
+
+00:05:07.633 --> 00:05:10.600
+Faremos o mesmo
+para o Todos.
+
+00:05:10.633 --> 00:05:12.267
+Vou copiar isto.
+
+00:05:12.300 --> 00:05:15.067
+Aqui,
+em vez de ConnectedTodos,
+
+00:05:15.100 --> 00:05:17.667
+podemos digitar
+
+00:05:17.700 --> 00:05:21.933
+ConnectedTodos = connect
+
+00:05:21.967 --> 00:05:25.000
+passando os dados
+do qual ele precisa
+
+00:05:25.033 --> 00:05:27.567
+como primeiro argumento
+da primeira invocação,
+
+00:05:27.600 --> 00:05:29.400
+que será todos,
+
+00:05:30.100 --> 00:05:32.033
+que vira de store.todos.
+
+00:05:32.067 --> 00:05:34.933
+Depois de invocar isto,
+invocaremos os resultados
+
+00:05:34.966 --> 00:05:36.767
+do que isso nos dará
+
+00:05:37.567 --> 00:05:39.767
+passando o componente
+que será renderizado,
+
+00:05:39.800 --> 00:05:41.933
+que será
+o componente Todos.
+
+00:05:41.967 --> 00:05:45.433
+Isso nos permitirá remover
+
+00:05:45.466 --> 00:05:47.067
+o componente ConnectedTodos,
+
+00:05:47.100 --> 00:05:51.000
+porque colocamos
+toda a lógica
+
+00:05:51.033 --> 00:05:54.467
+dentro deste componente
+de ordem superior,
+
+00:05:54.500 --> 00:05:57.567
+que construiremos
+no próximo vídeo.
+
+00:05:57.600 --> 00:06:00.167
+Só quero fazer
+uma pequena mudança aqui.
+
+00:06:00.200 --> 00:06:04.233
+Quando invocamos connect,
+a primeira função passada,
+
+00:06:04.267 --> 00:06:08.233
+em vez de receber a Store,
+
+00:06:08.266 --> 00:06:10.333
+ela retornará o estado.
+
+00:06:10.367 --> 00:06:14.167
+Vamos atualizar os lugares
+que usamos connect
+
+00:06:14.200 --> 00:06:15.933
+para que,
+em vez de passar Store,
+
+00:06:15.967 --> 00:06:18.667
+passe o estado da Store.
+
+00:06:18.700 --> 00:06:21.633
+O último ficará aqui.
+

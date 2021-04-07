@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:03.169
+Agora que estamos disparando
+algumas ações aqui,
+
+00:00:03.203 --> 00:00:04.838
+precisamos configurar
+as reducers
+
+00:00:04.871 --> 00:00:08.408
+para modificar o estado
+com base nestas ações.
+
+00:00:08.441 --> 00:00:11.111
+Vamos criar uma nova pasta
+
+00:00:11.144 --> 00:00:13.346
+e a chamá-la de "reducers".
+
+00:00:13.380 --> 00:00:16.716
+Teremos alguns arquivos diferentes
+dentro da pasta.
+
+00:00:16.750 --> 00:00:20.387
+Teremos users.js,
+que será a reducer users,
+
+00:00:20.420 --> 00:00:23.256
+tweets.js,
+que será a reducer tweets.
+
+00:00:23.289 --> 00:00:27.460
+E também precisamos de uma reducer
+para lidar com authedUser,
+
+00:00:27.494 --> 00:00:29.529
+então teremos o authedUser.js.
+
+00:00:29.562 --> 00:00:34.100
+E o último arquivo é
+o index.js,
+
+00:00:34.134 --> 00:00:37.737
+que vai exportar nossa invocação
+para combinar reducers.
+
+00:00:37.771 --> 00:00:40.407
+Primeiro, vamos criar
+o arquivo users.js.
+
+00:00:40.440 --> 00:00:45.078
+Vamos importar
+a constante RECEIVE_USER,
+
+00:00:45.111 --> 00:00:49.149
+que virá de actions/users.
+
+00:00:49.182 --> 00:00:51.399
+E, como export default,
+
+00:00:51.432 --> 00:00:55.789
+queremos exportar
+a reducer users,
+
+00:00:55.822 --> 00:00:58.892
+que vai configurar o default state
+para um objeto vazio.
+
+00:00:58.925 --> 00:01:00.790
+E vai conter uma ação.
+
+00:01:01.354 --> 00:01:05.265
+Vamos escrever switch(action.type)
+como fizemos antes.
+
+00:01:05.595 --> 00:01:09.069
+Quando o case é RECEIVE_USER,
+
+00:01:09.102 --> 00:01:12.405
+na verdade,
+RECEIVE_USERS, com S.
+
+00:01:12.637 --> 00:01:15.900
+Quando o case for
+RECEIVE_USERS,
+
+00:01:15.933 --> 00:01:21.348
+o novo estado da parte
+dos users do nosso estado
+
+00:01:21.381 --> 00:01:25.518
+terá tudo que estava nela,
+neste caso, um objeto vazio,
+
+00:01:25.552 --> 00:01:29.564
+assim como todos os users
+
+00:01:29.597 --> 00:01:31.958
+que vamos pegar da action.
+
+00:01:31.991 --> 00:01:37.897
+E o default state vai retornar
+o estado.
+
+00:01:37.931 --> 00:01:41.701
+Está bom
+para a nossa reducer users.
+
+00:01:41.735 --> 00:01:44.938
+Vou copiar isto, porque
+a reducer tweet será similar.
+
+00:01:44.971 --> 00:01:47.240
+Em vez de RECEIVE_USERS,
+
+00:01:47.273 --> 00:01:51.811
+vamos usar RECEIVE_TWEETS
+como action type,
+
+00:01:51.845 --> 00:01:56.549
+que virá de actions/tweets.
+
+00:01:56.583 --> 00:01:58.551
+Então agora temos
+nossa reducer tweets aqui.
+
+00:01:58.816 --> 00:02:01.054
+Quando recebemos os tweets,
+
+00:02:01.087 --> 00:02:05.492
+queremos fundir
+todos os tweets neste objeto.
+
+00:02:05.789 --> 00:02:09.395
+E, como sempre, nós retornamos
+o estado que foi passado
+
+00:02:09.428 --> 00:02:11.898
+quando nenhum destes cases
+se equivalem.
+
+00:02:13.338 --> 00:02:17.137
+Dentro
+da nossa reducer authedUser,
+
+00:02:17.170 --> 00:02:18.571
+faremos algo similar.
+
+00:02:18.605 --> 00:02:22.868
+Vamos importar SET_AUTHED_USER
+
+00:02:23.866 --> 00:02:26.279
+de actions/authedUser,
+
+00:02:26.312 --> 00:02:31.685
+e, como export default,
+vamos exportar authedUser.
+
+00:02:32.015 --> 00:02:34.721
+O state inicialmente será
+null,
+
+00:02:34.754 --> 00:02:37.924
+então usaremos parâmetros default
+para configurá-lo igual a null.
+
+00:02:37.957 --> 00:02:40.927
+Quando esta função é usada,
+quando o state é indefinido,
+
+00:02:40.960 --> 00:02:43.396
+como será na primeira vez
+que for usada.
+
+00:02:45.432 --> 00:02:47.734
+Vamos fazer o switch
+em action.type.
+
+00:02:47.767 --> 00:02:50.070
+Quando o caso é
+SET_AUTHED_USER,
+
+00:02:50.103 --> 00:02:53.940
+nós vamos retornar action.id,
+
+00:02:53.973 --> 00:02:57.043
+e o default será
+o return state.
+
+00:02:57.077 --> 00:03:02.215
+Agora temos as três reducers
+que lidam com action types
+
+00:03:02.248 --> 00:03:07.120
+que vimos sendo disparados
+dentro da função handleInitialData.
+
+00:03:07.153 --> 00:03:11.591
+Então,
+dentro do arquivo index.js,
+
+00:03:11.624 --> 00:03:14.694
+vamos importar combineReducers
+
+00:03:14.728 --> 00:03:20.100
+e as outras reducers
+que acabamos de criar.
+
+00:03:20.133 --> 00:03:24.838
+Vamos pegar authedUser,
+users
+
+00:03:26.407 --> 00:03:28.141
+e, por último, tweets.
+
+00:03:30.477 --> 00:03:33.780
+Agora, como export default,
+
+00:03:33.813 --> 00:03:37.517
+vamos exportar uma invocação
+para combinar reducers,
+
+00:03:37.550 --> 00:03:39.753
+passando para elas
+as diferentes reducers:
+
+00:03:39.786 --> 00:03:44.124
+authedUser, users e tweets.
+

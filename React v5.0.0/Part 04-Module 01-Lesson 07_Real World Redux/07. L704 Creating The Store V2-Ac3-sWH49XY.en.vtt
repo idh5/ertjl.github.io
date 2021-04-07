@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.769
+So, then, when we import our default export from our reducers folder,
+
+00:00:04.769 --> 00:00:07.014
+that will be our main route reducer.
+
+00:00:07.014 --> 00:00:09.480
+And so, let's go ahead and do that now.
+
+00:00:09.480 --> 00:00:15.060
+So, inside of index.js is where we want to actually go ahead and
+
+00:00:15.060 --> 00:00:17.385
+create our store as well as wrap
+
+00:00:17.385 --> 00:00:20.670
+our app inside of the provider components we can pass it our store.
+
+00:00:20.670 --> 00:00:24.190
+So, what we'll do is head over to your terminal,
+
+00:00:26.480 --> 00:00:29.490
+and we need to install a few different things.
+
+00:00:29.489 --> 00:00:31.079
+So, what we will do is, let's say,
+
+00:00:31.079 --> 00:00:37.099
+yarn add we want react-redux as well as redux.
+
+00:00:38.479 --> 00:00:40.574
+Then once those are done,
+
+00:00:40.575 --> 00:00:45.640
+go ahead and start your application again and head back over to your main index.js file.
+
+00:00:45.640 --> 00:00:50.990
+and what we want to do is we want to be able to create a store,
+
+00:00:50.990 --> 00:00:53.675
+so this package is going to come from redux.
+
+00:00:53.674 --> 00:00:57.424
+We want to be able to wrap our app in this provider component,
+
+00:00:57.424 --> 00:01:00.015
+which we can grab from react-redux,
+
+00:01:00.015 --> 00:01:01.884
+and then we want our reducer,
+
+00:01:01.884 --> 00:01:08.575
+which is going to come from our reducers folder.
+
+00:01:08.575 --> 00:01:11.040
+So, then in order to create our store,
+
+00:01:11.040 --> 00:01:15.020
+all we need to do is call create store passing it our reducer.
+
+00:01:15.019 --> 00:01:24.795
+Now, we can wrap our main app component inside of this provider component,
+
+00:01:24.795 --> 00:01:28.540
+and we need to make sure that we pass provider,
+
+00:01:28.540 --> 00:01:32.545
+our stores, that it can stick it on context.
+
+00:01:32.545 --> 00:01:36.920
+So, what we'll do in the next video is we need to add
+
+00:01:36.920 --> 00:01:41.810
+some middleware to our application so that this syntax right here,
+
+00:01:41.810 --> 00:01:46.025
+where we return a function rather than an object from our action creators,
+
+00:01:46.025 --> 00:01:48.020
+will be supported, and we
+
+00:01:48.019 --> 00:01:50.189
+can check out our console to make sure we don't have any errors.
+
+00:01:50.189 --> 00:01:52.670
+It looks like we have one. Just a typo that you
+
+00:01:52.670 --> 00:01:56.329
+probably noticed right here inside of authedUsers.
+
+00:01:56.329 --> 00:01:58.280
+So, now we should be good. So, what we'll do in
+
+00:01:58.280 --> 00:02:01.170
+the next video is we will add in that middleware.
+

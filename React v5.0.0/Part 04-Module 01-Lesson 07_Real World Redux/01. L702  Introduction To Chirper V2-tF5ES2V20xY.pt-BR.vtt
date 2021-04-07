@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.737
+Primeiro, vamos dar uma olhada
+no projeto que vamos construir.
+
+00:00:03.770 --> 00:00:05.872
+É uma espécie de clone minimalista
+do Twitter.
+
+00:00:05.905 --> 00:00:07.707
+E, se quiser brincar
+um pouco com ele,
+
+00:00:07.741 --> 00:00:09.776
+você pode vir
+para este URL aqui.
+
+00:00:09.809 --> 00:00:12.045
+O que temos aqui
+é uma linha do tempo,
+
+00:00:12.078 --> 00:00:14.981
+e estes são todos os tuítes
+na sua linha do tempo.
+
+00:00:15.015 --> 00:00:17.751
+Você pode escrever um novo tuíte
+vindo para este campo.
+
+00:00:19.819 --> 00:00:22.088
+Podemos escrever um novo tuíte
+e enviar.
+
+00:00:22.122 --> 00:00:23.990
+E ele vai aparecer
+na nossa linha do tempo.
+
+00:00:24.024 --> 00:00:26.226
+Você pode curtir
+qualquer tuíte.
+
+00:00:26.259 --> 00:00:29.729
+E você também pode clicar
+em um tuíte para respondê-lo.
+
+00:00:29.763 --> 00:00:32.932
+Note que este tuíte tem
+duas respostas diferentes.
+
+00:00:32.966 --> 00:00:35.669
+Se quiser criar
+outra resposta,
+
+00:00:35.702 --> 00:00:39.539
+basta criar um novo tuíte
+na página deste tuíte,
+
+00:00:39.572 --> 00:00:41.841
+e agora este tuíte tem
+outra resposta.
+
+00:00:41.875 --> 00:00:46.813
+Nós podemos curtir as respostas
+ou até respondê-las.
+
+00:00:46.846 --> 00:00:51.151
+Tecnicamente estas respostas
+podem ser infinitas,
+
+00:00:51.184 --> 00:00:54.854
+porque podemos continuar respondendo
+a respostas diferentes.
+
+00:00:54.888 --> 00:01:00.727
+O interessante
+neste aplicativo é
+
+00:01:00.760 --> 00:01:02.462
+que ele se beneficia
+do uso do Redux,
+
+00:01:02.495 --> 00:01:04.998
+porque nas diferentes visualizações
+que nós temos,
+
+00:01:05.031 --> 00:01:06.766
+estamos compartilhando
+o mesmo estado.
+
+00:01:06.800 --> 00:01:08.835
+Por exemplo,
+quando escrevemos um novo tuíte,
+
+00:01:08.868 --> 00:01:11.905
+ele vai aparecer
+na nossa linha do tempo principal.
+
+00:01:11.938 --> 00:01:17.143
+Além disso, quando curtimos
+um tuíte nesta visualização,
+
+00:01:17.177 --> 00:01:21.181
+quando vamos à visualização de tuíte
+deste tuíte específico,
+
+00:01:21.214 --> 00:01:22.716
+ainda precisamos ver
+esta curtida.
+
+00:01:22.749 --> 00:01:24.584
+Quando criamos
+uma nova resposta,
+
+00:01:26.720 --> 00:01:30.957
+o que acontece é que o contador
+é incrementado.
+
+00:01:30.990 --> 00:01:34.994
+E o contador também é incrementado
+na página principal.
+
+00:01:35.028 --> 00:01:38.798
+Basicamente, todas as visualizações
+que temos no aplicativo
+
+00:01:38.832 --> 00:01:42.035
+precisam referenciar
+ao menos uma parte da Store Redux,
+
+00:01:42.068 --> 00:01:44.571
+o que significa que o Redux é
+uma ótima escolha
+
+00:01:44.604 --> 00:01:46.406
+para este projeto específico.
+

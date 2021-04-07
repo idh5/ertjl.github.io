@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.204 --> 00:00:03.333
+Neste momento, temos a IU
+da linha do tempo,
+
+00:00:03.375 --> 00:00:06.078
+mas quando clicamos
+em algum dos corações,
+
+00:00:06.120 --> 00:00:09.871
+nada acontece, pois a funcionalidade
+ainda não está configurada.
+
+00:00:09.913 --> 00:00:11.781
+Vamos fazer isso agora.
+
+00:00:11.823 --> 00:00:15.767
+No arquivo api.js,
+
+00:00:15.809 --> 00:00:19.033
+temos esta função
+que desejamos invocar
+
+00:00:19.075 --> 00:00:23.048
+para salvar a curtida
+no banco de dados.
+
+00:00:23.090 --> 00:00:28.031
+Dentro do arquivo Tweets.js,
+
+00:00:28.073 --> 00:00:30.964
+para as ações,
+nós importaremos...
+
+00:00:31.907 --> 00:00:37.122
+a função saveLikeToggle,
+que virá de utils/api.
+
+00:00:37.164 --> 00:00:41.658
+Agora queremos descrever
+este evento específico.
+
+00:00:41.700 --> 00:00:43.548
+Diremos
+"TOGGLE_TWEET"...
+
+00:00:46.604 --> 00:00:49.570
+Agora faremos
+o criador de ação.
+
+00:00:49.612 --> 00:00:52.498
+Este será chamado
+de "toggleTweet".
+
+00:00:52.540 --> 00:00:57.355
+Ele pegará um objeto,
+que tem uma ID,
+
+00:00:58.148 --> 00:01:02.353
+uma propriedade authedUser e o fato
+de o usuário ter curtido ou não.
+
+00:01:02.395 --> 00:01:05.155
+Depois ele retornará
+uma ação ou um objeto
+
+00:01:05.197 --> 00:01:09.324
+que tem propriedade type
+igual a TOGGLE_TWEET,
+
+00:01:09.366 --> 00:01:13.490
+e passaremos
+todos os argumentos:
+
+00:01:13.532 --> 00:01:16.577
+ID, authedUser e hasLiked.
+
+00:01:16.619 --> 00:01:20.803
+Agora queremos fazer
+o criador de ação assíncrono,
+
+00:01:20.845 --> 00:01:23.314
+que será responsável
+por invocar
+
+00:01:23.356 --> 00:01:25.378
+a função saveLikeToggle.
+
+00:01:25.420 --> 00:01:28.615
+E esta será a função
+que exportaremos,
+
+00:01:28.657 --> 00:01:31.173
+nós a chamaremos
+de "handleToggleTweet".
+
+00:01:31.948 --> 00:01:35.067
+Ela pegará algumas informações
+do tuíte.
+
+00:01:35.109 --> 00:01:38.315
+Como teremos uma solicitação AJAX
+aqui dentro,
+
+00:01:38.357 --> 00:01:39.819
+retornaremos uma função
+
+00:01:39.861 --> 00:01:42.180
+para podermos disparar
+sempre que quisermos.
+
+00:01:42.222 --> 00:01:46.548
+A primeira coisa a ser feita
+é toggleTweet
+
+00:01:46.590 --> 00:01:48.572
+passando info,
+
+00:01:48.614 --> 00:01:53.069
+que terá id, authedUser
+e hasLiked.
+
+00:01:53.111 --> 00:01:56.131
+Perceba que estamos usando
+atualizações otimistas,
+
+00:01:56.173 --> 00:02:00.804
+então invocaremos saveLikeToggle
+passando info.
+
+00:02:01.908 --> 00:02:05.806
+Se houver um erro,
+
+00:02:05.848 --> 00:02:08.785
+adicionaremos console.warn,
+
+00:02:08.827 --> 00:02:12.137
+que informará
+"Erro no handleToggleTweet".
+
+00:02:12.179 --> 00:02:14.136
+Esse erro
+irá para o console.
+
+00:02:14.178 --> 00:02:18.416
+Vamos disparar primeiro.
+Vamos disparar toggleTweet de novo
+
+00:02:18.458 --> 00:02:20.881
+para ele voltar
+ao que era no começo,
+
+00:02:20.923 --> 00:02:26.264
+e mostraremos a mensagem
+"Houve um erro ao curtir o tuíte.
+
+00:02:26.306 --> 00:02:27.601
+Tente novamente".
+
+00:02:27.643 --> 00:02:31.393
+Temos o criador de ação,
+
+00:02:31.435 --> 00:02:34.793
+que será responsável por disparar
+toggleTweet
+
+00:02:34.835 --> 00:02:38.241
+e por salvar as informações
+no banco de dados.
+
+00:02:38.283 --> 00:02:42.249
+O próximo passo será
+construir uma reducer
+
+00:02:42.291 --> 00:02:45.929
+para decidirmos como o estado
+da Store Redux mudará
+
+00:02:45.971 --> 00:02:48.601
+a partir
+da ação toggleTweet.
+

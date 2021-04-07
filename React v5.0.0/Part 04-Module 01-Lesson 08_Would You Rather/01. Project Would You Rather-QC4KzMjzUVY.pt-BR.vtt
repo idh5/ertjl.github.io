@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.635
+O aplicativo que você vai construir
+é uma variação
+
+00:00:02.669 --> 00:00:04.270
+do jogo "Would You Rather".
+
+00:00:04.304 --> 00:00:07.140
+O jogo dá ao usuário
+duas escolhas,
+
+00:00:07.173 --> 00:00:12.245
+e o usuário decide
+se escolhe a opção A ou a opção B.
+
+00:00:12.278 --> 00:00:15.415
+O jogo conta quantos votos
+cada opção recebe
+
+00:00:15.448 --> 00:00:18.784
+e mostra como seu voto se compara
+aos outros votos.
+
+00:00:18.817 --> 00:00:19.919
+Como você pode ver,
+
+00:00:19.952 --> 00:00:23.023
+várias partes do estado
+mudam neste aplicativo.
+
+00:00:23.056 --> 00:00:25.525
+Você precisa gerenciar
+a lista de questões,
+
+00:00:25.558 --> 00:00:27.127
+qual opção o usuário escolheu,
+
+00:00:27.160 --> 00:00:30.263
+o número total de votos
+para cada pergunta, e mais.
+
+00:00:30.296 --> 00:00:33.400
+Você vai ter que colocar em prática
+suas habilidades com Redux.
+
+00:00:33.433 --> 00:00:36.236
+Cheque as seções seguintes
+para detalhes específicos
+
+00:00:36.269 --> 00:00:38.304
+sobre como o aplicativo
+precisa funcionar.
+

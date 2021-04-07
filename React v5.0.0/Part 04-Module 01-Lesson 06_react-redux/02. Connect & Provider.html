@@ -1,0 +1,607 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Connect &amp; Provider</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>react-redux</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Connect &amp; Provider.html">02. Connect &amp; Provider</a>
+    </li>
+    <li class="">
+      <a href="03. Folder Structure.html">03. Folder Structure</a>
+    </li>
+    <li class="">
+      <a href="04. Lesson Summary.html">04. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Connect & Provider</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Downsides Of React And Redux</p></h3>
+  <video controls>
+  <source src="02. Downsides Of React And Redux-6Kfj_tRMJsI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Downsides Of React And Redux-6Kfj_tRMJsI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Downsides Of React And Redux-6Kfj_tRMJsI.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="getting-the-store-to-each-component">Getting the Store to Each Component</h2>
+<p>The first thing we want to do is improve how each component gets access to the store. If it's tough for a component to access the store, whether it's to get the state, listen to the state, or update the state, nothing else we do will matter. Right now we’re just passing the store down as a prop. It works fine enough in our small app, but what if we had a larger app with more layers to it? Passing the store down ten components deep wouldn't scale very well. One of the main points of having a store is to avoid passing props down through a bunch of components. </p>
+<p>One reason React (talking about <em>React</em> for a moment, not <em>Redux</em>) is so popular is because it's very efficient. It's efficient in keeping state localized to a component, it's efficient in keeping UI confined to a component, and it's efficient in knowing when something has changed and re-rendering just that component. So the second thing we need need to figure out is how to re-render components only if the data they depend on (from the store) changes. Right now, we're solving this by calling <code>getState</code> at the root of our application and then passing the data down. Again, this won't scale well as our app grows.</p>
+<p>If we can find a nice abstraction for getting the store to any component that needs it and only re-rendering components when the exact data they need change, we'll improve every aspect of our current codebase.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What Is Context</p></h3>
+  <video controls>
+  <source src="02. What Is Context-4jT0ws2UECE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. What Is Context-4jT0ws2UECE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. What Is Context-4jT0ws2UECE.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Context In Action</p></h3>
+  <video controls>
+  <source src="02. Context In Action-6rVT0OVLt80.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Context In Action-6rVT0OVLt80.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Context In Action-6rVT0OVLt80.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="context">Context</h1>
+<p>Before we add the <code>Context</code> API into our app, let's make sure we're on the same page as to how it all works.</p>
+<p>Recall that in one of the previous screencasts, passing data from one component to another component was a bit cumbersome. We had to pass data from component to component: </p>
+<pre><code class="js language-js">import React from 'react';
+import { render } from 'react-dom';
+
+function Parent ({ name }) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Parent&lt;/h1&gt;
+      &lt;Child name={name}/&gt;
+    &lt;/div&gt;
+  );
+}
+
+function Child ({ name }) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Child&lt;/h1&gt;
+      &lt;Grandchild name={name}/&gt;
+    &lt;/div&gt;
+  );
+}
+
+function Grandchild ({ name }) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Grandchild&lt;/h1&gt;
+      &lt;h3&gt;Name: {name}&lt;/h3&gt;
+    &lt;/div&gt;
+  );
+}
+
+class App extends React.Component {
+  render() {
+    const name = 'Tyler';
+
+    return (
+      &lt;Parent /&gt;
+    );
+  }
+}
+
+render(&lt;App /&gt;, document.getElementById('root'));</code></pre>
+<p>The <code>App</code> component renders <code>Parent</code>, which renders <code>Child</code>, which renders <code>Grandchild</code>. However, what's important to notice here is that the <code>Grandchild</code> component wants to render <code>name</code> -- but the data for <code>name</code> lives inside the <code>App</code> component.</p>
+<p>Because <code>Grandchild</code> is so deeply nested, we have to pass the <code>name</code> prop one-by-one from <code>App</code> through all the components until it reaches <code>Grandchild</code>. What's more: we must do this even if any of the components along the way (<code>Parent</code> and <code>Child</code>) aren't even concerned with the <code>name</code> data! </p>
+<p>This process of "threading props" to send data to a child component can be tiresome, and perhaps even error-prone. Luckily, we can avoid it with React's <code>Context</code> API. To begin, we'll use React's <code>createContext()</code> function to return an object with a <code>Provider</code> as well as a <code>Consumer</code>.</p>
+<pre><code class="js language-js">const Context = React.createContext();</code></pre>
+<p>Let's now check out how <code>Context.Provider</code> and <code>Context.Consumer</code> make these interactions between components possible!</p>
+<h2 id="contextprovider">Context.Provider</h2>
+<p>The <code>Provider</code> component is used in the upper level of the component tree; that is, the component from which the data to be passed is held. In our case, this was the <code>App</code> component. We passed the <code>name</code> data as the value of <code>Provider</code>'s <code>value</code> prop:</p>
+<pre><code class="js language-js">class App extends React.Component {
+  render() {
+  const name = 'Tyler';
+
+  return (
+    &lt;Context.Provider value={name}&gt;
+      &lt;Parent /&gt;
+    &lt;/Context.Provider&gt;
+    );
+  }
+}</code></pre>
+<p>Note that the <code>Provider</code> component simply wraps around the entire component to be rendered!</p>
+<h2 id="contextconsumer">Context.Consumer</h2>
+<p>On the receiving end (i.e., a component "under" the <code>Provider</code> in the component hierarchy), we use the <code>Consumer</code> component. In our example, we passed <code>Consumer</code> a function as a child. This function accepts a value and returns some JSX:</p>
+<pre><code class="js language-js">function Grandchild ({ name }) {
+  return (
+    &lt;Context.Consumer&gt;
+      {(name) =&gt; (
+      &lt;div&gt;
+      &lt;h1&gt;Grandchild&lt;/h1&gt;
+      &lt;h3&gt;Name: {name}&lt;/h3&gt;
+      &lt;/div&gt;
+      )}
+    &lt;/Context.Consumer&gt;
+  );
+}</code></pre>
+<p>As a result, we were able to render the <code>Grandchild</code> component with the correct <code>name</code> data without ever having to pass that data down the entire component thread! That's a lot less code than the previous way we had to do it. So React's <code>Context</code> API provides a terse, approachable way to easily communicate information from one component to another.</p>
+<p>Now, let's go ahead and utilize <code>Context</code> in our todos app.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p><a href="https://reactjs.org/docs/context.html#reactcreatecontext" rel="noopener noreferrer" target="_blank">Context provides a way to pass data through the component tree without having to pass props down manually at every level.</a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Utilizing Context</p></h3>
+  <video controls>
+  <source src="02. Utilizing Context-tlTJJ_v8ph0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Utilizing Context-tlTJJ_v8ph0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Utilizing Context-tlTJJ_v8ph0.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In the previous video, I said both "Connected component" as well as "Container Component". These are different names that really mean the same thing - a component that is connected to the store. This is in contrast to a component that is <em>just</em> responsible for rendering UI content. We call these "Presentation Components". There are other names for a "Presentational Component", too.</p>
+<p>The point of these names are to help explain what the purpose of the component is for:</p>
+<ul>
+<li>A connected component is connected to the Redux store and is responsible for getting data from the store.</li>
+<li>A presentational component should not access the store. It should receive any information it needs as props and then just render a UI.</li>
+</ul>
+<p>Dan Abramov (the creator of Redux!) wrote a post about this very thing. Check it out if to get his take on these concepts: <a href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0" rel="noopener noreferrer" target="_blank">Presentational and Container Components</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Why don't you try converting some of the components to using Context?</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="87533b5b-9d62-4c58-9d2d-9a53258740b1--0">
+        <label for="87533b5b-9d62-4c58-9d2d-9a53258740b1--0"><p>I tried converting the Goals Component to use Context.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="87533b5b-9d62-4c58-9d2d-9a53258740b1--1">
+        <label for="87533b5b-9d62-4c58-9d2d-9a53258740b1--1"><p>I tried converting the Todos Component to use Context.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Awesome work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Converting Todos And Goals To Context</p></h3>
+  <video controls>
+  <source src="02. Converting Todos And Goals To Context--2WMssK63uw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Converting Todos And Goals To Context--2WMssK63uw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Converting Todos And Goals To Context--2WMssK63uw.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/4b4dda508153d27136d060081a4b9d07c7ee78cf" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: Provider</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Please check all statements that are true:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522108257170" name="571875" id="a1522108257170">
+      <label for="a1522108257170"><p><code>connect</code> function connects components to the store.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108273678" name="571875" id="a1522108273678">
+      <label for="a1522108273678"><p><code>Provider</code> provides the store globally to all subcomponents</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108274313" name="571875" id="a1522108274313">
+      <label for="a1522108274313"><p><code>Provider</code> provides action creators to the store</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108274933" name="571875" id="a1522108274933">
+      <label for="a1522108274933"><p><code>Provider</code> is a React component that wraps the application</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`connect` function connects components to the store.</li>
+      <li>`Provider` provides the store globally to all subcomponents</li>
+      <li>`Provider` is a React component that wraps the application</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Connecting Components Part 1</p></h3>
+  <video controls>
+  <source src="02. Connecting Components Part 1-msQfOYS_8Dc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Connecting Components Part 1-msQfOYS_8Dc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Connecting Components Part 1-msQfOYS_8Dc.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Connecting Components Part 2</p></h3>
+  <video controls>
+  <source src="02. Connecting Components Part 2-heKC7Li9AGk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Connecting Components Part 2-heKC7Li9AGk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Connecting Components Part 2-heKC7Li9AGk.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/a759364886753f1baf9cba1d2a7f21378740f3b7" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We just built out the <code>Provider</code>, <code>Context</code>, and <code>connect()</code> function. This function is so common that it has been developed into a library called <a href="https://github.com/reactjs/react-redux" rel="noopener noreferrer" target="_blank">react-redux</a> that's officially supported by React.</p>
+<p>We'll be adding the react-redux library in the following video:</p>
+<pre><code class="html language-html">&lt;script src="https://unpkg.com/react-redux@5.0.6/dist/react-redux.min.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Using react-redux</p></h3>
+  <video controls>
+  <source src="02. Using react-redux-ByzhOPoOZaU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Using react-redux-ByzhOPoOZaU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Using react-redux-ByzhOPoOZaU.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/reactnd-redux-todos-goals/commit/e6ab31c60bcac704f05b21627594328e56478efd" rel="noopener noreferrer" target="_blank">Here's the commit with the changes made in this video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="the-react-redux-bindings">The <code>react-redux</code> Bindings</h1>
+<p>Let's take a moment to recap the changes we've made to our app in this Lesson, because we've updated quite a bit!</p>
+<p>Previously, we leveraged the standard <code>redux</code> library to build our app. This allowed us to create a Redux <code>store</code> with the <code>createStore()</code> function, giving us an API to listen (<code>subscribe()</code>), get updates (<code>getState()</code>), and make updates (<code>dispatch()</code>) to state. We then created our own <code>Provider</code> component to efficiently pass the store to components that needed it, as well as our own <code>connect()</code> function so that our components can access "slices" of state as <code>props</code>.</p>
+<p>We can build a fully-functional React and Redux app without <code>Provider</code> or <code>connect()</code>, but since they greatly simplify how React components interact with the Redux store, the creators of <code>redux</code> have included them in the <code>react-redux</code> package!</p>
+<h2 id="provider"><code>Provider</code></h2>
+<p>With <code>react-redux</code>, rather than creating and using our own <code>Provider</code> which looks like this:</p>
+<pre><code class="js language-js">const Context = React.createContext()    
+
+class Provider extends React.Component {    
+  render () {    
+  return (    
+    &lt;Context.Provider value={this.props.store}&gt;    
+      {this.props.children}    
+    &lt;/Context.Provider&gt;    
+    );
+  }    
+}
+
+ReactDOM.render(
+  &lt;Provider store={store}&gt;
+  &lt;ConnectedApp /&gt;
+  &lt;/Provider&gt;,
+  document.getElementById('app')
+);</code></pre>
+<p>…we can simply use the <code>Provider</code> component defined by the <code>react-redux</code> package! This allows us to wrap our entire app with <code>Provider</code>, effectively passing the store to even the most deeply nested components.</p>
+<pre><code class="js language-js">ReactDOM.render(
+ &lt;ReactRedux.Provider store={store}&gt;
+ &lt;ConnectedApp /&gt;
+ &lt;/ReactRedux.Provider&gt;,
+ document.getElementById('app')
+);</code></pre>
+<h2 id="connect"><code>connect()</code></h2>
+<p>Similarly, we can also leverage <code>react-redux</code>'s <code>connect()</code> function right out of the box. <code>connect()</code> is a higher-order function that takes in two arguments (as well as a few <a href="https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options" rel="noopener noreferrer" target="_blank">optional arguments</a>) and <em>returns a function</em>. Check out its signature below:</p>
+<pre><code class="js language-js">const buildConnectedComponent = connect(mapStateToProps, mapDispatchToProps);</code></pre>
+<p>What's vital to understand is that <code>buildConnectedComponent</code> is a function. <code>buildConnectedComponent</code> will take a regular (presentational) React component and return a new, "connected" component. </p>
+<pre><code class="js language-js">const ConnectedComponent = buildConnectedComponent(MyComponent);</code></pre>
+<p><code>ConnectedComponent</code> renders <code>MyComponent</code>, passing it the <code>props</code> as defined by <code>mapStateToProps</code> and <code>mapDispatchToPros</code>.</p>
+<p>We can avoid having the intermediary <code>buildConnectedComponent</code> variable and just call the functions back-to-back:</p>
+<pre><code class="js language-js">const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(MyComponent)</code></pre>
+<p>Notice the double set of parentheses!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: connect() I</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p><code>connect()</code> connects which two items?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522108669394" name="571884" id="a1522108669394">
+      <label for="a1522108669394"><p>Action</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108679574" name="571884" id="a1522108679574">
+      <label for="a1522108679574"><p>Action creator</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108680208" name="571884" id="a1522108680208">
+      <label for="a1522108680208"><p>Store</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108680837" name="571884" id="a1522108680837">
+      <label for="a1522108680837"><p>Reducer</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108681575" name="571884" id="a1522108681575">
+      <label for="a1522108681575"><p>API util</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108682264" name="571884" id="a1522108682264">
+      <label for="a1522108682264"><p>Component</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Store</li>
+      <li>Component</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: connect() II</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Assume that <code>MyComponent</code> is a simple React component. How can <code>MyComponent</code> access state?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1522108734408" name="571885" id="a1522108734408">
+      <label for="a1522108734408"><p>The entire store is passed in to <code>connect()</code>, which is curried along with MyComponent</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108764825" name="571885" id="a1522108764825">
+      <label for="a1522108764825"><p>The only way is to pass the store down from parent to child component until it reaches MyComponent</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108765412" name="571885" id="a1522108765412">
+      <label for="a1522108765412"><p>A container component connects the store to MyComponent, giving MyComponent slices of state accessible via props. (<code>const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(MyComponent);</code>).</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1522108778712" name="571885" id="a1522108778712">
+      <label for="a1522108778712"><p>MyComponent can access state via <code>this.state</code>, since all state should always be stored in the component itself in Redux apps</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A container component connects the store to MyComponent, giving MyComponent slices of state accessible via props. (`const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(MyComponent);`).</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>React often leverages Redux for more predictable state management via the <code>react-redux</code> bindings. These bindings give us an API that simplifies the most common interactions between React and Redux.</p>
+<p><code>Provider</code> makes it possible for Redux to pass data from the store to any React components that need it. It uses React’s <a href="https://facebook.github.io/react/docs/context.html" rel="noopener noreferrer" target="_blank">context</a> feature to make this work.</p>
+<p><code>connect()</code> connects a React component to the Redux store. The <code>mapStateToProps()</code> function allows us to specify which state from the store you want passed to your React component, while the <code>mapDispatchToProps()</code> function allows us to bind dispatch to action creators before they ever hit the component.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Folder Structure.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Connect &amp; Provider')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

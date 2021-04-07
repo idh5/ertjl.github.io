@@ -1,0 +1,190 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.349
+So, we almost have all of the data that we need now in order to render the view,
+
+00:00:04.349 --> 00:00:05.889
+but there's just one thing we're missing.
+
+00:00:05.889 --> 00:00:11.059
+If you remember back to the final example here with any individual tweet,
+
+00:00:11.060 --> 00:00:13.250
+let's take this one for example.
+
+00:00:13.250 --> 00:00:16.945
+We have most of the information we need to render, we had the name,
+
+00:00:16.945 --> 00:00:18.980
+we have the information about the tweet,
+
+00:00:18.980 --> 00:00:20.774
+so we have the time as well as the date.
+
+00:00:20.774 --> 00:00:22.779
+We have the text, how many likes that has,
+
+00:00:22.780 --> 00:00:27.450
+the avatar itself but one thing we don't have is any information about if there is
+
+00:00:27.449 --> 00:00:32.250
+a parent tweet, meaning if the tweet is in a reply to another tweet.
+
+00:00:32.250 --> 00:00:36.210
+So for example, this one isn't replying to anything,
+
+00:00:36.210 --> 00:00:40.219
+but you'll notice this one right here is because we have this text right here.
+
+00:00:40.219 --> 00:00:44.750
+So what we need to also do is we need to pass any information about
+
+00:00:44.750 --> 00:00:50.450
+the parent tweet along with the object that we're passing to the tweet component.
+
+00:00:50.450 --> 00:00:56.120
+So, what we can do here is let's make a variable called parent tweet.
+
+00:00:56.119 --> 00:01:00.604
+The way that we can find out if a tweet is in response to another tweet
+
+00:01:00.604 --> 00:01:05.719
+is if we look at the final state of a tweet here.
+
+00:01:05.719 --> 00:01:07.739
+So let's say the new states.
+
+00:01:07.739 --> 00:01:10.599
+Let's look at this one for example.
+
+00:01:10.599 --> 00:01:15.875
+You'll notice that one of the properties on an individual tweet is replying to.
+
+00:01:15.875 --> 00:01:19.530
+So, if the tweet has a replying to property,
+
+00:01:19.530 --> 00:01:23.480
+then that means it is a response to another tweet.
+
+00:01:23.480 --> 00:01:31.155
+So what we can do with that information is we can say tweets at tweet.replyingTo.
+
+00:01:31.155 --> 00:01:36.715
+Because tweet.replyingTo again is going to be an ID of a another tweet,
+
+00:01:36.715 --> 00:01:38.924
+so then we can just say tweets at
+
+00:01:38.924 --> 00:01:42.849
+that individual ID which will give us the parent tweet itself.
+
+00:01:42.849 --> 00:01:44.789
+Then now if you remember,
+
+00:01:44.790 --> 00:01:48.020
+when we invoke format tweet again what we have here
+
+00:01:48.019 --> 00:01:52.409
+is the option to pass in this parent tweet as the fourth argument.
+
+00:01:52.409 --> 00:01:55.219
+What that will do if it's not null,
+
+00:01:55.219 --> 00:01:58.204
+then we will get the author as well as the ID
+
+00:01:58.204 --> 00:02:02.759
+which will allow us to render this little text right here.
+
+00:02:02.760 --> 00:02:09.129
+So, what we can do is pass in the parent tweet here.
+
+00:02:10.360 --> 00:02:16.580
+Then now, the only change we want to make is if the individual tweet doesn't exist.
+
+00:02:16.580 --> 00:02:23.515
+So for example, if the user goes to some random URL and tweets at that ID doesn't exist,
+
+00:02:23.514 --> 00:02:26.779
+then what's going to happen is if we start trying
+
+00:02:26.780 --> 00:02:30.169
+to access properties on the tweet that doesn't exist,
+
+00:02:30.169 --> 00:02:31.625
+then we're going to get an error.
+
+00:02:31.625 --> 00:02:35.099
+So what we can do is we can say parent tweet is going to equal.
+
+00:02:35.099 --> 00:02:37.064
+So if tweet is a thing,
+
+00:02:37.064 --> 00:02:38.979
+that is going to be our same line.
+
+00:02:38.979 --> 00:02:41.679
+If it's not, then it's just going to be null.
+
+00:02:41.680 --> 00:02:44.020
+Then as well down here,
+
+00:02:44.020 --> 00:02:48.795
+we want to say if tweet is a thing then go ahead and format the tweet and if not,
+
+00:02:48.794 --> 00:02:49.859
+then just return null.
+
+00:02:49.860 --> 00:02:54.490
+So what that will allow us to do inside of our render method is we can
+
+00:02:54.490 --> 00:03:02.300
+grab the tweet from the stock props because that's what we're passing in, right here.
+
+00:03:02.300 --> 00:03:09.255
+Then, we can have an if statement here saying if tweet equals null,
+
+00:03:09.254 --> 00:03:16.759
+meaning it doesn't exist then just return the text that says this tweet doesn't exist.
+
+00:03:17.509 --> 00:03:20.935
+So, this looks good again let's console.log
+
+00:03:20.935 --> 00:03:24.354
+all of the information we're getting just by doing this.props.
+
+00:03:24.354 --> 00:03:28.250
+So now, what we have is all of the information
+
+00:03:28.250 --> 00:03:31.895
+we need in order to correctly render any of the tweets.
+
+00:03:31.895 --> 00:03:35.210
+So we have the authedUser, dispatch, the ID,
+
+00:03:35.210 --> 00:03:37.939
+and then the tweet itself which has a bunch
+
+00:03:37.939 --> 00:03:42.134
+of handy information like if the user has liked it or not,
+
+00:03:42.134 --> 00:03:43.879
+the amount of likes it has.
+
+00:03:43.879 --> 00:03:46.939
+If it has a parent tweet meaning if it's replying to
+
+00:03:46.939 --> 00:03:50.599
+someone as well as the texts and how many replies it has.
+
+00:03:50.599 --> 00:03:52.879
+What we'll do in the next video is now that we
+
+00:03:52.879 --> 00:03:55.189
+have all of the data that we need to render the tweets,
+
+00:03:55.189 --> 00:03:59.800
+we'll actually go ahead and build out the UI for each of the individual tweets.
+

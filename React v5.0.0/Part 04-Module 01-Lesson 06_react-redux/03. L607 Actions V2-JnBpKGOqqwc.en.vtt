@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.585
+So, now we want to start migrating some
+
+00:00:03.585 --> 00:00:07.349
+of our code over here to our actual React Application.
+
+00:00:07.349 --> 00:00:11.259
+So, we're going to use what is called the real-style folder structure for this.
+
+00:00:11.259 --> 00:00:16.130
+So, we'll have a components folder that has all of our components in it.
+
+00:00:16.129 --> 00:00:20.660
+And then we'll also have a Actions folder as well as a Reducers folder.
+
+00:00:20.660 --> 00:00:24.228
+So, first to go ahead and move over all of our actions.
+
+00:00:24.228 --> 00:00:26.300
+So, the first thing I want to do is create
+
+00:00:26.300 --> 00:00:30.530
+a brand new folder inside our source called Actions.
+
+00:00:30.530 --> 00:00:34.609
+And now, we're going to have three different files inside of this,
+
+00:00:34.609 --> 00:00:38.479
+a todos.js file for all of our Todos Actions,
+
+00:00:38.479 --> 00:00:41.074
+a goals.js file for all of our Goals Actions,
+
+00:00:41.075 --> 00:00:44.540
+and then a share.js file for all of our actions that
+
+00:00:44.539 --> 00:00:48.170
+are shared across a few different reducers.
+
+00:00:48.170 --> 00:00:51.700
+So first, let's go and let's start with our,
+
+00:00:51.700 --> 00:00:54.250
+let's see what we have here, let's start with our Todos Reducer.
+
+00:00:54.250 --> 00:00:57.923
+So, the first thing we want to do is bring over all of our constants.
+
+00:00:57.923 --> 00:01:02.560
+Add Todo, Remove Todo as well as Toggle Todo.
+
+00:01:02.560 --> 00:01:06.070
+So, these are going to be created inside of
+
+00:01:06.069 --> 00:01:12.159
+our Actions folder but what we also want to do is we want to Export them,
+
+00:01:12.159 --> 00:01:15.429
+so that we can then Import them inside of our Reducers folder.
+
+00:01:15.430 --> 00:01:18.925
+So that we can lessen for these specific Action types.
+
+00:01:18.924 --> 00:01:20.950
+So, now what we want to do is,
+
+00:01:20.950 --> 00:01:23.924
+let's go ahead and move over our Action Creators.
+
+00:01:23.924 --> 00:01:28.459
+So, we have our Add Todo action as well as Remove Todo action and Toggle Todo action.
+
+00:01:28.459 --> 00:01:32.419
+So, we'll first bring those over and
+
+00:01:32.420 --> 00:01:36.710
+typically what you do is you don't need to append action onto here,
+
+00:01:36.709 --> 00:01:39.814
+I was just doing that to avoid collisions in our single file.
+
+00:01:39.814 --> 00:01:42.829
+So, we can just have Add Todo, Remove Todo as well as Toggle Todo.
+
+00:01:42.829 --> 00:01:47.569
+Then we need a Asynchronous Action Creators which will be
+
+00:01:47.569 --> 00:01:53.569
+Handle Todo and Add Todo as well as Handle Delete Todo and Handle Toggle.
+
+00:01:53.569 --> 00:02:00.779
+So, let's copy these over here and we'll fix the indention.
+
+00:02:01.709 --> 00:02:04.765
+And then now, what we've done is,
+
+00:02:04.765 --> 00:02:07.584
+instead of Add Todo action it's just Add Todo.
+
+00:02:07.584 --> 00:02:09.849
+Same thing with Remove Todo action.
+
+00:02:09.849 --> 00:02:18.199
+So, we can update all of these and then this is just Toggle Todo,
+
+00:02:19.349 --> 00:02:22.329
+so we should have no more action there we go.
+
+00:02:22.330 --> 00:02:26.065
+Alright, so now what we want to do is we want to Export
+
+00:02:26.064 --> 00:02:28.629
+the three Action Creators that we are
+
+00:02:28.629 --> 00:02:32.394
+going to be using in our other files, in our other modules.
+
+00:02:32.395 --> 00:02:36.850
+That's going to be our Handle Add Todo Action Creator.
+
+00:02:36.849 --> 00:02:43.074
+As well as Handle Delete Todo and also Handle Toggle because these are
+
+00:02:43.074 --> 00:02:46.299
+our Action Creators which are really encapsulating all of
+
+00:02:46.300 --> 00:02:50.199
+the other Non-Asynchronous Action Creators up here.
+
+00:02:50.199 --> 00:02:52.330
+So, the only other thing we need to do is you'll notice
+
+00:02:52.330 --> 00:02:54.280
+that inside of our Async Action Creators,
+
+00:02:54.280 --> 00:02:55.669
+we're using our API.
+
+00:02:55.669 --> 00:03:01.844
+So, we can Import that from Goals Todos API which we installed in the last video.
+
+00:03:01.844 --> 00:03:04.650
+So, now AddTodo.js file looks pretty good.
+
+00:03:04.650 --> 00:03:08.159
+Let's go ahead and do the exact same thing for our Goals.
+
+00:03:08.159 --> 00:03:11.549
+So, we want to do Add Goal and Remove Goal
+
+00:03:11.550 --> 00:03:15.670
+grab both of those and again we want to Export both of these.
+
+00:03:16.669 --> 00:03:21.509
+Then we want to grab all of our Action Creators.
+
+00:03:21.509 --> 00:03:24.509
+So, Add Goal action as well as
+
+00:03:24.509 --> 00:03:29.039
+our Removal Goal action and we don't need to Export these because we're not
+
+00:03:29.039 --> 00:03:32.789
+using them in any other files but we do want
+
+00:03:32.789 --> 00:03:37.064
+to Export our two Asynchronous Action Creators.
+
+00:03:37.064 --> 00:03:41.250
+Which are going to be these two right here,
+
+00:03:41.250 --> 00:03:46.110
+handledDeleteGoal as well as handleAddGoal and then we need to adjust
+
+00:03:46.110 --> 00:03:50.310
+these instead of being Add Goal Action we
+
+00:03:50.310 --> 00:03:54.717
+have just Add Goal and then this is just going to be Remove Goal.
+
+00:03:54.717 --> 00:03:58.949
+We're just removing the word action from the end of the text unnecessary.
+
+00:03:58.949 --> 00:04:01.814
+Then we need to export both of these functions
+
+00:04:01.814 --> 00:04:04.897
+because we're going to import them inside of our components.
+
+00:04:04.897 --> 00:04:12.729
+And then finally, we need to import our API which is coming from Goals Todos API and
+
+00:04:12.729 --> 00:04:17.152
+then the last code that we want to bring over is going to go in this shared code and
+
+00:04:17.153 --> 00:04:23.515
+what we have is our Received Data Constant,
+
+00:04:23.514 --> 00:04:30.789
+our Receive Data Action Creator here,
+
+00:04:30.790 --> 00:04:32.860
+we can remove the word action from that.
+
+00:04:32.860 --> 00:04:34.480
+And then finally, our
+
+00:04:34.480 --> 00:04:40.960
+handleInitialData Action Creator which is what we are going to be exporting.
+
+00:04:40.959 --> 00:04:44.069
+And then we can adjust this to just be Received
+
+00:04:44.069 --> 00:04:46.959
+Data and then finally as we've done before a few different times,
+
+00:04:46.959 --> 00:04:49.639
+now we want to import our API.
+
+00:04:50.819 --> 00:04:57.459
+So, now what we've done is, we've taken all of the actions out of our index.html
+
+00:04:57.459 --> 00:04:59.799
+file over here and we've put them into
+
+00:04:59.800 --> 00:05:04.000
+their own actions folder inside of our React application.
+

@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.132 --> 00:00:02.162
+A última coisa a ser feita,
+
+00:00:02.204 --> 00:00:06.201
+agora que temos
+o criador de ação e a reducer
+
+00:00:06.243 --> 00:00:08.324
+observando
+tipos de ação específicos,
+
+00:00:08.366 --> 00:00:10.346
+dentro da pasta components,
+
+00:00:10.388 --> 00:00:11.939
+em Tweet.js,
+
+00:00:11.981 --> 00:00:14.720
+em vez de simplesmente
+dizermos "Handle Like Tweet",
+
+00:00:14.762 --> 00:00:16.808
+queremos lidar com o tuíte.
+
+00:00:16.850 --> 00:00:18.768
+Já devemos estar
+conectados aqui.
+
+00:00:18.810 --> 00:00:21.001
+Já passamos dispatch,
+
+00:00:21.705 --> 00:00:25.832
+então digitaremos...
+vamos obter dispatch
+
+00:00:25.874 --> 00:00:27.280
+de this.props,
+
+00:00:27.322 --> 00:00:30.552
+e também queremos obter
+mais informações,
+
+00:00:30.594 --> 00:00:34.264
+o próprio tuíte
+e o authedUser.
+
+00:00:34.306 --> 00:00:36.121
+Quando dispararmos,
+
+00:00:36.163 --> 00:00:40.910
+queremos invocar
+a função handleToggleTweet
+
+00:00:40.952 --> 00:00:42.712
+que criamos.
+
+00:00:42.754 --> 00:00:48.281
+Vamos importar isso primeiro.
+O handleToggleTweet virá...
+
+00:00:49.057 --> 00:00:50.799
+de actions/tweets.
+
+00:00:50.841 --> 00:00:55.600
+Agora, vamos disparar
+a invocação de handleToggleTweet.
+
+00:00:55.642 --> 00:00:58.633
+Nós precisamos passar
+
+00:00:59.704 --> 00:01:01.920
+um objeto
+
+00:01:01.962 --> 00:01:04.440
+que tem uma propriedade id,
+o authedUser
+
+00:01:04.482 --> 00:01:06.913
+e o fato de haver curtidas
+ou não.
+
+00:01:07.897 --> 00:01:11.690
+Podemos passar a ID,
+que virá de tweet.id,
+
+00:01:11.732 --> 00:01:16.120
+se há curtidas,
+que virão de tweet.hasLiked,
+
+00:01:16.162 --> 00:01:20.169
+e o authedUser,
+porque é isso que passamos
+
+00:01:20.211 --> 00:01:22.457
+ao componente Tweet
+como propriedade,
+
+00:01:22.499 --> 00:01:25.393
+porque é isso que temos
+bem aqui.
+
+00:01:26.074 --> 00:01:28.898
+Se tudo isto estiver funcionando
+corretamente,
+
+00:01:28.940 --> 00:01:30.873
+nós poderemos... -
+
+00:01:30.915 --> 00:01:33.876
+vamos recarregar o aplicativo
+e abrir o console -,
+
+00:01:33.918 --> 00:01:36.316
+sempre que clicarmos
+no botão de curtir,
+
+00:01:37.513 --> 00:01:39.637
+a ação TOGGLE_TWEET
+será disparada
+
+00:01:39.679 --> 00:01:41.862
+e perceberemos
+que a IU mudará,
+
+00:01:41.904 --> 00:01:44.469
+porque estamos alternando
+o coração a ser exibido
+
+00:01:44.511 --> 00:01:46.438
+entre preenchido
+e sem preenchimento,
+
+00:01:46.480 --> 00:01:50.343
+a partir da curtida
+do tuíte.
+

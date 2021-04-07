@@ -1,0 +1,499 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.146 --> 00:00:04.057
+Agora que temos os dados necessários
+para renderizarmos a linha do tempo,
+
+00:00:04.099 --> 00:00:08.777
+precisamos construir a IU
+dentro dos componentes para isso.
+
+00:00:08.819 --> 00:00:11.444
+De volta ao terminal,
+
+00:00:11.486 --> 00:00:15.278
+como usaremos diferentes ícones
+para o coração
+
+00:00:15.320 --> 00:00:17.975
+e para a resposta,
+
+00:00:18.017 --> 00:00:22.271
+devemos instalar
+um novo pacote do MPM
+
+00:00:22.313 --> 00:00:23.886
+chamado "react-icons".
+
+00:00:26.272 --> 00:00:30.707
+Ao terminar, reinicie
+o aplicativo e retorne para cá.
+
+00:00:30.749 --> 00:00:32.511
+Agora precisamos
+importá-los.
+
+00:00:32.553 --> 00:00:37.711
+Vou pegar este ArrowBackOutline,
+o HeartOutline
+
+00:00:37.753 --> 00:00:39.775
+e o HeartFullOutline.
+
+00:00:39.817 --> 00:00:42.182
+Tecnicamente, há três ícones
+diferentes aqui:
+
+00:00:42.224 --> 00:00:43.870
+um para a resposta,
+
+00:00:43.912 --> 00:00:46.566
+um para o coração
+que está preenchido
+
+00:00:46.608 --> 00:00:49.255
+e outro para o coração
+que não está preenchido.
+
+00:00:49.297 --> 00:00:52.455
+Com isso,
+vamos construir a IU
+
+00:00:52.497 --> 00:00:55.287
+do componente Tweet.
+
+00:00:55.329 --> 00:01:00.583
+Primeiro, vamos desconstruir
+as propriedades necessárias.
+
+00:01:00.625 --> 00:01:06.429
+Obtemos o nome do autor do tuíte,
+o avatar, o rótulo de tempo,
+
+00:01:06.471 --> 00:01:10.949
+o texto, se há curtidas,
+quantas curtidas e respostas,
+
+00:01:10.991 --> 00:01:12.557
+além da id
+
+00:01:12.599 --> 00:01:15.965
+e se há um tuíte pai,
+para o qual está respondendo.
+
+00:01:16.007 --> 00:01:20.235
+Tudo isso virá de tweet,
+que vem de this.props.
+
+00:01:20.851 --> 00:01:22.881
+A primeira coisa
+a ser renderizada
+
+00:01:22.923 --> 00:01:26.073
+será uma imagem,
+para a qual passaremos o avatar
+
+00:01:26.115 --> 00:01:31.994
+e que terá tag alt Avatar of,
+então diremos "name".
+
+00:01:32.691 --> 00:01:36.153
+Por fim,
+o className será avatar.
+
+00:01:43.361 --> 00:01:45.430
+Agora o que veremos
+
+00:01:45.472 --> 00:01:47.969
+é que temos o avatar
+de todo mundo.
+
+00:01:49.144 --> 00:01:53.617
+A próxima coisa a ser renderizada
+é esta informação aqui.
+
+00:01:54.623 --> 00:01:57.721
+Vamos criar outro div aqui,
+
+00:01:58.360 --> 00:02:02.898
+cujo className
+será tweet-info.
+
+00:02:02.940 --> 00:02:06.026
+Aqui dentro, a primeira coisa
+a ser renderizada
+
+00:02:06.068 --> 00:02:09.250
+será name, que empacotaremos
+em um span.
+
+00:02:09.292 --> 00:02:11.275
+Depois renderizaremos...
+
+00:02:12.124 --> 00:02:14.386
+um div
+com os dados formatados.
+
+00:02:14.428 --> 00:02:19.465
+Então precisamos importar
+a função helper,
+
+00:02:19.507 --> 00:02:23.041
+que estará dentro
+do arquivo helpers.
+
+00:02:23.083 --> 00:02:25.497
+Agora, quando renderizarmos
+este div,
+
+00:02:25.539 --> 00:02:27.715
+poderemos digitar
+formatDate
+
+00:02:29.012 --> 00:02:31.258
+passando timestamp.
+
+00:02:31.300 --> 00:02:33.642
+Agora,
+
+00:02:33.684 --> 00:02:37.821
+se o usuário estiver respondendo
+a outro tuíte,
+
+00:02:37.863 --> 00:02:40.365
+renderizaremos este texto.
+
+00:02:40.407 --> 00:02:43.070
+Caso contrário,
+não renderizaremos nada.
+
+00:02:43.112 --> 00:02:46.949
+Podemos dizer que se o pai
+for algo,
+
+00:02:46.991 --> 00:02:49.902
+e ele será se -
+lembre-se daqui de baixo -
+
+00:02:51.695 --> 00:02:55.549
+se tweets[tweet.replyingTo]
+for algo.
+
+00:02:55.591 --> 00:02:58.501
+Ou seja, se ele for algo,
+
+00:02:58.543 --> 00:03:01.906
+se tweet tiver
+uma propriedade replyingTo,
+
+00:03:02.579 --> 00:03:07.057
+então renderizaremos
+este botão,
+
+00:03:07.099 --> 00:03:11.220
+cujo className
+será replyingTo,
+
+00:03:11.845 --> 00:03:15.044
+e o texto dele será
+
+00:03:15.917 --> 00:03:21.611
+"Respondendo para
+@[parent.author]".
+
+00:03:21.653 --> 00:03:23.651
+Aqui nós adicionaremos
+
+00:03:23.693 --> 00:03:27.787
+algo para, quando esta função
+for clicada, recebermos um evento.
+
+00:03:27.829 --> 00:03:31.691
+E chamaremos o método toParent,
+que construiremos,
+
+00:03:31.733 --> 00:03:35.875
+passando o evento
+e a ID do pai.
+
+00:03:35.917 --> 00:03:38.942
+Agora, aqui em cima,
+vamos criar um placeholder.
+
+00:03:40.421 --> 00:03:43.548
+Queremos que este tweet,
+primeiro,
+
+00:03:45.588 --> 00:03:47.867
+chame e.preventDefault,
+
+00:03:47.909 --> 00:03:50.243
+e acabaremos adicionando
+uma funcionalidade,
+
+00:03:50.285 --> 00:03:54.344
+então diremos
+"todo: Redirect to parent Tweet",
+
+00:03:54.386 --> 00:03:57.187
+porque, na versão final
+no aplicativo,
+
+00:03:57.229 --> 00:04:00.275
+ao clicarmos
+sobre este texto,
+
+00:04:00.317 --> 00:04:05.607
+seguiremos para o tuíte pai
+ao qual estamos respondendo.
+
+00:04:06.543 --> 00:04:09.698
+A última coisa
+a ser renderizada aqui
+
+00:04:11.298 --> 00:04:14.393
+no botão, mas ainda dentro
+do div tweet,
+
+00:04:14.435 --> 00:04:16.316
+é o texto.
+
+00:04:21.660 --> 00:04:25.323
+Agora, se observarmos o aplicativo,
+se não houver erros,
+
+00:04:25.365 --> 00:04:28.811
+estaremos nos aproximando
+da IU que desejamos.
+
+00:04:28.853 --> 00:04:31.657
+A última coisa
+a ser renderizada
+
+00:04:31.699 --> 00:04:33.914
+serão os botões de curtir
+e de responder.
+
+00:04:33.956 --> 00:04:37.017
+Fazemos isso renderizando
+outro div,
+
+00:04:37.059 --> 00:04:42.321
+cujo className
+será tweet-icons.
+
+00:04:42.363 --> 00:04:45.905
+Aqui dentro, a primeira coisa
+a ser renderizada será
+
+00:04:45.947 --> 00:04:49.330
+ArrowBackOutline,
+
+00:04:49.372 --> 00:04:52.114
+cujo className
+será tweet-icon.
+
+00:04:54.635 --> 00:04:58.385
+Nós queremos exibir
+a quantidade de respostas
+
+00:04:58.427 --> 00:05:00.095
+para este tuíte.
+
+00:05:00.137 --> 00:05:05.856
+Diremos que se replies
+não for igual a zero,
+
+00:05:06.617 --> 00:05:09.519
+exibiremos isto.
+
+00:05:09.561 --> 00:05:11.632
+Se não houver
+respostas ao tuíte,
+
+00:05:11.674 --> 00:05:13.596
+não mostraremos nada.
+
+00:05:13.638 --> 00:05:15.124
+Por exemplo, bem aqui
+
+00:05:15.166 --> 00:05:17.591
+não há respostas,
+então não mostramos nada.
+
+00:05:17.633 --> 00:05:21.189
+Neste mostramos o número dois,
+que é a quantidade de respostas.
+
+00:05:21.231 --> 00:05:24.965
+Agora que mostramos as respostas,
+o próximo passo
+
+00:05:25.007 --> 00:05:30.486
+será exibir a opção de curtir
+o tuíte.
+
+00:05:31.128 --> 00:05:34.606
+A função será a "handleLike".
+
+00:05:36.487 --> 00:05:37.848
+Faremos isso agora
+
+00:05:37.890 --> 00:05:40.770
+e construiremos a funcionalidade
+posteriormente.
+
+00:05:43.130 --> 00:05:46.798
+O handleLike pegará um evento
+
+00:05:46.840 --> 00:05:49.688
+e chamará preventDefault.
+
+00:05:49.730 --> 00:05:53.904
+Posteriormente,
+quando alguém curtir o tuíte,
+
+00:05:53.946 --> 00:05:56.952
+ele salvará esta informação
+no estado da Store Redux
+
+00:05:56.994 --> 00:05:59.103
+e no banco de dados.
+
+00:05:59.145 --> 00:06:02.039
+Dentro do botão,
+nós diremos
+
+00:06:02.081 --> 00:06:05.487
+que se hasLiked
+for verdadeiro,
+
+00:06:05.529 --> 00:06:11.464
+renderizaremos
+o componente HeartFullOutline
+
+00:06:12.496 --> 00:06:16.112
+e passaremos uma cor,
+que será a vermelha,
+
+00:06:16.154 --> 00:06:21.544
+então será #e0245e,
+
+00:06:21.586 --> 00:06:23.040
+que é algo bem específico,
+
+00:06:23.082 --> 00:06:26.106
+e o className
+será tweet-icon.
+
+00:06:26.148 --> 00:06:29.753
+Caso o tuíte não tenha sido
+curtido ainda,
+
+00:06:29.795 --> 00:06:35.174
+então renderizaremos
+o componente HeartOutline,
+
+00:06:35.216 --> 00:06:39.055
+e o className
+será tweet-icon.
+
+00:06:40.559 --> 00:06:43.653
+Não podemos nos esquecer
+das aspas de encerramento.
+
+00:06:43.695 --> 00:06:46.740
+Isto parece bom,
+e a última coisa
+
+00:06:46.782 --> 00:06:48.785
+será fazer o mesmo
+para as respostas.
+
+00:06:48.827 --> 00:06:51.618
+Teremos
+um elemento span aqui.
+
+00:06:51.660 --> 00:06:54.901
+Diremos que se likes
+não for igual a zero,
+
+00:06:54.943 --> 00:06:58.492
+então mostraremos
+a quantidade de curtidas.
+
+00:06:58.534 --> 00:07:03.563
+Com isso, agora,
+nós deveremos ter a IU
+
+00:07:03.605 --> 00:07:06.931
+e os placeholders
+dos métodos helper,
+
+00:07:06.973 --> 00:07:10.852
+que construiremos
+em um vídeo em breve.
+
+00:07:10.894 --> 00:07:12.526
+Mas devemos ter...
+
+00:07:13.262 --> 00:07:15.869
+Parece que o CSS
+está um pouco bagunçado,
+
+00:07:15.911 --> 00:07:17.981
+então vamos arrumar isso.
+
+00:07:18.023 --> 00:07:20.182
+Nós devemos ter...
+
+00:07:21.215 --> 00:07:23.933
+isto aqui embaixo.
+
+00:07:23.975 --> 00:07:28.524
+As informações sobre o nome
+e o texto do tuíte
+
+00:07:28.566 --> 00:07:31.173
+devem ter um div próprio.
+
+00:07:31.215 --> 00:07:36.197
+Todas estas informações,
+
+00:07:36.239 --> 00:07:38.517
+o contêiner tweet-icons,
+
+00:07:38.559 --> 00:07:41.913
+também devem estar dentro
+do tweet-info,
+
+00:07:41.955 --> 00:07:45.314
+e devemos encerrar
+o div tweet-info fazendo isto.
+
+00:07:45.356 --> 00:07:50.594
+A única alteração
+no componente Tweet...
+
+00:07:50.636 --> 00:07:54.465
+Aqui temos uma variável id,
+que obtemos do tweet,
+
+00:07:54.507 --> 00:07:56.097
+então podemos
+nos livrar disto.
+
+00:07:56.139 --> 00:07:59.658
+Agora nossa IU
+ficará assim:
+
+00:07:59.700 --> 00:08:03.489
+temos o avatar, as informações
+sobre o tuíte,
+
+00:08:03.531 --> 00:08:07.905
+e os botões
+para responder e para curtir.
+

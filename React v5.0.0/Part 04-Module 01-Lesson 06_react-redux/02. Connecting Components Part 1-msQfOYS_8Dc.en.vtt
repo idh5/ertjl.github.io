@@ -1,0 +1,349 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.314
+The goal of the previous video was to build a nice abstraction
+
+00:00:03.314 --> 00:00:07.275
+over React in Redux so that we can use them more effectively together.
+
+00:00:07.275 --> 00:00:10.800
+And the way that we did that was by building out this provider component which was
+
+00:00:10.800 --> 00:00:14.749
+responsible for sticking our Redux store on context,
+
+00:00:14.749 --> 00:00:19.019
+so that way any child component that needs it can just grab it off of context.
+
+00:00:19.019 --> 00:00:22.425
+But again, if you think of this like the library code,
+
+00:00:22.425 --> 00:00:25.019
+so this might be a component you would download from MPM,
+
+00:00:25.019 --> 00:00:28.199
+we've really only accomplished half of what we're trying to do.
+
+00:00:28.199 --> 00:00:30.989
+Because what we've done is we're using
+
+00:00:30.989 --> 00:00:35.100
+context dot provider to stick our store on context.
+
+00:00:35.100 --> 00:00:37.425
+But if you download this from MPM,
+
+00:00:37.424 --> 00:00:40.500
+what you're still required to do is you're still required to
+
+00:00:40.500 --> 00:00:43.560
+use context dot consumer in order to grab the store.
+
+00:00:43.560 --> 00:00:45.600
+So really, our library right now for making
+
+00:00:45.600 --> 00:00:48.060
+our abstraction over React and Redux work a little more
+
+00:00:48.060 --> 00:00:52.500
+effectively together is really only half done because we need to create
+
+00:00:52.500 --> 00:00:55.469
+a nice API inorder for the user to grab
+
+00:00:55.469 --> 00:00:59.960
+the information off of context without having to use context dot consumer.
+
+00:00:59.960 --> 00:01:02.265
+So, just like we build a nice abstraction
+
+00:01:02.265 --> 00:01:05.564
+over context dot provider using our provider component,
+
+00:01:05.564 --> 00:01:07.379
+we'll also build an abstraction over
+
+00:01:07.379 --> 00:01:11.584
+context dot consumer by building what we will call a connect function.
+
+00:01:11.584 --> 00:01:16.211
+So, in this video, we will look at what the API for our connect function is going to do,
+
+00:01:16.212 --> 00:01:19.960
+and then in the next video what we're going to do is we will actually implement it.
+
+00:01:19.959 --> 00:01:22.529
+If you look at any time we use context dot consumer,
+
+00:01:22.530 --> 00:01:24.405
+there are really two things that we're doing here.
+
+00:01:24.405 --> 00:01:27.120
+We are rendering a component and then we're passing
+
+00:01:27.120 --> 00:01:30.045
+that component any data that it needs from the store.
+
+00:01:30.045 --> 00:01:33.284
+So, when we build our abstraction over context dot consumer,
+
+00:01:33.284 --> 00:01:35.954
+we need to make sure that we're still able to do both of those things.
+
+00:01:35.954 --> 00:01:38.079
+First render any component, and second,
+
+00:01:38.079 --> 00:01:40.849
+pass that component any data it needs from the store.
+
+00:01:40.849 --> 00:01:44.369
+So, what if the API looked a little bit something like this?
+
+00:01:44.370 --> 00:01:49.240
+So, we can have a new variable here,
+
+00:01:49.239 --> 00:01:50.875
+we'll call it ConnectedApp,
+
+00:01:50.875 --> 00:01:54.174
+and now we want to invoke connect,
+
+00:01:54.174 --> 00:01:57.899
+and what it's going to return us is ConnectedApp.
+
+00:01:57.900 --> 00:02:00.125
+So, again, what we're doing is we're going to wrap all of
+
+00:02:00.125 --> 00:02:05.590
+this functionality with context dot consumer App inside of this connect function.
+
+00:02:05.590 --> 00:02:08.455
+And now, what we need to tell connect is two things.
+
+00:02:08.455 --> 00:02:10.975
+First what component it needs to render,
+
+00:02:10.974 --> 00:02:14.564
+and second, any data that it needs from the store.
+
+00:02:14.564 --> 00:02:16.780
+So, we'll use the programming technique
+
+00:02:16.780 --> 00:02:19.900
+Kering that we saw a little bit earlier when we talked about middleware,
+
+00:02:19.900 --> 00:02:22.050
+in order to accomplish this.
+
+00:02:22.050 --> 00:02:26.245
+So, what we'll do, is when we invoke connect,
+
+00:02:26.245 --> 00:02:29.170
+that's going to return us a new function which we can
+
+00:02:29.169 --> 00:02:32.704
+then invoke with the second set of parents.
+
+00:02:32.705 --> 00:02:33.880
+Now again, this looks pretty weird,
+
+00:02:33.879 --> 00:02:38.064
+but what we're going to do here is in the first set of parents,
+
+00:02:38.064 --> 00:02:40.805
+we'll pass any data that the component needs.
+
+00:02:40.805 --> 00:02:42.460
+And the second set of parents,
+
+00:02:42.460 --> 00:02:45.490
+we'll pass any component that's going to actually be rendered.
+
+00:02:45.490 --> 00:02:47.485
+So, in our example here, first,
+
+00:02:47.485 --> 00:02:52.200
+we will pass in our App component because that's what ConnectedApp needs to render,
+
+00:02:52.199 --> 00:02:54.579
+and then now what we want to do is we want to pass
+
+00:02:54.580 --> 00:02:58.705
+a function into this first set of parents.
+
+00:02:58.705 --> 00:03:02.290
+This function is going to be past the store,
+
+00:03:02.289 --> 00:03:04.449
+and any properties that we return on
+
+00:03:04.449 --> 00:03:08.584
+this object will be passed as props to our App component.
+
+00:03:08.585 --> 00:03:10.825
+So, if you look at our App component,
+
+00:03:10.824 --> 00:03:15.625
+the only prop that we need from store is this loading component.
+
+00:03:15.625 --> 00:03:20.500
+So, what we can do is we will say loading is going to be stored out loading.
+
+00:03:20.500 --> 00:03:25.210
+And then now what this is going to allow us to do eventually when we implement connect
+
+00:03:25.210 --> 00:03:31.025
+is we can delete our ConnectedApp component because we now have that here.
+
+00:03:31.025 --> 00:03:35.224
+And inside of App we are being passed a prop called Loading,
+
+00:03:35.224 --> 00:03:42.424
+so we can delete all of this code and just say this dot props dot loading.
+
+00:03:42.425 --> 00:03:46.410
+And then we'll also make sure that whenever we connect a component with
+
+00:03:46.409 --> 00:03:52.245
+our connect higher order component that we also pass it dispatch as a prop.
+
+00:03:52.245 --> 00:03:54.115
+So, instead of being passed the whole store,
+
+00:03:54.115 --> 00:03:56.034
+it's going to be passed dispatch,
+
+00:03:56.034 --> 00:03:58.870
+so we can get rid of stored up dispatch here so we can
+
+00:03:58.870 --> 00:04:02.580
+still dispatch our handle initial data action creator.
+
+00:04:02.580 --> 00:04:05.290
+But now what's nice about this too is the user
+
+00:04:05.289 --> 00:04:08.199
+doesn't need to manually subscribe because we can
+
+00:04:08.199 --> 00:04:14.494
+wrap up this implementation inside of our implementation of connect once we build it out.
+
+00:04:14.495 --> 00:04:17.620
+And so, now that we have our ConnectedApp component here
+
+00:04:17.620 --> 00:04:20.490
+that we are getting from our soon to be built connect function,
+
+00:04:20.490 --> 00:04:23.965
+let's go ahead and do the exact same thing for our ConnectedGoal's component,
+
+00:04:23.964 --> 00:04:26.185
+as well as, ConnectedTodos.
+
+00:04:26.185 --> 00:04:29.589
+So, what we'll do is we can say
+
+00:04:29.589 --> 00:04:34.014
+const connected goals is going to equal the invocation of connect,
+
+00:04:34.014 --> 00:04:36.939
+we invoke it that will return us a function,
+
+00:04:36.939 --> 00:04:39.625
+which we can then pass the component that we want to render,
+
+00:04:39.625 --> 00:04:41.845
+which is going to be our goals component.
+
+00:04:41.845 --> 00:04:47.155
+And then now, if you look at the data that goal's needs,
+
+00:04:47.154 --> 00:04:50.259
+all it needs is the goals property from the store.
+
+00:04:50.259 --> 00:04:57.894
+So, what we can do is we want to say goals is going to be coming from store dot goals,
+
+00:04:57.894 --> 00:05:00.935
+that will now replace this,
+
+00:05:00.935 --> 00:05:04.230
+and our goals component will still be past goals because that's what
+
+00:05:04.230 --> 00:05:07.230
+we are returning from this function right here.
+
+00:05:07.230 --> 00:05:10.515
+And then we want to do the exact same thing for the todos.
+
+00:05:10.514 --> 00:05:12.044
+So, I'm going to copy this,
+
+00:05:12.045 --> 00:05:15.030
+and up here instead of having this ConnectedTodos,
+
+00:05:15.029 --> 00:05:17.669
+what we'll be able to do is we can say,
+
+00:05:17.670 --> 00:05:21.585
+ConnectedTodos is going to equal the invocation of connect,
+
+00:05:21.584 --> 00:05:27.463
+we passed to it any data that it needs as the first argument to this first invocation,
+
+00:05:27.463 --> 00:05:30.620
+which is going to be todos which will come
+
+00:05:30.620 --> 00:05:33.665
+from store dot todos and then once we invoke that,
+
+00:05:33.665 --> 00:05:35.689
+we invoke the results of what that will give
+
+00:05:35.689 --> 00:05:42.009
+us passing it the component we want to render which is going to be our todos component.
+
+00:05:42.009 --> 00:05:45.089
+So now again, that will allow us to get rid of
+
+00:05:45.089 --> 00:05:49.349
+that connected todos component because we have obstracted all
+
+00:05:49.350 --> 00:05:52.800
+of that logic inside of this connect higher
+
+00:05:52.800 --> 00:05:57.579
+order component that we're going to be building out in the next video.
+
+00:05:57.579 --> 00:06:00.359
+And so, there's just one small change I want to make here.
+
+00:06:00.360 --> 00:06:01.949
+You'll notice that when we invoke connect,
+
+00:06:01.949 --> 00:06:04.139
+the first function that we pass it,
+
+00:06:04.139 --> 00:06:06.240
+we are saying that it's receiving the store.
+
+00:06:06.240 --> 00:06:08.110
+Technically instead of receiving the store,
+
+00:06:08.110 --> 00:06:10.470
+it's going to return the state.
+
+00:06:10.470 --> 00:06:12.990
+So, what we'll do is we will update anywhere that we are using
+
+00:06:12.990 --> 00:06:15.840
+connect to instead of being passed the store,
+
+00:06:15.839 --> 00:06:18.519
+it's actually just being passed the state of the store.
+
+00:06:18.519 --> 00:06:22.409
+And the last one is going to be right here.
+

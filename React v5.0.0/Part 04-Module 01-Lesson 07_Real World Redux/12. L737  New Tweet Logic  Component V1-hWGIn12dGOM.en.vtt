@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.790
+So, what we'll do first,
+
+00:00:01.790 --> 00:00:07.065
+is we need to get access to dispatch so we can connect this component.
+
+00:00:07.065 --> 00:00:12.455
+Then the action creator that we want to invoke is going to be handleAddTweet,
+
+00:00:12.455 --> 00:00:16.710
+which is going to come from actions/tweets.
+
+00:00:16.710 --> 00:00:21.929
+Then now, what we want to export is our connected component,
+
+00:00:21.929 --> 00:00:24.214
+which will give us access to dispatch.
+
+00:00:24.214 --> 00:00:26.609
+So, now inside of here,
+
+00:00:26.609 --> 00:00:30.105
+what we can do is instead of console.logging,
+
+00:00:30.105 --> 00:00:33.250
+we want to dispatch the handleAddTweet action creator.
+
+00:00:33.250 --> 00:00:34.799
+So, let's grab this dispatch,
+
+00:00:34.799 --> 00:00:39.584
+which is going to come from this.props and then we can dispatch,
+
+00:00:39.585 --> 00:00:43.460
+handleAddTweet passing it the text of the new tweet.
+
+00:00:43.460 --> 00:00:48.234
+If you remember, handleAddTweet is going to take in the text of the new tweet,
+
+00:00:48.234 --> 00:00:55.674
+as well as the idea of the tweet we are replying to if we are replying to a new tweet.
+
+00:00:55.674 --> 00:00:59.239
+So, now what we need to do is we need to figure out how we can know if
+
+00:00:59.240 --> 00:01:02.975
+the user is replying to a tweet rather than just composing their own.
+
+00:01:02.975 --> 00:01:05.310
+Well, if you look at the final app here,
+
+00:01:05.310 --> 00:01:08.180
+you'll notice that if we compose our new tweet,
+
+00:01:08.180 --> 00:01:14.185
+this is a view that eventually React router is going to render for us when we go to /new.
+
+00:01:14.185 --> 00:01:17.299
+But if we click on a tweet,
+
+00:01:17.299 --> 00:01:19.234
+we get taken to this page.
+
+00:01:19.234 --> 00:01:22.569
+This is now a view that React router is going to render for us as well.
+
+00:01:22.569 --> 00:01:25.649
+But notice React router isn't rendering this portion of the page.
+
+00:01:25.650 --> 00:01:30.050
+We're actually going to manually render the new tweet component and when we do that,
+
+00:01:30.049 --> 00:01:32.480
+what we can do is we can pass it an ID.
+
+00:01:32.480 --> 00:01:36.590
+So, what that will mean is if we pass Compose new Tweet,
+
+00:01:36.590 --> 00:01:38.969
+the component that we're making or we're working with right now,
+
+00:01:38.969 --> 00:01:42.810
+an ID property, that means we are replying to a new tweet.
+
+00:01:42.810 --> 00:01:44.570
+If we don't, in this case,
+
+00:01:44.569 --> 00:01:46.789
+we won't because React router is rendering this whole view.
+
+00:01:46.790 --> 00:01:48.859
+Then that means we are just creating
+
+00:01:48.859 --> 00:01:51.894
+a brand new tweet and we are not replying to any tweets.
+
+00:01:51.894 --> 00:01:57.625
+So, what that will allow us to do is inside here, we will grab the ID,
+
+00:01:57.625 --> 00:02:02.849
+and then we can pass that to handle new tweet because if this.props that ID is a thing,
+
+00:02:02.849 --> 00:02:05.780
+then that means we are replying to the tweet with this ID.
+
+00:02:05.780 --> 00:02:09.115
+If it's not, then that means we are just composing our brand new tweet.
+
+00:02:09.115 --> 00:02:13.890
+So, now we can test out if this is working by adding a new tweet.
+
+00:02:14.259 --> 00:02:17.810
+We're not going to get redirected to the Home view,
+
+00:02:17.810 --> 00:02:20.164
+but you'll notice here that we dispatch ADD_TWEET.
+
+00:02:20.164 --> 00:02:21.939
+If we look at the brand new state,
+
+00:02:21.939 --> 00:02:25.069
+what we should see in here is a brand new tweet down
+
+00:02:25.069 --> 00:02:28.479
+here that it has the author of the authenticated user,
+
+00:02:28.479 --> 00:02:31.734
+we have a brand new ID, we have no likes that replies replying to this and all,
+
+00:02:31.735 --> 00:02:34.620
+the text is, "This is a new tweet," and the timestamp looks good.
+
+00:02:34.620 --> 00:02:36.890
+So, it looks like everything's working.
+

@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.339
+Now that we have a list of all of the different IDs of the tweets we're going to render,
+
+00:00:05.339 --> 00:00:07.740
+the next thing we need to do is actually
+
+00:00:07.740 --> 00:00:10.660
+build out the tweet component here so that we can
+
+00:00:10.660 --> 00:00:17.085
+pass it an ID and it will be responsible for rendering each of the individual tweets.
+
+00:00:17.085 --> 00:00:20.719
+So first as we typically do whenever we are building a new component,
+
+00:00:20.719 --> 00:00:23.649
+we need to actually create a file for that component.
+
+00:00:23.649 --> 00:00:27.589
+So, let's create a tweet.js file here and we will import
+
+00:00:27.589 --> 00:00:32.280
+React as well as Component coming from the react library.
+
+00:00:32.280 --> 00:00:35.539
+Then we are also going to connect this component.
+
+00:00:35.539 --> 00:00:39.125
+So, we will grab Connect which is coming from react-redux.
+
+00:00:39.125 --> 00:00:41.140
+So, now let's build out our class.
+
+00:00:41.140 --> 00:00:42.539
+So, we have tweet,
+
+00:00:42.539 --> 00:00:45.240
+it's going to extend its components.
+
+00:00:45.240 --> 00:00:48.840
+We will give it a render method.
+
+00:00:49.350 --> 00:00:55.210
+We'll just return a div for now that has a class name of 'tweet',
+
+00:00:55.210 --> 00:01:00.719
+and then what we want to export is our connected component.
+
+00:01:00.719 --> 00:01:05.370
+So, we can go ahead and invoke connect passing it our tweet component here.
+
+00:01:05.370 --> 00:01:10.855
+Now, as always, whenever we connect a component to our redux state,
+
+00:01:10.855 --> 00:01:14.030
+the question I'd like to ask is what
+
+00:01:14.030 --> 00:01:18.230
+state does this component actually need from our redux store?
+
+00:01:18.230 --> 00:01:21.865
+What will do is we will grab the auth user,
+
+00:01:21.864 --> 00:01:24.099
+as well as all of the users,
+
+00:01:24.099 --> 00:01:27.679
+and all of the tweets coming from the state of our store,
+
+00:01:27.680 --> 00:01:29.080
+and with maps state to props.
+
+00:01:29.079 --> 00:01:31.969
+If you pass the component that you're
+
+00:01:31.969 --> 00:01:36.019
+rendering a prop that's going to come in here as the second argument.
+
+00:01:36.019 --> 00:01:39.414
+So, what we can do is we are going to pass in an ID.
+
+00:01:39.415 --> 00:01:42.170
+Now, what information do we want to pass from
+
+00:01:42.170 --> 00:01:44.850
+the state of our redux store to our tweet component.
+
+00:01:44.849 --> 00:01:46.354
+Well, we know we are given
+
+00:01:46.355 --> 00:01:50.060
+the ID because when we render our tweet component we'll pass it,
+
+00:01:50.060 --> 00:01:51.590
+the individual ID of the tweet.
+
+00:01:51.590 --> 00:01:54.560
+So, what we can do is in order to get the tweet,
+
+00:01:54.560 --> 00:01:59.064
+we can come in here and say tweets at the ID that we're passing it.
+
+00:01:59.064 --> 00:02:04.480
+Then now what we can do is we can pass the tweet-component anything we want.
+
+00:02:04.480 --> 00:02:06.844
+So, we'll pass it the authenticated user.
+
+00:02:06.844 --> 00:02:11.379
+So that way whenever we like a tweet or whenever we respond to the tweet,
+
+00:02:11.379 --> 00:02:14.784
+we'll be able to know who the actual authenticated user is.
+
+00:02:14.784 --> 00:02:18.495
+Then we also want to pass it the tweet itself,
+
+00:02:18.495 --> 00:02:24.289
+but what we first need to do is format the tweet so what will do is if you
+
+00:02:24.289 --> 00:02:32.264
+remember inside of our helpers file in the utils folder,
+
+00:02:32.264 --> 00:02:34.824
+we have a function called formatTweet.
+
+00:02:34.824 --> 00:02:36.974
+What it does is,
+
+00:02:36.974 --> 00:02:38.780
+it takes in the tweet,
+
+00:02:38.780 --> 00:02:40.379
+the author of the tweet,
+
+00:02:40.379 --> 00:02:43.969
+the authedUser as well as if the tweet has a parent tweet,
+
+00:02:43.969 --> 00:02:46.520
+and then it just creates an object that looks like this.
+
+00:02:46.520 --> 00:02:48.550
+So what we will do here,
+
+00:02:48.550 --> 00:02:51.855
+is we want to get the formatted tweet.
+
+00:02:51.854 --> 00:02:54.879
+We'll pass into it, the Tweet itself,
+
+00:02:54.879 --> 00:03:00.585
+the user who made the tweet which we can get by saying users tweet.author.
+
+00:03:00.585 --> 00:03:03.900
+Then thirdly, we'll pass in the authenticatedUser.
+
+00:03:03.900 --> 00:03:07.760
+So now, what we want to do is let's come up here,
+
+00:03:07.759 --> 00:03:13.939
+and when we render it let's go ahead and just console.log this.props.
+
+00:03:13.939 --> 00:03:16.109
+So that we can see that this is working.
+
+00:03:16.110 --> 00:03:18.850
+We need to make sure tweet in our mapStateToProps
+
+00:03:18.849 --> 00:03:21.659
+function inside of our connecting vocation.
+
+00:03:21.659 --> 00:03:25.164
+So, now inside of dashboard instead of just rendering,
+
+00:03:25.164 --> 00:03:27.009
+that text right there what we want to
+
+00:03:27.009 --> 00:03:30.669
+do is let's grab our tweet component that we've just barely
+
+00:03:30.669 --> 00:03:37.179
+made and render this so that we can see if we are getting the correct data.
+
+00:03:37.180 --> 00:03:40.575
+So, we render tweet passing it the ID.
+
+00:03:40.574 --> 00:03:42.254
+So, now what we should see,
+
+00:03:42.254 --> 00:03:44.284
+it looks like we have an error here.
+
+00:03:44.284 --> 00:03:51.150
+So, this needs to be helpers not helper.
+
+00:03:51.830 --> 00:03:55.490
+Then now inside of our console what we get as all of
+
+00:03:55.490 --> 00:03:58.850
+the information for every tweet that we are going to be rendering.
+
+00:03:58.849 --> 00:04:00.229
+So, this one for example has
+
+00:04:00.229 --> 00:04:05.750
+an authedUser dispatch as well as an ID and then the tweet itself.
+

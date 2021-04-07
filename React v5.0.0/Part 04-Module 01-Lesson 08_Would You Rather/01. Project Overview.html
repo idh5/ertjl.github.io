@@ -1,0 +1,265 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Overview</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Would You Rather?</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Project Instructions &amp; Rubric.html">02. Project Instructions &amp; Rubric</a>
+    </li>
+    <li class="">
+      <a href="03. Approaching a Project.html">03. Approaching a Project</a>
+    </li>
+    <li class="">
+      <a href="04. Your Project Workspace.html">04. Your Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="05. Step by Step Guide - React &amp; Redux Apps.html">05. Step by Step Guide - React &amp; Redux Apps</a>
+    </li>
+    <li class="">
+      <a href="06. Would You Rather Workspace.html">06. Would You Rather Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Would You Rather....html">Project Description - Would You Rather...?</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Would You Rather....html">Project Rubric - Would You Rather...?</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Project Overview</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Project: Would You Rather?</p></h3>
+  <video controls>
+  <source src="01. Project Would You Rather-QC4KzMjzUVY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. Project Would You Rather-QC4KzMjzUVY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="01. Project Would You Rather-QC4KzMjzUVY.pt-BR.vtt" label="BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="project-overview">Project Overview</h2>
+<p>In the "Would You Rather?" Project, you'll build a web app that lets a user play the “Would You Rather?” game. The game goes like this: A user is asked a question in the form: “Would you rather [<em>option A</em>] or [<em>option B</em>] ?”. Answering "neither" or "both" is against the rules. </p>
+<p>In your app, users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.</p>
+<h2 id="why-this-project">Why this project?</h2>
+<p>This project will solidify your understanding of React and Redux while giving you a chance to express your creativity. You’ll practice improving the predictability of your application’s state; establish strict rules for getting, listening, and updating the store; and identify what state should live inside of Redux and what state should live inside of React components.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="get-the-project">Get the Project</h2>
+<p>You have two options to start developing this project:</p>
+<ul>
+<li>develop using your preconfigured Workspace</li>
+<li>develop locally on your own computer</li>
+</ul>
+<p>Your Workspace is a development environment integrated into the Udacity Classroom. You can both develop your entire app in your Workspace as well as submit your project to be reviewed. For more information about your Workspace, check out the Your Project Workspace page.</p>
+<h2 id="starter-code">Starter Code</h2>
+<p>The <a href="https://github.com/udacity/reactnd-project-would-you-rather-starter" rel="noopener noreferrer" target="_blank">starter code</a> will consist of a <code>_DATA.js</code> file, which represents a fake database and contains methods that let you access the data. The <code>README</code> file outlines how the data is stored and details the methods you can use to access the database.</p>
+<p>The only thing you need to edit in the <code>_DATA.js</code> file is the value of <code>avatarURL</code>. Each user should have an avatar, so you’ll need to add a path to each user’s avatar. </p>
+<p>Using the provided starter code, you will build a React/Redux front end for the application.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="app-functionality">App Functionality</h1>
+<p>The person using your application should have a way of impersonating/logging in as an existing user. (This could be as simple as having a login box that appears at the root of the application that lets the user select a name from the list of existing users. Alternatively, you could create your own account creation process to allow a user to sign up for an account.) Your application should work correctly regardless of which user is selected. Once the user logs in, the home page should be shown. </p>
+<p>We always want to make sure we know who the logged in user is, so information about the logged in user should appear on the page. If someone tries to navigate anywhere by entering the address in the address bar, the user is asked to sign in and then the requested page is shown. The application allows the user to log out and log back in.</p>
+<p>Once the user logs in, the user should be able to toggle between his/her answered and unanswered polls on the home page, which is located at the root. The polls in both categories are arranged from the most recently created (top) to the least recently created (bottom). The unanswered questions should be shown by default, and the name of the logged in user should be visible on the page.</p>
+<p>What would be the point of seeing answered and unanswered polling questions if we couldn’t actually vote or see the results? Each polling question should link to the details of that poll. The details of each poll should be available at <code>questions/:question_id</code>.  </p>
+<p>When a poll is clicked on the home page, the following is shown:</p>
+<ol>
+<li>Text “Would You Rather”;</li>
+<li>Avatar of the user who posted the polling question; and</li>
+<li>Two options.</li>
+</ol>
+<p>For answered polls, each of the two options contains the following:</p>
+<ol>
+<li>Text of the option;</li>
+<li>Number of people who voted for that option; and</li>
+<li>Percentage of people who voted for that option.</li>
+</ol>
+<p>The option selected by the logged-in user should be clearly marked. </p>
+<p>Since we want to make sure our application creates a good user experience, the application should show a 404 page if the user is trying to access a poll that does not exist. (Please keep in mind that newly created polls will not be accessible at their url because of the way the backend is set up in this application.) It should also display a navigation bar so that the user can easily navigate anywhere in the application.</p>
+<p>So what happens when someone votes in a poll? Upon voting in a poll, all of the information of an answered poll should be displayed. The user’s response should be recorded and clearly visible on the poll details page. Users can only vote once per poll; they shouldn’t be allowed to change their answer after they’ve voted -- no cheating allowed! When the user comes back to the home page, the polling question should appear in the “Answered” column.</p>
+<p>It would be no fun to vote in polls if we couldn’t post our own questions! The form for posting new polling questions should be available at the <code>/add</code> route. The application should show the text “Would You Rather” and have a form for creating two options. Upon submitting the form, a new poll should be created,  the user should be taken to the home page, and the new polling question should appear in the correct category on the home page.</p>
+<p>But how can we know how many questions each user has asked and answered? Let’s get some healthy competition going here! The application should have a leaderboard that’s available at the <code>/leaderboard</code> route. Each entry on the leaderboard should contain the following:</p>
+<ol>
+<li>User’s name;</li>
+<li>User’s picture;</li>
+<li>Number of questions the user asked; and</li>
+<li>Number of questions the user answered</li>
+</ol>
+<p>Users should be ordered in descending order based on the sum of the number of questions they’ve asked and the number of questions they’ve answered. The more questions you ask and answer, the higher up you move.</p>
+<p>The user should be able to navigate to the leaderboard, to a specific question, and to the form that allows the user to create a new poll <em>both</em> from within the app and by typing in the address into the address bar. To make sure we’re showing the data that is relevant to <em>the user</em>, the application should require the user to be signed in order to access those pages.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="app-architecture">App Architecture</h1>
+<p>By walking through the Planning Stage and the Coding Stage of the Chirper Project, we’ve given you a useful template for building Redux applications. We recommend using this template for building your “Would You Rather?” Project. Remember that planning your project and its architecture <em>before</em> starting to code will save you a lot of debugging time later on! </p>
+<p>For this application, most of the application’s state should be managed by Redux. You’ll find that there are situations where it makes sense to store state outside of the Redux store. Check out what Dan Abramov, the creator of Redux, thinks about  <a href="https://github.com/reactjs/redux/issues/1287" rel="noopener noreferrer" target="_blank">choosing between Redux's store and React's state</a>.</p>
+<p>Your application’s store should be the source of truth, and components should read the necessary state from the store instead of having their own versions of the same state. There should be no direct API calls in components’ lifecycle methods, and updates should be triggered by dispatching action creators.</p>
+<p>Your application’s code should be structured and organized in a logical way, and your components should be modular and reusable.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Project Instructions &amp; Rubric.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Project Overview')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

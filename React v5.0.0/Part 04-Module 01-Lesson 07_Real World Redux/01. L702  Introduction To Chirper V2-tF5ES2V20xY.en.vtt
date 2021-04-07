@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.714
+So first, let's take a look at the project that we are going to be building.
+
+00:00:03.714 --> 00:00:05.820
+This is a minimal Twitter clone,
+
+00:00:05.820 --> 00:00:07.575
+and if you want to play around with it yourself,
+
+00:00:07.575 --> 00:00:09.530
+you can come to this URL right here.
+
+00:00:09.529 --> 00:00:12.004
+So basically, what we have here is a timeline,
+
+00:00:12.005 --> 00:00:15.150
+and these are all the tweets on your timeline.
+
+00:00:15.150 --> 00:00:18.589
+You can make a new tweet by coming to this view.
+
+00:00:19.129 --> 00:00:21.934
+We'll make a new tweet here and submit that,
+
+00:00:21.934 --> 00:00:23.859
+and then that will show up on our timeline.
+
+00:00:23.859 --> 00:00:29.730
+You can like any of the tweets and you can also click on a tweet in order to reply to it,
+
+00:00:29.730 --> 00:00:32.969
+so you'll notice here that this tweet has two different replies.
+
+00:00:32.969 --> 00:00:39.619
+If we want to make another one we just simply compose a new tweet on this tweet page.
+
+00:00:39.619 --> 00:00:42.094
+Now this tweet has another reply,
+
+00:00:42.094 --> 00:00:44.109
+and we can like their replies,
+
+00:00:44.109 --> 00:00:47.615
+we can even make replies to the replies.
+
+00:00:47.615 --> 00:00:51.440
+So technically, these replies are infinitely deep because we
+
+00:00:51.439 --> 00:00:55.149
+can just keep replying to different replies,
+
+00:00:55.149 --> 00:00:57.199
+and that's essentially it.
+
+00:00:57.200 --> 00:01:00.910
+What's interesting about this application is it
+
+00:01:00.909 --> 00:01:05.019
+really benefits from using Redux because in a lot of the different views that we have,
+
+00:01:05.019 --> 00:01:06.780
+we're sharing the same state.
+
+00:01:06.780 --> 00:01:08.855
+So for example, when we make a new tweet,
+
+00:01:08.855 --> 00:01:12.085
+that tweet is eventually going to show up on our main timeline,
+
+00:01:12.084 --> 00:01:17.194
+but also what's happening is when we like a tweet from this view,
+
+00:01:17.194 --> 00:01:19.809
+when we go into the actual tweet view
+
+00:01:19.810 --> 00:01:22.600
+for this specific tweet we still need to see that like.
+
+00:01:22.599 --> 00:01:31.064
+Whenever we make a new response then what needs to happen is this counter is incremented,
+
+00:01:31.064 --> 00:01:35.149
+and also this counter is incremented on the main page as well.
+
+00:01:35.150 --> 00:01:39.050
+So in basically every single one of the views that we have in this application,
+
+00:01:39.049 --> 00:01:41.909
+we're needing to reference at least a part of our Redux store,
+
+00:01:41.909 --> 00:01:46.539
+which means Redux is a pretty good use case for this specific project.
+

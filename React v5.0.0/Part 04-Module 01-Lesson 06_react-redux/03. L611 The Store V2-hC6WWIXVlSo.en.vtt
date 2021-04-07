@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.960
+So now finally, the very last functionality we want to move over is
+
+00:00:03.960 --> 00:00:09.830
+our createStore invocation as well as providing the store to our provider component.
+
+00:00:09.830 --> 00:00:14.304
+So, we will do all of that inside of our main index.js file up here.
+
+00:00:14.304 --> 00:00:16.469
+So, we want to import a few different things.
+
+00:00:16.469 --> 00:00:18.495
+We want to grab our root reducer,
+
+00:00:18.495 --> 00:00:21.495
+which is going to come from our reducer's folder.
+
+00:00:21.495 --> 00:00:22.950
+And if you do something like this,
+
+00:00:22.949 --> 00:00:23.969
+what's going to happen is,
+
+00:00:23.969 --> 00:00:29.774
+reducer is going to be whatever the index.js file inside of our reducer's folder exports,
+
+00:00:29.774 --> 00:00:35.060
+which if you look at this is going to be our invocation of combined reducers.
+
+00:00:35.060 --> 00:00:38.100
+So, we're going to use the same pattern for our middleware by
+
+00:00:38.100 --> 00:00:43.200
+grabbing whatever is coming from the index.js file in our middleware folder,
+
+00:00:43.200 --> 00:00:47.050
+which is going to be our invocation of applied middleware.
+
+00:00:47.140 --> 00:00:51.859
+And then, we also want to grab the Provider component,
+
+00:00:51.859 --> 00:00:54.979
+which is coming from react-redux, and then finally,
+
+00:00:54.979 --> 00:00:56.614
+we want to grab createStore,
+
+00:00:56.615 --> 00:00:59.650
+which is going to come from redux itself.
+
+00:00:59.649 --> 00:01:02.089
+So, now what we want to do is create our store.
+
+00:01:02.090 --> 00:01:05.060
+We can do that by invoking createStore parsing it two things,
+
+00:01:05.060 --> 00:01:10.049
+our reducer as well as our middleware, and then now,
+
+00:01:10.049 --> 00:01:12.450
+when we call ReactDOM.render,
+
+00:01:12.450 --> 00:01:15.765
+what we want to do is,
+
+00:01:15.765 --> 00:01:20.409
+we want to wrap this inside of our Provider component.
+
+00:01:20.409 --> 00:01:24.609
+We want to parse the store down to provider.
+
+00:01:26.760 --> 00:01:31.600
+Now, odds are, we have a few different errors here for moving everything over.
+
+00:01:31.599 --> 00:01:33.254
+Let's go ahead and fix those now.
+
+00:01:33.254 --> 00:01:35.449
+So, it looks like this first one is RECEIVE_DATA
+
+00:01:35.450 --> 00:01:38.689
+is not defined inside of our goals reducer.
+
+00:01:38.689 --> 00:01:42.909
+So, we probably just forgot to import that, and we did.
+
+00:01:42.909 --> 00:01:45.920
+So, we need to grab RECEIVE_DATA,
+
+00:01:45.920 --> 00:01:49.375
+which is going to come from actions/shared,
+
+00:01:49.375 --> 00:01:52.890
+and I wonder if we forgot to do that same thing inside of our todos reducer.
+
+00:01:52.890 --> 00:01:56.469
+It looks like we did.
+
+00:01:56.469 --> 00:02:05.704
+So, we want to grab RECEIVE_DATA coming from actions/shared, and then loading.
+
+00:02:05.704 --> 00:02:07.724
+I'm assuming we didn't make that same mistake.
+
+00:02:07.724 --> 00:02:09.074
+Yeah, we did not. So, we have that here.
+
+00:02:09.074 --> 00:02:12.994
+So, now let's see if our app is working. So, there we go.
+
+00:02:12.995 --> 00:02:19.515
+So, what we have now is our same app that we had before.
+
+00:02:19.514 --> 00:02:22.384
+We can remove different items,
+
+00:02:22.384 --> 00:02:23.614
+we can toggle todos,
+
+00:02:23.615 --> 00:02:26.270
+we can add new goals,
+
+00:02:28.069 --> 00:02:32.884
+and everything is working the exact same as it was before.
+
+00:02:32.884 --> 00:02:34.079
+But now, what we have,
+
+00:02:34.080 --> 00:02:37.109
+instead of having everything in a single file,
+
+00:02:37.109 --> 00:02:39.960
+we had now moved everything over to
+
+00:02:39.960 --> 00:02:44.520
+our main application that we created with createReact app.
+

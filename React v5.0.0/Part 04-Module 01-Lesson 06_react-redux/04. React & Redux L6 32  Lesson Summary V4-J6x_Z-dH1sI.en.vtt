@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.189
+in this lesson, we learned about
+
+00:00:02.189 --> 00:00:07.019
+the React-Redux bindings and how it makes working with React and Redux more cohesive.
+
+00:00:07.019 --> 00:00:10.710
+Coming up, we'll move away from our simple goals and todos app,
+
+00:00:10.710 --> 00:00:14.760
+and look at how to build a real-world app with React and Redux.
+

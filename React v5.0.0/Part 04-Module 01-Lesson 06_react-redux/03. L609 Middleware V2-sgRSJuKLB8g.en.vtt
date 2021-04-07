@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.270
+Now that we have our actions as well as our reducers,
+
+00:00:03.270 --> 00:00:07.515
+the next thing we want to bring over into our new React app is our middleware.
+
+00:00:07.514 --> 00:00:10.244
+So, let's go ahead and make a new folder called middleware.
+
+00:00:10.244 --> 00:00:13.634
+And inside of here, we are going to have three different files,
+
+00:00:13.634 --> 00:00:16.320
+one for our logger middleware,
+
+00:00:16.320 --> 00:00:18.885
+one for our checker middleware,
+
+00:00:18.885 --> 00:00:22.230
+and then the last one is going to be an index.js file.
+
+00:00:22.230 --> 00:00:24.780
+So, let's start with checker here.
+
+00:00:24.780 --> 00:00:28.140
+So, let's go and grab our checker middleware,
+
+00:00:28.140 --> 00:00:30.429
+which is right here.
+
+00:00:30.629 --> 00:00:35.329
+And we want to paste that inside of checker.js.
+
+00:00:35.520 --> 00:00:39.520
+You'll notice here, we are using a few different action types.
+
+00:00:39.520 --> 00:00:43.645
+So, we can go ahead and grab ADD_TODO,
+
+00:00:43.645 --> 00:00:48.250
+which is going to come from actions/todos.
+
+00:00:48.250 --> 00:00:51.070
+And then we can grab ADD_GOAL,
+
+00:00:51.070 --> 00:00:55.539
+which is going to come from actions/goals.
+
+00:00:55.539 --> 00:00:59.049
+And then, as the default export from this file,
+
+00:00:59.049 --> 00:01:02.259
+we want to export our checker function right here.
+
+00:01:02.259 --> 00:01:03.820
+So, now, that looks good.
+
+00:01:03.820 --> 00:01:08.930
+Let's go ahead and do something similar for our logger middleware.
+
+00:01:09.019 --> 00:01:11.774
+So, we'll grab that, paste it over here.
+
+00:01:11.775 --> 00:01:15.730
+This will be the default export.
+
+00:01:15.769 --> 00:01:18.719
+And then now, if you'll remember again,
+
+00:01:18.719 --> 00:01:19.878
+when we created our store,
+
+00:01:19.878 --> 00:01:23.400
+what we had to do was we called Redux.applyMiddleware,
+
+00:01:23.400 --> 00:01:27.780
+parsing it are thunk middleware or checker middleware and our logger middleware.
+
+00:01:27.780 --> 00:01:32.750
+So, let's do that from our index.js file inside of our middleware folder.
+
+00:01:32.750 --> 00:01:34.248
+So we can handle all of this,
+
+00:01:34.248 --> 00:01:37.589
+specifically the invocation of applyMiddleware inside of here.
+
+00:01:37.590 --> 00:01:40.859
+So, we don't have to do it eventually when we create our store.
+
+00:01:40.859 --> 00:01:43.155
+So, let's grab checker,
+
+00:01:43.155 --> 00:01:45.570
+which is going to come from./checker.
+
+00:01:45.569 --> 00:01:49.199
+We want logger, which we just barely made.
+
+00:01:49.200 --> 00:01:51.731
+And then we also want to import thunk,
+
+00:01:51.731 --> 00:01:56.010
+which is going to come from the Redux-thunk package that we installed.
+
+00:01:56.010 --> 00:02:01.094
+And finally, we want to import applyMiddleware,
+
+00:02:01.094 --> 00:02:03.929
+which is coming from Redux.
+
+00:02:03.930 --> 00:02:06.360
+So, now, as the default export,
+
+00:02:06.359 --> 00:02:08.474
+we want to invoke applyMiddleware,
+
+00:02:08.474 --> 00:02:10.004
+just says we're doing over here,
+
+00:02:10.004 --> 00:02:13.109
+parsing it first thunk,
+
+00:02:13.110 --> 00:02:17.940
+and then our checker middleware and then our logger middleware.
+

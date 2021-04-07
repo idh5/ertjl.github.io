@@ -1,0 +1,268 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.370
+Nós já temos actions,
+middleware e reducers.
+
+00:00:03.403 --> 00:00:08.074
+Agora vamos migrar os componentes
+para o novo aplicativo React.
+
+00:00:08.108 --> 00:00:10.143
+Então
+dentro da pasta components,
+
+00:00:10.176 --> 00:00:12.379
+vamos criar
+três novos arquivos:
+
+00:00:12.412 --> 00:00:18.284
+Goals.js, List.js,
+para o componente List,
+
+00:00:18.318 --> 00:00:20.387
+e Todos.js.
+
+00:00:20.420 --> 00:00:23.623
+Vamos criar o componente
+List primeiro.
+
+00:00:23.656 --> 00:00:29.095
+Então, eu vou copiar isto
+e colar dentro...
+
+00:00:29.129 --> 00:00:32.932
+Não dentro da Todos,
+dentro do arquivo List.js,
+
+00:00:32.966 --> 00:00:35.335
+e este vai ser
+o export default,
+
+00:00:35.368 --> 00:00:38.805
+como estamos acostumados
+com componentes no React.
+
+00:00:38.838 --> 00:00:41.241
+E, por usarmos JSX
+neste módulo,
+
+00:00:41.274 --> 00:00:43.710
+precisamos importar o React.
+
+00:00:43.743 --> 00:00:47.480
+Em seguida, vamos mover
+o componente Todos.
+
+00:00:47.514 --> 00:00:51.051
+Então, vamos pegar
+os dois componentes Todos
+
+00:00:51.084 --> 00:00:55.121
+e a invocação do connect
+para conectar o componente Todos.
+
+00:00:55.155 --> 00:00:56.956
+Então vamos colar isto aqui.
+
+00:00:56.990 --> 00:01:00.560
+E note que estamos usando
+alguns criadores de ação diferentes
+
+00:01:00.593 --> 00:01:02.328
+como o connect aqui.
+
+00:01:02.362 --> 00:01:05.198
+Então precisamos importar
+tudo de que precisamos.
+
+00:01:05.231 --> 00:01:08.568
+Primeiro vamos pegar
+o React de react,
+
+00:01:08.601 --> 00:01:12.505
+depois vamos pegar o connect
+de react-redux.
+
+00:01:12.539 --> 00:01:17.143
+E vamos pegar os criadores de ação
+que vamos usar.
+
+00:01:17.177 --> 00:01:21.815
+Teremos handleAddTodo,
+handleDeleteTodo e handleToggle.
+
+00:01:21.848 --> 00:01:26.119
+Todos eles virão
+de actions/todos.
+
+00:01:26.152 --> 00:01:30.323
+Agora, em vez de criar
+uma variável ConnectedTodos,
+
+00:01:30.357 --> 00:01:33.295
+nós podemos...
+
+00:01:33.338 --> 00:01:38.131
+colocar como exportação padrão
+a invocação da connect.
+
+00:01:38.164 --> 00:01:40.633
+Assim, quando importamos
+o módulo Todos,
+
+00:01:40.667 --> 00:01:44.137
+nós vamos receber
+o componente ConnectedTodos,
+
+00:01:44.170 --> 00:01:48.908
+usando a função connect
+vinda do react-redux.
+
+00:01:48.942 --> 00:01:51.611
+E nós esquecemos
+que dentro do componente Todos...
+
+00:01:51.644 --> 00:01:54.514
+Quando digo nós, quero dizer eu.
+Também estamos renderizando o List.
+
+00:01:54.547 --> 00:01:57.517
+Então precisamos importar
+o List também.
+
+00:01:57.550 --> 00:02:00.653
+E agora, o componente Todos
+está finalizado.
+
+00:02:00.687 --> 00:02:05.258
+O último que queremos mover é
+o componente Goals.
+
+00:02:05.291 --> 00:02:08.028
+Então, vamos pegá-lo aqui.
+
+00:02:08.061 --> 00:02:11.664
+Também vamos pegar
+o componente ConnectedGoals.
+
+00:02:11.698 --> 00:02:13.133
+E, como fizemos antes,
+
+00:02:13.166 --> 00:02:16.302
+precisamos importar
+algumas coisas.
+
+00:02:16.336 --> 00:02:17.904
+Precisamos do React.
+
+00:02:17.937 --> 00:02:20.407
+E precisamos do connect,
+
+00:02:20.440 --> 00:02:24.577
+porque vamos exportar
+os componentes conectados.
+
+00:02:24.611 --> 00:02:28.515
+E precisamos de List...
+
+00:02:28.548 --> 00:02:31.351
+e precisamos
+de alguns criadores de ação:
+
+00:02:31.384 --> 00:02:34.154
+handleAddGoal
+e handleDeleteGoal,
+
+00:02:34.187 --> 00:02:39.426
+que virão de action/goals.
+
+00:02:39.459 --> 00:02:41.494
+Parece bom.
+
+00:02:41.528 --> 00:02:43.296
+Só precisamos fazer
+mais uma mudança:
+
+00:02:43.329 --> 00:02:48.135
+exportar a invocação
+do connect
+
+00:02:48.168 --> 00:02:50.337
+como o export default.
+
+00:02:51.638 --> 00:02:55.809
+E agora, dentro de App.js,
+
+00:02:55.842 --> 00:02:57.243
+precisamos atualizar
+isto aqui.
+
+00:02:57.277 --> 00:03:00.213
+Vamos pegar isto aqui também.
+
+00:03:00.246 --> 00:03:04.851
+Vamos pegar o componente
+ConnectedApp
+
+00:03:04.884 --> 00:03:07.387
+e o componente App.
+
+00:03:07.420 --> 00:03:10.724
+E precisamos importar
+algumas coisas aqui.
+
+00:03:10.757 --> 00:03:13.326
+Vamos pegar o React.
+
+00:03:13.360 --> 00:03:19.299
+Importar ConnectedTodos
+que vem do módulo Todos.
+
+00:03:20.600 --> 00:03:25.672
+Vamos pegar ConnectedGoals,
+que vem de Goals.
+
+00:03:25.705 --> 00:03:30.944
+Queremos pegar connect
+do react-redux,
+
+00:03:30.977 --> 00:03:33.747
+e o único criador de ação
+que precisamos pegar
+
+00:03:33.780 --> 00:03:35.932
+vai ser handleInitialData,
+
+00:03:35.960 --> 00:03:40.520
+que virá de actions/shared.
+
+00:03:40.553 --> 00:03:44.024
+Agora, em vez de fazer isto,
+
+00:03:44.057 --> 00:03:48.862
+vamos escrever
+export default connect.
+
+00:03:48.895 --> 00:03:51.097
+Agora está parecendo
+muito bom.
+
+00:03:51.131 --> 00:03:54.267
+O único outro código
+que precisamos trazer
+
+00:03:54.300 --> 00:03:57.303
+é o código relacionado
+com a criação da Store
+
+00:03:57.337 --> 00:04:01.274
+e adicioná-lo como um Provider
+quando usamos reactDOM.render.
+
+00:04:01.307 --> 00:04:04.077
+É isto que faremos
+no próximo vídeo.
+

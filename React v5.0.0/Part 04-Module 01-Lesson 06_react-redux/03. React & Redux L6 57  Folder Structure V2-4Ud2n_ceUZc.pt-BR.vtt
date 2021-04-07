@@ -1,0 +1,24 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:03.570
+O código do projeto
+está todo em um arquivo.
+
+00:00:03.604 --> 00:00:05.772
+Isso foi
+para facilitar o aprendizado,
+
+00:00:05.806 --> 00:00:09.343
+mas não é a melhor abordagem
+para um aplicativo real.
+
+00:00:09.376 --> 00:00:12.446
+Vamos refatorar o aplicativo
+para usar create-react-app
+
+00:00:12.479 --> 00:00:15.983
+para vermos uma abordagem
+com a estrutura React-Redux.
+

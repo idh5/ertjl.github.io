@@ -1,0 +1,502 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.166 --> 00:00:04.239
+Agora que já construímos
+todas as telas individuais
+
+00:00:04.272 --> 00:00:05.669
+dentro do aplicativo,
+
+00:00:05.703 --> 00:00:08.641
+a última coisa que precisamos fazer
+é adicionar React Router
+
+00:00:08.675 --> 00:00:11.578
+para mudarmos dinamicamente
+o componente a ser renderizado,
+
+00:00:11.611 --> 00:00:12.946
+com base no URL.
+
+00:00:12.979 --> 00:00:15.548
+Primeiro vamos
+ao nosso console.
+
+00:00:15.582 --> 00:00:19.452
+Vamos escrever
+yarn add react-router-dom.
+
+00:00:22.022 --> 00:00:25.225
+Depois que estiver instalado,
+inicie o aplicativo.
+
+00:00:25.258 --> 00:00:29.429
+Vamos ao arquivo App.js aqui.
+
+00:00:29.462 --> 00:00:33.355
+O que queremos criar é...
+você vai ver no aplicativo final
+
+00:00:33.388 --> 00:00:34.968
+esta barra de navegação.
+
+00:00:35.001 --> 00:00:37.702
+Vou criar um novo arquivo
+chamado Nav.js.
+
+00:00:37.736 --> 00:00:38.836
+Vou colar tudo
+
+00:00:38.870 --> 00:00:41.775
+porque aqui não tem
+nada de novo.
+
+00:00:41.808 --> 00:00:43.610
+Só estamos renderizando
+alguns NavLinks.
+
+00:00:43.643 --> 00:00:47.078
+Um para nos direcionar para Home,
+outro para nos levar para /new.
+
+00:00:47.112 --> 00:00:52.852
+Em App.js, vamos importar Nav.
+
+00:00:54.054 --> 00:00:56.523
+Também queremos importar
+outras coisas,
+
+00:00:56.556 --> 00:00:58.658
+especificamente relacionadas
+com React Router.
+
+00:00:58.692 --> 00:01:03.530
+Vamos pegar BrowserRouter,
+vamos renomear como Router
+
+00:01:03.563 --> 00:01:07.434
+e pegar Route direto de
+react-router-dom.
+
+00:01:07.467 --> 00:01:11.037
+E vamos pegar Fragment
+vindo de react.
+
+00:01:11.071 --> 00:01:15.075
+E queremos fazer isto
+porque agora precisamos
+
+00:01:15.108 --> 00:01:19.679
+empacotar tudo
+dentro do nosso Router.
+
+00:01:21.448 --> 00:01:24.718
+Agora, em vez de renderizar
+um componente individual,
+
+00:01:24.751 --> 00:01:29.255
+queremos renderizar
+alguns Routes.
+
+00:01:29.289 --> 00:01:30.557
+Vamos ter um div aqui.
+
+00:01:30.590 --> 00:01:34.094
+Dentro deste div,
+teremos nosso primeiro Route,
+
+00:01:34.127 --> 00:01:36.396
+então quando estivermos
+em / ou homeview,
+
+00:01:36.429 --> 00:01:39.933
+ele vai ser igual ao componente
+que queremos renderizar.
+
+00:01:39.966 --> 00:01:42.302
+Será o componente Dashboard.
+
+00:01:42.335 --> 00:01:46.773
+Quando estivermos em /tweet
+com um parâmetro de URL
+
+00:01:46.806 --> 00:01:48.441
+de qualquer que seja a ID
+do tweet,
+
+00:01:48.475 --> 00:01:52.879
+queremos renderizar
+o componente TweetPage.
+
+00:01:52.912 --> 00:01:55.949
+Quando escrevermos /new,
+
+00:01:55.982 --> 00:02:00.453
+queremos renderizar
+o componente NewTweet.
+
+00:02:00.487 --> 00:02:01.488
+Parece bom.
+
+00:02:01.521 --> 00:02:05.959
+Não podemos esquecer de renderizar
+a barra de navegação que criamos.
+
+00:02:05.992 --> 00:02:11.064
+E vamos empacotar tudo isto
+dentro de um div
+
+00:02:11.097 --> 00:02:14.334
+com o className container.
+
+00:02:14.367 --> 00:02:16.903
+Se executarmos o aplicativo,
+
+00:02:16.936 --> 00:02:21.808
+o que você vai notar,
+quando atualizamos a página,
+
+00:02:21.841 --> 00:02:25.245
+é que nossa barra de carregamento
+está presa
+
+00:02:25.278 --> 00:02:27.480
+no contêiner principal aqui.
+
+00:02:27.514 --> 00:02:30.817
+Nós queremos mudar
+isto de lugar.
+
+00:02:31.378 --> 00:02:32.852
+Algo assim.
+
+00:02:32.886 --> 00:02:35.488
+Mas agora vamos receber
+uma mensagem de erro
+
+00:02:35.522 --> 00:02:37.957
+porque precisamos passar
+um único elemento filho
+
+00:02:37.991 --> 00:02:40.126
+como o filho para o Router.
+
+00:02:40.160 --> 00:02:43.763
+No momento, estamos passando
+a barra de carregamento e um div.
+
+00:02:43.797 --> 00:02:45.031
+O que podemos fazer aqui,
+
+00:02:45.065 --> 00:02:48.835
+e é por isso que instalamos
+Fragment antes,
+
+00:02:48.868 --> 00:02:52.872
+é empacotar tudo
+dentro de Fragment.
+
+00:02:52.906 --> 00:02:55.809
+Normalmente, você criaria
+um div aqui,
+
+00:02:55.842 --> 00:02:58.346
+mas isto adicionaria outro div
+à DOM,
+
+00:02:58.379 --> 00:03:01.014
+e não queremos isto.
+Então vamos usar Fragment,
+
+00:03:01.047 --> 00:03:03.183
+que permite passar
+um único filho
+
+00:03:03.216 --> 00:03:05.852
+para o componente router
+de React Router,
+
+00:03:05.885 --> 00:03:08.688
+mas não vai adicionar
+outros elementos à DOM.
+
+00:03:10.357 --> 00:03:14.250
+Agora,
+dentro do nosso aplicativo,
+
+00:03:14.316 --> 00:03:18.498
+podemos navegar,
+mas há dois outros lugares
+
+00:03:18.531 --> 00:03:20.633
+em que queremos adicionar
+a funcionalidade router.
+
+00:03:20.667 --> 00:03:23.169
+Quando compomos um novo tuíte,
+
+00:03:23.203 --> 00:03:25.271
+queremos ser levados de volta
+à homeview.
+
+00:03:25.305 --> 00:03:27.974
+Agora,
+dentro do componente NewTweet,
+
+00:03:28.008 --> 00:03:30.043
+o que fazemos é dizer:
+
+00:03:30.076 --> 00:03:32.045
+"Isto é algo
+que precisamos fazer.
+
+00:03:32.078 --> 00:03:35.648
+Quando o formulário for enviado
+ou o novo tuíte for enviado,
+
+00:03:35.682 --> 00:03:37.984
+nos redirecione para /."
+
+00:03:38.018 --> 00:03:42.822
+Agora nós vamos importar
+o componente Redirect,
+
+00:03:42.856 --> 00:03:45.592
+que vem de react-router-dom.
+
+00:03:45.625 --> 00:03:51.164
+Adicionaremos uma nova propriedade
+ao nosso estado chamada "toHome".
+
+00:03:52.832 --> 00:03:56.836
+Quando o método handleSubmit
+é executado,
+
+00:03:56.870 --> 00:03:59.439
+em vez de reconfigurar text
+para uma string vazia,
+
+00:03:59.472 --> 00:04:03.443
+nós também queremos atualizar
+toHome.
+
+00:04:03.476 --> 00:04:07.313
+Se você se lembra,
+nós podemos responder a um tuíte.
+
+00:04:07.347 --> 00:04:09.949
+Então nossa funcionalidade é,
+
+00:04:09.983 --> 00:04:11.985
+se estamos respondendo
+a um tuíte,
+
+00:04:12.018 --> 00:04:14.888
+não queremos ser direcionados
+para a home,
+
+00:04:14.921 --> 00:04:18.158
+queremos ficar nesta página
+para vermos a resposta.
+
+00:04:18.191 --> 00:04:19.859
+Mas se estamos criando
+um novo tuíte,
+
+00:04:19.893 --> 00:04:21.761
+nós queremos ser levados
+para a home.
+
+00:04:21.795 --> 00:04:26.166
+Nós podemos escrever
+se id é algo, toHome vai ser false,
+
+00:04:26.199 --> 00:04:28.568
+se não for, toHome será true.
+
+00:04:28.601 --> 00:04:31.805
+Agora que temos a propriedade toHome
+no estado,
+
+00:04:31.838 --> 00:04:35.675
+dentro do método
+de renderização,
+
+00:04:35.709 --> 00:04:39.379
+vamos pegar o toHome
+do nosso estado.
+
+00:04:39.412 --> 00:04:44.184
+Se toHome é igual a true,
+em vez de renderizar a IU,
+
+00:04:44.217 --> 00:04:47.320
+queremos renderizar
+o componente Redirect.
+
+00:04:47.354 --> 00:04:51.424
+Assim, seremos redirecionados
+para a homeview.
+
+00:04:51.458 --> 00:04:56.496
+Agora, quando criamos
+um novo tuíte,
+
+00:04:56.529 --> 00:05:00.967
+em vez de ficar nesta /newpage,
+somos levados para a homeview,
+
+00:05:01.001 --> 00:05:04.738
+nossa IU atualiza,
+e vemos o novo tuíte lá.
+
+00:05:04.771 --> 00:05:08.341
+Precisamos adicionar mais uma
+funcionalidade com React Router.
+
+00:05:08.375 --> 00:05:12.645
+Precisamos ser capazes de clicar
+em todos estes tuítes diferentes
+
+00:05:12.679 --> 00:05:14.481
+para sermos levados à página
+do tuíte.
+
+00:05:14.514 --> 00:05:18.918
+Podemos fazer isto dentro
+do componente Tweet.js.
+
+00:05:18.952 --> 00:05:23.923
+Primeiro vamos importar Link
+de react-router-dom.
+
+00:05:23.957 --> 00:05:28.561
+Depois, em vez de renderizar
+o div aqui,
+
+00:05:28.595 --> 00:05:30.930
+queremos renderizar
+o componente Link.
+
+00:05:30.964 --> 00:05:33.800
+Então vamos trocar o div
+pelo Link.
+
+00:05:33.833 --> 00:05:38.004
+Agora quando o usuário clica
+neste Link,
+
+00:05:38.038 --> 00:05:43.777
+queremos que ele seja levado
+para /tweet/
+
+00:05:43.810 --> 00:05:45.979
+o que quer que seja a ID
+do tweet.
+
+00:05:46.012 --> 00:05:50.517
+Note que a ID
+não está definida
+
+00:05:50.550 --> 00:05:55.088
+porque precisamos pegá-la
+de tweet.
+
+00:05:55.121 --> 00:06:00.660
+Agora, se clicarmos em um link,
+somos levados à página do tuíte.
+
+00:06:00.694 --> 00:06:03.396
+Outro recurso
+que queremos adicionar é...
+
+00:06:03.430 --> 00:06:05.931
+Como você sabe,
+isto aqui é um botão.
+
+00:06:05.964 --> 00:06:08.301
+Se os usuários clicarem
+neste botão,
+
+00:06:08.334 --> 00:06:11.999
+queremos que sejam levados para
+o tuíte a que estão respondendo.
+
+00:06:12.598 --> 00:06:15.842
+Nós já configuramos uma função
+para fazer isto.
+
+00:06:15.875 --> 00:06:18.657
+Dentro de toParent,
+
+00:06:18.690 --> 00:06:22.449
+vamos dizer ao React Router
+que queremos ir
+
+00:06:22.482 --> 00:06:24.984
+para a nova ID de Tweet.
+
+00:06:25.018 --> 00:06:28.254
+O jeito não-declarativo
+de fazer isto
+
+00:06:28.288 --> 00:06:34.155
+é escrevendo
+this.props.history.push
+
+00:06:34.200 --> 00:06:39.933
+('/tweet/${id}'),
+a ID a que estamos respondendo.
+
+00:06:39.966 --> 00:06:42.602
+Mas o problema é
+que nosso componente Tweet
+
+00:06:42.635 --> 00:06:44.637
+não está sendo renderizado
+pelo React Router,
+
+00:06:44.671 --> 00:06:47.640
+então o this.props.history
+não está sendo passado para nós.
+
+00:06:47.674 --> 00:06:53.079
+Então podemos importar
+o componente withRouter.
+
+00:06:53.113 --> 00:06:57.332
+Agora nós vamos exportar...
+
+00:06:57.365 --> 00:07:01.154
+e empacotar tudo
+no withRouter.
+
+00:07:01.187 --> 00:07:04.157
+Isto vai passar
+nosso componente connect,
+
+00:07:04.190 --> 00:07:07.727
+que vai passar ao componente Tweet
+todas as router props,
+
+00:07:07.761 --> 00:07:11.998
+o que vai nos permitir fazer
+este this.props.history.push.
+
+00:07:12.032 --> 00:07:15.902
+Agora o que devemos ver
+dentro do nosso aplicativo é...
+
+00:07:15.935 --> 00:07:20.006
+Vamos aqui embaixo
+e clicar em replyingTo.
+
+00:07:20.040 --> 00:07:24.377
+Agora vamos para o tuíte
+que queremos responder,
+
+00:07:24.411 --> 00:07:25.779
+que foi meu tuíte aqui.
+

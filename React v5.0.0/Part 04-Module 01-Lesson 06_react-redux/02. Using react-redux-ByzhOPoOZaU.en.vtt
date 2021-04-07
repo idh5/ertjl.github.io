@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.350
+Previously what we did was,
+
+00:00:01.350 --> 00:00:03.955
+we built a nice little abstraction over React and
+
+00:00:03.955 --> 00:00:07.650
+Redux in order to make working with both of them a little nicer.
+
+00:00:07.650 --> 00:00:10.005
+So what we have is this Provider component,
+
+00:00:10.005 --> 00:00:13.335
+which is responsible for sticking our store on Context.
+
+00:00:13.335 --> 00:00:16.740
+And then we created a connect higher order component,
+
+00:00:16.739 --> 00:00:19.964
+which was responsible for rendering a specific component,
+
+00:00:19.964 --> 00:00:24.975
+and parsing that component any data that it needs from the Redux store.
+
+00:00:24.975 --> 00:00:28.854
+Now, it turns out that this is a pretty common pattern.
+
+00:00:28.853 --> 00:00:33.579
+And in fact, it's so common that it is actually its own library,
+
+00:00:33.579 --> 00:00:39.280
+and it is the official recommended bindings for using React and Redux together.
+
+00:00:39.280 --> 00:00:40.570
+So now, what we've done is,
+
+00:00:40.570 --> 00:00:43.819
+we've included the react-redux package inside of our application,
+
+00:00:43.819 --> 00:00:46.150
+that's going to stick a react-redux property on
+
+00:00:46.149 --> 00:00:50.304
+our global scope as we've seen a few different times with redux and with react.
+
+00:00:50.304 --> 00:00:53.280
+And so now what we can do is,
+
+00:00:53.280 --> 00:00:55.219
+let's come in here,
+
+00:00:55.219 --> 00:00:59.020
+and we're going to eventually once we get there,
+
+00:00:59.020 --> 00:01:04.344
+we can delete our createContext invocation.
+
+00:01:04.344 --> 00:01:08.429
+We can delete our Connect implementation,
+
+00:01:09.450 --> 00:01:15.590
+and then we can also delete our Provider because as you probably guessed,
+
+00:01:15.590 --> 00:01:20.840
+all of these things now are going to come on the react-redux package.
+
+00:01:20.840 --> 00:01:24.064
+So what we can do here is instead of using our own Provider,
+
+00:01:24.064 --> 00:01:26.269
+we can say ReactReduxt.Provider,
+
+00:01:26.269 --> 00:01:28.969
+and now anywhere where we use Connect
+
+00:01:28.969 --> 00:01:31.549
+instead of just using our Connect higher order component,
+
+00:01:31.549 --> 00:01:35.119
+we can use ReactRedux.connect.
+
+00:01:35.120 --> 00:01:36.829
+So again, what we've done is,
+
+00:01:36.829 --> 00:01:39.724
+instead of just showing you how to use a new API,
+
+00:01:39.724 --> 00:01:43.294
+what we've done is we've actually re-implemented that API from scratch.
+
+00:01:43.295 --> 00:01:45.920
+So now, not only do you know how to use connect in
+
+00:01:45.920 --> 00:01:48.590
+order to connect a React component to your Redux store,
+
+00:01:48.590 --> 00:01:51.344
+but you also understand how it works under the hood.
+
+00:01:51.344 --> 00:01:57.920
+And not only do you know how to use Provider in order to stick your store on Context,
+
+00:01:57.920 --> 00:02:02.344
+but you also know what it looks like under the hood because you literally built it out.
+
+00:02:02.344 --> 00:02:05.819
+So, if you want to find out more about this react-redux package,
+
+00:02:05.819 --> 00:02:08.824
+just google react-redux, and you'll notice here that again,
+
+00:02:08.824 --> 00:02:12.004
+it is the official bindings for React and Redux.
+
+00:02:12.004 --> 00:02:14.974
+So if you are ever using a React app with Redux,
+
+00:02:14.974 --> 00:02:20.639
+almost 100 percent of the time you will be using this react-redux library.
+
+00:02:20.639 --> 00:02:23.549
+And again, what's so cool about it is the API is pretty small.
+
+00:02:23.550 --> 00:02:25.055
+You'll notice here that we just have
+
+00:02:25.055 --> 00:02:28.235
+a Provider component parsing at the store as well as connect,
+
+00:02:28.235 --> 00:02:32.850
+and we already know how to use both of those because we literally re-implemented them.
+

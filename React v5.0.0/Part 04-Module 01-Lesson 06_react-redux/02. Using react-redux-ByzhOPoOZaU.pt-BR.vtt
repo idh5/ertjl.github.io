@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:03.167
+Anteriormente, construímos
+uma bela abstração
+
+00:00:03.200 --> 00:00:04.667
+entre o React e o Redux
+
+00:00:04.700 --> 00:00:07.700
+para facilitar
+trabalhar com ambos.
+
+00:00:07.733 --> 00:00:09.967
+Temos
+este componente Provider,
+
+00:00:10.000 --> 00:00:13.300
+que é responsável
+por adicionar a Store à Context,
+
+00:00:13.333 --> 00:00:16.800
+e criamos um componente Connect
+de ordem superior,
+
+00:00:16.833 --> 00:00:20.000
+que renderiza
+um componente específico
+
+00:00:20.033 --> 00:00:23.200
+e passa os dados
+necessários ao componente
+
+00:00:23.233 --> 00:00:25.167
+da Store Redux.
+
+00:00:25.200 --> 00:00:28.867
+Esse é um padrão
+muito comum.
+
+00:00:28.900 --> 00:00:33.200
+Na verdade, é tão comum
+que é uma biblioteca
+
+00:00:33.967 --> 00:00:39.167
+e faz parte das recomendações
+de uso do React e do Redux juntos.
+
+00:00:39.200 --> 00:00:43.933
+Agora incluímos o pacote react-redux
+no aplicativo,
+
+00:00:43.967 --> 00:00:47.167
+que adicionará a propriedade
+react-redux no escopo global,
+
+00:00:47.200 --> 00:00:50.300
+como já vimos algumas vezes
+com o Redux e o React.
+
+00:00:50.333 --> 00:00:52.733
+Agora,
+
+00:00:52.767 --> 00:00:55.767
+vamos até aqui...
+
+00:00:55.800 --> 00:00:58.767
+Quando chegarmos lá,
+
+00:00:59.533 --> 00:01:04.133
+poderemos remover
+a invocação createContext,
+
+00:01:04.733 --> 00:01:07.767
+poderemos remover
+a implementação Connect
+
+00:01:10.367 --> 00:01:13.500
+e também poderemos remover
+o Provider,
+
+00:01:13.533 --> 00:01:15.600
+porque,
+como você deve supor,
+
+00:01:15.633 --> 00:01:17.133
+essas três coisas, agora,
+
+00:01:17.166 --> 00:01:20.667
+virão no pacote react-redux.
+
+00:01:20.700 --> 00:01:24.067
+Em vez de usarmos
+o nosso Provider,
+
+00:01:24.100 --> 00:01:26.433
+poderemos digitar
+ReactRedux.Provider.
+
+00:01:26.467 --> 00:01:28.933
+Agora, sempre
+que usarmos connect,
+
+00:01:28.967 --> 00:01:31.933
+em vez de usarmos o componente
+Connect de ordem superior,
+
+00:01:31.967 --> 00:01:35.100
+usaremos ReactRedux.connect.
+
+00:01:35.133 --> 00:01:36.700
+Então agora,
+
+00:01:36.733 --> 00:01:39.867
+em vez de mostrar
+como utilizar a nova API,
+
+00:01:39.900 --> 00:01:43.367
+nós reimplementamos
+a API do começo.
+
+00:01:43.400 --> 00:01:47.467
+Além de saber como usar a connect
+para ligar o componente React
+
+00:01:47.500 --> 00:01:48.767
+com a Store Redux,
+
+00:01:48.800 --> 00:01:51.667
+também vimos como isso funciona
+nos bastidores.
+
+00:01:51.700 --> 00:01:55.700
+Além de saber
+como usar Provider
+
+00:01:55.733 --> 00:01:57.933
+para adicionar a Store
+à Context,
+
+00:01:57.966 --> 00:02:00.433
+você também entendeu
+como isso funciona,
+
+00:02:00.467 --> 00:02:02.367
+pois construímos tudo.
+
+00:02:02.400 --> 00:02:05.900
+Se quiser saber mais
+sobre o pacote react-redux,
+
+00:02:05.933 --> 00:02:08.200
+basta pesquisar "react-redux"
+no Google,
+
+00:02:08.233 --> 00:02:12.133
+e veremos que é a ligação oficial
+do React com o Redux.
+
+00:02:12.166 --> 00:02:15.033
+Se você for usar um aplicativo React
+com Redux,
+
+00:02:15.067 --> 00:02:20.667
+em quase 100% das vezes,
+você usará a biblioteca react-redux.
+
+00:02:20.700 --> 00:02:23.433
+O legal disso
+é que a API é bem pequena.
+
+00:02:23.467 --> 00:02:27.200
+Só há um componente Provider
+passando uma Store
+
+00:02:27.233 --> 00:02:28.467
+e a connect.
+
+00:02:28.500 --> 00:02:32.033
+E já sabemos como usar os dois,
+pois nós os reimplementamos.
+

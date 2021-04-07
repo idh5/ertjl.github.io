@@ -1,0 +1,30 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.325 --> 00:00:04.941
+Acho que está claro que o Redux
+não está acoplado ao React.
+
+00:00:04.983 --> 00:00:07.531
+Podemos construir um aplicativo
+usando o Redux
+
+00:00:07.573 --> 00:00:09.315
+em qualquer biblioteca Vue.
+
+00:00:09.357 --> 00:00:12.483
+Dito isso, o Redux foi construído
+pensando no React
+
+00:00:12.525 --> 00:00:14.645
+e podemos dar alguns passos
+no aplicativo
+
+00:00:14.687 --> 00:00:17.162
+para tornar a experiência
+entre as tecnologias
+
+00:00:17.204 --> 00:00:18.451
+um pouco mais fluida.
+

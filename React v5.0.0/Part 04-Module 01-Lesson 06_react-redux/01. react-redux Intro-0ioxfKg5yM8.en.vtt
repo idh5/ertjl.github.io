@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.144
+At this point, it's hopefully pretty clear that Redux is not coupled to React at all.
+
+00:00:05.144 --> 00:00:09.439
+You can build a fully-fledged app using Redux at any Vue library.
+
+00:00:09.439 --> 00:00:12.464
+With that said, Redux was built with React in mind,
+
+00:00:12.464 --> 00:00:15.089
+and there are some steps we can take in our app to make
+
+00:00:15.089 --> 00:00:18.899
+the experience between the two technologies a little more seamless.
+

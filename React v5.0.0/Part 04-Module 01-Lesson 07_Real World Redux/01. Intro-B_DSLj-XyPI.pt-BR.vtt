@@ -1,0 +1,35 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.266 --> 00:00:03.570
+Até agora, cobrimos todos
+os dispositivos do Redux
+
+00:00:03.603 --> 00:00:05.739
+construindo
+um aplicativo de tarefas simples.
+
+00:00:05.772 --> 00:00:08.408
+Este projeto foi ótimo
+para nosso aprendizado,
+
+00:00:08.441 --> 00:00:09.976
+mas ele é rudimentar
+
+00:00:10.010 --> 00:00:13.646
+e não representa a complexidade
+de um projeto do mundo real.
+
+00:00:13.680 --> 00:00:16.950
+Então, usando o que aprendemos
+até agora,
+
+00:00:16.983 --> 00:00:20.487
+Redux, React,
+o vínculo React-Redux e middleware,
+
+00:00:20.520 --> 00:00:23.857
+construiremos um aplicativo
+do mundo real, mais complexo.
+

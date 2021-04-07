@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.903
+E a última funcionalidade
+que queremos mover é
+
+00:00:03.937 --> 00:00:05.805
+a invocação de createStore,
+
+00:00:05.839 --> 00:00:09.776
+assim como prover uma Store
+para o componente Provider.
+
+00:00:09.809 --> 00:00:14.247
+Então, vamos fazer tudo isto dentro
+do arquivo index.js aqui.
+
+00:00:14.280 --> 00:00:16.416
+Vamos importar algumas coisas.
+
+00:00:16.449 --> 00:00:18.551
+Vamos pegar a root reducer,
+
+00:00:18.585 --> 00:00:21.454
+que vai vir da pasta reducers.
+
+00:00:21.488 --> 00:00:23.723
+E, se você fizer algo assim,
+
+00:00:23.757 --> 00:00:27.327
+a reducer será
+o que o arquivo index.js
+
+00:00:27.360 --> 00:00:29.729
+exportar dentro
+da pasta reducers,
+
+00:00:29.763 --> 00:00:35.001
+que vai ser nossa invocação
+de reducers combinadas.
+
+00:00:35.035 --> 00:00:38.038
+Então, vamos usar o mesmo padrão
+para o middleware,
+
+00:00:38.071 --> 00:00:41.608
+pegando o que vier
+do arquivo index.js
+
+00:00:41.641 --> 00:00:43.143
+na pasta middleware,
+
+00:00:43.176 --> 00:00:47.047
+que será nossa invocação
+de applyMiddleware.
+
+00:00:47.113 --> 00:00:51.818
+E precisamos pegar
+o componente Provider,
+
+00:00:51.851 --> 00:00:53.820
+que está vindo de react-redux.
+
+00:00:53.853 --> 00:00:56.556
+E, por último,
+vamos pegar a createStore,
+
+00:00:56.589 --> 00:00:59.592
+que virá da própria redux.
+
+00:00:59.626 --> 00:01:02.028
+Agora nós podemos criar
+a Store.
+
+00:01:02.062 --> 00:01:05.532
+Podemos fazer isto passando
+duas coisas para a createStore:
+
+00:01:05.565 --> 00:01:08.535
+uma reducer e um middleware.
+
+00:01:08.568 --> 00:01:12.405
+Agora, quando usamos
+ReactDOM.render,
+
+00:01:12.439 --> 00:01:15.572
+o que queremos é...
+
+00:01:15.606 --> 00:01:20.347
+queremos empacotá-los
+dentro do componente Provider.
+
+00:01:20.380 --> 00:01:24.584
+Queremos passar a Store
+para o Provider.
+
+00:01:26.753 --> 00:01:31.558
+Provavelmente teremos
+alguns erros aqui por mover tudo.
+
+00:01:31.591 --> 00:01:33.193
+Vamos consertá-los.
+
+00:01:33.226 --> 00:01:35.395
+Parece que o primeiro erro é
+que RECEIVE_DATA
+
+00:01:35.428 --> 00:01:38.631
+não está definida dentro
+de goals reducer.
+
+00:01:38.665 --> 00:01:41.568
+Então provavelmente esquecemos
+de importá-la.
+
+00:01:41.601 --> 00:01:42.869
+Esquecemos mesmo.
+
+00:01:42.902 --> 00:01:46.245
+Precisamos pegar RECEIVE_DATA,
+
+00:01:46.279 --> 00:01:49.476
+que virá de actions/shared.
+
+00:01:49.509 --> 00:01:52.846
+Me pergunto se esquecemos de fazer
+o mesmo dentro da todos reducer.
+
+00:01:52.879 --> 00:01:56.416
+Parece que esquecemos.
+
+00:01:56.449 --> 00:02:00.125
+Vamos pegar RECEIVE_DATA
+
+00:02:00.159 --> 00:02:03.189
+de actions/shared.
+
+00:02:04.817 --> 00:02:07.560
+Acho que não cometemos
+este erro em loading.
+
+00:02:07.594 --> 00:02:09.029
+Não cometemos. Está bem aqui.
+
+00:02:09.062 --> 00:02:11.631
+Vamos ver se o aplicativo
+está funcionando.
+
+00:02:11.664 --> 00:02:12.932
+Aqui vai.
+
+00:02:12.966 --> 00:02:16.005
+Agora temos...
+
+00:02:17.381 --> 00:02:19.472
+o mesmo aplicativo
+que tínhamos antes.
+
+00:02:19.506 --> 00:02:22.442
+Podemos remover
+itens diferentes,
+
+00:02:22.475 --> 00:02:26.246
+podemos alternar afazeres,
+adicionar novas metas,
+
+00:02:28.314 --> 00:02:32.819
+e tudo está funcionando
+como funcionava antes.
+
+00:02:32.852 --> 00:02:37.057
+Mas agora, em vez de ter tudo
+em um único arquivo,
+
+00:02:37.090 --> 00:02:41.661
+movemos tudo
+para o aplicativo principal
+
+00:02:41.695 --> 00:02:44.497
+que criamos
+com o aplicativo createReact.
+

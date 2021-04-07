@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+So now that we are dispatching a few actions here,
+
+00:00:03.180 --> 00:00:05.580
+we need to actually set up our reducers to be able to
+
+00:00:05.580 --> 00:00:08.245
+modify the state based on those actions.
+
+00:00:08.244 --> 00:00:12.509
+So what we will do is let's create a new folder here and we will call
+
+00:00:12.509 --> 00:00:16.649
+it reducers and inside of here we are going to have a few different files.
+
+00:00:16.649 --> 00:00:20.529
+We will have users.js which will be our users reducer,
+
+00:00:20.530 --> 00:00:23.600
+tweets.js which will be our tweets reducer,
+
+00:00:23.600 --> 00:00:26.645
+and then we also need a reducer to handle
+
+00:00:26.644 --> 00:00:30.109
+our authedUser so we will have an authedUser.js then lastly,
+
+00:00:30.109 --> 00:00:33.810
+what we want to have is an index.js file inside of
+
+00:00:33.810 --> 00:00:37.725
+here which will exports our invocation to combine reducers.
+
+00:00:37.725 --> 00:00:40.640
+So first let's do our users.js file.
+
+00:00:40.640 --> 00:00:45.530
+We want to import the receive users constant which is going
+
+00:00:45.530 --> 00:00:50.299
+to come from action/users and now as
+
+00:00:50.299 --> 00:00:54.979
+the default export what we want to do is export this user's
+
+00:00:54.979 --> 00:00:56.824
+reducer which will set
+
+00:00:56.825 --> 00:01:01.080
+the default state to an empty object and then it will take in an action.
+
+00:01:01.079 --> 00:01:05.890
+So we want to say switch on action.type as we've done before,
+
+00:01:05.890 --> 00:01:08.980
+when the case is receive user,
+
+00:01:08.980 --> 00:01:11.814
+this is going to receive users with an
+
+00:01:11.814 --> 00:01:16.719
+S. So when the case is receive users thn what we want to do is
+
+00:01:16.719 --> 00:01:20.799
+the new state of our users slice of
+
+00:01:20.799 --> 00:01:22.950
+our state is going to have everything
+
+00:01:22.950 --> 00:01:25.519
+that was on that which will really just be an empty object,
+
+00:01:25.519 --> 00:01:32.334
+as well as all of the users which we are grabbing from the action,
+
+00:01:32.334 --> 00:01:37.804
+and then the default state is just going to return the state.
+
+00:01:37.805 --> 00:01:39.310
+So that looks good for
+
+00:01:39.310 --> 00:01:42.040
+our users reducer and I'm going
+
+00:01:42.040 --> 00:01:45.100
+to copy this because our tweets reducer is going to be similar.
+
+00:01:45.099 --> 00:01:50.659
+Instead of receive users what we're going to have is received tweets as
+
+00:01:50.659 --> 00:01:56.310
+the action type which is going to come from action/tweets,
+
+00:01:56.310 --> 00:01:59.105
+so now we have our tweets reducer here.
+
+00:01:59.105 --> 00:02:01.010
+When we receive tweets,
+
+00:02:01.010 --> 00:02:04.490
+we want to merge all of those tweets onto
+
+00:02:04.489 --> 00:02:08.028
+this object and then as always we return
+
+00:02:08.028 --> 00:02:12.549
+the state that was passed in when none of these cases match.
+
+00:02:12.550 --> 00:02:17.180
+Now inside of our authedUser reducer,
+
+00:02:17.180 --> 00:02:18.780
+we're going to do something similar,
+
+00:02:18.780 --> 00:02:23.294
+where you want to import the set authedUser action type,
+
+00:02:23.294 --> 00:02:28.929
+coming from action/authedUser and then as default export,
+
+00:02:28.930 --> 00:02:32.155
+we want to export authedUser.
+
+00:02:32.155 --> 00:02:36.949
+State will initially be null so we will use default parameters here to set it
+
+00:02:36.949 --> 00:02:41.179
+equal to null when this function is invoked with the state of undefined,
+
+00:02:41.180 --> 00:02:44.319
+which it will be the first time that it's invoked,
+
+00:02:44.319 --> 00:02:50.159
+and then we want to switch on action.type when the case is set authedUser,
+
+00:02:50.159 --> 00:02:52.935
+what we want to do is return
+
+00:02:52.935 --> 00:02:57.245
+action.id and the default case as always again we just return the state.
+
+00:02:57.245 --> 00:03:01.129
+So now what we have is our three different reducers which are handling all of
+
+00:03:01.129 --> 00:03:07.344
+the action types that we saw being dispatched inside of our handle initial data function.
+
+00:03:07.344 --> 00:03:10.909
+So what we want to do inside of our index.js
+
+00:03:10.909 --> 00:03:15.245
+file is we want to import combined producers,
+
+00:03:15.245 --> 00:03:16.939
+as well as all of
+
+00:03:16.939 --> 00:03:22.560
+the different reducers that we've just barely made so we will grab authedUser,
+
+00:03:22.569 --> 00:03:29.039
+as well as users, and finally tweets.
+
+00:03:29.689 --> 00:03:35.539
+And now what we want to do as the default export is export
+
+00:03:35.539 --> 00:03:38.479
+an invocation to combine reducers passing it all of
+
+00:03:38.479 --> 00:03:41.729
+our different reducers which are authedUsers,
+
+00:03:41.729 --> 00:03:44.729
+users, as well as tweets-
+

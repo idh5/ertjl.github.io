@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.660
+The code in our project is all located in one file.
+
+00:00:03.660 --> 00:00:05.804
+This has been nice for learning purposes,
+
+00:00:05.804 --> 00:00:09.314
+but it's obviously not the best approach for a real-world app.
+
+00:00:09.314 --> 00:00:12.509
+Let's refactor our app to use Create-React-App,
+
+00:00:12.509 --> 00:00:16.429
+so we can see one approach to folder structure with React and Redux.
+
