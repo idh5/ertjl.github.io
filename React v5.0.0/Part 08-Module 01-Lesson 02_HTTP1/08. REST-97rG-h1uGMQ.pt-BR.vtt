@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.125 --> 00:00:01.333
+Ao escrever apps da web,
+
+00:00:01.366 --> 00:00:04.208
+encontraremos APIs
+com as quais vamos interagir.
+
+00:00:04.241 --> 00:00:06.208
+Algumas podem ser
+APIs JavaScript,
+
+00:00:06.241 --> 00:00:09.250
+o que exige chamar
+uma função em JavaScript.
+
+00:00:09.283 --> 00:00:11.250
+Outras APIs são fornecidas
+por terceiros
+
+00:00:11.283 --> 00:00:14.292
+e precisam que você faça
+a requisição HTTP.
+
+00:00:14.333 --> 00:00:17.417
+Uma API RESTful permite
+um design chamado REST,
+
+00:00:17.450 --> 00:00:20.083
+que interage bem com o HTTP.
+
+00:00:20.125 --> 00:00:22.585
+REST é "transferência
+de estado representacional".
+
+00:00:22.625 --> 00:00:25.458
+Mas esse nome
+não é descritivo.
+
+00:00:25.491 --> 00:00:28.333
+Algumas APIs seguem
+o padrão do REST.
+
+00:00:28.366 --> 00:00:31.083
+Vamos analisar o conceito.
+
+00:00:31.116 --> 00:00:33.208
+As entidades básicas
+são coleções
+
+00:00:33.241 --> 00:00:36.083
+e objetos dentro
+dessas coleções.
+
+00:00:36.116 --> 00:00:39.916
+O padrão para buscar itens
+de coleções é a requisição GET,
+
+00:00:39.958 --> 00:00:43.207
+usando o nome da coleção
+e o nome do item da coleção.
+
+00:00:43.375 --> 00:00:45.752
+Por exemplo, se eu quisesse
+procurar o Richard,
+
+00:00:45.785 --> 00:00:47.333
+eu mandaria uma requisição,
+
+00:00:47.375 --> 00:00:50.625
+e o servidor pegaria um registro
+com os dados do Richard.
+
+00:00:51.042 --> 00:00:53.208
+Para atualizar
+os dados do registro,
+
+00:00:53.250 --> 00:00:57.292
+usaria PUT e inseriria
+a nova informação à requisição.
+
+00:00:57.333 --> 00:01:01.375
+Todo GET subsequente
+carregará o registro atualizado.
+
+00:01:02.083 --> 00:01:05.042
+A requisição POST
+é similar à PUT.
+
+00:01:05.083 --> 00:01:09.292
+Em vez de atualizar registros
+existentes, elas criam novos.
+
+00:01:09.458 --> 00:01:13.417
+Geralmente, você não dá o nome
+sob o qual o registro é criado.
+
+00:01:13.458 --> 00:01:16.250
+O servidor faz isso
+para você.
+
+00:01:16.283 --> 00:01:21.167
+A resposta à requisição POST é
+redirecionada ao novo registro.
+
+00:01:21.208 --> 00:01:24.083
+E, finalmente,
+DELETE é o que você imagina.
+
+00:01:24.250 --> 00:01:27.167
+Ela remove itens da coleção.
+

@@ -1,0 +1,44 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.534 --> 00:00:02.436
+Precisamos criar
+uma nova baleia,
+
+00:00:02.469 --> 00:00:05.072
+ou seja, precisamos adicionar
+algo a uma coleção.
+
+00:00:05.105 --> 00:00:07.341
+Isto indica que devemos usar
+o método POST,
+
+00:00:07.407 --> 00:00:10.410
+então colocamos "A"
+nesta primeira lacuna.
+
+00:00:10.444 --> 00:00:12.346
+O site tem uma lista
+de animais,
+
+00:00:12.379 --> 00:00:15.949
+o que indica que a coleção
+em que trabalharemos será "animals".
+
+00:00:15.983 --> 00:00:18.619
+Assim, colocamos "D"
+na segunda lacuna.
+
+00:00:18.652 --> 00:00:22.122
+O novo elemento da coleção
+deve ser uma baleia,
+
+00:00:22.155 --> 00:00:25.759
+então, devemos adicionar uma barra
+e a palavra "whale" ao caminho.
+
+00:00:25.792 --> 00:00:29.229
+As duas últimas lacunas
+são preenchidas com "F" e "G".
+

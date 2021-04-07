@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.465
+Here's the netcat command I use to connect to the server.
+
+00:00:03.465 --> 00:00:05.450
+Running it doesn't produce any errors,
+
+00:00:05.450 --> 00:00:07.515
+so I've connected successfully.
+
+00:00:07.515 --> 00:00:11.085
+The request we need to make needs a couple of things.
+
+00:00:11.085 --> 00:00:13.440
+they used Udacity verb.
+
+00:00:13.440 --> 00:00:17.880
+It has to include the host header since it's required in HDTV one.
+
+00:00:17.880 --> 00:00:20.740
+We need this header and it can't be empty.
+
+00:00:20.740 --> 00:00:23.075
+And the last header is date.
+
+00:00:23.075 --> 00:00:25.355
+And this is the correct code.
+
+00:00:25.355 --> 00:00:29.255
+As web developers, we don't often directly interact with sending
+
+00:00:29.255 --> 00:00:34.380
+HTTP requests but it's important to know how they work and how they affect our apps.
+

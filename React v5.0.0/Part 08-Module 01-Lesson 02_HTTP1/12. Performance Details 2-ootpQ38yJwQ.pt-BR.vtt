@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.600 --> 00:00:02.967
+Toda vez que o navegador
+se conecta a um servidor
+
+00:00:03.000 --> 00:00:04.100
+e faz uma solicitação,
+
+00:00:04.133 --> 00:00:07.433
+precisa passar pelo processo
+de handshake do TCP.
+
+00:00:07.467 --> 00:00:10.333
+Esse handshake triplo
+consome muito tempo.
+
+00:00:10.367 --> 00:00:12.967
+Para contrabalançar
+o custo dos handshakes,
+
+00:00:13.000 --> 00:00:17.367
+HTTP/1.1 introduziu o conceito
+"Keep Alive".
+
+00:00:17.400 --> 00:00:20.100
+Se o cliente configura o header
+da conexão como "keep-alive",
+
+00:00:20.133 --> 00:00:24.800
+o servidor não fechará a conexão
+após conseguir a resposta,
+
+00:00:24.833 --> 00:00:28.367
+permitindo que o cliente
+reutilize a conexão estabelecida
+
+00:00:28.400 --> 00:00:30.400
+para fazer outras solicitações.
+
+00:00:30.433 --> 00:00:33.467
+Lembre-se de que você ainda pode
+fazer solicitações
+
+00:00:33.500 --> 00:00:37.700
+antes que a resposta de um pedido
+tenha sido totalmente transferida.
+
+00:00:37.733 --> 00:00:39.933
+Isso obriga os desenvolvedores
+
+00:00:39.967 --> 00:00:43.567
+a manterem o mínimo possível
+de recursos adicionais,
+
+00:00:43.600 --> 00:00:46.933
+utilizando da melhor forma que podem
+as seis conexões.
+
+00:00:46.967 --> 00:00:49.367
+É por isso que arquivos
+de JavaScript e CSS
+
+00:00:49.400 --> 00:00:51.567
+são normalmente
+concatenados em conjuntos,
+
+00:00:51.600 --> 00:00:54.500
+e por isso imagens costumam
+ficar juntas em sprites.
+
+00:00:54.533 --> 00:00:57.200
+Conjuntos podem ser obtidos
+com apenas uma solicitação.
+

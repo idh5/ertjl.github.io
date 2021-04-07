@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.540
+As developers, both you and I use HTTP everyday.
+
+00:00:03.540 --> 00:00:07.290
+We issue get and post requests when using Firebase that shows SDK
+
+00:00:07.290 --> 00:00:11.340
+or just when using the browsers on our tablets or mobile phones to look at websites.
+
+00:00:11.340 --> 00:00:14.040
+To be a good fraudulent engineer creating web apps,
+
+00:00:14.040 --> 00:00:16.065
+merely using HTTP is not enough.
+
+00:00:16.065 --> 00:00:19.110
+You will need a deeper understanding to see why certain techniques are
+
+00:00:19.110 --> 00:00:23.135
+being used and why others either don't work or aren't recommended.
+
+00:00:23.135 --> 00:00:26.695
+In this lesson, we'll start with a look at the first version of HTTP.
+
+00:00:26.695 --> 00:00:28.770
+We'll examine the get and the post methods,
+
+00:00:28.770 --> 00:00:32.280
+and a few other useful methods you might not be as familiar with.
+
+00:00:32.280 --> 00:00:36.480
+We'll look at a variety of headers and how API's are designed to work well with the web.
+
+00:00:36.480 --> 00:00:37.855
+By the end of this lesson,
+
+00:00:37.855 --> 00:00:40.620
+you'll be able to debug HTTP request response pairs on
+
+00:00:40.620 --> 00:00:44.000
+the wire and will understand what a RESTful API is.
+

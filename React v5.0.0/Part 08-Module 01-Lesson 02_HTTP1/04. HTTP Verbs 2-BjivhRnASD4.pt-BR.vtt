@@ -1,0 +1,117 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:03.967
+Uma requisição começa
+com um método HTTP,
+
+00:00:04.000 --> 00:00:07.967
+com o caminho e com a versão
+do protocolo do HTTP.
+
+00:00:08.000 --> 00:00:11.033
+Esta requisição
+usa o método HEAD.
+
+00:00:11.067 --> 00:00:14.967
+O HEAD permite pegar
+o cabeçalho de um arquivo
+
+00:00:15.000 --> 00:00:18.333
+sem precisar
+do arquivo todo.
+
+00:00:18.433 --> 00:00:23.000
+Assim verificamos se há espaço
+para armazenar a resposta
+
+00:00:23.033 --> 00:00:27.033
+ou se a versão cache da página
+ainda está atualizada.
+
+00:00:27.067 --> 00:00:30.433
+Então o navegador evita baixar
+um arquivo novamente
+
+00:00:30.467 --> 00:00:34.033
+caso já tenha o mais recente
+no cache.
+
+00:00:34.067 --> 00:00:36.067
+Na aba "Network"
+da DevTools,
+
+00:00:36.267 --> 00:00:40.067
+você não verá requisições HEAD
+ao visitar um site.
+
+00:00:40.267 --> 00:00:43.033
+O problema em usar HEAD
+para validar cache
+
+00:00:43.067 --> 00:00:45.433
+é o trabalho dobrado.
+
+00:00:45.533 --> 00:00:50.000
+Você faz uma requisição HEAD
+e pode receber uma GET depois.
+
+00:00:50.067 --> 00:00:53.067
+O par requisição-resposta,
+ou round-trip,
+
+00:00:53.267 --> 00:00:55.533
+demora para completar.
+
+00:00:55.567 --> 00:00:58.700
+Com o número de acessos
+aos sites,
+
+00:00:58.833 --> 00:01:02.167
+enviar uma requisição HEAD
+antes da possível GET
+
+00:01:02.200 --> 00:01:05.267
+diminui
+o carregamento do site.
+
+00:01:05.333 --> 00:01:09.033
+Há formas de atenuar
+o custo da round-trip.
+
+00:01:09.067 --> 00:01:12.667
+Falaremos disso depois,
+mas agora basta saber
+
+00:01:12.700 --> 00:01:16.433
+que queremos que o site faça
+poucas round-trips,
+
+00:01:16.533 --> 00:01:20.033
+então temos que diminuir
+o número de requisições.
+
+00:01:20.200 --> 00:01:23.000
+O último método comum
+é o OPTIONS.
+
+00:01:23.033 --> 00:01:27.867
+O OPTIONS fornece uma lista
+de métodos aceitos na URL,
+
+00:01:28.000 --> 00:01:30.033
+mas nem todo servidor
+aceita isso.
+
+00:01:30.067 --> 00:01:33.067
+O método OPTIONS
+pode parecer estranho,
+
+00:01:33.100 --> 00:01:36.000
+mas será importante
+quando falarmos de cursos,
+
+00:01:36.033 --> 00:01:38.200
+que abordaremos depois.
+

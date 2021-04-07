@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:03.704
+Usei este comando Netcat
+para me conectar ao servidor.
+
+00:00:03.737 --> 00:00:07.541
+A execução não gerou erros.
+Então me conectei com sucesso.
+
+00:00:07.975 --> 00:00:11.144
+A nossa requisição precisa
+de algumas coisas.
+
+00:00:11.178 --> 00:00:13.213
+Precisa do verbo UDACITY.
+
+00:00:13.247 --> 00:00:17.518
+Precisa do cabeçalho HOST,
+como manda o HTTP1.
+
+00:00:17.985 --> 00:00:21.121
+Este cabeçalho
+não pode estar vazio.
+
+00:00:21.154 --> 00:00:23.056
+E o último cabeçalho
+é a data.
+
+00:00:23.490 --> 00:00:25.459
+Este é o código correto.
+
+00:00:25.726 --> 00:00:27.127
+Como programadores da web,
+
+00:00:27.160 --> 00:00:30.731
+nem sempre interagimos
+enviando requisições HTTP.
+
+00:00:30.797 --> 00:00:32.866
+Mas precisamos saber
+como funcionam
+
+00:00:32.900 --> 00:00:35.002
+e afetam os aplicativos.
+

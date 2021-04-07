@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.250 --> 00:00:03.417
+Escrevemos a solicitação
+diretamente para a rede
+
+00:00:03.458 --> 00:00:07.208
+e recebemos a resposta do servidor
+no momento em que foi enviada.
+
+00:00:07.250 --> 00:00:09.458
+Impactante, não acha?
+
+00:00:09.500 --> 00:00:12.417
+É como se não houvesse
+um software entre nós e os bytes,
+
+00:00:12.458 --> 00:00:16.250
+mas ao mesmo tempo há muita coisa
+que não vemos acontecendo,
+
+00:00:16.292 --> 00:00:21.375
+e isso impacta na velocidade
+de processamento da solicitação.
+
+00:00:22.167 --> 00:00:25.333
+Se estiver familiarizado
+com arquitetura de rede,
+
+00:00:25.375 --> 00:00:29.042
+talvez saiba que HTTP não é tudo,
+
+00:00:29.083 --> 00:00:30.458
+mas apenas o protocolo.
+
+00:00:30.500 --> 00:00:32.333
+Para entender melhor
+como funciona:
+
+00:00:32.375 --> 00:00:37.458
+estamos usando HTTP sobre TCP
+sobre IP sobre Ethernet.
+
+00:00:37.500 --> 00:00:40.042
+Provavelmente.
+Em sua maior parte.
+
+00:00:40.083 --> 00:00:43.333
+Talvez. Não precisamos
+entender todas essas camadas,
+
+00:00:43.375 --> 00:00:45.167
+mas o TCP, especialmente,
+
+00:00:45.208 --> 00:00:48.417
+tem um grande impacto na forma
+como estruturamos as solicitações
+
+00:00:48.458 --> 00:00:52.333
+para que funcionem bem,
+e nos permite ver isso de perto.
+
+00:00:52.375 --> 00:00:56.208
+O protocolo da internet permite
+a comunicação com outras máquinas,
+
+00:00:56.250 --> 00:00:58.083
+enquanto o TCP possibilita
+
+00:00:58.125 --> 00:01:02.083
+que haja múltiplos fluxos de
+dados entre essas máquinas.
+
+00:01:02.125 --> 00:01:05.083
+Os fluxos são diferenciados
+pelos números das portas.
+
+00:01:05.125 --> 00:01:08.500
+O protocolo TCP também garante
+que nada se perca no caminho
+
+00:01:09.042 --> 00:01:11.292
+e que tudo chegue
+na ordem correta.
+
+00:01:11.333 --> 00:01:15.208
+Tudo isso requer precauções
+e custa tempo e recursos.
+
+00:01:15.250 --> 00:01:18.042
+Abrir novas conexões
+é especialmente custoso,
+
+00:01:18.083 --> 00:01:19.417
+já que o handshake do TCP,
+
+00:01:19.450 --> 00:01:24.250
+que garante que ambas as máquinas
+saibam do novo canal de comunicação,
+
+00:01:24.292 --> 00:01:28.250
+precisa ser executado,
+indo e voltando duas vezes.
+
+00:01:28.292 --> 00:01:30.333
+Se estiver usando HTTPS,
+
+00:01:30.375 --> 00:01:35.042
+o handshake do TLS adicional
+também precisará ser executado.
+
+00:01:35.083 --> 00:01:37.333
+Se não conhece HTTPS e TLS,
+
+00:01:37.375 --> 00:01:40.417
+não vá embora, porque falaremos
+sobre eles na próxima aula.
+
+00:01:40.458 --> 00:01:45.292
+Quando tudo isso terminar,
+o protocolo HTTP pode assumir.
+
+00:01:46.083 --> 00:01:48.876
+Bloqueio HOL é como um funil
+no desempenho de sites.
+
+00:01:48.915 --> 00:01:52.334
+Navegadores conseguem abrir até seis
+conexões paralelas, o que ajuda,
+
+00:01:52.367 --> 00:01:53.636
+mas não é a melhor saída.
+
+00:01:53.669 --> 00:01:57.125
+Veremos depois como HTTP/2
+conserta esse problema.
+

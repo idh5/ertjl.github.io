@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.560
+When writing web apps,
+
+00:00:01.560 --> 00:00:04.445
+you will encounter a lot of API's you'll have to talk to.
+
+00:00:04.445 --> 00:00:06.815
+Some of them might be JavaScript API's that don't
+
+00:00:06.815 --> 00:00:09.645
+involve much more than calling a function in JavaScript,
+
+00:00:09.645 --> 00:00:14.600
+other API's are provided by third parties and require you to make HTP requests yourself.
+
+00:00:14.600 --> 00:00:17.150
+A RESTful API is one that follows a design
+
+00:00:17.150 --> 00:00:20.225
+called REST that works especially well with HTTP.
+
+00:00:20.225 --> 00:00:22.895
+REST stands for REpresentational State Transfer,
+
+00:00:22.895 --> 00:00:26.350
+but let's be honest that isn't really a very descriptive name.
+
+00:00:26.350 --> 00:00:28.880
+Not all API's follow the REST pattern but many do.
+
+00:00:28.880 --> 00:00:31.485
+So, let's take a look at the underlying concept.
+
+00:00:31.485 --> 00:00:36.490
+The basic entities are collections and objects inside those collections.
+
+00:00:36.490 --> 00:00:40.040
+The general pattern to retrieve items from collections is using a GET request
+
+00:00:40.040 --> 00:00:43.910
+with both the &lt;collection name&gt; and the unique &lt; item name&gt; in that collection.
+
+00:00:43.910 --> 00:00:45.875
+For example, if I wanted to look up Richard,
+
+00:00:45.875 --> 00:00:48.110
+I'd send this request and the server would
+
+00:00:48.110 --> 00:00:50.850
+get the record containing the data about Richard.
+
+00:00:50.850 --> 00:00:53.600
+If I wanted to update the data in that record,
+
+00:00:53.600 --> 00:00:57.975
+I'd use a PUT request and append the updated information to the request.
+
+00:00:57.975 --> 00:01:01.915
+Every subsequent GET request should now yield the updated record.
+
+00:01:01.915 --> 00:01:04.950
+A POST request is used very similarly with PUT,
+
+00:01:04.950 --> 00:01:07.085
+but instead of updating existing records,
+
+00:01:07.085 --> 00:01:10.035
+you use it to create new records.
+
+00:01:10.035 --> 00:01:14.100
+Notice that you do not provide the name under which the new record will be created,
+
+00:01:14.100 --> 00:01:16.750
+but let the server make that choice for you.
+
+00:01:16.750 --> 00:01:21.340
+The response to the POST request is usually a redirect to the newly created record.
+
+00:01:21.340 --> 00:01:24.645
+And lastly DELETE is just what you think it is.
+
+00:01:24.645 --> 00:01:29.160
+It removes items from the collection.
+

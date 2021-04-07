@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.805
+Okay. Let's go through this case-by-case.
+
+00:00:02.805 --> 00:00:04.070
+For this first one,
+
+00:00:04.070 --> 00:00:07.980
+the client wants to check when logo.png was last modified.
+
+00:00:07.980 --> 00:00:10.860
+We know that the last modified header has that information.
+
+00:00:10.860 --> 00:00:14.130
+Since the client is not interested in actual content of the file,
+
+00:00:14.130 --> 00:00:16.365
+a header request is appropriate here.
+
+00:00:16.365 --> 00:00:20.880
+Forms only allow two methods: GET and POST.
+
+00:00:20.880 --> 00:00:22.670
+Since we are sending data,
+
+00:00:22.670 --> 00:00:25.020
+we need to use POST as the method here.
+
+00:00:25.020 --> 00:00:27.861
+Whenever you want to retrieve the contents of the file,
+
+00:00:27.861 --> 00:00:29.465
+you need to use GET.
+
+00:00:29.465 --> 00:00:33.885
+All of the verbs use the response body for something else or not at all.
+
+00:00:33.885 --> 00:00:36.465
+Finding out which verbs are supported on an endpoint
+
+00:00:36.465 --> 00:00:39.360
+is exactly what OPTIONS method is designed for.
+
+00:00:39.360 --> 00:00:41.425
+So that is the correct answer here.
+
+00:00:41.425 --> 00:00:45.985
+Again, we are retrieving content here so the only method that makes sense is GET.
+
+00:00:45.985 --> 00:00:49.395
+As you can see, there are many different ways to send a request.
+
+00:00:49.395 --> 00:00:51.111
+For the server to respond correctly,
+
+00:00:51.111 --> 00:00:54.000
+it's important that we're using the right verb for the job.
+

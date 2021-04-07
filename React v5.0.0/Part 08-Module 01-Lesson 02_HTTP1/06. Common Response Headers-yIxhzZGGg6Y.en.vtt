@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.925
+Both requests and responses have a section for headers.
+
+00:00:04.925 --> 00:00:09.370
+Remember that headers contain additional data about a request or response.
+
+00:00:09.370 --> 00:00:12.160
+We've already looked at some of the common request headers.
+
+00:00:12.160 --> 00:00:15.150
+Take a look below at the most important headers a response can have.
+

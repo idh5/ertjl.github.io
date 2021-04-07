@@ -1,0 +1,250 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Netcat Command</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTTP/1</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. HTTP Intro.html">01. HTTP Intro</a>
+    </li>
+    <li class="">
+      <a href="02. The Netcat Command.html">02. The Netcat Command</a>
+    </li>
+    <li class="">
+      <a href="03. HTTP Verbs.html">03. HTTP Verbs</a>
+    </li>
+    <li class="">
+      <a href="04. HTTP Verbs 2.html">04. HTTP Verbs 2</a>
+    </li>
+    <li class="">
+      <a href="05. HTTP Verbs Quiz.html">05. HTTP Verbs Quiz</a>
+    </li>
+    <li class="">
+      <a href="06. Common Response Headers.html">06. Common Response Headers</a>
+    </li>
+    <li class="">
+      <a href="07. Request Headers Quiz.html">07. Request Headers Quiz</a>
+    </li>
+    <li class="">
+      <a href="08. REST.html">08. REST</a>
+    </li>
+    <li class="">
+      <a href="09. REST Quiz.html">09. REST Quiz</a>
+    </li>
+    <li class="">
+      <a href="10. Performance Basics.html">10. Performance Basics</a>
+    </li>
+    <li class="">
+      <a href="11. Performance Details.html">11. Performance Details</a>
+    </li>
+    <li class="">
+      <a href="12. Performance Details 2.html">12. Performance Details 2</a>
+    </li>
+    <li class="">
+      <a href="13. Outro.html">13. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. The Netcat Command</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>The Netcat Command</p></h3>
+  <div>
+  <h3 id="netcat">Netcat</h3>
+<p>Throughout this lesson we'll be using the <a href="https://en.wikipedia.org/wiki/Netcat" rel="noopener noreferrer" target="_blank">Netcat</a> command. Netcat is a utility that's used for sending and receiving messages over a network connection. Netcat is known as the Swiss Army knife of networking tools, and we'll be using it to communicate directly with a server.</p>
+<h3 id="netcat-command">Netcat command</h3>
+<p>There are many variations of Netcat, and the one I'll be using is accessed with the <code>nc</code> command. Here I'm using Netcat to connect to Google on port 80 (the default port for HTTP connections).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Netcat google example</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/netcat-example.png" alt="Netcat example" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Netcat example</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Netcat part 2</p></h3>
+  <div>
+  <p>The prompt waits for us to enter the details of the HTTP request. To send a GET request, enter:</p>
+<pre><code class="bash language-bash">GET / HTTP/1.1</code></pre>
+<p>…then make sure you press the enter button twice (once to get to a new line, and one more to indicate that you're finished entering the request's headers). And you'll get something similar to:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>netcat GET example</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/header-get.png" alt="netcat GET example" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>netcat GET example</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Netcat - More info</p></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="http://nc110.sourceforge.net/" rel="noopener noreferrer" target="_blank">https://en.wikipedia.org/wiki/Netcat</a></li>
+<li><a href="http://nc110.sourceforge.net/" rel="noopener noreferrer" target="_blank">http://nc110.sourceforge.net/</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. HTTP Verbs.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. The Netcat Command')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

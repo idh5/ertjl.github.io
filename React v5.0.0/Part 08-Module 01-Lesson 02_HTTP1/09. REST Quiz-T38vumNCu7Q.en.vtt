@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.510
+We want to create a new whale,
+
+00:00:02.510 --> 00:00:04.955
+meaning we want to add something to a collection.
+
+00:00:04.955 --> 00:00:07.375
+This tells us we want to use the post method.
+
+00:00:07.375 --> 00:00:09.870
+So A goes into this first slot.
+
+00:00:09.870 --> 00:00:13.100
+The website has a list of animals which tells us
+
+00:00:13.100 --> 00:00:16.100
+that the collection we're working on is called animals.
+
+00:00:16.100 --> 00:00:18.710
+So, D goes into the second slot.
+
+00:00:18.710 --> 00:00:22.010
+Now, the new item in that collection is supposed to be a whale,
+
+00:00:22.010 --> 00:00:25.870
+so adding a slash and whale to the path does the trick.
+
+00:00:25.870 --> 00:00:29.790
+So, the last two slots are filled with F and G.
+

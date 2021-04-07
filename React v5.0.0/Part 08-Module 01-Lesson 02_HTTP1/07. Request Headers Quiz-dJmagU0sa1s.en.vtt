@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.780
+We've been learning about HTTP verbs and headers and
+
+00:00:03.780 --> 00:00:07.785
+now it's your turn to send off an HTTP request to a server.
+
+00:00:07.785 --> 00:00:14.300
+In this exercise, you need to handcraft an HTTP request using either netcat or telnet.
+
+00:00:14.300 --> 00:00:17.124
+So you need to launch the correct server for your platform,
+
+00:00:17.124 --> 00:00:21.410
+and then the terminal will display the URL and port you'll need to connect to.
+
+00:00:21.410 --> 00:00:25.914
+In another terminal, use netcat to connect to the server you just launched.
+
+00:00:25.914 --> 00:00:30.570
+Once connected, you'll need to send an HTTP request with the following information.
+
+00:00:30.570 --> 00:00:33.245
+You need to send a UDACITY request,
+
+00:00:33.245 --> 00:00:35.760
+not a HEAD, GET, or POST request.
+
+00:00:35.760 --> 00:00:39.435
+You can probably tell that this isn't a real HTTP verb.
+
+00:00:39.435 --> 00:00:41.190
+But since we created this server,
+
+00:00:41.190 --> 00:00:43.760
+we set it up to handle this special verb.
+
+00:00:43.760 --> 00:00:49.020
+In the request, make sure to include the HOST header since this is required in HTTP1.
+
+00:00:49.020 --> 00:00:54.570
+Include the header X-Udacity-Exercice-Header with some non-empty value.
+
+00:00:54.570 --> 00:00:59.565
+And finally, add the date header and make sure the value matches this exactly.
+
+00:00:59.565 --> 00:01:01.330
+Want a quick net get refresher?
+
+00:01:01.330 --> 00:01:04.610
+The Net command I'm using is NC.
+
+00:01:04.610 --> 00:01:08.580
+Then it's the server on connecting to and then the port.
+
+00:01:08.580 --> 00:01:12.075
+With this I'm connecting to Wikipedia on port 443,
+
+00:01:12.075 --> 00:01:17.190
+so you need to use netcad to connect to the provided server and send this request.
+
+00:01:17.190 --> 00:01:19.630
+If you do it correctly you'll get a code.
+
+00:01:19.630 --> 00:01:21.000
+Enter that code here.
+

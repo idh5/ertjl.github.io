@@ -1,0 +1,188 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.834 --> 00:00:06.006
+Mesmo assim, precisamos lutar contra
+a arquitetura da web e da rede.
+
+00:00:06.039 --> 00:00:08.175
+Neste exemplo,
+mais de 50% do tempo que passa
+
+00:00:08.208 --> 00:00:09.576
+desde que se aperta "enter"
+
+00:00:09.610 --> 00:00:11.345
+até o momento
+em que a página aparece
+
+00:00:11.378 --> 00:00:13.914
+é gasto esperando
+pela resposta.
+
+00:00:14.014 --> 00:00:18.185
+Esse período de espera é chamado
+de "Time To First Byte", ou TTFB.
+
+00:00:18.218 --> 00:00:20.988
+Se o site precisar
+de recursos adicionais,
+
+00:00:21.021 --> 00:00:24.191
+precisaremos esperar
+a resposta da primeira solicitação
+
+00:00:24.224 --> 00:00:26.193
+antes de fazer a segunda.
+
+00:00:26.226 --> 00:00:31.231
+Ou seja, haverá mais tempo de espera
+que não será usado de forma eficaz.
+
+00:00:31.298 --> 00:00:34.234
+Esse problema é chamado
+de bloqueio HOL.
+
+00:00:34.301 --> 00:00:36.670
+Vejamos um exemplo
+do que é bloqueio HOL
+
+00:00:36.703 --> 00:00:39.206
+e por que é ruim para a experiência
+do usuário.
+
+00:00:40.307 --> 00:00:43.210
+Com HTTP, a conexão
+é como se fosse uma fila.
+
+00:00:43.243 --> 00:00:45.078
+Ao lidar
+com a primeira solicitação,
+
+00:00:45.145 --> 00:00:48.048
+todas as outras precisam esperar
+até chegar a vez delas.
+
+00:00:48.081 --> 00:00:50.250
+Muito tempo
+é desperdiçado nisso.
+
+00:00:50.284 --> 00:00:53.053
+Aqui está, um café médio.
+Espero que goste.
+
+00:00:54.454 --> 00:00:57.057
+-Oi, posso pedir uma bebida?
+-Claro, o que deseja?
+
+00:00:57.090 --> 00:00:58.625
+Ótimo.
+Quero um café grande,
+
+00:00:58.659 --> 00:01:01.161
+metade leite integral,
+e o resto leite 1% e desnatado,
+
+00:01:01.195 --> 00:01:04.131
+bem quente, com quatro doses,
+sendo uma e meia de descafeinado
+
+00:01:04.164 --> 00:01:06.633
+e duas e meia de café normal,
+sem espuma de leite,
+
+00:01:06.667 --> 00:01:08.435
+com creme,
+dois pacotinhos de adoçante,
+
+00:01:08.468 --> 00:01:10.704
+um de açúcar,
+um toque de xarope de baunilha
+
+00:01:10.737 --> 00:01:12.206
+e três pitadas de canela.
+
+00:01:12.239 --> 00:01:15.042
+Estou com um pouco de pressa.
+
+00:01:15.075 --> 00:01:16.176
+Obrigado.
+
+00:01:17.177 --> 00:01:19.246
+Certo, entendi.
+
+00:01:20.581 --> 00:01:24.685
+Enquanto fazem a bebida de Richard,
+os outros clientes têm que esperar,
+
+00:01:24.852 --> 00:01:28.021
+mesmo que os pedidos deles
+sejam muito mais rápidos de fazer.
+
+00:01:28.055 --> 00:01:31.458
+O primeiro da fila
+está bloqueando os outros.
+
+00:01:32.025 --> 00:01:33.994
+Para contrabalançar
+essa limitação,
+
+00:01:34.027 --> 00:01:36.830
+os navegadores abrem
+até seis conexões paralelas,
+
+00:01:36.864 --> 00:01:39.700
+ou, na comparação com o café,
+contratam outra barista.
+
+00:01:39.737 --> 00:01:42.803
+Enquanto a primeira conexão
+está esperando pelo primeiro byte,
+
+00:01:42.870 --> 00:01:46.941
+Outra solicitação pode ser enviada
+no segundo canal e assim por diante.
+
+00:01:46.974 --> 00:01:50.078
+Claro que contratar outra barista
+demanda tempo e treinamento,
+
+00:01:50.112 --> 00:01:52.444
+e, para o navegador,
+abrir todas essas conexões
+
+00:01:52.477 --> 00:01:56.149
+também é custoso, devido
+aos handshakes de TCP necessários.
+
+00:01:56.216 --> 00:01:59.019
+As seis conexões paralelas
+que os navegadores podem criar
+
+00:01:59.052 --> 00:02:01.488
+ainda são um paliativo
+para o bloqueio HOL.
+
+00:02:01.522 --> 00:02:05.993
+Se houver muitos recursos página,
+muito tempo será gasto esperando
+
+00:02:06.026 --> 00:02:08.161
+ou encarando o caixa.
+
+00:02:08.896 --> 00:02:12.166
+Bloqueio HOL é como um funil
+no desempenho de sites.
+
+00:02:12.199 --> 00:02:15.601
+Navegadores conseguem abrir até seis
+conexões paralelas, o que ajuda,
+
+00:02:15.634 --> 00:02:17.070
+mas não é a melhor saída.
+
+00:02:17.171 --> 00:02:21.008
+Veremos depois como HTTP/2
+conserta esse problema.
+

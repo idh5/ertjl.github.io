@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.873
+Remember the requests starts off with an HTTP method,
+
+00:00:03.873 --> 00:00:07.590
+the path, and the version of the HTTP protocol to use.
+
+00:00:07.590 --> 00:00:10.170
+This request is using the HEAD method.
+
+00:00:10.170 --> 00:00:13.847
+HEAD is an interesting method as it allows you to get the headers
+
+00:00:13.847 --> 00:00:18.330
+of a file without having to receive the entire file itself.
+
+00:00:18.330 --> 00:00:21.105
+This lets you check if there's enough space to store
+
+00:00:21.105 --> 00:00:26.610
+the response or if the cached version on that page is still up to date.
+
+00:00:26.610 --> 00:00:29.230
+This way, the browser can avoid re-downloading
+
+00:00:29.230 --> 00:00:33.485
+a file if it already has the most recent version in its cache.
+
+00:00:33.485 --> 00:00:35.905
+Looking at the network tab and def tools,
+
+00:00:35.905 --> 00:00:40.080
+you probably won't see any head requests when visiting your websites.
+
+00:00:40.080 --> 00:00:44.790
+The problem with using HEAD for cache validation is that you're doing twice the work.
+
+00:00:44.790 --> 00:00:49.560
+You send a HEAD request and then possibly it get request right afterwards.
+
+00:00:49.560 --> 00:00:51.820
+Every request responds pair is called a
+
+00:00:51.820 --> 00:00:54.674
+round trip and they take a lot of time to complete.
+
+00:00:54.674 --> 00:00:58.125
+With a sheer number of access that websites have nowadays,
+
+00:00:58.125 --> 00:01:00.270
+having to send the HEAD requests before
+
+00:01:00.270 --> 00:01:05.160
+the potential GET request would slow down the loading of the website considerably.
+
+00:01:05.160 --> 00:01:09.795
+There are ways to mitigate the cost off these round trips and will talk about them later.
+
+00:01:09.795 --> 00:01:12.750
+But for now, it is just important to know that we
+
+00:01:12.750 --> 00:01:15.960
+want our sites to have as few around trips as possible.
+
+00:01:15.960 --> 00:01:20.080
+And that means reducing the number of requests as best as we can.
+
+00:01:20.080 --> 00:01:22.515
+The last of the common methods is OPTIONS.
+
+00:01:22.515 --> 00:01:25.935
+OPTIONS is supposed to give you a list of methods that are accepted
+
+00:01:25.935 --> 00:01:29.955
+on the current URL but not every server supports this.
+
+00:01:29.955 --> 00:01:32.475
+The OPTIONS method might seem odd at first,
+
+00:01:32.475 --> 00:01:37.200
+but becomes very important when we start talking about course which you will cover later.
+

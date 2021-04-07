@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.745
+But even then we have to fight the sheer nature of the web and network architecture.
+
+00:00:05.745 --> 00:00:09.380
+In this example, over 50 percent of the time from pressing enter in
+
+00:00:09.380 --> 00:00:13.690
+the address bar to the page being displayed is spend waiting for the answer.
+
+00:00:13.690 --> 00:00:18.190
+This waiting period is called Time to First Byte or TTFB.
+
+00:00:18.190 --> 00:00:20.860
+If this website needed to grab additional resources,
+
+00:00:20.860 --> 00:00:22.690
+we would have to wait for the response of
+
+00:00:22.690 --> 00:00:25.985
+our first request before we could send out a second request.
+
+00:00:25.985 --> 00:00:28.150
+That in turn means that we have another period of
+
+00:00:28.150 --> 00:00:31.270
+time waiting that is not being used effectively.
+
+00:00:31.270 --> 00:00:33.705
+This problem is called Head of Line Blocking.
+
+00:00:33.705 --> 00:00:36.130
+Let's see an example of what Head of Line Blocking
+
+00:00:36.130 --> 00:00:39.445
+is and how it is bad for the user experience.
+
+00:00:39.445 --> 00:00:42.920
+With HTTP, a connection is like a queue.
+
+00:00:42.920 --> 00:00:44.770
+While the first request is being handled,
+
+00:00:44.770 --> 00:00:47.890
+all other requests have to wait until it is their turn.
+
+00:00:47.890 --> 00:00:50.080
+A lot of time is being wasted here.
+
+00:00:50.080 --> 00:00:52.500
+All right, one medium coffee. Enjoy.
+
+00:00:52.500 --> 00:00:55.535
+Hey, can I order a drink now?
+
+00:00:55.535 --> 00:00:56.410
+Yeah, what will you have?
+
+00:00:56.410 --> 00:00:59.350
+Okay, great. I'd like a venti, half-whole milk,
+
+00:00:59.350 --> 00:01:01.285
+one quarter, one percent, one quarter non-fat,
+
+00:01:01.285 --> 00:01:03.064
+extra hot, split quad shot,
+
+00:01:03.064 --> 00:01:05.080
+one and a half shots decaf, two and a half shots regular,
+
+00:01:05.080 --> 00:01:07.265
+no foam latte, with whip,
+
+00:01:07.265 --> 00:01:09.330
+two packets of Splenda, one sugar in a raw,
+
+00:01:09.330 --> 00:01:11.920
+a touch of vanilla syrup and three short sprinkles of cinnamon.
+
+00:01:11.920 --> 00:01:17.130
+And I'm kind of in a hurry. Thanks.
+
+00:01:17.130 --> 00:01:19.400
+Okay, got it.
+
+00:01:19.400 --> 00:01:22.215
+While Richard's drink is being prepared,
+
+00:01:22.215 --> 00:01:24.730
+the other customers are left waiting.
+
+00:01:24.730 --> 00:01:27.700
+Even though their request would be much faster to make,
+
+00:01:27.700 --> 00:01:31.450
+the head of line is blocking the rest of the customers.
+
+00:01:31.450 --> 00:01:33.790
+To counteract this limitation a little bit,
+
+00:01:33.790 --> 00:01:36.470
+browsers open up to six parallel connections,
+
+00:01:36.470 --> 00:01:38.132
+or in our coffee shop comparison,
+
+00:01:38.132 --> 00:01:39.970
+they hire another barista.
+
+00:01:39.970 --> 00:01:42.660
+So while the first connection is waiting for its first byte,
+
+00:01:42.660 --> 00:01:46.525
+a second request can already be sent on the second connection, and so on.
+
+00:01:46.525 --> 00:01:49.870
+Of course, hiring a new barista takes off time and training.
+
+00:01:49.870 --> 00:01:52.570
+In the browser, opening all these connections is also
+
+00:01:52.570 --> 00:01:55.805
+quite costly because of the GCP handshakes necessary.
+
+00:01:55.805 --> 00:01:58.030
+The six parallel connections browsers can make is
+
+00:01:58.030 --> 00:02:00.950
+still only a band aid for the head of line blocking.
+
+00:02:00.950 --> 00:02:03.205
+If you have a lot of resources on your page,
+
+00:02:03.205 --> 00:02:07.330
+you will spend most of your time waiting or staring at the cashier.
+
+00:02:07.330 --> 00:02:12.030
+Head of line blocking is a huge bottleneck to website performance.
+
+00:02:12.030 --> 00:02:16.960
+Browsers being able to open up six parallel connections help, but it's not great.
+
+00:02:16.960 --> 00:02:21.000
+Later, we will see how HTTP to fix this issues with head of line blocking.
+

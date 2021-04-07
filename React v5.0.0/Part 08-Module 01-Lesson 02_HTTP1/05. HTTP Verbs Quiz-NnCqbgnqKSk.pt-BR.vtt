@@ -1,0 +1,59 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:02.803
+O verbo HTTP usado
+em uma requisição
+
+00:00:02.836 --> 00:00:05.606
+diz ao servidor
+o que o cliente quer,
+
+00:00:05.639 --> 00:00:08.809
+como recuperar um recurso
+com uma requisição GET
+
+00:00:08.842 --> 00:00:12.880
+ou como recuperar o recurso
+com cabeçalhos com a HEAD, etc.
+
+00:00:12.913 --> 00:00:16.450
+Temos uma lista de atividades,
+e aqui temos verbos HTTP.
+
+00:00:16.483 --> 00:00:19.620
+Insira o número do verbo
+adequado a cada tarefa.
+
+00:00:19.653 --> 00:00:25.192
+GET deveria ser usado para saber
+se o logotipo foi atualizado?
+
+00:00:25.225 --> 00:00:28.061
+Caso sim, insira 1 aqui.
+
+00:00:28.095 --> 00:00:30.430
+O cliente envia dados
+sobre um formulário.
+
+00:00:30.464 --> 00:00:34.268
+Se acha que é um verbo OPTIONS,
+insira 4 aqui.
+
+00:00:34.301 --> 00:00:38.505
+Requisição do arquivo CSS.
+Insira o verbo HTTP.
+
+00:00:38.539 --> 00:00:42.809
+Verbos suportados.
+Insira a opção aqui.
+
+00:00:42.843 --> 00:00:45.245
+Requisição ao servidor
+que a página de destino
+
+00:00:45.279 --> 00:00:47.748
+seja Google.com,
+insira sua escolha aqui.
+

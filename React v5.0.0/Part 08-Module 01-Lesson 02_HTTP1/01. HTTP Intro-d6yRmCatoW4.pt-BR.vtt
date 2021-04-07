@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.125 --> 00:00:03.417
+Como programadores,
+nós usamos HTTP todos os dias.
+
+00:00:03.458 --> 00:00:05.333
+Emitimos requisições
+GET e POST
+
+00:00:05.375 --> 00:00:07.333
+com SDK de JavaScript
+no Firebase
+
+00:00:07.375 --> 00:00:11.292
+ou com o navegador no tablet
+ou telefone para ver sites.
+
+00:00:11.333 --> 00:00:16.042
+Para um bom engenheiro front-end
+o HTTP não é o suficiente.
+
+00:00:16.083 --> 00:00:19.583
+Você precisa entender
+certas técnicas
+
+00:00:19.625 --> 00:00:22.833
+e por que algumas não funcionam
+ou não são recomendadas.
+
+00:00:22.875 --> 00:00:26.625
+Nesta aula, começaremos vendo
+a primeira versão do HTTP.
+
+00:00:26.667 --> 00:00:28.833
+Veremos
+os métodos GET e POST
+
+00:00:28.875 --> 00:00:31.958
+e outros métodos úteis
+que pode não conhecer.
+
+00:00:32.000 --> 00:00:33.875
+Veremos diversos cabeçalhos
+
+00:00:33.917 --> 00:00:36.417
+e como APIs são feitas
+para interagir com a web.
+
+00:00:36.458 --> 00:00:37.958
+Ao final da aula,
+
+00:00:38.000 --> 00:00:41.333
+vai depurar pares
+requisição-resposta HTTP
+
+00:00:41.375 --> 00:00:44.542
+e entender o que é
+uma API RESTful.
+

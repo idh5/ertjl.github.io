@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:02.836
+Vamos ver caso a caso.
+
+00:00:02.870 --> 00:00:07.608
+No primeiro, temos que ver
+quando "logo.png" foi modificado.
+
+00:00:07.641 --> 00:00:10.844
+O último cabeçalho modificado
+tem esse dado.
+
+00:00:10.878 --> 00:00:14.281
+O cliente não quer o conteúdo
+do arquivo,
+
+00:00:14.314 --> 00:00:16.550
+então a resposta
+é a requisição HEAD.
+
+00:00:16.583 --> 00:00:20.854
+Formulários só permitem
+dois métodos: GET e POST.
+
+00:00:20.888 --> 00:00:24.992
+Estamos enviando dados,
+então precisamos do POST.
+
+00:00:25.025 --> 00:00:29.530
+Para recuperar o conteúdo
+de um arquivo, usamos GET.
+
+00:00:29.730 --> 00:00:33.901
+Verbos usam o corpo da resposta
+para outra coisa ou nada.
+
+00:00:33.934 --> 00:00:36.503
+Descobrir quais verbos são
+suportados em um endpoint
+
+00:00:36.536 --> 00:00:39.373
+é a função
+do método OPTIONS.
+
+00:00:39.406 --> 00:00:41.341
+Essa é a resposta certa.
+
+00:00:41.375 --> 00:00:43.777
+Estamos recuperando
+conteúdo aqui.
+
+00:00:43.810 --> 00:00:46.213
+O único método que faz sentido
+é o GET.
+
+00:00:46.246 --> 00:00:49.416
+Como vê, há diversas formas
+de enviar requisições.
+
+00:00:49.449 --> 00:00:51.349
+Para o servidor
+responder corretamente,
+
+00:00:51.382 --> 00:00:53.921
+é importante usar o verbo certo
+em cada função.
+

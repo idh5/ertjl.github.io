@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.155
+Every time the browser connects to a server to make a request,
+
+00:00:04.155 --> 00:00:07.560
+it has to go through the TCP handshake process.
+
+00:00:07.560 --> 00:00:10.230
+This three-way handshake is very time consuming.
+
+00:00:10.230 --> 00:00:12.930
+To counteract the cost of these handshakes,
+
+00:00:12.930 --> 00:00:17.325
+HTTP/1.1 introduced the concept of Keep-Alive.
+
+00:00:17.325 --> 00:00:20.075
+If the client sets the connection Keep-Alive header,
+
+00:00:20.075 --> 00:00:24.840
+the server will not close the connection after successfully delivering the response,
+
+00:00:24.840 --> 00:00:26.820
+but allows the client to reuse
+
+00:00:26.820 --> 00:00:30.525
+the already established connection for additional requests.
+
+00:00:30.525 --> 00:00:33.570
+Keep in mind though, that you still can send requests
+
+00:00:33.570 --> 00:00:37.745
+before the response for the last request has been fully transferred.
+
+00:00:37.745 --> 00:00:40.440
+All in all, this forces web developers to keep
+
+00:00:40.440 --> 00:00:43.620
+the number of additional resources as low as possible,
+
+00:00:43.620 --> 00:00:47.100
+making the best possible use of their six connections.
+
+00:00:47.100 --> 00:00:50.670
+This is why JavaScript and CSS files are commonly concatenated
+
+00:00:50.670 --> 00:00:54.590
+into bundles and why images are put together into sprites.
+
+00:00:54.590 --> 00:00:57.170
+The bundles can be obtained in just one request.
+

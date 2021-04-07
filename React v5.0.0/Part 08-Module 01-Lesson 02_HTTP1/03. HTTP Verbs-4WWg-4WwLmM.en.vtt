@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.380
+Take a look at this. This one is an image of a flamingo.
+
+00:00:04.380 --> 00:00:06.945
+This one is a request to get this image.
+
+00:00:06.945 --> 00:00:09.415
+Do you notice anything different between them, though?
+
+00:00:09.415 --> 00:00:12.290
+HTTP has been around for such a long time that
+
+00:00:12.290 --> 00:00:16.225
+the protocol still does something that you'll rarely find in any modern protocol.
+
+00:00:16.225 --> 00:00:19.260
+It's regular text and can be read by a human.
+
+00:00:19.260 --> 00:00:22.125
+The bytes being pushed back and forth on the network are plain,
+
+00:00:22.125 --> 00:00:25.495
+old, regular text and can be read by our human brains.
+
+00:00:25.495 --> 00:00:29.040
+HTTP's simplicity also means that we can directly interact with
+
+00:00:29.040 --> 00:00:33.460
+a protocol without a third party library doing any extra work for us.
+
+00:00:33.460 --> 00:00:36.030
+Every HTTP request begins with a unique verb
+
+00:00:36.030 --> 00:00:39.300
+called a method and serves a specific purpose.
+
+00:00:39.300 --> 00:00:41.380
+We already know GET and POST.
+
+00:00:41.380 --> 00:00:43.980
+And although these are the most common methods,
+
+00:00:43.980 --> 00:00:46.920
+there are other methods you will encounter regularly.
+
+00:00:46.920 --> 00:00:49.335
+The common set of methods consist of GET,
+
+00:00:49.335 --> 00:00:53.310
+POST, PUT, DELETE, HEAD, and OPTIONS.
+
+00:00:53.310 --> 00:00:57.000
+We will talk more about these methods when we talk about REST APIs.
+

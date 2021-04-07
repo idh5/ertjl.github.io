@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.790
+The HTTP Verb that's used in a request,
+
+00:00:02.790 --> 00:00:05.535
+tells the server what the client wants done.
+
+00:00:05.535 --> 00:00:08.970
+For example, retrieving a resource with a GET request or
+
+00:00:08.970 --> 00:00:13.010
+retrieving the resource headers with a HEAD request and so on.
+
+00:00:13.010 --> 00:00:16.360
+Here's a list of activities and here's some HTTP verbs.
+
+00:00:16.360 --> 00:00:19.725
+Enter the number of the verb best suited for each task.
+
+00:00:19.725 --> 00:00:22.410
+For example, should the GET request be used if the client
+
+00:00:22.410 --> 00:00:25.350
+wants to verify the last time the logo was updated?
+
+00:00:25.350 --> 00:00:27.945
+If so, enter one here.
+
+00:00:27.945 --> 00:00:30.450
+The client sends data about a form submission.
+
+00:00:30.450 --> 00:00:34.020
+If you think that's an option verb, enter four here.
+
+00:00:34.020 --> 00:00:36.360
+The client request the main CSS file,
+
+00:00:36.360 --> 00:00:38.670
+enter the HTTP verb here.
+
+00:00:38.670 --> 00:00:41.190
+The client wanted to know which verbs are supported,
+
+00:00:41.190 --> 00:00:42.645
+enter your choice here.
+
+00:00:42.645 --> 00:00:44.550
+And the client asks the server to send it
+
+00:00:44.550 --> 00:00:47.580
+the landing page for Google.com, enter your choice here.
+
