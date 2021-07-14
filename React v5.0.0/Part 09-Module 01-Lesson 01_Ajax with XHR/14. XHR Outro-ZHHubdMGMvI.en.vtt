@@ -36,5 +36,5 @@ But you don't always have to use the XHR object to make async requests.
 You could use some third party library like jQuery to make the request for you.
 
 00:00:31.960 --> 00:00:35.399
-Check out the next lesson to see how jQuery makes async requests.
+Check out the next lesson to see how jQuery makes async requests.最新课程跟课件还有一对一辅导请加wx：udacity6
 
