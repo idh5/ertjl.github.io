@@ -12,5 +12,5 @@ Redux's Middleware to hook into the time between when an action is dispatched,
 and when a reducer runs.
 
 00:00:08.595 --> 00:00:13.570
-In the next lesson, we'll learn how we can integrate Redux into a React application.
+In the next lesson, we'll learn how we can integrate Redux into a React application.最新课程跟课件还有一对一辅导请加wx：udacity6
 
