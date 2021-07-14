@@ -30,5 +30,5 @@ setState is called which updates the state of
 our component with our newly requested data.
 
 00:00:24.230 --> 00:00:27.370
-This will tick off a re-render and update the UI.
+This will tick off a re-render and update the UI.最新课程跟课件还有一对一辅导请加wx：udacity6
 

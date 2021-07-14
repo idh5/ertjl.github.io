@@ -93,5 +93,5 @@ Now, we still have to answer the initial question,
 if we wanted to fetch external data from an API, how would we do this?
 
 00:01:38.000 --> 00:01:42.480
-This is the perfect use case for the componentDidMount lifecycle events.
+This is the perfect use case for the componentDidMount lifecycle events.最新课程跟课件还有一对一辅导请加wx：udacity6
 
